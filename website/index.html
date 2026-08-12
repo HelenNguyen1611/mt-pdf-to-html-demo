@@ -246,6 +246,10 @@
         align-items: center;
       }
 
+      .program-copy {
+        order: 2;
+      }
+
       .program h3 {
         margin: 0 0 0.6em;
         color: var(--title);
@@ -263,16 +267,23 @@
         margin-bottom: 0;
       }
 
+      /* Mobile/tablet: image before text so the flyer isn't buried after long article copy */
       .program-media {
+        order: 1;
         justify-self: center;
         width: min(150px, 48%);
         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
       }
 
-      @media (min-width: 640px) {
+      @media (min-width: 900px) {
         .program {
           grid-template-columns: minmax(0, 1fr) 150px;
           gap: 28px;
+        }
+
+        .program-copy,
+        .program-media {
+          order: 0;
         }
 
         .program-media {
