@@ -28,7 +28,7 @@
         --muted: #333333;
         --title: #6a7f99;
         --accent: #d17b19;
-        --callout: #eaeef1;
+        --callout: #eaedf1;
         --footer-label: #99999b;
         --line: #d8dce2;
         --white: #ffffff;
@@ -72,10 +72,15 @@
         text-decoration: none;
       }
 
-      a:hover,
-      a:focus-visible {
+      a.link {
+        color: #000000;
         text-decoration: underline;
         text-underline-offset: 2px;
+      }
+
+      a.link:hover,
+      a.link:focus-visible {
+        text-decoration-thickness: 2px;
       }
 
       .shell {
@@ -92,7 +97,7 @@
         color: var(--white);
         overflow: hidden;
         background: #2a3a28 center / cover no-repeat
-          url('assets/images/hero.jpeg');
+          url('assets/july-2026-perspective-from-rituals-over-rules/images/hero.jpeg');
       }
 
       .hero::after {
@@ -101,9 +106,9 @@
         inset: 0;
         background: linear-gradient(
           180deg,
-          rgba(0, 0, 0, 0.18) 0%,
-          rgba(0, 0, 0, 0.06) 48%,
-          rgba(0, 0, 0, 0.38) 100%
+          rgba(0, 0, 0, 0.22) 0%,
+          rgba(0, 0, 0, 0.08) 48%,
+          rgba(0, 0, 0, 0.42) 100%
         );
         pointer-events: none;
       }
@@ -182,14 +187,26 @@
         line-height: 1.35;
       }
 
+      /* PDF: body x≈56.7, mark≈74.5 (~18pt), text≈92.4 (~36pt) */
       .article ul {
         margin: 0 0 1.05em;
-        padding: 0 0 0 1.2em;
+        padding: 0 0 0 36pt;
+        list-style: none;
       }
 
       .article li {
+        position: relative;
         margin: 0 0 0.4em;
-        padding-left: 0.15em;
+        padding-left: 0;
+      }
+
+      .article li::before {
+        content: '•';
+        position: absolute;
+        left: -18pt;
+        width: 18pt;
+        text-align: left;
+        font-family: var(--sans);
       }
 
       .with-callout {
@@ -200,6 +217,7 @@
         background: var(--callout);
         color: var(--ink);
         font-family: var(--serif);
+        font-style: normal;
         font-size: 14px;
         line-height: 1.6;
         padding: 22px 18px;
@@ -271,7 +289,7 @@
         margin-bottom: 0;
       }
 
-      /* Mobile/tablet: image before text so the flyer isn't buried after long article copy */
+      /* Mobile/tablet: image before text */
       .program-media {
         order: 1;
         justify-self: center;
@@ -300,6 +318,7 @@
         border-top: 1px solid var(--line);
         margin-top: var(--band-gap);
         padding: 28px 0 32px;
+        background: var(--white);
       }
 
       .offices {
@@ -385,7 +404,7 @@
         <header class="site-header">
           <a href="https://www.mutualtrust.com.au/" aria-label="Mutual Trust">
             <img
-              src="assets/images/logo-white.png"
+              src="assets/july-2026-perspective-from-rituals-over-rules/images/logo-white.png"
               alt="Mutual Trust"
               width="240"
               height="27"
@@ -402,7 +421,9 @@
           Rituals Over Rules: The Secret Architecture of Enduring Family
           Connection
         </h1>
-        <p class="byline">Lizzy Goldfinch | Partner, Family Office Advisory</p>
+        <p class="byline">
+          <strong>Lizzy Goldfinch | Partner, Family Office Advisory</strong>
+        </p>
 
         <p>
           When families come together to talk about the future, the conversation
@@ -705,15 +726,17 @@
         </p>
 
         <p class="cta-block">
-          At Mutual Trust, we work with families to explore both the technical
-          and human dimensions of wealth preservation across generations. To
-          discuss how Mutual Trust can help your family build strong technical
-          frameworks that are supported by meaningful family connection, please
-          contact your Relationship Manager.
+          <strong
+            >At Mutual Trust, we work with families to explore both the technical
+            and human dimensions of wealth preservation across generations. To
+            discuss how Mutual Trust can help your family build strong technical
+            frameworks that are supported by meaningful family connection,
+            please contact your Relationship Manager.</strong
+          >
         </p>
 
         <div class="signature">
-          <p class="name">Lizzy Goldfinch</p>
+          <p class="name"><strong>Lizzy Goldfinch</strong></p>
           <p class="role">Partner, Family Office Advisory</p>
           <p class="org">Mutual Trust</p>
         </div>
@@ -732,6 +755,7 @@
           </p>
           <p>
             <a
+              class="link"
               href="https://www.mutualtrust.com.au/wp-content/uploads/2026/07/Family-Enterprise-Governance-Flyer-Final.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -746,7 +770,7 @@
         </div>
         <img
           class="program-media"
-          src="assets/images/family-enterprise-governance.jpeg"
+          src="assets/july-2026-perspective-from-rituals-over-rules/images/family-enterprise-governance.jpeg"
           alt="Family Enterprise Governance program flyer"
           width="150"
           height="212"
@@ -778,12 +802,13 @@
           </div>
           <div>
             <p>
-              <a href="mailto:info@mutualtrust.com.au"
+              <a class="link" href="mailto:info@mutualtrust.com.au"
                 >info@mutualtrust.com.au</a
               >
             </p>
             <p>
               <a
+                class="link"
                 href="https://www.mutualtrust.com.au/"
                 target="_blank"
                 rel="noopener noreferrer"
