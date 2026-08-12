@@ -20,7 +20,7 @@ When the user says `build html`, execute the following workflow immediately:
 8. Links must match the PDF: use the same link color and underline treatment as the source. Do not strip color or underline if the PDF shows them; do not invent browser-default underlines or unstyled “inherit only” links when the PDF links are colored/underlined. Hover/focus may strengthen affordance slightly, but base style stays faithful to the source.
 9. Keep one shared content column so logo, hero text, body, program blocks and footer share the same left (and right) edge. Do not let header/hero/footer use a different max-width or padding than the article.
 10. Match PDF desktop type scale for article body and section headings as closely as practical. Prefer the PDF’s point sizes scaled consistently over oversized web defaults.
-11. Preserve inline and block text styles from the PDF exactly — italics/oblique, bold/semibold, underline, small caps, letter-spacing, and mixed roman+italic runs. Inspect span-level font flags in the PDF; wrap italic phrases in `<em>` (or equivalent) and bold in `<strong>` as needed. Never flatten italic copy to plain roman, and never invent emphasis the source does not use.
+11. Preserve inline and block text styles from the PDF exactly — font family (serif vs sans), italics/oblique, bold/semibold, underline, small caps, letter-spacing, and mixed roman+italic runs. Inspect span-level font names and flags in the PDF; wrap italic phrases in `<em>` (or equivalent) and bold in `<strong>` only when the source is actually italic/bold. Never flatten italic copy to plain roman, and never invent emphasis or italic styling the source does not use.
 12. List/bullet alignment must match the PDF. Measure marker and text x-positions against the body column: if bullets sit flush with paragraphs, do not indent; if the PDF indents markers or hanging text, reproduce that indent (and hanging indent for wrapped lines). Do not rely on browser default `ul`/`ol` padding — tune `padding-left`, `list-style-position`, and marker offset so bullets line up like the source.
 13. Hero banner follows the source PDF: include the Mutual Trust logo on the hero only if the PDF shows it there; omit it when the PDF does not. When present, make the hero heading and logo clear/readable on desktop (may be slightly larger than strict print scale).
 14. Ensure sufficient contrast for any text (and logo) placed on images or photo backgrounds — especially hero titles, dates and overlays. Match the PDF’s treatment first (gradient, scrim, text color/weight/shadow if present). If the web crop or scaling reduces legibility versus the PDF, strengthen contrast just enough for readable text (e.g. a subtle darkening gradient) without inventing a new visual theme or obscuring the image. Verify desktop and mobile.
@@ -35,7 +35,7 @@ When the user says `build html`, execute the following workflow immediately:
     `<link rel="icon" href="https://mt.wootech.com.au/wp-content/uploads/2024/10/favicon.png" type="image/png" />`
 23. Keep all CSS inside `<style>` in the output HTML file.
 24. Store extracted/reused assets under `./website/assets/<pdf-slug>/` (or `./website/assets/<pdf-slug>-<timestamp>/` when the HTML filename includes a timestamp).
-25. Check the finished page for missing or duplicated content, invented copy, wrong colors/styles vs PDF (including invented backgrounds, incorrect link color/underline, and lost italics/bold), clipping, overflow, broken assets, misalignment (including bullet indent vs body column), correct hero logo presence, text/logo contrast on image backgrounds, generous consistent hero↔content↔footer spacing vs PDF, readable split chart grids on mobile, and sensible text/image stack order on tablet/mobile.
+25. Check the finished page for missing or duplicated content, invented copy, wrong colors/styles vs PDF (including invented backgrounds, incorrect link color/underline, lost or invented italics/bold, and quote blocks restyled with the wrong font or forced italic), clipping, overflow, broken assets, misalignment (including bullet indent vs body column), correct hero logo presence, text/logo contrast on image backgrounds, generous consistent hero↔content↔footer spacing vs PDF, readable split chart grids on mobile, and sensible text/image stack order on tablet/mobile.
 26. Do not deploy.
 
 Do not ask for confirmation before starting unless:
@@ -67,7 +67,8 @@ When the user says `build new`, process multiple PDFs immediately:
 - Achieve like-for-like visual fidelity with the source PDF.
 - Preserve all content accurately — no omissions, inventions or duplicates.
 - Preserve source colors, typography, imagery, hierarchy, spacing, footer style and overall visual character.
-- Preserve original text emphasis — italics, bold, and mixed-style runs must match the PDF; do not drop italic styling.
+- Preserve original text emphasis — italics, bold, and mixed-style runs must match the PDF; do not drop italic styling, and do not invent italic on roman quotes.
+- Pull quotes and block quotes keep the PDF’s font (e.g. upright Baskerville/serif when the source is roman serif) — do not swap in body sans or default `font-style: italic` on quotes.
 - Do not invent backgrounds, panels, or other styles absent from the PDF; do not arbitrarily restyle content.
 - Links match the PDF (color and underline), not browser defaults or unstyled inherit-only treatment.
 - Use actual PDF assets wherever possible.
@@ -90,7 +91,7 @@ Before considering the HTML complete:
 1. Compare the finished HTML against the entire source PDF.
 2. Verify that no source copy has been dropped, duplicated or invented (including CTAs, chart captions and disclaimers).
 3. Preserve all headings, paragraphs, quotes, captions, lists, tables, contact details, footnotes and disclaimers.
-4. Preserve text emphasis from the PDF (italic/oblique, bold, underline, mixed runs). Confirm quoted phrases, titles, and stressed words still render italic where the source does.
+4. Preserve text emphasis from the PDF (italic/oblique, bold, underline, mixed runs). Confirm quoted phrases, titles, and stressed words still render italic only where the source is italic — and remain roman/upright when the PDF quote is not italic.
 5. Verify list/bullet horizontal position against the PDF body column (indent amount, marker alignment, hanging wraps).
 6. Preserve the source brand styling as closely as practical — including hero/footer background colors, link color/underline, and the absence of decorative backgrounds where the PDF has none — and avoid arbitrary styling decisions.
 7. For imagery and hero sections, maintain sufficient clearspace and text/background contrast so titles, dates and logos remain easy to read on the photo; hero logo presence must match the PDF. Prefer the PDF’s overlay/scrim; add only minimal contrast support if the web crop would otherwise fail readability.
@@ -100,6 +101,24 @@ Before considering the HTML complete:
 11. Check desktop and mobile for missing, clipped, hidden or overflowing content.
 
 Content completeness is a hard requirement. Never silently omit, invent or duplicate PDF content.
+
+## Quotes & Pull Quotes
+
+Quotes are a frequent fidelity failure — treat them as an explicit check against the PDF:
+
+1. Match the quote’s typeface to the source (serif vs sans, size, weight). Do not restyle a PDF serif quote in the body sans stack, or vice versa.
+2. Match slant exactly: if the PDF quote is upright/roman, keep it upright — do **not** apply `font-style: italic`, `<em>`, or “quote looks nicer in italic” defaults. Only italicize when the PDF font flags/face are actually italic/oblique.
+3. Preserve attribution styling and alignment separately from the quote (e.g. sans attribution under a serif quote; right-aligned attribution when the PDF shows that).
+4. Source/podcast/link lines near quotes follow the PDF link color and underline rules — do not inherit invented quote italic.
+
+## Content Width & Overflow Control
+
+Treat this as a required stage after layout/content is in place (desktop and mobile):
+
+1. Keep the main content width under control — shared column/`max-width`/gutters must prevent the page from growing wider than the viewport.
+2. No horizontal page scroll on desktop or mobile (`document`/`body` scrollWidth must not exceed the viewport). Wide elements (tables, chart grids, images, preformatted blocks, absolute/negative offsets) must stay within the content column or use an intentional local overflow (e.g. `overflow-x: auto` on a table wrapper only) without forcing the whole page to scroll sideways.
+3. Images and media: `max-width: 100%`; avoid fixed widths that exceed the shell on small screens.
+4. Verify at typical desktop and mobile widths before marking the build complete.
 
 ## Output
 
