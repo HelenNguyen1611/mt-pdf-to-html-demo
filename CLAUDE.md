@@ -46,6 +46,23 @@ Do not ask for confirmation before starting unless:
 
 `build html` means execute the workflow above, not explain it.
 
+### `build new`
+
+When the user says `build new`, process multiple PDFs immediately:
+
+1. Scan all `*.pdf` files in `./pdf/`.
+2. Load `./.pdf-state.json` (create `{}` if missing). Track each PDF by filename with status `completed` or `failed`.
+3. For each PDF:
+   - `completed` → skip
+   - new file or `failed` → build (retry failed)
+4. Build with the same rules as `build html` (do not restate them). Differences only:
+   - Output to `website/<pdf-slug>/index.html` and assets under `website/<pdf-slug>/assets/`
+   - Derive `<pdf-slug>` with the Output naming rules below
+5. After content + responsive checks pass → mark `completed` in `.pdf-state.json`. On failure → mark `failed` and continue to the next PDF.
+6. Do not deploy.
+
+`build new` means execute the workflow above, not explain it.
+
 ## Success Criteria
 
 - Achieve like-for-like visual fidelity with the source PDF.
@@ -77,21 +94,32 @@ Content completeness is a hard requirement. Never silently omit PDF content.
 
 ## Output
 
-Create:
+### Naming
 
-`website/index.html`
+Derive `<pdf-slug>` from the source PDF filename (without `.pdf`):
 
-Keep all CSS inside `<style>` in `index.html`.
+1. Lowercase
+2. Replace spaces and underscores with `-`
+3. Remove characters other than `a-z`, `0-9`, and `-`
+4. Collapse repeated `-` and trim leading/trailing `-`
 
-Store extracted/reused images and other assets in:
+Examples:
 
-`website/assets/`
+- `July-2026_Perspective-From_Rituals-Over-Rules.pdf` → `july-2026-perspective-from-rituals-over-rules`
+- `Family Enterprise Governance.pdf` → `family-enterprise-governance`
 
-Do not create separate CSS files.
+### Paths
+
+- `build html` → `website/index.html` and `website/assets/`
+- `build new` → `website/<pdf-slug>/index.html` and `website/<pdf-slug>/assets/`
+
+Keep all CSS inside `<style>` in `index.html`. Do not create separate CSS files.
+The HTML entry file is always named `index.html` inside its output folder.
 
 ## Scope
 
 PDF → responsive HTML → visual/content check → Vercel Preview
 
 Do not use Paper.
-Do not build scheduling, state tracking, folder watching, PR automation or production deployment.
+Do not build hashing, scheduling, folder watching, PR automation or production deployment.
+Simple `.pdf-state.json` tracking for `build new` only is allowed.
