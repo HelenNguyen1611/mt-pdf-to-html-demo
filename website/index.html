@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="https://mt.wootech.com.au/wp-content/uploads/2024/10/favicon.png" type="image/png" />
+  <link rel="shortcut icon" href="https://mt.wootech.com.au/wp-content/uploads/2024/10/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="https://mt.wootech.com.au/wp-content/uploads/2024/10/favicon.png" />
   <title>PDF → Web Compare | Mutual Trust Demo</title>
   <meta name="description" content="Side-by-side comparison of Mutual Trust source PDFs and generated responsive HTML pages." />
   <style>
@@ -38,10 +40,15 @@
       min-height: 100%;
       display: flex;
       flex-direction: column;
+      align-items: center;
       padding: 16px;
       gap: 12px;
-      max-width: 1600px;
+      width: 100%;
       margin: 0 auto;
+    }
+    .top,
+    .bottom {
+      width: min(100%, 90vw);
     }
 
     .top {
@@ -125,6 +132,8 @@
       grid-template-columns: 1fr 1fr;
       gap: 0;
       border: 1px solid var(--line);
+      width: 90vw;
+      max-width: 90vw;
       min-height: clamp(420px, calc(100vh - 160px), 900px);
     }
     .pane {
@@ -167,16 +176,20 @@
       flex: 1;
       min-height: 0;
       background: var(--shell);
+      isolation: isolate;
     }
     .pane-body iframe,
-    .pane-body embed {
+    .pane-body embed,
+    .pane-body object {
+      position: relative;
+      z-index: 1;
       display: block;
       width: 100%;
       height: 100%;
       border: 0;
       background: #fff;
     }
-    .pane-body.pane-body--missing embed {
+    .pane-body.pane-body--missing #pdfFrame {
       display: none;
     }
 
@@ -252,15 +265,29 @@
     .empty {
       position: absolute;
       inset: 0;
+      z-index: 2;
       display: grid;
       place-items: center;
       padding: 24px;
       text-align: center;
       color: var(--muted);
       font-size: 14px;
+      background: var(--shell);
+      pointer-events: auto;
+    }
+    /* Author `display` must not override [hidden], or this layer blocks PDF scroll */
+    .empty[hidden] {
+      display: none !important;
+      pointer-events: none;
     }
 
     @media (max-width: 960px) {
+      .top,
+      .bottom,
+      .compare {
+        width: 100%;
+        max-width: 100%;
+      }
       .compare {
         grid-template-columns: 1fr;
       }
@@ -297,8 +324,12 @@
           <h2>Original PDF</h2>
           <span id="pdfLabel">—</span>
         </div>
-        <div class="pane-body">
-          <embed id="pdfFrame" type="application/pdf" title="Original PDF preview" />
+        <div class="pane-body" id="pdfPaneBody">
+          <iframe
+            id="pdfFrame"
+            title="Original PDF preview"
+            src="about:blank"
+          ></iframe>
           <div class="empty" id="pdfEmpty" hidden>
             <div>
               <p style="margin:0 0 10px">PDF preview unavailable here.</p>
@@ -356,7 +387,7 @@
     const openPdfTop = document.getElementById("openPdfTop");
     const openPdf = document.getElementById("openPdf");
     const pdfEmpty = document.getElementById("pdfEmpty");
-    const pdfPaneBody = pdfFrame.closest(".pane-body");
+    const pdfPaneBody = document.getElementById("pdfPaneBody");
 
     function fillSelect() {
       demoSelect.innerHTML = DEMOS.map((d, i) =>
@@ -406,8 +437,8 @@
         // Some hosts block HEAD — still try embed
       }
 
-      // Cache-bust so embed refreshes when switching demos
-      pdfFrame.setAttribute("src", pdfUrl + "#view=FitH&toolbar=1");
+      // iframe + hash params: native PDF viewer stays scrollable/interactive
+      pdfFrame.src = pdfUrl + "#view=FitH&toolbar=1&navpanes=0";
     }
 
     demoSelect.addEventListener("change", loadDemo);
