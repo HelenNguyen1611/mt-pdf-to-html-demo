@@ -32,10 +32,11 @@
        Framework: Mutual-Trust-Design-Analysis-Framework.md (C.4 + C.6)
 
        CONVERT WORKFLOW (C.6):
-       1. Inspect PDF (assets, logo variant, geometry, type, lists, colours)
+       1. Inspect PDF (assets, logo, hero scrim/overlay, geometry, type, lists, colours)
        2. Override :root --perspective-* / --color-link as needed
-       3. Fill continuous article slots (no page breaks / page numbers)
-       4. Visual Comparison Loop vs PDF (desktop first, then responsive)
+       3. Keep hero scrim when PDF needs logo/text contrast (B.4 / C.6.3)
+       4. Fill continuous article slots (no page breaks / page numbers)
+       5. Visual Comparison Loop vs PDF (desktop first, then responsive)
        Do NOT recreate running headers/footers or PDF page boundaries.
        ========================================================================== */
 
@@ -189,15 +190,16 @@
       --list-marker-color: var(--color-ink);
       --list-marker-gap: 24px; /* = 18pt PDF; fixed px, not em */
       --list-indent: var(--list-marker-gap);
-      --list-marker-size: 4px;
+      --list-marker-size: 5px; /* PDF crop ~4px +20% web readability */
       --list-item-gap: 0; /* override per PDF when source adds gap between items */
 
         /* ------------------------------------------------------------------
          Perspective family tokens — OVERRIDE PER PDF (C.6.2 / C.6.4 / C.6.5)
          Calibrate: content width → hero → logo → type → spacing → lists
          ------------------------------------------------------------------ */
-        --perspective-hero-height: clamp(210px, 32vw, 320px);
+        --perspective-hero-aspect: 595.32 / 224.2; /* PDF page W / hero band H */
         --perspective-hero-position: center center;
+        /* Default ≈ measured Perspective PDF flat black @ 25%. Override per file (B.4 / C.6.3). */
         --perspective-hero-scrim: rgba(0, 0, 0, 0.25);
         --perspective-logo-width: 200px;
         --perspective-logo-top: var(--space-5);
@@ -273,16 +275,16 @@
         height: auto;
       }
 
-      a {
-        color: var(--color-link);
-        text-decoration: none; /* PDF colour-only — no underline */
-        font-weight: inherit;
-      }
+    a {
+      color: var(--color-link);
+      text-decoration: none; /* PDF often colour-only; do not invent underline */
+      font-weight: inherit; /* match PDF; do not invent bold links */
+    }
 
-      a:hover {
-        text-decoration: underline; /* web affordance only */
-        text-underline-offset: 0.15em;
-      }
+    a:hover {
+      text-decoration: underline; /* web affordance only */
+      text-underline-offset: 0.15em;
+    }
 
       a:focus-visible,
       button:focus-visible,
@@ -394,12 +396,12 @@
       }
 
       /* Shared list — framework B.9 (Flush default; add --outdent / --inset per PDF) */
-    ul.mt-list,
-    ol.mt-list {
-      list-style: none;
-      padding-left: 0;
-      margin: 0 0 var(--space-3); /* block gap after list; item gap = --list-item-gap */
-    }
+      ul.mt-list,
+      ol.mt-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0 0 var(--space-3);
+      }
 
       ul.mt-list > li,
       ol.mt-list > li {
@@ -411,6 +413,7 @@
         color: var(--color-ink);
       }
 
+      /* Small disc ≈ SymbolMT — not full-size • (too large vs PDF) */
       ul.mt-list > li::before {
         content: "";
         position: absolute;
@@ -447,6 +450,14 @@
         padding-left: var(--list-indent);
       }
 
+      .perspective-body ul.mt-list--inset {
+        padding-left: var(--list-indent);
+      }
+
+      .perspective-body ul.mt-list--outdent {
+        margin-left: calc(-1 * var(--list-indent));
+      }
+
       /* ==========================================================================
        PERSPECTIVE FAMILY — Group C layout patterns
        Configurable via :root vars + modifier classes. Not one PDF clone.
@@ -456,8 +467,9 @@
       .perspective-hero {
         position: relative;
         width: 100%;
-        min-height: var(--perspective-hero-height);
-        height: var(--perspective-hero-height);
+        aspect-ratio: var(--perspective-hero-aspect);
+        height: auto;
+        min-height: 0;
         overflow: hidden;
         color: var(--color-white);
         background-color: #2a2a2a;
@@ -852,7 +864,7 @@
 
       .perspective-contacts a:hover {
         color: var(--color-link);
-        text-decoration: underline;
+        text-decoration: underline; /* web affordance only */
       }
 
       /* Responsive type floor for Perspective family */
@@ -870,23 +882,20 @@
           --text-h5: 20px;
         }
 
-        .perspective-hero {
-          min-height: 200px;
-        }
       }
     
-    /* ===== PDF-SPECIFIC OVERRIDES (C.6 calibrated) =====
+    /* ===== PDF-SPECIFIC OVERRIDES — C.6 calibrated =====
        Source: MutualTrustProtectingintergenerationalwealththroughtimesofchangeJuly2026.pdf
-       Scale: 1pt → 4/3 CSS px (96dpi). Content width 484.5pt → 646px.
+       Scale 1pt→4/3px. Content 484.5pt→646px. Hero scrim black @25%.
        ================================================== */
     :root {
       --container-max: 646px;
       --gutter: 24px;
       --color-link: #d17b19;
 
-      --perspective-hero-height: 299px;
+      --perspective-hero-aspect: 595.32 / 224.2; /* PDF hero band W×H — full-bleed ratio */
       --perspective-hero-position: center center;
-      --perspective-hero-scrim: rgba(0, 0, 0, 0.25); /* PDF fill black @ ~25% over hero */
+      --perspective-hero-scrim: rgba(0, 0, 0, 0.25);
       --perspective-logo-width: 293px;
       --perspective-logo-top: 43px;
 
@@ -904,7 +913,6 @@
 
       --perspective-band-gap: 20px;
       --perspective-promo-bg: #e1e5eb;
-      --perspective-callout-bg: #e1e5eb;
 
       --perspective-legal-size: 8px;
       --perspective-legal-lh: 1.18;
@@ -915,7 +923,7 @@
 
       --list-marker-gap: 24px;
       --list-indent: 24px;
-      --list-marker-size: 4px;
+      --list-marker-size: 5px;
       --list-item-gap: 0;
       --pdf-para-gap: 10px;
     }
@@ -942,17 +950,6 @@
 
     .perspective-hero__inner { padding-bottom: 0; }
 
-    /* Fix: body ul reset must not kill B.9 inset/outdent */
-    .perspective-body ul.mt-list--inset {
-      padding-left: var(--list-indent);
-    }
-    .perspective-body ul.mt-list--outdent {
-      margin-left: calc(-1 * var(--list-indent));
-    }
-    .perspective-body ul.mt-list {
-      margin: 0 0 var(--pdf-para-gap);
-    }
-
     .perspective-signoff { margin-top: var(--pdf-para-gap); }
     .perspective-signoff__name,
     .perspective-signoff__role,
@@ -970,32 +967,34 @@
 
     .perspective-promo {
       margin: 32px 0 0;
-      padding: 12px 10px 14px;
+      padding: 11px 10px 12px;
     }
     .perspective-promo__title {
-      margin: 0 0 10px;
+      margin: 0 0 8px;
       padding-left: 2px;
       font-size: 16px;
       font-weight: 700;
       line-height: 1.34;
+      color: var(--color-ink);
     }
-    .perspective-promo__layout { gap: 16px; }
-    .perspective-promo__media img { width: 115px; max-width: 115px; }
+    .perspective-promo__layout { gap: 12px; }
+    .perspective-promo__media img {
+      width: 115px;
+      max-width: 115px;
+    }
     .perspective-promo__body {
       font-size: 16px;
       line-height: 1.34;
       color: var(--color-ink);
     }
-    .perspective-promo__body p { margin: 0 0 10px; }
+    .perspective-promo__body p { margin: 0 0 8px; }
     .perspective-promo__body p:last-child { margin-bottom: 0; }
     .perspective-promo__body a {
       color: var(--color-link);
       text-decoration: none;
       font-weight: 400;
     }
-    .perspective-promo__body a:hover {
-      text-decoration: underline;
-    }
+    .perspective-promo__body a:hover { text-decoration: underline; }
 
     .perspective-contacts {
       margin: 48px 0 0;
@@ -1039,17 +1038,19 @@
     .perspective-legal { margin-top: 16px; padding-top: 0; }
     .perspective-legal p { margin: 0 0 6px; }
 
+    .perspective-body ul.mt-list {
+      margin: 0 0 var(--pdf-para-gap);
+    }
+
     @media (max-width: 768px) {
       :root {
-        --perspective-hero-height: 220px;
         --perspective-logo-width: 200px;
         --perspective-logo-top: 24px;
         --perspective-title-size: 22px;
         --perspective-band-gap: 24px;
         --gutter: 20px;
-        --container-max: 646px;
       }
-      .perspective-promo__media img { width: 115px; max-width: 40vw; }
+      .perspective-promo__media img { max-width: 40vw; }
     }
   </style>
 </head>

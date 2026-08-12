@@ -240,6 +240,7 @@ _Phần đo geometry trang PDF — hữu ích cho visual QA / content width. **K
 ## B.4 Hình ảnh & placement
 
 - **Ảnh bìa (hero) luôn full-bleed** — tràn hết chiều ngang; ảnh thiên nhiên/đời sống tông ấm.
+- **Hero aspect ratio (rule chung — bắt buộc):** đo **chiều rộng trang × chiều cao dải hero** trên PDF (pt), rồi đặt CSS `aspect-ratio: <W> / <H>` (hoặc `height: calc(100% * H/W)` theo chiều ngang full-bleed). **Không** gán `height` cố định (px/`clamp`/`vw` tùy tiện) làm lệch tỷ lệ W/H so với PDF — với `background-size: cover` hộp quá “dẹt” sẽ crop thêm trên/dưới (ví dụ cắt đỉnh đầu nhân vật). Ví dụ *Protecting Intergenerational Wealth*: hero band **595.32 × 224.2 pt** → `aspect-ratio: 595.32 / 224.2` (≈ **2.655 / 1**). Ảnh extract/crop phải khớp vùng nhìn thấy trên PDF; `object-position` / `background-position` chỉ tinh chỉnh sau khi tỷ lệ hộp đã đúng.
 - **Hero overlay / scrim (rule chung — bắt buộc kiểm tra):** khi PDF đặt **logo trắng hoặc chữ trắng** lên ảnh, nguồn thường có lớp tối (flat opacity hoặc gradient). Ví dụ *Protecting Intergenerational Wealth*: fill đen phủ toàn hero, **opacity ≈ 0.25**. HTML **phải** tái tạo overlay tương đương — **không** dùng ảnh crop trần nếu logo/chữ trên HTML kém tương phản hơn PDF. Chỉ bỏ overlay khi PDF thật sự không có *và* contrast vẫn đạt.
 - **Logo Mutual Trust** — URL chính thức ở **A.5**; chọn `logo-m.svg` (ngang) hoặc `MT-Logo.svg` (stacked) đúng như PDF. SVG mặc định trắng (hero/nền tối); trên nền trắng đảo sang mực tối.
 - Biểu đồ: **tiêu đề chart + "Source: …"** ngay dưới, tối giản, không tô nền.
@@ -292,7 +293,7 @@ PDF export từng lệch nhẹ quanh Ochre (`#D17B19`, `#D17A18`, `#CBA020`, `#C
 
 ### Nhóm C — Perspective / Insight Article
 
-- Trang bìa: hero cao hơn nhóm A (~210–320pt), **logo nhỏ góc trên-trái trên ảnh**; tiêu đề bài **dưới ảnh** (nền trắng) — khác nhóm A (title không nằm trên ảnh). Logo trắng trên hero vẫn cần **scrim/overlay tối** theo B.4 khi PDF có (thường flat ~25% đen).
+- Trang bìa: hero cao hơn nhóm A (đo **W×H band** từng file — khoảng ~210–320pt trên khổ A4, nhưng web dùng **aspect-ratio W/H**, không lock px), **logo nhỏ góc trên-trái trên ảnh**; tiêu đề bài **dưới ảnh** (nền trắng) — khác nhóm A (title không nằm trên ảnh). Logo trắng trên hero vẫn cần **scrim/overlay tối** theo B.4 khi PDF có (thường flat ~25% đen).
 - **H1 màu không đồng nhất giữa 3 bài**: 2/3 dùng Ochre thương hiệu; 1 bài ("Protecting intergenerational wealth…") dùng xanh xám `#4E5E72` — **không có trong Style Guide Colour**; cần xác nhận với brand (chủ đích vs lệch export). Khi chưa chốt: mặc định Ochre/Black theo Style Guide.
 - Không có bảng heat-color hay lưới 6 chart như nhóm A.
 - Callout (nếu có) đa dạng theo bài — xem B.8.
@@ -316,10 +317,10 @@ PDF export từng lệch nhẹ quanh Ochre (`#D17B19`, `#D17A18`, `#CBA020`, `#C
 
 | Thuộc tính                  | Giá trị đo được                                                         | Ghi chú                                                                                                                                                                                                                                                   |
 | --------------------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ký tự bullet                | `•` (U+2022)                                                            | Luôn font **SymbolMT** — artefact Word export, không phải chủ đích thiết kế (đã ghi ở B.1). Trên web: **đừng** render `•` ở full body `font-size` (sẽ to hơn PDF). Dùng disc CSS nhỏ (~**4px** @ 96dpi khi body 12pt) hoặc `•` đã scale optical khớp crop PDF |
+| Ký tự bullet                | `•` (U+2022)                                                            | Luôn font **SymbolMT** — artefact Word export, không phải chủ đích thiết kế (đã ghi ở B.1). Trên web: **đừng** render `•` ở full body `font-size` (sẽ to hơn PDF). Dùng disc CSS nhỏ (~**5px** @ 96dpi khi body 12pt) — xem cỡ marker dưới |
 | Ký tự numbered              | số + `.` (`1.` `2.` `3.` …)                                             | Font **body** (Proxima Nova Light/Regular), **không** phải font riêng cho số                                                                                                                                                                              |
 | Màu marker                  | luôn theo màu **ink thân bài** — `#000000`, vài chỗ `#1B1B1F`/`#1B1B20` | **Không bao giờ dùng Ochre** cho bullet/numbered marker trong 7/7 file. Lưu ý phân biệt với numbered **section heading** (đánh số phần lớn, Baskerville 16–22pt + Ochre `#D17B19`, xem B.7 nhóm B) — đây là 2 pattern khác nhau, không nhầm lẫn khi build |
-| Cỡ marker (optical)         | Disc ~**3–4.5px** web khi body 12pt→16px                                | Đo từ crop PDF (SymbolMT 12pt): vòng mực ~4px đường kính — nhỏ hơn nhiều so với glyph `•` mặc định của browser ở 16px. QA phải so **size** chứ không chỉ indent                                                                                           |
+| Cỡ marker (optical)         | Disc **~5px** web khi body 12pt→16px                                    | Crop PDF (SymbolMT 12pt) đo ~**4px**; token web dùng **+20%** → **5px** cho đọc rõ hơn trên màn hình mà vẫn nhỏ hơn nhiều so với glyph `•` browser 16px. QA so size + indent                                                                                 |
 | Khoảng cách marker → text   | **18pt cố định** (≈ 24px web)                                           | Từ **mép trái origin của marker** → **mép trái text** (tab-stop Word 0.25in). Không tỷ lệ theo font-size. Gap trống sau disc nhỏ chiếm phần lớn 18pt — nếu bullet web quá to sẽ “ăn” khoảng trống và trông sát chữ hơn PDF                                 |
 | Hanging indent              | Có                                                                      | Dòng wrap thứ 2+ của một item canh thẳng với vị trí **text** (sau tab-stop), không lùi về vị trí marker — xác nhận ở mọi list nhiều dòng đo được                                                                                                          |
 | Line-height trong list item | ≈ **1.2× cỡ chữ**, giống thân bài                                       | Không có leading riêng cho list (xem B.2). Căn marker theo trục dọc dòng đầu (không trôi baseline)                                                                                                                                                        |
@@ -342,7 +343,7 @@ PDF export từng lệch nhẹ quanh Ochre (`#D17B19`, `#D17A18`, `#CBA020`, `#C
 --list-marker-color: var(--color-ink);   /* #000000 — theo body ink, KHÔNG dùng --color-accent/Ochre */
 --list-marker-gap:   24px;                /* = 18pt PDF, CỐ ĐỊNH — không theo em/cỡ chữ */
 --list-indent:        24px;               /* padding text / hanging — = marker-gap */
---list-marker-size:   4px;                /* optical disc ≈ SymbolMT trên PDF @ body 12pt */
+--list-marker-size:   5px;                /* PDF crop ~4px +20% web readability */
 ```
 
 ```css
@@ -430,7 +431,7 @@ Khi convert PDF cụ thể: **override** khoảng hero↔content, content↔foot
 
 ## C.3 Thư viện component (từ recurring PDF patterns + Style Guide styling)
 
-1. **Hero/Header** — 2 biến thể layout PDF: (a) title overlay trên ảnh — Market Review; (b) logo trên ảnh + title tách khối nội dung — Outlook/Insight. Logo: URL A.5 (`logo-m.svg` hoặc `MT-Logo.svg` theo PDF). **Luôn** kiểm tra / áp hero scrim để contrast logo hoặc chữ trắng khớp PDF (B.4, C.6.3).
+1. **Hero/Header** — 2 biến thể layout PDF: (a) title overlay trên ảnh — Market Review; (b) logo trên ảnh + title tách khối nội dung — Outlook/Insight. Logo: URL A.5 (`logo-m.svg` hoặc `MT-Logo.svg` theo PDF). **Luôn** đặt `aspect-ratio` = W/H dải hero PDF (B.4) và kiểm tra / áp hero scrim để contrast logo hoặc chữ trắng khớp PDF (C.6.3).
 2. **Section heading** — Baskerville; có/không đánh số; accent Ochre hoặc Black theo ngữ cảnh PDF.
 3. **Callout/quote box** — nền Light Grey; nội dung: quote + attribution, podcast thumb + link, hoặc infographic.
 4. **Data table** — semantic `--color-positive` / `--color-negative` (PDF-specific, nhóm A).
@@ -439,7 +440,7 @@ Khi convert PDF cụ thể: **override** khoảng hero↔content, content↔foot
 7. **Document meta / byline** — author/date khi PDF có (nhóm B); đặt một lần trong article, **không** lặp running footer + số trang.
 8. **Legal + Acknowledgement of Country** — một khối cuối document: inline nền trắng (C) / dải hoặc back-cover nền tối (A, B).
 9. **Office contact grid** — 4–5 văn phòng, email, website, ABN/AFSL.
-10. **List (bullet & numbered)** — marker màu ink (`--color-ink`, không Ochre); disc optical ~4px (không `•` full-size); gap marker→text cố định 24px; wrap canh text; numbered dùng số body font + dấu `.`; base = Flush, biến thể Outdent/Inset theo PDF — chi tiết B.9.
+10. **List (bullet & numbered)** — marker màu ink (`--color-ink`, không Ochre); disc optical ~**5px** (PDF ~4px +20%; không `•` full-size); gap marker→text cố định 24px; wrap canh text; numbered dùng số body font + dấu `.`; base = Flush, biến thể Outdent/Inset theo PDF — chi tiết B.9.
 11. **Inline link** — màu theo PDF (thường Ochre / `#D17B19`); **underline chỉ khi PDF có**; nhiều Perspective chỉ tô màu, không gạch chân (C.6.7).
 
 ## C.4 Checklist convert PDF → HTML
@@ -450,15 +451,16 @@ _Tham chiếu đầy đủ quy trình visual: **C.6**._
 2. Gán font family + map màu brand sang token Style Guide (mục A); load font từ `assets/fonts` và xác minh browser đang dùng đúng font (C.6.3–C.6.4).
 3. Chọn document family (A / B / C) và hero/footer variant (mục B.7).
 4. Chọn logo URL đúng biến thể PDF (`logo-m.svg` ngang vs `MT-Logo.svg` stacked — mục A.5); xử lý trắng/tối theo nền.
-5. **Hero overlay/scrim** — đo từ PDF (opacity / gradient); áp lên HTML trước khi chốt contrast logo/chữ trên ảnh (B.4, C.6.3). Không tắt scrim chỉ vì “ảnh đã đẹp”.
-6. **Calibrate geometry rồi typography** theo C.6.4–C.6.5 (content width, size, line-height, spacing, placement từ PDF).
-7. Giữ toàn bộ copy PDF — không omit / invent / duplicate.
-8. Semantic / one-off colours và link treatment theo PDF khi có (C.6.7).
-9. List/bullet theo B.9 + C.6.6 — không dùng browser default.
-10. **Không tái tạo pagination của PDF trên web.** Nội dung chuyển thành continuous document flow. Page boundary của PDF chỉ dùng làm checkpoint trong visual QA để phát hiện cumulative spacing/typography drift (C.6.8–C.6.9).
-11. Chạy Visual Comparison Loop (C.6.8) — tối đa 3 vòng correction nếu còn khác biệt đáng kể; **desktop fidelity đạt trước** rồi mới responsive (C.6.10).
-12. Chỉ đánh dấu hoàn thành khi đạt Definition of Done (C.6.11).
-13. **Chưa deploy** cho đến khi được yêu cầu.
+5. **Hero geometry** — đo W×H dải hero PDF → CSS `aspect-ratio: W / H` full-bleed; xác nhận crop/position không cắt chủ thể (B.4, C.6.5).
+6. **Hero overlay/scrim** — đo từ PDF (opacity / gradient); áp lên HTML trước khi chốt contrast logo/chữ trên ảnh (B.4, C.6.3). Không tắt scrim chỉ vì “ảnh đã đẹp”.
+7. **Calibrate geometry rồi typography** theo C.6.4–C.6.5 (content width, size, line-height, spacing, placement từ PDF).
+8. Giữ toàn bộ copy PDF — không omit / invent / duplicate.
+9. Semantic / one-off colours và link treatment theo PDF khi có (C.6.7).
+10. List/bullet theo B.9 + C.6.6 — không dùng browser default.
+11. **Không tái tạo pagination của PDF trên web.** Nội dung chuyển thành continuous document flow. Page boundary của PDF chỉ dùng làm checkpoint trong visual QA để phát hiện cumulative spacing/typography drift (C.6.8–C.6.9).
+12. Chạy Visual Comparison Loop (C.6.8) — tối đa 3 vòng correction nếu còn khác biệt đáng kể; **desktop fidelity đạt trước** rồi mới responsive (C.6.10).
+13. Chỉ đánh dấu hoàn thành khi đạt Definition of Done (C.6.11).
+14. **Chưa deploy** cho đến khi được yêu cầu.
 
 ## C.5 Việc còn cần xác nhận
 
@@ -490,7 +492,7 @@ Trước khi viết HTML/CSS phải xác định:
 
 - asset thật được sử dụng
 - logo variant, size, placement
-- hero dimensions; image crop / object-position
+- hero dimensions; **W×H band → aspect-ratio**; image crop / object-position (sau khi tỷ lệ hộp đúng)
 - hero overlay / scrim (có/không, flat opacity hay gradient, độ tối) — contrast logo/chữ trên ảnh
 - content width, alignment
 - font family, weight, style, size, line-height, letter-spacing
@@ -510,6 +512,7 @@ Không bắt đầu từ browser default hoặc generic web styling.
 - Không crop logo từ screenshot nếu đã có SVG chính thức (A.5).
 - Không thay ảnh khi có thể extract/reuse ảnh gốc.
 - Không dùng fallback font nếu font Mutual Trust tương ứng đã có trong `website/assets/fonts`.
+- **Hero aspect-ratio:** đo dải hero PDF (page width × hero height) → `aspect-ratio: W / H` trên hero full-bleed. Ví dụ *Protecting Intergenerational Wealth*: `595.32 / 224.2`. Sai tỷ lệ + `background-size: cover` = crop thêm (cắt đầu nhân vật). Không dùng height px cố định lệch tỉ lệ nguồn.
 - **Hero overlay / contrast:** so PDF vs ảnh extract. Nếu PDF có lớp tối (flat opacity hoặc gradient) trên hero — **bắt buộc** áp CSS scrim tương đương (`::after` / `--*-hero-scrim`). Mục tiêu: logo trắng / chữ trên ảnh đạt contrast như PDF. Ví dụ đo được: fill `#000000` @ **~25% opacity** phủ full hero (*Protecting Intergenerational Wealth*). Không tắt overlay khi logo HTML sáng hơn / kém đọc hơn bản PDF.
 
 Sau khi load font phải xác minh browser thực sự đang sử dụng font đó.
@@ -539,8 +542,8 @@ Hiệu chỉnh theo thứ tự:
 1. outer/container width
 2. content width
 3. horizontal alignment
-4. hero dimensions
-5. hero crop
+4. hero **aspect-ratio** (W/H dải PDF) trước height tuyệt đối
+5. hero crop / background-position (chỉ sau khi tỷ lệ đúng)
 6. logo size/placement
 7. typography
 8. paragraph rhythm
@@ -559,7 +562,7 @@ Dùng pattern Flush / Outdent / Inset đã phân tích tại B.9.
 
 **Lỗi thường gặp (đã quan sát khi convert Perspective):**
 
-- Glyph `•` ở body size → marker **to hơn** PDF (SymbolMT disc ~4px) và trông sát chữ hơn vì “ăn” khoảng 18pt.
+- Glyph `•` ở body size → marker **to hơn** token web (~5px) và trông sát chữ hơn vì “ăn” khoảng 18pt.
 - `text-indent` + `::before { width: 24px }` với `•` lớn → lệch vị trí cảm nhận dù số đo indent đúng.
 - Reset `.perspective-body ul { padding-left: 0 }` ghi đè `.mt-list--inset` nếu specificity thấp hơn.
 
@@ -615,7 +618,7 @@ Không cố giữ kích thước vật lý A4 trên mobile.
 Một conversion chỉ hoàn thành khi:
 
 - đúng toàn bộ nội dung; đúng assets; logo đúng variant và placement
-- hero overlay/scrim khớp PDF khi cần; logo/chữ trên ảnh đủ contrast như nguồn
+- hero **aspect-ratio W/H** khớp dải PDF; crop/position không cắt chủ thể; overlay/scrim khớp PDF khi cần; logo/chữ trên ảnh đủ contrast như nguồn
 - font thực sự load đúng; typography / content width / spacing rhythm gần PDF
 - line wrapping không lệch lớn; bullet/list đúng geometry
 - links/colours đúng; component đặc thù đúng

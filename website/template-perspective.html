@@ -190,14 +190,15 @@
       --list-marker-color: var(--color-ink);
       --list-marker-gap: 24px; /* = 18pt PDF; fixed px, not em */
       --list-indent: var(--list-marker-gap);
-      --list-marker-size: 4px; /* optical disc ≈ SymbolMT on PDF @ body 12pt */
+      --list-marker-size: 5px; /* PDF crop ~4px +20% web readability */
       --list-item-gap: 0; /* override per PDF when source adds gap between items */
 
         /* ------------------------------------------------------------------
          Perspective family tokens — OVERRIDE PER PDF (C.6.2 / C.6.4 / C.6.5)
          Calibrate: content width → hero → logo → type → spacing → lists
          ------------------------------------------------------------------ */
-        --perspective-hero-height: clamp(210px, 32vw, 320px);
+        /* Hero box = PDF band W/H (full-bleed). Override per PDF measure — do NOT use fixed px height. */
+        --perspective-hero-aspect: 595.32 / 224.2; /* example Perspective; replace with source W / H */
         --perspective-hero-position: center center;
         /* Default ≈ measured Perspective PDF flat black @ 25%. Override per file (B.4 / C.6.3). */
         --perspective-hero-scrim: rgba(0, 0, 0, 0.25);
@@ -463,12 +464,13 @@
        Configurable via :root vars + modifier classes. Not one PDF clone.
        ========================================================================== */
 
-      /* --- Hero: full-bleed image + optional logo (title is NOT on hero) --- */
+      /* --- Hero: full-bleed; aspect-ratio = PDF band W/H (B.4) --- */
       .perspective-hero {
         position: relative;
         width: 100%;
-        min-height: var(--perspective-hero-height);
-        height: var(--perspective-hero-height);
+        aspect-ratio: var(--perspective-hero-aspect);
+        height: auto;
+        min-height: 0;
         overflow: hidden;
         color: var(--color-white);
         background-color: #2a2a2a;
@@ -866,7 +868,7 @@
         text-decoration: underline; /* web affordance only */
       }
 
-      /* Responsive type floor for Perspective family */
+      /* Responsive type floor for Perspective family (hero keeps PDF aspect-ratio) */
       @media (max-width: 768px) {
         :root {
           --perspective-title-size: 26px;
@@ -879,10 +881,6 @@
           --text-h3: 28px;
           --text-h4: 24px;
           --text-h5: 20px;
-        }
-
-        .perspective-hero {
-          min-height: 200px;
         }
       }
     </style>

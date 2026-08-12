@@ -1,0 +1,184 @@
+
+===== PAGE 1 =====
+ 
+ 
+ 
+ 
+ 
+ 
+1 
+Perspective from…Brendan Henderson, Partner, Tax 
+ 
+ 
+Perspective from… 
+Preventing the Double Death Tax Trap 
+Brendan Henderson, Partner, Tax 
+ 
+Transferring wealth from one generation to another as part of an estate plan is a significant event for 
+families.  In addition to grieving the passing of a loved one, families have to contend with the stress 
+of ensuring a smooth transfer of wealth under a Will, from the deceased to their surviving spouse or 
+children.  At such a sensitive time, the last thing the family needs is an unnecessary tax bill. 
+ 
+In this article, I explore the unexpected tax trap that can arise in ‘double death’ situations, and what 
+families can do to prevent it from springing. 
+ 
+Tax treatment on death 
+ 
+Currently, when an individual dies, the assets they own at the time of their passing are transferred to 
+their beneficiaries effectively tax-free.  The beneficiaries inherit the deceased’s cost base of the 
+assets passing to them.  If they assets were acquired before 19 September 1985 (i.e. prior to the 
+introduction of Capital Gains Tax [CGT]), beneficiaries are granted a cost base equal to the market 
+value of that asset at the date of death.  For simplicity, we refer to this as a CGT rollover. 
+ 
+If the asset was the deceased’s main residence, this concessional status can be maintained - 
+depending on who inherits the property and whether it continues to be used as a main residence. 
+ 
+The CGT rollover is a commonsense policy – it defers tax until the asset is sold, when cash is 
+available to fund the liability.  Without this concessional treatment, a tax liability would arise on the 
+passing of the asset from the deceased to the beneficiaries.  This tax liability would need to be 
+funded by the beneficiaries, often requiring the asset to be sold.  For some asset classes that aren’t 
+easily saleable, this can be problematic. 
+ 
+Unfortunately, there are situations where the CGT rollover on death is not available.  One example is 
+the ‘double death’ tax. 
+ 
+What is ‘double death’ tax? 
+ 
+If a beneficiary of a deceased estate passes away before probate is granted to the first deceased 
+estate, CGT can apply at the time the asset passes from the second deceased to the beneficiaries 
+under their Will.  This CGT would not have been payable if probate had been granted before the 
+beneficiary of the first deceased estate passed away. 
+
+===== PAGE 2 =====
+ 
+2 
+Perspective from…Brendan Henderson, Partner, Tax 
+I will use the following example to illustrate the challenge. 
+ 
+What causes this tax issue? 
+ 
+The reason why Jenna’s Estate/Lilly is trapped with this tax problem is because under a tax ruling 
+issued in 1990, the Commissioner’s view is that the CGT rollover relief only applies if Jenna ‘owned’ 
+the holiday home at the time of her passing.  As probate hadn’t yet been granted on Harry’s Will 
+when Jenna passed away, Jenna is not regarded as the owner of the holiday home at that time.  
+Accordingly, the ‘ordinary’ CGT disposal rules apply. 
+ 
+If probate had been granted to Jenna by the time of her death, the CGT rollover treatment would 
+have been available on the transfer of the holiday home to Lilly under Jenna’s Will. 
+ 
+ 
+The Holiday House Example 
+ 
+Harry is married to Jenna and they have an adult daughter (Lilly).  Harry also has an adult son 
+(Peter) from his first marriage. 
+ 
+In 1990, Harry purchased a family holiday home in Sorrento, Victoria for $100,000.  Over time, 
+the holiday home increased in value to $1m. 
+ 
+Unfortunately, Harry became ill and passed away suddenly.  Under his Will, Harry bequeathed 
+the holiday home to Jenna and his remaining assets (including cash) to Peter. 
+ 
+Two months later, before probate could be obtained on Harry’s Will, Jenna also passes away. 
+ 
+Under Jenna’s Will, the house passes to Lilly.  She is appointed as Executor of Jenna’s Estate. 
+ 
+When the holiday home passes from Jenna’s estate to Lilly, Jenna’s estate will be liable to pay 
+tax of up to $211,500 on the capital gain (that is, tax on the difference between Harry’s cost base 
+of $100,000 and the market value of $1m).   
+ 
+With Harry’s liquid assets passing to Peter, Lilly must either come up with $211,500 to pay the tax 
+bill, or sell the home to generate sufficient cash. 
+ 
+The ‘double death’ tax trap – how it works 
+Harry purchases 
+holiday home for 
+$100k
+Jenna receives 
+holiday home
+First death
+Harry passes 
+away – asset is 
+valued at $1m
+Jenna dies 
+before probate  
+is granted
+Second death
+Lilly receives 
+holiday home    
++ $211,500 tax 
+bill
+Peter receives 
+other assets
+With liquid assets passed to Peter, Lilly 
+may need to sell the cherished holiday
+home to access funds for the tax bill.
+
+===== PAGE 3 =====
+ 
+Melbourne 
+Level 32 
+360 Collins Street 
+Melbourne VIC 3000 
+T +61 3 9605 9500 
+Sydney 
+Level 18 
+126 Phillip Street 
+Sydney NSW 2000 
+T +61 2 9224 7600 
+Perth 
+Ground Floor 
+22 Stirling Highway 
+Nedlands WA 6009 
+T +61 8 9230 7700 
+Adelaide 
+Level 20 
+83 Pirie Street 
+Adelaide SA 5000 
+T +61 8 7082 3900 
+info@mutualtrust.com.au 
+www.mutualtrust.com.au 
+Prepared in Australia by Mutual Trust Pty Ltd (ACN 004 285 330) (AFSL 234590).  It is general information only and has been prepared without considering any 
+particular persons’ objectives, financial situation or needs.  It does not constitute, and should not be relied upon as personal financial product, taxation or legal advice.  
+Before making any decision you should obtain personal financial, taxation and legal advice.  For more information about the services Mutual Trust provides, please 
+contact us or visit our website, www.mutualtrust.com.au.  Liability Limited by a scheme approved under Professional Standards Legislation.  For participating members 
+(other than for the acts or omissions of Australian Financial Services Licensees). 
+© 2025 Mutual Trust Pty Ltd. 
+ 
+Other examples 
+ 
+While these examples relate to a holiday home, the same issue can arise for other assets, such as 
+Harry & Jenna’s main residence.  In fact, in this scenario, Jenna’s Estate could potentially end up 
+paying tax on a gain derived on the property she lived in with Harry as their main residence.  
+ 
+What if Harry had purchased the holiday home before the introduction of CGT in September 1985.  
+Would Jenna’s estate now be liable for tax on a property Harry had owned pre-CGT? 
+ 
+What if Harry and Jenna lived overseas at the time of their passing and Lilly lived in Australia?  Lilly 
+could potentially be subject to tax of up to $475,000 on her inheritance of the holiday home. 
+ 
+What can be done? 
+ 
+In some scenarios, it may be possible to prevent or manage the double death tax trap under a range 
+of strategies, including the use of testamentary trusts, transferring assets outside of a Will or by 
+holding valuable assets in discretionary trusts rather than personally. 
+ 
+Unfortunately, it’s rarely possible to predict when a double death situation may arise.  That’s why 
+careful estate planning and proactive management are essential to reduce the risk of triggering an 
+unexpected tax liability.   
+ 
+Mutual Trust works with families to carefully review and adjust estate plans to appropriately 
+manage tax risks such as the double death scenario.  If you are preparing or reviewing your 
+estate plans and would like to explore whether any of these strategies are appropriate to your 
+circumstances, please contact your Relationship Manager.  
+ 
+Brendan Henderson 
+Partner, Tax 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
