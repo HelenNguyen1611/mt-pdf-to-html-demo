@@ -330,7 +330,10 @@ Thứ tự / gộp đoạn có thể lệch nhẹ theo file — **copy đúng PD
 | `.perspective-contacts__meta` | Email / web / ABN·AFSL / © |
 | `.perspective-legal > p` | **Chỉ** đoạn Liability / disclaimer / Acknowledgement |
 
-Template tham chiếu: `website/template-perspective.html` (khối `.perspective-legal`).
+Template tham chiếu:
+
+- Nhóm C (Perspective): `website/template-perspective.html` — khối `.perspective-legal` (nền trắng)
+- Nhóm A (Market Review): `website/template-market-review.html` — khối `.mr-footer` (nền tối) + cùng class `.perspective-contacts` (B.5)
 
 ### B.5.3 CSS nền + quy tắc spacing (tránh lỗi hay gặp)
 
@@ -433,6 +436,9 @@ PDF export từng lệch nhẹ quanh Ochre (`#D17B19`, `#D17A18`, `#CBA020`, `#C
 - Có **bảng dữ liệu tô màu theo giá trị** (xanh rêu = dương, mận đỏ = âm) — đặc trưng nhóm này.
 - Trang cuối: **lưới 6 biểu đồ (2 cột × 3 hàng)**.
 - Disclaimer trong dải nền tối cuối trang nội dung — **không** tách back cover riêng.
+
+**Template HTML tái sử dụng:** `website/template-market-review.html`  
+Token `--mr-*`; class `family-market-review`. Khi convert PDF cụ thể: copy template → override geometry/type từ đo PDF (C.6); điền heat table / chart panels / dark footer theo B.5 + checklist B.5.4. Mobile: hero nới tỉ lệ (B.4); contacts 2 cột (B.5).
 
 ### Nhóm B — Quarterly Outlook
 
@@ -584,11 +590,11 @@ Khi convert PDF cụ thể: **override** khoảng hero↔content, content↔foot
 
 ## C.3 Thư viện component (từ recurring PDF patterns + Style Guide styling)
 
-1. **Hero/Header** — 2 biến thể layout PDF: (a) title overlay trên ảnh — Market Review; (b) logo trên ảnh + title tách khối nội dung — Outlook/Insight. Logo: URL A.5 (`logo-m.svg` hoặc `MT-Logo.svg` theo PDF). Hero trong `--page-max`; `aspect-ratio` = W/H dải PDF (B.4); scrim contrast (C.6.3).
+1. **Hero/Header** — 2 biến thể layout PDF: (a) title overlay trên ảnh — Market Review (`template-market-review.html`); (b) logo trên ảnh + title tách khối nội dung — Outlook/Insight (`template-perspective.html`). Logo: URL A.5 (`logo-m.svg` hoặc `MT-Logo.svg` theo PDF). Hero trong `--page-max`; `aspect-ratio` = W/H dải PDF (B.4); scrim contrast (C.6.3).
 2. **Section heading** — Baskerville; có/không đánh số; accent Ochre hoặc Black theo ngữ cảnh PDF.
 3. **Callout/quote box** — nền Light Grey; nội dung: quote + attribution, podcast thumb + link, hoặc infographic.
-4. **Data table** — semantic `--color-positive` / `--color-negative` (PDF-specific, nhóm A).
-5. **Chart block** — đơn lẻ hoặc lưới 2 cột; luôn caption + Source.
+4. **Data table** — semantic `--color-positive` / `--color-negative` (PDF-specific, nhóm A) — markup `.mr-table` / `.is-positive` / `.is-negative` trong template Market Review.
+5. **Chart block** — đơn lẻ hoặc lưới 2 cột × 3 hàng (nhóm A: `.mr-chart-grid`); luôn caption + Source; **một ảnh mỗi panel**, stack mobile.
 6. **Author sign-off** — tên, chức danh, "Mutual Trust" (nhóm C).
 7. **Document meta / byline** — author/date khi PDF có (nhóm B); đặt một lần trong article, **không** lặp running footer + số trang.
 8. **Legal + contacts footer** — một khối cuối document theo **B.5** (markup `.perspective-legal` / `.perspective-contacts` làm nền; calibrate copy + spacing từ PDF). Variant nền: trắng (C) / dải hoặc back-cover tối (A, B).
