@@ -252,12 +252,12 @@
         --mr-chart-gap: 12px; /* panel grid; PDF row ~6pt, col wider */
         --mr-chart-gap-col: 24px;
         --mr-cta-gap-before: 0px; /* included in chart-block-gap-after */
-        --mr-cta-gap-after: 20px; /* PDF CTA→note box; April ≈ 14pt */
-        --mr-note-gap-after: 22px; /* note box→footer; April ≈ 17pt */
-        --mr-note-pad-y: 14px;
-        --mr-note-pad-x: 12px;
+        --mr-cta-gap-after: 20px; /* CTA→note clearspace; measure PDF */
+        --mr-note-gap-after: 24px; /* note→footer */
+        --mr-note-pad-y: 16px;
+        --mr-note-pad-x: 14px;
         --mr-note-bg: #eaedf1; /* measure PDF fill; April ≈ rgb(234,237,241) */
-        --mr-article-pad-bottom: 8px;
+        --mr-article-pad-bottom: 0px;
         --mr-section-size: 21px; /* ~16pt Baskerville */
         --mr-section-color: var(--color-ink);
         --mr-table-title-color: var(--color-ochre);
@@ -816,7 +816,9 @@
         text-decoration: underline;
         text-decoration-color: var(--color-link);
         text-decoration-thickness: 1px;
-        text-underline-offset: 0.12em;
+        /* ~2px under glyphs — matches PDF clearspace; avoid 0 (cuts text) and ~0.12em (too airy) */
+        text-underline-offset: 2px;
+        text-decoration-skip-ink: none;
         font-weight: 400; /* match PDF unless source is bold */
       }
 

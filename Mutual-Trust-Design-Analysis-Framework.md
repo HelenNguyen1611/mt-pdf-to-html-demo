@@ -634,7 +634,7 @@ Desktop fidelity trước (C.6.10). Trên viewport hẹp:
 - **Hai khối số liệu đặc trưng** (bắt buộc xử lý đúng — xem B.6.2–B.6.3 và B.7.2):
   1. **Heat table** "Global Markets" (ô tô màu dương/âm)
   2. **Lưới 6 chart** (2×3 desktop → stack mobile)
-- CTA / note (nếu PDF có): vd. `click here` màu `#D17B19` không bold giả; note box nền xám nhạt (`#EAEFF1` / gần Light Grey) — match PDF, không invent panel khác.
+- CTA / note (nếu PDF có): vd. `click here` màu `#D17B19` **+ underline ochre** khi PDF có hairline (April); `text-underline-offset: 2px` — có khe trắng nhỏ dưới chữ (không `0` kẻo gạch chen vào glyph; không ~0.12–0.15em kẻo quá rộng). `text-decoration-skip-ink: none` nếu PDF là hairline liền. Không để `text-decoration: none` rồi chỉ underline lúc hover. Note box nền `#EAEFF1` / `#eaedf1`, pad-y đủ thoáng (`--mr-note-pad-y`), gap CTA→note / note→footer qua `--mr-cta-gap-after` / `--mr-note-gap-after`. CTA thường **left** align, không center nếu PDF full-measure.
 - Footer: dải **nền tối** + contacts B.5 + legal; email/www **underline trắng** + Proxima Regular (B.5.6); city Baskerville; logo footer **chỉ khi PDF có**.
 
 **Template HTML tái sử dụng:** `website/template-market-review.html`  
@@ -724,7 +724,8 @@ Nhóm A **dày hơn** Perspective: leading và gap giữa khối nhỏ. Sai lệ
 | Table → chart grid | (page break trên PDF) | `--mr-chart-block-gap-before: 28px` | Continuous web — vừa đủ tách khối |
 | Chart panel gutter | row ~6 / col ~48 | `--mr-chart-gap` + `--mr-chart-gap-col` | |
 | Charts → CTA | ~18 | `--mr-chart-block-gap-after: 24px` | |
-| CTA → note | ~24 | `--mr-cta-gap-after: 24px` | |
+| CTA → note | ~14–24 | `--mr-cta-gap-after: 28px` | Clearspace tới mép grey box |
+| Note pad | ~10–12pt | `--mr-note-pad-y` / `--mr-note-pad-x` | Tránh box bị “bẹp” |
 | Note → footer | ~17 | `--mr-note-gap-after: 24px` + footer pad | |
 | Article → footer | — | `--mr-article-pad-bottom: 8px` | Tránh cộng dồn với footer `padding-top` |
 
@@ -1040,9 +1041,15 @@ Khuyến nghị: disc CSS `--list-marker-size` + `position: absolute; left: 0` t
 
 ### C.6.7 Link và màu
 
-Không tự động áp style link web generic (đặc biệt **không** mặc định underline).
+Không tự động áp style link web generic (đặc biệt **không** mặc định underline mọi link).
 
 Link phải đối chiếu PDF về: **colour**, **có/không underline**, **font-size**, font weight. Ví dụ _Protecting Intergenerational Wealth_ (và nhiều Perspective): link `#D17B19` / ochre-tinted, **không gạch chân**. Hover có thể thêm underline nhẹ — chỉ là enhancement web, không đổi base style lệch PDF.
+
+**Ngoại lệ nhóm A — CTA `click here` (April MMR và PDF tương tự):**
+
+- Base: `text-decoration: underline` + `text-decoration-color` = màu link (`#D17B19`) — **không** chỉ underline khi `:hover`.
+- `text-decoration-thickness: 1px`; `text-underline-offset: 2px` — khe nhỏ dưới baseline như PDF (gạch **không** chen vào chữ; tránh `offset: 0`).
+- `text-decoration-skip-ink: none` khi PDF vẽ hairline liền dưới cả cụm từ.
 
 **Contacts meta (email / www) trong footer B.5:**
 
