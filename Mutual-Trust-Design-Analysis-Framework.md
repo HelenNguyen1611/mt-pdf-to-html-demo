@@ -1,8 +1,143 @@
-# Phân tích thiết kế bộ tài liệu Mutual Trust & Đề xuất Base Framework
+# Mutual Trust — Design Analysis & Base Framework
 
-*Phạm vi: phân tích 7 file PDF trong thư mục `demo-pdf`. Đây là tài liệu phân tích và đề xuất — chưa build HTML.*
+*Phạm vi: phân tích 7 file PDF trong `demo-pdf` + đối chiếu Official Style Guide trên Figma. Đây là tài liệu phân tích và đề xuất — **chưa build HTML**.*
 
-## 0. Danh sách tài liệu & phân nhóm
+## Cách đọc tài liệu này
+
+Hai nguồn thông tin được tách rõ — **không trộn giá trị suy đoán từ PDF vào design token chính thức**:
+
+| Nguồn | Vai trò | Áp dụng cho |
+|---|---|---|
+| **A. Official MT Style Guide** (Figma) | **Source of truth cho token** (tên font, HEX brand, hệ type/UI chuẩn) | Font family, colour HEX, tên style (H1–H6, Text large…) |
+| **B. Phân tích 7 PDF** | **Source of truth cho bản convert cụ thể** | Layout, placement, hierarchy thực tế, spacing, cỡ chữ trên trang, imagery, components, biến thể theo file |
+
+### Nguyên tắc ưu tiên khi convert PDF → HTML
+
+**Mục tiêu hàng đầu: like-for-like với PDF nguồn.** Style Guide không được làm trang “đúng brand token nhưng lệch bản PDF”.
+
+| Ưu tiên | Cái gì | Ai thắng khi xung đột |
+|---|---|---|
+| 1 (cao nhất) | Nội dung, bố cục, placement, hierarchy, imagery, spacing giữa các khối | **PDF** |
+| 2 | Cỡ chữ, line-height, độ đậm/nghiêng, indent list, khoảng hero↔content↔footer trên trang đó | **PDF** (đo từ nguồn; Style Guide chỉ là điểm xuất phát) |
+| 3 | Font *family* và mã màu brand (Black / White / Light Grey / Grey / Ochre) | **Style Guide** — map lệch export PDF về HEX/font chuẩn, **miễn là nhìn vẫn khớp PDF** |
+| 4 | Semantic / one-off trong PDF (bảng dương–âm, H1 lệch màu một bài…) | **PDF** — giữ và ghi chú PDF-specific |
+
+**Quy tắc vận hành**
+
+1. Style Guide cung cấp **tên token đúng** (Baskerville, Proxima Nova, Ochre `#CB962E`…) — tránh invent font/màu sai.
+2. Khi type scale Style Guide (ví dụ H1 70px) **khác** cỡ trên PDF → **override theo PDF**. Không phóng cover lên 70px chỉ vì Style Guide ghi vậy.
+3. Spacing Style Guide (`--space-*`) là baseline web; **khoảng cách thật trên trang theo PDF**.
+4. Chỉ nới leading/body size so với bản in khi cần đọc trên màn hình — và chỉ vừa đủ; vẫn giữ cảm giác mật độ/hierarchy của PDF.
+5. Không thay layout PDF bằng layout “chuẩn web” của Style Guide nếu làm lệch composition nguồn.
+
+**Nguồn Style Guide**
+
+- [Desktop Typography](https://www.figma.com/design/Gg76pDgGhJgQcPuh3Jigjd/Mutual-Trust-%E2%80%93-AI-Template?node-id=2-611) — node `2:611`
+- [Colour](https://www.figma.com/design/Gg76pDgGhJgQcPuh3Jigjd/Mutual-Trust-%E2%80%93-AI-Template?node-id=2-466) — node `2:466`
+
+---
+
+# A. Official MT Style Guide (source of truth)
+
+## A.1 Typefaces
+
+| Vai trò | Font | Ghi chú Style Guide |
+|---|---|---|
+| Headings (H1–H6) | **Baskerville** Regular | Serif display / section titles |
+| Body / UI text | **Proxima Nova** Regular + Bold | Sans — text large → small |
+
+*(Proxima Nova là font thương mại — cần xác nhận license khi build web công khai.)*
+
+## A.2 Desktop Typography system
+
+Nguồn: Figma *Desktop Typography* (`2:611`). Line-height lấy từ style/computed trong file.
+
+### Headings — Baskerville
+
+| Style | Size | Line-height | Letter-spacing |
+|---|---|---|---|
+| Desktop Heading 1 | **70px** | 72px (~1.03) | 0 |
+| Desktop Heading 2 | **48px** | 1.2 | 0 |
+| Desktop Heading 3 | **40px** | 1.1 | 0 |
+| Desktop Heading 4 | **32px** | 1.3 | 0 |
+| Desktop Heading 5 | **24px** | 1.4 | 0 |
+| Desktop Heading 6 | **16px** | 1.4 | 0 |
+
+### Text styles — Proxima Nova
+
+| Style | Size | Weight | Line-height |
+|---|---|---|---|
+| Text large | **20px** | Regular (Normal) | 1.5 |
+| Text medium | **18px** | Regular (Normal) | 24px (≈1.33) |
+| Text regular | **16px** | Regular **hoặc** Bold | 1.5 |
+| Text small | **14px** | Regular **hoặc** Bold | 1.5 |
+
+> **Convert rule:** bảng trên = token/style name chính thức. Khi build một PDF cụ thể, **size / line-height / spacing / placement lấy theo PDF** (xem B.2); chỉ giữ font family + colour HEX từ Style Guide. Không ép trang PDF vào đúng scale Desktop Typography nếu làm lệch bản gốc.
+
+## A.3 Colour palette
+
+Nguồn: Figma *Colour* (`2:466`).
+
+| Tên (Style Guide) | HEX | Vai trò UI |
+|---|---|---|
+| **Black** | `#000000` | Text chính, mực chữ, nền tối khi cần đen tuyền |
+| **White** | `#FFFFFF` | Nền trang, chữ trên ảnh/nền tối |
+| **Light Grey** | `#F4F4F4` | Nền callout / pull-quote / surface phụ |
+| **Grey** | `#767676` | Text phụ, caption, chú thích |
+| **Ochre** | `#CB962E` | Accent — hyperlink, số thứ tự section, tiêu đề nhấn, viền box |
+
+### Design tokens (chính thức)
+
+```
+/* Typefaces */
+--font-serif: "Baskerville", Georgia, serif;
+--font-sans:  "Proxima Nova", "Helvetica Neue", Arial, sans-serif;
+
+/* Colours — Style Guide */
+--color-black:      #000000;
+--color-white:      #FFFFFF;
+--color-light-grey: #F4F4F4;
+--color-grey:       #767676;
+--color-ochre:      #CB962E;
+
+/* Role aliases */
+--color-ink:          var(--color-black);
+--color-ink-muted:    var(--color-grey);
+--color-accent:       var(--color-ochre);
+--color-surface-tint: var(--color-light-grey);
+--color-surface-dark: var(--color-black);
+
+/* Type scale — Desktop (Style Guide baseline) */
+--text-h1: 70px;   /* Baskerville, lh ~72px */
+--text-h2: 48px;   /* Baskerville, lh 1.2 */
+--text-h3: 40px;   /* Baskerville, lh 1.1 */
+--text-h4: 32px;   /* Baskerville, lh 1.3 */
+--text-h5: 24px;   /* Baskerville, lh 1.4 */
+--text-h6: 16px;   /* Baskerville, lh 1.4 */
+--text-large:  20px;  /* Proxima Nova, lh 1.5 */
+--text-medium: 18px;  /* Proxima Nova, lh 24px */
+--text-regular: 16px; /* Proxima Nova Regular/Bold, lh 1.5 */
+--text-small:  14px;  /* Proxima Nova Regular/Bold, lh 1.5 */
+```
+
+## A.4 UI styling rules (từ Style Guide)
+
+Áp dụng mặc định khi dựng HTML/framework:
+
+- Text chính: Black `#000000` trên White `#FFFFFF`
+- Text phụ / meta: Grey `#767676`
+- Accent / link / nhấn: Ochre `#CB962E` (giữ underline/color theo treatment nguồn khi convert PDF)
+- Surface phụ (callout, quote box): Light Grey `#F4F4F4` — **không** invent panel xám-xanh khác trừ khi PDF cụ thể bắt buộc match và đã ghi nhận ở mục B
+- Heading: Baskerville; body/UI: Proxima Nova
+- Không dùng màu ngoài 5 mã Style Guide cho brand UI; semantic data colours (nếu cần) nằm ở mục B.6
+
+---
+
+# B. Phân tích từ 7 PDF (layout & patterns)
+
+*Phần này giữ nguyên giá trị phân tích thực tế từ PDF. Không dùng làm source of truth cho font/colour tokens — chỉ để layout, placement, spacing quan sát, families và component.*
+
+## B.0 Danh sách tài liệu & phân nhóm
 
 Sau khi đọc toàn bộ 7 PDF, chúng chia thành 3 nhóm rõ rệt theo mục đích và cấu trúc trình bày, không phải 7 thiết kế khác nhau:
 
@@ -19,178 +154,166 @@ Sau khi đọc toàn bộ 7 PDF, chúng chia thành 3 nhóm rõ rệt theo mục
 - `Perspective_from_Brendan_Henderson_Double_Death_Tax_Trap.pdf`
 - `Strengtheningfarmsafety–nowandforfuture-generations (1).pdf`
 
-Cả 3 nhóm dùng chung một hệ nhận diện (font, màu, logo, cấu trúc legal) nhưng khác nhau ở bố cục trang bìa, mật độ nội dung và một số component đặc thù. Phần dưới đây tách rõ theo yêu cầu: **điểm chung / biến thể / thành phần riêng**, sau đó đề xuất framework nền tảng.
+Cả 3 nhóm dùng chung hệ nhận diện (font family + palette brand khớp Style Guide) nhưng khác nhau ở bố cục trang bìa, mật độ nội dung và một số component đặc thù.
 
----
+## B.1 Font usage quan sát trong PDF (đối chiếu Style Guide)
 
-## 1. Điểm chung giữa tất cả các PDF
+| Quan sát PDF | Khớp Style Guide? |
+|---|---|
+| Heading / display / pull-quote → Baskerville | Có — dùng `--font-serif` |
+| Body, bảng, caption, disclaimer → Proxima Nova (PDF còn thấy Light; Style Guide Desktop ghi Regular + Bold) | Có family; weight Light là biến thể PDF — khi build ưu tiên Regular/Bold theo Style Guide trừ khi PDF bắt buộc Light để match |
+| Bullet glyph ArialMT / SymbolMT / Wingdings2 | Artefact Word export — **không** phải Style Guide; thay bằng bullet CSS |
 
-### 1.1 Typography
+## B.2 Type size & leading đo từ PDF *(override candidates)*
 
-| Vai trò | Font | Ghi chú |
+Các số đo dưới đây là **quan sát bản in**, không thay thế type scale Style Guide. Khi convert PDF → HTML: bắt đầu từ tokens mục A.2, rồi override size/line-height nếu cần fidelity.
+
+| Vai trò trong PDF | Cỡ quan sát (pt) | Gợi ý map Style Guide (baseline) | Khi nào override |
+|---|---|---|---|
+| Tiêu đề bìa | 28–40pt | H2–H3 (48 / 40px) hoặc nhỏ hơn H1 70px | Hầu hết cover PDF nhỏ hơn H1 70px — **thường cần override xuống** |
+| H2 section (Baskerville) | 16–22pt | H5–H6 (24 / 16px) | Override nhẹ theo file |
+| Thân bài | 9.5–11pt | Text small / regular (14 / 16px) làm baseline web dễ đọc | Có thể giữ 14–16px web; nhóm A dày hơn có thể dùng `--text-small` |
+| Caption / disclaimer | 6–8pt | Text small 14px (floor web) | PDF nhỏ hơn nhiều — web không nên xuống dưới ~11–12px vì accessibility |
+
+**Line-height PDF:** ≈ **1.2×** cỡ chữ thân bài (leading in ấn chặt). Style Guide body dùng **1.5** — baseline web theo Style Guide; khi match PDF có thể siết về ~1.2–1.35 nếu cần cảm giác “đặc” của bản gốc.
+
+Đoạn văn PDF: không thụt đầu dòng, ngăn cách bằng khoảng trắng dòng.
+
+## B.3 Khổ trang, lề & content width
+
+- Khổ trang: **A4 – 595 × 842pt (210 × 297mm)**, nhất quán cả 7 file.
+- Layout mặc định: **1 cột**; content width chừa lề đối xứng, không có cột lề trang trí.
+- Lề trái/phải đo được dao động theo nhóm:
+  - Nhóm A/C ≈ **54–58pt** (~19–20mm)
+  - Nhóm B ≈ **72pt** (~25mm)
+- Khi lên web: A4 là cảm hứng max-width, không giữ khổ cứng. Content max-width đề xuất từ đo PDF: **~700–760px** (nhóm B hẹp hơn ~450pt content khi chia 2 cột).
+- Số trang + tên rút gọn tài liệu luôn ở **footer, một hàng, cách đều mép trang**, kể cả trang bìa.
+
+## B.4 Hình ảnh & placement
+
+- **Ảnh bìa (hero) luôn full-bleed** — tràn hết chiều ngang; ảnh thiên nhiên/đời sống tông ấm; thường có gradient/overlay tối để chữ trắng đọc được.
+- **Logo Mutual Trust** (mái vòm + wordmark caps):
+  - Trắng trên ảnh hero (khi PDF có)
+  - Xám/nhạt trên nền trắng hoặc dải footer tối
+- Biểu đồ: **tiêu đề chart + "Source: …"** ngay dưới, tối giản, không tô nền.
+
+## B.5 Footer / Disclaimer (recurring — mọi PDF)
+
+Cấu trúc pháp lý xuất hiện ở **mọi tài liệu**, 3 tầng cố định:
+1. "Liability limited by a scheme approved under Professional Standards Legislation…"
+2. Đoạn miễn trừ trách nhiệm tài chính đầy đủ (forward-looking statement, khuyến nghị tư vấn cá nhân…)
+3. **Acknowledgement of Country** — đủ 7/7 file
+
+Đi kèm: khối liên hệ văn phòng (Melbourne, Sydney, Brisbane, Perth, Adelaide), email, website, ABN, AFSL.
+
+## B.6 Màu quan sát trong PDF (không thuộc Style Guide palette)
+
+PDF export từng lệch nhẹ quanh Ochre (`#D17B19`, `#D17A18`, `#CBA020`, `#C99329`…) và vài tông xám/đen phụ (`#1B1B1F`, `#8D8D90`, `#E0E4EB`…). **Khi chuẩn hoá: map về 5 mã Style Guide** (mục A.3).
+
+**Semantic colours chỉ thấy ở bảng Market Review** (giữ khi build data table — PDF-specific, không có trong Figma Colour):
+
+| Vai trò | HEX quan sát | Ghi chú |
 |---|---|---|
-| Heading / display (H1 bìa, H2 section, pull-quote) | **Baskerville** (serif) | Dùng nhất quán cho mọi tiêu đề lớn ở cả 7 file |
-| Nội dung, bảng, chú thích, disclaimer | **Proxima Nova** — 3 weight: Light, Regular, Bold | Font chủ đạo, chiếm >90% lượng chữ trong mọi tài liệu |
-| Ký tự bullet/glyph phụ | ArialMT, SymbolMT, đôi khi Wingdings2 | Đây là artefact do xuất file từ Word (glyph bullet mặc định), **không phải chủ đích thiết kế** — khi build lại nên thay bằng bullet CSS thuần |
+| Dữ liệu dương | `#00675A` | Xanh rêu |
+| Dữ liệu âm | `#822333` | Đỏ mận — thay đỏ/xanh lá tiêu chuẩn |
 
-Cỡ chữ đo được (điểm PDF, đã đối chiếu qua nhiều trang):
-- Cỡ chữ thân bài phổ biến nhất: **9.5–11pt** (tuỳ tài liệu)
-- Chú thích/nguồn biểu đồ, disclaimer: **6–8pt**
-- Tiêu đề H2 trong bài (Baskerville): **16–22pt**
-- Tiêu đề bìa: **28–40pt** tuỳ nhóm
+```
+/* PDF-specific semantic — chỉ data table Market Review */
+--color-positive: #00675A;
+--color-negative: #822333;
+```
 
-**Line-height (đo bằng khoảng cách baseline giữa các dòng thân bài):** tỷ lệ ổn định ở cả 3 nhóm ≈ **1.2× cỡ chữ** (ví dụ font 10pt → line gap ~12.2pt). Đây là leading khá chặt, đặc trưng của tài liệu in ấn; khi đưa lên web nên cân nhắc nới lên 1.4–1.5 để dễ đọc trên màn hình mà vẫn giữ cảm giác "đặc" của bản gốc.
-
-Đoạn văn không thụt đầu dòng, ngăn cách nhau bằng khoảng trắng dòng.
-
-### 1.2 Màu sắc
-
-Tất cả màu trích xuất trực tiếp từ dữ liệu PDF (có dao động nhỏ giữa các file do khác bản export/nén — đã gộp nhóm theo tông màu):
-
-| Nhóm màu | Giá trị quan sát được | Vai trò |
-|---|---|---|
-| Đen/mực chữ | `#000000`, `#1B1B1F`, `#1B1B20` | Text chính |
-| Xám phụ | `#8D8D90`, `#99999B`, `#545458` | Text phụ, caption |
-| **Vàng đồng / cam (accent thương hiệu)** | `#D17B19`, `#D17A18`, `#CB962E`, `#CBA020`, `#C99329` | Hyperlink, số thứ tự section, tiêu đề nhấn, viền box |
-| Xanh rêu đậm | `#00675A` | Dữ liệu dương (bảng số liệu) |
-| Đỏ mận/maroon | `#822333` | Dữ liệu âm (bảng số liệu) — **thay cho đỏ/xanh lá tiêu chuẩn**, đây là lựa chọn thương hiệu có chủ đích |
-| Đen "rich black" cho nền tối | `#06060D`, `#10161F`, `#1B1B1F` | Nền footer/back cover — không phải đen tuyền `#000000` |
-| Xám xanh nhạt (nền box) | `#E0E4EB`, `#EAECF0`, `#F3F4F4`, `#C3CCD5` | Nền callout/pull-quote box |
-| Trắng | `#FFFFFF` | Chữ trên ảnh/nền tối |
-
-Ghi chú quan trọng: các mã vàng đồng (`#D17B19` … `#C99329`) rất có thể **cùng một màu thương hiệu** nhưng bị lệch nhẹ do từng file được export ở thời điểm/phần mềm khác nhau. Khi chuẩn hoá framework, nên xin bộ brand guideline chính thức thay vì lấy trung bình các giá trị này.
-
-### 1.3 Khổ trang, lề & content width
-
-- Khổ trang: **A4 – 595 × 842pt (210 × 297mm)**, tuyệt đối nhất quán ở cả 7 file.
-- Lề trái/phải đo được dao động theo nhóm (chi tiết ở phần Biến thể), nhưng đặc điểm chung: **layout 1 cột** là mặc định, content width luôn chừa lề đối xứng hai bên, không có cột lề trang trí.
-- Số trang + tên rút gọn tài liệu luôn nằm ở **footer, cùng một hàng, cách đều mép trang**, xuất hiện trên mọi trang kể cả trang bìa.
-
-### 1.4 Hình ảnh & placement
-
-- **Ảnh bìa (hero) luôn full-bleed** — tràn hết chiều ngang trang (từ mép trái đến mép phải, đôi khi tràn cả ra ngoài viền theo toạ độ âm), là ảnh chụp thật phong cách thiên nhiên/đời sống (núi, đồng cỏ, hoa, mặt nước, hàng rào trang trại), tông ấm, có lớp phủ tối (gradient/overlay) phía trên để chữ trắng nổi rõ.
-- **Logo Mutual Trust** (biểu tượng mái vòm cách điệu + wordmark chữ hoa dãn chữ rộng) xuất hiện dưới 2 hình thức:
-  - Trắng, đặt trực tiếp trên ảnh hero
-  - Xám nhạt, đặt trên nền trắng (đầu trang nội dung, hoặc trong dải footer đen)
-- Biểu đồ luôn có **tiêu đề chart + dòng "Source: …"** đặt ngay dưới, phong cách tối giản, không tô nền.
-
-### 1.5 Footer / Disclaimer (thành phần lặp lại quan trọng nhất)
-
-Cấu trúc pháp lý xuất hiện ở **mọi tài liệu**, gồm 3 tầng nội dung cố định:
-1. Câu "Liability limited by a scheme approved under Professional Standards Legislation…"
-2. Đoạn miễn trừ trách nhiệm tài chính đầy đủ (forward-looking statement disclaimer, khuyến nghị tìm tư vấn cá nhân…)
-3. Câu **Acknowledgement of Country** ("Mutual Trust acknowledges and pays respect to the past and present Traditional Custodians…") — xuất hiện ở tất cả 7/7 file, không thiếu file nào.
-
-Đi kèm luôn là khối liên hệ văn phòng (địa chỉ + số điện thoại nhiều chi nhánh: Melbourne, Sydney, Brisbane, Perth, Adelaide), email, website, ABN, AFSL.
-
----
-
-## 2. Các biến thể theo nhóm tài liệu
+## B.7 Biến thể theo nhóm tài liệu
 
 ### Nhóm A — Market Review
-- Trang bìa: hero cao ~150–200pt, **tiêu đề 2 dòng overlay trực tiếp lên ảnh** (dòng lớn serif + dòng caps nhỏ hơn ngay dưới), **không có logo trên ảnh bìa** — logo chỉ nằm trong footer.
-- Cỡ chữ thân bài nhỏ hơn nhóm khác (9–10pt) vì mật độ thông tin dày (nhiều bullet + bảng số liệu).
-- Có **bảng dữ liệu tô màu theo giá trị** (xanh rêu = dương, mận đỏ = âm) — component đặc trưng chỉ nhóm này có.
-- Trang cuối là **lưới 6 biểu đồ (2 cột × 3 hàng)**.
-- Disclaimer nằm ngay trong dải nền đen ở cuối trang nội dung cuối cùng — **không tách thành trang bìa sau (back cover) riêng**.
+- Trang bìa: hero cao ~150–200pt, **tiêu đề 2 dòng overlay trực tiếp lên ảnh** (serif lớn + caps nhỏ hơn), **không có logo trên ảnh bìa** — logo chỉ trong footer.
+- Thân bài dày hơn (PDF ~9–10pt) vì nhiều bullet + bảng.
+- Có **bảng dữ liệu tô màu theo giá trị** (xanh rêu = dương, mận đỏ = âm) — đặc trưng nhóm này.
+- Trang cuối: **lưới 6 biểu đồ (2 cột × 3 hàng)**.
+- Disclaimer trong dải nền tối cuối trang nội dung — **không** tách back cover riêng.
 
 ### Nhóm B — Quarterly Outlook
-- Trang bìa: logo + wordmark **căn giữa** trên ảnh hero, có đường kẻ ngang phân cách, rồi đến tiêu đề chung "Quarterly Outlook" (serif, lớn). **Tiêu đề bài viết cụ thể** ("Still waters run deep", "Equities: the tug of war") nằm ở khối nội dung ngay dưới ảnh, không đặt trên ảnh.
-- Cấu trúc nhiều phần được **đánh số với heading màu vàng đồng** (ví dụ "4. How do we design resilient portfolios?").
-- Có **callout/pull-quote box** mở đầu mỗi phần — nền xám xanh nhạt, trích lời chuyên gia nội bộ/khách mời (in caps, có tên + chức danh).
-- Bố cục đôi khi chuyển sang **2 cột** (văn bản trái, biểu đồ/pie chart phải) cho các phần minh hoạ số liệu.
-- **Có back cover riêng**: 1 trang cuối cùng nền đen tuyền, logo + tagline "Helping families achieve what matters most." căn giữa, đoạn disclaimer là **dài và đầy đủ nhất** trong 3 nhóm.
-- Footer running text có thêm dòng "Written by [Tên tác giả] | [ngày]" — chi tiết này không xuất hiện ở 2 nhóm còn lại.
+- Trang bìa: logo + wordmark **căn giữa** trên hero, đường kẻ ngang, tiêu đề chung "Quarterly Outlook" (serif). **Tiêu đề bài viết cụ thể** nằm dưới ảnh trên nền trắng.
+- Section **đánh số + heading accent Ochre** (ví dụ "4. How do we design resilient portfolios?").
+- **Callout/pull-quote box** mở đầu phần — nền surface phụ, trích lời (caps, tên + chức danh). PDF đôi khi dùng xám-xanh (`#E0E4EB`…). Khi convert file đó: **match nền như PDF**; nếu gần Light Grey thì map `#F4F4F4`, nếu lệch rõ thì giữ giá trị gần PDF (không đổi sang Light Grey nếu làm lệch nhìn).
+- Đôi khi **2 cột** (text trái / chart phải).
+- **Back cover riêng**: nền tối, logo + tagline "Helping families achieve what matters most.", disclaimer dài nhất 3 nhóm.
+- Footer running có thêm "Written by [Tên] \| [ngày]" — không thấy ở nhóm A/C.
 
 ### Nhóm C — Perspective / Insight Article
-- Trang bìa: hero cao hơn nhóm A (~210–320pt), **logo nhỏ đặt góc trên-trái ngay trên ảnh**; tiêu đề bài viết nằm **bên dưới ảnh** (trên nền trắng), không overlay lên ảnh như nhóm A.
-- **Màu tiêu đề H1 không đồng nhất giữa 3 bài**: 2/3 bài dùng màu cam/vàng đồng thương hiệu, 1 bài ("Protecting intergenerational wealth…") dùng màu **xanh xám** (`#4E5E72`) — nhiều khả năng là điểm chưa nhất quán cần làm rõ với đội thương hiệu hơn là chủ đích.
-- Không có bảng dữ liệu màu hay lưới biểu đồ như nhóm A.
-- Callout box (nếu có) đa dạng nội dung tuỳ bài — xem mục 3 (thành phần riêng).
-- Kết bài luôn có **khối chữ ký tác giả** (Tên in đậm, chức danh, "Mutual Trust") ngay trước phần legal.
-- Disclaimer **ngắn gọn hơn** nhóm A/B, nằm ngay trên nền trắng cùng trang nội dung cuối, **không có back cover đen riêng**.
+- Trang bìa: hero cao hơn nhóm A (~210–320pt), **logo nhỏ góc trên-trái trên ảnh**; tiêu đề bài **dưới ảnh** (nền trắng), không overlay như nhóm A.
+- **H1 màu không đồng nhất giữa 3 bài**: 2/3 dùng Ochre thương hiệu; 1 bài ("Protecting intergenerational wealth…") dùng xanh xám `#4E5E72` — **không có trong Style Guide Colour**; cần xác nhận với brand (chủ đích vs lệch export). Khi chưa chốt: mặc định Ochre/Black theo Style Guide.
+- Không có bảng heat-color hay lưới 6 chart như nhóm A.
+- Callout (nếu có) đa dạng theo bài — xem B.8.
+- Kết bài: **khối chữ ký tác giả** (tên đậm, chức danh, "Mutual Trust") trước legal.
+- Disclaimer ngắn hơn, trên nền trắng cuối trang nội dung — **không** back cover đen riêng.
 
----
-
-## 3. Thành phần riêng của từng PDF
+## B.8 Thành phần riêng của từng PDF
 
 | File | Thành phần độc quyền |
 |---|---|
-| June 2026 QMR & Oct 2025 MMR | Bảng "Global Markets" tô màu heat-style theo hiệu suất (2 file dùng chung format này, không xuất hiện ở file nào khác) |
-| March 2026 Quarterly Outlook | Biểu đồ cột ngang "S&P 500 Index Sector Performance" minh hoạ riêng cho luận điểm bài |
-| June 2026 Quarterly Outlook | Pie chart "Indicative Mutual Trust asset allocation"; danh sách 4 câu hỏi mở đầu dạng numbered list giới thiệu cấu trúc bài |
-| Protecting Intergenerational Wealth | Box "Interested in learning more?" kèm ảnh thumbnail bìa podcast + link nghe; tiêu đề H1 màu xanh xám (biến thể màu riêng) |
-| Perspective from Brendan Henderson | Sơ đồ flow-chart tự thiết kế (5 khối nối bằng mũi tên, minh hoạ tình huống "double death tax") — infographic phức tạp nhất trong toàn bộ 7 file, không lặp lại ở đâu khác |
-| Strengthening Farm Safety | Callout box thuần trích dẫn (chỉ text + tên người trích, không ảnh, không sơ đồ) |
+| June 2026 QMR & Oct 2025 MMR | Bảng "Global Markets" tô màu heat-style theo hiệu suất (2 file dùng chung format) |
+| March 2026 Quarterly Outlook | Biểu đồ cột ngang "S&P 500 Index Sector Performance" |
+| June 2026 Quarterly Outlook | Pie chart "Indicative Mutual Trust asset allocation"; 4 câu hỏi mở đầu dạng numbered list |
+| Protecting Intergenerational Wealth | Box "Interested in learning more?" + thumbnail podcast + link; H1 xanh xám (biến thể ngoài Style Guide) |
+| Perspective from Brendan Henderson | Flow-chart 5 khối + mũi tên ("double death tax") — infographic phức tạp nhất, không lặp lại |
+| Strengthening Farm Safety | Callout thuần trích dẫn (text + attribution, không ảnh/sơ đồ) |
 
 ---
 
-## 4. Đề xuất Base Framework
+# C. Base Framework đề xuất
 
-*Lưu ý: đây là đề xuất design token & component spec để làm nền tảng dựng HTML sau này — chưa build.*
+*Chưa build. Tokens visual = Style Guide; layout/component variants = PDF patterns.*
 
-### 4.1 Design tokens
+## C.1 Spacing
 
-**Font**
+Style Guide Desktop Typography frame dùng nhịp lớn (padding section ~64px, gap swatch/type block ~24–48px) — dùng làm **baseline spacing web**:
+
 ```
---font-serif: "Baskerville", Georgia, serif;      /* heading / display / pull-quote */
---font-sans:  "Proxima Nova", "Helvetica Neue", Arial, sans-serif; /* body */
---font-sans-weight-light: 300;
---font-sans-weight-regular: 400;
---font-sans-weight-bold: 700;
-```
-*(Proxima Nova là font thương mại có bản quyền — cần xác nhận license hoặc chọn font thay thế mã nguồn mở gần giống nếu build web công khai, ví dụ "Museo Sans"/"Nunito Sans" tuỳ ngân sách.)*
-
-**Type scale (quy đổi tương đối từ pt gốc, line-height giữ tỷ lệ ~1.2 như bản in, có thể nới lên 1.4–1.5 cho web)**
-
-| Token | Cỡ chữ | Font | Dùng cho |
-|---|---|---|---|
-| `--text-h1-cover` | 34–40px | Baskerville | Tiêu đề bìa |
-| `--text-h1-caps` | 18–22px, letter-spacing rộng | Baskerville | Dòng phụ đề caps dưới H1 |
-| `--text-h2` | 20–24px | Baskerville | Tiêu đề section trong bài |
-| `--text-h3` | 14–15px, bold | Proxima Nova Bold | Sub-heading trong đoạn |
-| `--text-body` | 14–15px | Proxima Nova Regular/Light | Nội dung chính |
-| `--text-caption` | 11–12px | Proxima Nova Regular | Chú thích biểu đồ, nguồn |
-| `--text-legal` | 10–11px | Proxima Nova Regular | Disclaimer, footer pháp lý |
-
-**Màu sắc**
-```
---color-ink:            #1A1A1A;   /* text chính, chuẩn hoá từ #000000/#1B1B1F */
---color-ink-muted:      #8C8C90;   /* text phụ/caption */
---color-accent-gold:    #C9932E;   /* CẦN XÁC NHẬN mã chính xác với brand guideline */
---color-positive:       #00675A;
---color-negative:       #822333;
---color-surface-dark:   #101018;   /* nền footer / back cover, không dùng đen tuyền */
---color-surface-tint:   #E7EAF0;   /* nền callout/quote box */
---color-white:          #FFFFFF;
+--space-1: 4px
+--space-2: 8px
+--space-3: 16px
+--space-4: 24px
+--space-5: 32px
+--space-6: 48px
+--space-7: 64px
 ```
 
-**Spacing scale (ước lượng, làm mốc khởi điểm)**
-```
---space-1: 4px   --space-2: 8px   --space-3: 16px
---space-4: 24px  --space-5: 32px  --space-6: 48px  --space-7: 64px
-```
+Khi convert PDF cụ thể: **override** khoảng hero↔content, content↔footer, paragraph gap, list indent theo clearspace đo từ PDF (xem B.3 / B.7) để fidelity cao hơn.
 
-**Grid**
-- Khổ trang gốc A4 → khi lên web dùng làm cảm hứng cho max-width nội dung, không cần giữ khổ cứng
-- Content max-width đề xuất: **~700–760px** (tương ứng content width ~480–500pt trong 2 nhóm A/C; nhóm B hẹp hơn ~450pt do đôi khi chia 2 cột)
-- Lề trái/phải: nhóm A/C tương đương ~54–58pt gốc (~19–20mm); nhóm B ~72pt (~25mm) — có thể hợp nhất về **1 giá trị lề chuẩn** khi dựng framework để nhất quán, thay vì giữ 2 chuẩn lề khác nhau như bản PDF gốc.
+## C.2 Grid (từ PDF patterns)
 
-### 4.2 Thư viện component đề xuất
+- Content max-width đề xuất: **~700–760px** (cảm hứng từ content width PDF)
+- Một content column dùng chung cho logo, hero text, body, program blocks, footer (cùng mép trái/phải)
+- Quyết định còn mở: hợp nhất lề A/C (~55pt) vs B (~72pt) thành 1 grid web, hay giữ 2 biến thể theo document family
 
-1. **Hero/Header** — 2 biến thể: (a) tiêu đề overlay trực tiếp lên ảnh — dùng cho Market Review; (b) logo overlay + tiêu đề tách sang khối nội dung — dùng cho Outlook/Insight
-2. **Section heading** — có/không đánh số, màu cam accent hoặc đen tuỳ ngữ cảnh
-3. **Callout/quote box** — nền xám nhạt, có thể chứa: trích dẫn + người nói, ảnh thumbnail + link, hoặc infographic tuỳ biến
-4. **Data table** — style semantic màu dương/âm (dùng riêng cho báo cáo thị trường)
-5. **Chart block** — đơn lẻ hoặc lưới 2 cột, luôn kèm caption + nguồn
-6. **Author sign-off block** — tên, chức danh, "Mutual Trust"
-7. **Footer running** — tên tài liệu (trái) + số trang (phải), có thể thêm tác giả/ngày tuỳ loại tài liệu
-8. **Legal/disclaimer + Acknowledgement of Country** — 2 biến thể: inline cuối trang trắng (nhóm C) / back-cover nền tối riêng (nhóm A, B)
-9. **Office contact grid** — 4–5 văn phòng, email, website, ABN/AFSL
+## C.3 Thư viện component (từ recurring PDF patterns + Style Guide styling)
 
-### 4.3 Việc cần xác nhận trước khi build
+1. **Hero/Header** — 2 biến thể layout PDF: (a) title overlay trên ảnh — Market Review; (b) logo overlay + title tách khối nội dung — Outlook/Insight. Styling chữ/logo theo Style Guide colours.
+2. **Section heading** — Baskerville; có/không đánh số; accent Ochre hoặc Black theo ngữ cảnh PDF.
+3. **Callout/quote box** — nền Light Grey; nội dung: quote + attribution, podcast thumb + link, hoặc infographic.
+4. **Data table** — semantic `--color-positive` / `--color-negative` (PDF-specific, nhóm A).
+5. **Chart block** — đơn lẻ hoặc lưới 2 cột; luôn caption + Source.
+6. **Author sign-off** — tên, chức danh, "Mutual Trust" (nhóm C).
+7. **Footer running** — tên tài liệu (trái) + số trang (phải); optional author/date (nhóm B).
+8. **Legal + Acknowledgement of Country** — inline cuối trang trắng (C) / dải hoặc back-cover nền tối (A, B).
+9. **Office contact grid** — 4–5 văn phòng, email, website, ABN/AFSL.
 
-- Xin bộ brand guideline chính thức (mã màu HEX/CMYK chuẩn, font Proxima Nova + Baskerville có license hợp lệ) — các giá trị màu trích từ PDF có sai lệch nhỏ (vài đơn vị hex) giữa các file do khác lần export.
-- Xác nhận việc H1 màu xanh xám ở bài "Protecting Intergenerational Wealth" là chủ đích (theo chủ đề) hay chưa nhất quán — nếu là biến thể có chủ đích, nên định nghĩa rule (ví dụ: bài về "gia đình/thế hệ" dùng tông xanh, bài "chuyên môn/thuế/nông nghiệp" dùng tông cam).
-- Quyết định có **hợp nhất 2 chuẩn lề** (nhóm A/C ~55pt vs nhóm B ~72pt) thành 1 grid chung hay giữ nguyên 2 biến thể lề theo loại tài liệu.
-- Xác nhận có cần giữ nguyên bảng heat-color (nhóm A) và infographic flow-chart tuỳ biến (Brendan Henderson) như component tái sử dụng được, hay xử lý case-by-case.
+## C.4 Checklist convert PDF → HTML
+
+1. Đọc toàn bộ PDF nguồn — **kết quả phải giống PDF** (nội dung + bố cục + hierarchy + spacing).
+2. Gán font family + map màu brand sang token Style Guide (mục A) — không invent font/HEX.
+3. Chọn document family (A / B / C) và hero/footer variant (mục B.7).
+4. **Đặt size / line-height / spacing / placement theo PDF** (B.2–B.4); Style Guide type scale chỉ dùng làm điểm xuất phát / đặt tên token, không được thắng PDF khi xung đột.
+5. Giữ toàn bộ copy PDF — không omit / invent / duplicate.
+6. Semantic / one-off colours theo PDF khi có (bảng dương–âm, biến thể H1…).
+7. Responsive chỉ adapt khi cần (stack, chart grid) — không đổi composition desktop so với PDF.
+8. **Chưa deploy / chưa build** cho đến khi được yêu cầu.
+
+## C.5 Việc còn cần xác nhận
+
+- License font Proxima Nova + Baskerville khi build web công khai.
+- H1 xanh xám `#4E5E72` ở "Protecting Intergenerational Wealth": chủ đích hay lệch? Style Guide Colour **không** có mã này — mặc định map Ochre/Black cho đến khi brand xác nhận.
+- Hợp nhất 2 chuẩn lề (A/C vs B) hay giữ 2 biến thể theo family.
+- Heat-table (nhóm A) và flow-chart (Brendan Henderson): component tái sử dụng hay case-by-case.
+- Có thêm Mobile Typography trong Style Guide Figma hay không — hiện tài liệu lấy **Desktop Typography** (`2:611`) làm baseline; mobile scale sẽ bổ sung khi có node chính thức.
