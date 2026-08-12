@@ -1,0 +1,26 @@
+[
+  {
+    "page": 1,
+    "uri": "https://www.mutualtrust.com.au/wp-content/uploads/2026/05/ProsperityInvestingTheMutualTrustWealthStory-1.pdf",
+    "kind": 2,
+    "from": "Rect(183.59100341796875, 273.9119873046875, 458.864990234375, 289.9119873046875)"
+  },
+  {
+    "page": 3,
+    "uri": "mailto:info@mutualtrust.com.au",
+    "kind": 2,
+    "from": "Rect(423.0, 700.8999633789062, 491.79998779296875, 708.3999633789062)"
+  },
+  {
+    "page": 3,
+    "uri": "http://www.mutualtrust.com.au/",
+    "kind": 2,
+    "from": "Rect(423.0, 708.3999633789062, 491.9070129394531, 717.8999633789062)"
+  },
+  {
+    "page": 3,
+    "uri": "https://www.mutualtrust.com.au/media-hub/podcasts/from-gold-to-goals-olympian-peter-antonie-on-the-power-of-a-great-team/",
+    "kind": 2,
+    "from": "Rect(171.6999969482422, 321.5999755859375, 273.4700012207031, 343.5999755859375)"
+  }
+]
