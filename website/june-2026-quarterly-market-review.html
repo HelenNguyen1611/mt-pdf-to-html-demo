@@ -1,889 +1,469 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="icon"
-      href="https://mt.wootech.com.au/wp-content/uploads/2024/10/favicon.png"
-      type="image/png"
-    />
-    <title>Quarterly Market Review — June 2026 | Mutual Trust</title>
-    <meta
-      name="description"
-      content="Mutual Trust Quarterly Market Review for June 2026 — global equities, Australia, international markets, commodities and performance tables."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --ink: #000000;
-        --muted: #333333;
-        --accent: #d17b19;
-        --pos: #00675a;
-        --neg: #822333;
-        --white: #ffffff;
-        --page: 700px;
-        --gutter: 24px;
-        --band-gap: 72px;
-        --serif: 'Libre Baskerville', 'Baskerville', 'Times New Roman', serif;
-        --sans:
-          'Montserrat', 'Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
-      }
-
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        margin: 0;
-        color: var(--ink);
-        background: var(--white);
-        font-family: var(--sans);
-        font-size: 15px;
-        line-height: 1.7;
-        -webkit-font-smoothing: antialiased;
-        text-rendering: optimizeLegibility;
-      }
-
-      img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      a:hover,
-      a:focus-visible {
-        text-decoration: underline;
-        text-underline-offset: 2px;
-      }
-
-      .shell {
-        width: min(var(--page), calc(100% - (var(--gutter) * 2)));
-        margin-inline: auto;
-      }
-
-      /* Hero: landscape photo + title + date only — no logo (matches PDF cover) */
-      .hero {
-        position: relative;
-        min-height: 220px;
-        height: clamp(220px, 32vw, 300px);
-        display: flex;
-        flex-direction: column;
-        color: var(--white);
-        overflow: hidden;
-        background: #1b1b20 center / cover no-repeat
-          url('assets/june-2026-quarterly-market-review/images/hero.jpg');
-      }
-
-      .hero::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        /* Subtle scrim for title contrast on photo */
-        background: linear-gradient(
-          180deg,
-          rgba(0, 0, 0, 0.28) 0%,
-          rgba(0, 0, 0, 0.12) 45%,
-          rgba(0, 0, 0, 0.22) 100%
-        );
-        pointer-events: none;
-      }
-
-      .hero .shell {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        justify-content: center;
-        padding-top: 28px;
-        padding-bottom: 28px;
-      }
-
-      .hero-title {
-        margin: 0;
-        font-family: var(--serif);
-        font-weight: 400;
-        font-size: clamp(28px, 4.2vw, 39px);
-        line-height: 1.15;
-        letter-spacing: 0.01em;
-      }
-
-      .hero-date {
-        margin: 10px 0 0;
-        font-family: var(--serif);
-        font-weight: 400;
-        font-size: clamp(18px, 2.4vw, 26px);
-        line-height: 1.2;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-      }
-
-      .article-wrap {
-        padding: var(--band-gap) 0 0;
-      }
-
-      .article p {
-        margin: 0 0 1.05em;
-      }
-
-      .article h2 {
-        margin: 1.45em 0 0.7em;
-        color: var(--ink);
-        font-family: var(--serif);
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 1.3;
-      }
-
-      /*
-        PDF list metrics (body column x≈36):
-        bullet mark x≈36 → flush with body
-        bullet text x≈54 → ~18pt hanging indent
-      */
-      .article ul {
-        margin: 0 0 1.1em;
-        padding: 0 0 0 18pt;
-        list-style: none;
-      }
-
-      .article li {
-        position: relative;
-        margin: 0 0 0.85em;
-        padding-left: 0;
-      }
-
-      .article li::before {
-        content: '•';
-        position: absolute;
-        left: -18pt;
-        width: 18pt;
-        text-align: left;
-      }
-
-      .markets-title {
-        margin: 1.6em 0 0.55em;
-        color: var(--accent);
-        font-family: var(--sans);
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.3;
-      }
-
-      .markets-table-wrap {
-        width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        margin: 0 0 0.6em;
-      }
-
-      .markets-table {
-        width: 100%;
-        min-width: 640px;
-        border-collapse: collapse;
-        font-size: 12px;
-        line-height: 1.35;
-      }
-
-      .markets-table th,
-      .markets-table td {
-        padding: 5px 6px;
-        vertical-align: middle;
-        border-bottom: 1px solid #757171;
-      }
-
-      .markets-table thead th {
-        font-weight: 500;
-        text-align: center;
-        color: var(--ink);
-        background: var(--white);
-        border-bottom: 1px solid #000;
-      }
-
-      .markets-table thead th:first-child {
-        text-align: left;
-        color: var(--accent);
-        font-weight: 500;
-      }
-
-      .markets-table .group {
-        color: var(--accent);
-        font-weight: 500;
-        text-align: left;
-        background: var(--white);
-        border-bottom: none;
-        padding-top: 10px;
-      }
-
-      .markets-table .label {
-        text-align: left;
-        white-space: nowrap;
-        color: var(--ink);
-        background: var(--white);
-        border-right: 1px solid #757171;
-        padding-left: 0;
-      }
-
-      .markets-table .pos,
-      .markets-table .neg {
-        text-align: center;
-        color: var(--white);
-        font-weight: 500;
-        border-bottom-color: #757171;
-      }
-
-      .markets-table .pos {
-        background: var(--pos);
-      }
-
-      .markets-table .neg {
-        background: var(--neg);
-      }
-
-      .table-source {
-        margin: 0 0 1.4em;
-        font-size: 12px;
-        line-height: 1.45;
-        color: var(--muted);
-      }
-
-      .charts {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 28px 24px;
-        margin: 1.4em 0 1.6em;
-      }
-
-      .charts figure {
-        margin: 0;
-      }
-
-      .charts img {
-        width: 100%;
-        height: auto;
-        background: var(--white);
-      }
-
-      @media (min-width: 720px) {
-        .charts {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 32px 28px;
-        }
-      }
-
-      /* Plain CTA — no tinted callout (matches PDF) */
-      .cta {
-        margin: 0.4em 0 0;
-        font-size: 15px;
-        line-height: 1.65;
-      }
-
-      a.cta-link {
-        color: var(--accent);
-        text-decoration: underline;
-        text-underline-offset: 2px;
-      }
-
-      a.cta-link:hover,
-      a.cta-link:focus-visible {
-        text-decoration-thickness: 2px;
-      }
-
-      /* Page 3 PDF footer: solid black, white text */
-      .site-footer {
-        margin-top: var(--band-gap);
-        padding: 36px 0 40px;
-        background: #000000;
-        color: var(--white);
-      }
-
-      .site-footer a {
-        color: var(--white);
-      }
-
-      .site-footer a:hover,
-      .site-footer a:focus-visible {
-        text-decoration: underline;
-        text-underline-offset: 2px;
-      }
-
-      .offices {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px 20px;
-        margin-bottom: 22px;
-        font-size: 12px;
-        line-height: 1.55;
-      }
-
-      .offices h4 {
-        margin: 0 0 4px;
-        font-family: var(--serif);
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 1.3;
-      }
-
-      .offices h4 + h4 {
-        margin-top: 14px;
-      }
-
-      .offices p {
-        margin: 0;
-      }
-
-      .offices .contact p + p {
-        margin-top: 2px;
-      }
-
-      .offices .contact .meta {
-        margin-top: 12px;
-      }
-
-      .legal {
-        font-size: 11px;
-        line-height: 1.55;
-        color: rgba(255, 255, 255, 0.92);
-      }
-
-      .legal p {
-        margin: 0 0 0.9em;
-      }
-
-      .legal p:last-child {
-        margin-bottom: 0;
-      }
-
-      @media (min-width: 720px) {
-        .offices {
-          grid-template-columns: 1.15fr 0.9fr 0.9fr 1.2fr;
-          gap: 16px 24px;
-        }
-      }
-
-      @media (max-width: 600px) {
-        :root {
-          --band-gap: 56px;
-        }
-
-        body {
-          font-size: 14.5px;
-        }
-
-        .markets-table {
-          font-size: 11px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header class="hero" aria-label="Quarterly Market Review June 2026">
-      <div class="shell">
-        <h1 class="hero-title">Quarterly Market Review</h1>
-        <p class="hero-date">June 2026</p>
-      </div>
-    </header>
-
-    <main class="article-wrap">
-      <article class="article shell">
-        <p>
-          The June quarter highlighted the resilience of risk assets amid a
-          complex macroeconomic backdrop. Global equities delivered strong
-          returns over both the June quarter and financial year 2026 (FY26). The
-          U.S. and Iran conflict, volatile energy prices and evolving monetary
-          policy expectations contributed to periods of uncertainty. However,
-          resilient U.S. company earnings and further upgrades to AI-related
-          capex plans by major technology companies helped support equity
-          markets.
-        </p>
-
-        <p>
-          Semiconductor-related businesses were a standout, with the
-          Philadelphia Semiconductor Index recording its strongest quarterly
-          performance since inception (1994), +88% over the quarter. This
-          supported strong gains across semiconductor-heavy markets, including
-          Taiwan and South Korea. While AI-related companies remained a key
-          driver of market performance, leadership broadened as the quarter
-          progressed, with investors increasingly looking beyond the largest
-          U.S. technology stocks toward a wider range of sectors and businesses.
-        </p>
-
-        <p>
-          The S&amp;P 500 Index gained 14.9% (+20.9% in FY26), while the Nasdaq
-          Composite Index climbed 21.4% (+28.7% in FY26). The S&amp;P/ASX 200
-          Accumulation Index lagged, returning 4.0% (+6.1% in FY26). The Nikkei
-          225 Index was the standout performer, rising 37.2% (+73.0% in FY26).
-          Emerging market equities also posted strong returns, with the MSCI
-          Emerging Markets Index advancing 23.3% (+40.9% in FY26).
-        </p>
-
-        <p>
-          The June U.S. Federal Open Market Committee (FOMC) meeting, the first
-          chaired by Kevin Warsh, was a key development during the quarter.
-          Warsh's more hawkish-than-expected tone prompted investors to
-          reassess the outlook for interest rates, shifting toward the
-          possibility of tightening. At the same time, investors applied greater
-          scrutiny of the significant capex underpinning the AI investment
-          cycle.
-        </p>
-
-        <p>
-          Commodity markets experienced significant volatility during the
-          quarter. Oil prices reversed sharply as geopolitical tensions eased,
-          with Brent Crude and West Texas Intermediate (WTI) falling 38.4% and
-          31.4% respectively. Precious metals gave back part of their
-          exceptional gains, with gold falling 14.1%. Despite the pullback, both
-          energy and gold remained positive over FY26.
-        </p>
-
-        <h2>Australia</h2>
-        <ul>
-          <li>
-            The Australian equity market, as measured by the S&amp;P/ASX 200
-            Accumulation Index rose 4.0% (+6.1% in FY26). Information Technology
-            was the best performing sector (+17.0%), followed by Real Estate
-            (+11.6%) and Industrials (+7.5%). Energy (‑16.5%) and Utilities
-            (‑7.6%) lagged.
-          </li>
-          <li>
-            Australian GDP grew by 0.3% in the March 2026 quarter (+2.5% for the
-            year) supported by business investment, particularly in data centre
-            infrastructure, while subdued household consumption and adverse
-            weather conditions weighed on mining production and exports.
-            Seasonally adjusted unemployment increased marginally to 4.4% in
-            May, its highest level since 2021. Employment nevertheless rebounded
-            strongly during the month, with 40,300 jobs added.
-          </li>
-          <li>
-            Australian CPI eased to 4.0% over the 12-months to May (down from
-            4.2% in April). Housing (+6.5%), Food and non-alcoholic beverages
-            (+3.3%), and Transport (+3.3%) remained the largest contributors to
-            inflation. Trimmed mean inflation (excludes volatile items)
-            increased to 3.6% from 3.4% in April, indicating underlying price
-            pressures remain elevated.
-          </li>
-          <li>
-            The RBA increased the cash rate by 25 basis points to 4.35% in May
-            before leaving rates unchanged in June, with the Board preferring to
-            assess the impact of earlier rate increases and recent energy market
-            disruptions before considering any further policy action.
-          </li>
-          <li>
-            The Westpac-Melbourne Institute Consumer Sentiment Index declined
-            2.9% in June to 80.6, remaining at historically weak levels. Ongoing
-            cost-of-living pressures and concerns around household finances
-            continued to weigh on consumer confidence.
-          </li>
-          <li>
-            Nationally, residential property prices fell 0.3% in June, as
-            measured by the PropTrack Home Price Index. Sydney and Perth
-            declined 0.5%, followed by Melbourne and Canberra (-0.4%). Despite
-            the decline, national residential property prices remain 5.8% higher
-            over 12-months.
-          </li>
-        </ul>
-
-        <h2>International</h2>
-        <ul>
-          <li>
-            U.S. equities delivered strong gains in the June quarter, with the
-            S&amp;P&nbsp;500 Index rising 14.9% (+20.9% in FY26) and the Nasdaq
-            Composite Index advancing 21.4% (+28.7% in FY26). Sector performance
-            within the S&amp;P 500 Index was led by Information Technology
-            (+31.6%), followed by Industrials (+14.5%) and Consumer Discretionary
-            (+9.1%). Energy underperformed (-14.0%) and Utilities declined
-            (-1.2%).
-          </li>
-          <li>
-            Headline U.S. CPI increased 4.2% over the 12-months to May (3.3% in
-            March), the highest level in three years. Core CPI (excludes
-            volatile food and energy) was more subdued, rising 0.2% in May and
-            2.9% over the year.
-          </li>
-          <li>
-            The FOMC left policy rates unchanged at 3.50% - 3.75% at its June
-            meeting. In his first meeting as Chair, Kevin Warsh adopted a more
-            hawkish tone. Updated Federal Reserve projections signalled a
-            meaningful shift in expectations, with policymakers no longer
-            forecasting a rate cut in 2026 and instead acknowledging the
-            possibility of further tightening.
-          </li>
-          <li>
-            Long-dated U.S. bond yields were volatile. The 10-year Treasury
-            yield reached 4.6%, before closing the quarter 15 basis points higher
-            at 4.47% (+24bp in FY26). The Bloomberg Global-Aggregate TR Index
-            (AUD) also increased 1.5% (+3.2% in FY26).
-          </li>
-          <li>
-            The Nikkei&nbsp;225 Index delivered a strong quarterly performance,
-            gaining 37.2% (+73.0% in FY26). Improving investor sentiment and
-            continued strength in corporate earnings supported gains across a
-            broad range of sectors. The Euro Stoxx 600 Index increased 10.0%
-            (+18.5% in FY26), while the FTSE 100 Index advanced 3.2% (+19.8% in
-            FY26).
-          </li>
-          <li>
-            Emerging market equities posted a strong quarterly performance. The
-            MSCI Emerging Markets Index (USD) rose 23.3% (+40.9% in FY26). South
-            Korea's KOSPI Index was a notable standout, gaining 67.8% (+176.0%
-            in FY26), supported by strong gains across semiconductor companies.
-          </li>
-          <li>
-            The USD Index (the value of the U.S. dollar against a basket of
-            widely recognised, publicly traded currencies) increased 1.2%
-            (+4.5% in FY26). The Australian dollar closed the quarter 0.3%
-            higher against the USD at 69.20¢, having traded as high as 72.6¢ in
-            mid-May.
-          </li>
-        </ul>
-
-        <h2>Commodities</h2>
-        <ul>
-          <li>
-            Commodity markets were mixed during the quarter. Brent Crude
-            declined 38.4% to US$77.92/bbl (+7.9% in FY26), while WTI Crude fell
-            31.4% to US$69.50/bbl (+6.7% in FY26). Copper ($/t) climbed 8.9%
-            (+32.8% in FY26), while Iron Ore ($/t) fell 6.7% (+7.6% in FY26).
-          </li>
-          <li>
-            Precious metals weakened, reversing some gains, with Silver
-            declining 22.0% to US$58.60/oz (+62.3% in FY26) and Gold falling
-            14.1% to US$4,008/oz (+21.3% in FY26).
-          </li>
-        </ul>
-
-        <h2 class="markets-title">Global Markets – 30 June 2026</h2>
-        <div class="markets-table-wrap">
-          <table class="markets-table">
-            <thead>
-              <tr>
-                <th scope="col">Equities</th>
-                <th scope="col">CYTD</th>
-                <th scope="col">1 Month</th>
-                <th scope="col">3 Months</th>
-                <th scope="col">1 Year</th>
-                <th scope="col">
-                  3 Years<br /><span style="font-weight: 400">(p.a.)</span>
-                </th>
-                <th scope="col">
-                  5 Years<br /><span style="font-weight: 400">(p.a.)</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="label">S&amp;P /ASX 200 Accumulation Index (AUD)</td>
-                <td class="pos">2.4%</td>
-                <td class="pos">0.7%</td>
-                <td class="pos">4.0%</td>
-                <td class="pos">6.1%</td>
-                <td class="pos">10.6%</td>
-                <td class="pos">7.8%</td>
-              </tr>
-              <tr>
-                <td class="label">S&amp;P/ASX Small Ordinaries Index (AUD)</td>
-                <td class="neg">-9.1%</td>
-                <td class="neg">-2.2%</td>
-                <td class="pos">3.0%</td>
-                <td class="pos">5.5%</td>
-                <td class="pos">7.0%</td>
-                <td class="pos">0.2%</td>
-              </tr>
-              <tr>
-                <td class="label">S&amp;P 500 Index (USD)</td>
-                <td class="pos">9.6%</td>
-                <td class="neg">-1.1%</td>
-                <td class="pos">14.9%</td>
-                <td class="pos">20.9%</td>
-                <td class="pos">19.0%</td>
-                <td class="pos">11.8%</td>
-              </tr>
-              <tr>
-                <td class="label">Nasdaq Composite Index (USD)</td>
-                <td class="pos">12.8%</td>
-                <td class="neg">-2.8%</td>
-                <td class="pos">21.4%</td>
-                <td class="pos">28.7%</td>
-                <td class="pos">23.9%</td>
-                <td class="pos">12.6%</td>
-              </tr>
-              <tr>
-                <td class="label">Russell 3000 Index (USD)</td>
-                <td class="pos">10.2%</td>
-                <td class="neg">-0.4%</td>
-                <td class="pos">15.1%</td>
-                <td class="pos">21.4%</td>
-                <td class="pos">18.8%</td>
-                <td class="pos">10.7%</td>
-              </tr>
-              <tr>
-                <td class="label">FTSE 100 Index (GBP)</td>
-                <td class="pos">5.7%</td>
-                <td class="pos">0.8%</td>
-                <td class="pos">3.2%</td>
-                <td class="pos">19.8%</td>
-                <td class="pos">11.7%</td>
-                <td class="pos">8.3%</td>
-              </tr>
-              <tr>
-                <td class="label">Euro Stoxx 600 (EUR)</td>
-                <td class="pos">8.4%</td>
-                <td class="pos">2.5%</td>
-                <td class="pos">10.0%</td>
-                <td class="pos">18.5%</td>
-                <td class="pos">11.6%</td>
-                <td class="pos">7.2%</td>
-              </tr>
-              <tr>
-                <td class="label">Nikkei 225 (JPY)</td>
-                <td class="pos">39.2%</td>
-                <td class="pos">5.6%</td>
-                <td class="pos">37.2%</td>
-                <td class="pos">73.0%</td>
-                <td class="pos">28.3%</td>
-                <td class="pos">19.5%</td>
-              </tr>
-              <tr>
-                <td class="label">Hang Seng (HKD)</td>
-                <td class="neg">-10.7%</td>
-                <td class="neg">-9.1%</td>
-                <td class="neg">-7.7%</td>
-                <td class="neg">-4.9%</td>
-                <td class="pos">6.5%</td>
-                <td class="neg">-4.5%</td>
-              </tr>
-              <tr>
-                <td class="label">MSCI Emerging Markets Index (USD)</td>
-                <td class="pos">22.7%</td>
-                <td class="neg">-1.7%</td>
-                <td class="pos">23.3%</td>
-                <td class="pos">40.9%</td>
-                <td class="pos">20.3%</td>
-                <td class="pos">4.6%</td>
-              </tr>
-              <tr>
-                <td class="label">MSCI World Ex Australia (AUD)</td>
-                <td class="pos">5.6%</td>
-                <td class="pos">3.1%</td>
-                <td class="pos">12.6%</td>
-                <td class="pos">14.9%</td>
-                <td class="pos">17.8%</td>
-                <td class="pos">13.4%</td>
-              </tr>
-              <tr>
-                <td class="group" colspan="7">Bonds</td>
-              </tr>
-              <tr>
-                <td class="label">
-                  Bloomberg AusBond Composite Index (AUD)
-                </td>
-                <td class="pos">2.3%</td>
-                <td class="pos">1.0%</td>
-                <td class="pos">2.6%</td>
-                <td class="pos">1.5%</td>
-                <td class="pos">4.0%</td>
-                <td class="pos">0.4%</td>
-              </tr>
-              <tr>
-                <td class="label">Bloomberg Global Agg Bond Index (AUD)</td>
-                <td class="pos">1.2%</td>
-                <td class="pos">0.4%</td>
-                <td class="pos">1.5%</td>
-                <td class="pos">2.9%</td>
-                <td class="pos">3.7%</td>
-                <td class="neg">0.0%</td>
-              </tr>
-              <tr>
-                <td class="group" colspan="7">Currency</td>
-              </tr>
-              <tr>
-                <td class="label">AUD/JPY</td>
-                <td class="pos">7.6%</td>
-                <td class="neg">-1.7%</td>
-                <td class="pos">2.7%</td>
-                <td class="pos">18.7%</td>
-                <td class="pos">5.4%</td>
-                <td class="pos">6.2%</td>
-              </tr>
-              <tr>
-                <td class="label">AUD/USD</td>
-                <td class="pos">3.7%</td>
-                <td class="neg">-3.7%</td>
-                <td class="pos">0.3%</td>
-                <td class="pos">5.1%</td>
-                <td class="pos">1.3%</td>
-                <td class="neg">-1.6%</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="table-source">
-          Source: Bloomberg 30 June 2026 (All returns are in local currency
-          terms.)
-        </p>
-
-        <section class="charts" aria-label="Market charts">
-          <figure>
-            <img
-              src="assets/june-2026-quarterly-market-review/images/chart-equity-performance.png"
-              alt="Global Equity Market Performance chart, June 2026 — S&amp;P 500, NASDAQ COMP and S&amp;P/ASX 200. Source: LSEG Datastream"
-              width="559"
-              height="415"
-            />
-          </figure>
-          <figure>
-            <img
-              src="assets/june-2026-quarterly-market-review/images/chart-equity-valuations.png"
-              alt="Global Equity Valuations chart (1-year forward P/E) — S&amp;P 500 and S&amp;P/ASX 200. Source: LSEG Datastream"
-              width="570"
-              height="423"
-            />
-          </figure>
-          <figure>
-            <img
-              src="assets/june-2026-quarterly-market-review/images/chart-inflation.png"
-              alt="U.S., Australia and German Headline Inflation chart, May 2026. Source: LSEG Datastream"
-              width="583"
-              height="433"
-            />
-          </figure>
-          <figure>
-            <img
-              src="assets/june-2026-quarterly-market-review/images/chart-bond-index.png"
-              alt="U.S. and Australia 10 Year Government Bond Index chart, June 2026. Source: LSEG Datastream"
-              width="583"
-              height="432"
-            />
-          </figure>
-          <figure>
-            <img
-              src="assets/june-2026-quarterly-market-review/images/chart-pmis.png"
-              alt="Manufacturing PMIs chart — Australia, US and Europe diffusion index. Source: LSEG Datastream"
-              width="577"
-              height="428"
-            />
-          </figure>
-          <figure>
-            <img
-              src="assets/june-2026-quarterly-market-review/images/chart-aud-usd.png"
-              alt="AUD/USD FX Rates chart, June 2026. Source: LSEG Datastream"
-              width="572"
-              height="424"
-            />
-          </figure>
-        </section>
-
-        <p class="cta">
-          Please contact your Advisor for further details or
-          <a
-            class="cta-link"
-            href="https://www.mutualtrust.com.au/wp-content/uploads/2026/06/MutualTrustQuarterlyOutlookJune2026.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            >click here</a
-          >
-          for a copy of our latest Quarterly Outlook.
-        </p>
-      </article>
-    </main>
-
-    <footer class="site-footer">
-      <div class="shell">
-        <div class="offices">
-          <div>
-            <h4>Melbourne</h4>
-            <p>Level 32</p>
-            <p>360 Collins Street</p>
-            <p>Melbourne VIC 3000</p>
-            <p>T <a href="tel:+61396059500">+61 3 9605 9500</a></p>
-          </div>
-          <div>
-            <h4>Sydney</h4>
-            <p><a href="tel:+61292247600">+61 2 9224 7600</a></p>
-            <h4>Brisbane</h4>
-            <p><a href="tel:+61721151100">+61 7 2115 1100</a></p>
-          </div>
-          <div>
-            <h4>Adelaide</h4>
-            <p><a href="tel:+61870823900">+61 8 7082 3900</a></p>
-            <h4>Perth</h4>
-            <p><a href="tel:+61892307788">+61 8 9230 7788</a></p>
-          </div>
-          <div class="contact">
-            <p>
-              <a href="mailto:info@mutualtrust.com.au"
-                >info@mutualtrust.com.au</a
-              >
-            </p>
-            <p>
-              <a
-                href="https://www.mutualtrust.com.au/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >www.mutualtrust.com.au</a
-              >
-            </p>
-            <p class="meta">ABN: 71 004 285 330 &nbsp; AFSL: 234590</p>
-          </div>
-        </div>
-        <div class="legal">
-          <p>
-            Liability limited by a scheme approved under Professional Standards
-            Legislation. For participating members (other than for the acts or
-            omissions of Australian Financial Services Licensees). Copyright ©
-            2026 Mutual Trust Pty Ltd.
-          </p>
-          <p>
-            This information has been prepared in Australia by Mutual Trust Pty
-            Ltd (ACN 004 285 330) to provide general information only. The
-            information is confidential and may not be reproduced without
-            permission. While care has been taken in its preparation, no
-            representation is made as to the accuracy, reliability or
-            completeness of the contents of this information including any
-            estimates or projections about anticipated future events.
-            Information regarding past performance of investments or theoretical
-            investments is not a reliable indicator of future performance. Any
-            forward-looking statements involve subjective judgments and analysis
-            and are subject to significant uncertainties, risks, and
-            contingencies, many of which may be unknown. Mutual Trust Pty Ltd
-            expressly disclaims all liability for any claims relating to the
-            contents of this information (including any errors or omissions) or
-            in relation to any written or oral communications transmitted to the
-            recipient in the course of its evaluation. This information does not
-            constitute investment, financial, tax or legal advice and is not to
-            be considered as a recommendation that the recipient make any
-            investment. Each recipient should conduct and rely upon its own
-            investigation and analysis of the information and should seek
-            professional advice before taking any action. The Mutual Trust Group
-            and its officers, employees and associates may have a material
-            interest in some of the investments mentioned in this document and
-            has established procedures to identify and manage potential or
-            actual conflicts of interest.
-          </p>
-          <p>
-            Mutual Trust acknowledges and pays respect to the past and present
-            Traditional Custodians and Elders of this nation and the
-            continuation of cultural, spiritual and educational practices of
-            Aboriginal and Torres Strait Islander peoples.
-          </p>
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Quarterly Market Review — June 2026 | Mutual Trust</title>
+<link rel="icon" href="https://mt.wootech.com.au/wp-content/uploads/2024/10/favicon.png" type="image/png" />
+<style>
+  :root{
+    --serif: Baskerville, "Baskerville Old Face", "Libre Baskerville", "Hoefler Text", Garamond, "Times New Roman", serif;
+    --sans: "Proxima Nova", "Proxima Nova Rg", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --ink: #000000;
+    --accent: #d17b19;
+    --pos: #00675a;
+    --neg: #822333;
+    --rule: #757171;
+    --shell: 900px;
+    --gutter: 26px;
+    --band: 76px;          /* hero <-> content <-> footer clearspace */
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+
+  html{ -webkit-text-size-adjust:100%; }
+  body{
+    margin:0;
+    background:#ffffff;
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:17px;
+    line-height:1.7;
+    overflow-x:hidden;
+  }
+
+  .shell{
+    width:100%;
+    max-width:var(--shell);
+    margin:0 auto;
+    padding-left:var(--gutter);
+    padding-right:var(--gutter);
+  }
+
+  img{ max-width:100%; height:auto; display:block; }
+
+  /* ---------- masthead ---------- */
+  .masthead{ padding-top:30px; padding-bottom:26px; }
+  .masthead img{ width:206px; }
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    background-image:url("assets/june-2026-quarterly-market-review/images/hero-banner.jpg");
+    background-size:cover;
+    background-position:center 42%;
+    background-repeat:no-repeat;
+    background-color:#20232a;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(100deg, rgba(0,0,0,.62) 0%, rgba(0,0,0,.44) 45%, rgba(0,0,0,.14) 78%, rgba(0,0,0,.06) 100%);
+  }
+  .hero .shell{
+    position:relative;
+    z-index:1;
+    min-height:clamp(210px, 25.2vw, 268px);
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding-top:44px;
+    padding-bottom:36px;
+  }
+  .hero h1{
+    font-family:var(--serif);
+    font-weight:400;
+    color:#ffffff;
+    font-size:clamp(2.05rem, 6.1vw, 62px);
+    line-height:1.06;
+    margin:0;
+    letter-spacing:.004em;
+    text-shadow:0 1px 14px rgba(0,0,0,.45);
+  }
+  .hero .issue{
+    font-family:var(--serif);
+    color:#ffffff;
+    font-size:clamp(1.3rem, 4vw, 42px);
+    line-height:1.2;
+    margin:.24em 0 0;
+    letter-spacing:.012em;
+    text-shadow:0 1px 12px rgba(0,0,0,.45);
+  }
+
+  /* ---------- article ---------- */
+  main{ padding-top:var(--band); padding-bottom:var(--band); }
+
+  p{ margin:0 0 1.05em; }
+  main > .shell > p:last-of-type{ margin-bottom:0; }
+
+  h2{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:27px;
+    line-height:1.25;
+    margin:1.75em 0 .5em;
+  }
+
+  ul{
+    list-style:none;
+    margin:0 0 1.4em;
+    padding:0;
+  }
+  li{
+    position:relative;
+    padding-left:29px;
+    margin:0 0 .85em;
+  }
+  li:last-child{ margin-bottom:0; }
+  li::before{
+    content:"\2022";
+    position:absolute;
+    left:0;
+    top:0;
+    line-height:inherit;
+  }
+
+  a{ color:var(--accent); text-decoration:underline; text-underline-offset:2px; }
+  a:hover, a:focus-visible{ text-decoration-thickness:2px; }
+
+  /* ---------- market table ---------- */
+  .table-title{
+    font-size:20px;
+    color:var(--accent);
+    margin:2.1em 0 .55em;
+  }
+  .table-wrap{ width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  table{
+    border-collapse:collapse;
+    width:100%;
+    min-width:660px;
+    font-size:14px;
+    line-height:1.35;
+  }
+  th, td{
+    border:1px solid var(--rule);
+    padding:5px 8px;
+    font-weight:400;
+  }
+  thead th{
+    text-align:center;
+    vertical-align:middle;
+    border-color:var(--ink);
+    white-space:nowrap;
+  }
+  thead th.rowhead{
+    text-align:left;
+    color:var(--accent);
+    white-space:normal;
+  }
+  th.rowhead, td.rowhead{
+    text-align:left;
+    border-color:var(--ink);
+    white-space:nowrap;
+  }
+  tbody th{
+    text-align:left;
+    border-color:var(--ink);
+    white-space:nowrap;
+  }
+  td.v{ text-align:center; color:#ffffff; white-space:nowrap; }
+  td.pos{ background:var(--pos); }
+  td.neg{ background:var(--neg); }
+  td.blank{ background:#ffffff; border-color:var(--rule); }
+  tr.group th{ color:var(--accent); }
+  .table-source{
+    font-style:italic;
+    font-size:13px;
+    margin:.7em 0 0;
+  }
+
+  /* ---------- charts ---------- */
+  .charts{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0,1fr));
+    column-gap:34px;
+    row-gap:34px;
+    margin:2.4em 0 0;
+  }
+  .charts figure{ margin:0; }
+  .charts img{ width:100%; }
+
+  /* ---------- call to action ---------- */
+  .cta{
+    text-align:center;
+    margin:2.6em 0 0;
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    background:#000000;
+    color:#ffffff;
+    padding-top:52px;
+    padding-bottom:48px;
+    font-size:13px;
+    line-height:1.6;
+  }
+  footer a{ color:#ffffff; text-decoration:underline; text-underline-offset:2px; }
+  footer .tel{ color:#ffffff; text-decoration:none; }
+  footer .tel:hover, footer .tel:focus-visible{ text-decoration:underline; }
+
+  .offices{
+    display:grid;
+    grid-template-columns:1.15fr .85fr .85fr 1.25fr;
+    column-gap:26px;
+    row-gap:26px;
+    align-items:start;
+  }
+  .offices h3{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:19px;
+    line-height:1.2;
+    margin:0 0 .18em;
+  }
+  .office + .office{ margin-top:28px; }
+  .offices p{ margin:0; }
+  .contact-col{ text-align:right; }
+  .contact-col .abn{ margin-top:34px; }
+
+  .legal{ margin-top:34px; }
+  .legal p{ margin:0 0 1.2em; font-size:11.5px; line-height:1.62; }
+  .legal p:last-child{ margin-bottom:0; }
+  .legal .ack{ margin-top:1.9em; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 860px){
+    :root{ --band:56px; --gutter:22px; }
+    body{ font-size:16px; }
+    h2{ font-size:24px; }
+    .charts{ grid-template-columns:minmax(0,1fr); row-gap:30px; }
+    .offices{
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      row-gap:30px;
+    }
+    .contact-col{ text-align:left; }
+    .contact-col .abn{ margin-top:18px; }
+  }
+
+  @media (max-width: 560px){
+    :root{ --band:46px; --gutter:18px; }
+    .masthead{ padding-top:22px; padding-bottom:20px; }
+    .masthead img{ width:172px; }
+    .hero .shell{ min-height:190px; padding-top:34px; padding-bottom:26px; }
+    .offices{ grid-template-columns:minmax(0,1fr); row-gap:26px; }
+    footer{ padding-top:40px; padding-bottom:40px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="shell">
+    <img src="assets/june-2026-quarterly-market-review/images/mutual-trust-logo.png" alt="Mutual Trust" width="472" height="52" />
+  </div>
+</header>
+
+<section class="hero">
+  <div class="shell">
+    <h1>Quarterly Market Review</h1>
+    <p class="issue">JUNE 2026</p>
+  </div>
+</section>
+
+<main>
+  <div class="shell">
+
+    <p>The June quarter highlighted the resilience of risk assets amid a complex macroeconomic backdrop. Global equities delivered strong returns over both the June quarter and financial year 2026 (FY26).  The U.S. and Iran conflict, volatile energy prices and evolving monetary policy expectations contributed to periods of uncertainty.  However, resilient U.S. company earnings and further upgrades to AI-related capex plans by major technology companies helped support equity markets.</p>
+
+    <p>Semiconductor-related businesses were a standout, with the Philadelphia Semiconductor Index recording its strongest quarterly performance since inception (1994), +88% over the quarter.  This supported strong gains across semiconductor-heavy markets, including Taiwan and South Korea.  While AI-related companies remained a key driver of market performance, leadership broadened as the quarter progressed, with investors increasingly looking beyond the largest U.S. technology stocks toward a wider range of sectors and businesses.</p>
+
+    <p>The S&amp;P 500 Index gained 14.9% (+20.9% in FY26), while the Nasdaq Composite Index climbed 21.4% (+28.7% in FY26).  The S&amp;P/ASX 200 Accumulation Index lagged, returning 4.0% (+6.1% in FY26).  The Nikkei 225 Index was the standout performer, rising 37.2% (+73.0% in FY26).  Emerging market equities also posted strong returns, with the MSCI Emerging Markets Index advancing 23.3% (+40.9% in FY26).</p>
+
+    <p>The June U.S. Federal Open Market Committee (FOMC) meeting, the first chaired by Kevin Warsh, was a key development during the quarter.  Warsh's more hawkish-than-expected tone prompted investors to reassess the outlook for interest rates, shifting toward the possibility of tightening.  At the same time, investors applied greater scrutiny of the significant capex underpinning the AI investment cycle.</p>
+
+    <p>Commodity markets experienced significant volatility during the quarter.  Oil prices reversed sharply as geopolitical tensions eased, with Brent Crude and West Texas Intermediate (WTI) falling 38.4% and 31.4% respectively.  Precious metals gave back part of their exceptional gains, with gold falling 14.1%.  Despite the pullback, both energy and gold remained positive over FY26.</p>
+
+    <h2>Australia</h2>
+    <ul>
+      <li>The Australian equity market, as measured by the S&amp;P/ASX 200 Accumulation Index rose 4.0% (+6.1% in FY26).  Information Technology was the best performing sector (+17.0%), followed by Real Estate (+11.6%) and Industrials (+7.5%).  Energy (&#8209;16.5%) and Utilities (&#8209;7.6%) lagged.</li>
+      <li>Australian GDP grew by 0.3% in the March 2026 quarter (+2.5% for the year) supported by business investment, particularly in data centre infrastructure, while subdued household consumption and adverse weather conditions weighed on mining production and exports.  Seasonally adjusted unemployment increased marginally to 4.4% in May, its highest level since 2021.  Employment nevertheless rebounded strongly during the month, with 40,300 jobs added.</li>
+      <li>Australian CPI eased to 4.0% over the 12-months to May (down from 4.2% in April).  Housing (+6.5%), Food and non-alcoholic beverages (+3.3%), and Transport (+3.3%) remained the largest contributors to inflation.  Trimmed mean inflation (excludes volatile items) increased to 3.6% from 3.4% in April, indicating underlying price pressures remain elevated.</li>
+      <li>The RBA increased the cash rate by 25 basis points to 4.35% in May before leaving rates unchanged in June, with the Board preferring to assess the impact of earlier rate increases and recent energy market disruptions before considering any further policy action.</li>
+      <li>The Westpac-Melbourne Institute Consumer Sentiment Index declined 2.9% in June to 80.6, remaining at historically weak levels.  Ongoing cost-of-living pressures and concerns around household finances continued to weigh on consumer confidence.</li>
+      <li>Nationally, residential property prices fell 0.3% in June, as measured by the PropTrack Home Price Index.  Sydney and Perth declined 0.5%, followed by Melbourne and Canberra (-0.4%).  Despite the decline, national residential property prices remain 5.8% higher over 12-months.</li>
+    </ul>
+
+    <h2>International</h2>
+    <ul>
+      <li>U.S. equities delivered strong gains in the June quarter, with the S&amp;P&nbsp;500 Index rising 14.9% (+20.9% in FY26) and the Nasdaq Composite Index advancing 21.4% (+28.7% in FY26).  Sector performance within the S&amp;P 500 Index was led by Information Technology (+31.6%), followed by Industrials (+14.5%) and Consumer Discretionary (+9.1%).  Energy underperformed (-14.0%) and Utilities declined (-1.2%).</li>
+      <li>Headline U.S. CPI increased 4.2% over the 12-months to May (3.3% in March), the highest level in three years.  Core CPI (excludes volatile food and energy) was more subdued, rising 0.2% in May and 2.9% over the year.</li>
+      <li>The FOMC left policy rates unchanged at 3.50% - 3.75% at its June meeting.  In his first meeting as Chair, Kevin Warsh adopted a more hawkish tone.  Updated Federal Reserve projections signalled a meaningful shift in expectations, with policymakers no longer forecasting a rate cut in 2026 and instead acknowledging the possibility of further tightening.</li>
+      <li>Long-dated U.S. bond yields were volatile.  The 10-year Treasury yield reached 4.6%, before closing the quarter 15 basis points higher at 4.47% (+24bp in FY26). The Bloomberg Global-Aggregate TR Index (AUD) also increased 1.5% (+3.2% in FY26).</li>
+      <li>The Nikkei&nbsp;225 Index delivered a strong quarterly performance, gaining 37.2% (+73.0% in FY26).  Improving investor sentiment and continued strength in corporate earnings supported gains across a broad range of sectors.  The Euro Stoxx 600 Index increased 10.0% (+18.5% in FY26), while the FTSE 100 Index advanced 3.2% (+19.8% in FY26).</li>
+      <li>Emerging market equities posted a strong quarterly performance.  The MSCI Emerging Markets Index (USD) rose 23.3% (+40.9% in FY26).  South Korea's KOSPI Index was a notable standout, gaining 67.8% (+176.0% in FY26), supported by strong gains across semiconductor companies.</li>
+      <li>The USD Index (the value of the U.S. dollar against a basket of widely recognised, publicly traded currencies) increased 1.2% (+4.5% in FY26).  The Australian dollar closed the quarter 0.3% higher against the USD at 69.20¢, having traded as high as 72.6¢ in mid-May.</li>
+    </ul>
+
+    <h2>Commodities</h2>
+    <ul>
+      <li>Commodity markets were mixed during the quarter.  Brent Crude declined 38.4% to US$77.92/bbl (+7.9% in FY26), while WTI Crude fell 31.4% to US$69.50/bbl (+6.7% in FY26).  Copper ($/t) climbed 8.9% (+32.8% in FY26), while Iron Ore ($/t) fell 6.7% (+7.6% in FY26).</li>
+      <li>Precious metals weakened, reversing some gains, with Silver declining 22.0% to US$58.60/oz (+62.3% in FY26) and Gold falling 14.1% to US$4,008/oz (+21.3% in FY26).</li>
+    </ul>
+
+    <p class="table-title">Global Markets &#8211; 30 June 2026</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th class="rowhead" scope="col">Equities</th>
+            <th scope="col">CYTD</th>
+            <th scope="col">1 Month</th>
+            <th scope="col">3 Months</th>
+            <th scope="col">1 Year</th>
+            <th scope="col">3 Years<br />(p.a.)</th>
+            <th scope="col">5 Years<br />(p.a.)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="rowhead" scope="row">S&amp;P /ASX 200 Accumulation Index (AUD)</th>
+            <td class="v pos">2.4%</td><td class="v pos">0.7%</td><td class="v pos">4.0%</td><td class="v pos">6.1%</td><td class="v pos">10.6%</td><td class="v pos">7.8%</td>
+          </tr>
+          <tr>
+            <th class="rowhead" scope="row">S&amp;P/ASX Small Ordinaries Index (AUD)</th>
+            <td class="v neg">-9.1%</td><td class="v neg">-2.2%</td><td class="v pos">3.0%</td><td class="v pos">5.5%</td><td class="v pos">7.0%</td><td class="v pos">0.2%</td>
+          </tr>
+          <tr>
+            <th class="rowhead" scope="row">S&amp;P 500 Index (USD)</th>
+            <td class="v pos">9.6%</td><td class="v neg">-1.1%</td><td class="v pos">14.9%</td><td class="v pos">20.9%</td><td class="v pos">19.0%</td><td class="v pos">11.8%</td>
+          </tr>
+          <tr>
+            <th class="rowhead" scope="row">Nasdaq Composite Index (USD)</th>
+            <td class="v pos">12.8%</td><td class="v neg">-2.8%</td><td class="v pos">21.4%</td><td class="v pos">28.7%</td><td class="v pos">23.9%</td><td class="v pos">12.6%</td>
+          </tr>
+          <tr>
+            <th class="rowhead" scope="row">Russell 3000 Index (USD)</th>
+            <td class="v pos">10.2%</td><td class="v neg">-0.4%</td><td class="v pos">15.1%</td><td class="v pos">21.4%</td><td class="v pos">18.8%</td><td class="v pos">10.7%</td>
+          </tr>
+          <tr>
+            <th class="rowhead" scope="row">FTSE 100 Index (GBP)</th>
+            <td class="v pos">5.7%</td><td class="v pos">0.8%</td><td class="v pos">3.2%</td><td class="v pos">19.8%</td><td class="v pos">11.7%</td><td class="v pos">8.3%</td>
+          </tr>
+          <tr>
+            <th class="rowhead" scope="row">Euro Stoxx 600 (EUR)</th>
+            <td class="v pos">8.4%</td><td class="v pos">2.5%</td><td class="v pos">10.0%</td><td class="v pos">18.5%</td><td class="v pos">11.6%</td><td class="v pos">7.2%</td>
+          </tr>
+          <tr>
+            <th class="rowhead" scope="row">Nikkei 225 (JPY)</th>
+            <td class="v pos">39.2%</td><td class="v pos">5.6%</td><td class="v pos">37.2%</td><td class="v pos">73.0%</td><td class="v pos">28.3%</td><td class="v pos">19.5%</td>
+          </tr>
+          <tr>
+            <th class="rowhead" scope="row">Hang Seng (HKD)</th>
+            <td class="v neg">-10.7%</td><td class="v neg">-9.1%</td><td class="v neg">-7.7%</td><td class="v neg">-4.9%</td><td class="v pos">6.5%</td><td class="v neg">-4.5%</td>
+          </tr>
+          <tr>
+            <th class="rowhead" scope="row">MSCI Emerging Markets Index (USD)</th>
+            <td class="v pos">22.7%</td><td class="v neg">-1.7%</td><td class="v pos">23.3%</td><td class="v pos">40.9%</td><td class="v pos">20.3%</td><td class="v pos">4.6%</td>
+          </tr>
+          <tr>
+            <th class="rowhead" scope="row">MSCI World Ex Australia (AUD)</th>
+            <td class="v pos">5.6%</td><td class="v pos">3.1%</td><td class="v pos">12.6%</td><td class="v pos">14.9%</td><td class="v pos">17.8%</td><td class="v pos">13.4%</td>
+          </tr>
+          <tr class="group">
+            <th class="rowhead" scope="row">Bonds</th>
+            <td class="blank" colspan="6"></td>
+          </tr>
+          <tr>
+            <th class="rowhead" scope="row">Bloomberg AusBond Composite Index (AUD)</th>
+            <td class="v pos">2.3%</td><td class="v pos">1.0%</td><td class="v pos">2.6%</td><td class="v pos">1.5%</td><td class="v pos">4.0%</td><td class="v pos">0.4%</td>
+          </tr>
+          <tr>
+            <th class="rowhead" scope="row">Bloomberg Global Agg Bond Index (AUD)</th>
+            <td class="v pos">1.2%</td><td class="v pos">0.4%</td><td class="v pos">1.5%</td><td class="v pos">2.9%</td><td class="v pos">3.7%</td><td class="v neg">0.0%</td>
+          </tr>
+          <tr class="group">
+            <th class="rowhead" scope="row">Currency</th>
+            <td class="blank" colspan="6"></td>
+          </tr>
+          <tr>
+            <th class="rowhead" scope="row">AUD/JPY</th>
+            <td class="v pos">7.6%</td><td class="v neg">-1.7%</td><td class="v pos">2.7%</td><td class="v pos">18.7%</td><td class="v pos">5.4%</td><td class="v pos">6.2%</td>
+          </tr>
+          <tr>
+            <th class="rowhead" scope="row">AUD/USD</th>
+            <td class="v pos">3.7%</td><td class="v neg">-3.7%</td><td class="v pos">0.3%</td><td class="v pos">5.1%</td><td class="v pos">1.3%</td><td class="v neg">-1.6%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-source">Source: Bloomberg 30 June 2026 (All returns are in local currency terms.)</p>
+
+    <div class="charts">
+      <figure><img src="assets/june-2026-quarterly-market-review/images/chart-global-equity-market-performance.png" alt="Global Equity Market Performance, Jun 2026 — S&amp;P 500, NASDAQ COMP and S&amp;P/ASX 200. Source: LSEG Datastream" /></figure>
+      <figure><img src="assets/june-2026-quarterly-market-review/images/chart-global-equity-valuations.png" alt="Global Equity Valuations (1-year fwd P/E) — S&amp;P 500 and S&amp;P/ASX 200. Source: LSEG Datastream" /></figure>
+      <figure><img src="assets/june-2026-quarterly-market-review/images/chart-headline-inflation.png" alt="U.S., Aust &amp; German Headline Inflation, May 2026 — United States (%YoY) CPI: 4.2%, Australia (%YoY) CPI: 4.1%, Germany (%YOY) CPI: 2.6%. Source: LSEG Datastream" /></figure>
+      <figure><img src="assets/june-2026-quarterly-market-review/images/chart-10yr-government-bond-index.png" alt="U.S. &amp; Aust 10 Yr Government Bond Index, Jun 2026 — U.S. Benchmark 10Y Govt Bond Index and Aust Benchmark 10Y Govt Bond Index. Source: LSEG Datastream" /></figure>
+      <figure><img src="assets/june-2026-quarterly-market-review/images/chart-manufacturing-pmis.png" alt="Manufacturing PMIs, Diffusion Index, 50 = 'no change' — Australia: 51.5, US: 53.9, Europe: 51.4. Source: LSEG Datastream" /></figure>
+      <figure><img src="assets/june-2026-quarterly-market-review/images/chart-aud-usd-fx-rates.png" alt="AUD/USD FX Rates, Jun 2026. Source: LSEG Datastream" /></figure>
+    </div>
+
+    <p class="cta">Please contact your Advisor for further details or <a href="https://www.mutualtrust.com.au/wp-content/uploads/2026/06/MutualTrustQuarterlyOutlookJune2026.pdf">click here</a> for a copy of our latest Quarterly Outlook.</p>
+
+  </div>
+</main>
+
+<footer>
+  <div class="shell">
+
+    <div class="offices">
+      <div>
+        <div class="office">
+          <h3>Melbourne</h3>
+          <p>Level 32</p>
+          <p>360 Collins Street</p>
+          <p>Melbourne VIC 3000</p>
+          <p>T <a class="tel" href="tel:+61396059500">+61 3 9605 9500</a></p>
         </div>
       </div>
-    </footer>
-  </body>
+      <div>
+        <div class="office">
+          <h3>Sydney</h3>
+          <p><a class="tel" href="tel:+61292247600">+61 2 9224 7600</a></p>
+        </div>
+        <div class="office">
+          <h3>Brisbane</h3>
+          <p><a class="tel" href="tel:+61721151100">+61 7 2115 1100</a></p>
+        </div>
+      </div>
+      <div>
+        <div class="office">
+          <h3>Adelaide</h3>
+          <p><a class="tel" href="tel:+61870823900">+61 8 7082 3900</a></p>
+        </div>
+        <div class="office">
+          <h3>Perth</h3>
+          <p><a class="tel" href="tel:+61892307788">+61 8 9230 7788</a></p>
+        </div>
+      </div>
+      <div class="contact-col">
+        <p><a href="mailto:info@mutualtrust.com.au">info@mutualtrust.com.au</a></p>
+        <p><a href="http://www.mutualtrust.com.au/">www.mutualtrust.com.au</a></p>
+        <p class="abn">ABN: 71 004 285 330&nbsp; AFSL: 234590</p>
+      </div>
+    </div>
+
+    <div class="legal">
+      <p>Liability limited by a scheme approved under Professional Standards Legislation.  For participating members (other than for the acts or omissions of Australian Financial Services Licensees).  Copyright &copy; 2026 Mutual Trust Pty Ltd.</p>
+
+      <p>This information has been prepared in Australia by Mutual Trust Pty Ltd (ACN 004 285 330) to provide general information only.  The information is confidential and may not be reproduced without permission.  While care has been taken in its preparation, no representation is made as to the accuracy, reliability or completeness of the contents of this information including any estimates or projections about anticipated future events.  Information regarding past performance of investments or theoretical investments is not a reliable indicator of future performance.  Any forward-looking statements involve subjective judgments and analysis and are subject to significant uncertainties, risks, and contingencies, many of which may be unknown.  Mutual Trust Pty Ltd expressly disclaims all liability for any claims relating to the contents of this information (including any errors or omissions) or in relation to any written or oral communications transmitted to the recipient in the course of its evaluation.  This information does not constitute investment, financial, tax or legal advice and is not to be considered as a recommendation that the recipient make any investment.  Each recipient should conduct and rely upon its own investigation and analysis of the information and should seek professional advice before taking any action.  The Mutual Trust Group and its officers, employees and associates may have a material interest in some of the investments mentioned in this document and has established procedures to identify and manage potential or actual conflicts of interest.</p>
+
+      <p class="ack">Mutual Trust acknowledges and pays respect to the past and present Traditional Custodians and Elders of this nation and the continuation of cultural, spiritual and educational practices of Aboriginal and Torres Strait Islander peoples.</p>
+    </div>
+
+  </div>
+</footer>
+
+</body>
 </html>
