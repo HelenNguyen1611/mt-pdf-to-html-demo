@@ -189,6 +189,7 @@
       --list-marker-color: var(--color-ink);
       --list-marker-gap: 24px; /* = 18pt PDF; fixed px, not em */
       --list-indent: var(--list-marker-gap);
+      --list-marker-size: 4px;
       --list-item-gap: 0; /* override per PDF when source adds gap between items */
 
         /* ------------------------------------------------------------------
@@ -197,12 +198,7 @@
          ------------------------------------------------------------------ */
         --perspective-hero-height: clamp(210px, 32vw, 320px);
         --perspective-hero-position: center center;
-        --perspective-hero-scrim: linear-gradient(
-          180deg,
-          rgba(0, 0, 0, 0.28) 0%,
-          rgba(0, 0, 0, 0.08) 45%,
-          rgba(0, 0, 0, 0.35) 100%
-        );
+        --perspective-hero-scrim: rgba(0, 0, 0, 0.25);
         --perspective-logo-width: 200px;
         --perspective-logo-top: var(--space-5);
         --perspective-title-size: 32px;
@@ -279,13 +275,13 @@
 
       a {
         color: var(--color-link);
-        text-decoration: underline;
-        text-underline-offset: 0.15em;
-        font-weight: inherit; /* match PDF; do not invent bold links */
+        text-decoration: none; /* PDF colour-only — no underline */
+        font-weight: inherit;
       }
 
       a:hover {
-        text-decoration-thickness: 2px; /* web affordance only */
+        text-decoration: underline; /* web affordance only */
+        text-underline-offset: 0.15em;
       }
 
       a:focus-visible,
@@ -407,18 +403,23 @@
 
       ul.mt-list > li,
       ol.mt-list > li {
+        position: relative;
         padding-left: var(--list-indent);
-        text-indent: calc(-1 * var(--list-indent));
+        text-indent: 0;
         line-height: var(--perspective-body-lh);
         margin: 0 0 var(--list-item-gap);
         color: var(--color-ink);
       }
 
       ul.mt-list > li::before {
-        content: '•';
-        color: var(--list-marker-color);
-        display: inline-block;
-        width: var(--list-indent);
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.55em;
+        width: var(--list-marker-size);
+        height: var(--list-marker-size);
+        border-radius: 50%;
+        background-color: var(--list-marker-color);
       }
 
       ol.mt-list {
@@ -427,10 +428,15 @@
 
       ol.mt-list > li::before {
         counter-increment: mt-counter;
-        content: counter(mt-counter) '.';
-        color: var(--list-marker-color);
-        display: inline-block;
+        content: counter(mt-counter) ".";
+        position: absolute;
+        left: 0;
         width: var(--list-indent);
+        color: var(--list-marker-color);
+        font-size: inherit;
+        line-height: inherit;
+        background: none;
+        border-radius: 0;
       }
 
       .mt-list--outdent {
@@ -869,64 +875,58 @@
         }
       }
     
-    /* ===== PDF-SPECIFIC OVERRIDES (C.6 calibrated from source) =====
+    /* ===== PDF-SPECIFIC OVERRIDES (C.6 calibrated) =====
        Source: MutualTrustProtectingintergenerationalwealththroughtimesofchangeJuly2026.pdf
        Scale: 1pt → 4/3 CSS px (96dpi). Content width 484.5pt → 646px.
-       ================================================================= */
+       ================================================== */
     :root {
       --container-max: 646px;
-      --gutter: 24px; /* outside content on narrow viewports; at ≥694px content stays 646 */
+      --gutter: 24px;
       --color-link: #d17b19;
 
       --perspective-hero-height: 299px;
       --perspective-hero-position: center center;
-      --perspective-hero-scrim: none; /* PDF has no overlay scrim */
+      --perspective-hero-scrim: rgba(0, 0, 0, 0.25); /* PDF fill black @ ~25% over hero */
       --perspective-logo-width: 293px;
       --perspective-logo-top: 43px;
 
-      --perspective-title-size: 25.36px; /* 19.02pt */
+      --perspective-title-size: 25.36px;
       --perspective-title-lh: 1.31;
       --perspective-title-tracking: 0;
       --perspective-title-color: #4e5e72;
 
-      --perspective-body-size: 16px; /* 12pt */
+      --perspective-body-size: 16px;
       --perspective-body-lh: 1.34;
       --perspective-body-tracking: 0;
 
-      --perspective-section-size: 16px; /* Proxima Bold, same size as body */
+      --perspective-section-size: 16px;
       --perspective-section-color: var(--color-ink);
 
-      --perspective-band-gap: 20px; /* hero→title ~14.7pt */
+      --perspective-band-gap: 20px;
       --perspective-promo-bg: #e1e5eb;
       --perspective-callout-bg: #e1e5eb;
 
-      --perspective-legal-size: 8px; /* 6pt */
+      --perspective-legal-size: 8px;
       --perspective-legal-lh: 1.18;
       --perspective-legal-border: none;
 
       --perspective-contact-label-color: #99999b;
-      --perspective-contact-label-size: 12px; /* 9pt Baskerville */
+      --perspective-contact-label-size: 12px;
 
       --list-marker-gap: 24px;
       --list-indent: 24px;
+      --list-marker-size: 4px;
       --list-item-gap: 0;
-      --pdf-para-gap: 10px; /* ~7.8pt between paragraphs */
+      --pdf-para-gap: 10px;
     }
 
-    /* Keep content column = 646px when viewport allows (gutter collapses into side margins) */
     @media (min-width: 694px) {
-      :root {
-        --gutter: 0px;
-      }
+      :root { --gutter: 0px; }
     }
 
-    .perspective-article__title {
-      margin: 0 0 15px; /* ~11.6pt to first para */
-    }
+    .perspective-article__title { margin: 0 0 15px; }
 
-    .perspective-body p {
-      margin: 0 0 var(--pdf-para-gap);
-    }
+    .perspective-body p { margin: 0 0 var(--pdf-para-gap); }
 
     .perspective-body h2,
     .perspective-body .perspective-section-title {
@@ -940,24 +940,23 @@
       line-height: var(--perspective-body-lh);
     }
 
-    .perspective-hero::after {
-      display: none; /* no scrim */
+    .perspective-hero__inner { padding-bottom: 0; }
+
+    /* Fix: body ul reset must not kill B.9 inset/outdent */
+    .perspective-body ul.mt-list--inset {
+      padding-left: var(--list-indent);
+    }
+    .perspective-body ul.mt-list--outdent {
+      margin-left: calc(-1 * var(--list-indent));
+    }
+    .perspective-body ul.mt-list {
+      margin: 0 0 var(--pdf-para-gap);
     }
 
-    /* Logo sits on full-bleed hero but aligns to content column */
-    .perspective-hero__inner {
-      padding-bottom: 0;
-    }
-
-    .perspective-signoff {
-      margin-top: var(--pdf-para-gap);
-    }
-
+    .perspective-signoff { margin-top: var(--pdf-para-gap); }
     .perspective-signoff__name,
     .perspective-signoff__role,
-    .perspective-signoff__org {
-      line-height: var(--perspective-body-lh);
-    }
+    .perspective-signoff__org { line-height: var(--perspective-body-lh); }
 
     .perspective-cta {
       margin: 0 0 16px;
@@ -967,17 +966,12 @@
       line-height: var(--perspective-body-lh);
       color: var(--color-ink);
     }
-
-    .perspective-cta p {
-      margin: 0;
-      font: inherit;
-    }
+    .perspective-cta p { margin: 0; font: inherit; }
 
     .perspective-promo {
       margin: 32px 0 0;
       padding: 12px 10px 14px;
     }
-
     .perspective-promo__title {
       margin: 0 0 10px;
       padding-left: 2px;
@@ -985,31 +979,24 @@
       font-weight: 700;
       line-height: 1.34;
     }
-
-    .perspective-promo__layout {
-      gap: 16px;
-    }
-
-    .perspective-promo__media img {
-      width: 115px;
-      max-width: 115px;
-    }
-
+    .perspective-promo__layout { gap: 16px; }
+    .perspective-promo__media img { width: 115px; max-width: 115px; }
     .perspective-promo__body {
       font-size: 16px;
       line-height: 1.34;
       color: var(--color-ink);
     }
-
-    .perspective-promo__body p {
-      margin: 0 0 10px;
+    .perspective-promo__body p { margin: 0 0 10px; }
+    .perspective-promo__body p:last-child { margin-bottom: 0; }
+    .perspective-promo__body a {
+      color: var(--color-link);
+      text-decoration: none;
+      font-weight: 400;
+    }
+    .perspective-promo__body a:hover {
+      text-decoration: underline;
     }
 
-    .perspective-promo__body p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Contacts: PDF 4-column rhythm (Melb | Syd/Bri | Adel/Perth | meta) */
     .perspective-contacts {
       margin: 48px 0 0;
       display: grid;
@@ -1018,25 +1005,20 @@
       font-size: 8px;
       line-height: 1.18;
     }
-
     @media (min-width: 600px) {
       .perspective-contacts {
         grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr) minmax(0, 0.85fr) minmax(0, 1.2fr);
         gap: 8px 18px;
       }
     }
-
     .perspective-contacts__office,
     .perspective-contacts__stack {
       margin: 0;
       font-size: inherit;
       line-height: inherit;
     }
-
-    .perspective-contacts__stack + .perspective-contacts__stack {
-      margin-top: 10px;
-    }
-
+    .perspective-contacts__col { margin: 0; }
+    .perspective-contacts__stack + .perspective-contacts__stack { margin-top: 10px; }
     .perspective-contacts__meta {
       margin: 0;
       grid-column: auto;
@@ -1044,56 +1026,18 @@
       line-height: inherit;
       color: var(--color-ink);
     }
-
     .perspective-contacts__meta p {
       margin: 0 0 2px;
       font-size: inherit;
       line-height: inherit;
     }
-
-    .perspective-legal {
-      margin-top: 16px;
-      padding-top: 0;
-    }
-
-    .perspective-legal p {
-      margin: 0 0 6px;
-    }
-
-
-    /* Fix: body ul reset must not kill B.9 inset/outdent */
-    .perspective-body ul.mt-list--inset {
-      padding-left: var(--list-indent);
-    }
-    .perspective-body ul.mt-list--outdent {
-      margin-left: calc(-1 * var(--list-indent));
-    }
-
-    /* List block gap after list ≈ para gap */
-    .perspective-body ul.mt-list {
-      margin: 0 0 var(--pdf-para-gap);
-    }
-
-    /* Double-space after sentence periods appears in PDF; keep normal spaces in HTML.
-       Slight wrap diffs are acceptable if content width + font match. */
-
-    /* Contact city columns: nested stacks shouldn't stretch meta */
-    .perspective-contacts__col {
-      margin: 0;
-    }
-
-    /* Promo link color already via --color-link; ensure underline matches body links */
-    .perspective-promo__body a {
-      color: var(--color-link);
-      text-decoration: underline;
-      font-weight: 400;
-    }
-
-    /* Website/email in contacts: PDF shows black, not link ochre */
     .perspective-contacts__meta a {
       color: var(--color-ink);
       text-decoration: none;
     }
+
+    .perspective-legal { margin-top: 16px; padding-top: 0; }
+    .perspective-legal p { margin: 0 0 6px; }
 
     @media (max-width: 768px) {
       :root {
@@ -1105,11 +1049,7 @@
         --gutter: 20px;
         --container-max: 646px;
       }
-
-      .perspective-promo__media img {
-        width: 115px;
-        max-width: 40vw;
-      }
+      .perspective-promo__media img { width: 115px; max-width: 40vw; }
     }
   </style>
 </head>
@@ -1151,7 +1091,7 @@
 
           <p>Differences in priorities and attitudes to risk can create friction between family members – particularly during times of change.  </p>
 
-          <p>Strong governance provides a shared framework for decision-making.  It helps families to define clear investment objectives, agree on a shared risk profile and develop a coordinated strategy.  It also reduces reliance on a single decision-maker, supporting continuity across generations.</p>
+          <p>Strong governance provides a shared framework for decision-making.  It helps families to define clear investment objectives, agree on a shared risk profile and develop a coordinated strategy.  It also reduces reliance on a single decision-maker, supporting continuity across generations.  </p>
 
           <p>Importantly, engaging family members early builds understanding and confidence, particularly for those who may one day need to step into decision-making roles.  </p>
 

@@ -32,10 +32,11 @@
        Framework: Mutual-Trust-Design-Analysis-Framework.md (C.4 + C.6)
 
        CONVERT WORKFLOW (C.6):
-       1. Inspect PDF (assets, logo variant, geometry, type, lists, colours)
+       1. Inspect PDF (assets, logo, hero scrim/overlay, geometry, type, lists, colours)
        2. Override :root --perspective-* / --color-link as needed
-       3. Fill continuous article slots (no page breaks / page numbers)
-       4. Visual Comparison Loop vs PDF (desktop first, then responsive)
+       3. Keep hero scrim when PDF needs logo/text contrast (B.4 / C.6.3)
+       4. Fill continuous article slots (no page breaks / page numbers)
+       5. Visual Comparison Loop vs PDF (desktop first, then responsive)
        Do NOT recreate running headers/footers or PDF page boundaries.
        ========================================================================== */
 
@@ -189,6 +190,7 @@
       --list-marker-color: var(--color-ink);
       --list-marker-gap: 24px; /* = 18pt PDF; fixed px, not em */
       --list-indent: var(--list-marker-gap);
+      --list-marker-size: 4px; /* optical disc ≈ SymbolMT on PDF @ body 12pt */
       --list-item-gap: 0; /* override per PDF when source adds gap between items */
 
         /* ------------------------------------------------------------------
@@ -197,12 +199,8 @@
          ------------------------------------------------------------------ */
         --perspective-hero-height: clamp(210px, 32vw, 320px);
         --perspective-hero-position: center center;
-        --perspective-hero-scrim: linear-gradient(
-          180deg,
-          rgba(0, 0, 0, 0.28) 0%,
-          rgba(0, 0, 0, 0.08) 45%,
-          rgba(0, 0, 0, 0.35) 100%
-        );
+        /* Default ≈ measured Perspective PDF flat black @ 25%. Override per file (B.4 / C.6.3). */
+        --perspective-hero-scrim: rgba(0, 0, 0, 0.25);
         --perspective-logo-width: 200px;
         --perspective-logo-top: var(--space-5);
         --perspective-title-size: 32px;
@@ -277,16 +275,16 @@
         height: auto;
       }
 
-      a {
-        color: var(--color-link);
-        text-decoration: underline;
-        text-underline-offset: 0.15em;
-        font-weight: inherit; /* match PDF; do not invent bold links */
-      }
+    a {
+      color: var(--color-link);
+      text-decoration: none; /* PDF often colour-only; do not invent underline */
+      font-weight: inherit; /* match PDF; do not invent bold links */
+    }
 
-      a:hover {
-        text-decoration-thickness: 2px; /* web affordance only */
-      }
+    a:hover {
+      text-decoration: underline; /* web affordance only */
+      text-underline-offset: 0.15em;
+    }
 
       a:focus-visible,
       button:focus-visible,
@@ -398,27 +396,33 @@
       }
 
       /* Shared list — framework B.9 (Flush default; add --outdent / --inset per PDF) */
-    ul.mt-list,
-    ol.mt-list {
-      list-style: none;
-      padding-left: 0;
-      margin: 0 0 var(--space-3); /* block gap after list; item gap = --list-item-gap */
-    }
+      ul.mt-list,
+      ol.mt-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0 0 var(--space-3);
+      }
 
       ul.mt-list > li,
       ol.mt-list > li {
+        position: relative;
         padding-left: var(--list-indent);
-        text-indent: calc(-1 * var(--list-indent));
+        text-indent: 0;
         line-height: var(--perspective-body-lh);
         margin: 0 0 var(--list-item-gap);
         color: var(--color-ink);
       }
 
+      /* Small disc ≈ SymbolMT — not full-size • (too large vs PDF) */
       ul.mt-list > li::before {
-        content: '•';
-        color: var(--list-marker-color);
-        display: inline-block;
-        width: var(--list-indent);
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.55em;
+        width: var(--list-marker-size);
+        height: var(--list-marker-size);
+        border-radius: 50%;
+        background-color: var(--list-marker-color);
       }
 
       ol.mt-list {
@@ -427,10 +431,15 @@
 
       ol.mt-list > li::before {
         counter-increment: mt-counter;
-        content: counter(mt-counter) '.';
-        color: var(--list-marker-color);
-        display: inline-block;
+        content: counter(mt-counter) ".";
+        position: absolute;
+        left: 0;
         width: var(--list-indent);
+        color: var(--list-marker-color);
+        font-size: inherit;
+        line-height: inherit;
+        background: none;
+        border-radius: 0;
       }
 
       .mt-list--outdent {
@@ -439,6 +448,14 @@
 
       .mt-list--inset {
         padding-left: var(--list-indent);
+      }
+
+      .perspective-body ul.mt-list--inset {
+        padding-left: var(--list-indent);
+      }
+
+      .perspective-body ul.mt-list--outdent {
+        margin-left: calc(-1 * var(--list-indent));
       }
 
       /* ==========================================================================
@@ -846,7 +863,7 @@
 
       .perspective-contacts a:hover {
         color: var(--color-link);
-        text-decoration: underline;
+        text-decoration: underline; /* web affordance only */
       }
 
       /* Responsive type floor for Perspective family */
