@@ -4,21 +4,34 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title><!-- PAGE_TITLE --></title>
-    <meta name="description" content="<!-- META_DESCRIPTION -->" />
+    <title>Preventing the Double Death Tax Trap | Mutual Trust</title>
+    <meta
+      name="description"
+      content="Perspective from Brendan Henderson, Partner, Tax — preventing the double death tax trap in estate planning."
+    />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="<!-- CANONICAL_URL -->" />
 
-    <meta property="og:title" content="<!-- OG_TITLE -->" />
-    <meta property="og:description" content="<!-- OG_DESCRIPTION -->" />
+    <meta property="og:title" content="Preventing the Double Death Tax Trap" />
+    <meta
+      property="og:description"
+      content="Perspective from Brendan Henderson, Partner, Tax — preventing the double death tax trap in estate planning."
+    />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="<!-- OG_URL -->" />
-    <meta property="og:image" content="<!-- OG_IMAGE -->" />
+    <meta
+      property="og:image"
+      content="assets/perspective-from-brendan-henderson-double-death-tax-trap/images/hero.jpeg"
+    />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="<!-- TWITTER_TITLE -->" />
-    <meta name="twitter:description" content="<!-- TWITTER_DESCRIPTION -->" />
-    <meta name="twitter:image" content="<!-- TWITTER_IMAGE -->" />
+    <meta name="twitter:title" content="Preventing the Double Death Tax Trap" />
+    <meta
+      name="twitter:description"
+      content="Perspective from Brendan Henderson, Partner, Tax — preventing the double death tax trap in estate planning."
+    />
+    <meta
+      name="twitter:image"
+      content="assets/perspective-from-brendan-henderson-double-death-tax-trap/images/hero.jpeg"
+    />
 
     <link
       rel="icon"
@@ -157,10 +170,9 @@
         --space-6: 48px;
         --space-7: 64px;
 
-        /* Page shell = PDF page width @ 96dpi (A4 595.32pt → ~794px). Override per PDF. */
+        /* Page shell = PDF page width @ 96dpi — overridden again in Perspective tokens below */
         --page-max: 793.76px;
-        /* Content column inside shell (measure PDF text width; typically ~646–760px) */
-        --container-max: 760px;
+        --container-max: 646px;
         --gutter: clamp(20px, 5vw, 40px);
 
         --text-h1: 70px;
@@ -188,49 +200,58 @@
         --focus-ring: 2px solid var(--color-ochre);
         --focus-offset: 3px;
 
-      /* Shared list tokens (framework B.9) — calibrate indent per PDF Flush/Outdent/Inset */
-      --list-marker-color: var(--color-ink);
-      --list-marker-gap: 24px; /* = 18pt PDF; fixed px, not em */
-      --list-indent: var(--list-marker-gap);
-      --list-marker-size: 5px; /* PDF crop ~4px +20% web readability */
-      --list-item-gap: 0; /* override per PDF when source adds gap between items */
+        /* Shared list tokens (framework B.9) — calibrate indent per PDF Flush/Outdent/Inset */
+        --list-marker-color: var(--color-ink);
+        --list-marker-gap: 24px; /* = 18pt PDF; fixed px, not em */
+        --list-indent: var(--list-marker-gap);
+        --list-marker-size: 5px; /* PDF crop ~4px +20% web readability */
+        --list-item-gap: 0; /* override per PDF when source adds gap between items */
 
         /* ------------------------------------------------------------------
          Perspective family tokens — OVERRIDE PER PDF (C.6.2 / C.6.4 / C.6.5)
          Calibrate: content width → hero → logo → type → spacing → lists
          ------------------------------------------------------------------ */
-        /* Hero aspect = PDF band W/H inside --page-max (desktop). Mobile: see --perspective-hero-aspect-mobile (B.4). */
-        --perspective-hero-aspect: 595.32 / 224.2; /* example; replace with source pageW / heroH */
-        --perspective-hero-aspect-mobile: 3 / 2; /* taller band so cover + overlay stay readable */
-        --perspective-hero-position: center center;
-        --perspective-hero-position-mobile: var(--perspective-hero-position);
-        /* Default ≈ measured Perspective PDF flat black @ 25%. Override per file (B.4 / C.6.3). */
-        --perspective-hero-scrim: rgba(0, 0, 0, 0.25);
-        --perspective-logo-width: 200px;
-        --perspective-logo-top: var(--space-5);
-        --perspective-title-size: 32px;
-        --perspective-title-lh: 1.25;
+        /* Calibrated: Perspective_from_Brendan_Henderson_Double_Death_Tax_Trap.pdf */
+        --page-max: 793.76px; /* 595.32pt */
+        --container-max: 646px; /* content ~56.6–541pt */
+        --perspective-hero-aspect: 595.32 / 211; /* desktop = PDF band */
+        --perspective-hero-aspect-mobile: 3 / 2; /* taller — avoid crop + crushed overlay (B.4) */
+        /* PDF XObject mirrored (negative scaleX) — asset flipped; nudge subject right */
+        --perspective-hero-position: 58% center;
+        --perspective-hero-position-mobile: 62% center;
+        --perspective-hero-scrim: rgba(
+          0,
+          0,
+          0,
+          0.37
+        ); /* PDF fill opacity ~0.369 */
+        --perspective-logo-width: 231px; /* ~173.3pt */
+        --perspective-logo-top: 61px; /* ~45.6pt */
+        --perspective-hero-kicker-size: 36px; /* 28pt Baskerville on hero */
+        --perspective-hero-kicker-top: 76px; /* ~103.2pt from page top → within hero */
+        --perspective-title-size: 24px; /* 18pt */
+        --perspective-title-lh: 1.2;
         --perspective-title-tracking: 0;
-        --perspective-title-color: var(
-          --color-ochre
-        ); /* ink / #4E5E72 one-off via modifier */
-        --perspective-byline-size: var(--text-small);
-        --perspective-body-size: var(--text-regular);
-        --perspective-body-lh: 1.5;
+        --perspective-title-color: #cb962e;
+        --perspective-byline-size: 14.7px; /* 11.04pt Bold */
+        --perspective-body-size: 14.7px; /* 11.04pt */
+        --perspective-body-lh: 1.21; /* PDF line advance ~13.3pt / 11.04 */
         --perspective-body-tracking: 0;
-        --perspective-section-size: var(--text-h5);
-        --perspective-section-color: var(--color-ochre);
-        --perspective-band-gap: var(
-          --space-7
-        ); /* hero↔content rhythm — not PDF page gap */
-        --perspective-callout-bg: var(--color-surface-tint);
-        --perspective-callout-pad: var(--space-4);
+        --perspective-section-size: 14.7px; /* Proxima Bold = body size */
+        --perspective-section-color: var(--color-ink);
+        --perspective-band-gap: 24px; /* ~18pt hero→title */
+        --perspective-callout-bg: #f3f4f4; /* PDF ~0.953/0.957/0.957 */
+        --perspective-callout-pad: 12px 12px 16px;
         --perspective-promo-bg: var(--color-surface-tint);
-        --perspective-legal-size: 12px;
-        --perspective-legal-lh: 1.45;
-        --perspective-legal-border: 1px solid var(--color-light-grey); /* set none if PDF has no rule */
-        --perspective-contact-label-color: #99999b;
-        --perspective-contact-label-size: 12px;
+        --perspective-legal-size: 9.3px; /* ~7pt */
+        --perspective-legal-lh: 1.35;
+        --perspective-legal-border: none;
+        --perspective-contact-label-color: #cb962e; /* ochre city labels this PDF */
+        --perspective-contact-label-size: 10.7px; /* ~8pt */
+        /* PDF ink-to-ink between paras ~13.8pt ≈ 18px; keep tight with lh 1.21 */
+        --pdf-para-gap: 14px;
+        --pdf-byline-gap: 18px; /* byline → first para ~13.7pt */
+        --pdf-section-gap: 18px; /* before/after h2 ~13.7pt */
       }
 
       *,
@@ -280,16 +301,16 @@
         height: auto;
       }
 
-    a {
-      color: var(--color-link);
-      text-decoration: none; /* PDF often colour-only; do not invent underline */
-      font-weight: inherit; /* match PDF; do not invent bold links */
-    }
+      a {
+        color: var(--color-link);
+        text-decoration: none; /* PDF often colour-only; do not invent underline */
+        font-weight: inherit; /* match PDF; do not invent bold links */
+      }
 
-    a:hover {
-      text-decoration: underline; /* web affordance only */
-      text-underline-offset: 0.15em;
-    }
+      a:hover {
+        text-decoration: underline; /* web affordance only */
+        text-underline-offset: 0.15em;
+      }
 
       a:focus-visible,
       button:focus-visible,
@@ -424,7 +445,7 @@
 
       /* Small disc ≈ SymbolMT — not full-size • (too large vs PDF) */
       ul.mt-list > li::before {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         top: 0.55em;
@@ -440,7 +461,7 @@
 
       ol.mt-list > li::before {
         counter-increment: mt-counter;
-        content: counter(mt-counter) ".";
+        content: counter(mt-counter) '.';
         position: absolute;
         left: 0;
         width: var(--list-indent);
@@ -840,7 +861,6 @@
       .perspective-contacts {
         margin: var(--space-5) 0 0;
         display: grid;
-        /* Mobile default: 2 columns ≈ 2 rows (B.5) — not a single long stack */
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: var(--space-3) var(--space-4);
         align-items: start;
@@ -848,11 +868,12 @@
 
       @media (min-width: 600px) {
         .perspective-contacts {
-          /* Desktop 4-col Perspective skeleton — override ratios from PDF (B.5) */
-          grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr) minmax(0, 0.85fr) minmax(0, 1.2fr);
+          /* Desktop 4-col skeleton — PDF overrides may refine (B.5) */
+          grid-template-columns:
+            minmax(0, 1.15fr) minmax(0, 0.85fr) minmax(0, 0.85fr)
+            minmax(0, 1.2fr);
           gap: var(--space-3) var(--space-5);
         }
-
         .perspective-contacts__meta {
           grid-column: auto;
         }
@@ -877,7 +898,9 @@
         font-weight: 400;
         font-size: var(--perspective-contact-label-size);
         color: var(--perspective-contact-label-color);
-        margin-bottom: var(--space-1); /* often ~0 on calibrated Perspective PDFs */
+        margin-bottom: var(
+          --space-1
+        ); /* often ~0 on calibrated Perspective PDFs */
       }
 
       .perspective-contacts__meta {
@@ -900,11 +923,11 @@
         text-decoration: underline; /* web affordance only */
       }
 
-      /* Mobile/tablet: taller hero + contacts stay 2-col (B.4 / B.5 / C.6.10) */
+      /* Base mobile floor — PDF-specific overrides below may refine further */
       @media (max-width: 768px) {
         :root {
           --perspective-title-size: 26px;
-          --perspective-section-size: 20px;
+          --perspective-section-size: 14.7px;
           --perspective-logo-width: 150px;
           --perspective-logo-top: 20px;
           --perspective-band-gap: var(--space-6);
@@ -926,11 +949,197 @@
           padding-bottom: 16px;
           min-height: 100%;
         }
+      }
 
+      /* --- Hero kicker (title on image — this PDF) --- */
+      .perspective-hero__kicker {
+        margin: 0;
+        font-family: var(--font-serif);
+        font-weight: 400;
+        font-size: var(--perspective-hero-kicker-size);
+        line-height: 1.15;
+        color: var(--color-white);
+        max-width: 20ch;
+      }
+      .perspective-hero__kicker-rule {
+        display: block;
+        width: 62px; /* PDF rule ~61.5pt under “Perspective” only */
+        height: 1px;
+        margin-top: 12px;
+        background: var(--color-white);
+      }
+      .perspective-hero--with-kicker .perspective-hero__inner {
+        justify-content: flex-start;
+      }
+      .perspective-hero--with-kicker .perspective-hero__kicker {
+        margin-top: 50px; /* desktop: logo → kicker ~ PDF */
+        padding-bottom: 0;
+      }
+
+      /* --- Holiday House example callout --- */
+      .perspective-callout--example {
+        margin: var(--pdf-para-gap) 0;
+      }
+      .perspective-callout--example .perspective-callout__title {
+        margin: 0 0 14px;
+        font-family: var(--font-serif);
+        font-weight: 400;
+        font-size: 16px; /* 12pt */
+        line-height: 1.25;
+        color: #cb962e;
+      }
+      .perspective-callout--example p {
+        margin: 0 0 14px;
+        font-size: inherit;
+        line-height: inherit;
+      }
+      .perspective-callout--example p:last-of-type {
+        margin-bottom: 0;
+      }
+      .perspective-callout--example .perspective-infographic {
+        margin: 18px 0 0;
+      }
+      .perspective-callout--example .perspective-infographic img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .perspective-infographic.is-empty {
+        display: none !important;
+      }
+      .perspective-promo.is-empty {
+        display: none !important;
+      }
+
+      .perspective-body p {
+        margin: 0 0 var(--pdf-para-gap);
+      }
+      /* PDF oblique “What if…” paras — visual italic even when font name is Regular */
+      .perspective-body p.is-italic,
+      .perspective-body p.is-italic em {
+        font-style: italic;
+      }
+      .perspective-article .perspective-byline {
+        margin: 0 0 var(--pdf-byline-gap);
+      }
+      .perspective-article .perspective-article__title {
+        margin: 0 0 6px; /* PDF title→byline ~4–5pt */
+      }
+      .perspective-body--sections-sans-bold h2 {
+        margin: var(--pdf-section-gap) 0 var(--pdf-section-gap);
+        font-size: var(--perspective-section-size);
+      }
+      .perspective-cta {
+        margin: 28px 0 0;
+        font-family: var(--font-sans);
+        font-weight: 700;
+        font-size: var(--perspective-body-size);
+        line-height: var(--perspective-body-lh);
+      }
+      .perspective-cta p {
+        margin: 0;
+      }
+
+      .perspective-signoff {
+        margin-top: 28px;
+      }
+      .perspective-signoff__org.is-empty {
+        display: none !important;
+      }
+
+      /* Footer — this PDF: 4 full-address offices + meta; mobile 2-col (B.5) */
+      .perspective-contacts {
+        margin: 48px 0 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 20px;
+        font-size: 9.3px; /* ~7pt — same for offices + meta */
+        line-height: 1.22;
+        align-items: start;
+      }
+      @media (min-width: 700px) {
+        .perspective-contacts {
+          grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(0, 1.05fr);
+          gap: 8px 16px;
+        }
+        .perspective-contacts__meta {
+          grid-column: auto;
+        }
+      }
+      .perspective-legal .perspective-contacts p {
+        margin: 0;
+      }
+      .perspective-contacts__office strong {
+        margin-bottom: 2px;
+        line-height: 1.3;
+      }
+      .perspective-contacts__meta {
+        margin: 0;
+        padding-top: 18px; /* align near mid of address block */
+        font-size: inherit; /* match office detail size — not larger */
+        line-height: inherit;
+      }
+      .perspective-contacts__meta p {
+        margin: 0 0 2px;
+        font-size: inherit;
+        line-height: inherit;
+      }
+      /* Contact email/web: same size as address; no underline (PDF) */
+      .perspective-legal .perspective-contacts a,
+      .perspective-legal .perspective-contacts a:visited {
+        color: var(--color-ink);
+        text-decoration: none !important;
+        font-size: inherit;
+        font-weight: 400;
+      }
+      .perspective-legal .perspective-contacts a:hover {
+        color: var(--color-link);
+        text-decoration: underline !important; /* web affordance only */
+      }
+      .perspective-legal {
+        margin-top: 16px;
+        padding-top: 0;
+      }
+      .perspective-legal > p {
+        margin: 0 0 6px;
+        font-size: inherit;
+        line-height: inherit;
+      }
+      .perspective-contacts + p {
+        margin-top: 18px;
+      } /* PDF contacts→Prepared clearspace */
+      /* Disclaimer www link only — contacts must not inherit underline */
+      .perspective-legal > p a {
+        color: var(--color-ink);
+        text-decoration: underline;
+      }
+      .perspective-legal__copyright {
+        margin-top: 10px !important;
+      }
+
+      @media (max-width: 768px) {
+        :root {
+          --perspective-logo-width: 148px;
+          --perspective-logo-top: 18px;
+          --perspective-hero-kicker-size: 22px;
+          --perspective-title-size: 22px;
+          --perspective-band-gap: 20px;
+          --gutter: 20px;
+          --perspective-hero-aspect-mobile: 3 / 2;
+          --perspective-hero-position-mobile: 62% center;
+        }
+        .perspective-hero--with-kicker .perspective-hero__kicker {
+          margin-top: auto; /* sit in lower band with room — avoid crush/overlap */
+          padding-bottom: 4px;
+          max-width: 12ch;
+        }
+        .perspective-hero__kicker-rule {
+          width: 48px;
+          margin-top: 8px;
+        }
         .perspective-contacts {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
-
         .perspective-contacts__meta {
           grid-column: 1 / -1;
           padding-top: 0;
@@ -941,25 +1150,13 @@
   <body class="family-perspective">
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <!--
-    Continuous document flow (framework C.4 / C.6).
-    Do NOT add .document-page, page numbers, or repeated running headers/footers.
-    PDF page boundaries = visual QA checkpoints only after fill.
-  -->
     <div class="document">
-      <!--
-      HERO — full-bleed; logo once (Group C default: logo-m.svg top-left).
-      Modifiers: --logo-top-left | --logo-top-center | --logo-hidden
-      Logo URLs (A.5):
-        ngang:  https://www.mutualtrust.com.au/wp-content/themes/mutual_trust/assets/images/logo-m.svg
-        stacked: https://www.mutualtrust.com.au/wp-content/themes/mutual_trust/assets/images/MT-Logo.svg
-      Set hero: style="--perspective-hero-image: url('assets/<slug>/images/hero.jpg')"
-      Crop: --perspective-hero-position
-    -->
       <header
-        class="site-header perspective-hero perspective-hero--logo-top-left"
+        class="site-header perspective-hero perspective-hero--logo-top-left perspective-hero--with-kicker"
         role="banner"
-        style="--perspective-hero-image: url('<!-- HERO_IMAGE_PATH -->')"
+        style="
+          --perspective-hero-image: url('assets/perspective-from-brendan-henderson-double-death-tax-trap/images/hero.jpeg');
+        "
       >
         <div class="container perspective-hero__inner">
           <a
@@ -969,115 +1166,299 @@
             <img
               src="https://www.mutualtrust.com.au/wp-content/themes/mutual_trust/assets/images/logo-m.svg"
               alt="Mutual Trust"
-              width="200"
-              height="23"
+              width="231"
+              height="26"
             />
           </a>
+          <p class="perspective-hero__kicker">
+            Perspective from…
+            <span
+              class="perspective-hero__kicker-rule"
+              aria-hidden="true"
+            ></span>
+          </p>
         </div>
       </header>
 
       <main id="main-content" class="site-main" role="main" tabindex="-1">
-        <!--
-        Title: --title-ochre | --title-ink | --title-custom (+ --perspective-title-color)
-        Byline: remove .is-empty when PDF has meta under title (once only)
-        Body: add .perspective-body--sections-sans-bold when PDF uses Proxima Bold section heads
-        Lists: ul.mt-list | .mt-list--inset | .mt-list--outdent (B.9)
-      -->
         <article
           class="container perspective-article perspective-article--title-ochre"
         >
-          <h1 class="perspective-article__title"><!-- ARTICLE_TITLE --></h1>
+          <h1 class="perspective-article__title">
+            Preventing the Double Death Tax Trap
+          </h1>
 
-          <p class="perspective-byline is-empty">
-            <!-- AUTHOR_NAME -->
-            <span class="perspective-byline__meta"
-              ><!-- AUTHOR_ROLE / DATE --></span
+          <p class="perspective-byline">Brendan Henderson, Partner, Tax</p>
+
+          <div class="perspective-body perspective-body--sections-sans-bold">
+            <p>
+              Transferring wealth from one generation to another as part of an
+              estate plan is a significant event for families.&nbsp;&nbsp;In
+              addition to grieving the passing of a loved one, families have to
+              contend with the stress of ensuring a smooth transfer of wealth
+              under a Will, from the deceased to their surviving spouse or
+              children.&nbsp;&nbsp;At such a sensitive time, the last thing the
+              family needs is an unnecessary tax bill.
+            </p>
+
+            <p>
+              In this article, I explore the unexpected tax trap that can arise
+              in ‘double death’ situations, and what families can do to prevent
+              it from springing.
+            </p>
+
+            <h2>Tax treatment on death</h2>
+
+            <p>
+              Currently, when an individual dies, the assets they own at the
+              time of their passing are transferred to their beneficiaries
+              effectively tax-free.&nbsp;&nbsp;The beneficiaries inherit the
+              deceased’s cost base of the assets passing to them.&nbsp;&nbsp;If
+              they assets were acquired before 19 September 1985 (i.e. prior to
+              the introduction of Capital Gains Tax [CGT]), beneficiaries are
+              granted a cost base equal to the market value of that asset at the
+              date of death.&nbsp;&nbsp;For simplicity, we refer to this as a
+              CGT rollover.
+            </p>
+
+            <p>
+              If the asset was the deceased’s main residence, this concessional
+              status can be maintained - depending on who inherits the property
+              and whether it continues to be used as a main residence.
+            </p>
+
+            <p>
+              The CGT rollover is a commonsense policy – it defers tax until the
+              asset is sold, when cash is available to fund the
+              liability.&nbsp;&nbsp;Without this concessional treatment, a tax
+              liability would arise on the passing of the asset from the
+              deceased to the beneficiaries.&nbsp;&nbsp;This tax liability would
+              need to be funded by the beneficiaries, often requiring the asset
+              to be sold.&nbsp;&nbsp;For some asset classes that aren’t easily
+              saleable, this can be problematic.
+            </p>
+
+            <p>
+              Unfortunately, there are situations where the CGT rollover on
+              death is not available.&nbsp;&nbsp;One example is the ‘double
+              death’ tax.
+            </p>
+
+            <h2>What is ‘double death’ tax?</h2>
+
+            <p>
+              If a beneficiary of a deceased estate passes away before probate
+              is granted to the first deceased estate, CGT can apply at the time
+              the asset passes from the second deceased to the beneficiaries
+              under their Will.&nbsp;&nbsp;This CGT would not have been payable
+              if probate had been granted before the beneficiary of the first
+              deceased estate passed away.
+            </p>
+
+            <p>I will use the following example to illustrate the challenge.</p>
+
+            <aside
+              class="perspective-callout perspective-callout--example"
+              aria-label="The Holiday House Example"
             >
-          </p>
-
-          <div class="perspective-body">
-            <!-- LONG_FORM_CONTENT: p, h2, ul.mt-list / ul.mt-list--inset, etc. -->
-
-            <aside class="perspective-callout is-empty" aria-label="Callout">
-              <blockquote class="perspective-callout__quote">
-                <!-- QUOTE_TEXT -->
-              </blockquote>
-              <p class="perspective-callout__attribution">
-                <cite><!-- ATTRIBUTION_NAME --></cite>
-                <!-- ATTRIBUTION_ROLE -->
+              <h3 class="perspective-callout__title">
+                The Holiday House Example
+              </h3>
+              <p>
+                Harry is married to Jenna and they have an adult daughter
+                (Lilly).&nbsp;&nbsp;Harry also has an adult son (Peter) from his
+                first marriage.
               </p>
+              <p>
+                In 1990, Harry purchased a family holiday home in Sorrento,
+                Victoria for $100,000.&nbsp;&nbsp;Over time, the holiday home
+                increased in value to $1m.
+              </p>
+              <p>
+                Unfortunately, Harry became ill and passed away
+                suddenly.&nbsp;&nbsp;Under his Will, Harry bequeathed the
+                holiday home to Jenna and his remaining assets (including cash)
+                to Peter.
+              </p>
+              <p>
+                Two months later, before probate could be obtained on Harry’s
+                Will, Jenna also passes away.
+              </p>
+              <p>
+                Under Jenna’s Will, the house passes to Lilly.&nbsp;&nbsp;She is
+                appointed as Executor of Jenna’s Estate.
+              </p>
+              <p>
+                When the holiday home passes from Jenna’s estate to Lilly,
+                Jenna’s estate will be liable to pay tax of up to $211,500 on
+                the capital gain (that is, tax on the difference between Harry’s
+                cost base of $100,000 and the market value of $1m).
+              </p>
+              <p>
+                With Harry’s liquid assets passing to Peter, Lilly must either
+                come up with $211,500 to pay the tax bill, or sell the home to
+                generate sufficient cash.
+              </p>
+              <figure class="perspective-infographic">
+                <img
+                  src="assets/perspective-from-brendan-henderson-double-death-tax-trap/images/flowchart-double-death.png"
+                  alt="Flowchart: The ‘double death’ tax trap – how it works. Harry purchases holiday home for $100k; first death — Harry passes away, asset valued at $1m; Jenna receives holiday home; second death — Jenna dies before probate is granted; Lilly receives holiday home plus $211,500 tax bill; Peter receives other assets."
+                  width="1440"
+                  height="468"
+                />
+              </figure>
             </aside>
 
-            <figure class="perspective-infographic is-empty">
-              <img
-                src="<!-- INFOGRAPHIC_PATH -->"
-                alt="<!-- INFOGRAPHIC_ALT -->"
-              />
-              <figcaption class="source"><!-- SOURCE_CAPTION --></figcaption>
-            </figure>
+            <h2>What causes this tax issue?</h2>
+
+            <p>
+              The reason why Jenna’s Estate/Lilly is trapped with this tax
+              problem is because under a tax ruling issued in 1990, the
+              Commissioner’s view is that the CGT rollover relief only applies
+              if Jenna ‘owned’ the holiday home at the time of her
+              passing.&nbsp;&nbsp;As probate hadn’t yet been granted on Harry’s
+              Will when Jenna passed away, Jenna is not regarded as the owner of
+              the holiday home at that time.&nbsp;&nbsp;Accordingly, the
+              ‘ordinary’ CGT disposal rules apply.
+            </p>
+
+            <p>
+              If probate had been granted to Jenna by the time of her death, the
+              CGT rollover treatment would have been available on the transfer
+              of the holiday home to Lilly under Jenna’s Will.
+            </p>
+
+            <h2>Other examples</h2>
+
+            <p>
+              While these examples relate to a holiday home, the same issue can
+              arise for other assets, such as Harry &amp; Jenna’s main
+              residence.&nbsp;&nbsp;In fact, in this scenario, Jenna’s Estate
+              could potentially end up paying tax on a gain derived on the
+              property she lived in with Harry as their main residence.
+            </p>
+
+            <p class="is-italic">
+              What if Harry had purchased the holiday home before the
+              introduction of CGT in September 1985.&nbsp;&nbsp;Would Jenna’s
+              estate now be liable for tax on a property Harry had owned
+              pre-CGT?
+            </p>
+
+            <p class="is-italic">
+              What if Harry and Jenna lived overseas at the time of their
+              passing and Lilly lived in Australia?&nbsp;&nbsp;Lilly could
+              potentially be subject to tax of up to $475,000 on her inheritance
+              of the holiday home.
+            </p>
+
+            <h2>What can be done?</h2>
+
+            <p>
+              In some scenarios, it may be possible to prevent or manage the
+              double death tax trap under a range of strategies, including the
+              use of testamentary trusts, transferring assets outside of a Will
+              or by holding valuable assets in discretionary trusts rather than
+              personally.
+            </p>
+
+            <p>
+              Unfortunately, it’s rarely possible to predict when a double death
+              situation may arise.&nbsp;&nbsp;That’s why careful estate planning
+              and proactive management are essential to reduce the risk of
+              triggering an unexpected tax liability.
+            </p>
+          </div>
+
+          <div class="perspective-cta">
+            <p>
+              Mutual Trust works with families to carefully review and adjust
+              estate plans to appropriately manage tax risks such as the double
+              death scenario.&nbsp;&nbsp;If you are preparing or reviewing your
+              estate plans and would like to explore whether any of these
+              strategies are appropriate to your circumstances, please contact
+              your Relationship Manager.
+            </p>
           </div>
 
           <footer class="perspective-signoff">
-            <p class="perspective-signoff__name"><!-- SIGN_OFF_NAME --></p>
-            <p class="perspective-signoff__role"><!-- SIGN_OFF_ROLE --></p>
-            <p class="perspective-signoff__org">Mutual Trust</p>
+            <p class="perspective-signoff__name">Brendan Henderson</p>
+            <p class="perspective-signoff__role">Partner, Tax</p>
+            <p class="perspective-signoff__org is-empty">Mutual Trust</p>
           </footer>
 
-          <aside class="perspective-promo is-empty" aria-label="Related">
-            <h2 class="perspective-promo__title"><!-- PROMO_HEADING --></h2>
-            <div
-              class="perspective-promo__layout perspective-promo__layout--media-left"
-            >
-              <div class="perspective-promo__media">
-                <img
-                  src="<!-- PROMO_IMAGE -->"
-                  alt="<!-- PROMO_IMAGE_ALT -->"
-                />
-              </div>
-              <div class="perspective-promo__body">
-                <!-- PROMO_COPY + link -->
-              </div>
-            </div>
-          </aside>
+          <aside
+            class="perspective-promo is-empty"
+            aria-label="Related"
+            hidden
+          ></aside>
 
-          <!-- Single legal/contacts block — structure SoT: Framework B.5 (not per-page running footer) -->
-          <section class="perspective-legal" aria-label="Contacts and disclaimer">
+          <section
+            class="perspective-legal"
+            aria-label="Contacts and disclaimer"
+          >
             <div class="perspective-contacts" aria-label="Office contacts">
               <p class="perspective-contacts__office">
-                <strong><!-- CITY_HQ e.g. Melbourne --></strong>
-                <!-- ADDRESS_LINES with <br /> --><br />
-                T <a href="tel:<!-- TEL_RAW -->"><!-- TEL_DISPLAY --></a>
+                <strong>Melbourne</strong>
+                Level 32<br />
+                360 Collins Street<br />
+                Melbourne VIC 3000<br />
+                T <a href="tel:+61396059500">+61 3 9605 9500</a>
               </p>
-              <div class="perspective-contacts__col">
-                <p class="perspective-contacts__stack">
-                  <strong><!-- CITY --></strong>
-                  <a href="tel:<!-- TEL_RAW -->"><!-- TEL_DISPLAY --></a>
-                </p>
-                <p class="perspective-contacts__stack">
-                  <strong><!-- CITY --></strong>
-                  <a href="tel:<!-- TEL_RAW -->"><!-- TEL_DISPLAY --></a>
-                </p>
-              </div>
-              <div class="perspective-contacts__col">
-                <p class="perspective-contacts__stack">
-                  <strong><!-- CITY --></strong>
-                  <a href="tel:<!-- TEL_RAW -->"><!-- TEL_DISPLAY --></a>
-                </p>
-                <p class="perspective-contacts__stack">
-                  <strong><!-- CITY --></strong>
-                  <a href="tel:<!-- TEL_RAW -->"><!-- TEL_DISPLAY --></a>
-                </p>
-              </div>
+              <p class="perspective-contacts__office">
+                <strong>Sydney</strong>
+                Level 18<br />
+                126 Phillip Street<br />
+                Sydney NSW 2000<br />
+                T <a href="tel:+61292247600">+61 2 9224 7600</a>
+              </p>
+              <p class="perspective-contacts__office">
+                <strong>Perth</strong>
+                Ground Floor<br />
+                22 Stirling Highway<br />
+                Nedlands WA 6009<br />
+                T <a href="tel:+61892307700">+61 8 9230 7700</a>
+              </p>
+              <p class="perspective-contacts__office">
+                <strong>Adelaide</strong>
+                Level 20<br />
+                83 Pirie Street<br />
+                Adelaide SA 5000<br />
+                T <a href="tel:+61870823900">+61 8 7082 3900</a>
+              </p>
               <div class="perspective-contacts__meta">
-                <p><a href="mailto:<!-- EMAIL -->"><!-- EMAIL --></a></p>
-                <p><a href="<!-- WEBSITE_URL -->"><!-- WEBSITE_DISPLAY --></a></p>
-                <p><!-- ABN / AFSL --></p>
-                <p>© <!-- YEAR --> Mutual Trust Pty Ltd.</p>
+                <p>
+                  <a href="mailto:info@mutualtrust.com.au"
+                    >info@mutualtrust.com.au</a
+                  >
+                </p>
+                <p>
+                  <a href="https://www.mutualtrust.com.au/"
+                    >www.mutualtrust.com.au</a
+                  >
+                </p>
               </div>
             </div>
 
-            <p><!-- LIABILITY_LINE (+ disclaimer body if PDF merges) --></p>
-            <p><!-- ACKNOWLEDGEMENT_OF_COUNTRY --></p>
+            <p>
+              Prepared in Australia by Mutual Trust Pty Ltd (ACN 004 285 330)
+              (AFSL 234590).&nbsp;&nbsp;It is general information only and has
+              been prepared without considering any particular persons’
+              objectives, financial situation or needs.&nbsp;&nbsp;It does not
+              constitute, and should not be relied upon as personal financial
+              product, taxation or legal advice.&nbsp;&nbsp;Before making any
+              decision you should obtain personal financial, taxation and legal
+              advice.&nbsp;&nbsp;For more information about the services Mutual
+              Trust provides, please contact us or visit our website,
+              <a href="http://www.mutualtrust.com.au/">www.mutualtrust.com.au</a
+              >.&nbsp;&nbsp;Liability Limited by a scheme approved under
+              Professional Standards Legislation.&nbsp;&nbsp;For participating
+              members (other than for the acts or omissions of Australian
+              Financial Services Licensees).
+            </p>
+            <p class="perspective-legal__copyright">
+              © 2025 Mutual Trust Pty Ltd.
+            </p>
           </section>
         </article>
       </main>

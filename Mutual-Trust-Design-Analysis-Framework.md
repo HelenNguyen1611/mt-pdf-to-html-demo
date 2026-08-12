@@ -6,9 +6,9 @@ _Phạm vi: phân tích 7 file PDF trong `demo-pdf` + đối chiếu Official St
 
 Hai nguồn thông tin được tách rõ — **không trộn giá trị suy đoán từ PDF vào design token chính thức**:
 
-| Nguồn                                  | Vai trò                                                               | Áp dụng cho                                                                                               |
-| -------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| **A. Official MT Style Guide** (Figma) | **Source of truth cho token** (tên font, HEX brand, hệ type/UI chuẩn) | Font family, colour HEX, tên style (H1–H6, Text large…)                                                   |
+| Nguồn                                  | Vai trò                                                               | Áp dụng cho                                                                                  |
+| -------------------------------------- | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| **A. Official MT Style Guide** (Figma) | **Source of truth cho token** (tên font, HEX brand, hệ type/UI chuẩn) | Font family, colour HEX, tên style (H1–H6, Text large…)                                      |
 | **B. Phân tích 7 PDF**                 | **Source of truth cho bản convert cụ thể**                            | Composition, typography thực tế, hierarchy, imagery, spacing, components, biến thể theo file |
 
 ### Nguyên tắc PDF → Web
@@ -32,12 +32,12 @@ HTML phải là **responsive webpage liên tục** (continuous document flow). R
 
 **Mục tiêu hàng đầu: like-for-like thị giác với PDF nguồn trên desktop**, trong một trang web liên tục. Style Guide không được làm trang “đúng brand token nhưng lệch bản PDF”. Chi tiết quy trình so sánh: **C.6**.
 
-| Ưu tiên      | Cái gì                                                                                     | Ai thắng khi xung đột                                                                  |
-| ------------ | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
-| 1 (cao nhất) | Nội dung, bố cục, placement, hierarchy, imagery, spacing giữa các khối                     | **PDF**                                                                                |
-| 2            | Cỡ chữ, line-height, độ đậm/nghiêng, indent list, khoảng hero↔content↔footer               | **PDF** (đo từ nguồn; Style Guide chỉ là điểm xuất phát)                               |
-| 3            | Font _family_ và mã màu brand (Black / White / Light Grey / Grey / Ochre)                  | **Style Guide** — map lệch export PDF về HEX/font chuẩn, **miễn là nhìn vẫn khớp PDF** |
-| 4            | Semantic / one-off trong PDF (bảng dương–âm, H1 lệch màu một bài…)                         | **PDF** — giữ và ghi chú PDF-specific                                                  |
+| Ưu tiên      | Cái gì                                                                       | Ai thắng khi xung đột                                                                  |
+| ------------ | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| 1 (cao nhất) | Nội dung, bố cục, placement, hierarchy, imagery, spacing giữa các khối       | **PDF**                                                                                |
+| 2            | Cỡ chữ, line-height, độ đậm/nghiêng, indent list, khoảng hero↔content↔footer | **PDF** (đo từ nguồn; Style Guide chỉ là điểm xuất phát)                               |
+| 3            | Font _family_ và mã màu brand (Black / White / Light Grey / Grey / Ochre)    | **Style Guide** — map lệch export PDF về HEX/font chuẩn, **miễn là nhìn vẫn khớp PDF** |
+| 4            | Semantic / one-off trong PDF (bảng dương–âm, H1 lệch màu một bài…)           | **PDF** — giữ và ghi chú PDF-specific                                                  |
 
 **Quy tắc vận hành**
 
@@ -153,18 +153,18 @@ Nguồn: Figma _Colour_ (`2:466`).
 
 **Không** extract/crop logo từ PDF khi convert HTML trừ khi URL dưới không khớp biến thể trên PDF. Mọi template (`template.html`, `template-perspective.html`, và các family template khác) dùng một trong hai URL sau — **chọn theo loại logo mà PDF gốc đang dùng**:
 
-| File              | URL                                                                                       | Hình dạng                                                                    | Dùng khi PDF có…                                                                                                     |
-| ----------------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **`logo-m.svg`**  | `https://www.mutualtrust.com.au/wp-content/themes/mutual_trust/assets/images/logo-m.svg`  | Ngang: icon mái vòm **bên trái** + wordmark `MUTUAL TRUST` (viewBox ~238×27) | Logo ngang trên hero (góc trên-trái — nhóm C Perspective); footer/legal khi PDF dùng bản ngang |
+| File              | URL                                                                                       | Hình dạng                                                                    | Dùng khi PDF có…                                                                                   |
+| ----------------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| **`logo-m.svg`**  | `https://www.mutualtrust.com.au/wp-content/themes/mutual_trust/assets/images/logo-m.svg`  | Ngang: icon mái vòm **bên trái** + wordmark `MUTUAL TRUST` (viewBox ~238×27) | Logo ngang trên hero (góc trên-trái — nhóm C Perspective); footer/legal khi PDF dùng bản ngang     |
 | **`MT-Logo.svg`** | `https://www.mutualtrust.com.au/wp-content/themes/mutual_trust/assets/images/MT-Logo.svg` | Xếp chồng: icon **phía trên**, wordmark phía dưới (viewBox ~194×51)          | Logo căn giữa trên hero / back cover (nhóm B Quarterly Outlook), hoặc mọi chỗ PDF dùng bản stacked |
 
 **Gợi ý map theo family (vẫn phải đối chiếu PDF từng file):**
 
-| Family                    | Hero / cover                                  | Web HTML (không lặp theo trang)                                                          |
-| ------------------------- | --------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| A — Market Review         | Thường **không** logo trên hero               | Footer/legal một lần: `logo-m.svg` nếu PDF có logo ở vùng đó                             |
+| Family                    | Hero / cover                                  | Web HTML (không lặp theo trang)                                                              |
+| ------------------------- | --------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| A — Market Review         | Thường **không** logo trên hero               | Footer/legal một lần: `logo-m.svg` nếu PDF có logo ở vùng đó                                 |
 | B — Quarterly Outlook     | Hero căn giữa → **`MT-Logo.svg`** (stacked)   | Back-cover/legal cuối: **`MT-Logo.svg`** khi PDF có; **không** lặp running header từng trang |
-| C — Perspective / Insight | Hero góc trên-trái → **`logo-m.svg`** (ngang) | Logo hero một lần; **không** lặp logo đầu mỗi “trang” PDF chỉ để đánh dấu pagination     |
+| C — Perspective / Insight | Hero góc trên-trái → **`logo-m.svg`** (ngang) | Logo hero một lần; **không** lặp logo đầu mỗi “trang” PDF chỉ để đánh dấu pagination         |
 
 **Styling**
 
@@ -239,21 +239,173 @@ _Phần đo geometry trang PDF — hữu ích cho visual QA / content width. **K
 
 ## B.4 Hình ảnh & placement
 
-- **Ảnh bìa (hero) luôn full-bleed** — tràn hết chiều ngang; ảnh thiên nhiên/đời sống tông ấm.
-- **Hero aspect ratio (rule chung — bắt buộc):** đo **chiều rộng trang × chiều cao dải hero** trên PDF (pt), rồi đặt CSS `aspect-ratio: <W> / <H>` (hoặc `height: calc(100% * H/W)` theo chiều ngang full-bleed). **Không** gán `height` cố định (px/`clamp`/`vw` tùy tiện) làm lệch tỷ lệ W/H so với PDF — với `background-size: cover` hộp quá “dẹt” sẽ crop thêm trên/dưới (ví dụ cắt đỉnh đầu nhân vật). Ví dụ *Protecting Intergenerational Wealth*: hero band **595.32 × 224.2 pt** → `aspect-ratio: 595.32 / 224.2` (≈ **2.655 / 1**). Ảnh extract/crop phải khớp vùng nhìn thấy trên PDF; `object-position` / `background-position` chỉ tinh chỉnh sau khi tỷ lệ hộp đã đúng.
-- **Hero overlay / scrim (rule chung — bắt buộc kiểm tra):** khi PDF đặt **logo trắng hoặc chữ trắng** lên ảnh, nguồn thường có lớp tối (flat opacity hoặc gradient). Ví dụ *Protecting Intergenerational Wealth*: fill đen phủ toàn hero, **opacity ≈ 0.25**. HTML **phải** tái tạo overlay tương đương — **không** dùng ảnh crop trần nếu logo/chữ trên HTML kém tương phản hơn PDF. Chỉ bỏ overlay khi PDF thật sự không có *và* contrast vẫn đạt.
+- **Page shell max-width = khổ PDF (rule chung — bắt buộc):** HTML **không** để hero/content tràn full viewport browser. Shell `.document` (hoặc tương đương) đặt `max-width` = **chiều rộng trang PDF** quy đổi @ 96dpi (`pt × 4/3`). Ví dụ A4 portrait **595.32 pt → ~794px** (`--page-max`). Trang căn giữa; nền ngoài shell có thể trắng/neutral. Bên trong shell vẫn continuous flow (không giả lập nhiều trang A4 / page-break).
+- **Ảnh bìa (hero) full-bleed trong page shell** — tràn hết bề ngang **của shell PDF**, không tràn hết cửa sổ browser; ảnh thiên nhiên/đời sống tông ấm.
+- **Hero aspect ratio + chiều cao — desktop (bắt buộc):** đo **W trang × H dải hero** trên PDF (pt) → CSS `aspect-ratio: W / H` trên hero **bên trong** `--page-max`. Khi shell = đúng khổ PDF, chiều cao hero web = chiều cao hero PDF quy đổi (vd. **224.2 pt → ~299px** trên shell ~794px). **Không** stretch hero full-viewport (sẽ phóng H quá lớn). Ví dụ _Protecting Intergenerational Wealth_: `595.32 / 224.2`; _Double Death Tax Trap_: `595.32 / 211`. Ảnh extract khớp vùng nhìn thấy; `background-position` tinh chỉnh sau khi shell + ratio + orientation đúng.
+- **Hero trên mobile/tablet (bắt buộc — khác desktop):** giữ **cùng asset + hướng subject + scrim**, nhưng **không** bắt buộc giữ đúng `aspect-ratio` PDF nếu band quá dẹt làm `background-size: cover` cắt mất chủ thể hoặc **logo / kicker / title overlay bị chồng lên hoa, tràn mép, chữ cắt**. Được phép:
+  1. nới hero cao hơn (vd. `--perspective-hero-aspect-mobile: 3 / 2` hoặc `min-height` hợp lý ~200–280px theo viewport);
+  2. giảm logo / kicker size + padding trong hero;
+  3. đặt overlay bằng flex (logo trên, kicker dưới với `margin-top: auto` + padding) để **toàn bộ chữ nằm trong khung**, clearspace tối thiểu tới mép;
+  4. tinh chỉnh `background-position` mobile nếu cần — vẫn ưu tiên subject phía PDF (trái/phải), không “zoom” cắt mất cụm chính.
+  **Không** để hero mobile chỉ ~130–150px cao (shell hẹp × ratio PDF ~2.8) rồi chữ đè ảnh. **Không** full-bleed viewport ngoài `--page-max` chỉ để “làm hero to”.
+- **Hero image orientation / mirror (bắt buộc kiểm tra):** trước khi dùng ảnh extract làm `background-image`, đọc **transform matrix** của XObject trên trang (`get_image_info` / tương đương). Nếu `scaleX` **âm** (PDF lật ngang ảnh), asset raw sẽ **ngược** so với bản in — phải `FLIP_LEFT_RIGHT` file ảnh (hoặc tương đương) rồi mới calibrate `background-position`. Ví dụ _Double Death Tax Trap_: hoa lệch **phải** trên PDF nhưng raw JPEG lệch trái cho đến khi flip. **Không** chỉ đẩy `background-position` để “che” lỗi mirror. Sau khi đúng hướng, mới tinh chỉnh position/% để subject khớp crop PDF.
+- **Hero overlay / scrim (rule chung — bắt buộc kiểm tra):** khi PDF đặt **logo trắng hoặc chữ trắng** lên ảnh, nguồn thường có lớp tối (flat opacity hoặc gradient). Ví dụ _Protecting Intergenerational Wealth_: fill đen phủ toàn hero, **opacity ≈ 0.25**. HTML **phải** tái tạo overlay tương đương — **không** dùng ảnh crop trần nếu logo/chữ trên HTML kém tương phản hơn PDF. Chỉ bỏ overlay khi PDF thật sự không có _và_ contrast vẫn đạt. Kiểm tra lại contrast trên **mobile** sau khi đổi tỉ lệ hero.
 - **Logo Mutual Trust** — URL chính thức ở **A.5**; chọn `logo-m.svg` (ngang) hoặc `MT-Logo.svg` (stacked) đúng như PDF. SVG mặc định trắng (hero/nền tối); trên nền trắng đảo sang mực tối.
 - Biểu đồ: **tiêu đề chart + "Source: …"** ngay dưới, tối giản, không tô nền.
 
 ## B.5 Footer / Disclaimer (recurring — mọi PDF)
 
-Cấu trúc pháp lý xuất hiện ở **mọi tài liệu**, 3 tầng cố định:
+Khối **một lần** ở cuối document (không lặp theo trang). Dùng markup + CSS dưới đây làm **nền tái sử dụng**, rồi **đo PDF nguồn** để override copy, số cột, type scale, clearspace và variant nền (trắng vs tối).
 
-1. "Liability limited by a scheme approved under Professional Standards Legislation…"
-2. Đoạn miễn trừ trách nhiệm tài chính đầy đủ (forward-looking statement, khuyến nghị tư vấn cá nhân…)
-3. **Acknowledgement of Country** — đủ 7/7 file
+### B.5.1 Nội dung pháp lý (3 tầng — hầu hết PDF)
 
-Đi kèm: khối liên hệ văn phòng (Melbourne, Sydney, Brisbane, Perth, Adelaide), email, website, ABN, AFSL.
+Thứ tự / gộp đoạn có thể lệch nhẹ theo file — **copy đúng PDF**, không invent:
+
+1. **Liability** — thường mở đầu: *"Liability limited by a scheme approved under Professional Standards Legislation…"*
+2. **Disclaimer tài chính** — forward-looking / general nature / seek advice / FSG… (có thể gộp chung đoạn 1 trên Perspective ngắn)
+3. **Acknowledgement of Country** — đoạn riêng phía dưới
+
+### B.5.2 Markup chuẩn (nền tái sử dụng)
+
+**Nhóm C (Perspective) — contacts → legal trên nền trắng** (không back-cover đen; không số trang / running tagline PDF):
+
+```html
+<section class="perspective-legal" aria-label="Contacts and disclaimer">
+  <div class="perspective-contacts" aria-label="Office contacts">
+    <!-- Col 1: HQ / Melbourne — địa chỉ đầy đủ -->
+    <p class="perspective-contacts__office">
+      <strong>Melbourne</strong>
+      Level 32<br />
+      360 Collins Street<br />
+      Melbourne VIC 3000<br />
+      T <a href="tel:+61396059500">+61 3 9605 9500</a>
+    </p>
+
+    <!-- Col 2–3: cặp city + phone (stack dọc trong cột) -->
+    <div class="perspective-contacts__col">
+      <p class="perspective-contacts__stack">
+        <strong>Sydney</strong>
+        <a href="tel:+61292247600">+61 2 9224 7600</a>
+      </p>
+      <p class="perspective-contacts__stack">
+        <strong>Brisbane</strong>
+        <a href="tel:+61721151100">+61 7 2115 1100</a>
+      </p>
+    </div>
+    <div class="perspective-contacts__col">
+      <p class="perspective-contacts__stack">
+        <strong>Adelaide</strong>
+        <a href="tel:+61870823900">+61 8 7082 3900</a>
+      </p>
+      <p class="perspective-contacts__stack">
+        <strong>Perth</strong>
+        <a href="tel:+61892307788">+61 8 9230 7788</a>
+      </p>
+    </div>
+
+    <!-- Col 4: meta — email, web, ABN/AFSL, © -->
+    <div class="perspective-contacts__meta">
+      <p><a href="mailto:info@mutualtrust.com.au">info@mutualtrust.com.au</a></p>
+      <p><a href="https://www.mutualtrust.com.au/">www.mutualtrust.com.au</a></p>
+      <p>ABN: 71 004 285 330&nbsp;&nbsp;AFSL: 234590</p>
+      <p>© <!-- YEAR --> Mutual Trust Pty Ltd.</p>
+    </div>
+  </div>
+
+  <!-- Chỉ các <p> con trực tiếp của .perspective-legal = disclaimer -->
+  <p><!-- LIABILITY (+ disclaimer body nếu PDF gộp) --></p>
+  <p><!-- ACKNOWLEDGEMENT_OF_COUNTRY --></p>
+</section>
+```
+
+**Class roles (ổn định — AI giữ tên class, chỉ đổi nội dung / CSS token):**
+
+| Class | Vai trò |
+| --- | --- |
+| `.perspective-legal` | Wrapper cuối bài: type scale legal + (tuỳ PDF) border-top |
+| `.perspective-contacts` | Grid văn phòng + meta |
+| `.perspective-contacts__office` | Cột HQ (city serif + địa chỉ nhiều dòng) |
+| `.perspective-contacts__col` | Nhóm 2 city xếp chồng (Syd/BNE, Adel/Perth…) |
+| `.perspective-contacts__stack` | Một city + phone |
+| `.perspective-contacts__meta` | Email / web / ABN·AFSL / © |
+| `.perspective-legal > p` | **Chỉ** đoạn Liability / disclaimer / Acknowledgement |
+
+Template tham chiếu: `website/template-perspective.html` (khối `.perspective-legal`).
+
+### B.5.3 CSS nền + quy tắc spacing (tránh lỗi hay gặp)
+
+```css
+.perspective-legal {
+  /* type: Proxima; size/lh đo từ PDF (thường ~6–8pt → web calibrate, đừng để 12px mặc định nếu PDF nhỏ) */
+  border-top: var(--perspective-legal-border); /* none nếu PDF không có rule */
+}
+
+/* Disclaimer ONLY — không để margin “rò” vào contact <p> */
+.perspective-legal > p { margin: 0 0 /* gap giữa 2 đoạn legal — đo PDF */; }
+.perspective-legal .perspective-contacts p { margin: 0; }
+
+/* Clearspace contacts → dòng “Liability…” — đo PDF (thường ~6–10pt ≈ 8–13px @ 96dpi) */
+.perspective-contacts + p { margin-top: /* đo */; }
+
+.perspective-contacts {
+  display: grid;
+  align-items: start; /* không stretch cột ngắn */
+  /* mobile (mặc định): **2 cột** → khoảng 2 hàng (HQ|stack / stack|meta) — không stack 1 cột dài */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* desktop ≥600–700px: thường 4 cột — HQ | stack | stack | meta; tỉ lệ đo từ PDF */
+}
+@media (max-width: 768px) {
+  .perspective-contacts__meta {
+    grid-column: 1 / -1; /* email/web full width dưới 2 cột city */
+    padding-top: 0;
+  }
+}
+
+/* City label: Baskerville, màu xám nhạt (vd. #99999b), size ~9pt */
+.perspective-contacts__office strong,
+.perspective-contacts__stack strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--perspective-contact-label-color);
+  /* margin-bottom: PDF thường gần flush với dòng detail — đo, đừng mặc định 8–16px */
+}
+
+/* Meta: trên nhiều Perspective, dòng đầu (email) canh hàng detail dưới city label — không canh đỉnh chữ “Melbourne” */
+.perspective-contacts__meta { /* padding-top / blank row trước ABN nếu PDF có */ }
+
+.perspective-contacts a { color: inherit; text-decoration: none; } /* trừ khi PDF link hoá khác */
+```
+
+**Cấm / bỏ khỏi HTML web (artefact pagination PDF):**
+
+- Số trang (`3`, `Page X`…)
+- Running footer lặp: tên bài + tagline đáy trang (vd. *"Protecting intergenerational wealth…"* chỉ để chạy trang)
+- Nhân bản disclaimer trên mọi “trang”
+
+### B.5.4 Checklist calibrate theo PDF nguồn (bắt buộc trước khi chốt)
+
+1. **Copy** — Liability / disclaimer / Acknowledgement / contacts / © year đúng từng chữ; SĐT bọc `tel:`.
+2. **Thứ tự khối** — contacts trước hay sau legal; logo trên footer tối (A/B) có/không.
+3. **Grid** — số cột, cặp city nào chung cột, Melb có địa chỉ đủ dòng không.
+4. **Type** — size/lh legal vs contact detail vs city label (serif); màu city label.
+5. **Clearspace** — đo pt→px:
+   - đáy cột cao nhất (thường dòng ©) → đỉnh “Liability…”
+   - khoảng giữa đoạn Liability và Acknowledgement
+   - Melb phone thường **cao hơn** ©; đừng để Melb thành cột cao nhất rồi dồn Liability sát đáy (margin rò từ `.perspective-legal p` là nguyên nhân hay gặp).
+6. **Meta rhythm** — PDF thường: email → web → (khoảng trống / hàng city thứ 2) → ABN·AFSL → ©.
+7. **Nền** — trắng cuối bài (C) vs dải/back-cover tối + logo/tagline (A/B) — xem B.7; không invent panel/border nếu PDF không có.
+8. **QA** — không horizontal scroll; **mobile contacts = lưới 2 cột** (không stack 1 cột); meta có thể full-width hàng dưới; không số trang.
+
+### B.5.5 Biến thể theo nhóm (sau khi có nền B.5.2)
+
+| Nhóm | Footer web |
+| --- | --- |
+| **C — Perspective** | Markup B.5.2; nền trắng; disclaimer ngắn; không back cover đen |
+| **A — Market Review** | Cùng nội dung legal + contacts; thường dải nền tối cuối trang; có thể có `logo-m.svg` — match PDF |
+| **B — Outlook** | Back cover tối: logo stacked / tagline *"Helping families achieve what matters most."* + disclaimer dài; byline PDF đưa vào article, không chạy footer |
+
+Số điện thoại / địa chỉ / ABN·AFSL lấy từ **PDF đang convert** (bảng trên chỉ là skeleton — luôn đối chiếu nguồn).
 
 ## B.6 Màu quan sát trong PDF (không thuộc Style Guide palette)
 
@@ -293,7 +445,7 @@ PDF export từng lệch nhẹ quanh Ochre (`#D17B19`, `#D17A18`, `#CBA020`, `#C
 
 ### Nhóm C — Perspective / Insight Article
 
-- Trang bìa: hero cao hơn nhóm A (đo **W×H band** từng file — khoảng ~210–320pt trên khổ A4, nhưng web dùng **aspect-ratio W/H**, không lock px), **logo nhỏ góc trên-trái trên ảnh**; tiêu đề bài **dưới ảnh** (nền trắng) — khác nhóm A (title không nằm trên ảnh). Logo trắng trên hero vẫn cần **scrim/overlay tối** theo B.4 khi PDF có (thường flat ~25% đen).
+- Trang bìa: hero trong `--page-max` (đo **W×H band** — khoảng ~210–320pt H trên A4); web: **aspect-ratio W/H** trong shell → H ≈ PDF; **logo nhỏ góc trên-trái trên ảnh**; tiêu đề bài **dưới ảnh** (nền trắng). Logo trắng cần **scrim** theo B.4 khi PDF có (thường flat ~25% đen).
 - **H1 màu không đồng nhất giữa 3 bài**: 2/3 dùng Ochre thương hiệu; 1 bài ("Protecting intergenerational wealth…") dùng xanh xám `#4E5E72` — **không có trong Style Guide Colour**; cần xác nhận với brand (chủ đích vs lệch export). Khi chưa chốt: mặc định Ochre/Black theo Style Guide.
 - Không có bảng heat-color hay lưới 6 chart như nhóm A.
 - Callout (nếu có) đa dạng theo bài — xem B.8.
@@ -317,11 +469,11 @@ PDF export từng lệch nhẹ quanh Ochre (`#D17B19`, `#D17A18`, `#CBA020`, `#C
 
 | Thuộc tính                  | Giá trị đo được                                                         | Ghi chú                                                                                                                                                                                                                                                   |
 | --------------------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ký tự bullet                | `•` (U+2022)                                                            | Luôn font **SymbolMT** — artefact Word export, không phải chủ đích thiết kế (đã ghi ở B.1). Trên web: **đừng** render `•` ở full body `font-size` (sẽ to hơn PDF). Dùng disc CSS nhỏ (~**5px** @ 96dpi khi body 12pt) — xem cỡ marker dưới |
+| Ký tự bullet                | `•` (U+2022)                                                            | Luôn font **SymbolMT** — artefact Word export, không phải chủ đích thiết kế (đã ghi ở B.1). Trên web: **đừng** render `•` ở full body `font-size` (sẽ to hơn PDF). Dùng disc CSS nhỏ (~**5px** @ 96dpi khi body 12pt) — xem cỡ marker dưới                |
 | Ký tự numbered              | số + `.` (`1.` `2.` `3.` …)                                             | Font **body** (Proxima Nova Light/Regular), **không** phải font riêng cho số                                                                                                                                                                              |
 | Màu marker                  | luôn theo màu **ink thân bài** — `#000000`, vài chỗ `#1B1B1F`/`#1B1B20` | **Không bao giờ dùng Ochre** cho bullet/numbered marker trong 7/7 file. Lưu ý phân biệt với numbered **section heading** (đánh số phần lớn, Baskerville 16–22pt + Ochre `#D17B19`, xem B.7 nhóm B) — đây là 2 pattern khác nhau, không nhầm lẫn khi build |
-| Cỡ marker (optical)         | Disc **~5px** web khi body 12pt→16px                                    | Crop PDF (SymbolMT 12pt) đo ~**4px**; token web dùng **+20%** → **5px** cho đọc rõ hơn trên màn hình mà vẫn nhỏ hơn nhiều so với glyph `•` browser 16px. QA so size + indent                                                                                 |
-| Khoảng cách marker → text   | **18pt cố định** (≈ 24px web)                                           | Từ **mép trái origin của marker** → **mép trái text** (tab-stop Word 0.25in). Không tỷ lệ theo font-size. Gap trống sau disc nhỏ chiếm phần lớn 18pt — nếu bullet web quá to sẽ “ăn” khoảng trống và trông sát chữ hơn PDF                                 |
+| Cỡ marker (optical)         | Disc **~5px** web khi body 12pt→16px                                    | Crop PDF (SymbolMT 12pt) đo ~**4px**; token web dùng **+20%** → **5px** cho đọc rõ hơn trên màn hình mà vẫn nhỏ hơn nhiều so với glyph `•` browser 16px. QA so size + indent                                                                              |
+| Khoảng cách marker → text   | **18pt cố định** (≈ 24px web)                                           | Từ **mép trái origin của marker** → **mép trái text** (tab-stop Word 0.25in). Không tỷ lệ theo font-size. Gap trống sau disc nhỏ chiếm phần lớn 18pt — nếu bullet web quá to sẽ “ăn” khoảng trống và trông sát chữ hơn PDF                                |
 | Hanging indent              | Có                                                                      | Dòng wrap thứ 2+ của một item canh thẳng với vị trí **text** (sau tab-stop), không lùi về vị trí marker — xác nhận ở mọi list nhiều dòng đo được                                                                                                          |
 | Line-height trong list item | ≈ **1.2× cỡ chữ**, giống thân bài                                       | Không có leading riêng cho list (xem B.2). Căn marker theo trục dọc dòng đầu (không trôi baseline)                                                                                                                                                        |
 
@@ -363,7 +515,7 @@ ol.mt-list > li {
 }
 /* Disc nhỏ khớp PDF — KHÔNG dùng • full-size (sẽ to và “ăn” gap marker→text) */
 ul.mt-list > li::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0.55em;
@@ -377,7 +529,7 @@ ol.mt-list {
 }
 ol.mt-list > li::before {
   counter-increment: mt-counter;
-  content: counter(mt-counter) ".";
+  content: counter(mt-counter) '.';
   position: absolute;
   left: 0;
   width: var(--list-indent);
@@ -425,21 +577,22 @@ Khi convert PDF cụ thể: **override** khoảng hero↔content, content↔foot
 
 ## C.2 Grid (từ PDF patterns)
 
-- Content max-width đề xuất: **~700–760px** (từ content width đo trên PDF — không phải khung A4)
-- Một content column dùng chung cho logo, hero text, body, program blocks, footer (cùng mép trái/phải) trong **một** continuous page
-- Quyết định còn mở: hợp nhất lề A/C (~55pt) vs B (~72pt) thành 1 grid web, hay giữ 2 biến thể theo document family
+- **Page shell** `--page-max`: = **chiều rộng trang PDF** @ 96dpi (A4 ≈ **794px** từ 595.32pt). Hero + article nằm trong shell này — không full-bleed viewport.
+- **Content column** `--container-max`: đo lề nội dung PDF (thường ~**646–760px** trên A4 với lề ~55pt) — hẹp hơn `--page-max`; logo/title/body/footer canh cùng mép cột.
+- Một continuous page trong shell; không giả lập nhiều artboard trang.
+- Quyết định còn mở: hợp nhất lề A/C (~55pt) vs B (~72pt) thành 1 content width, hay giữ 2 biến thể theo family
 
 ## C.3 Thư viện component (từ recurring PDF patterns + Style Guide styling)
 
-1. **Hero/Header** — 2 biến thể layout PDF: (a) title overlay trên ảnh — Market Review; (b) logo trên ảnh + title tách khối nội dung — Outlook/Insight. Logo: URL A.5 (`logo-m.svg` hoặc `MT-Logo.svg` theo PDF). **Luôn** đặt `aspect-ratio` = W/H dải hero PDF (B.4) và kiểm tra / áp hero scrim để contrast logo hoặc chữ trắng khớp PDF (C.6.3).
+1. **Hero/Header** — 2 biến thể layout PDF: (a) title overlay trên ảnh — Market Review; (b) logo trên ảnh + title tách khối nội dung — Outlook/Insight. Logo: URL A.5 (`logo-m.svg` hoặc `MT-Logo.svg` theo PDF). Hero trong `--page-max`; `aspect-ratio` = W/H dải PDF (B.4); scrim contrast (C.6.3).
 2. **Section heading** — Baskerville; có/không đánh số; accent Ochre hoặc Black theo ngữ cảnh PDF.
 3. **Callout/quote box** — nền Light Grey; nội dung: quote + attribution, podcast thumb + link, hoặc infographic.
 4. **Data table** — semantic `--color-positive` / `--color-negative` (PDF-specific, nhóm A).
 5. **Chart block** — đơn lẻ hoặc lưới 2 cột; luôn caption + Source.
 6. **Author sign-off** — tên, chức danh, "Mutual Trust" (nhóm C).
 7. **Document meta / byline** — author/date khi PDF có (nhóm B); đặt một lần trong article, **không** lặp running footer + số trang.
-8. **Legal + Acknowledgement of Country** — một khối cuối document: inline nền trắng (C) / dải hoặc back-cover nền tối (A, B).
-9. **Office contact grid** — 4–5 văn phòng, email, website, ABN/AFSL.
+8. **Legal + contacts footer** — một khối cuối document theo **B.5** (markup `.perspective-legal` / `.perspective-contacts` làm nền; calibrate copy + spacing từ PDF). Variant nền: trắng (C) / dải hoặc back-cover tối (A, B).
+9. **Office contact grid** — nằm trong B.5.2; 4 cột điển hình (HQ + 2 stack city + meta); AI override theo PDF.
 10. **List (bullet & numbered)** — marker màu ink (`--color-ink`, không Ochre); disc optical ~**5px** (PDF ~4px +20%; không `•` full-size); gap marker→text cố định 24px; wrap canh text; numbered dùng số body font + dấu `.`; base = Flush, biến thể Outdent/Inset theo PDF — chi tiết B.9.
 11. **Inline link** — màu theo PDF (thường Ochre / `#D17B19`); **underline chỉ khi PDF có**; nhiều Perspective chỉ tô màu, không gạch chân (C.6.7).
 
@@ -451,16 +604,18 @@ _Tham chiếu đầy đủ quy trình visual: **C.6**._
 2. Gán font family + map màu brand sang token Style Guide (mục A); load font từ `assets/fonts` và xác minh browser đang dùng đúng font (C.6.3–C.6.4).
 3. Chọn document family (A / B / C) và hero/footer variant (mục B.7).
 4. Chọn logo URL đúng biến thể PDF (`logo-m.svg` ngang vs `MT-Logo.svg` stacked — mục A.5); xử lý trắng/tối theo nền.
-5. **Hero geometry** — đo W×H dải hero PDF → CSS `aspect-ratio: W / H` full-bleed; xác nhận crop/position không cắt chủ thể (B.4, C.6.5).
-6. **Hero overlay/scrim** — đo từ PDF (opacity / gradient); áp lên HTML trước khi chốt contrast logo/chữ trên ảnh (B.4, C.6.3). Không tắt scrim chỉ vì “ảnh đã đẹp”.
-7. **Calibrate geometry rồi typography** theo C.6.4–C.6.5 (content width, size, line-height, spacing, placement từ PDF).
-8. Giữ toàn bộ copy PDF — không omit / invent / duplicate.
-9. Semantic / one-off colours và link treatment theo PDF khi có (C.6.7).
-10. List/bullet theo B.9 + C.6.6 — không dùng browser default.
-11. **Không tái tạo pagination của PDF trên web.** Nội dung chuyển thành continuous document flow. Page boundary của PDF chỉ dùng làm checkpoint trong visual QA để phát hiện cumulative spacing/typography drift (C.6.8–C.6.9).
-12. Chạy Visual Comparison Loop (C.6.8) — tối đa 3 vòng correction nếu còn khác biệt đáng kể; **desktop fidelity đạt trước** rồi mới responsive (C.6.10).
-13. Chỉ đánh dấu hoàn thành khi đạt Definition of Done (C.6.11).
-14. **Chưa deploy** cho đến khi được yêu cầu.
+5. **Page shell** — `--page-max` = chiều rộng trang PDF @ 96dpi; không để layout tràn full browser (B.4, C.2).
+6. **Hero geometry** — trong shell: `aspect-ratio: W / H` dải PDF → chiều cao hero = H PDF quy đổi; xác nhận crop/position không cắt chủ thể (B.4, C.6.5).
+7. **Hero overlay/scrim** — đo từ PDF (opacity / gradient); áp lên HTML trước khi chốt contrast logo/chữ trên ảnh (B.4, C.6.3). Không tắt scrim chỉ vì “ảnh đã đẹp”.
+8. **Calibrate geometry rồi typography** theo C.6.4–C.6.5 (content width, size, line-height, spacing, placement từ PDF).
+9. Giữ toàn bộ copy PDF — không omit / invent / duplicate.
+10. Semantic / one-off colours và link treatment theo PDF khi có (C.6.7).
+11. List/bullet theo B.9 + C.6.6 — không dùng browser default.
+12. **Footer/legal** — bắt đầu từ cấu trúc chuẩn **B.5**; đo PDF rồi override (B.5.4). Không số trang / running footer.
+13. **Không tái tạo pagination của PDF trên web.** Nội dung chuyển thành continuous document flow. Page boundary của PDF chỉ dùng làm checkpoint trong visual QA để phát hiện cumulative spacing/typography drift (C.6.8–C.6.9).
+14. Chạy Visual Comparison Loop (C.6.8) — tối đa 3 vòng correction nếu còn khác biệt đáng kể; **desktop fidelity đạt trước** rồi mới responsive (C.6.10).
+15. Chỉ đánh dấu hoàn thành khi đạt Definition of Done (C.6.11).
+16. **Chưa deploy** cho đến khi được yêu cầu.
 
 ## C.5 Việc còn cần xác nhận
 
@@ -492,15 +647,18 @@ Trước khi viết HTML/CSS phải xác định:
 
 - asset thật được sử dụng
 - logo variant, size, placement
-- hero dimensions; **W×H band → aspect-ratio**; image crop / object-position (sau khi tỷ lệ hộp đúng)
+- page width → `--page-max` (shell = khổ PDF, không full viewport)
+- hero dimensions; **W×H band → aspect-ratio trong shell** (H web ≈ H PDF @ 96dpi); image crop / object-position
 - hero overlay / scrim (có/không, flat opacity hay gradient, độ tối) — contrast logo/chữ trên ảnh
+- hero image **transform** (có mirror ngang không) + vị trí subject (trái/phải) so với render PDF
 - content width, alignment
 - font family, weight, style, size, line-height, letter-spacing
-- heading hierarchy; paragraph spacing; section spacing
-- màu sắc; link treatment
+- **italic/oblique thật trên render** (kể cả khi tên font Regular)
+- heading hierarchy; paragraph / byline / h2 spacing (đo pt)
+- màu sắc; link treatment (size + underline, đặc biệt email/www footer)
 - bullet/list geometry
 - callout / promo styling
-- author/sign-off; legal/contact styling
+- author/sign-off; legal/contact theo **B.5** (grid, clearspace contacts→legal, meta không underline lệch size)
 
 Không bắt đầu từ browser default hoặc generic web styling.
 
@@ -512,8 +670,8 @@ Không bắt đầu từ browser default hoặc generic web styling.
 - Không crop logo từ screenshot nếu đã có SVG chính thức (A.5).
 - Không thay ảnh khi có thể extract/reuse ảnh gốc.
 - Không dùng fallback font nếu font Mutual Trust tương ứng đã có trong `website/assets/fonts`.
-- **Hero aspect-ratio:** đo dải hero PDF (page width × hero height) → `aspect-ratio: W / H` trên hero full-bleed. Ví dụ *Protecting Intergenerational Wealth*: `595.32 / 224.2`. Sai tỷ lệ + `background-size: cover` = crop thêm (cắt đầu nhân vật). Không dùng height px cố định lệch tỉ lệ nguồn.
-- **Hero overlay / contrast:** so PDF vs ảnh extract. Nếu PDF có lớp tối (flat opacity hoặc gradient) trên hero — **bắt buộc** áp CSS scrim tương đương (`::after` / `--*-hero-scrim`). Mục tiêu: logo trắng / chữ trên ảnh đạt contrast như PDF. Ví dụ đo được: fill `#000000` @ **~25% opacity** phủ full hero (*Protecting Intergenerational Wealth*). Không tắt overlay khi logo HTML sáng hơn / kém đọc hơn bản PDF.
+- **Page shell + hero aspect-ratio:** `--page-max` = page W PDF @ 96dpi (A4 ≈ 794px). Hero full-bleed **trong shell**, `aspect-ratio: W / H` (vd. `595.32 / 224.2`) → H ≈ 299px đúng PDF — **không** full-bleed viewport (tránh hero quá cao / crop sai).
+- **Hero overlay / contrast:** so PDF vs ảnh extract. Nếu PDF có lớp tối (flat opacity hoặc gradient) trên hero — **bắt buộc** áp CSS scrim tương đương (`::after` / `--*-hero-scrim`). Mục tiêu: logo trắng / chữ trên ảnh đạt contrast như PDF. Ví dụ đo được: fill `#000000` @ **~25% opacity** phủ full hero (_Protecting Intergenerational Wealth_). Không tắt overlay khi logo HTML sáng hơn / kém đọc hơn bản PDF.
 
 Sau khi load font phải xác minh browser thực sự đang sử dụng font đó.
 
@@ -529,7 +687,15 @@ Thứ tự kiểm tra khi line wrapping khác PDF:
 4. content width
 5. font-size
 6. letter-spacing
-7. line-height
+7. line-height (đo **line advance** pt→px — không nới lh web nếu PDF đặc hơn)
+
+**Paragraph / byline / heading rhythm:** đo ink-to-ink (y1 dòng cuối → y0 khối sau). Override margin mặc định của template (`--space-5`, `28px` trên h2…) khi lệch PDF.
+
+**Italic / oblique — không tin mỗi font name:**
+
+- Một số PDF (vd. _Double Death Tax Trap_) đặt cả đoạn “What if…” nghiêng nhưng span vẫn tên `ProximaNova-Regular` (không `Italic` trong tên / flag).
+- Bắt buộc đối chiếu **render PDF** + dấu hiệu kỹ thuật (glyph bbox lệch origin, crop vùng chữ).
+- Khi PDF nghiêng: `<em>` / class `is-italic` + `font-style: italic` (dùng face RegularIt nếu có). **Không** bỏ italic chỉ vì extractor báo Regular; **không** italic hoá đoạn roman.
 
 Không dùng margin/padding để chữa lỗi line-wrap do font hoặc content width sai.
 
@@ -539,16 +705,16 @@ Mục tiêu: paragraph wrapping và mật độ chữ gần PDF nguồn.
 
 Hiệu chỉnh theo thứ tự:
 
-1. outer/container width
-2. content width
-3. horizontal alignment
-4. hero **aspect-ratio** (W/H dải PDF) trước height tuyệt đối
-5. hero crop / background-position (chỉ sau khi tỷ lệ đúng)
+1. **page shell** `--page-max` (= PDF page width)
+2. content column `--container-max`
+3. horizontal alignment (logo/body cùng cột trong shell)
+4. hero **aspect-ratio** trong shell (W/H dải PDF) → H khớp PDF
+5. hero **orientation** (mirror/flip nếu PDF transform scaleX âm — B.4) rồi mới crop / `background-position`
 6. logo size/placement
 7. typography
-8. paragraph rhythm
+8. paragraph rhythm (lh + para/byline/h2 gaps đo từ PDF)
 9. section spacing
-10. component-specific spacing
+10. component-specific spacing (contacts meta size/underline, legal clearspace — B.5)
 
 Không tinh chỉnh margin nhỏ khi geometry tổng thể vẫn sai.
 
@@ -572,7 +738,13 @@ Khuyến nghị: disc CSS `--list-marker-size` + `position: absolute; left: 0` t
 
 Không tự động áp style link web generic (đặc biệt **không** mặc định underline).
 
-Link phải đối chiếu PDF về: **colour**, **có/không underline**, font weight. Ví dụ *Protecting Intergenerational Wealth* (và nhiều Perspective): link `#D17B19` / ochre-tinted, **không gạch chân**. Hover có thể thêm underline nhẹ — chỉ là enhancement web, không đổi base style lệch PDF.
+Link phải đối chiếu PDF về: **colour**, **có/không underline**, **font-size**, font weight. Ví dụ _Protecting Intergenerational Wealth_ (và nhiều Perspective): link `#D17B19` / ochre-tinted, **không gạch chân**. Hover có thể thêm underline nhẹ — chỉ là enhancement web, không đổi base style lệch PDF.
+
+**Contacts meta (email / www) trong footer B.5:**
+
+- Cùng **font-size / line-height** với dòng địa chỉ / SĐT (thường ~7pt) — không để link “phình” hơn cột văn phòng.
+- **Không underline** trừ khi PDF gạch chân rõ.
+- Tránh rule kiểu `.perspective-legal a { text-decoration: underline }` làm **rò** xuống `.perspective-contacts a`. Chỉ style link trong `.perspective-legal > p` (disclaimer) khi PDF có.
 
 Brand colour map theo Style Guide; nếu PDF có intentional PDF-specific treatment đã xác định thì **PDF thắng** theo bảng ưu tiên đầu tài liệu.
 
@@ -605,23 +777,31 @@ Không thêm blank space hoặc page break để ép content “đúng trang”.
 
 Chỉ bắt đầu responsive adaptation sau khi **desktop fidelity** đã đạt mức chấp nhận được.
 
-**Desktop:** PDF fidelity ưu tiên cao nhất.
+**Desktop:** PDF fidelity ưu tiên cao nhất — hero `aspect-ratio` = W/H dải PDF trong `--page-max` (B.4).
 
-**Tablet/mobile — giữ:** visual identity, typography hierarchy, assets, colours, content order, component meaning.
+**Tablet/mobile — giữ:** visual identity, typography hierarchy, assets, colours, content order, component meaning, hướng subject hero, scrim.
 
-**Cho phép:** stack columns, giảm font-size hợp lý, đổi padding, resize/crop hero, xử lý chart/table responsive.
+**Cho phép:** stack columns, giảm font-size hợp lý, đổi padding, **nới tỉ lệ / min-height hero** (B.4 mobile), scale logo/kicker, tinh chỉnh `background-position`, xử lý chart/table responsive.
 
-Không cố giữ kích thước vật lý A4 trên mobile.
+**Hero mobile QA (bắt buộc trước khi Done):**
+
+1. Logo + mọi chữ overlay **nằm trọn** trong hero — không cắt, không tràn đáy/mép.
+2. Chủ thể ảnh (hoa, người, horizon…) vẫn nhận ra; không crop mất cụm chính vì band quá dẹt.
+3. Chữ không đè nặng lên vùng sáng/chi tiết tới mức mất đọc (điều chỉnh size/position/scrim tối thiểu).
+4. Không horizontal scroll; hero vẫn trong page shell (không bắt buộc full browser width).
+
+Không cố giữ kích thước vật lý A4 / đúng H PDF tuyệt đối trên mobile nếu làm hỏng (1)–(3).
 
 ### C.6.11 Definition of Done
 
 Một conversion chỉ hoàn thành khi:
 
 - đúng toàn bộ nội dung; đúng assets; logo đúng variant và placement
-- hero **aspect-ratio W/H** khớp dải PDF; crop/position không cắt chủ thể; overlay/scrim khớp PDF khi cần; logo/chữ trên ảnh đủ contrast như nguồn
-- font thực sự load đúng; typography / content width / spacing rhythm gần PDF
+- **Desktop:** `--page-max` = khổ PDF; hero trong shell, **aspect-ratio W/H** → chiều cao khớp PDF; crop/position/orientation không cắt chủ thể; overlay/scrim khớp PDF khi cần; logo/chữ đủ contrast
+- **Mobile/tablet:** hero tỉ lệ hợp lý (B.4 / C.6.10) — không cắt ảnh mất subject, không mất/đè chữ overlay; logo + kicker đọc được
+- font thực sự load đúng; typography / content width / spacing rhythm gần PDF (desktop)
 - line wrapping không lệch lớn; bullet/list đúng geometry
 - links/colours đúng; component đặc thù đúng
-- không còn visual difference lớn khi compare side-by-side
-- desktop fidelity đạt trước responsive; mobile/tablet hoạt động tốt
+- không còn visual difference lớn khi compare side-by-side (desktop)
+- desktop fidelity đạt trước responsive; mobile/tablet QA hero + content pass
 - **không** tái tạo pagination không cần thiết của PDF

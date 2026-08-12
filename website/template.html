@@ -154,7 +154,8 @@
       --space-6: 48px;
       --space-7: 64px;
 
-      /* Container */
+      /* Page shell = PDF page width @ 96dpi (A4 ≈ 794px); content column inside */
+      --page-max: 793.76px;
       --container-max: 760px;
       --gutter: clamp(20px, 5vw, 40px);
 
@@ -360,9 +361,13 @@
     }
 
     .page {
+      width: 100%;
+      max-width: var(--page-max);
+      margin-inline: auto;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      background: var(--color-surface);
     }
 
     .container {
