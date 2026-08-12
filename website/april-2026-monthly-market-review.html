@@ -4,25 +4,52 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title><!-- PAGE_TITLE --></title>
-    <meta name="description" content="<!-- META_DESCRIPTION -->" />
+    <title>Monthly Market Review — April 2026 | Mutual Trust</title>
+    <meta
+      name="description"
+      content="Mutual Trust Monthly Market Review for April 2026 — equities, bonds, commodities and global market performance."
+    />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="<!-- CANONICAL_URL -->" />
+    <link
+      rel="canonical"
+      href="https://www.mutualtrust.com.au/insights/april-2026-monthly-market-review/"
+    />
 
-    <meta property="og:title" content="<!-- OG_TITLE -->" />
-    <meta property="og:description" content="<!-- OG_DESCRIPTION -->" />
+    <meta
+      property="og:title"
+      content="Monthly Market Review — April 2026 | Mutual Trust"
+    />
+    <meta
+      property="og:description"
+      content="Global investment markets rose in April following the deterioration in risk sentiment experienced during March."
+    />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="<!-- OG_URL -->" />
-    <meta property="og:image" content="<!-- OG_IMAGE -->" />
+    <meta
+      property="og:url"
+      content="https://www.mutualtrust.com.au/insights/april-2026-monthly-market-review/"
+    />
+    <meta
+      property="og:image"
+      content="assets/april-2026-monthly-market-review/images/hero.jpeg"
+    />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="<!-- TWITTER_TITLE -->" />
-    <meta name="twitter:description" content="<!-- TWITTER_DESCRIPTION -->" />
-    <meta name="twitter:image" content="<!-- TWITTER_IMAGE -->" />
+    <meta
+      name="twitter:title"
+      content="Monthly Market Review — April 2026 | Mutual Trust"
+    />
+    <meta
+      name="twitter:description"
+      content="Global investment markets rose in April following the deterioration in risk sentiment experienced during March."
+    />
+    <meta
+      name="twitter:image"
+      content="assets/april-2026-monthly-market-review/images/hero.jpeg"
+    />
 
     <link
       rel="icon"
-      href="https://www.mutualtrust.com.au/wp-content/uploads/2024/10/favicon.png"
+      href="https://mt.wootech.com.au/wp-content/uploads/2024/10/favicon.png"
       type="image/png"
     />
 
@@ -34,18 +61,16 @@
        Patterns vs Perspective (Group C):
        - Hero: title + date OVERLAY on image; typically NO logo on hero (logo in dark footer)
        - Dense body + bullet lists (Flush default; Outdent on some QMR — B.9)
-       - Heat data table (--color-positive / --color-negative) — framework B.6.2–B.6.3
-         Desktop: full columns like PDF; Mobile: .mr-table-wrap overflow-x (no page scroll)
-       - Chart grid 2×3 — framework B.7.1; one image per panel (never 6-in-1 composite); stack mobile
+       - Heat data table (--color-positive / --color-negative)
+       - Chart grid 2×3 (stack on mobile)
        - Dark footer band: contacts + multi-para disclaimer (not white legal only)
 
-       CONVERT WORKFLOW (C.6 / B.7.1 / B.7.3):
-       1. Inspect PDF: page W, content x0, hero title y0, hero H, table, charts, footer, block gaps
-       2. Override --page-max, --mr-page-w-pt, --mr-content-x-pt, --mr-hero-title-y-pt, --mr-*-gap*
-       3. Hero overlay: title left = body left; pad-top from title y (not 5vw gutter)
-       4. Spacing: para/h2/list/table/chart/CTA from PDF (B.7.3) — not Perspective --space-5/6
-       5. Mobile ≤768: content side gutters = Perspective (--gutter: 20px on .container)
-       6. Fill continuous article; Visual Comparison Loop — desktop then mobile
+       CONVERT WORKFLOW (C.6):
+       1. Inspect PDF (page W→--page-max, hero W/H, table colours, chart panels, footer)
+       2. Override :root --page-max / --container-max / --mr-* tokens
+       3. Hero inside page shell; overlay title readable (scrim if needed)
+       4. Fill continuous article (no page breaks / page numbers / running footer)
+       5. Visual Comparison Loop — desktop first, then mobile (hero + 2-col contacts)
        ========================================================================== */
 
       @font-face {
@@ -150,9 +175,7 @@
         --color-ink: var(--color-black);
         --color-ink-muted: var(--color-grey);
         --color-accent: var(--color-ochre);
-        --color-link: var(
-          --color-ochre
-        ); /* override per PDF if intentional (e.g. #D17B19) */
+        --color-link: #d17b19;
         --color-surface: var(--color-white);
         --color-surface-tint: var(--color-light-grey);
         --color-surface-dark: var(--color-black);
@@ -165,11 +188,10 @@
         --space-6: 48px;
         --space-7: 64px;
 
-        /* Page shell = PDF page width @ 96dpi (A4 595.32pt → ~794px). Override per PDF. */
-        --page-max: 793.76px;
-        /* Content column = shell; inset from measured PDF x (B.7.2) — not 5vw */
+        /* Page shell = PDF page width @ 96dpi */
+        --page-max: 793.28px; /* 594.96pt */
         --container-max: var(--page-max);
-        --gutter: 20px; /* mobile = Perspective (B.7.1); desktop uses --mr-content-x-* */
+        --gutter: 20px; /* mobile = Perspective; desktop uses --mr-content-x-* */
 
         --text-h1: 70px;
         --text-h1-lh: 72px;
@@ -198,7 +220,7 @@
 
         /* Shared list tokens (framework B.9) */
         --list-marker-color: var(--color-ink);
-        --list-marker-gap: 24px;
+        --list-marker-gap: 24px; /* 18pt PDF marker→text */
         --list-indent: var(--list-marker-gap);
         --list-marker-size: 5px;
         --list-item-gap: var(--mr-list-item-gap, 8px);
@@ -208,70 +230,65 @@
         --color-negative: #822333;
 
         /* ------------------------------------------------------------------
-         Market Review tokens — OVERRIDE PER PDF (C.6 / B.7.2)
-         Measure page W, content x0, hero title y0, hero band H in PDF pt.
-         Example defaults ≈ April 2026 MMR — replace per file.
+         Market Review tokens — OVERRIDE PER PDF (C.6)
+         Example defaults calibrated toward June 2026 QMR; measure each file.
          ------------------------------------------------------------------ */
-        --mr-page-w-pt: 594.96; /* PDF page width (pt) */
-        --mr-content-x-pt: 85.08; /* body + hero title left edge (pt) — same column */
-        /* Right margin often tighter than left (April ≈ 55pt vs 85pt) — measure PDF x1 */
-        --mr-content-x-right-pt: 55.28;
-        --mr-hero-title-y-pt: 55.28; /* title top y from page/hero top (pt) */
-        --mr-hero-aspect: 594.96 / 183.78; /* PDF band W/H — desktop */
+        /* Geometry from April 2026 MMR PDF (pt) — B.7.2 */
+        --mr-page-w-pt: 594.96;
+        --mr-content-x-pt: 85.08; /* title + body same left edge */
+        --mr-content-x-right-pt: 55.28; /* PDF body/table x1 ≈ 539.7 → right margin ~55pt */
+        --mr-hero-title-y-pt: 55.28;
+        --mr-hero-aspect: 594.96 / 183.78;
         --mr-hero-aspect-mobile: 3 / 2;
         --mr-hero-position: center center;
         --mr-hero-position-mobile: var(--mr-hero-position);
-        --mr-hero-scrim: rgba(
-          27,
-          27,
-          32,
-          0.65
-        ); /* override / none if PDF needs no scrim */
-        /* Desktop pad-top derived from pt (see .mr-hero__inner); mobile may override */
-        --mr-hero-pad-top: 28px;
-        --mr-title-size: 52px; /* 39pt → px @ 96dpi */
-        --mr-title-lh: 1.3; /* match PDF title bbox / size */
+        --mr-hero-scrim: rgba(27, 27, 32, 0.65);
+        --mr-hero-pad-top: 28px; /* mobile fallback only */
+        --mr-title-size: 52px; /* 39pt */
+        --mr-title-lh: 1.3;
         --mr-title-color: var(--color-white);
-        --mr-date-size: 34px; /* ~26pt; use mixed spans if PDF has two sizes */
+        --mr-date-size: 34.72px; /* 26pt year */
         --mr-date-lh: 1.15;
         --mr-date-tracking: 0.04em;
-        --mr-date-gap: 0px; /* PDF title→date often ~0–4pt */
+        --mr-date-gap: 0px;
         --mr-date-color: var(--color-white);
-        /* Spacing rhythm — measure PDF pt × 4/3; override per file (B.7.3) */
-        --mr-band-gap: 19px; /* hero→body; April ≈ 14.4pt */
+        /* Spacing from April 2026 MMR PDF (B.7.3) */
+        --mr-band-gap: 19px; /* 14.4pt hero→body */
         --mr-body-size: 13.33px; /* 10pt */
-        --mr-body-lh: 1.28; /* PDF leading ~12.2/10; slight web open */
-        --mr-para-gap: 9px; /* ~6.5pt between body paragraphs */
-        --mr-section-gap-before: 10px; /* ~5–6pt body/list → h2 */
-        --mr-section-gap-after: 6px; /* ~3–4pt h2 → list/body */
-        --mr-list-item-gap: 8px; /* ~6pt between bullet items */
-        --mr-list-block-gap: 10px; /* after ul before next block */
-        --mr-table-block-gap: 12px; /* before/after heat table */
-        --mr-chart-block-gap-before: 28px; /* table/source → chart grid */
-        --mr-chart-block-gap-after: 24px; /* charts → CTA; April ≈ 18pt */
-        --mr-chart-gap: 12px; /* panel grid; PDF row ~6pt, col wider */
+        --mr-body-lh: 1.28;
+        --mr-para-gap: 9px; /* ~6.5pt */
+        --mr-section-gap-before: 10px;
+        --mr-section-gap-after: 6px;
+        --mr-list-item-gap: 8px;
+        --mr-list-block-gap: 10px;
+        --mr-table-block-gap: 12px;
+        --mr-chart-block-gap-before: 28px;
+        --mr-chart-block-gap-after: 24px;
+        --mr-chart-gap: 12px;
         --mr-chart-gap-col: 24px;
-        --mr-cta-gap-before: 0px; /* included in chart-block-gap-after */
-        --mr-cta-gap-after: 20px; /* PDF CTA→note box; April ≈ 14pt */
-        --mr-note-gap-after: 22px; /* note box→footer; April ≈ 17pt */
-        --mr-note-pad-y: 14px;
+        --mr-cta-gap-before: 0px;
+        --mr-cta-gap-after: 20px; /* PDF CTA text→note box ≈ 14pt */
+        --mr-note-gap-after: 22px; /* PDF note box→footer ≈ 17pt */
+        --mr-note-pad-y: 14px; /* PDF text inset in grey fill ≈ 10pt */
         --mr-note-pad-x: 12px;
-        --mr-note-bg: #eaedf1; /* measure PDF fill; April ≈ rgb(234,237,241) */
+        --mr-note-bg: #eaedf1; /* PDF fill ≈ rgb(234,237,241) */
         --mr-article-pad-bottom: 8px;
-        --mr-section-size: 21px; /* ~16pt Baskerville */
+        --mr-section-size: 22.67px; /* 17pt Baskerville */
         --mr-section-color: var(--color-ink);
-        --mr-table-title-color: var(--color-ochre);
-        --mr-table-title-size: 16px;
-        --mr-table-cell-size: 12px;
+        --mr-table-title-color: #d17b19;
+        --mr-table-title-size: 16px; /* 12pt */
+        --mr-table-cell-size: 12px; /* ~9–10pt */
         --mr-caption-size: 11px;
+        --mr-chart-gap: var(--space-4);
         --mr-footer-bg: var(--color-black);
         --mr-footer-fg: var(--color-white);
-        /* Dark MMR footer: legal usually full white like contacts (April 2026) */
-        --mr-footer-muted: var(--color-white);
-        --mr-legal-size: 8px; /* PDF ~6pt — bump slightly for web */
+        --mr-footer-muted: var(
+          --color-white
+        ); /* PDF legal is white, not grey */
+        --mr-legal-size: 8px; /* PDF ~6pt contacts/legal; bump slightly for web */
         --mr-legal-lh: 1.35;
         --mr-contact-label-color: var(--color-white);
-        --mr-contact-label-size: 12px; /* ~9pt Baskerville city labels */
+        --mr-contact-label-size: 12px; /* ~9pt Baskerville */
         --mr-logo-width: 160px;
       }
 
@@ -430,7 +447,7 @@
         width: 100%;
         max-width: var(--container-max);
         margin-inline: auto;
-        /* % padding → shell width. Left/right often asymmetric in PDF (B.7.1). */
+        /* PDF left ~85pt, right ~55pt — asymmetric so body/table match print width */
         padding-left: max(
           var(--gutter),
           calc(100% * var(--mr-content-x-pt) / var(--mr-page-w-pt))
@@ -562,7 +579,6 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        /* Title y (pt) / page W (pt) × hero width — matches PDF vertical placement (B.7.2) */
         padding-top: max(
           16px,
           calc(100% * var(--mr-hero-title-y-pt) / var(--mr-page-w-pt))
@@ -578,7 +594,7 @@
         font-size: var(--mr-title-size);
         line-height: var(--mr-title-lh);
         color: var(--mr-title-color);
-        max-width: none; /* many MMR titles are single-line; override if PDF wraps */
+        max-width: none; /* PDF: single-line title ~410pt */
       }
 
       .mr-hero__date {
@@ -590,16 +606,6 @@
         letter-spacing: var(--mr-date-tracking);
         text-transform: uppercase;
         color: var(--mr-date-color);
-      }
-
-      /* Optional mixed date sizes (e.g. APRIL 21pt + 2026 26pt) */
-      .mr-hero__date .mr-hero__month {
-        font-size: calc(var(--mr-date-size) * 0.81);
-        letter-spacing: var(--mr-date-tracking);
-      }
-
-      .mr-hero__date .mr-hero__year {
-        font-size: var(--mr-date-size);
       }
 
       /* Optional logo on hero — rare for Group A; hide by default */
@@ -657,7 +663,7 @@
         margin: 0 0 var(--mr-list-block-gap);
       }
 
-      /* --- Heat / Global Markets table (B.6.2) — full black grid; heat fills cell --- */
+      /* --- Heat / Global Markets table (B.6.2) — full grid like PDF --- */
       .mr-table-block {
         margin: var(--mr-table-block-gap) 0;
       }
@@ -672,13 +678,13 @@
 
       .mr-table-wrap {
         width: 100%;
-        overflow-x: visible; /* desktop: table fits content column (no sideways scroll) */
+        overflow-x: visible; /* desktop: fits content column; scroll only on mobile */
         -webkit-overflow-scrolling: touch;
       }
 
       .mr-table {
         width: 100%;
-        min-width: 0; /* desktop: match PDF table ≈ body width; mobile sets min-width below */
+        min-width: 0; /* desktop — PDF table ≈ body width (~455pt); no forced 640px */
         border-collapse: collapse;
         border-spacing: 0;
         table-layout: fixed;
@@ -701,7 +707,7 @@
         padding: 2px 4px;
         text-align: center;
         vertical-align: middle;
-        border: 1px solid #000000; /* PDF grid — abut cells, no white gutters */
+        border: 1px solid #000000; /* PDF hairline grid — cells abut, no gutters */
         background: var(--color-white);
         color: var(--color-ink);
         box-sizing: border-box;
@@ -713,6 +719,8 @@
         font-weight: 400;
         padding-left: 6px;
         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .mr-table thead th {
@@ -728,7 +736,7 @@
         font-size: 12px;
       }
 
-      /* Heat: background on <td> fills to border edge */
+      /* Heat cells — fill entire grid cell to the border (no pill / gutter) */
       .mr-table .is-positive {
         background: var(--color-positive);
         color: var(--color-white);
@@ -747,6 +755,7 @@
         text-align: center;
       }
 
+      /* Section label row: Equities/Bonds/Currency — keep 7-col grid */
       .mr-table tr.mr-table__section td {
         background: var(--color-white);
         color: var(--mr-table-title-color);
@@ -756,12 +765,8 @@
         border: 1px solid #000000;
       }
 
-      .mr-table-block__source {
-        margin: 6px 0 0;
-        font-size: var(--mr-caption-size);
-        line-height: 1.35;
-        color: var(--color-ink);
-        font-style: italic; /* when PDF Source is italic */
+      .mr-table tr.mr-table__section td:first-child {
+        color: var(--mr-table-title-color);
       }
 
       /* --- Chart grid 2×3 (B.7 A) — split panels; stack on mobile --- */
@@ -804,41 +809,25 @@
       .mr-body > p.mr-cta,
       .mr-cta {
         margin: var(--mr-cta-gap-before) 0 var(--mr-cta-gap-after);
-        text-align: left; /* PDF usually full-measure, not centered */
+        text-align: left; /* PDF full-measure line, not centered */
         font-family: var(--font-sans);
         font-size: var(--mr-body-size);
         line-height: var(--mr-body-lh);
       }
 
-      /* When PDF has ochre hairline under link (April "click here") — underline base */
+      /* PDF draws ochre hairline under "click here" — keep base underline */
       .mr-cta a {
         color: var(--color-link);
         text-decoration: underline;
         text-decoration-color: var(--color-link);
         text-decoration-thickness: 1px;
         text-underline-offset: 0.12em;
-        font-weight: 400; /* match PDF unless source is bold */
+        font-weight: 400;
       }
 
       .mr-cta a:hover,
       .mr-cta a:focus-visible {
         text-decoration-thickness: 1.5px;
-      }
-
-      /* Optional note callout (e.g. quarterly cadence) — match PDF fill */
-      .mr-body > p.mr-note,
-      .mr-note {
-        margin: 0 0 var(--mr-note-gap-after);
-        padding: var(--mr-note-pad-y, 14px) var(--mr-note-pad-x, 12px);
-        background: var(--mr-note-bg, #eaedf1);
-        font-family: var(--font-sans);
-        font-size: var(--mr-body-size);
-        line-height: var(--mr-body-lh);
-        color: var(--color-ink);
-      }
-
-      .mr-note strong {
-        font-weight: 700;
       }
 
       /* --- Contacts grid (B.5) — reused in dark footer --- */
@@ -852,9 +841,10 @@
 
       @media (min-width: 600px) {
         .perspective-contacts {
-          grid-template-columns:
-            minmax(0, 1.15fr) minmax(0, 0.85fr) minmax(0, 0.85fr)
-            minmax(0, 1.2fr);
+          grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr) minmax(
+              0,
+              0.85fr
+            ) minmax(0, 1.2fr);
           gap: var(--space-3) var(--space-5);
         }
 
@@ -926,7 +916,6 @@
         font-weight: 400;
       }
 
-      /* City labels: Baskerville regular (PDF), not bold sans */
       .mr-footer .perspective-contacts__office strong,
       .mr-footer .perspective-contacts__stack strong {
         color: var(--mr-contact-label-color);
@@ -950,12 +939,11 @@
         font-weight: 400;
       }
 
-      /* Gap before ABN line (PDF ~14pt under www) */
       .mr-footer .perspective-contacts__meta p:last-child {
-        margin-top: 12px;
+        margin-top: 12px; /* PDF clearspace before ABN */
       }
 
-      /* tel: / office links — no underline (PDF has none) */
+      /* Office tel: — no underline in PDF */
       .mr-footer .perspective-contacts a {
         color: var(--mr-footer-fg);
         text-decoration: none;
@@ -964,10 +952,7 @@
         font-size: inherit;
       }
 
-      /*
-        Meta email + www: PDF draws white hairline underlines (April MMR).
-        Do NOT leave these as decoration-none — mismatch vs source.
-      */
+      /* Email + www: white hairline underline in PDF */
       .mr-footer .perspective-contacts__meta a {
         color: var(--mr-footer-fg);
         text-decoration: underline;
@@ -1014,12 +999,12 @@
         :root {
           --mr-title-size: 32px;
           --mr-date-size: 22px;
+          --mr-hero-pad-top: 20px;
           --mr-section-size: 18px;
           --mr-logo-width: 140px;
           --gutter: 20px; /* match template-perspective.html mobile */
         }
 
-        /* Same content side gutters as Perspective — do not keep PDF % insets on narrow */
         .container {
           padding-left: var(--gutter);
           padding-right: var(--gutter);
@@ -1032,7 +1017,6 @@
         }
 
         .mr-hero__inner {
-          /* Nới band mobile: keep readable inset; don't use tiny PDF ratio pad */
           padding-top: max(20px, var(--mr-hero-pad-top));
           padding-bottom: 16px;
           min-height: 100%;
@@ -1043,11 +1027,11 @@
         }
 
         .mr-table-wrap {
-          overflow-x: auto; /* narrow viewports only */
+          overflow-x: auto;
         }
 
         .mr-table {
-          min-width: 640px; /* keep 7 cols readable; scroll inside wrap */
+          min-width: 640px;
         }
 
         .mr-footer .perspective-contacts {
@@ -1066,56 +1050,256 @@
           display: contents;
         }
       }
+
+      /* April 2026 MMR — date mixed sizes; note callout; CTA weight; serif city labels */
+      .mr-hero__date {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 0.15em;
+      }
+
+      .mr-hero__month {
+        font-size: 28px; /* 21pt */
+        letter-spacing: 0.04em;
+      }
+
+      .mr-hero__year {
+        font-size: 34.72px; /* 26pt */
+        letter-spacing: 0.02em;
+      }
+
+      .mr-body > p.mr-note,
+      .mr-note {
+        margin: 0 0 var(--mr-note-gap-after);
+        padding: var(--mr-note-pad-y, 14px) var(--mr-note-pad-x, 12px);
+        background: var(--mr-note-bg, #eaedf1);
+        font-family: var(--font-sans);
+        font-size: var(--mr-body-size);
+        line-height: var(--mr-body-lh);
+        color: var(--color-ink);
+      }
+
+      .mr-note strong {
+        font-weight: 700;
+      }
+
+      .mr-table-block__source {
+        margin: 6px 0 0;
+        font-size: var(--mr-caption-size);
+        line-height: 1.35;
+        color: var(--color-ink);
+        font-style: italic; /* PDF Source line italic */
+      }
+
+      .mr-footer .perspective-contacts__office strong,
+      .mr-footer .perspective-contacts__stack strong {
+        font-family: var(--font-serif);
+        font-weight: 400;
+      }
+
+      .mr-footer .mr-legal {
+        color: var(--mr-footer-fg);
+      }
+
+      @media (max-width: 768px) {
+        .mr-hero__month {
+          font-size: 20px;
+        }
+        .mr-hero__year {
+          font-size: 24px;
+        }
+      }
     </style>
   </head>
   <body class="family-market-review">
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <!--
-      Continuous document (C.4 / C.6). No page numbers / running footers.
-      Group A: hero title overlay · heat table · chart grid · dark footer (B.7).
-    -->
     <div class="document">
       <header
         class="site-header mr-hero"
         role="banner"
-        style="--mr-hero-image: url('<!-- HERO_IMAGE_PATH -->')"
+        style="
+          --mr-hero-image: url('assets/april-2026-monthly-market-review/images/hero.jpeg');
+        "
       >
         <div class="container mr-hero__inner">
-          <!-- Rare: add class mr-hero--with-logo on header if PDF shows logo on cover -->
-          <a class="mr-hero__logo" href="https://www.mutualtrust.com.au/">
-            <img
-              src="https://www.mutualtrust.com.au/wp-content/themes/mutual_trust/assets/images/logo-m.svg"
-              alt="Mutual Trust"
-              width="160"
-              height="18"
-            />
-          </a>
-          <h1 class="mr-hero__title">
-            <!-- HERO_TITLE e.g. Quarterly Market Review -->
-          </h1>
-          <p class="mr-hero__date"><!-- HERO_DATE e.g. JUNE 2026 --></p>
+          <h1 class="mr-hero__title">Monthly Market Review</h1>
+          <p class="mr-hero__date">
+            <span class="mr-hero__month">APRIL</span>
+            <span class="mr-hero__year">2026</span>
+          </p>
         </div>
       </header>
 
       <main id="main-content" class="site-main" role="main" tabindex="-1">
         <article class="container mr-article">
           <div class="mr-body">
-            <!-- INTRO paragraphs -->
+            <p>
+              Global investment markets rose in April following the
+              deterioration in risk sentiment experienced during March. Easing
+              tensions between the U.S. and Iran, alongside resilient corporate
+              earnings and more stable policy conditions, improved the backdrop
+              for global equity markets.
+            </p>
+            <p>
+              The U.S. Federal Reserve held rates unchanged, although the
+              decision featured an unusually high degree of dissent,
+              highlighting the challenge policymakers face amid persistent
+              inflationary pressures. Global bond markets were broadly steady,
+              with yields moving modestly higher following the volatility
+              experienced in March.
+            </p>
+            <p>
+              U.S. first quarter earnings season commenced in April, with 84% of
+              S&amp;P 500 companies reporting positive earnings per share
+              surprises. U.S. equities responded strongly, with the S&amp;P 500
+              and Nasdaq Composite indices increasing 10.4% and 15.3%
+              respectively.
+            </p>
+            <p>
+              Outside the U.S., European equities advanced, with the Euro Stoxx
+              500 Index rising 4.8%. Japan was a standout performer, with the
+              Nikkei 225 Index surging 16.1%, supported by strong foreign
+              inflows and continued strength in AI-linked semiconductor
+              companies.
+            </p>
+            <p>
+              In Australia, the S&amp;P/ASX 200 Accumulation Index lagged global
+              peers, increasing 2.2%. Gains were tempered later in the month on
+              concerns around higher inflation (reinforced by higher energy
+              prices) and expectations of further monetary policy tightening by
+              the Reserve Bank of Australia.
+            </p>
+            <p>
+              Commodity markets delivered mixed results amid shifting global
+              dynamics. Precious metals retreated – Silver (USD) declined 1.9%
+              and Gold (USD) fell 1.1%. Energy prices diverged, with West Texas
+              Intermediate rising for a fourth consecutive month, up 3.6%, while
+              Brent crude declined 3.7%, reflecting differing regional supply
+              conditions across U.S. and global oil markets. The Australian
+              dollar appreciated 4.4% against the USD in April to 72.0¢ (up from
+              69.0¢ in March).
+            </p>
 
-            <h2><!-- SECTION e.g. Australia --></h2>
-            <!-- ul.mt-list | .mt-list--outdent (June QMR) | .mt-list--inset -->
+            <h2>Australia</h2>
+            <ul class="mt-list">
+              <li>
+                The Australian equity market, as measured by the S&amp;P/ASX 200
+                Accumulation Index, increased 2.2% in April. Over the month,
+                Information Technology was the best performing sector (+13.3%),
+                followed by Real Estate (+8.1%) and Materials (+4.3%).
+                Healthcare (‑8.7%) and Consumer Staples (‑4.1%) lagged.
+              </li>
+              <li>
+                Australian bonds delivered minor gains over the month, with the
+                Bloomberg AusBond Composite Index (AUD) increasing 0.1%.
+              </li>
+              <li>
+                Australian CPI was 4.6% over the 12-months to March (up from
+                3.7% in February). The most significant price rises were in
+                Transport (+8.9%), Housing (+6.5%), and Food and non-alcoholic
+                beverages (+3.1%). Trimmed mean inflation (ex-volatile items)
+                was unchanged at 3.3%.
+              </li>
+              <li>
+                The seasonally-adjusted unemployment rate remained at 4.3% in
+                March. Meanwhile, the Westpac- Melbourne Institute Unemployment
+                Expectations Index rose 9.7% to 147.8 in April (a higher index
+                means more consumers expect unemployment to rise over the year
+                ahead).
+              </li>
+              <li>
+                The Westpac-Melbourne Institute Consumer Sentiment Index fell
+                sharply in April, declining 12.5% to 80.1, returning to its
+                weakest levels since the COVID period. The deterioration
+                highlighted renewed cost‑of‑living pressures, driven largely by
+                a sharp spike in fuel prices and the impact of higher interest
+                rates on household finances.
+              </li>
+              <li>
+                Nationally, residential property prices fell in April,
+                decreasing by 0.1% as measured by the PropTrack Home Price
+                Index. Hobart climbed 0.3%, followed by Brisbane, Adelaide and
+                Perth (+0.2%). Despite this decline, national residential
+                property prices remain 8.5% higher over 12- months.
+              </li>
+            </ul>
 
-            <h2><!-- SECTION e.g. International --></h2>
-            <!-- bullets -->
+            <h2>International</h2>
+            <ul class="mt-list">
+              <li>
+                U.S. equities delivered strong gains in April, with the
+                S&amp;P 500 Index rising 10.4% and the tech-heavy Nasdaq
+                Composite Index advancing 15.3%. Sector performance within the
+                S&amp;P 500 Index was led by Communication Services (+18.4%),
+                followed by Information Technology (+17.4%) and Consumer
+                Discretionary (+11.7%). Energy underperformed (-3.5%) and Health
+                Care declined (-0.6%).
+              </li>
+              <li>
+                U.S. first-quarter earnings season was 63% complete by the end
+                of April, with results broadly positive. According to FactSet,
+                84% of S&amp;P 500 companies reported positive
+                earnings-per-share surprises, while the blended (year-over-year)
+                earnings growth rate of 27.1% is on track to represent the
+                strongest quarterly outcome since Q4 2021.
+              </li>
+              <li>
+                Headline U.S. CPI increased 3.3% in March (up from 2.4% in
+                February). Core CPI, (which excludes volatile food and energy)
+                was below estimates, increasing just 0.2% for the month and 2.6%
+                in the 12-months to March.
+              </li>
+              <li>
+                The Federal Reserve voted to hold policy rates unchanged at its
+                April meeting, maintaining the target range at 3.50% - 3.75%,
+                following an 8-4 split decision within the Federal Open Market
+                Committee. The elevated level of dissent highlighted increasing
+                differences within the Committee as policymakers contend with
+                persistent inflation risks.
+              </li>
+              <li>
+                U.S. 10-year bonds rose modestly, up 5 basis points in April to
+                4.37%. The Bloomberg Global- Aggregate TR Index (AUD) also
+                increased, up 0.3% over the month.
+              </li>
+              <li>
+                The Nikkei 225 Index rose sharply in April, gaining 16.1% over
+                the month, largely reversing March’s sharp losses and taking
+                1-year gains to 64.5%. The Euro Stoxx 600 Index increased 4.8%,
+                while the FTSE 100 Index advanced 2.0%.
+              </li>
+              <li>
+                Emerging market equities posted a strong performance in April,
+                with the MSCI Emerging Markets Index (USD) rising 14.5%. South
+                Korea’s KOSPI Index was a notable standout, gaining 30.6% driven
+                by strong performance in AI-linked semiconductor stocks.
+              </li>
+              <li>
+                The USD Index (the value of the U.S. dollar against a basket of
+                widely recognised, publicly traded currencies) fell 1.9% in
+                April. The Australian dollar closed the month 4.4% higher
+                against the USD, at 72.0¢ (versus 69.0¢ in March).
+              </li>
+            </ul>
 
-            <h2><!-- SECTION e.g. Commodities --></h2>
-            <!-- bullets -->
+            <h2>Commodities</h2>
+            <ul class="mt-list">
+              <li>
+                Commodity markets were mixed in April. Brent Crude declined 3.7%
+                to US$114.01/bbl, while West Texas Intermediate Crude rose 3.6%
+                to US$105.07/bbl, highlighting divergence between global and
+                U.S. oil market dynamics. Copper ($/t) climbed 5.3% and Iron Ore
+                ($/t) rose 1.2%. Precious metals reversed course mid-month to
+                end April lower, with Silver falling 1.9% to US$73.75/oz and
+                Gold declining 1.1% to US$4,617/oz.
+              </li>
+            </ul>
 
-            <!-- Heat table (Global Markets) -->
             <section class="mr-table-block" aria-label="Global Markets">
               <h3 class="mr-table-block__title">
-                <!-- Global Markets – DD Month YYYY -->
+                Global Markets – 30 April 2026
               </h3>
               <div class="mr-table-wrap">
                 <table class="mr-table">
@@ -1130,9 +1314,7 @@
                   </colgroup>
                   <thead>
                     <tr>
-                      <th scope="col" class="mr-table__group">
-                        <!-- Equities -->
-                      </th>
+                      <th scope="col" class="mr-table__group">Equities</th>
                       <th scope="col">CYTD</th>
                       <th scope="col">1 Month</th>
                       <th scope="col">3 Months</th>
@@ -1143,17 +1325,106 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td><!-- Index name --></td>
-                      <td class="is-positive"><!-- +x.x% --></td>
-                      <td class="is-negative"><!-- -x.x% --></td>
-                      <td class="is-positive"><!-- … --></td>
-                      <td class="is-positive"></td>
-                      <td class="is-positive"></td>
-                      <td class="is-positive"></td>
+                      <td>S&P /ASX 200 Accumulation Index (AUD)</td>
+                      <td class="is-positive">0.5%</td>
+                      <td class="is-positive">2.2%</td>
+                      <td class="is-negative">-1.2%</td>
+                      <td class="is-positive">10.1%</td>
+                      <td class="is-positive">9.7%</td>
+                      <td class="is-positive">8.4%</td>
                     </tr>
-                    <!-- Section rows: keep 7 <td> (no colspan) so grid continues — B.6.2 -->
+                    <tr>
+                      <td>S&P/ASX Small Ordinaries Index (AUD)</td>
+                      <td class="is-negative">-8.8%</td>
+                      <td class="is-positive">3.3%</td>
+                      <td class="is-negative">-11.3%</td>
+                      <td class="is-positive">12.5%</td>
+                      <td class="is-positive">5.8%</td>
+                      <td class="is-positive">0.9%</td>
+                    </tr>
+                    <tr>
+                      <td>S&P 500 Index (USD)</td>
+                      <td class="is-positive">5.3%</td>
+                      <td class="is-positive">10.4%</td>
+                      <td class="is-positive">3.9%</td>
+                      <td class="is-positive">29.4%</td>
+                      <td class="is-positive">20.0%</td>
+                      <td class="is-positive">11.5%</td>
+                    </tr>
+                    <tr>
+                      <td>Nasdaq Composite Index (USD)</td>
+                      <td class="is-positive">7.1%</td>
+                      <td class="is-positive">15.3%</td>
+                      <td class="is-positive">6.1%</td>
+                      <td class="is-positive">42.7%</td>
+                      <td class="is-positive">26.7%</td>
+                      <td class="is-positive">12.3%</td>
+                    </tr>
+                    <tr>
+                      <td>Russell 3000 Index (USD)</td>
+                      <td class="is-positive">5.4%</td>
+                      <td class="is-positive">10.1%</td>
+                      <td class="is-positive">3.9%</td>
+                      <td class="is-positive">29.4%</td>
+                      <td class="is-positive">19.7%</td>
+                      <td class="is-positive">10.3%</td>
+                    </tr>
+                    <tr>
+                      <td>FTSE 100 Index (GBP)</td>
+                      <td class="is-positive">4.5%</td>
+                      <td class="is-positive">2.0%</td>
+                      <td class="is-positive">1.5%</td>
+                      <td class="is-positive">22.2%</td>
+                      <td class="is-positive">9.7%</td>
+                      <td class="is-positive">8.3%</td>
+                    </tr>
+                    <tr>
+                      <td>Euro Stoxx 600 (EUR)</td>
+                      <td class="is-positive">3.2%</td>
+                      <td class="is-positive">4.8%</td>
+                      <td class="is-positive">0.0%</td>
+                      <td class="is-positive">15.9%</td>
+                      <td class="is-positive">9.4%</td>
+                      <td class="is-positive">6.9%</td>
+                    </tr>
+                    <tr>
+                      <td>Nikkei 225 (JPY)</td>
+                      <td class="is-positive">17.8%</td>
+                      <td class="is-positive">16.1%</td>
+                      <td class="is-positive">11.2%</td>
+                      <td class="is-positive">64.5%</td>
+                      <td class="is-positive">27.1%</td>
+                      <td class="is-positive">15.5%</td>
+                    </tr>
+                    <tr>
+                      <td>Hang Seng (HKD)</td>
+                      <td class="is-positive">0.6%</td>
+                      <td class="is-positive">4.0%</td>
+                      <td class="is-negative">-5.9%</td>
+                      <td class="is-positive">16.5%</td>
+                      <td class="is-positive">9.0%</td>
+                      <td class="is-negative">-2.1%</td>
+                    </tr>
+                    <tr>
+                      <td>MSCI Emerging Markets Index (USD)</td>
+                      <td class="is-positive">13.9%</td>
+                      <td class="is-positive">14.5%</td>
+                      <td class="is-positive">4.7%</td>
+                      <td class="is-positive">43.8%</td>
+                      <td class="is-positive">17.9%</td>
+                      <td class="is-positive">3.5%</td>
+                    </tr>
+                    <tr>
+                      <td>MSCI World Ex Australia (AUD)</td>
+                      <td class="is-negative">-2.1%</td>
+                      <td class="is-positive">4.4%</td>
+                      <td class="is-positive">0.7%</td>
+                      <td class="is-positive">15.1%</td>
+                      <td class="is-positive">16.5%</td>
+                      <td class="is-positive">13.0%</td>
+                    </tr>
                     <tr class="mr-table__section">
-                      <td><!-- Bonds --></td>
+                      <td>Bonds</td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -1161,110 +1432,203 @@
                       <td></td>
                       <td></td>
                     </tr>
-                    <!-- more rows — class is-positive | is-negative | is-neutral from PDF fill -->
+                    <tr>
+                      <td>Bloomberg AusBond Composite Index (AUD)</td>
+                      <td class="is-negative">-0.3%</td>
+                      <td class="is-positive">0.1%</td>
+                      <td class="is-negative">-0.5%</td>
+                      <td class="is-negative">-0.1%</td>
+                      <td class="is-positive">2.0%</td>
+                      <td class="is-positive">0.0%</td>
+                    </tr>
+                    <tr>
+                      <td>Bloomberg Global Agg Bond Index (AUD)</td>
+                      <td class="is-positive">0.1%</td>
+                      <td class="is-positive">0.3%</td>
+                      <td class="is-negative">-0.1%</td>
+                      <td class="is-positive">2.4%</td>
+                      <td class="is-positive">3.1%</td>
+                      <td class="is-negative">-0.1%</td>
+                    </tr>
+                    <tr class="mr-table__section">
+                      <td>Currency</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>AUD/JPY</td>
+                      <td class="is-positive">7.9%</td>
+                      <td class="is-positive">3.0%</td>
+                      <td class="is-positive">4.6%</td>
+                      <td class="is-positive">23.1%</td>
+                      <td class="is-positive">7.7%</td>
+                      <td class="is-positive">6.0%</td>
+                    </tr>
+                    <tr>
+                      <td>AUD/USD</td>
+                      <td class="is-positive">7.9%</td>
+                      <td class="is-positive">4.4%</td>
+                      <td class="is-positive">3.4%</td>
+                      <td class="is-positive">12.5%</td>
+                      <td class="is-positive">2.9%</td>
+                      <td class="is-negative">-1.4%</td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
-              <p class="mr-table-block__source"><!-- Source: Bloomberg … --></p>
+              <p class="mr-table-block__source">
+                Source: Bloomberg 30 April 2026 (All returns are in local
+                currency terms.)
+              </p>
             </section>
 
-            <!-- Chart grid: one <figure> per panel (not one giant composite) -->
             <div class="mr-chart-grid" aria-label="Market charts">
               <figure class="mr-chart">
-                <img src="<!-- CHART_1 -->" alt="<!-- CHART_1_ALT -->" />
-                <figcaption class="source"><!-- Source: … --></figcaption>
+                <img
+                  src="assets/april-2026-monthly-market-review/images/chart-01-equity-performance.png"
+                  alt="Global Equity Market Performance, April 2026 — S&amp;P 500, NASDAQ Composite and S&amp;P/ASX 200"
+                />
               </figure>
               <figure class="mr-chart">
-                <img src="<!-- CHART_2 -->" alt="<!-- CHART_2_ALT -->" />
-                <figcaption class="source"><!-- Source: … --></figcaption>
+                <img
+                  src="assets/april-2026-monthly-market-review/images/chart-02-equity-valuations.png"
+                  alt="Global Equity Valuations (1-year forward P/E) for S&amp;P 500 and S&amp;P/ASX 200"
+                />
               </figure>
               <figure class="mr-chart">
-                <img src="<!-- CHART_3 -->" alt="<!-- CHART_3_ALT -->" />
-                <figcaption class="source"><!-- Source: … --></figcaption>
+                <img
+                  src="assets/april-2026-monthly-market-review/images/chart-03-inflation.png"
+                  alt="U.S., Australia and German headline inflation to March 2026"
+                />
               </figure>
               <figure class="mr-chart">
-                <img src="<!-- CHART_4 -->" alt="<!-- CHART_4_ALT -->" />
-                <figcaption class="source"><!-- Source: … --></figcaption>
+                <img
+                  src="assets/april-2026-monthly-market-review/images/chart-04-bond-index.png"
+                  alt="U.S. and Australian 10-year government bond index to April 2026"
+                />
               </figure>
               <figure class="mr-chart">
-                <img src="<!-- CHART_5 -->" alt="<!-- CHART_5_ALT -->" />
-                <figcaption class="source"><!-- Source: … --></figcaption>
+                <img
+                  src="assets/april-2026-monthly-market-review/images/chart-05-pmis.png"
+                  alt="Manufacturing PMIs for Australia, US and Europe"
+                />
               </figure>
               <figure class="mr-chart">
-                <img src="<!-- CHART_6 -->" alt="<!-- CHART_6_ALT -->" />
-                <figcaption class="source"><!-- Source: … --></figcaption>
+                <img
+                  src="assets/april-2026-monthly-market-review/images/chart-06-aud-usd.png"
+                  alt="AUD/USD FX rates to April 2026"
+                />
               </figure>
             </div>
 
             <p class="mr-cta">
-              <!-- Please contact your Advisor… -->
-              <a href="<!-- OUTLOOK_URL -->">click here</a>
-              <!-- …for a copy of our latest Quarterly Outlook. -->
+              Please contact your Advisor for further details or
+              <a
+                href="https://www.mutualtrust.com.au/wp-content/uploads/2026/03/March-2026-Quarterly-Outlook-Equities-the-tug-of-war.pdf"
+                >click here</a
+              >
+              for a copy of our latest Quarterly Outlook.
             </p>
 
-            <!-- Optional cadence / notice box — omit if PDF has none -->
-            <!--
             <p class="mr-note">
-              <strong>Please note:</strong> …
+              <strong>Please note:</strong> Moving forward, Mutual Trust will
+              issue these regular market reviews on quarterly basis. The next
+              market review will be published in July 2026.
             </p>
-            -->
           </div>
         </article>
       </main>
 
-      <!-- Dark footer — contacts + disclaimer once (B.5 + B.7 A) -->
       <footer class="mr-footer" role="contentinfo">
         <div class="container">
-          <a class="mr-footer__logo" href="https://www.mutualtrust.com.au/">
-            <img
-              src="https://www.mutualtrust.com.au/wp-content/themes/mutual_trust/assets/images/logo-m.svg"
-              alt="Mutual Trust"
-              width="160"
-              height="18"
-            />
-          </a>
-
           <div class="perspective-contacts" aria-label="Office contacts">
             <p class="perspective-contacts__office">
-              <strong><!-- CITY_HQ --></strong>
-              <!-- ADDRESS --><br />
-              T <a href="tel:<!-- TEL_RAW -->"><!-- TEL_DISPLAY --></a>
+              <strong>Melbourne</strong>
+              Level 32<br />
+              360 Collins Street<br />
+              Melbourne VIC 3000<br />
+              T <a href="tel:+61396059500">+61 3 9605 9500</a>
             </p>
             <div class="perspective-contacts__col">
               <p class="perspective-contacts__stack">
-                <strong><!-- CITY --></strong>
-                <a href="tel:<!-- TEL_RAW -->"><!-- TEL_DISPLAY --></a>
+                <strong>Sydney</strong>
+                <a href="tel:+61292247600">+61 2 9224 7600</a>
               </p>
               <p class="perspective-contacts__stack">
-                <strong><!-- CITY --></strong>
-                <a href="tel:<!-- TEL_RAW -->"><!-- TEL_DISPLAY --></a>
+                <strong>Brisbane</strong>
+                <a href="tel:+61721151100">+61 7 2115 1100</a>
               </p>
             </div>
             <div class="perspective-contacts__col">
               <p class="perspective-contacts__stack">
-                <strong><!-- CITY --></strong>
-                <a href="tel:<!-- TEL_RAW -->"><!-- TEL_DISPLAY --></a>
+                <strong>Adelaide</strong>
+                <a href="tel:+61870823900">+61 8 7082 3900</a>
               </p>
               <p class="perspective-contacts__stack">
-                <strong><!-- CITY --></strong>
-                <a href="tel:<!-- TEL_RAW -->"><!-- TEL_DISPLAY --></a>
+                <strong>Perth</strong>
+                <a href="tel:+61892307788">+61 8 9230 7788</a>
               </p>
             </div>
             <div class="perspective-contacts__meta">
               <p>
-                <a href="mailto:<!-- EMAIL -->"><!-- EMAIL --></a>
+                <a href="mailto:info@mutualtrust.com.au"
+                  >info@mutualtrust.com.au</a
+                >
               </p>
               <p>
-                <a href="<!-- WEBSITE_URL -->"><!-- WEBSITE_DISPLAY --></a>
+                <a href="https://www.mutualtrust.com.au/"
+                  >www.mutualtrust.com.au</a
+                >
               </p>
-              <p><!-- ABN / AFSL --></p>
+              <p>ABN: 71 004 285 330&nbsp;&nbsp;AFSL: 234590</p>
             </div>
           </div>
 
           <div class="mr-legal">
-            <p><!-- LIABILITY + © line — copy from PDF --></p>
-            <p><!-- Long disclaimer — copy from PDF --></p>
-            <p><!-- Acknowledgement of Country — if PDF has it --></p>
+            <p>
+              Liability limited by a scheme approved under Professional
+              Standards Legislation. For participating members (other than for
+              the acts or omissions of Australian Financial Services Licensees).
+              Copyright © 2026 Mutual Trust Pty Ltd.
+            </p>
+            <p>
+              This information has been prepared in Australia by Mutual Trust
+              Pty Ltd (ACN 004 285 330) to provide general information only. The
+              information is confidential and may not be reproduced without
+              permission. While care has been taken in its preparation, no
+              representation is made as to the accuracy, reliability or
+              completeness of the contents of this information including any
+              estimates or projections about anticipated future events.
+              Information regarding past performance of investments or
+              theoretical investments is not a reliable indicator of future
+              performance. Any forward-looking statements involve subjective
+              judgments and analysis and are subject to significant
+              uncertainties, risks, and contingencies, many of which may be
+              unknown. Mutual Trust Pty Ltd expressly disclaims all liability
+              for any claims relating to the contents of this information
+              (including any errors or omissions) or in relation to any written
+              or oral communications transmitted to the recipient in the course
+              of its evaluation. This information does not constitute
+              investment, financial, tax or legal advice and is not to be
+              considered as a recommendation that the recipient make any
+              investment. Each recipient should conduct and rely upon its own
+              investigation and analysis of the information and should seek
+              professional advice before taking any action. The Mutual Trust
+              Group and its officers, employees and associates may have a
+              material interest in some of the investments mentioned in this
+              document and has established procedures to identify and manage
+              potential or actual conflicts of interest.
+            </p>
+            <p>
+              Mutual Trust acknowledges and pays respect to the past and present
+              Traditional Custodians and Elders of this nation and the
+              continuation of cultural, spiritual and educational practices of
+              Aboriginal and Torres Strait Islander peoples.
+            </p>
           </div>
         </div>
       </footer>

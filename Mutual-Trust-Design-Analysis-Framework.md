@@ -184,10 +184,11 @@ _Phần này giữ nguyên giá trị phân tích thực tế từ PDF. Không d
 
 Sau khi đọc toàn bộ 7 PDF, chúng chia thành 3 nhóm rõ rệt theo mục đích và cấu trúc trình bày, không phải 7 thiết kế khác nhau:
 
-**Nhóm A — Market Review** (báo cáo thị trường định kỳ, nhiều số liệu)
+**Nhóm A — Market Review** (báo cáo thị trường định kỳ, **nhiều số liệu**: bullet + **heat table** + **lưới chart**)
 
 - `June_2026_Quarterly_Market_Review.pdf` (3 trang)
 - `October2025MonthlyMarketReview.pdf` (3 trang)
+- `April_2026_Monthly_Market_Review.pdf` (3 trang) — cùng pattern table + 6 chart; tham chiếu build `website/april-2026-monthly-market-review.html`
 
 **Nhóm B — Quarterly Outlook** (bài phân tích chiến lược dài, nhiều phần)
 
@@ -251,7 +252,7 @@ _Phần đo geometry trang PDF — hữu ích cho visual QA / content width. **K
 - **Hero image orientation / mirror (bắt buộc kiểm tra):** trước khi dùng ảnh extract làm `background-image`, đọc **transform matrix** của XObject trên trang (`get_image_info` / tương đương). Nếu `scaleX` **âm** (PDF lật ngang ảnh), asset raw sẽ **ngược** so với bản in — phải `FLIP_LEFT_RIGHT` file ảnh (hoặc tương đương) rồi mới calibrate `background-position`. Ví dụ _Double Death Tax Trap_: hoa lệch **phải** trên PDF nhưng raw JPEG lệch trái cho đến khi flip. **Không** chỉ đẩy `background-position` để “che” lỗi mirror. Sau khi đúng hướng, mới tinh chỉnh position/% để subject khớp crop PDF.
 - **Hero overlay / scrim (rule chung — bắt buộc kiểm tra):** khi PDF đặt **logo trắng hoặc chữ trắng** lên ảnh, nguồn thường có lớp tối (flat opacity hoặc gradient). Ví dụ _Protecting Intergenerational Wealth_: fill đen phủ toàn hero, **opacity ≈ 0.25**. HTML **phải** tái tạo overlay tương đương — **không** dùng ảnh crop trần nếu logo/chữ trên HTML kém tương phản hơn PDF. Chỉ bỏ overlay khi PDF thật sự không có _và_ contrast vẫn đạt. Kiểm tra lại contrast trên **mobile** sau khi đổi tỉ lệ hero.
 - **Logo Mutual Trust** — URL chính thức ở **A.5**; chọn `logo-m.svg` (ngang) hoặc `MT-Logo.svg` (stacked) đúng như PDF. SVG mặc định trắng (hero/nền tối); trên nền trắng đảo sang mực tối.
-- Biểu đồ: **tiêu đề chart + "Source: …"** ngay dưới, tối giản, không tô nền.
+- Biểu đồ nhóm A: xem **B.6.2** (heat table) và **B.7 / B.7.2** (lưới chart) — không gộp 6 panel thành một ảnh lớn.
 
 ## B.5 Footer / Disclaimer (recurring — mọi PDF)
 
@@ -405,21 +406,56 @@ Template tham chiếu:
 | Nhóm | Footer web |
 | --- | --- |
 | **C — Perspective** | Markup B.5.2; nền trắng; disclaimer ngắn; không back cover đen |
-| **A — Market Review** | Cùng nội dung legal + contacts; thường dải nền tối cuối trang; có thể có `logo-m.svg` — match PDF |
+| **A — Market Review** | Dải nền tối (`.mr-footer`); contacts B.5; **email/www thường có gạch chân trắng** (hairline PDF) — xem B.5.6; city Baskerville; body/legal Proxima Regular trắng; logo chỉ khi PDF có |
 | **B — Outlook** | Back cover tối: logo stacked / tagline *"Helping families achieve what matters most."* + disclaimer dài; byline PDF đưa vào article, không chạy footer |
 
 Số điện thoại / địa chỉ / ABN·AFSL lấy từ **PDF đang convert** (bảng trên chỉ là skeleton — luôn đối chiếu nguồn).
+
+### B.5.6 Footer links — type Market Review (dark band)
+
+Đo PDF (April 2026 MMR và cùng family): trên nền đen, cột meta:
+
+| Phần | Font | Size (PDF) | Underline |
+| ---- | ---- | ---------- | --------- |
+| City labels (Melbourne…) | Baskerville | ~9pt | Không |
+| Địa chỉ / SĐT (`tel:`) | Proxima Nova Regular | ~6pt | **Không** |
+| `info@…` / `www.…` | Proxima Nova Regular | ~6pt | **Có** — hairline trắng dưới chữ (drawing fill trắng) |
+| ABN / AFSL | Proxima Nova Regular | ~6pt | Không |
+| Legal / AoC | Proxima Nova Regular | ~6pt | Không (thường **trắng đầy đủ**, không xám mờ) |
+
+**CSS (`template-market-review.html`):**
+
+```css
+.mr-footer .perspective-contacts a { text-decoration: none; /* tel + default */ }
+.mr-footer .perspective-contacts__meta a {
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  font-family: var(--font-sans);
+  font-weight: 400;
+}
+```
+
+**Không:** bỏ underline email/www trên footer tối MMR; dùng bold/sans cho city khi PDF là Baskerville; để `a:hover` là lý do duy nhất có underline (base phải đã underline nếu PDF có).
+
+**Cảnh báo:** rule toàn cục `p { font-size: var(--mr-body-size) }` sẽ làm email/www/ABN phình cỡ body — phải ` .mr-footer .perspective-contacts p { font-size: inherit; }`.
+
+Perspective (nhóm C) footer trắng vẫn thường **không** underline meta — đừng copy rule MMR sang Perspective.
 
 ## B.6 Màu quan sát trong PDF (không thuộc Style Guide palette)
 
 PDF export từng lệch nhẹ quanh Ochre (`#D17B19`, `#D17A18`, `#CBA020`, `#C99329`…) và vài tông xám/đen phụ (`#1B1B1F`, `#8D8D90`, `#E0E4EB`…). **Khi chuẩn hoá: map về 5 mã Style Guide** (mục A.3).
 
-**Semantic colours chỉ thấy ở bảng Market Review** (giữ khi build data table — PDF-specific, không có trong Figma Colour):
+### B.6.1 Semantic colours — chỉ bảng Market Review (nhóm A)
 
-| Vai trò       | HEX quan sát | Ghi chú                             |
-| ------------- | ------------ | ----------------------------------- |
-| Dữ liệu dương | `#00675A`    | Xanh rêu                            |
-| Dữ liệu âm    | `#822333`    | Đỏ mận — thay đỏ/xanh lá tiêu chuẩn |
+Giữ khi build data table — PDF-specific, không có trong Figma Colour:
+
+| Vai trò       | HEX quan sát | Ghi chú                                                             |
+| ------------- | ------------ | ------------------------------------------------------------------- |
+| Dữ liệu dương | `#00675A`    | Xanh rêu — nền cell + chữ trắng                                     |
+| Dữ liệu âm    | `#822333`    | Đỏ mận — nền cell + chữ trắng                                       |
+| Link / title  | `#D17B19`    | Thường dùng cho tiêu đề bảng "Global Markets…", nhãn Equities/Bonds/Currency, CTA `click here` — map Ochre Style Guide nếu gần |
 
 ```
 /* PDF-specific semantic — chỉ data table Market Review */
@@ -427,18 +463,276 @@ PDF export từng lệch nhẹ quanh Ochre (`#D17B19`, `#D17A18`, `#CBA020`, `#C
 --color-negative: #822333;
 ```
 
+Hầu hết file nhóm A chỉ dùng **hai** fill phẳng (không gradient intensity theo độ lớn %). Sample fill dưới từng ô % trên PDF trước khi gán class — đừng suy đoán từ số nếu PDF để ô trắng.
+
+### B.6.2 Heat table "Global Markets" — type Market Review (bắt buộc nhóm A)
+
+Đặc trưng **type market-review** (`family-market-review` / `website/template-market-review.html`): bảng hiệu suất rộng — thường **7 cột** (tên chỉ số + CYTD / 1 Month / 3 Months / 1 Year / 3 Years (p.a.) / 5 Years (p.a.)), section **Equities → Bonds → Currency**.
+
+Tham chiếu visual đã chốt (PDF April 2026 MMR + cùng family QMR/MMR): **lưới đen đầy đủ**, ô heat **khít tới border** — không khoảng trắng / “pill” giữa các ô màu (đây là lỗi HTML hay gặp khi `border: none` + `border-top` mờ + cột bị `width: 100%` giãn).
+
+#### Quy tắc desktop (khớp PDF)
+
+| Yếu tố | Quy tắc |
+| ------ | ------- |
+| Markup | `.mr-table-block` > title + `.mr-table-wrap` > `table.mr-table` + `<colgroup>` |
+| Tiêu đề bảng | Sans (Proxima), Ochre/`#D17B19` (vd. `Global Markets – 30 April 2026`) — **không** Baskerville trừ khi PDF dùng serif |
+| Section | `Equities` = `th.mr-table__group` ở thead cột 1; `Bonds` / `Currency` = `tr.mr-table__section` với **đủ 7 `<td>`** (ô số để trống, vẫn có border). **Cấm** `colspan="7"` (phá lưới) |
+| Grid | Mọi `th`/`td`: `border: 1px solid #000`; table: `border-collapse: collapse; border-spacing: 0`. PDF vẽ hairline đen ngang + dọc quanh mọi ô |
+| Heat | Class trên **`<td>`**: `.is-positive` (`#00675A` + chữ trắng), `.is-negative` (`#822333` + chữ trắng). Background phủ **cả ô tới mép border**; padding ~**2–4px**; text-align center |
+| 0.0% | Theo fill PDF — April 2026: teal + trắng (`.is-positive`). Chỉ `.is-neutral` (nền trắng, chữ đen) khi PDF thật sự không tô |
+| Cột | `table-layout: fixed`; `col.mr-table__col-label` ~**38%**; `col.mr-table__col-num` ~**10.333%** mỗi cột (PDF ≈ 188pt label + 6× ~50–57pt). Tránh cột tên ~50% làm khối số “lỏng” / trông như có gutter |
+| Tên chỉ số | Cột 1: trái, nền trắng, mực đen; `white-space: nowrap` khi desktop cho phép |
+| Source | `.mr-table-block__source` dưới bảng; `font-style: italic` khi PDF italic |
+| Độ rộng | `width: 100%` + `min-width: ~640px` trong wrap — desktop đủ 7 cột như PDF |
+
+**Không:** zebra, sticky header giả, shadow/card, `border-spacing > 0`, chỉ `border-top` xám nhạt, nền heat trên `<span>` bên trong ô, đổi sang xanh lá/đỏ dashboard.
+
+#### Markup chuẩn (template)
+
+```html
+<section class="mr-table-block" aria-label="Global Markets">
+  <h3 class="mr-table-block__title">Global Markets – <!-- date --></h3>
+  <div class="mr-table-wrap">
+    <table class="mr-table">
+      <colgroup>
+        <col class="mr-table__col-label" />
+        <col class="mr-table__col-num" /><!-- ×6 -->
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col" class="mr-table__group">Equities</th>
+          <th scope="col">CYTD</th>
+          <th scope="col">1 Month</th>
+          <th scope="col">3 Months</th>
+          <th scope="col">1 Year</th>
+          <th scope="col">3 Years<br />(p.a.)</th>
+          <th scope="col">5 Years<br />(p.a.)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><!-- Index --></td>
+          <td class="is-positive">0.5%</td>
+          <td class="is-negative">-1.2%</td>
+          <!-- … -->
+        </tr>
+        <tr class="mr-table__section">
+          <td>Bonds</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <!-- Currency section: same 7-cell pattern -->
+      </tbody>
+    </table>
+  </div>
+  <p class="mr-table-block__source">Source: Bloomberg <!-- … --></p>
+</section>
+```
+
+#### CSS chuẩn (rút từ `template-market-review.html` — giữ đồng bộ khi sửa template)
+
+```css
+.mr-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  font-family: var(--font-sans);
+  font-size: var(--mr-table-cell-size);
+  line-height: 1.25;
+  background: #fff;
+}
+.mr-table col.mr-table__col-label { width: 38%; }
+.mr-table col.mr-table__col-num { width: 10.333%; }
+.mr-table th,
+.mr-table td {
+  padding: 2px 4px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #000; /* full grid — cells abut */
+  background: #fff;
+  box-sizing: border-box;
+}
+.mr-table th:first-child,
+.mr-table td:first-child {
+  text-align: left;
+  padding-left: 6px;
+  white-space: nowrap;
+}
+.mr-table thead th.mr-table__group {
+  color: var(--mr-table-title-color, #d17b19);
+  text-align: left;
+}
+.mr-table .is-positive {
+  background: var(--color-positive); /* #00675A */
+  color: #fff;
+  text-align: center;
+}
+.mr-table .is-negative {
+  background: var(--color-negative); /* #822333 */
+  color: #fff;
+  text-align: center;
+}
+.mr-table .is-neutral {
+  background: #fff;
+  color: #000;
+  text-align: center;
+}
+.mr-table tr.mr-table__section td {
+  background: #fff;
+  color: var(--mr-table-title-color, #d17b19);
+  text-align: left;
+  padding: 4px 6px;
+  border: 1px solid #000;
+}
+.mr-table-block__source {
+  margin: 6px 0 0;
+  font-size: var(--mr-caption-size);
+  font-style: italic; /* when PDF italic */
+}
+```
+
+#### Sai lệch đã sửa (đừng tái phạm)
+
+| HTML sai | PDF đúng |
+| -------- | -------- |
+| `border: none` + `border-top: 1px solid rgba(0,0,0,.06)` | Lưới đen đủ cạnh mọi ô |
+| Ô heat trông như khối rời / gutter trắng | Nền màu sát border; `border-spacing: 0` |
+| `colspan="7"` cho Bonds/Currency | 7 ô riêng, giữ cột dọc |
+| Cột tên quá rộng (~half table) | ~38% / ~10.3% qua `colgroup` |
+| Source roman mặc định | Italic nếu PDF italic |
+
+#### QA desktop bảng (trước khi responsive)
+
+1. So side-by-side với trang bảng PDF: lưới đen liên tục, không “ô nổi”.
+2. Equities / Bonds / Currency đúng chỗ + màu Ochre.
+3. Mọi ô % có class đúng fill PDF; chữ trắng trên teal/maroon.
+4. Source một dòng dưới bảng.
+
+### B.6.3 Heat table — mobile / tablet (responsive thân thiện)
+
+Desktop fidelity trước (C.6.10). Trên viewport hẹp:
+
+1. **Giữ bảng thật** (`<table>` + lưới đen + heat) — không card-stack từng chỉ số.
+2. `.mr-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }` — scroll ngang **cục bộ**; `document.scrollWidth` không vượt viewport.
+3. Giữ `min-width` trên `.mr-table` để mật độ cột giống desktop khi vuốt.
+4. Cho phép giảm `--mr-table-cell-size` nhẹ; heat + chữ trắng đủ contrast; grid vẫn `1px solid #000`.
+5. Tuỳ chọn: sticky cột tên (`position: sticky; left: 0; background: #fff; z-index: 1`) — không bắt buộc.
+6. QA: vuốt hết CYTD…5Y; section + source còn đủ; không mất màu heat.
+
 ## B.7 Biến thể theo nhóm tài liệu
 
 ### Nhóm A — Market Review
 
-- Trang bìa: hero cao ~150–200pt, **tiêu đề 2 dòng overlay trực tiếp lên ảnh** (serif lớn + caps nhỏ hơn), **không có logo trên ảnh bìa** — logo chỉ trong footer.
-- Thân bài dày hơn (PDF ~9–10pt) vì nhiều bullet + bảng.
-- Có **bảng dữ liệu tô màu theo giá trị** (xanh rêu = dương, mận đỏ = âm) — đặc trưng nhóm này.
-- Trang cuối: **lưới 6 biểu đồ (2 cột × 3 hàng)**.
-- Disclaimer trong dải nền tối cuối trang nội dung — **không** tách back cover riêng.
+- Trang bìa: hero cao ~150–200pt (vd. April 2026 MMR ≈ **184pt**), **title overlay** trên ảnh (Baskerville lớn; dòng tháng/năm caps — đôi khi **hai cỡ** trong một dòng, vd. APRIL 21pt + 2026 26pt), **không logo trên hero** trừ khi PDF có.
+- **Vị trí chữ hero** — bắt buộc khớp PDF (**B.7.1**): cùng mép trái với thân bài; pad-top theo y đo được — **không** dùng `5vw` gutter làm lệch cột.
+- **Heat table** — bắt buộc khớp PDF (**B.6.2**): lưới đen đầy đủ, ô heat khít border, `colgroup`, không `colspan` section.
+- **Spacing** — dense rhythm theo PDF (**B.7.3**): token `--mr-para-gap` / `--mr-section-gap-*` / `--mr-chart-block-gap-*`; không dùng spacing Perspective rộng.
+- Scrim: đo opacity/fill PDF (vd. xám-đen ~**0.65**) — không để chữ trắng trên ảnh sáng.
+- Thân bài dày hơn (PDF ~9–10pt) vì nhiều bullet + bảng; list thường **Flush** (B.9).
+- **Hai khối số liệu đặc trưng** (bắt buộc xử lý đúng — xem B.6.2–B.6.3 và B.7.2):
+  1. **Heat table** "Global Markets" (ô tô màu dương/âm)
+  2. **Lưới 6 chart** (2×3 desktop → stack mobile)
+- CTA / note (nếu PDF có): vd. `click here` màu `#D17B19` không bold giả; note box nền xám nhạt (`#EAEFF1` / gần Light Grey) — match PDF, không invent panel khác.
+- Footer: dải **nền tối** + contacts B.5 + legal; email/www **underline trắng** + Proxima Regular (B.5.6); city Baskerville; logo footer **chỉ khi PDF có**.
 
 **Template HTML tái sử dụng:** `website/template-market-review.html`  
-Token `--mr-*`; class `family-market-review`. Khi convert PDF cụ thể: copy template → override geometry/type từ đo PDF (C.6); điền heat table / chart panels / dark footer theo B.5 + checklist B.5.4. Mobile: hero nới tỉ lệ (B.4); contacts 2 cột (B.5).
+Token `--mr-*` + geometry (B.7.1) + spacing (B.7.3); class `family-market-review`. Convert: copy template → đo PDF → override tokens → điền heat table + 6 chart + dark footer (B.5.4). Mobile: lề trái/phải `--gutter: 20px` như Perspective (B.7.1); hero nới tỉ lệ (B.4); table scroll-x (B.6.3); chart stack (B.7.2); contacts 2 cột (B.5).
+
+### B.7.1 Hero overlay placement (nhóm A) — desktop khớp PDF
+
+Title/date nằm **trên ảnh**. Sai lệch thường gặp: chữ quá cao / lề trái hẹp hơn body (do `clamp(..., 5vw, ...)`).
+
+**Đo trên PDF (pt), cùng hệ toạ độ trang:**
+
+| Token | Đại lượng | Ví dụ April 2026 MMR |
+| ----- | --------- | -------------------- |
+| `--mr-page-w-pt` | Chiều rộng trang | `594.96` |
+| `--mr-content-x-pt` | `x0` của title **và** dòng body đầu | `85.08` (phải trùng) |
+| `--mr-content-x-right-pt` | lề phải = `pageW − body/table x1` (thường **hẹp hơn** trái) | April ≈ `55.28` (không pad đối xứng 85 — cột sẽ hẹp, text wrap sớm, bảng scroll) |
+| `--mr-hero-title-y-pt` | `y0` mép trên title | `55.28` |
+| `--mr-hero-aspect` | W trang / H dải hero | `594.96 / 183.78` |
+
+**CSS (desktop) — trong template:**
+
+```css
+.container {
+  padding-left: max(20px, calc(100% * var(--mr-content-x-pt) / var(--mr-page-w-pt)));
+  padding-right: max(20px, calc(100% * var(--mr-content-x-right-pt, var(--mr-content-x-pt)) / var(--mr-page-w-pt)));
+}
+.mr-hero__inner {
+  padding-top: max(16px, calc(100% * var(--mr-hero-title-y-pt) / var(--mr-page-w-pt)));
+}
+```
+
+`padding-%` tính theo **chiều ngang** containing block (= shell/hero width) → khi `--page-max` = khổ PDF, offset px = `pt × 96/72`, khớp bản in. Heat table desktop: `min-width: 0` + `overflow-x: visible` (khớp bề rộng cột); chỉ mobile mới `min-width` + scroll trong `.mr-table-wrap`.
+
+**QA desktop (bắt buộc):**
+
+1. Cạnh trái title = cạnh trái đoạn body đầu (một cột dọc).
+2. Khoảng từ mép trên hero → mép trên title ≈ `title_y / band_H` chiều cao hero (không dính sát top, không “treo” giữa band nếu PDF không vậy).
+3. Date sát dưới title (`--mr-date-gap` thường ~0); nếu PDF hai cỡ (APRIL/2026) dùng `.mr-hero__month` / `.mr-hero__year`.
+4. Cột nội dung đủ rộng để wrap giống PDF (đo `x1` body/table — **không** pad phải = pad trái nếu PDF lệch); bảng Global Markets **không** scroll ngang trên desktop.
+5. **Desktop:** **không** dùng `padding-inline: clamp(20px, 5vw, …)` cho cột nhóm A — dùng `--mr-content-x-pt` / `--mr-content-x-right-pt`.
+
+**Mobile (≤768px) — lề trái/phải = Perspective:**
+
+- `.container { padding-left/right: var(--gutter) }` với `--gutter: 20px` — **cùng** `template-perspective.html`.
+- **Không** giữ `calc(100% * --mr-content-x-* / --mr-page-w-pt)` trên mobile (shell hẹp → pad ~36–56px, lệch Perspective).
+- Hero title cùng mép body nhờ chung `.container`; nới `aspect-ratio` / `--mr-hero-pad-top` (B.4).
+
+### B.7.2 Chart grid nhóm A — desktop giống PDF, mobile dễ đọc
+
+PDF thường đặt **6 panel** cùng một trang (Global Equity Performance / Valuations / Inflation / Bond Index / PMIs / AUD-USD…). Mỗi panel gồm: title + subtitle/date, plot (trục Y đôi khi **mirror trái+phải**), legend, `Source: LSEG Datastream` (hoặc tương đương).
+
+| Yếu tố           | Desktop (khớp PDF)                                                                                          | Mobile / tablet                                                                 |
+| ---------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Asset            | **Tách 6 ảnh** (clip từng panel) — `chart-01` … `chart-06` dưới `assets/<slug>/images/`                     | Cùng 6 ảnh                                                                      |
+| Layout           | CSS grid **2 cột × 3 hàng** (`.mr-chart-grid`) — cùng thứ tự đọc PDF (trái→phải, trên→dưới)               | **1 cột**, full content-width; `order` giữ thứ tự PDF                           |
+| Composite        | **Cấm** xuất một PNG/JPEG gộp 6 chart rồi `img` co nhỏ trên mobile (chữ trục/legend không đọc được)         | —                                                                               |
+| Source / title   | Nếu đã nằm **trong** ảnh clip → **không** lặp figcaption trùng; nếu tách text ngoài ảnh → caption theo PDF | Giữ như desktop                                                                 |
+| Gap              | `--mr-chart-gap` đo khoảng gutter PDF giữa panel                                                            | Gap dọc đủ để không dính hai chart                                              |
+| Kích thước       | Mỗi panel co trong nửa content column; `max-width: 100%; height: auto`                                      | Full width cột; tránh fixed height kéo méo tỉ lệ                                |
+| QA               | So side-by-side với trang chart PDF: đủ 6, đúng thứ tự, không mất source                                    | Mỗi chart đọc được trục/legend; không horizontal page scroll                    |
+
+Thứ tự đọc mẫu (April 2026 MMR — xác nhận lại từng PDF):
+
+1. Global Equity Market Performance  
+2. Global Equity Valuations  
+3. U.S., Aust & German Headline Inflation  
+4. U.S. & Aust 10 Yr Government Bond Index  
+5. Manufacturing PMIs  
+6. AUD/USD FX Rates  
+
+### B.7.3 Spacing rhythm — type Market Review (text + images)
+
+Nhóm A **dày hơn** Perspective: leading và gap giữa khối nhỏ. Sai lệch hay gặp: dùng `--space-3` (16px) / `--space-5` (32px) / `--space-6` (48px) làm mọi margin → trang “thoáng” quá so với PDF.
+
+**Đo PDF (pt → px @ 96dpi ≈ ×4/3).** Ví dụ April 2026 MMR:
+
+| Junction | PDF (pt) | Token web (gợi ý) | Ghi chú |
+| -------- | -------- | ----------------- | ------- |
+| Hero bottom → first body | ~14.4 | `--mr-band-gap: 19px` | `.mr-article { padding-top }` |
+| Within-para leading | ~12.2 / 10 | `--mr-body-lh: 1.22–1.28` | Không dùng 1.5 Style Guide body |
+| Body para → para | ~6.5 | `--mr-para-gap: 9px` | `.mr-body > p` margin-bottom |
+| Body/list → h2 | ~5–6 | `--mr-section-gap-before: 10px` | Margin collapse với para/list dưới |
+| h2 → list/body | ~3–4 | `--mr-section-gap-after: 6px` | |
+| Bullet item → item | ~6 | `--mr-list-item-gap: 8px` | `li:last-child { margin-bottom: 0 }` |
+| After list block | ~6–10 | `--mr-list-block-gap: 10px` | |
+| Before/after heat table | ~6–12 | `--mr-table-block-gap: 12px` | |
+| Table → chart grid | (page break trên PDF) | `--mr-chart-block-gap-before: 28px` | Continuous web — vừa đủ tách khối |
+| Chart panel gutter | row ~6 / col ~48 | `--mr-chart-gap` + `--mr-chart-gap-col` | |
+| Charts → CTA | ~18 | `--mr-chart-block-gap-after: 24px` | |
+| CTA → note | ~24 | `--mr-cta-gap-after: 24px` | |
+| Note → footer | ~17 | `--mr-note-gap-after: 24px` + footer pad | |
+| Article → footer | — | `--mr-article-pad-bottom: 8px` | Tránh cộng dồn với footer `padding-top` |
+
+**Template:** `website/template-market-review.html` — mọi margin khối article/chart/CTA/note dùng `--mr-*-gap*`, **không** hard-code `--space-5/6` cho rhythm nội dung.
+
+**Cảnh báo CSS:** `.mr-cta` / `.mr-note` thường là `<p>` trong `.mr-body` — phải dùng `.mr-body > p.mr-cta` / `.mr-body > p.mr-note` (hoặc specificity tương đương) kẻo bị `.mr-body > p { margin-bottom: var(--mr-para-gap) }` ghi đè gap CTA/note.
+
+**QA:** so PDF vs HTML — mật độ đoạn intro, khoảng h2 Australia/International, gap trên/dưới lưới chart và CTA; không để “lỗ” 32–48px giữa mọi section trừ khi PDF có clearspace tương đương.
 
 ### Nhóm B — Quarterly Outlook
 
@@ -462,7 +756,7 @@ Token `--mr-*`; class `family-market-review`. Khi convert PDF cụ thể: copy t
 
 | File                                | Thành phần độc quyền                                                                                    |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| June 2026 QMR & Oct 2025 MMR        | Bảng "Global Markets" tô màu heat-style theo hiệu suất (2 file dùng chung format)                       |
+| June 2026 QMR, Oct 2025 MMR, April 2026 MMR | Bảng "Global Markets" heat-style + lưới 6 chart (B.6.2 / B.7.2); hero overlay B.7.1; April thêm note quarterly |
 | March 2026 Quarterly Outlook        | Biểu đồ cột ngang "S&P 500 Index Sector Performance"                                                    |
 | June 2026 Quarterly Outlook         | Pie chart "Indicative Mutual Trust asset allocation"; 4 câu hỏi mở đầu dạng numbered list               |
 | Protecting Intergenerational Wealth | Box "Interested in learning more?" + thumbnail podcast + link; H1 xanh xám (biến thể ngoài Style Guide) |
@@ -593,8 +887,8 @@ Khi convert PDF cụ thể: **override** khoảng hero↔content, content↔foot
 1. **Hero/Header** — 2 biến thể layout PDF: (a) title overlay trên ảnh — Market Review (`template-market-review.html`); (b) logo trên ảnh + title tách khối nội dung — Outlook/Insight (`template-perspective.html`). Logo: URL A.5 (`logo-m.svg` hoặc `MT-Logo.svg` theo PDF). Hero trong `--page-max`; `aspect-ratio` = W/H dải PDF (B.4); scrim contrast (C.6.3).
 2. **Section heading** — Baskerville; có/không đánh số; accent Ochre hoặc Black theo ngữ cảnh PDF.
 3. **Callout/quote box** — nền Light Grey; nội dung: quote + attribution, podcast thumb + link, hoặc infographic.
-4. **Data table** — semantic `--color-positive` / `--color-negative` (PDF-specific, nhóm A) — markup `.mr-table` / `.is-positive` / `.is-negative` trong template Market Review.
-5. **Chart block** — đơn lẻ hoặc lưới 2 cột × 3 hàng (nhóm A: `.mr-chart-grid`); luôn caption + Source; **một ảnh mỗi panel**, stack mobile.
+4. **Heat data table (nhóm A)** — B.6.2–B.6.3: `.mr-table` + `.is-positive` / `.is-negative` (và neutral theo PDF); section Equities/Bonds/Currency; wrap `overflow-x: auto` trên mobile; **không** card-stack trên desktop.
+5. **Chart grid (nhóm A)** — B.7.2: `.mr-chart-grid` **2×3 desktop → 1 cột mobile**; **một ảnh mỗi panel** (cấm composite 6-in-1); source trong ảnh hoặc caption — không duplicate.
 6. **Author sign-off** — tên, chức danh, "Mutual Trust" (nhóm C).
 7. **Document meta / byline** — author/date khi PDF có (nhóm B); đặt một lần trong article, **không** lặp running footer + số trang.
 8. **Legal + contacts footer** — một khối cuối document theo **B.5** (markup `.perspective-legal` / `.perspective-contacts` làm nền; calibrate copy + spacing từ PDF). Variant nền: trắng (C) / dải hoặc back-cover tối (A, B).
@@ -617,11 +911,12 @@ _Tham chiếu đầy đủ quy trình visual: **C.6**._
 9. Giữ toàn bộ copy PDF — không omit / invent / duplicate.
 10. Semantic / one-off colours và link treatment theo PDF khi có (C.6.7).
 11. List/bullet theo B.9 + C.6.6 — không dùng browser default.
-12. **Footer/legal** — bắt đầu từ cấu trúc chuẩn **B.5**; đo PDF rồi override (B.5.4). Không số trang / running footer.
-13. **Không tái tạo pagination của PDF trên web.** Nội dung chuyển thành continuous document flow. Page boundary của PDF chỉ dùng làm checkpoint trong visual QA để phát hiện cumulative spacing/typography drift (C.6.8–C.6.9).
-14. Chạy Visual Comparison Loop (C.6.8) — tối đa 3 vòng correction nếu còn khác biệt đáng kể; **desktop fidelity đạt trước** rồi mới responsive (C.6.10).
-15. Chỉ đánh dấu hoàn thành khi đạt Definition of Done (C.6.11).
-16. **Chưa deploy** cho đến khi được yêu cầu.
+12. **Nhóm A — heat table + chart grid:** build theo B.6.2 / B.7.2 (`template-market-review.html`); desktop đủ cột + lưới 2×3; mobile table scroll-x + chart stack (B.6.3 / C.6.10). Hero overlay placement: B.7.1.
+13. **Footer/legal** — bắt đầu từ cấu trúc chuẩn **B.5**; đo PDF rồi override (B.5.4). Không số trang / running footer.
+14. **Không tái tạo pagination của PDF trên web.** Nội dung chuyển thành continuous document flow. Page boundary của PDF chỉ dùng làm checkpoint trong visual QA để phát hiện cumulative spacing/typography drift (C.6.8–C.6.9).
+15. Chạy Visual Comparison Loop (C.6.8) — tối đa 3 vòng correction nếu còn khác biệt đáng kể; **desktop fidelity đạt trước** rồi mới responsive (C.6.10).
+16. Chỉ đánh dấu hoàn thành khi đạt Definition of Done (C.6.11).
+17. **Chưa deploy** cho đến khi được yêu cầu.
 
 ## C.5 Việc còn cần xác nhận
 
@@ -665,6 +960,9 @@ Trước khi viết HTML/CSS phải xác định:
 - bullet/list geometry
 - callout / promo styling
 - author/sign-off; legal/contact theo **B.5** (grid, clearspace contacts→legal, meta không underline lệch size)
+- **Nhóm A — heat table:** số cột, section labels + gạch Ochre, fill dương/âm (sample drawing), source line, độ rộng bảng vs content column (B.6.2)
+- **Nhóm A — hero overlay:** `content_x`, `title_y`, page W (B.7.1)
+- **Nhóm A — chart grid:** bbox 6 panel, thứ tự đọc, có/không source trong ảnh; chuẩn bị clip riêng từng panel (B.7.2)
 
 Không bắt đầu từ browser default hoặc generic web styling.
 
@@ -748,9 +1046,10 @@ Link phải đối chiếu PDF về: **colour**, **có/không underline**, **fon
 
 **Contacts meta (email / www) trong footer B.5:**
 
-- Cùng **font-size / line-height** với dòng địa chỉ / SĐT (thường ~7pt) — không để link “phình” hơn cột văn phòng.
-- **Không underline** trừ khi PDF gạch chân rõ.
-- Tránh rule kiểu `.perspective-legal a { text-decoration: underline }` làm **rò** xuống `.perspective-contacts a`. Chỉ style link trong `.perspective-legal > p` (disclaimer) khi PDF có.
+- Cùng **font-size / line-height** với dòng địa chỉ / SĐT (Market Review ~6pt) — không để link “phình” hơn cột văn phòng; Proxima Regular, không bold.
+- Underline **theo PDF**: nhiều Perspective **không** gạch chân; **Market Review dark footer** thường **có** hairline trắng dưới email/www (B.5.6).
+- `tel:` trong cột văn phòng: thường không underline.
+- Tránh rule `.perspective-legal a { text-decoration: underline }` làm **rò** xuống mọi `.perspective-contacts a`. Style riêng `.perspective-contacts__meta a` khi PDF gạch chân.
 
 Brand colour map theo Style Guide; nếu PDF có intentional PDF-specific treatment đã xác định thì **PDF thắng** theo bảng ưu tiên đầu tài liệu.
 
@@ -783,20 +1082,27 @@ Không thêm blank space hoặc page break để ép content “đúng trang”.
 
 Chỉ bắt đầu responsive adaptation sau khi **desktop fidelity** đã đạt mức chấp nhận được.
 
-**Desktop:** PDF fidelity ưu tiên cao nhất — hero `aspect-ratio` = W/H dải PDF trong `--page-max` (B.4).
+**Desktop:** PDF fidelity ưu tiên cao nhất — hero `aspect-ratio` = W/H dải PDF trong `--page-max` (B.4); nhóm A title/date placement B.7.1. **Nhóm A:** bảng heat đủ cột + lưới chart **2×3** giống trang PDF (B.6.2 / B.7.2).
 
-**Tablet/mobile — giữ:** visual identity, typography hierarchy, assets, colours, content order, component meaning, hướng subject hero, scrim.
+**Tablet/mobile — giữ:** visual identity, typography hierarchy, assets, colours, content order, component meaning, hướng subject hero, scrim, **ý nghĩa heat colour** (dương/âm), **thứ tự 6 chart**.
 
-**Cho phép:** stack columns, giảm font-size hợp lý, đổi padding, **nới tỉ lệ / min-height hero** (B.4 mobile), scale logo/kicker, tinh chỉnh `background-position`, xử lý chart/table responsive.
+**Cho phép:** stack columns, giảm font-size hợp lý, đổi padding, **nới tỉ lệ / min-height hero** (B.4 mobile), scale logo/kicker, tinh chỉnh `background-position`, **table `overflow-x: auto`**, **chart grid → 1 cột**.
 
 **Hero mobile QA (bắt buộc trước khi Done):**
 
 1. Logo + mọi chữ overlay **nằm trọn** trong hero — không cắt, không tràn đáy/mép.
 2. Chủ thể ảnh (hoa, người, horizon…) vẫn nhận ra; không crop mất cụm chính vì band quá dẹt.
 3. Chữ không đè nặng lên vùng sáng/chi tiết tới mức mất đọc (điều chỉnh size/position/scrim tối thiểu).
-4. Không horizontal scroll; hero vẫn trong page shell (không bắt buộc full browser width).
+4. Không horizontal scroll **cả trang**; hero vẫn trong page shell (không bắt buộc full browser width).
 
-Không cố giữ kích thước vật lý A4 / đúng H PDF tuyệt đối trên mobile nếu làm hỏng (1)–(3).
+**Nhóm A — table + chart mobile QA (bắt buộc):**
+
+1. **Table:** vẫn là bảng so sánh đa cột + **lưới đen**; vuốt ngang trong `.mr-table-wrap` xem hết CYTD…5Y; `document.scrollWidth` không vượt viewport vì bảng.
+2. **Heat:** ô dương/âm vẫn teal/maroon phủ **cả ô** (không pill/gutter trắng giữa ô) + chữ trắng; không mất màu khi thu nhỏ.
+3. **Charts:** 6 panel **stack** full-width, đúng thứ tự PDF; mỗi ảnh đọc được title/trục/legend — **không** một composite nhỏ.
+4. Section Equities/Bonds/Currency và dòng Source dưới bảng vẫn có mặt.
+
+Không cố giữ kích thước vật lý A4 / đúng H PDF tuyệt đối trên mobile nếu làm hỏng hero QA (1)–(3) hoặc table/chart QA trên.
 
 ### C.6.11 Definition of Done
 
@@ -804,7 +1110,9 @@ Một conversion chỉ hoàn thành khi:
 
 - đúng toàn bộ nội dung; đúng assets; logo đúng variant và placement
 - **Desktop:** `--page-max` = khổ PDF; hero trong shell, **aspect-ratio W/H** → chiều cao khớp PDF; crop/position/orientation không cắt chủ thể; overlay/scrim khớp PDF khi cần; logo/chữ đủ contrast
+- **Nhóm A desktop:** heat table khớp cấu trúc/section/heat colours PDF; chart grid **2×3** với **6 asset tách**; so side-by-side với trang table + trang chart
 - **Mobile/tablet:** hero tỉ lệ hợp lý (B.4 / C.6.10) — không cắt ảnh mất subject, không mất/đè chữ overlay; logo + kicker đọc được
+- **Nhóm A mobile:** table scroll-x cục bộ; chart stack đọc được (C.6.10)
 - font thực sự load đúng; typography / content width / spacing rhythm gần PDF (desktop)
 - line wrapping không lệch lớn; bullet/list đúng geometry
 - links/colours đúng; component đặc thù đúng
