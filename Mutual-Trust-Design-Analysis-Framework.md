@@ -151,7 +151,7 @@ Nguồn: Figma _Colour_ (`2:466`).
 
 ## A.5 Logo assets (URL chính thức — dùng cho mọi template)
 
-**Không** extract/crop logo từ PDF khi convert HTML trừ khi URL dưới không khớp biến thể trên PDF. Mọi template (`template.html`, `template-perspective.html`, và các family template khác) dùng một trong hai URL sau — **chọn theo loại logo mà PDF gốc đang dùng**:
+**Không** extract/crop logo từ PDF khi convert HTML trừ khi URL dưới không khớp biến thể trên PDF. Mọi template (`template.html`, `template-perspective.html`, `template-market-review.html`, `template-quarterly-outlook.html`) dùng một trong hai URL sau — **chọn theo loại logo mà PDF gốc đang dùng**:
 
 | File              | URL                                                                                       | Hình dạng                                                                    | Dùng khi PDF có…                                                                                   |
 | ----------------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
@@ -335,6 +335,7 @@ Template tham chiếu:
 
 - Nhóm C (Perspective): `website/template-perspective.html` — khối `.perspective-legal` (nền trắng)
 - Nhóm A (Market Review): `website/template-market-review.html` — khối `.mr-footer` (nền tối) + cùng class `.perspective-contacts` (B.5)
+- Nhóm B (Quarterly Outlook): `website/template-quarterly-outlook.html` — khối `.qo-footer` (back cover tối, logo stacked `MT-Logo.svg` + tagline) + `.perspective-contacts` (B.5)
 
 ### B.5.3 CSS nền + quy tắc spacing (tránh lỗi hay gặp)
 
@@ -737,12 +738,27 @@ Nhóm A **dày hơn** Perspective: leading và gap giữa khối nhỏ. Sai lệ
 
 ### Nhóm B — Quarterly Outlook
 
-- Trang bìa: logo + wordmark **căn giữa** trên hero, đường kẻ ngang, tiêu đề chung "Quarterly Outlook" (serif). **Tiêu đề bài viết cụ thể** nằm dưới ảnh trên nền trắng.
-- Section **đánh số + heading accent Ochre** (ví dụ "4. How do we design resilient portfolios?").
-- **Callout/pull-quote box** mở đầu phần — nền surface phụ, trích lời (caps, tên + chức danh). PDF đôi khi dùng xám-xanh (`#E0E4EB`…). Khi convert file đó: **match nền như PDF**; nếu gần Light Grey thì map `#F4F4F4`, nếu lệch rõ thì giữ giá trị gần PDF (không đổi sang Light Grey nếu làm lệch nhìn).
-- Đôi khi **2 cột** (text trái / chart phải).
-- **Back cover riêng**: nền tối, logo + tagline "Helping families achieve what matters most.", disclaimer dài nhất 3 nhóm.
-- Footer running PDF có thêm "Written by [Tên] \| [ngày]" — không thấy ở nhóm A/C. Trên web: đưa byline/meta vào khối article (một lần), không lặp theo trang.
+Token `--qo-*` + class `family-quarterly-outlook`. Convert: copy `website/template-quarterly-outlook.html` → đo PDF → override tokens → điền title/byline/body/split/quote + dark back cover (B.5.4). Tham chiếu PDF: March 2026 *Equities: the tug of war*; June 2026 *Still waters run deep*.
+
+- Trang bìa: logo stacked **`MT-Logo.svg` căn giữa** trên hero, đường kẻ ngang (`.qo-hero__rule`), kicker serif **"Quarterly Outlook"** (trắng, ~39pt). **Tiêu đề bài viết cụ thể** nằm **dưới ảnh** trên nền trắng (`.qo-article__title`, Baskerville ink — không overlay như nhóm A).
+- Byline PDF *"Written by [Tên] | [ngày]"* → `.qo-byline` **một lần** trong article; **không** lặp running footer / số trang.
+- **Hai kiểu section head** (đừng nhầm với numbered list B.9):
+  - **June:** `.qo-section` Baskerville ~16pt + Ochre `#D17B19` — `<span class="qo-section__num">1.</span>` + heading.
+  - **March:** `.qo-section.qo-section--lede` Proxima Light, cỡ thân bài, màu `#CBA020` (không đánh số serif lớn).
+- **Callout/pull-quote** (`.qo-quote`): nền đo từ PDF (March ≈ `#EEEEEE`; đôi khi `#E0E4EB`). Quote **Baskerville roman** trừ khi PDF italic; attribution sans, thường **căn phải** (vd. `BLACKROCK, MARCH 2026`). Không invent italic.
+- **2 cột** (`.qo-split`): text trái / chart phải trên desktop; mobile stack (mặc định text→ảnh; `.qo-split--media-first` nếu cần ảnh trước). **Một ảnh mỗi chart** — không composite.
+- Lề nội dung nhóm B ~**72pt** (`--qo-content-x-pt`) — hẹp hơn A/C; desktop pad `%` từ page W; **mobile ≤768: `--gutter: 20px`** như Perspective.
+- **Back cover** `.qo-footer`: nền `#1B1B20` (đo fill PDF); logo stacked + tagline *"Helping families achieve what matters most."* + contacts (March: 4 văn phòng địa chỉ đủ dòng + meta; June có thể stack 2 city/cột) + disclaimer dài 3 đoạn (B.5.1).
+
+| Token | Đo từ PDF | Ghi chú |
+| --- | --- | --- |
+| `--qo-page-w-pt` / `--page-max` | page W | A4 ≈ 594.96pt → ~793px |
+| `--qo-content-x-pt` | x0 body (~72) | không 5vw; không pad A/C ~55pt |
+| `--qo-hero-aspect` | page W / hero H | March ≈ `594.96 / 224.6` |
+| `--qo-kicker-size` | "Quarterly Outlook" trên ảnh | ~39pt |
+| `--qo-title-size` | H1 dưới ảnh | March 20pt; June ~28pt |
+
+**QA desktop:** kicker căn giữa trên ảnh; H1 + body cùng mép trái; section numbered ≠ bullet numbered; quote upright nếu PDF roman; bảng/chart không scroll ngang trừ khi hẹp hơn `--page-max`.
 
 ### Nhóm C — Perspective / Insight Article
 
@@ -885,7 +901,7 @@ Khi convert PDF cụ thể: **override** khoảng hero↔content, content↔foot
 
 ## C.3 Thư viện component (từ recurring PDF patterns + Style Guide styling)
 
-1. **Hero/Header** — 2 biến thể layout PDF: (a) title overlay trên ảnh — Market Review (`template-market-review.html`); (b) logo trên ảnh + title tách khối nội dung — Outlook/Insight (`template-perspective.html`). Logo: URL A.5 (`logo-m.svg` hoặc `MT-Logo.svg` theo PDF). Hero trong `--page-max`; `aspect-ratio` = W/H dải PDF (B.4); scrim contrast (C.6.3).
+1. **Hero/Header** — 3 biến thể: (a) title overlay trên ảnh — Market Review (`template-market-review.html`); (b) logo stacked **căn giữa** + kicker "Quarterly Outlook" trên ảnh, **H1 dưới ảnh** — Outlook (`template-quarterly-outlook.html`); (c) logo ngang góc trên-trái + title dưới ảnh — Perspective (`template-perspective.html`). Logo: URL A.5. Hero trong `--page-max`; `aspect-ratio` = W/H dải PDF (B.4); scrim (C.6.3).
 2. **Section heading** — Baskerville; có/không đánh số; accent Ochre hoặc Black theo ngữ cảnh PDF.
 3. **Callout/quote box** — nền Light Grey; nội dung: quote + attribution, podcast thumb + link, hoặc infographic.
 4. **Heat data table (nhóm A)** — B.6.2–B.6.3: `.mr-table` + `.is-positive` / `.is-negative` (và neutral theo PDF); section Equities/Bonds/Currency; wrap `overflow-x: auto` trên mobile; **không** card-stack trên desktop.
@@ -913,6 +929,7 @@ _Tham chiếu đầy đủ quy trình visual: **C.6**._
 10. Semantic / one-off colours và link treatment theo PDF khi có (C.6.7).
 11. List/bullet theo B.9 + C.6.6 — không dùng browser default.
 12. **Nhóm A — heat table + chart grid:** build theo B.6.2 / B.7.2 (`template-market-review.html`); desktop đủ cột + lưới 2×3; mobile table scroll-x + chart stack (B.6.3 / C.6.10). Hero overlay placement: B.7.1.
+12b. **Nhóm B — Quarterly Outlook:** copy `template-quarterly-outlook.html`; hero stacked logo + kicker; H1 dưới ảnh; section numbered Ochre **hoặc** lede Proxima; `.qo-split` cho chart; `.qo-quote` roman; `.qo-footer` back cover (B.7 B).
 13. **Footer/legal** — bắt đầu từ cấu trúc chuẩn **B.5**; đo PDF rồi override (B.5.4). Không số trang / running footer.
 14. **Không tái tạo pagination của PDF trên web.** Nội dung chuyển thành continuous document flow. Page boundary của PDF chỉ dùng làm checkpoint trong visual QA để phát hiện cumulative spacing/typography drift (C.6.8–C.6.9).
 15. Chạy Visual Comparison Loop (C.6.8) — tối đa 3 vòng correction nếu còn khác biệt đáng kể; **desktop fidelity đạt trước** rồi mới responsive (C.6.10).
@@ -964,6 +981,7 @@ Trước khi viết HTML/CSS phải xác định:
 - **Nhóm A — heat table:** số cột, section labels + gạch Ochre, fill dương/âm (sample drawing), source line, độ rộng bảng vs content column (B.6.2)
 - **Nhóm A — hero overlay:** `content_x`, `title_y`, page W (B.7.1)
 - **Nhóm A — chart grid:** bbox 6 panel, thứ tự đọc, có/không source trong ảnh; chuẩn bị clip riêng từng panel (B.7.2)
+- **Nhóm B — Outlook:** hero logo stacked + kicker vs H1 dưới ảnh; section numbered Ochre vs lede Proxima; split chart bbox; quote fill + slant; back-cover contacts/tagline (B.7 B)
 
 Không bắt đầu từ browser default hoặc generic web styling.
 

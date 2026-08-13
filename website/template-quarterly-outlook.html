@@ -1,0 +1,1077 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title><!-- PAGE_TITLE --></title>
+    <meta name="description" content="<!-- META_DESCRIPTION -->" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="<!-- CANONICAL_URL -->" />
+
+    <meta property="og:title" content="<!-- OG_TITLE -->" />
+    <meta property="og:description" content="<!-- OG_DESCRIPTION -->" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="<!-- OG_URL -->" />
+    <meta property="og:image" content="<!-- OG_IMAGE -->" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="<!-- TWITTER_TITLE -->" />
+    <meta name="twitter:description" content="<!-- TWITTER_DESCRIPTION -->" />
+    <meta name="twitter:image" content="<!-- TWITTER_IMAGE -->" />
+
+    <link
+      rel="icon"
+      href="https://www.mutualtrust.com.au/wp-content/uploads/2024/10/favicon.png"
+      type="image/png"
+    />
+
+    <style>
+      /* ==========================================================================
+       Quarterly Outlook family template (Group B) — continuous responsive web
+       Framework: Mutual-Trust-Design-Analysis-Framework.md (B.7 B + B.5 + B.9 + C.6)
+       Sibling templates: template-perspective.html (C) · template-market-review.html (A)
+
+       Patterns vs Perspective (Group C) / Market Review (Group A):
+       - Hero: stacked MT-Logo.svg CENTERED + kicker "Quarterly Outlook" ON the image
+         Article H1 sits BELOW the photo (white). Not MMR overlay title; not Perspective top-left logo-m.
+       - Numbered Ochre section heads (June: "1. …") AND/OR ochre lede lines (March: Proxima Light)
+       - Optional 2-col split: text + chart (desktop); stack on mobile
+       - Pull-quote panel (roman serif + sans attribution) — match PDF fill, do not invent italic
+       - Dark BACK COVER: stacked logo + tagline + contacts (full addresses) + long legal (B.5.5 B)
+       - Byline once in article ("Written by … | date") — never running footer / page numbers
+
+       CONVERT WORKFLOW (C.6 / B.7 B):
+       1. Inspect PDF: page W, content x0 (~72pt Group B), hero W/H, logo, kicker, title below,
+          numbered vs lede sections, splits/charts, quote fill, back-cover contacts
+       2. Override --page-max, --qo-page-w-pt, --qo-content-x-pt, --qo-* tokens
+       3. Hero: logo+kicker centered; title left = body left under image
+       4. Mobile ≤768: content gutters = Perspective (--gutter: 20px)
+       5. Fill continuous article; Visual Comparison Loop — desktop then mobile
+       Do NOT recreate running headers/footers or PDF page boundaries.
+       ========================================================================== */
+
+      @font-face {
+        font-family: 'Baskerville';
+        src:
+          url('assets/fonts/Baskerville.woff2') format('woff2'),
+          url('assets/fonts/Baskerville.woff') format('woff'),
+          url('assets/fonts/Baskerville.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Baskerville';
+        src:
+          url('assets/fonts/Baskerville-Italic.woff2') format('woff2'),
+          url('assets/fonts/Baskerville-Italic.woff') format('woff'),
+          url('assets/fonts/Baskerville-Italic.ttf') format('truetype');
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Proxima Nova';
+        src:
+          url('assets/fonts/ProximaNova-Regular.woff2') format('woff2'),
+          url('assets/fonts/ProximaNova-Regular.woff') format('woff'),
+          url('assets/fonts/ProximaNova-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Proxima Nova';
+        src:
+          url('assets/fonts/ProximaNova-RegularIt.woff2') format('woff2'),
+          url('assets/fonts/ProximaNova-RegularIt.woff') format('woff'),
+          url('assets/fonts/ProximaNova-RegularIt.ttf') format('truetype');
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Proxima Nova';
+        src:
+          url('assets/fonts/ProximaNova-Medium.woff2') format('woff2'),
+          url('assets/fonts/ProximaNova-Medium.woff') format('woff'),
+          url('assets/fonts/ProximaNova-Medium.ttf') format('truetype');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Proxima Nova';
+        src:
+          url('assets/fonts/ProximaNova-Semibold.woff2') format('woff2'),
+          url('assets/fonts/ProximaNova-Semibold.woff') format('woff'),
+          url('assets/fonts/ProximaNova-Semibold.ttf') format('truetype');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Proxima Nova';
+        src:
+          url('assets/fonts/ProximaNova-Bold.woff2') format('woff2'),
+          url('assets/fonts/ProximaNova-Bold.woff') format('woff'),
+          url('assets/fonts/ProximaNova-Bold.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Proxima Nova';
+        src:
+          url('assets/fonts/ProximaNova-Black.woff2') format('woff2'),
+          url('assets/fonts/ProximaNova-Black.woff') format('woff'),
+          url('assets/fonts/ProximaNova-Black.ttf') format('truetype');
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      :root {
+        /* Style Guide tokens */
+        --font-serif: 'Baskerville', Georgia, 'Times New Roman', serif;
+        --font-sans: 'Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+
+        --color-black: #000000;
+        --color-white: #ffffff;
+        --color-light-grey: #f4f4f4;
+        --color-grey: #767676;
+        --color-ochre: #cb962e;
+
+        --color-ink: var(--color-black);
+        --color-ink-muted: var(--color-grey);
+        --color-accent: var(--color-ochre);
+        --color-link: var(
+          --color-ochre
+        ); /* override per PDF if intentional (e.g. #D17B19) */
+        --color-surface: var(--color-white);
+        --color-surface-tint: var(--color-light-grey);
+        --color-surface-dark: var(--color-black);
+
+        --space-1: 4px;
+        --space-2: 8px;
+        --space-3: 16px;
+        --space-4: 24px;
+        --space-5: 32px;
+        --space-6: 48px;
+        --space-7: 64px;
+
+        /* Page shell = PDF page width @ 96dpi (A4 595.32pt → ~794px). Override per PDF. */
+        --page-max: 793.28px; /* 594.96pt */
+        --container-max: var(--page-max);
+        --gutter: 20px; /* mobile = Perspective; desktop inset via --qo-content-x-pt */
+
+        --text-h1: 70px;
+        --text-h1-lh: 72px;
+        --text-h2: 48px;
+        --text-h2-lh: 1.2;
+        --text-h3: 40px;
+        --text-h3-lh: 1.1;
+        --text-h4: 32px;
+        --text-h4-lh: 1.3;
+        --text-h5: 24px;
+        --text-h5-lh: 1.4;
+        --text-h6: 16px;
+        --text-h6-lh: 1.4;
+
+        --text-large: 20px;
+        --text-large-lh: 1.5;
+        --text-medium: 18px;
+        --text-medium-lh: 24px;
+        --text-regular: 16px;
+        --text-regular-lh: 1.5;
+        --text-small: 14px;
+        --text-small-lh: 1.5;
+
+        --focus-ring: 2px solid var(--color-ochre);
+        --focus-offset: 3px;
+
+      /* Shared list tokens (framework B.9) — calibrate indent per PDF Flush/Outdent/Inset */
+      --list-marker-color: var(--color-ink);
+      --list-marker-gap: 24px; /* = 18pt PDF; fixed px, not em */
+      --list-indent: var(--list-marker-gap);
+      --list-marker-size: 5px; /* PDF crop ~4px +20% web readability */
+      --list-item-gap: 0; /* override per PDF when source adds gap between items */
+
+        /* ------------------------------------------------------------------
+         Quarterly Outlook tokens — OVERRIDE PER PDF (B.7 B / C.6)
+         Measure: page W, content x (~72pt), hero H, kicker, title below, gaps
+         ------------------------------------------------------------------ */
+        --qo-page-w-pt: 594.96;
+        --qo-content-x-pt: 72; /* Group B ~72pt both sides (B.3) — measure each PDF */
+        --qo-content-x-right-pt: 72;
+        --qo-hero-aspect: 594.96 / 224.6; /* March 2026 band; override per file */
+        --qo-hero-aspect-mobile: 3 / 2;
+        --qo-hero-position: center center;
+        --qo-hero-position-mobile: var(--qo-hero-position);
+        --qo-hero-scrim: rgba(0, 0, 0, 0.28); /* white logo/kicker on photo — B.4 */
+        --qo-logo-width: 360px; /* stacked MT-Logo; March bbox ~270pt @ 96dpi */
+        --qo-logo-top: 68px; /* ~51pt; or use % of hero */
+        --qo-kicker-size: 52px; /* 39pt "Quarterly Outlook" */
+        --qo-kicker-lh: 1.05;
+        --qo-kicker-color: var(--color-white);
+        --qo-kicker-gap: 8px; /* logo/rule → kicker */
+        --qo-title-size: 27px; /* March article title 20pt; June can be ~28pt */
+        --qo-title-lh: 1.2;
+        --qo-title-color: var(--color-ink); /* #1B1B20 — not ochre overlay */
+        --qo-byline-size: 12px;
+        --qo-body-size: 14px; /* PDF ~10pt Light; web Regular floor */
+        --qo-body-lh: 1.45;
+        --qo-para-gap: 14px;
+        --qo-band-gap: 16px; /* hero→title; March ≈ 7pt — don't use Perspective --space-7 */
+        --qo-section-size: 21px; /* June numbered Baskerville ~16pt */
+        --qo-section-lede-size: 14px; /* March ochre lede = body size */
+        --qo-section-color: #d17b19; /* June numbered; map Style Guide ochre if closer */
+        --qo-section-lede-color: #cba020; /* March Proxima Light ochre-gold */
+        --qo-section-gap-before: 28px;
+        --qo-section-gap-after: 12px;
+        --qo-split-gap: 24px;
+        --qo-quote-bg: #eeeeee; /* March ≈ rgb(238,238,238); June may be #E0E4EB */
+        --qo-quote-pad: 16px 20px;
+        --qo-quote-size: 15px; /* ~11pt Baskerville roman */
+        --qo-cta-gap: 24px;
+        --qo-footer-bg: #1b1b20; /* March back cover fill */
+        --qo-footer-fg: var(--color-white);
+        --qo-footer-pad-top: 48px;
+        --qo-tagline-size: 19px; /* 14pt Baskerville */
+        --qo-legal-size: 8px; /* PDF ~6pt — bump slightly */
+        --qo-legal-lh: 1.4;
+        --qo-contact-label-size: 11px; /* ~8–9pt Baskerville */
+        --qo-contact-label-color: var(--color-white);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        -webkit-text-size-adjust: 100%;
+        scroll-behavior: smooth;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+      body {
+        margin: 0;
+        min-width: 0;
+        font-family: var(--font-sans);
+        font-size: var(--text-regular);
+        font-weight: 400;
+        line-height: var(--text-regular-lh);
+        color: var(--color-ink);
+        background-color: var(--color-surface);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      img,
+      picture,
+      video,
+      svg {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+    a {
+      color: var(--color-link);
+      text-decoration: none; /* PDF often colour-only; do not invent underline */
+      font-weight: inherit; /* match PDF; do not invent bold links */
+    }
+
+    a:hover {
+      text-decoration: underline; /* web affordance only */
+      text-underline-offset: 0.15em;
+    }
+
+      a:focus-visible,
+      button:focus-visible,
+      summary:focus-visible,
+      [tabindex]:focus-visible {
+        outline: var(--focus-ring);
+        outline-offset: var(--focus-offset);
+      }
+
+      :focus:not(:focus-visible) {
+        outline: none;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0 0 var(--space-3);
+        font-family: var(--font-serif);
+        font-weight: 400;
+        color: var(--color-ink);
+      }
+
+      p {
+        margin: 0 0 var(--space-3);
+        font-family: var(--font-sans);
+        font-size: var(--qo-body-size);
+        line-height: var(--qo-body-lh);
+      }
+
+      strong,
+      b {
+        font-weight: 700;
+      }
+
+      em,
+      i {
+        font-style: italic;
+      }
+
+      .text-muted {
+        color: var(--color-ink-muted);
+      }
+
+      .text-small {
+        font-size: var(--text-small);
+        line-height: var(--text-small-lh);
+      }
+
+      .skip-link {
+        position: absolute;
+        left: var(--space-3);
+        top: 0;
+        z-index: 1000;
+        padding: var(--space-2) var(--space-3);
+        background: var(--color-black);
+        color: var(--color-white);
+        font-family: var(--font-sans);
+        font-size: var(--text-small);
+        text-decoration: none;
+        transform: translateY(-120%);
+      }
+
+      .skip-link:focus {
+        transform: translateY(var(--space-3));
+        outline: var(--focus-ring);
+        outline-offset: var(--focus-offset);
+      }
+
+      .visually-hidden {
+        position: absolute !important;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      /* Continuous document shell = PDF page width (not full viewport, not multi-page A4) */
+      .document {
+        width: 100%;
+        max-width: var(--page-max);
+        margin-inline: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: var(--color-surface);
+      }
+
+      .container {
+        width: 100%;
+        max-width: var(--container-max);
+        margin-inline: auto;
+        padding-left: max(
+          var(--gutter),
+          calc(100% * var(--qo-content-x-pt) / var(--qo-page-w-pt))
+        );
+        padding-right: max(
+          var(--gutter),
+          calc(
+            100% * var(--qo-content-x-right-pt, var(--qo-content-x-pt)) /
+              var(--qo-page-w-pt)
+          )
+        );
+      }
+
+      .site-main {
+        flex: 1 0 auto;
+        width: 100%;
+      }
+
+      /* Never rely on browser default list styling (C.6.6 / B.9) */
+      .qo-body ul,
+      .qo-body ol {
+        list-style: none;
+        padding-left: 0;
+        margin: 0 0 var(--space-3);
+      }
+
+      /* Shared list — framework B.9 (Flush default; add --outdent / --inset per PDF) */
+      ul.mt-list,
+      ol.mt-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0 0 var(--space-3);
+      }
+
+      ul.mt-list > li,
+      ol.mt-list > li {
+        position: relative;
+        padding-left: var(--list-indent);
+        text-indent: 0;
+        line-height: var(--qo-body-lh);
+        margin: 0 0 var(--list-item-gap);
+        color: var(--color-ink);
+      }
+
+      /* Small disc ≈ SymbolMT — not full-size • (too large vs PDF) */
+      ul.mt-list > li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.55em;
+        width: var(--list-marker-size);
+        height: var(--list-marker-size);
+        border-radius: 50%;
+        background-color: var(--list-marker-color);
+      }
+
+      ol.mt-list {
+        counter-reset: mt-counter;
+      }
+
+      ol.mt-list > li::before {
+        counter-increment: mt-counter;
+        content: counter(mt-counter) ".";
+        position: absolute;
+        left: 0;
+        width: var(--list-indent);
+        color: var(--list-marker-color);
+        font-size: inherit;
+        line-height: inherit;
+        background: none;
+        border-radius: 0;
+      }
+
+      .mt-list--outdent {
+        margin-left: calc(-1 * var(--list-indent));
+      }
+
+      .mt-list--inset {
+        padding-left: var(--list-indent);
+      }
+
+      .qo-body ul.mt-list--inset {
+        padding-left: var(--list-indent);
+      }
+
+      .qo-body ul.mt-list--outdent {
+        margin-left: calc(-1 * var(--list-indent));
+      }
+
+      /* ==========================================================================
+       QUARTERLY OUTLOOK FAMILY — Group B layout patterns (B.7 B)
+       ========================================================================== */
+
+      /* --- Hero: stacked logo + kicker ON image; article title is below --- */
+      .qo-hero {
+        position: relative;
+        width: 100%;
+        aspect-ratio: var(--qo-hero-aspect);
+        min-height: 0;
+        overflow: hidden;
+        flex-shrink: 0;
+        color: var(--color-white);
+        background-color: #2a2a2a;
+        background-image: var(--qo-hero-image, none);
+        background-position: var(--qo-hero-position);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .qo-hero::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: var(--qo-hero-scrim);
+        pointer-events: none;
+      }
+
+      .qo-hero__inner {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: var(--qo-logo-top);
+        padding-bottom: var(--space-4);
+        box-sizing: border-box;
+        text-align: center;
+      }
+
+      .qo-hero__logo {
+        display: inline-block;
+        line-height: 0;
+        width: fit-content;
+      }
+
+      .qo-hero__logo img {
+        width: var(--qo-logo-width);
+        height: auto;
+        display: block;
+      }
+
+      /* Hairline under stacked logo when PDF shows a rule (omit via .is-empty) */
+      .qo-hero__rule {
+        display: block;
+        width: min(220px, 55%);
+        height: 0;
+        margin: 10px 0 var(--qo-kicker-gap);
+        border: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.85);
+      }
+
+      .qo-hero__rule.is-empty {
+        display: none !important;
+      }
+
+      .qo-hero__kicker {
+        margin: var(--qo-kicker-gap) 0 0;
+        font-family: var(--font-serif);
+        font-weight: 400;
+        font-size: var(--qo-kicker-size);
+        line-height: var(--qo-kicker-lh);
+        color: var(--qo-kicker-color);
+        max-width: none;
+      }
+
+      /* --- Article under hero --- */
+      .qo-article {
+        padding-top: var(--qo-band-gap);
+        padding-bottom: var(--space-4);
+      }
+
+      .qo-article__title {
+        margin: 0 0 var(--space-2);
+        font-family: var(--font-serif);
+        font-weight: 400;
+        font-size: var(--qo-title-size);
+        line-height: var(--qo-title-lh);
+        color: var(--qo-title-color);
+      }
+
+      .qo-byline {
+        margin: 0 0 var(--space-5);
+        font-family: var(--font-sans);
+        font-size: var(--qo-byline-size);
+        font-weight: 400;
+        line-height: 1.4;
+        color: var(--color-ink-muted);
+      }
+
+      .qo-byline.is-empty {
+        display: none !important;
+      }
+
+      .qo-body {
+        font-family: var(--font-sans);
+        font-size: var(--qo-body-size);
+        line-height: var(--qo-body-lh);
+        color: var(--color-ink);
+      }
+
+      .qo-body > p {
+        margin: 0 0 var(--qo-para-gap);
+      }
+
+      /* June: numbered Baskerville Ochre. Do not use for body bullets (B.9). */
+      .qo-body h2,
+      .qo-section {
+        margin: var(--qo-section-gap-before) 0 var(--qo-section-gap-after);
+        font-family: var(--font-serif);
+        font-weight: 400;
+        font-size: var(--qo-section-size);
+        line-height: 1.25;
+        color: var(--qo-section-color);
+      }
+
+      .qo-section__num {
+        font-family: inherit;
+        color: inherit;
+        margin-right: 0.25em;
+      }
+
+      /* March: section lede = body-size Proxima, ochre-gold, not numbered serif */
+      .qo-section--lede {
+        font-family: var(--font-sans);
+        font-weight: 400;
+        font-size: var(--qo-section-lede-size);
+        line-height: var(--qo-body-lh);
+        color: var(--qo-section-lede-color);
+      }
+
+      .qo-body h2:first-child,
+      .qo-section:first-child {
+        margin-top: 0;
+      }
+
+      .qo-body a {
+        color: var(--color-link);
+        text-decoration: none;
+      }
+
+      .qo-body a.is-underlined,
+      .qo-cta a.is-underlined {
+        text-decoration: underline;
+        text-decoration-color: var(--color-link);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+        text-decoration-skip-ink: none;
+      }
+
+      /* --- 2-col text + chart (B.7 B). Desktop: text | media. Mobile: stack. --- */
+      .qo-split {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--qo-split-gap);
+        margin: 0 0 var(--qo-para-gap);
+        align-items: start;
+      }
+
+      @media (min-width: 700px) {
+        .qo-split {
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+        }
+
+        .qo-split--media-start {
+          grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+        }
+
+        .qo-split--media-start .qo-split__media {
+          order: -1;
+        }
+      }
+
+      .qo-split__text p:last-child,
+      .qo-split__text ul:last-child {
+        margin-bottom: 0;
+      }
+
+      .qo-split__media {
+        margin: 0;
+      }
+
+      .qo-split__media img {
+        width: 100%;
+        height: auto;
+      }
+
+      .qo-split__media .source,
+      .qo-body .source {
+        margin: 6px 0 0;
+        font-family: var(--font-sans);
+        font-size: 11px;
+        line-height: 1.35;
+        color: var(--color-ink);
+      }
+
+      /* --- Pull quote (roman serif unless PDF italic) --- */
+      .qo-quote {
+        margin: var(--space-5) 0;
+        padding: var(--qo-quote-pad);
+        background: var(--qo-quote-bg);
+      }
+
+      .qo-quote.is-empty {
+        display: none !important;
+      }
+
+      .qo-quote__text {
+        margin: 0;
+        font-family: var(--font-serif);
+        font-size: var(--qo-quote-size);
+        line-height: 1.4;
+        font-style: normal;
+        color: var(--color-ink);
+      }
+
+      .qo-quote__text--italic {
+        font-style: italic;
+      }
+
+      .qo-quote__attr {
+        margin: var(--space-2) 0 0;
+        font-family: var(--font-sans);
+        font-size: 11px;
+        line-height: 1.3;
+        text-align: right;
+        color: var(--color-ink);
+      }
+
+      .qo-quote__attr cite {
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+      }
+
+      .qo-cta {
+        margin: var(--qo-cta-gap) 0 0;
+        font-family: var(--font-sans);
+        font-size: var(--qo-body-size);
+        line-height: var(--qo-body-lh);
+      }
+
+      .is-empty {
+        display: none !important;
+      }
+
+      /* --- Dark back cover (B.5.5 B) --- */
+      .qo-footer {
+        margin-top: auto;
+        background: var(--qo-footer-bg);
+        color: var(--qo-footer-fg);
+        padding: var(--qo-footer-pad-top) 0 var(--space-5);
+        text-align: center;
+      }
+
+      .qo-footer a {
+        color: var(--qo-footer-fg);
+        text-decoration: none;
+        font-family: var(--font-sans);
+        font-weight: 400;
+      }
+
+      .qo-footer__logo {
+        display: inline-block;
+        margin: 0 auto var(--space-4);
+        line-height: 0;
+      }
+
+      .qo-footer__logo img {
+        width: var(--qo-logo-width);
+        max-width: 220px;
+        height: auto;
+        display: block;
+        margin-inline: auto;
+      }
+
+      .qo-footer__tagline {
+        margin: 0 0 var(--space-6);
+        font-family: var(--font-serif);
+        font-weight: 400;
+        font-size: var(--qo-tagline-size);
+        line-height: 1.3;
+        color: var(--qo-footer-fg);
+      }
+
+      .qo-footer .perspective-contacts {
+        margin: 0 0 var(--space-5);
+        text-align: left;
+        color: var(--qo-footer-fg);
+        font-family: var(--font-sans);
+        font-size: var(--qo-legal-size);
+        line-height: var(--qo-legal-lh);
+        font-weight: 400;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-3) var(--space-4);
+        align-items: start;
+      }
+
+      @media (min-width: 600px) {
+        .qo-footer .perspective-contacts {
+          grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(0, 1.1fr);
+          gap: var(--space-3) var(--space-4);
+        }
+      }
+
+      .qo-footer .perspective-contacts__office,
+      .qo-footer .perspective-contacts__stack,
+      .qo-footer .perspective-contacts__col {
+        margin: 0;
+        font-size: inherit;
+        line-height: inherit;
+      }
+
+      .qo-footer .perspective-contacts__stack + .perspective-contacts__stack {
+        margin-top: var(--space-3);
+      }
+
+      .qo-footer .perspective-contacts__office strong,
+      .qo-footer .perspective-contacts__stack strong {
+        display: block;
+        margin-bottom: 2px;
+        font-family: var(--font-serif);
+        font-weight: 400;
+        font-size: var(--qo-contact-label-size);
+        color: var(--qo-contact-label-color);
+      }
+
+      .qo-footer .perspective-contacts p {
+        margin: 0;
+        font-size: inherit;
+        line-height: inherit;
+        font-family: inherit;
+        font-weight: 400;
+        color: inherit;
+      }
+
+      .qo-footer .perspective-contacts__meta {
+        color: var(--qo-footer-fg);
+      }
+
+      .qo-footer .perspective-contacts a {
+        color: var(--qo-footer-fg);
+        text-decoration: none;
+        font-size: inherit;
+      }
+
+      .qo-footer .perspective-contacts__meta a {
+        text-decoration: underline;
+        text-decoration-color: var(--qo-footer-fg);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.18em;
+      }
+
+      .qo-footer .qo-legal {
+        margin: 0;
+        text-align: left;
+        font-family: var(--font-sans);
+        font-size: var(--qo-legal-size);
+        line-height: var(--qo-legal-lh);
+        font-weight: 400;
+        color: var(--qo-footer-fg);
+      }
+
+      .qo-footer .qo-legal > p {
+        margin: 0 0 var(--space-3);
+        font-size: inherit;
+        line-height: inherit;
+        color: inherit;
+      }
+
+      .qo-footer .qo-legal > p:last-child {
+        margin-bottom: 0;
+      }
+
+      .qo-footer .perspective-contacts + .qo-legal > p:first-child {
+        margin-top: 0;
+      }
+
+      @media (max-width: 768px) {
+        :root {
+          --qo-kicker-size: 32px;
+          --qo-title-size: 22px;
+          --qo-section-size: 18px;
+          --qo-logo-width: 180px;
+          --qo-logo-top: 28px;
+          --gutter: 20px;
+        }
+
+        .container {
+          padding-left: var(--gutter);
+          padding-right: var(--gutter);
+        }
+
+        .qo-hero {
+          aspect-ratio: var(--qo-hero-aspect-mobile, 3 / 2);
+          min-height: clamp(200px, 52vw, 280px);
+          background-position: var(--qo-hero-position-mobile);
+        }
+
+        .qo-hero__inner {
+          padding-top: max(20px, var(--qo-logo-top));
+          padding-bottom: 16px;
+          min-height: 100%;
+        }
+
+        /* Stack: text then image (reading order). Use .qo-split--media-first to flip. */
+        .qo-split--media-first .qo-split__media {
+          order: -1;
+        }
+
+        .qo-footer .perspective-contacts {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .qo-footer .perspective-contacts__meta {
+          grid-column: 1 / -1;
+          padding-top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="family-quarterly-outlook">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!--
+      Continuous document (C.4 / C.6). No .document-page, page numbers, or running headers.
+      PDF page boundaries = visual QA checkpoints only.
+    -->
+    <div class="document">
+      <!--
+        HERO — stacked MT-Logo.svg centered + kicker "Quarterly Outlook" (A.5 / B.7 B).
+        Article title is NOT on the photo.
+        Set: style="--qo-hero-image: url('assets/<slug>/images/hero.jpg')"
+      -->
+      <header
+        class="site-header qo-hero"
+        role="banner"
+        style="--qo-hero-image: url('<!-- HERO_IMAGE_PATH -->')"
+      >
+        <div class="container qo-hero__inner">
+          <a class="qo-hero__logo" href="https://www.mutualtrust.com.au/">
+            <img
+              src="https://www.mutualtrust.com.au/wp-content/themes/mutual_trust/assets/images/MT-Logo.svg"
+              alt="Mutual Trust"
+              width="194"
+              height="51"
+            />
+          </a>
+          <hr class="qo-hero__rule" />
+          <p class="qo-hero__kicker"><!-- Quarterly Outlook --></p>
+        </div>
+      </header>
+
+      <main id="main-content" class="site-main" role="main" tabindex="-1">
+        <article class="container qo-article">
+          <h1 class="qo-article__title"><!-- ARTICLE_TITLE e.g. Equities: the tug of war --></h1>
+          <p class="qo-byline">
+            Written by <!-- AUTHOR_NAME -->
+            <span class="qo-byline__meta">| <!-- DATE --></span>
+          </p>
+
+          <div class="qo-body">
+            <!-- INTRO paragraphs (full width) -->
+
+            <!-- Optional 2-col: body copy + chart (March S&P sector bars; June pie). One image per chart. -->
+            <div class="qo-split">
+              <div class="qo-split__text">
+                <!-- paragraphs and/or ul.mt-list beside the figure -->
+              </div>
+              <figure class="qo-split__media">
+                <img src="<!-- CHART_PATH -->" alt="<!-- CHART_ALT -->" />
+                <figcaption class="source"><!-- Source: … --></figcaption>
+              </figure>
+            </div>
+
+            <!-- Opening questions: ul.mt-list (March) or numbered questions (June) -->
+            <ul class="mt-list">
+              <li><!-- Question 1 --></li>
+              <li><!-- Question 2 --></li>
+            </ul>
+
+            <!--
+              Section heads — pick the variant the PDF uses (do not mix unless source does):
+              June:  <h2 class="qo-section"><span class="qo-section__num">1.</span> Will higher rates…</h2>
+              March: <h2 class="qo-section qo-section--lede">The economic implications of a drawn-out conflict…</h2>
+            -->
+            <h2 class="qo-section">
+              <span class="qo-section__num"><!-- 1. --></span>
+              <!-- SECTION_HEADING -->
+            </h2>
+            <p><!-- section copy --></p>
+
+            <h2 class="qo-section qo-section--lede is-empty">
+              <!-- MARCH_LEDE — remove is-empty when PDF uses ochre body-size heads -->
+            </h2>
+
+            <aside class="qo-quote is-empty" aria-label="Quote">
+              <blockquote class="qo-quote__text">
+                <!-- QUOTE — roman Baskerville unless PDF is italic -->
+              </blockquote>
+              <p class="qo-quote__attr"><cite><!-- ATTRIBUTION e.g. BLACKROCK, MARCH 2026 --></cite></p>
+            </aside>
+
+            <p class="qo-cta">
+              <!-- Please reach out to your Mutual Trust Advisor with any questions. -->
+            </p>
+          </div>
+        </article>
+      </main>
+
+      <!-- Dark back cover — logo stacked + tagline + contacts + long legal (B.5.5 B) -->
+      <footer class="qo-footer" role="contentinfo">
+        <div class="container">
+          <a class="qo-footer__logo" href="https://www.mutualtrust.com.au/">
+            <img
+              src="https://www.mutualtrust.com.au/wp-content/themes/mutual_trust/assets/images/MT-Logo.svg"
+              alt="Mutual Trust"
+              width="194"
+              height="51"
+            />
+          </a>
+          <p class="qo-footer__tagline">
+            Helping families achieve what matters most.
+          </p>
+
+          <div class="perspective-contacts" aria-label="Office contacts">
+            <p class="perspective-contacts__office">
+              <strong><!-- Melbourne --></strong>
+              <!-- ADDRESS --><br />
+              T <a href="tel:<!-- TEL_RAW -->"><!-- TEL_DISPLAY --></a>
+            </p>
+            <p class="perspective-contacts__office">
+              <strong><!-- Sydney --></strong>
+              <!-- ADDRESS --><br />
+              T <a href="tel:<!-- TEL_RAW -->"><!-- TEL_DISPLAY --></a>
+            </p>
+            <p class="perspective-contacts__office">
+              <strong><!-- Perth --></strong>
+              <!-- ADDRESS --><br />
+              T <a href="tel:<!-- TEL_RAW -->"><!-- TEL_DISPLAY --></a>
+            </p>
+            <p class="perspective-contacts__office">
+              <strong><!-- Adelaide --></strong>
+              <!-- ADDRESS --><br />
+              T <a href="tel:<!-- TEL_RAW -->"><!-- TEL_DISPLAY --></a>
+            </p>
+            <div class="perspective-contacts__meta">
+              <p><a href="mailto:info@mutualtrust.com.au">info@mutualtrust.com.au</a></p>
+              <p>
+                <a href="https://www.mutualtrust.com.au/">www.mutualtrust.com.au</a>
+              </p>
+              <p>ABN: <!-- ABN --></p>
+              <p>AFSL: <!-- AFSL --></p>
+            </div>
+          </div>
+
+          <div class="qo-legal">
+            <p><!-- LIABILITY + short disclaimer --></p>
+            <p><!-- PREPARED IN AUSTRALIA / FSG --></p>
+            <p><!-- ACKNOWLEDGEMENT_OF_COUNTRY --></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
