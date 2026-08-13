@@ -208,7 +208,6 @@
          Measure: page W, content x (~72pt), hero H, kicker, title below, gaps
          ------------------------------------------------------------------ */
         --qo-page-w-pt: 594.96;
-        --qo-page-h-pt: 842.04; /* A4 — back-cover min-height uses W/H */
         --qo-content-x-pt: 72; /* Group B ~72pt both sides (B.3) — measure each PDF */
         --qo-content-x-right-pt: 72;
         --qo-hero-aspect: 594.96 / 224.6; /* March 2026 band; override per file */
@@ -248,20 +247,11 @@
         --qo-cta-gap: 24px;
         --qo-footer-bg: #1b1b20; /* March back cover fill */
         --qo-footer-fg: var(--color-white);
-        /* Back cover = one A4-tall slab (B.7 B). Gaps from PDF last page. */
-        --qo-footer-pad-top: calc(
-          var(--page-max) * 297 / var(--qo-page-w-pt)
-        ); /* ~297pt above logo */
-        --qo-footer-pad-bottom: calc(
-          var(--page-max) * 54 / var(--qo-page-w-pt)
-        ); /* ~54pt below legal */
+        --qo-footer-pad-top: 120px; /* air above logo — A4 back-cover feel */
+        --qo-footer-pad-bottom: 80px; /* air below legal */
         --qo-footer-logo-width: 200px; /* stacked; smaller than hero kicker */
-        --qo-footer-logo-gap: calc(
-          var(--page-max) * 29 / var(--qo-page-w-pt)
-        ); /* logo → tagline ~29pt */
-        --qo-footer-brand-gap: calc(
-          var(--page-max) * 246 / var(--qo-page-w-pt)
-        ); /* tagline → contacts ~246pt */
+        --qo-footer-logo-gap: 20px; /* logo → tagline */
+        --qo-footer-brand-gap: 88px; /* tagline → contacts */
         --qo-tagline-size: 19px; /* 14pt Baskerville */
         --qo-legal-size: 8px; /* PDF ~6pt — bump slightly */
         --qo-legal-lh: 1.4;
@@ -833,26 +823,13 @@
         display: none !important;
       }
 
-      /* --- Dark back cover (B.5.5 B) — one A4-proportioned slab in the page shell --- */
+      /* --- Dark back cover (B.5.5 B) --- */
       .qo-footer {
         margin-top: auto;
         background: var(--qo-footer-bg);
         color: var(--qo-footer-fg);
-        min-height: calc(
-          var(--page-max) * var(--qo-page-h-pt) / var(--qo-page-w-pt)
-        );
         padding: var(--qo-footer-pad-top) 0 var(--qo-footer-pad-bottom);
         text-align: center;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .qo-footer > .container {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
       }
 
       .qo-footer__brand {
@@ -992,7 +969,6 @@
           --qo-footer-logo-width: 140px;
           --qo-footer-pad-top: 64px;
           --qo-footer-pad-bottom: 48px;
-          --qo-footer-logo-gap: 16px;
           --qo-footer-brand-gap: 48px;
           --gutter: 20px;
         }
@@ -1017,10 +993,6 @@
         /* Stack: text then image (reading order). Use .qo-split--media-first to flip. */
         .qo-split--media-first .qo-split__media {
           order: -1;
-        }
-
-        .qo-footer {
-          min-height: 0;
         }
 
         .qo-footer .perspective-contacts {

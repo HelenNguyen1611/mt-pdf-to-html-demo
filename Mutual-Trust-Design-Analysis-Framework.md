@@ -171,6 +171,7 @@ Nguồn: Figma _Colour_ (`2:466`).
 - Cả hai SVG mặc định **fill trắng** — đặt trực tiếp trên ảnh hero / nền tối.
 - Trên nền trắng / Light Grey: đảo sang mực tối (CSS `filter`, `currentColor` + chỉnh SVG, hoặc lớp tương đương) để khớp logo đen/xám trên PDF — **không** để logo trắng trên nền trắng.
 - Giữ tỷ lệ gốc; width theo đo PDF (không méo). Placement (top-left / center / hidden) theo PDF, không theo thói quen web.
+- **Nhóm B hero:** stacked `MT-Logo.svg` rộng **½** chuỗi kicker *"Quarterly Outlook"* (`.qo-hero__brand` + `.qo-hero__logo { width: 50% }`) — không cố định 360px. Footer stacked: `--qo-footer-logo-width` (~200px), tách khỏi hero.
 
 **Favicon** (riêng, không thay logo): `https://www.mutualtrust.com.au/wp-content/uploads/2024/10/favicon.png`
 
@@ -408,7 +409,7 @@ Template tham chiếu:
 | --- | --- |
 | **C — Perspective** | Markup B.5.2; nền trắng; disclaimer ngắn; không back cover đen |
 | **A — Market Review** | Dải nền tối (`.mr-footer`); contacts B.5; **email/www thường có gạch chân trắng** (hairline PDF) — xem B.5.6; city Baskerville; body/legal Proxima Regular trắng; logo chỉ khi PDF có |
-| **B — Outlook** | Back cover tối: logo stacked / tagline *"Helping families achieve what matters most."* + disclaimer dài; byline PDF đưa vào article, không chạy footer |
+| **B — Outlook** | Back cover tối = **một khối cao bằng A4** trong `--page-max` (`.qo-footer` `min-height` = page H PDF). Logo stacked + tagline; **khoảng trống lớn trước logo (~297pt) và sau tagline (~246pt)**; byline PDF đưa vào article, không chạy footer |
 
 Số điện thoại / địa chỉ / ABN·AFSL lấy từ **PDF đang convert** (bảng trên chỉ là skeleton — luôn đối chiếu nguồn).
 
@@ -740,25 +741,50 @@ Nhóm A **dày hơn** Perspective: leading và gap giữa khối nhỏ. Sai lệ
 
 Token `--qo-*` + class `family-quarterly-outlook`. Convert: copy `website/template-quarterly-outlook.html` → đo PDF → override tokens → điền title/byline/body/split/quote + dark back cover (B.5.4). Tham chiếu PDF: March 2026 *Equities: the tug of war*; June 2026 *Still waters run deep*.
 
-- Trang bìa: logo stacked **`MT-Logo.svg` căn giữa** trên hero, đường kẻ ngang (`.qo-hero__rule`), kicker serif **"Quarterly Outlook"** (trắng, ~39pt). **Tiêu đề bài viết cụ thể** nằm **dưới ảnh** trên nền trắng (`.qo-article__title`, Baskerville ink — không overlay như nhóm A).
+- Trang bìa: logo stacked **`MT-Logo.svg` căn giữa** trên hero, đường kẻ ngang (`.qo-hero__rule`), kicker serif **"Quarterly Outlook"** (trắng, ~39pt). **Logo rộng đúng ½ kicker** — wrap `.qo-hero__brand` (`width: max-content`) + `.qo-hero__logo { width: 50% }` (không `--qo-logo-width: 360px`). **Tiêu đề bài viết cụ thể** nằm **dưới ảnh** trên nền trắng (`.qo-article__title`, Baskerville ink — không overlay như nhóm A).
+- **Body rhythm dày** như PDF: `--qo-para-gap: 8px` (~6–7pt giữa đoạn); `--qo-body-lh: 1.28` (PDF ~1.2); list `--list-item-gap: 4px`; byline → body ~10px — không dùng `--space-5` / 1.45 Perspective.
 - Byline PDF *"Written by [Tên] | [ngày]"* → `.qo-byline` **một lần** trong article; **không** lặp running footer / số trang.
-- **Hai kiểu section head** (đừng nhầm với numbered list B.9):
-  - **June:** `.qo-section` Baskerville ~16pt + Ochre `#D17B19` — `<span class="qo-section__num">1.</span>` + heading.
-  - **March:** `.qo-section.qo-section--lede` Proxima Light, cỡ thân bài, màu `#CBA020` (không đánh số serif lớn).
-- **Callout/pull-quote** (`.qo-quote`): nền đo từ PDF (March ≈ `#EEEEEE`; đôi khi `#E0E4EB`). Quote **Baskerville roman** trừ khi PDF italic; attribution sans, thường **căn phải** (vd. `BLACKROCK, MARCH 2026`). Không invent italic.
-- **2 cột** (`.qo-split`): text trái / chart phải trên desktop; mobile stack (mặc định text→ảnh; `.qo-split--media-first` nếu cần ảnh trước). **Một ảnh mỗi chart** — không composite.
-- Lề nội dung nhóm B ~**72pt** (`--qo-content-x-pt`) — hẹp hơn A/C; desktop pad `%` từ page W; **mobile ≤768: `--gutter: 20px`** như Perspective.
-- **Back cover** `.qo-footer`: nền `#1B1B20` (đo fill PDF); logo stacked + tagline *"Helping families achieve what matters most."* + contacts (March: 4 văn phòng địa chỉ đủ dòng + meta; June có thể stack 2 city/cột) + disclaimer dài 3 đoạn (B.5.1).
+- **Hai kiểu section head** (đừng nhầm với numbered list B.9). Selector lede/display **phải thắng** `.qo-body h2` (nếu không, heading bị serif lớn + màu bịa):
+  - **June:** `.qo-section` Baskerville ~16pt + Ochre Style Guide `#CB962E` — `<span class="qo-section__num">1.</span>` + heading.
+  - **March lede:** `.qo-section.qo-section--lede` **Proxima, cùng cỡ thân bài** (`--qo-section-lede-size: var(--qo-body-size)`), màu `--color-ochre` `#CB962E`. PDF export có thể ra `#CBA020` / `#D17B19` — **map về Ochre, không bịa HEX**. Không dùng Baskerville lớn cho lede.
+  - **March display** (hiếm): `.qo-section--display` Baskerville cỡ H1, mực `--color-ink` (vd. *Positioning portfolios for the decade ahead*).
+- **Callout/pull-quote** (`.qo-quote`): nền đo từ PDF rồi map Light Grey `#F4F4F4` khi gần; March fill ≈ `#EEEEEE`. Quote **Baskerville roman** trừ khi PDF italic; attribution sans, thường **căn phải**. Không invent italic.
+- **2 cột text + chart** — **đo bbox PDF**, không mặc định 50/50 và **không cap 320px**:
+  - `.qo-split`: `--qo-split-text-fr` / `--qo-split-media-fr` (March p0 ≈ **38fr / 62fr** — text ~176pt, chart ~284pt).
+  - `.qo-float`: chart `float: right; width: var(--qo-float-media-pct)` (March ≈ **61%**); pie rộng `--qo-float-media-pct-wide` ≈ **68%**. Gutter `--qo-split-gap` ~8–10px.
+  - Mobile: stack full width. **Một ảnh mỗi chart** — không composite.
+- Lề nội dung nhóm B trái ~**72pt**; **phải đo từng PDF** (March chart x1 ~540pt → `--qo-content-x-right-pt: 55`). Desktop pad `%` từ page W; **mobile ≤768: `--gutter: 20px`**.
+- Body: **10pt / 13.33px** Proxima (`--qo-body-size`) — không bump 14px. Mực `--color-ink` `#000000` (PDF `#1B1B20` map Black). Link `--color-ochre`, không `#CBA020`.
+- **Back cover** `.qo-footer`: **ngoại lệ A4** — đây là trang cuối PDF (nền `#1B1B20`); trên web là **một slab** `min-height: calc(var(--page-max) * var(--qo-page-h-pt) / var(--qo-page-w-pt))` ≈ chiều cao A4 trong shell (không phải nhiều `.document-page`). Logo stacked + tagline trong `.qo-footer__brand`. Đo March 2026 p.6:
+  - trước logo `--qo-footer-pad-top` ≈ **297pt** (~396px)
+  - logo → tagline `--qo-footer-logo-gap` ≈ **29pt**
+  - tagline → contacts `--qo-footer-brand-gap` ≈ **246pt** (~328px)
+  - sau legal `--qo-footer-pad-bottom` ≈ **54pt**
+  Mobile: bỏ `min-height` A4, pad nhỏ hơn. Contacts + disclaimer 3 đoạn (B.5.1). Không lặp running footer / số trang.
 
 | Token | Đo từ PDF | Ghi chú |
 | --- | --- | --- |
 | `--qo-page-w-pt` / `--page-max` | page W | A4 ≈ 594.96pt → ~793px |
 | `--qo-content-x-pt` | x0 body (~72) | không 5vw; không pad A/C ~55pt |
+| `--qo-content-x-right-pt` | x1 chart/body | March ~55pt (chart → 540pt); đo từng file |
 | `--qo-hero-aspect` | page W / hero H | March ≈ `594.96 / 224.6` |
 | `--qo-kicker-size` | "Quarterly Outlook" trên ảnh | ~39pt |
+| Hero logo width | **½ kicker** | `.qo-hero__brand` + `.qo-hero__logo { width: 50% }` |
+| `--qo-body-size` | body 10pt | **13.33px** — không 14px |
+| `--qo-para-gap` | ~6–7pt giữa đoạn | `8px` — không 14–16px web default |
+| `--qo-body-lh` | PDF ~1.2 | `1.28` web |
 | `--qo-title-size` | H1 dưới ảnh | March 20pt; June ~28pt |
+| `--qo-section-lede-size` | = body | Proxima + `--color-ochre`; selector `.qo-body h2.qo-section--lede` |
+| `--qo-split-text-fr` / `--qo-split-media-fr` | bbox text vs chart | March p0 **38fr / 62fr** — không 50/50 |
+| `--qo-float-media-pct` | chart share khi wrap | March **61%**; wide pie **68%**; không `min(48%, 320px)` |
+| `--qo-page-h-pt` | page H | A4 ≈ 842pt — dùng cho `min-height` back cover |
+| `--qo-footer-pad-top` | trước logo ~297pt | `calc(page-max * 297 / page-w)` ≈ 396px |
+| `--qo-footer-logo-gap` | logo → tagline ~29pt | calc từ page-max |
+| `--qo-footer-brand-gap` | tagline → contacts ~246pt | ≈ 328px — không 88px |
+| `--qo-footer-pad-bottom` | sau legal ~54pt | calc từ page-max |
+| `--qo-footer-logo-width` | stacked footer ~190pt | `200px` |
 
-**QA desktop:** kicker căn giữa trên ảnh; H1 + body cùng mép trái; section numbered ≠ bullet numbered; quote upright nếu PDF roman; bảng/chart không scroll ngang trừ khi hẹp hơn `--page-max`.
+**QA desktop:** logo hero = ½ width kicker; H1 + body cùng mép trái; lede = body size Proxima Ochre; text|chart % khớp bbox PDF; **footer slab cao ≈ A4** (pad trước logo + sau tagline như PDF p.cuối); quote upright nếu PDF roman.
 
 ### Nhóm C — Perspective / Insight Article
 
@@ -929,7 +955,7 @@ _Tham chiếu đầy đủ quy trình visual: **C.6**._
 10. Semantic / one-off colours và link treatment theo PDF khi có (C.6.7).
 11. List/bullet theo B.9 + C.6.6 — không dùng browser default.
 12. **Nhóm A — heat table + chart grid:** build theo B.6.2 / B.7.2 (`template-market-review.html`); desktop đủ cột + lưới 2×3; mobile table scroll-x + chart stack (B.6.3 / C.6.10). Hero overlay placement: B.7.1.
-12b. **Nhóm B — Quarterly Outlook:** copy `template-quarterly-outlook.html`; hero stacked logo + kicker; H1 dưới ảnh; section numbered Ochre **hoặc** lede Proxima; `.qo-split` cho chart; `.qo-quote` roman; `.qo-footer` back cover (B.7 B).
+12b. **Nhóm B — Quarterly Outlook:** copy `template-quarterly-outlook.html`; hero stacked logo = **½ width kicker**; H1 dưới ảnh; body 10pt; lede Proxima Ochre cùng cỡ body (selector thắng `.qo-body h2`); text|chart **đo bbox** (`.qo-split` / `.qo-float`, không cap 320px); `.qo-quote` roman; `.qo-footer` back cover (B.7 B).
 13. **Footer/legal** — bắt đầu từ cấu trúc chuẩn **B.5**; đo PDF rồi override (B.5.4). Không số trang / running footer.
 14. **Không tái tạo pagination của PDF trên web.** Nội dung chuyển thành continuous document flow. Page boundary của PDF chỉ dùng làm checkpoint trong visual QA để phát hiện cumulative spacing/typography drift (C.6.8–C.6.9).
 15. Chạy Visual Comparison Loop (C.6.8) — tối đa 3 vòng correction nếu còn khác biệt đáng kể; **desktop fidelity đạt trước** rồi mới responsive (C.6.10).
@@ -981,7 +1007,7 @@ Trước khi viết HTML/CSS phải xác định:
 - **Nhóm A — heat table:** số cột, section labels + gạch Ochre, fill dương/âm (sample drawing), source line, độ rộng bảng vs content column (B.6.2)
 - **Nhóm A — hero overlay:** `content_x`, `title_y`, page W (B.7.1)
 - **Nhóm A — chart grid:** bbox 6 panel, thứ tự đọc, có/không source trong ảnh; chuẩn bị clip riêng từng panel (B.7.2)
-- **Nhóm B — Outlook:** hero logo stacked + kicker vs H1 dưới ảnh; section numbered Ochre vs lede Proxima; split chart bbox; quote fill + slant; back-cover contacts/tagline (B.7 B)
+- **Nhóm B — Outlook:** hero logo = ½ kicker; H1 dưới ảnh; lede size/family/ochre; text|chart bbox %; para-gap dày; back-cover padding A4 quanh logo+tagline (B.7 B)
 
 Không bắt đầu từ browser default hoặc generic web styling.
 
