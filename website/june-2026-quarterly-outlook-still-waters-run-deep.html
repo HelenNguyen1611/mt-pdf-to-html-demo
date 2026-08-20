@@ -1,0 +1,2154 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Still waters run deep | Quarterly Outlook | Mutual Trust</title>
+    <meta
+      name="description"
+      content="Mutual Trust Quarterly Outlook, June 2026: equity leadership, AI capex, IPOs and resilient portfolio design."
+    />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="Still waters run deep | Quarterly Outlook" />
+    <meta
+      property="og:description"
+      content="Mutual Trust Quarterly Outlook, June 2026."
+    />
+    <meta property="og:type" content="article" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Still waters run deep | Quarterly Outlook" />
+
+    <link
+      rel="icon"
+      href="https://mt.wootech.com.au/wp-content/uploads/2024/10/favicon.png"
+      type="image/png"
+    />
+
+    <style>
+      /* ==========================================================================
+       Quarterly Outlook family template (Group B) — continuous responsive web
+       Framework: Mutual-Trust-Design-Analysis-Framework.md (B.7 B + B.5 + B.9 + C.6)
+       Sibling templates: template-perspective.html (C) · template-market-review.html (A)
+
+       Patterns vs Perspective (Group C) / Market Review (Group A):
+       - Hero: stacked MT-Logo.svg CENTERED + kicker "Quarterly Outlook" ON the image
+         Article H1 sits BELOW the photo (white). Not MMR overlay title; not Perspective top-left logo-m.
+       - Numbered Ochre section heads (June: "1. …") AND/OR ochre lede lines (March: Proxima Light)
+       - Optional 2-col split / float: text + chart — column % from PDF bbox, not 50/50 or a 320px cap
+       - Pull-quote panel (roman serif + sans attribution) — match PDF fill, do not invent italic
+       - Dark BACK COVER: stacked logo + tagline + contacts (full addresses) + long legal (B.5.5 B)
+       - Byline once in article ("Written by … | date") — never running footer / page numbers
+
+       CONVERT WORKFLOW (C.6 / B.7 B):
+       1. Inspect PDF: page W, content x0 (~72pt Group B), hero W/H, logo, kicker, title below,
+          numbered vs lede sections, heading HEX, splits/charts, quote fill, back-cover contacts
+       2. Override --page-max, --qo-page-w-pt, --qo-content-x-pt, --qo-* tokens
+          Heading colour: June numbered + asset-class heads = #D17B19 (not #CB962E).
+          Links: #D17B19 + italic <em>, no .is-underlined.
+       3. Hero: logo+kicker centered; title left = body left under image
+       4. Mobile ≤768: content gutters = Perspective (--gutter: 20px)
+       5. Fill continuous article; Visual Comparison Loop — desktop then mobile
+       Do NOT recreate running headers/footers or PDF page boundaries.
+       ========================================================================== */
+
+      @font-face {
+        font-family: 'Baskerville';
+        src:
+          url('assets/fonts/Baskerville.woff2') format('woff2'),
+          url('assets/fonts/Baskerville.woff') format('woff'),
+          url('assets/fonts/Baskerville.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Baskerville';
+        src:
+          url('assets/fonts/Baskerville-Italic.woff2') format('woff2'),
+          url('assets/fonts/Baskerville-Italic.woff') format('woff'),
+          url('assets/fonts/Baskerville-Italic.ttf') format('truetype');
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Proxima Nova';
+        src:
+          url('assets/fonts/ProximaNova-Regular.woff2') format('woff2'),
+          url('assets/fonts/ProximaNova-Regular.woff') format('woff'),
+          url('assets/fonts/ProximaNova-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Proxima Nova';
+        src:
+          url('assets/fonts/ProximaNova-RegularIt.woff2') format('woff2'),
+          url('assets/fonts/ProximaNova-RegularIt.woff') format('woff'),
+          url('assets/fonts/ProximaNova-RegularIt.ttf') format('truetype');
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Proxima Nova';
+        src:
+          url('assets/fonts/ProximaNova-Medium.woff2') format('woff2'),
+          url('assets/fonts/ProximaNova-Medium.woff') format('woff'),
+          url('assets/fonts/ProximaNova-Medium.ttf') format('truetype');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Proxima Nova';
+        src:
+          url('assets/fonts/ProximaNova-Semibold.woff2') format('woff2'),
+          url('assets/fonts/ProximaNova-Semibold.woff') format('woff'),
+          url('assets/fonts/ProximaNova-Semibold.ttf') format('truetype');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Proxima Nova';
+        src:
+          url('assets/fonts/ProximaNova-Bold.woff2') format('woff2'),
+          url('assets/fonts/ProximaNova-Bold.woff') format('woff'),
+          url('assets/fonts/ProximaNova-Bold.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Proxima Nova';
+        src:
+          url('assets/fonts/ProximaNova-Black.woff2') format('woff2'),
+          url('assets/fonts/ProximaNova-Black.woff') format('woff'),
+          url('assets/fonts/ProximaNova-Black.ttf') format('truetype');
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      :root {
+        /* Style Guide tokens */
+        --font-serif: 'Baskerville', Georgia, 'Times New Roman', serif;
+        --font-sans: 'Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+
+        --color-black: #000000;
+        --color-white: #ffffff;
+        --color-light-grey: #f4f4f4;
+        --color-grey: #767676;
+        --color-ochre: #cb962e;
+
+        --color-ink: var(--color-black);
+        --color-ink-muted: var(--color-grey);
+        --color-accent: var(--color-ochre);
+        --color-link: #d17b19; /* June article links — same copper as section heads */
+        --color-surface: var(--color-white);
+        --color-surface-tint: var(--color-light-grey);
+        --color-surface-dark: var(--color-black);
+
+        --space-1: 4px;
+        --space-2: 8px;
+        --space-3: 16px;
+        --space-4: 24px;
+        --space-5: 32px;
+        --space-6: 48px;
+        --space-7: 64px;
+
+        /* Page shell = PDF page width @ 96dpi (A4 595.32pt → ~794px). Override per PDF. */
+        --page-max: 793.28px; /* 594.96pt */
+        --container-max: var(--page-max);
+        --gutter: 20px; /* mobile = Perspective; desktop inset via --qo-content-x-pt */
+
+        --text-h1: 70px;
+        --text-h1-lh: 72px;
+        --text-h2: 48px;
+        --text-h2-lh: 1.2;
+        --text-h3: 40px;
+        --text-h3-lh: 1.1;
+        --text-h4: 32px;
+        --text-h4-lh: 1.3;
+        --text-h5: 24px;
+        --text-h5-lh: 1.4;
+        --text-h6: 16px;
+        --text-h6-lh: 1.4;
+
+        --text-large: 20px;
+        --text-large-lh: 1.5;
+        --text-medium: 18px;
+        --text-medium-lh: 24px;
+        --text-regular: 16px;
+        --text-regular-lh: 1.5;
+        --text-small: 14px;
+        --text-small-lh: 1.5;
+
+        --focus-ring: 2px solid var(--color-ochre);
+        --focus-offset: 3px;
+
+      /* Shared list tokens (framework B.9) — calibrate indent per PDF Flush/Outdent/Inset */
+      --list-marker-color: var(--color-ink);
+      --list-marker-gap: 24px; /* = 18pt PDF; fixed px, not em */
+      --list-indent: var(--list-marker-gap);
+      --list-marker-size: 5px; /* PDF crop ~4px +20% web readability */
+      --list-item-gap: 4px; /* Outlook lists sit tight; override if PDF adds gap */
+
+        /* ------------------------------------------------------------------
+         Quarterly Outlook tokens — OVERRIDE PER PDF (B.7 B / C.6)
+         Measure: page W, content x (~72pt), hero H, kicker, title below, gaps
+         ------------------------------------------------------------------ */
+        --qo-page-w-pt: 594.96;
+        --qo-page-h-pt: 842.04; /* A4 — back-cover min-height uses W/H */
+        --qo-content-x-pt: 72; /* Group B ~72pt both sides (B.3) — measure each PDF */
+        --qo-content-x-right-pt: 72;
+        --qo-hero-aspect: 594.96 / 212.3; /* June 2026 band */
+        --qo-hero-aspect-mobile: 3 / 2;
+        --qo-hero-position: center center;
+        --qo-hero-position-mobile: var(--qo-hero-position);
+        --qo-hero-scrim: rgba(0, 0, 0, 0.35); /* PDF hero fill opacity ≈ 0.35 */
+        --qo-logo-top: 60px;
+        --qo-kicker-size: 52px; /* 39pt */
+        --qo-kicker-lh: 1.05;
+        --qo-kicker-color: var(--color-white);
+        --qo-kicker-gap: 6px;
+        --qo-title-size: 37.33px; /* 28pt Baskerville */
+        --qo-title-lh: 1.15;
+        --qo-title-color: var(--color-ink);
+        --qo-byline-size: 9.33px; /* PDF ~7pt Light */
+        --qo-body-size: 13.33px; /* PDF 10pt — do not bump to 14px */
+        --qo-body-lh: 1.28; /* PDF ~1.2; slight web open — not 1.45 */
+        --qo-para-gap: 8px; /* PDF para gap ~6–7pt */
+        --qo-band-gap: 16px; /* hero→title; March ≈ 7pt — don't use Perspective --space-7 */
+        --qo-section-size: 21.33px; /* June numbered Baskerville ~16pt */
+        --qo-section-lede-size: var(--qo-body-size); /* March lede = body size, not larger */
+        --qo-section-color: #d17b19; /* PDF Baskerville 16pt heads — copper, not Style Guide #CB962E */
+        --qo-section-lede-color: var(--qo-section-color); /* Equities / Fixed Interest etc. also #D17B19 */
+        --qo-section-gap-before: 16px;
+        --qo-section-gap-after: 8px;
+        /* Text|image row: measure PDF bbox. March p0 text ~176pt / chart ~284pt ≈ 38/62 */
+        --qo-split-text-fr: 42fr;
+        --qo-split-media-fr: 58fr;
+        --qo-split-gap: 16px;
+        --qo-float-media-pct: 61%;
+        --qo-float-media-pct-wide: 70%; /* IPO chart */
+        --qo-quote-bg: #eaecf0; /* June fill rgb(234,236,240) */
+        --qo-quote-pad: 12px 16px;
+        --qo-quote-size: 14.67px; /* 11pt pull; sans lede quotes use body size */
+        --qo-cta-gap: 24px;
+        --qo-footer-bg: #1b1b20; /* March back cover fill */
+        --qo-footer-fg: var(--color-white);
+        /* Back cover = one A4-tall slab (B.7 B). Gaps from PDF last page. */
+        --qo-footer-pad-top: calc(
+          var(--page-max) * 297 / var(--qo-page-w-pt)
+        ); /* ~297pt above logo */
+        --qo-footer-pad-bottom: calc(
+          var(--page-max) * 54 / var(--qo-page-w-pt)
+        ); /* ~54pt below legal */
+        --qo-footer-logo-width: 200px; /* stacked; smaller than hero kicker */
+        --qo-footer-logo-gap: calc(
+          var(--page-max) * 29 / var(--qo-page-w-pt)
+        ); /* logo → tagline ~29pt */
+        --qo-footer-brand-gap: calc(
+          var(--page-max) * 246 / var(--qo-page-w-pt)
+        ); /* tagline → contacts ~246pt */
+        --qo-tagline-size: 19px; /* 14pt Baskerville */
+        --qo-legal-size: 8px; /* PDF ~6pt — bump slightly */
+        --qo-legal-lh: 1.4;
+        --qo-contact-label-size: 11px; /* ~8–9pt Baskerville */
+        --qo-contact-label-color: var(--color-white);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        -webkit-text-size-adjust: 100%;
+        scroll-behavior: smooth;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+      body {
+        margin: 0;
+        min-width: 0;
+        font-family: var(--font-sans);
+        font-size: var(--text-regular);
+        font-weight: 400;
+        line-height: var(--text-regular-lh);
+        color: var(--color-ink);
+        background-color: var(--color-surface);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      img,
+      picture,
+      video,
+      svg {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+    a {
+      color: var(--color-link);
+      text-decoration: none; /* PDF often colour-only; do not invent underline */
+      font-weight: inherit; /* match PDF; do not invent bold links */
+    }
+
+    a:hover {
+      text-decoration: underline; /* web affordance only */
+      text-underline-offset: 0.15em;
+    }
+
+      a:focus-visible,
+      button:focus-visible,
+      summary:focus-visible,
+      [tabindex]:focus-visible {
+        outline: var(--focus-ring);
+        outline-offset: var(--focus-offset);
+      }
+
+      :focus:not(:focus-visible) {
+        outline: none;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0 0 var(--space-3);
+        font-family: var(--font-serif);
+        font-weight: 400;
+        color: var(--color-ink);
+      }
+
+      p {
+        margin: 0 0 var(--space-3);
+        font-family: var(--font-sans);
+        font-size: var(--qo-body-size);
+        line-height: var(--qo-body-lh);
+      }
+
+      strong,
+      b {
+        font-weight: 700;
+      }
+
+      em,
+      i {
+        font-style: italic;
+      }
+
+      .text-muted {
+        color: var(--color-ink-muted);
+      }
+
+      .text-small {
+        font-size: var(--text-small);
+        line-height: var(--text-small-lh);
+      }
+
+      .skip-link {
+        position: absolute;
+        left: var(--space-3);
+        top: 0;
+        z-index: 1000;
+        padding: var(--space-2) var(--space-3);
+        background: var(--color-black);
+        color: var(--color-white);
+        font-family: var(--font-sans);
+        font-size: var(--text-small);
+        text-decoration: none;
+        transform: translateY(-120%);
+      }
+
+      .skip-link:focus {
+        transform: translateY(var(--space-3));
+        outline: var(--focus-ring);
+        outline-offset: var(--focus-offset);
+      }
+
+      .visually-hidden {
+        position: absolute !important;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      /* Continuous document shell = PDF page width (not full viewport, not multi-page A4) */
+      .document {
+        width: 100%;
+        max-width: var(--page-max);
+        margin-inline: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: var(--color-surface);
+      }
+
+      .container {
+        width: 100%;
+        max-width: var(--container-max);
+        margin-inline: auto;
+        padding-left: max(
+          var(--gutter),
+          calc(100% * var(--qo-content-x-pt) / var(--qo-page-w-pt))
+        );
+        padding-right: max(
+          var(--gutter),
+          calc(
+            100% * var(--qo-content-x-right-pt, var(--qo-content-x-pt)) /
+              var(--qo-page-w-pt)
+          )
+        );
+      }
+
+      .site-main {
+        flex: 1 0 auto;
+        width: 100%;
+      }
+
+      /* Never rely on browser default list styling (C.6.6 / B.9) */
+      .qo-body ul,
+      .qo-body ol {
+        list-style: none;
+        padding-left: 0;
+        margin: 0 0 var(--qo-para-gap);
+      }
+
+      /* Shared list — framework B.9 (Flush default; add --outdent / --inset per PDF) */
+      ul.mt-list,
+      ol.mt-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0 0 var(--qo-para-gap);
+      }
+
+      ul.mt-list > li,
+      ol.mt-list > li {
+        position: relative;
+        padding-left: var(--list-indent);
+        text-indent: 0;
+        line-height: var(--qo-body-lh);
+        margin: 0 0 var(--list-item-gap);
+        color: var(--color-ink);
+      }
+
+      /* Small disc ≈ SymbolMT — not full-size • (too large vs PDF) */
+      ul.mt-list > li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.55em;
+        width: var(--list-marker-size);
+        height: var(--list-marker-size);
+        border-radius: 50%;
+        background-color: var(--list-marker-color);
+      }
+
+      ol.mt-list {
+        counter-reset: mt-counter;
+      }
+
+      ol.mt-list > li::before {
+        counter-increment: mt-counter;
+        content: counter(mt-counter) ".";
+        position: absolute;
+        left: 0;
+        width: var(--list-indent);
+        text-align: left;
+        color: var(--list-marker-color);
+        font-size: inherit;
+        line-height: inherit;
+        background: none;
+        border-radius: 0;
+      }
+
+      .mt-list--outdent {
+        margin-left: calc(-1 * var(--list-indent));
+      }
+
+      .mt-list--inset {
+        padding-left: var(--list-indent);
+      }
+
+      .qo-body ul.mt-list--inset,
+      .qo-body ol.mt-list--inset {
+        padding-left: var(--list-indent);
+      }
+
+      .qo-body ul.mt-list--outdent {
+        margin-left: calc(-1 * var(--list-indent));
+      }
+
+      /* ==========================================================================
+       QUARTERLY OUTLOOK FAMILY — Group B layout patterns (B.7 B)
+       ========================================================================== */
+
+      /* --- Hero: stacked logo + kicker ON image; article title is below --- */
+      .qo-hero {
+        position: relative;
+        width: 100%;
+        aspect-ratio: var(--qo-hero-aspect);
+        min-height: 0;
+        overflow: hidden;
+        flex-shrink: 0;
+        color: var(--color-white);
+        background-color: #2a2a2a;
+        background-image: var(--qo-hero-image, none);
+        background-position: var(--qo-hero-position);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .qo-hero::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: var(--qo-hero-scrim);
+        pointer-events: none;
+      }
+
+      .qo-hero__inner {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: var(--qo-logo-top);
+        padding-bottom: var(--space-4);
+        box-sizing: border-box;
+        text-align: center;
+      }
+
+      /* Brand stack: logo is 50% of kicker “Quarterly Outlook” width */
+      .qo-hero__brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: max-content;
+        max-width: 100%;
+      }
+
+      .qo-hero__logo {
+        display: block;
+        line-height: 0;
+        width: 50%;
+      }
+
+      .qo-hero__logo img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Hairline under stacked logo when PDF shows a rule (omit via .is-empty) */
+      .qo-hero__rule {
+        display: block;
+        width: 50%;
+        height: 0;
+        margin: 8px 0 var(--qo-kicker-gap);
+        border: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.85);
+      }
+
+      .qo-hero__rule.is-empty {
+        display: none !important;
+      }
+
+      .qo-hero__kicker {
+        margin: 0;
+        font-family: var(--font-serif);
+        font-weight: 400;
+        font-size: var(--qo-kicker-size);
+        line-height: var(--qo-kicker-lh);
+        color: var(--qo-kicker-color);
+        max-width: none;
+        white-space: nowrap;
+      }
+
+      /* --- Article under hero --- */
+      .qo-article {
+        padding-top: var(--qo-band-gap);
+        padding-bottom: var(--space-4);
+      }
+
+      .qo-article__title {
+        margin: 0 0 var(--space-2);
+        font-family: var(--font-serif);
+        font-weight: 400;
+        font-size: var(--qo-title-size);
+        line-height: var(--qo-title-lh);
+        color: var(--qo-title-color);
+      }
+
+      .qo-byline {
+        margin: 0 0 10px;
+        font-family: var(--font-sans);
+        font-size: var(--qo-byline-size);
+        font-weight: 400;
+        line-height: 1.4;
+        color: var(--color-ink-muted);
+      }
+
+      .qo-byline.is-empty {
+        display: none !important;
+      }
+
+      .qo-body {
+        font-family: var(--font-sans);
+        font-size: var(--qo-body-size);
+        line-height: var(--qo-body-lh);
+        color: var(--color-ink);
+      }
+
+      .qo-body p {
+        margin: 0 0 var(--qo-para-gap);
+      }
+
+      .qo-body p.qo-cta {
+        margin: var(--qo-cta-gap) 0 0;
+      }
+
+      /* June: numbered Baskerville Ochre. Do not use for body bullets (B.9). */
+      .qo-body h2,
+      .qo-section {
+        margin: var(--qo-section-gap-before) 0 var(--qo-section-gap-after);
+        font-family: var(--font-serif);
+        font-weight: 400;
+        font-size: var(--qo-section-size);
+        line-height: 1.25;
+        color: var(--qo-section-color);
+      }
+
+      .qo-section__num {
+        font-family: inherit;
+        color: inherit;
+        margin-right: 0.25em;
+      }
+
+      /* March lede: must beat `.qo-body h2` (serif + larger size + invented ochre). */
+      .qo-body h2.qo-section--lede,
+      .qo-section--lede {
+        font-family: var(--font-sans);
+        font-weight: 400;
+        font-size: var(--qo-section-lede-size);
+        line-height: var(--qo-body-lh);
+        color: var(--qo-section-lede-color);
+      }
+
+      .qo-body h2.qo-section--display,
+      .qo-section--display {
+        font-family: var(--font-serif);
+        font-weight: 400;
+        font-size: var(--qo-title-size);
+        line-height: var(--qo-title-lh);
+        color: var(--qo-title-color);
+      }
+
+      .qo-body h2:first-child,
+      .qo-section:first-child {
+        margin-top: 0;
+      }
+
+      .qo-body a {
+        color: var(--color-link);
+        text-decoration: none;
+      }
+
+      .qo-body a em,
+      .qo-cta a em {
+        font-style: italic;
+        font-weight: inherit;
+        color: inherit;
+      }
+
+      .qo-body a.is-italic,
+      .qo-cta a.is-italic {
+        font-style: italic;
+      }
+
+      .qo-body a.is-underlined,
+      .qo-cta a.is-underlined {
+        text-decoration: underline;
+        text-decoration-color: var(--color-link);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+        text-decoration-skip-ink: none;
+      }
+
+      .qo-body a:hover,
+      .qo-cta a:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--color-link);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+      }
+
+      /* --- 2-col text + chart (B.7 B). Desktop: text | media. Mobile: stack. --- */
+      .qo-split {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--qo-split-gap);
+        margin: 0 0 var(--qo-para-gap);
+        align-items: start;
+      }
+
+      @media (min-width: 700px) {
+        .qo-split {
+          grid-template-columns: minmax(0, var(--qo-split-text-fr)) minmax(
+              0,
+              var(--qo-split-media-fr)
+            );
+        }
+
+        .qo-split--media-start {
+          grid-template-columns: minmax(0, var(--qo-split-media-fr)) minmax(
+              0,
+              var(--qo-split-text-fr)
+            );
+        }
+
+        .qo-split--media-start .qo-split__media {
+          order: -1;
+        }
+      }
+
+      .qo-split__text p:last-child,
+      .qo-split__text ul:last-child {
+        margin-bottom: 0;
+      }
+
+      .qo-split__media {
+        margin: 0;
+      }
+
+      .qo-split__media img {
+        width: 100%;
+        height: auto;
+      }
+
+      .qo-split__media .source,
+      .qo-body .source {
+        margin: 6px 0 0;
+        font-family: var(--font-sans);
+        font-size: 11px;
+        line-height: 1.35;
+        color: var(--color-ink);
+      }
+
+      /* Text wraps beside a floated chart — width % from PDF, no 320px cap */
+      .qo-float {
+        display: flow-root;
+        margin: 0 0 var(--qo-para-gap);
+      }
+
+      .qo-float > figure {
+        margin: 0 0 var(--qo-split-gap);
+      }
+
+      @media (min-width: 700px) {
+        .qo-float > figure {
+          float: right;
+          width: var(--qo-float-media-pct);
+          margin: 0 0 12px var(--qo-split-gap);
+        }
+
+        .qo-float--wide > figure {
+          width: var(--qo-float-media-pct-wide);
+        }
+
+        .qo-float--media-start > figure {
+          float: left;
+          margin: 0 var(--qo-split-gap) 12px 0;
+        }
+      }
+
+      .qo-float img {
+        width: 100%;
+        height: auto;
+      }
+
+      /* June: Proxima roman quotes (not Baskerville) */
+      .qo-quote--sans .qo-quote__text {
+        font-family: var(--font-sans);
+        font-size: var(--qo-body-size);
+        line-height: var(--qo-body-lh);
+        font-style: normal;
+      }
+
+      /* Page 1 Baskerville pull — white, no grey panel */
+      .qo-pull {
+        margin: 0;
+        padding: 0;
+        background: transparent;
+        font-family: var(--font-serif);
+        font-size: var(--qo-quote-size);
+        line-height: 1.35;
+        font-style: normal;
+        color: var(--color-ink);
+      }
+
+      .qo-split--pull {
+        --qo-split-text-fr: 70fr;
+        --qo-split-media-fr: 30fr;
+      }
+
+      .qo-split--halo {
+        --qo-split-text-fr: 62fr;
+        --qo-split-media-fr: 38fr;
+      }
+
+      .qo-split--halo .qo-split__text {
+        padding-left: var(--list-indent);
+      }
+
+      .qo-callout {
+        margin: 0 0 var(--qo-para-gap);
+        padding: 12px 14px;
+        background: var(--qo-quote-bg);
+      }
+
+      .qo-callout .mt-list {
+        margin-bottom: 0;
+      }
+
+      .qo-callout__title {
+        margin: 0 0 8px;
+        font-family: var(--font-sans);
+        font-size: var(--qo-body-size);
+        line-height: var(--qo-body-lh);
+        color: var(--color-ink);
+      }
+
+      .qo-charts {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--qo-split-gap);
+        margin: 12px 0 16px;
+      }
+
+      @media (min-width: 700px) {
+        .qo-charts {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .qo-charts figure {
+        margin: 0;
+      }
+
+      .qo-charts img {
+        width: 100%;
+        height: auto;
+      }
+
+      .qo-section--asset {
+        font-size: 22.67px; /* 17pt Baskerville ochre */
+      }
+
+      .qo-views {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--space-4) var(--space-5);
+        margin: 0 0 var(--qo-para-gap);
+      }
+
+      @media (min-width: 700px) {
+        .qo-views {
+          grid-template-columns: 1fr 1fr;
+          align-items: start;
+        }
+      }
+
+      .qo-views h3 {
+        margin: var(--qo-section-gap-before) 0 var(--qo-section-gap-after);
+        font-family: var(--font-sans);
+        font-weight: 400;
+        font-size: var(--qo-body-size);
+        line-height: var(--qo-body-lh);
+        color: var(--qo-section-lede-color);
+      }
+
+      .qo-views h3:first-child {
+        margin-top: 0;
+      }
+
+      .qo-table-block {
+        margin: 16px 0;
+      }
+
+      .qo-table-block__title {
+        margin: 0 0 8px;
+        font-family: var(--font-sans);
+        font-weight: 700;
+        font-size: 14.67px;
+        line-height: 1.3;
+        color: var(--color-ink);
+      }
+
+      .qo-table-wrap {
+        width: 100%;
+      }
+
+      table.qo-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        font-family: var(--font-serif);
+        font-size: 13px;
+        line-height: 1.3;
+        color: var(--color-ink);
+      }
+
+      table.qo-table th,
+      table.qo-table td {
+        border: none;
+        padding: 6px 8px;
+        text-align: center;
+        font-weight: 400;
+        vertical-align: middle;
+      }
+
+      table.qo-table th {
+        background: #6a7f99; /* PDF header fill rgb(106,127,153) */
+        color: var(--color-white);
+        font-weight: 400;
+      }
+
+      table.qo-table td:first-child {
+        text-align: left;
+      }
+
+      .qo-table-block .source {
+        margin: 6px 0 0;
+        font-size: 11px;
+      }
+
+      @media (min-width: 600px) {
+        .qo-footer .perspective-contacts--june {
+          grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(0, 1.15fr);
+        }
+      }
+
+      /* --- Pull quote (roman serif unless PDF italic) --- */
+      .qo-quote {
+        margin: 16px 0;
+        padding: var(--qo-quote-pad);
+        background: var(--qo-quote-bg);
+      }
+
+      .qo-quote.is-empty {
+        display: none !important;
+      }
+
+      .qo-quote__text {
+        margin: 0;
+        font-family: var(--font-serif);
+        font-size: var(--qo-quote-size);
+        line-height: 1.4;
+        font-style: normal;
+        color: var(--color-ink);
+      }
+
+      .qo-quote__text--italic {
+        font-style: italic;
+      }
+
+      .qo-quote__attr {
+        margin: var(--space-2) 0 0;
+        font-family: var(--font-sans);
+        font-size: 11px;
+        line-height: 1.3;
+        text-align: right;
+        color: var(--color-ink);
+      }
+
+      .qo-quote__attr cite {
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+      }
+
+      .qo-cta {
+        margin: var(--qo-cta-gap) 0 0;
+        font-family: var(--font-sans);
+        font-size: var(--qo-body-size);
+        line-height: var(--qo-body-lh);
+      }
+
+      .is-empty {
+        display: none !important;
+      }
+
+      /* --- Dark back cover (B.5.5 B) — one A4-proportioned slab in the page shell --- */
+      .qo-footer {
+        margin-top: auto;
+        background: var(--qo-footer-bg);
+        color: var(--qo-footer-fg);
+        min-height: calc(
+          var(--page-max) * var(--qo-page-h-pt) / var(--qo-page-w-pt)
+        );
+        padding: var(--qo-footer-pad-top) 0 var(--qo-footer-pad-bottom);
+        text-align: center;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .qo-footer > .container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .qo-footer__brand {
+        padding-bottom: var(--qo-footer-brand-gap);
+      }
+
+      .qo-footer a {
+        color: var(--qo-footer-fg);
+        text-decoration: none;
+        font-family: var(--font-sans);
+        font-weight: 400;
+      }
+
+      .qo-footer__logo {
+        display: inline-block;
+        margin: 0 auto var(--qo-footer-logo-gap);
+        line-height: 0;
+      }
+
+      .qo-footer__logo img {
+        width: var(--qo-footer-logo-width);
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-inline: auto;
+      }
+
+      .qo-footer__tagline {
+        margin: 0;
+        font-family: var(--font-serif);
+        font-weight: 400;
+        font-size: var(--qo-tagline-size);
+        line-height: 1.3;
+        color: var(--qo-footer-fg);
+      }
+
+      .qo-footer .perspective-contacts {
+        margin: 0 0 var(--space-5);
+        text-align: left;
+        color: var(--qo-footer-fg);
+        font-family: var(--font-sans);
+        font-size: var(--qo-legal-size);
+        line-height: var(--qo-legal-lh);
+        font-weight: 400;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-3) var(--space-4);
+        align-items: start;
+      }
+
+      @media (min-width: 600px) {
+        .qo-footer .perspective-contacts {
+          grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(0, 1.1fr);
+          gap: var(--space-3) var(--space-4);
+        }
+      }
+
+      .qo-footer .perspective-contacts__office,
+      .qo-footer .perspective-contacts__stack,
+      .qo-footer .perspective-contacts__col {
+        margin: 0;
+        font-size: inherit;
+        line-height: inherit;
+      }
+
+      .qo-footer .perspective-contacts__stack + .perspective-contacts__stack {
+        margin-top: var(--space-3);
+      }
+
+      .qo-footer .perspective-contacts__office strong,
+      .qo-footer .perspective-contacts__stack strong {
+        display: block;
+        margin-bottom: 2px;
+        font-family: var(--font-serif);
+        font-weight: 400;
+        font-size: var(--qo-contact-label-size);
+        color: var(--qo-contact-label-color);
+      }
+
+      .qo-footer .perspective-contacts p {
+        margin: 0;
+        font-size: inherit;
+        line-height: inherit;
+        font-family: inherit;
+        font-weight: 400;
+        color: inherit;
+      }
+
+      .qo-footer .perspective-contacts__meta {
+        color: var(--qo-footer-fg);
+      }
+
+      .qo-footer .perspective-contacts a {
+        color: var(--qo-footer-fg);
+        text-decoration: none;
+        font-size: inherit;
+      }
+
+      .qo-footer .perspective-contacts__meta a {
+        text-decoration: underline;
+        text-decoration-color: var(--qo-footer-fg);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.18em;
+      }
+
+      .qo-footer .qo-legal {
+        margin: 0;
+        text-align: left;
+        font-family: var(--font-sans);
+        font-size: var(--qo-legal-size);
+        line-height: var(--qo-legal-lh);
+        font-weight: 400;
+        color: var(--qo-footer-fg);
+      }
+
+      .qo-footer .qo-legal > p {
+        margin: 0 0 var(--space-3);
+        font-size: inherit;
+        line-height: inherit;
+        color: inherit;
+      }
+
+      .qo-footer .qo-legal > p:last-child {
+        margin-bottom: 0;
+      }
+
+      .qo-footer .perspective-contacts + .qo-legal > p:first-child {
+        margin-top: 0;
+      }
+
+      @media (max-width: 768px) {
+        :root {
+          --qo-kicker-size: 32px;
+          --qo-title-size: 22px;
+          --qo-section-size: 18px;
+          --qo-logo-top: 28px;
+          --qo-footer-logo-width: 140px;
+          --qo-footer-pad-top: 64px;
+          --qo-footer-pad-bottom: 48px;
+          --qo-footer-logo-gap: 16px;
+          --qo-footer-brand-gap: 48px;
+          --gutter: 20px;
+        }
+
+        .container {
+          padding-left: var(--gutter);
+          padding-right: var(--gutter);
+        }
+
+        .qo-hero {
+          aspect-ratio: var(--qo-hero-aspect-mobile, 3 / 2);
+          min-height: clamp(200px, 52vw, 280px);
+          background-position: var(--qo-hero-position-mobile);
+        }
+
+        .qo-hero__inner {
+          padding-top: max(20px, var(--qo-logo-top));
+          padding-bottom: 16px;
+          min-height: 100%;
+        }
+
+        /* Stack: text then image (reading order). Use .qo-split--media-first to flip. */
+        .qo-split--media-first .qo-split__media {
+          order: -1;
+        }
+
+        .qo-footer {
+          min-height: 0;
+        }
+
+        .qo-footer .perspective-contacts {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .qo-footer .perspective-contacts__meta {
+          grid-column: 1 / -1;
+          padding-top: 0;
+        }
+
+        .qo-charts {
+          grid-template-columns: 1fr;
+        }
+
+        .qo-views {
+          grid-template-columns: 1fr;
+        }
+
+        .qo-table-wrap {
+          overflow-x: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="family-quarterly-outlook">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!--
+      Continuous document (C.4 / C.6). No .document-page, page numbers, or running headers.
+      PDF page boundaries = visual QA checkpoints only.
+    -->
+    <div class="document">
+      <header
+        class="site-header qo-hero"
+        role="banner"
+        style="--qo-hero-image: url('assets/june-2026-quarterly-outlook-still-waters-run-deep/images/hero.jpeg')"
+      >
+        <div class="container qo-hero__inner">
+          <div class="qo-hero__brand">
+            <a class="qo-hero__logo" href="https://www.mutualtrust.com.au/">
+              <img
+                src="https://www.mutualtrust.com.au/wp-content/themes/mutual_trust/assets/images/MT-Logo.svg"
+                alt="Mutual Trust"
+                width="194"
+                height="51"
+              />
+            </a>
+            <hr class="qo-hero__rule" />
+            <p class="qo-hero__kicker">Quarterly Outlook</p>
+          </div>
+        </div>
+      </header>
+
+      <main id="main-content" class="site-main" role="main" tabindex="-1">
+        <article class="container qo-article">
+          <h1 class="qo-article__title">Still waters run deep</h1>
+          <p class="qo-byline">
+            Written by Simone Rouse
+            <span class="qo-byline__meta">| 22 June 2026</span>
+          </p>
+
+          <div class="qo-body">
+            <aside class="qo-quote qo-quote--sans" aria-label="Quote">
+              <blockquote class="qo-quote__text">
+                A small part of the market is doing an increasingly large share
+                of the work, both in sustaining equity returns and supporting
+                broader economic momentum through AI-related investment. In this
+                environment, even modest shifts in sentiment, rates or policy
+                can have an outsized impact on markets -- reinforcing the need
+                for intentional diversification.
+              </blockquote>
+              <p class="qo-quote__attr">
+                <cite
+                  >SIMONE ROUSE, HEAD OF PORTFOLIO SOLUTIONS &amp; RESPONSIBLE
+                  INVESTMENT, MUTUAL TRUST</cite
+                >
+              </p>
+            </aside>
+
+            <p>
+              Equity indices continue to climb, with a narrow cohort of
+              AI-driven businesses across semiconductors, hyperscalers and
+              adjacent growth franchises driving a disproportionate share of
+              returns. Credit spreads remain tight, and capital markets have so
+              far remained receptive to ever-larger AI-related funding needs.
+            </p>
+            <p>
+              On the surface, confidence remains high. Beneath this, underlying
+              dynamics are complex and markets are more fragile than headline
+              indices suggest. Volatility is likely as expectations for AI
+              recalibrate or as leadership broadens. Geopolitical tensions
+              persist across several regions, while upcoming political cycles,
+              including elections and shifting policies, are widening the range
+              of outcomes. In this Quarterly Outlook, we explore four questions:
+            </p>
+            <ol class="mt-list mt-list--inset">
+              <li>Will higher rates threaten the AI-capex cycle?</li>
+              <li>Can equity market leadership broaden?</li>
+              <li>
+                Could a wave of outsized initial public offerings (IPOs)
+                challenge returns?
+              </li>
+              <li>How do we design resilient portfolios?</li>
+            </ol>
+            <p>
+              Earnings from AI-related mega-caps continue to deliver, and the
+              scale of investment and breadth of applications point to a
+              multi-year cycle still in its infancy. However, over the
+              medium-term, it is critical to look beyond the current leaders for
+              both sources of return and portfolio protection.
+            </p>
+            <p>
+              Our base case remains constructive. Global equities are supported
+              by stimulatory policy tailwinds (notably OBBBA and elevated
+              defence spending), sustained AI-capex and resilient earnings
+              growth. The U.S.-- Iran memorandum of understanding is a positive
+              step, although the situation remains fragile and outcomes
+              uncertain.
+            </p>
+            <p>
+              We maintain a strategic bias towards international equities
+              (predominantly the U.S.) over Australia, while adding exposure to
+              emerging markets. Our portfolios are positioned for broadening
+              market leadership through exposure to adjacent industries in the
+              AI ecosystem and “old economy” sectors leveraged to wider growth
+              dynamics, including industrials, energy, materials and financials.
+              We continue to actively rebalance portfolios, trimming positions
+              that have benefited materially from the recent rally.
+            </p>
+            <p>
+              We reiterate the role of alternative assets in providing different
+              forms of return and income generation, inflation protection and
+              downside mitigation -- including hedge funds, real assets
+              (property, infrastructure), commodities, royalites (sport, music,
+              mining) and private market debt and equity -- where Mutual Trust
+              allocations are as high as 30% to 50%.
+            </p>
+            <p>
+              Overall, we emphasise intentional diversification, with each
+              investment playing a defined role in the portfolio, collectively
+              capturing a broader set of opportunities while managing risks
+              beneath the surface.
+            </p>
+
+            <h2 class="qo-section">
+              <span class="qo-section__num">1.</span> Will higher rates threaten
+              the AI-capex cycle?
+            </h2>
+            <p>
+              Counterintuitively, one of the key risks to markets is an
+              accelerating U.S. economy, which could reinforce a
+              higher-for-longer rate environment. This matters for AI, as the
+              sustainability of the AI build-out is becoming increasingly
+              sensitive to both the cost and availability of capital, given the
+              increased role of debt in financing capex.
+            </p>
+            <p>
+              Near-term rate expectations have shifted meaningfully on the back
+              of the longer than anticipated conflict in the Middle East and,
+              most recently, stronger than expected U.S. data. The May payrolls
+              report surprised to the upside, adding 172,000 jobs, while U.S.
+              PMI surveys indicated solid expansion across both manufacturing
+              and services sectors, with manufacturing hitting a four-year high.
+            </p>
+            <p>
+              Although U.S. inflation data showed little evidence of
+              energy-price pass-through to core inflation, the Federal Reserve
+              (Fed) raised core inflation expectations to 3.3% for 2026 (versus
+              2.7% forecast in March), well ahead of its 2% target. Expectations
+              of monetary easing by the Fed have faded, now assigning a rising
+              probability of a rate hike by December. This shift coincided with
+              renewed volatility across technology and semiconductor equities in
+              June.
+            </p>
+            <p>
+              Long-dated U.S. bond yields have also moved higher, with the
+              10-year Treasury trading between 4.4%-4.6% and the 30-year
+              recently approaching its two-decade high of 5.2%. This reflects
+              investors demanding higher premiums to hold long-term government
+              debt amid increased government spending, persistent inflation and
+              resilient growth.
+            </p>
+
+            <div class="qo-split qo-split--pull">
+              <div class="qo-split__text">
+                <p>
+                  Higher rates particularly matter for AI. They reduce the value
+                  of long-duration earnings, but the more important issue is the
+                  funding model behind the build-out. AI infrastructure requires
+                  large upfront investment and, increasingly, external capital
+                  rather than cash flows alone.
+                </p>
+                <p>
+                  Debt is playing a more meaningful role. Hyperscalers issued
+                  over US$120 billion of debt in 2025 (more than four times
+                  historical levels) with activity accelerating further in 2026
+                  -- including large deals from Amazon and Alphabet. Broader
+                  AI-related debt issuance is also running well ahead of last
+                  year, arriving at a time when credit spreads remain
+                  historically tight.
+                </p>
+              </div>
+              <p class="qo-pull">
+                The top five U.S. hyper-scalers (Microsoft, Meta, Amazon,
+                Oracle, Alphabet) upgraded their capex guidance once again at
+                their recent results, and are now projected to spend circa
+                US$700 billion in capex in 2026, an 83% increase from 2025.
+              </p>
+            </div>
+            <p>
+              The result is greater selectivity and wider dispersion across
+              issuers, with investors focusing more closely on balance sheet
+              strength and confidence in AI returns. This was evident in the
+              sharp market reaction to Oracle’s recent funding and capex plans,
+              which raised concerns around cash burn, leverage and the
+              monetisation of AI infrastructure. The cost of insuring Oracle’s
+              debt has risen materailly relative to peers (as reflected in
+              credit default swap (CDS) spreads), underscoring growing investor
+              caution.
+            </p>
+
+            <div class="qo-charts">
+              <figure>
+                <img
+                  src="assets/june-2026-quarterly-outlook-still-waters-run-deep/images/chart-01-hyperscaler-capex.png"
+                  alt="Hyperscaler Capex in US dollars billion, 2022 to consensus 2027. Source: Bloomberg, Mutual Trust"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="assets/june-2026-quarterly-outlook-still-waters-run-deep/images/chart-02-cds-spreads.png"
+                  alt="5-year Credit Default Swap spreads in basis points. Source: Bloomberg, Mutual Trust"
+                />
+              </figure>
+            </div>
+
+            <h2 class="qo-section">
+              <span class="qo-section__num">2.</span> Can equity market
+              leadership broaden?
+            </h2>
+            <p>
+              Whether equity market leadership broadens depends on how the next
+              phase of the AI cycle evolves -- specifically, whether confidence
+              in the current capex-driven model holds, and the strength of the
+              economy.
+            </p>
+            <p>
+              Broadening in the U.S. could occur through two distinct pathways.
+            </p>
+            <ul class="mt-list">
+              <li>
+                The first is through sustained confidence in AI, but a widening
+                of beneficiaries. As the cycle matures, leadership can extend
+                beyond platforms and semiconductors into the broader ecosystem
+                required to deploy AI at scale. This includes enablers such as
+                energy, electrical equipment, grid infrastructure, cooling
+                systems, specialised industrial components and key commodities
+                such as copper, where demand is driven by the physical
+                constraints of scaling AI. In this scenario, broadening is
+                driven by expansion across the AI value chain.
+              </li>
+              <li>
+                The second is through rotation to more resilient areas of the
+                market. This would likely occur alongside a more supportive
+                economic or geopolitical backdrop, or as investors begin to
+                question the scale, timing, profitability or valuations of AI
+                investment in a higher rate environment.
+              </li>
+            </ul>
+            <div class="qo-split qo-split--halo">
+              <div class="qo-split__text">
+                <p>
+                  This rotation was evident earlier in the year when capital
+                  shifted into old economy sectors. These capital intensive
+                  “heavy asset, low obsolescence” (HALO) exposures – including
+                  energy infrastructure (pipelines, power grids), industrials,
+                  materials and select defensive names – are supported by
+                  tangible assets and more durable demand. Grid investment
+                  alone is expected to run to hundreds of billions of dollars
+                  globally over the coming decade.
+                </p>
+                <p>
+                  These companies typically offer long asset lives, pricing
+                  power and more resilience to AI-disruption than asset-light
+                  sectors such as software. In this scenario, broadening is
+                  driven by de-crowding at the top of the market.
+                </p>
+              </div>
+              <aside class="qo-callout" aria-label="HALO examples">
+                <p class="qo-callout__title">
+                  Examples of HALO companies in Mutual Trust equity
+                  portfolios:
+                </p>
+                <ul class="mt-list">
+                  <li>
+                    Energy – ExxonMobil, Occidental Petroleum, Woodside
+                  </li>
+                  <li>Materials – Nucor, Freeport-McMoRan, BHP, Rio Tinto</li>
+                  <li>Industrials – Caterpillar, SGH</li>
+                  <li>Defensives – Telstra, Woolworths, Transurban</li>
+                </ul>
+              </aside>
+            </div>
+            <p>
+              In practice, broadening is likely to be uneven and
+              path-dependent. The common thread across both scenarios is a
+              reduction in concentration -- either through rotation away from
+              current leaders, or through expansion into a wider set of
+              beneficiaries within the theme.
+            </p>
+            <p>
+              Importantly, this broadening is unlikely to be confined to public
+              equities. As the opportunity set expands beyond a narrow group of
+              leaders, private assets play an increasingly important role,
+              reflecting the capital-intensive nature of the AI build-out. This
+              reinforces the importance of utilising multiple portfolio levers
+              for diversified exposure to this structural theme.
+            </p>
+
+            <h2 class="qo-section">
+              <span class="qo-section__num">3.</span> Could a wave of outsized
+              IPOs challenge market returns?
+            </h2>
+            <p>
+              Equity markets are facing a concentrated wave of outsized IPOs in
+              2026. Periods of market indigestion are possible, particularly if
+              mega-cap technology serves as a funding source for portfolio
+              rebalancing. Post-listing dynamics, including lock-up expirations
+              and rising free floats, are likely to increase equity supply
+              significantly in late 2026 and 2027, while the transition to
+              quarterly financial disclosures could introduce additional
+              volatility for these companies lacking consistent earnings track
+              records.
+            </p>
+            <p>
+              Equities are facing a more finely balanced supply-demand backdrop.
+              After several years of subdued activity, 2026 is shaping up to be
+              a record year for IPOs in dollar terms. Three of the world’s
+              largest private companies (SpaceX, OpenAI and Anthropic) are going
+              public, with a combined valuation exceeding US$3.5 trillion. This
+              marks an unusually large and concentrated wave of supply. Notably,
+              SpaceX’s IPO was the largest in history, yet only 4.3% of its
+              equity was free float (reflecting significant insider lockups that
+              will unwind over time).
+            </p>
+
+            <div class="qo-float qo-float--wide">
+              <figure>
+                <img
+                  src="assets/june-2026-quarterly-outlook-still-waters-run-deep/images/chart-03-us-ipo-volume.png"
+                  alt="U.S. IPO volume close to 2021 levels, estimated in US dollars billion. Source: Dealogic, JP Morgan Flows &amp; Liquidity. Data as of May 2026"
+                />
+              </figure>
+              <p>
+                Concurrently, listed companies are increasingly tapping equity
+                markets to fund AI investment. Alphabet’s recent US$85 billion
+                capital raise -- the largest equity offering in U.S. corporate
+                history -- highlights the scale of funding required to support
+                AI build-out.
+              </p>
+              <p>
+                For now, the overall supply backdrop remains manageable. Total
+                corporate equity issuance is still below long-term averages as a
+                percentage of the overall market, and buybacks are an important
+                offset. While hyperscaler buybacks are declining sharply, banks
+                are undertaking major buyback programs (such as JPMorgan, Bank
+                of America and Goldman Sachs). Together with strong M&amp;A
+                activity, equity demand is expected to outweigh new supply in
+                2026.
+              </p>
+            </div>
+            <p>
+              So far, markets have absorbed this well, however the mechanics are
+              still evolving. While passive flows and index inclusion should
+              provide early demand for large IPOs - often supporting initial
+              price performance -- these flows are largely mechanical. Index
+              rebalancing may require capital to be rotated out of existing
+              mega-cap holdings, creating pockets of volatility as markets
+              absorb new issuance and portfolios rebalance.
+            </p>
+            <p>
+              This process isn’t a one off. Index providers are taking different
+              approaches to inclusion, with some adding these companies within
+              days and others delaying for a year or more. For example, the
+              Nasdaq 100 relaxed its rules to allow SpaceX to be included after
+              just 15 trading days (compared to a previous three-month minimum),
+              despite the relatively low free-float. These differences in
+              treatment could extend the period over which supply is absorbed.
+            </p>
+
+            <div class="qo-table-block">
+              <h3 class="qo-table-block__title">
+                Approaches to index inclusion by provider
+              </h3>
+              <div class="qo-table-wrap">
+                <table class="qo-table">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col">S&amp;P 500</th>
+                      <th scope="col">Russell 1000</th>
+                      <th scope="col">Nasdaq 100</th>
+                      <th scope="col">MSCI USA</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Seasoning Period<br />(Fast-entry timeline)
+                      </td>
+                      <td>12 months</td>
+                      <td>5 trading days</td>
+                      <td>15 trading days</td>
+                      <td>10 trading days</td>
+                    </tr>
+                    <tr>
+                      <td>Fast Track eligible</td>
+                      <td>✗</td>
+                      <td>✓</td>
+                      <td>✓</td>
+                      <td>✓</td>
+                    </tr>
+                    <tr>
+                      <td>Profitability screen</td>
+                      <td>✓</td>
+                      <td>✗</td>
+                      <td>✗</td>
+                      <td>✗</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="source">
+                Source: iShares, Index providers S&amp;P Dow Jones Indices,
+                MSCI, FTSE Russell, Nasdaq, as of June 5, 2026
+              </p>
+              <p class="source">
+                **Seasoning period reflects fast-entry timeline for those that
+                are eligible
+              </p>
+            </div>
+
+            <aside class="qo-quote qo-quote--sans" aria-label="Quote">
+              <blockquote class="qo-quote__text">
+                “The greater the funnel of uncertainty and the less assuredness
+                you have about the forward outlook, the more you want to be
+                diversified.”
+              </blockquote>
+              <p class="qo-quote__attr">
+                <cite>IAN PATRICK, CIO AUSTRALIAN RETIREMENT TRUST, JUNE 2026</cite>
+              </p>
+            </aside>
+
+            <h2 class="qo-section">
+              <span class="qo-section__num">4.</span> How do we design resilient
+              portfolios?
+            </h2>
+            <p>
+              We recommend remaining predominantly invested in risk assets
+              within a disciplined, long-term strategy. Intentional
+              diversification remains critical -- across asset classes, regions
+              and sectors -- with each component playing a distinct and
+              complementary role in portfolio construction.
+            </p>
+            <p>
+              After several years of narrow leadership driven by U.S. mega-cap
+              technology, we expect a gradual broadening over the medium-term,
+              creating more diverse opportunities for long-term investors.
+            </p>
+
+            <div class="qo-float">
+              <figure>
+                <img
+                  src="assets/june-2026-quarterly-outlook-still-waters-run-deep/images/chart-04-asset-allocation.png"
+                  alt="Indicative Mutual Trust asset allocation – Balanced Portfolio. Source: Mutual Trust"
+                />
+              </figure>
+              <p>
+                Mutual Trust equity portfolios are well positioned to benefit
+                from this shift. We include exposure to adjacent industries in
+                the AI ecosystem beyond hyperscalers and semiconductors, while
+                maintaining exposure to capital intensive, economically
+                essential sectors leveraged to broader growth dynamics. We
+                continue to actively rebalance portfolios, trimming positions
+                that have materially benefited from the recent rally.
+              </p>
+              <p>
+                We retain a core exposure to equities and fixed interest, while
+                increasingly adding alternative assets to portfolios -- where
+                our allocation may be as high as 30% to 50%. Non-traditional
+                assets may enhance portfolios through differentiated return
+                drivers. For example:
+              </p>
+            </div>
+            <ul class="mt-list">
+              <li>
+                Unlisted infrastructure – stable, long-duration cash flows with
+                inflation-linked characteristics and exposure to the global
+                capex cycle;
+              </li>
+              <li>
+                Royalties (e.g. sport, music, mining) – stable, often
+                inflation-linked income streams with low correlation to
+                traditional assets;
+              </li>
+              <li>
+                Commodities – exposure to structural demand across
+                electrification and data centre themes, including copper and
+                energy;
+              </li>
+              <li>
+                Hedge funds – diversified strategies that provide downside
+                protection and/or access to idiosyncratic opportunities;
+              </li>
+              <li>
+                Private credit – reliable income generation with capital
+                preservation characteristics; and
+              </li>
+              <li>
+                Direct property - preserving purchasing power in a higher
+                inflation environment and support income resilience.
+              </li>
+            </ul>
+            <p>
+              In combination, these exposures are designed to enhance portfolio
+              resilience in an environment where headline strength is masking
+              deeper complexity -- providing both long-term growth and strategic
+              defence (refer to our article
+              <a
+                href="https://www.mutualtrust.com.au/wp-content/uploads/2025/09/Quarterly_Outlook_Strategic_Defence.pdf"
+                ><em>Strategic Defence</em></a
+              >).
+            </p>
+            <p>
+              Please refer our asset class views below for more detail.
+            </p>
+
+            <h2 class="qo-section qo-section--asset">
+              Asset class views – June 2026
+            </h2>
+            <div class="qo-views">
+              <div>
+                <h3>Equities</h3>
+                <p>
+                  Our base case remains that international equities may continue
+                  to benefit from positive fundamentals -- stimulatory policy
+                  tailwinds, AI-capex spend and robust earnings expansion.
+                </p>
+                <p>
+                  We maintain our bias towards U.S. companies, which are
+                  supported by superior earnings growth relative to the rest of
+                  the world (16% forecast for the S&amp;P500 in 2026 versus ~9%
+                  for the EuroStoxx 600), while including selective exposure to
+                  Japan and Europe.
+                </p>
+                <p>
+                  Mutual Trust portfolios are well positioned for a broadening
+                  in market leadership. Our preferred sectors (based on
+                  valuation) include materials, energy, financials and
+                  industrials -- such as Nucor Corp, Freeport-McMoRan, Exxon
+                  Mobil, JP Morgan Chase and Mitsubishi Corp.
+                </p>
+                <p>
+                  Within technology, we are highly selective, preferring
+                  companies like Apple Inc. and Microsoft with strong balance
+                  sheets and “cash-cow” business segments to fund growth. We
+                  also include exposure to Broadcom and Cisco as beneficiaries
+                  of AI.
+                </p>
+                <p>
+                  For Australian equities, active management remains essential
+                  given the ASX200 Index is highly concentrated in low growth
+                  sectors. Many companies outside the Australian financials
+                  currently offer more appealing attributes, with superior
+                  earnings growth versus the ASX200 Index over the next two
+                  years.
+                </p>
+                <p>
+                  Select quality industrial companies appear particularly
+                  attractive, and resources are traditionally strong
+                  beneficiaries of accelerating global growth. BHP and Rio Tinto
+                  have market leading, low-cost iron ore positions and growing
+                  exposure to future facing commodities such as copper and
+                  lithium.
+                </p>
+                <p>
+                  We provide additional equity diversification by blending
+                  direct holdings with funds, such as Australian and
+                  International mid-to smaller-capitalisation companies and
+                  emerging market equities -- with regions such as Indonesia and
+                  India offering strong population growth and an expanding
+                  middle class.
+                </p>
+              </div>
+              <div>
+                <p>
+                  We recognise there are risks in certain sectors of the market.
+                  Valuations are stretched by historical standards -- the S&amp;P
+                  500’s forward price to earnings (P/E) of 20.5x is above its
+                  long-term average, albeit supported by strong earnings growth
+                  for now.
+                </p>
+                <p>
+                  While valuation metrics are not precise timing tools (assets
+                  can stay cheap or expensive for a long time before
+                  correcting), they offer some insight into the long-term return
+                  potential of equities -- future returns may be constrained if
+                  the entry point is lofty. Sentiment can shift quickly, and
+                  concerns around AI capex sustainability or negative earnings
+                  surprises by mega-cap technology companies may pose downside
+                  risks to broader global equity markets given their
+                  concentration within major indices.
+                </p>
+                <h3>Fixed Interest</h3>
+                <p>
+                  Our long-term preference for Australian fixed interest over
+                  international markets remains unchanged. We continue to
+                  structurally favour credit, reflecting our view that
+                  government bonds are becoming less effective as equity
+                  diversifiers in an environment of persistently high and
+                  volatile inflation.
+                </p>
+                <p>
+                  Following three rate hikes and the drag from negative wealth
+                  effects associated with the Australian Budget 2026-2027, we
+                  believe the RBA is now significantly closer to the end of its
+                  tightening cycle. Whilst policy rates are in restrictive
+                  territory, we do not expect a sharp economic slowdown that
+                  would necessitate near-term rate cuts in Australia.
+                  Accordingly, a neutral duration stance remains appropriate.
+                </p>
+                <p>
+                  In the quarter, we slightly reduced our underweight duration
+                  positioning in International fixed interest. Resilient U.S.
+                  economic data has prompted markets to price in a potential
+                  rate hike by the Fed by December -- a notable shift from
+                  earlier expectations of rate cuts. Outside the U.S., the risk
+                  of a policy misstep appears elevated, especially in regions
+                  heavily reliant on oil imports such as Europe and the UK,
+                  where further tightening could exacerbate existing
+                  stagflationary pressures.
+                </p>
+                <p>
+                  While we remain overweight credit within our fixed interest
+                  allocation, we have modestly reduced this position in the last
+                  quarter. The impact of the Iran conflict on oil supply is
+                  likely to temper global economic activity relative to earlier
+                  in the year -- current historically tight credit spreads do
+                  not appear to adequately compensate for this risk.
+                  Additionally, increased corporate bond issuance, particularly
+                  from AI hyperscalers in the U.S., is expected to create
+                  further headwinds for spread performance.
+                </p>
+              </div>
+              <div>
+                <h3>Direct Property</h3>
+                <p>
+                  Australian commercial property is increasingly a tale of two
+                  markets, with performance diverging between premium assets and
+                  the rest of the market. In this environment, asset selection
+                  rather than broad exposure is the primary driver of returns.
+                </p>
+                <p>
+                  Sub sectors and locations are experiencing varied conditions,
+                  with capital increasingly directed toward quality assets
+                  offering defensible income, rental growth potential and
+                  manageable capex. In contrast, lower-quality assets are facing
+                  headwinds from shifting tenant preferences, rising operating
+                  costs and tighter financing conditions (refer to our article
+                  <a
+                    href="https://www.mutualtrust.com.au/wp-content/uploads/2026/05/WealthMatters-Behindthefacade-1.pdf"
+                    ><em>Behind the façade</em></a
+                  >).
+                </p>
+                <p>
+                  Our approach focuses on lower-risk assets in prime or central
+                  locations where structural trends (i.e. strong population
+                  growth, significant infrastructure investment, and elevated
+                  construction costs limiting new supply) should underpin
+                  demand for well-located space over the long-term. In addition,
+                  we prefer investments offering clear exit strategies within
+                  the current cycle. Our portfolios are well diversified
+                  regionally, with recent investments made in Brisbane, Adelaide
+                  and Sydney.
+                </p>
+                <p>
+                  Rigorous due diligence, disciplined acquisition pricing, and
+                  active management remain critical to managing risk and
+                  optimising returns.
+                </p>
+                <p>
+                  Real assets, such as direct property, play an important role
+                  in portfolio construction by preserving purchasing power in a
+                  higher inflation environment, supporting income resilience and
+                  lowering portfolio volatility. The Australian Budget 2026-2027
+                  announced the curtailment of negative gearing for residential
+                  property – but unchanged for commercial property – potentially
+                  driving a gradual reallocation of capital towards commercial
+                  assets.
+                </p>
+              </div>
+              <div>
+                <h3>Unlisted Infrastructure</h3>
+                <p>
+                  Infrastructure remains well-positioned for 2026, supported by
+                  resilient demand and structural themes such as AI-driven data
+                  centre expansion and the energy transition. While rising
+                  development costs and geopolitical fragmentation may slow new
+                  projects, the sector’s defensive cash flows, inflation-linked
+                  revenue models, and strategic importance should sustain
+                  investor interest.
+                </p>
+                <p>
+                  We prefer exposure to infrastructure funds with a disciplined
+                  investment approach that target assets offering inflation
+                  linkage (implicit or explicit), downside protection, high cash
+                  flow visibility, and exposure to structural tailwinds.
+                </p>
+                <p>
+                  We also favour strategies spread across sectors and
+                  geographies to deliver more consistent returns. By taking a
+                  diversified approach, we believe investors can achieve a more
+                  balanced and resilient portfolio through market cycles.
+                </p>
+                <h3>Hedge Funds</h3>
+                <p>
+                  Through their employment of a wide range of strategies, hedge
+                  funds are positioned to generate reasonable risk-adjusted
+                  returns which are less correlated with traditional asset
+                  classes. This feature is well-suited to the current
+                  environment where equity and bond markets are increasingly
+                  positively correlated (reducing traditional diversification
+                  benefits). Furthermore, greater dispersion of company
+                  performance creates opportunities for active strategies.
+                </p>
+                <p>
+                  Our approach is to blend hedge fund exposures through
+                  thoughtful construction with a single-strategy and/or
+                  multi-strategy approach.
+                </p>
+                <p>
+                  An allocation to single-strategy hedge funds can offer
+                  targeted exposure to specific market inefficiencies or
+                  defensive characteristics. This requires a proactive approach
+                  to blending, rebalancing and oversight.
+                </p>
+                <p>
+                  Alternatively, a multi-strategy hedge fund provides built-in
+                  diversification across a range of underlying investment
+                  approaches, often with dynamic allocation and risk management
+                  embedded within the structure. Together, these solutions offer
+                  flexibility and resilience when traditional diversification
+                  may not deliver.
+                </p>
+              </div>
+              <div>
+                <h3>Private Markets Equity</h3>
+                <p>
+                  We continue to favour early-stage venture capital
+                  opportunities focused on addressing global challenges (i.e.
+                  food security, decarbonisation, waste reduction, technological
+                  innovation), and secondary strategies providing liquidity
+                  solutions to investors. Furthermore, we see opportunities in
+                  the national security sector, especially dual-use technologies
+                  with large global target markets (refer to our article
+                  <a
+                    href="https://www.mutualtrust.com.au/wp-content/uploads/2025/11/WealthmattersBeyondtraditionalSecurityofEverythingNov-25.pdf"
+                    ><em>The security of everything</em></a
+                  >). While valuations among AI start-ups are commanding a
+                  significant premium, not all will succeed.
+                </p>
+                <p>
+                  In private equity, secondary strategies remain attractive in
+                  an environment of delayed exits, historically low
+                  distributions and slower fundraising. Within this backdrop, we
+                  expect the return profile from secondaries to be elongated. In
+                  buyout, we maintain a preference for the small and
+                  middle-market segment, where deal dynamics are typically more
+                  favourable: competition is lower, financing structures are
+                  more conservative, public market correlations are reduced, and
+                  valuations are generally more compelling.
+                </p>
+                <p>
+                  The proliferation of open-ended (semi-liquid) structures,
+                  especially within private equity, continues unabated. We
+                  expect a slow-down in late 2026 after most large,
+                  well-resourced asset managers have launched funds. These
+                  vehicles are strategically important to help build diversified
+                  private markets programs. Given liquidity management
+                  complexities, we continue to strongly favour managers with
+                  established track records.
+                </p>
+              </div>
+              <div>
+                <p>
+                  Deal pipelines and exit activity are expected to be influenced
+                  by the trajectory of U.S. rates, the sustainability of IPO
+                  momentum, and geopolitical uncertainty.
+                </p>
+                <h3>Private Credit and Property Debt</h3>
+                <p>
+                  We continue to allocate to corporate private credit and
+                  property debt as sources of attractive, stable returns. The
+                  structural growth drivers for private credit -- stemming from
+                  the pullback in corporate lending by banks due to regulatory
+                  changes, increasing borrower sophistication, and the ability
+                  of non-bank lenders to offer capital flexibility and execution
+                  certainty -- remain firmly in place.
+                </p>
+                <p>
+                  Our approach prioritises a combination of defensive,
+                  performing private credit and real estate debt exposures,
+                  complemented by selective opportunities in distressed debt.
+                </p>
+                <p>
+                  Higher interest rates, material costs and uncertainty in the
+                  residential property outlook are near-term headwinds for the
+                  residential property debt asset class. For non-property
+                  private credit, the benefit of higher interest rates on loan
+                  returns may be offset somewhat by higher probability of
+                  default. With that said, we believe many private credit
+                  strategies should be well positioned to weather this
+                  challenging backdrop via disciplined investment selection and
+                  proactive risk management.
+                </p>
+                <p>
+                  On a positive note, unlike in the U.S., we believe Australian
+                  private credit universe is relatively insulated from AI
+                  disruption given its lower exposure to software loans.
+                </p>
+              </div>
+            </div>
+
+            <p class="qo-cta">
+              Please reach out to your Mutual Trust Advisor with any questions.
+              If you are exploring a new advisory relationship, we invite you to
+              <a href="mailto:communications@mutualtrust.com.au"
+                ><em>connect</em></a
+              >
+              with Mutual Trust to discuss how we can support your family’s
+              long-term objectives.
+            </p>
+          </div>
+        </article>
+      </main>
+
+      <footer class="qo-footer" role="contentinfo">
+        <div class="container">
+          <div class="qo-footer__brand">
+            <a class="qo-footer__logo" href="https://www.mutualtrust.com.au/">
+              <img
+                src="https://www.mutualtrust.com.au/wp-content/themes/mutual_trust/assets/images/MT-Logo.svg"
+                alt="Mutual Trust"
+                width="194"
+                height="51"
+              />
+            </a>
+            <p class="qo-footer__tagline">
+              Helping families achieve what matters most.
+            </p>
+          </div>
+
+          <div
+            class="perspective-contacts perspective-contacts--june"
+            aria-label="Office contacts"
+          >
+            <p class="perspective-contacts__office">
+              <strong>Melbourne</strong>
+              Level 32<br />
+              360 Collins Street<br />
+              Melbourne VIC 3000<br />
+              T <a href="tel:+61396059500">+61 3 9605 9500</a>
+            </p>
+            <div class="perspective-contacts__col">
+              <p class="perspective-contacts__stack">
+                <strong>Sydney</strong>
+                <a href="tel:+61292247600">+61 2 9224 7600</a>
+              </p>
+              <p class="perspective-contacts__stack">
+                <strong>Brisbane</strong>
+                <a href="tel:+61721151100">+61 7 2115 1100</a>
+              </p>
+            </div>
+            <div class="perspective-contacts__col">
+              <p class="perspective-contacts__stack">
+                <strong>Adelaide</strong>
+                <a href="tel:+61870823900">+61 8 7082 3900</a>
+              </p>
+              <p class="perspective-contacts__stack">
+                <strong>Perth</strong>
+                <a href="tel:+61892307788">+61 8 9230 7788</a>
+              </p>
+            </div>
+            <div class="perspective-contacts__meta">
+              <p>
+                <a href="mailto:info@mutualtrust.com.au"
+                  >info@mutualtrust.com.au</a
+                >
+              </p>
+              <p>
+                <a href="https://www.mutualtrust.com.au/"
+                  >www.mutualtrust.com.au</a
+                >
+              </p>
+              <p>ABN: 71 004 285 330 &nbsp; AFSL: 234590</p>
+            </div>
+          </div>
+
+          <div class="qo-legal">
+            <p>
+              Liability limited by a scheme approved under Professional
+              Standards Legislation. For participating members (other than for
+              the acts or omissions of Australian Financial Services Licensees).
+            </p>
+            <p>
+              Prepared in Australia by Mutual Trust Pty Ltd (ACN 004 285 330)
+              (AFSL 234590). It is general information only and has been
+              prepared without considering any particular person’s objectives,
+              financial situation or needs. It does not constitute, and should
+              not be relied upon as personal financial product, taxation or
+              legal advice. This document may contain forward-looking
+              statements, including statements regarding market outlook,
+              expected conditions and portfolio positioning. Such statements are
+              based on current views and assumptions and are subject to risks,
+              uncertainties and change. Actual outcomes may differ materially.
+              Before making any investment decision you should read the relevant
+              product disclosure statement or other disclosure document and
+              obtain personal financial, taxation and legal advice. For more
+              information about the financial services Mutual Trust provides,
+              please contact us or visit our website, www.mutualtrust.com.au for
+              a copy of our Financial Services Guide.
+            </p>
+            <p>
+              Mutual Trust acknowledges and pays respect to the past and present
+              Traditional Custodians and Elders of this nation and the
+              continuation of cultural, spiritual and educational practices of
+              Aboriginal and Torres Strait Islander peoples.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

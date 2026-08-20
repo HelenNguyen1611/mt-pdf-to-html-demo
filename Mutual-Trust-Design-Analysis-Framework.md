@@ -36,12 +36,12 @@ HTML phải là **responsive webpage liên tục** (continuous document flow). R
 | ------------ | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | 1 (cao nhất) | Nội dung, bố cục, placement, hierarchy, imagery, spacing giữa các khối       | **PDF**                                                                                |
 | 2            | Cỡ chữ, line-height, độ đậm/nghiêng, indent list, khoảng hero↔content↔footer | **PDF** (đo từ nguồn; Style Guide chỉ là điểm xuất phát)                               |
-| 3            | Font _family_ và mã màu brand (Black / White / Light Grey / Grey / Ochre)    | **Style Guide** — map lệch export PDF về HEX/font chuẩn, **miễn là nhìn vẫn khớp PDF** |
+| 3            | Font _family_ và mã màu brand (Black / White / Light Grey / Grey / Ochre)    | **Style Guide** — map lệch export **nhẹ, cùng tông** về HEX chuẩn. Nếu mắt thấy khác (heading đồng `#D17B19` vs Ochre vàng `#CB962E`) → **giữ HEX PDF** |
 | 4            | Semantic / one-off trong PDF (bảng dương–âm, H1 lệch màu một bài…)           | **PDF** — giữ và ghi chú PDF-specific                                                  |
 
 **Quy tắc vận hành**
 
-1. Style Guide cung cấp **tên token đúng** (Baskerville, Proxima Nova, Ochre `#CB962E`…) — tránh invent font/màu sai.
+1. Style Guide cung cấp **tên token đúng** (Baskerville, Proxima Nova, Ochre `#CB962E`…) — tránh invent font/màu sai. **Ngoại lệ heading/accent:** nếu HEX PDF khác rõ so với token Style Guide (không chỉ lệch export), ưu tiên màu PDF trên token component (`--qo-section-color`, lede, link của bài đó).
 2. Khi type scale Style Guide (ví dụ H1 70px) **khác** cỡ trên PDF → **override theo PDF**. Không phóng cover lên 70px chỉ vì Style Guide ghi vậy.
 3. Spacing Style Guide (`--space-*`) là baseline web; **rhythm thật theo PDF** (không theo khoảng trống do page break).
 4. Chỉ nới leading/body size so với bản in khi cần đọc trên màn hình — và chỉ vừa đủ; vẫn giữ cảm giác mật độ/hierarchy của PDF.
@@ -447,7 +447,9 @@ Perspective (nhóm C) footer trắng vẫn thường **không** underline meta �
 
 ## B.6 Màu quan sát trong PDF (không thuộc Style Guide palette)
 
-PDF export từng lệch nhẹ quanh Ochre (`#D17B19`, `#D17A18`, `#CBA020`, `#C99329`…) và vài tông xám/đen phụ (`#1B1B1F`, `#8D8D90`, `#E0E4EB`…). **Khi chuẩn hoá: map về 5 mã Style Guide** (mục A.3).
+PDF export từng lệch quanh Ochre (`#D17B19`, `#D17A18`, `#CBA020`, `#C99329`…) và vài tông xám/đen phụ (`#1B1B1F`, `#8D8D90`, `#E0E4EB`…).
+
+**Map về Style Guide chỉ khi cùng tông và mắt không phân biệt** (vd. `#CBA020` / `#C99329` → Ochre `#CB962E`). **Không** map heading đồng/đỏ-cam `#D17B19` về `#CB962E` — khoảng cách G/B lớn, HTML sẽ vàng hơn PDF. Đo span heading; gán HEX PDF lên `--qo-section-color` / `--qo-section-lede-color` (và link cùng bài nếu PDF cùng mã).
 
 ### B.6.1 Semantic colours — chỉ bảng Market Review (nhóm A)
 
@@ -745,8 +747,9 @@ Token `--qo-*` + class `family-quarterly-outlook`. Convert: copy `website/templa
 - **Body rhythm dày** như PDF: `--qo-para-gap: 8px` (~6–7pt giữa đoạn); `--qo-body-lh: 1.28` (PDF ~1.2); list `--list-item-gap: 4px`; byline → body ~10px — không dùng `--space-5` / 1.45 Perspective.
 - Byline PDF *"Written by [Tên] | [ngày]"* → `.qo-byline` **một lần** trong article; **không** lặp running footer / số trang.
 - **Hai kiểu section head** (đừng nhầm với numbered list B.9). Selector lede/display **phải thắng** `.qo-body h2` (nếu không, heading bị serif lớn + màu bịa):
-  - **June:** `.qo-section` Baskerville ~16pt + Ochre Style Guide `#CB962E` — `<span class="qo-section__num">1.</span>` + heading.
-  - **March lede:** `.qo-section.qo-section--lede` **Proxima, cùng cỡ thân bài** (`--qo-section-lede-size: var(--qo-body-size)`), màu `--color-ochre` `#CB962E`. PDF export có thể ra `#CBA020` / `#D17B19` — **map về Ochre, không bịa HEX**. Không dùng Baskerville lớn cho lede.
+  - **Màu heading:** đo HEX PDF, so với `#CB962E`. Cùng tông vàng nhạt → map Ochre. Khác rõ (June numbered + Asset class views + views h3 = **`#D17B19`**) → `--qo-section-color` / `--qo-section-lede-color: #d17b19` — **không** `#CB962E`.
+  - **June:** `.qo-section` Baskerville ~16pt + `#D17B19` — `<span class="qo-section__num">1.</span>` + heading.
+  - **March lede:** `.qo-section.qo-section--lede` **Proxima, cùng cỡ thân bài** (`--qo-section-lede-size: var(--qo-body-size)`). Đo màu lede từng PDF; `#CBA020` gần Ochre thì map `#CB962E`, `#D17B19` thì giữ. Không dùng Baskerville lớn cho lede.
   - **March display** (hiếm): `.qo-section--display` Baskerville cỡ H1, mực `--color-ink` (vd. *Positioning portfolios for the decade ahead*).
 - **Callout/pull-quote** (`.qo-quote`): nền đo từ PDF rồi map Light Grey `#F4F4F4` khi gần; March fill ≈ `#EEEEEE`. Quote **Baskerville roman** trừ khi PDF italic; attribution sans, thường **căn phải**. Không invent italic.
 - **2 cột text + chart** — **đo bbox PDF**, không mặc định 50/50 và **không cap 320px**:
@@ -754,7 +757,8 @@ Token `--qo-*` + class `family-quarterly-outlook`. Convert: copy `website/templa
   - `.qo-float`: chart `float: right; width: var(--qo-float-media-pct)` (March ≈ **61%**); pie rộng `--qo-float-media-pct-wide` ≈ **68%**. Gutter `--qo-split-gap` ~8–10px.
   - Mobile: stack full width. **Một ảnh mỗi chart** — không composite.
 - Lề nội dung nhóm B trái ~**72pt**; **phải đo từng PDF** (March chart x1 ~540pt → `--qo-content-x-right-pt: 55`). Desktop pad `%` từ page W; **mobile ≤768: `--gutter: 20px`**.
-- Body: **10pt / 13.33px** Proxima (`--qo-body-size`) — không bump 14px. Mực `--color-ink` `#000000` (PDF `#1B1B20` map Black). Link `--color-ochre`, không `#CBA020`.
+- Body: **10pt / 13.33px** Proxima (`--qo-body-size`) — không bump 14px. Mực `--color-ink` `#000000` (PDF `#1B1B20` map Black).
+- **Inline link (nhóm B):** đo từng PDF — **colour, italic, underline**. June 2026 (*Strategic Defence*, *Behind the façade*, *The security of everything*, *connect*): `#D17B19` (cùng heading, không `#CB962E`), **italic** (`<em>` trong `<a>`), **không** class `is-underlined` — gạch 1px HTML nặng hơn hairline PDF ~0.24pt và trông như bịa. Hover được gạch nhẹ. `--color-link: #d17b19`.
 - **Back cover** `.qo-footer`: **ngoại lệ A4** — đây là trang cuối PDF (nền `#1B1B20`); trên web là **một slab** `min-height: calc(var(--page-max) * var(--qo-page-h-pt) / var(--qo-page-w-pt))` ≈ chiều cao A4 trong shell (không phải nhiều `.document-page`). Logo stacked + tagline trong `.qo-footer__brand`. Đo March 2026 p.6:
   - trước logo `--qo-footer-pad-top` ≈ **297pt** (~396px)
   - logo → tagline `--qo-footer-logo-gap` ≈ **29pt**
@@ -774,7 +778,7 @@ Token `--qo-*` + class `family-quarterly-outlook`. Convert: copy `website/templa
 | `--qo-para-gap` | ~6–7pt giữa đoạn | `8px` — không 14–16px web default |
 | `--qo-body-lh` | PDF ~1.2 | `1.28` web |
 | `--qo-title-size` | H1 dưới ảnh | March 20pt; June ~28pt |
-| `--qo-section-lede-size` | = body | Proxima + `--color-ochre`; selector `.qo-body h2.qo-section--lede` |
+| `--qo-section-lede-size` | = body | Proxima; màu `--qo-section-lede-color` (đo PDF — June `#D17B19`) |
 | `--qo-split-text-fr` / `--qo-split-media-fr` | bbox text vs chart | March p0 **38fr / 62fr** — không 50/50 |
 | `--qo-float-media-pct` | chart share khi wrap | March **61%**; wide pie **68%**; không `min(48%, 320px)` |
 | `--qo-page-h-pt` | page H | A4 ≈ 842pt — dùng cho `min-height` back cover |
@@ -937,7 +941,7 @@ Khi convert PDF cụ thể: **override** khoảng hero↔content, content↔foot
 8. **Legal + contacts footer** — một khối cuối document theo **B.5** (markup `.perspective-legal` / `.perspective-contacts` làm nền; calibrate copy + spacing từ PDF). Variant nền: trắng (C) / dải hoặc back-cover tối (A, B).
 9. **Office contact grid** — nằm trong B.5.2; 4 cột điển hình (HQ + 2 stack city + meta); AI override theo PDF.
 10. **List (bullet & numbered)** — marker màu ink (`--color-ink`, không Ochre); disc optical ~**5px** (PDF ~4px +20%; không `•` full-size); gap marker→text cố định 24px; wrap canh text; numbered dùng số body font + dấu `.`; base = Flush, biến thể Outdent/Inset theo PDF — chi tiết B.9.
-11. **Inline link** — màu theo PDF (thường Ochre / `#D17B19`); **underline chỉ khi PDF có**; nhiều Perspective chỉ tô màu, không gạch chân (C.6.7).
+11. **Inline link** — đối chiếu PDF: **colour**, **italic/roman**, **bold/regular**, **có/không underline**. Màu thường `#D17B19` hoặc Ochre `#CB962E` (nếu lệch rõ → HEX PDF). **Underline chỉ khi PDF nhìn thấy rõ**; không mặc định `is-underlined`. Nhiều Perspective / Outlook June chỉ tô màu (+ italic), không gạch chân nhìn thấy (C.6.7).
 
 ## C.4 Checklist convert PDF → HTML
 
@@ -1007,7 +1011,7 @@ Trước khi viết HTML/CSS phải xác định:
 - **Nhóm A — heat table:** số cột, section labels + gạch Ochre, fill dương/âm (sample drawing), source line, độ rộng bảng vs content column (B.6.2)
 - **Nhóm A — hero overlay:** `content_x`, `title_y`, page W (B.7.1)
 - **Nhóm A — chart grid:** bbox 6 panel, thứ tự đọc, có/không source trong ảnh; chuẩn bị clip riêng từng panel (B.7.2)
-- **Nhóm B — Outlook:** hero logo = ½ kicker; H1 dưới ảnh; lede size/family/ochre; text|chart bbox %; para-gap dày; back-cover padding A4 quanh logo+tagline (B.7 B)
+- **Nhóm B — Outlook:** hero logo = ½ kicker; H1 dưới ảnh; lede size/family; **màu heading đo PDF** (June `#D17B19`, không ép `#CB962E` nếu lệch rõ); text|chart bbox %; para-gap dày; back-cover padding A4 quanh logo+tagline (B.7 B)
 
 Không bắt đầu từ browser default hoặc generic web styling.
 
@@ -1087,7 +1091,16 @@ Khuyến nghị: disc CSS `--list-marker-size` + `position: absolute; left: 0` t
 
 Không tự động áp style link web generic (đặc biệt **không** mặc định underline mọi link).
 
-Link phải đối chiếu PDF về: **colour**, **có/không underline**, **font-size**, font weight. Ví dụ _Protecting Intergenerational Wealth_ (và nhiều Perspective): link `#D17B19` / ochre-tinted, **không gạch chân**. Hover có thể thêm underline nhẹ — chỉ là enhancement web, không đổi base style lệch PDF.
+Link phải đối chiếu PDF về: **colour**, **italic/roman**, **font-weight**, **có/không underline**, **font-size**. Ví dụ _Protecting Intergenerational Wealth_ (và nhiều Perspective): link `#D17B19` / ochre-tinted, **không gạch chân**. **Outlook June 2026:** `#D17B19` + **italic** (`<em>`), không `is-underlined` — HTML 1px underline lệch PDF. Hover có thể thêm underline nhẹ — chỉ là enhancement web, không đổi base style lệch PDF.
+
+**Đích link (`href`) — bắt buộc, không chỉ màu/gạch chân:**
+
+- Mọi vùng link trong PDF (annotation / URI) phải map 1:1 sang `<a href="URI">`.
+- Trích URI từ PDF **trước** khi styling; không suy ra từ màu chữ.
+- **Cấm** `href="#"` trong HTML deliverable. Placeholder template (`<!-- OUTLOOK_URL -->`, `<!-- WEBSITE_URL -->`, …) phải được thay bằng URI thật trước khi giao.
+- CTA Market Review “click here” (B.4 / `.mr-cta`): URI thường trỏ tới PDF hoặc trang Insights của bản Quarterly Outlook mới nhất — **lấy từ annotation PDF**, không hard-code `#`.
+- Footer: `tel:`, `mailto:`, `https://www.mutualtrust.com.au/` theo URI PDF hoặc chuẩn B.5 (đã có trong template).
+- QA: side-by-side PDF vs HTML — click từng link; không link chết / placeholder.
 
 **Ngoại lệ nhóm A — CTA `click here` (April MMR và PDF tương tự):**
 
@@ -1166,7 +1179,7 @@ Một conversion chỉ hoàn thành khi:
 - **Nhóm A mobile:** table scroll-x cục bộ; chart stack đọc được (C.6.10)
 - font thực sự load đúng; typography / content width / spacing rhythm gần PDF (desktop)
 - line wrapping không lệch lớn; bullet/list đúng geometry
-- links/colours đúng; component đặc thù đúng
+- links: đúng màu/gạch chân **và** đúng `href` (không `#`, không placeholder); component đặc thù đúng
 - không còn visual difference lớn khi compare side-by-side (desktop)
 - desktop fidelity đạt trước responsive; mobile/tablet QA hero + content pass
 - **không** tái tạo pagination không cần thiết của PDF

@@ -43,8 +43,11 @@
 
        CONVERT WORKFLOW (C.6 / B.7 B):
        1. Inspect PDF: page W, content x0 (~72pt Group B), hero W/H, logo, kicker, title below,
-          numbered vs lede sections, splits/charts, quote fill, back-cover contacts
+          numbered vs lede sections, heading HEX, splits/charts, quote fill, back-cover contacts
        2. Override --page-max, --qo-page-w-pt, --qo-content-x-pt, --qo-* tokens
+          Heading colour: measure PDF. If far from Style Guide ochre #CB962E
+          (June numbered heads = #D17B19 copper), set --qo-section-color to the PDF hex.
+          Links: measure colour + italic + underline. June = #D17B19 italic, no .is-underlined.
        3. Hero: logo+kicker centered; title left = body left under image
        4. Mobile ≤768: content gutters = Perspective (--gutter: 20px)
        5. Fill continuous article; Visual Comparison Loop — desktop then mobile
@@ -153,7 +156,7 @@
         --color-ink: var(--color-black);
         --color-ink-muted: var(--color-grey);
         --color-accent: var(--color-ochre);
-        --color-link: var(--color-ochre);
+        --color-link: var(--color-ochre); /* Override per PDF — June article links #D17B19 */
         --color-surface: var(--color-white);
         --color-surface-tint: var(--color-light-grey);
         --color-surface-dark: var(--color-black);
@@ -232,8 +235,10 @@
         --qo-band-gap: 16px; /* hero→title; March ≈ 7pt — don't use Perspective --space-7 */
         --qo-section-size: 21.33px; /* June numbered Baskerville ~16pt */
         --qo-section-lede-size: var(--qo-body-size); /* March lede = body size, not larger */
-        --qo-section-color: var(--color-ochre); /* #CB962E — do not invent #D17B19 / #CBA020 */
-        --qo-section-lede-color: var(--color-ochre);
+        /* Heading colour: measure PDF. Near-ochre (#CBA020) → --color-ochre.
+           Distinct copper (#D17B19, June) → keep PDF hex on these tokens. */
+        --qo-section-color: var(--color-ochre);
+        --qo-section-lede-color: var(--qo-section-color);
         --qo-section-gap-before: 16px;
         --qo-section-gap-after: 8px;
         /* Text|image row: measure PDF bbox. March p0 text ~176pt / chart ~284pt ≈ 38/62 */
@@ -690,6 +695,20 @@
         text-decoration: none;
       }
 
+      /* Italic when PDF link is oblique — wrap label in <em>. Do not add
+         .is-underlined unless the PDF underline is clearly visible (not a 0.24pt hairline). */
+      .qo-body a em,
+      .qo-cta a em {
+        font-style: italic;
+        font-weight: inherit;
+        color: inherit;
+      }
+
+      .qo-body a.is-italic,
+      .qo-cta a.is-italic {
+        font-style: italic;
+      }
+
       .qo-body a.is-underlined,
       .qo-cta a.is-underlined {
         text-decoration: underline;
@@ -697,6 +716,14 @@
         text-decoration-thickness: 1px;
         text-underline-offset: 2px;
         text-decoration-skip-ink: none;
+      }
+
+      .qo-body a:hover,
+      .qo-cta a:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--color-link);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
       }
 
       /* --- 2-col text + chart (B.7 B). Desktop: text | media. Mobile: stack. --- */

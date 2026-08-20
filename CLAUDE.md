@@ -18,6 +18,7 @@ When the user says `build html`, execute the following workflow immediately:
 6. Match the PDF as closely as practical — take colors, backgrounds, typography, imagery, hierarchy, spacing, layout/composition, tables, charts, quotes, callouts and footer treatment from the source. Do not invent alternate themes (e.g. light footer when the PDF footer is dark).
 7. Do not invent or alter styles that are not in the PDF. Do not add backgrounds, tinted panels, callout boxes, borders, shadows, or decorative wrappers unless the source shows them. Do not restyle sections with arbitrary web defaults when the PDF has a clear treatment.
 8. Links must match the PDF: use the same link color and underline treatment as the source. Do not strip color or underline if the PDF shows them; do not invent browser-default underlines or unstyled “inherit only” links when the PDF links are colored/underlined. Hover/focus may strengthen affordance slightly, but base style stays faithful to the source.
+8b. **Link destinations:** Every PDF hyperlink must become a real `<a href="…">` with the URI from the PDF link annotation — not styling only. Never use `href="#"`, empty href, or unresolved template comments (`<!-- OUTLOOK_URL -->`, etc.) in finished HTML. Resolve all template placeholders before delivery. If a URI cannot be read from the PDF after inspection, note it in the report and use a sensible Mutual Trust URL for that CTA (never `#`).
 9. Keep one shared content column so logo, hero text, body, program blocks and footer share the same left (and right) edge. Do not let header/hero/footer use a different max-width or padding than the article.
 10. Match PDF desktop type scale for article body and section headings as closely as practical. Prefer the PDF’s point sizes scaled consistently over oversized web defaults.
 11. Preserve inline and block text styles from the PDF exactly — font family (serif vs sans), italics/oblique, bold/semibold, underline, small caps, letter-spacing, and mixed roman+italic runs. Inspect span-level font names and flags in the PDF; wrap italic phrases in `<em>` (or equivalent) and bold in `<strong>` only when the source is actually italic/bold. Never flatten italic copy to plain roman, and never invent emphasis or italic styling the source does not use.
@@ -35,7 +36,7 @@ When the user says `build html`, execute the following workflow immediately:
     `<link rel="icon" href="https://mt.wootech.com.au/wp-content/uploads/2024/10/favicon.png" type="image/png" />`
 23. Keep all CSS inside `<style>` in the output HTML file.
 24. Store extracted/reused assets under `./website/assets/<pdf-slug>/` (or `./website/assets/<pdf-slug>-<timestamp>/` when the HTML filename includes a timestamp).
-25. Check the finished page for missing or duplicated content, invented copy, wrong colors/styles vs PDF (including invented backgrounds, incorrect link color/underline, lost or invented italics/bold, and quote blocks restyled with the wrong font or forced italic), clipping, overflow, broken assets, misalignment (including bullet indent vs body column), correct hero logo presence, text/logo contrast on image backgrounds, generous consistent hero↔content↔footer spacing vs PDF, readable split chart grids on mobile, and sensible text/image stack order on tablet/mobile.
+25. Check the finished page for missing or duplicated content, invented copy, wrong colors/styles vs PDF (including invented backgrounds, incorrect link color/underline, dead links (`href="#"`), unresolved link placeholders, lost or invented italics/bold, and quote blocks restyled with the wrong font or forced italic), clipping, overflow, broken assets, misalignment (including bullet indent vs body column), correct hero logo presence, text/logo contrast on image backgrounds, generous consistent hero↔content↔footer spacing vs PDF, readable split chart grids on mobile, and sensible text/image stack order on tablet/mobile.
 26. Do not deploy.
 
 Do not ask for confirmation before starting unless:
@@ -70,7 +71,7 @@ When the user says `build new`, process multiple PDFs immediately:
 - Preserve original text emphasis — italics, bold, and mixed-style runs must match the PDF; do not drop italic styling, and do not invent italic on roman quotes.
 - Pull quotes and block quotes keep the PDF’s font (e.g. upright Baskerville/serif when the source is roman serif) — do not swap in body sans or default `font-style: italic` on quotes.
 - Do not invent backgrounds, panels, or other styles absent from the PDF; do not arbitrarily restyle content.
-- Links match the PDF (color and underline), not browser defaults or unstyled inherit-only treatment.
+- Links match the PDF (color, underline, and destination URI), not browser defaults or unstyled inherit-only treatment. No `href="#"` or unresolved link placeholders in finished HTML.
 - Use actual PDF assets wherever possible.
 - Multi-panel chart/figure grids are split into separate images and stack readably on mobile.
 - Logo, hero text, article content and footer must stay on one vertical alignment grid.
