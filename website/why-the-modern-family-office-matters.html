@@ -120,6 +120,8 @@
         --wp-title-rule-width-pt: 48;
         --wp-title-rule-width-wide-pt: 67.1;
         --wp-quote-panel-bg: #faefdf;
+        --wp-quote-attrib-color: #7d8698;
+        --wp-case-study-bg: #faefe0;
         --wp-stat-panel-bg: #f2f3f4;
         --wp-stat-highlight-bg: #fbf1e5;
         --wp-stat-number-size: 49.33px;
@@ -131,6 +133,7 @@
         --wp-cover-title-size: 60px;
         --wp-cover-title-lh: 1.08;
         --wp-legal-size: 10.67px;
+        --wp-note-size: 9.33px;
         --wp-section-gap: var(--space-6);
         --wp-title-gap-after: var(--space-5);
         --wp-section-head-gap: var(--space-4);
@@ -241,7 +244,7 @@
         margin-top: 0;
       }
 
-      .wp-body.wp-flow > :is(h2, h3, section, figure, .wp-stat-board, .wp-chart-figure, .wp-photo-band, .wp-pull-panel):not(:first-child) {
+      .wp-body.wp-flow > :is(h2, h3, section, figure, .wp-stat-board, .wp-donut-panel, .wp-photo-band, .wp-pull-panel):not(:first-child) {
         margin-top: var(--wp-intra-block-gap);
       }
 
@@ -277,6 +280,11 @@
       .wp-spread__page--dark {
         background: var(--color-surface-dark);
         color: var(--color-white);
+      }
+
+      .wp-spread__page--case-study {
+        background: var(--wp-case-study-bg);
+        padding-bottom: var(--wp-surface-pad-bottom);
       }
 
       .wp-spread__page--left {
@@ -508,6 +516,7 @@
         font-family: var(--font-serif);
         font-size: var(--wp-quote-size);
         font-weight: 400;
+        font-style: normal;
         line-height: 1.35;
         color: var(--wp-accent-gold);
       }
@@ -539,14 +548,15 @@
 
       .wp-pull-quote__attrib {
         display: block;
-        margin-top: calc(var(--page-max) * 12 / var(--wp-page-w-pt));
+        margin-top: calc(var(--page-max) * 13 / var(--wp-page-w-pt));
         font-family: var(--font-sans);
-        font-size: var(--wp-legal-size);
-        font-weight: 400;
-        line-height: 1.4;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        color: var(--color-ink-muted);
+        font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        font-weight: 300;
+        font-style: normal;
+        line-height: 1.35;
+        letter-spacing: normal;
+        text-transform: none;
+        color: var(--wp-quote-attrib-color);
       }
 
       .wp-signatures {
@@ -605,14 +615,134 @@
         line-height: 1.45;
       }
 
-      .wp-chart-figure {
-        margin: 0;
+      /* Donut panel — p8 trái (HTML + SVG, not composite PNG) */
+      .wp-spread__page > .wp-donut-panel {
+        margin-top: var(--wp-intra-block-gap);
       }
 
-      .wp-chart-figure img {
+      .wp-donut-panel {
+        --wp-donut-seg-gold: #dd971a;
+        --wp-donut-seg-slate: #7d8898;
+        --wp-donut-seg-blue: #b4b9c3;
+        --wp-donut-seg-cream: #f0cf9b;
+        --wp-donut-seg-cream-dot: #edc487;
+        margin: 0;
+        background: var(--wp-stat-panel-bg);
+        padding: calc(var(--page-max) * 24 / var(--wp-page-w-pt))
+          calc(var(--page-max) * 20 / var(--wp-page-w-pt));
+      }
+
+      .wp-donut-panel__grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+        gap: calc(var(--page-max) * 16 / var(--wp-page-w-pt));
+        align-items: center;
+      }
+
+      .wp-donut-panel__chart {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .wp-donut-chart {
         display: block;
-        width: 100%;
+        width: min(100%, calc(var(--page-max) * 230 / var(--wp-page-w-pt)));
         height: auto;
+      }
+
+      .wp-donut-chart__label {
+        fill: #fff;
+        font-family: var(--font-sans);
+        font-size: calc(var(--page-max) * 9 / var(--wp-page-w-pt));
+        font-weight: 600;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+
+      .wp-donut-panel__rule {
+        width: 100%;
+        height: calc(var(--page-max) * 0.5 / var(--wp-page-w-pt));
+        margin: 0 0 calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        background: var(--wp-donut-seg-gold);
+      }
+
+      .wp-donut-panel__title {
+        margin: 0 0 calc(var(--page-max) * 6 / var(--wp-page-w-pt));
+        font-family: var(--font-sans);
+        font-size: calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        font-weight: 600;
+        line-height: 1.25;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+
+      .wp-donut-panel__title sup {
+        font-size: 0.65em;
+        font-weight: 600;
+        vertical-align: super;
+      }
+
+      .wp-donut-panel__lede {
+        margin: 0 0 calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        line-height: 1.45;
+      }
+
+      .wp-donut-legend {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .wp-donut-legend__item {
+        display: grid;
+        grid-template-columns: calc(var(--page-max) * 8 / var(--wp-page-w-pt)) minmax(0, 1fr) auto;
+        gap: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        align-items: start;
+        padding: calc(var(--page-max) * 6 / var(--wp-page-w-pt)) 0;
+        border-top: calc(var(--page-max) * 0.25 / var(--wp-page-w-pt)) solid
+          rgba(0, 0, 0, 0.18);
+        font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        line-height: 1.35;
+      }
+
+      .wp-donut-legend__dot {
+        width: calc(var(--page-max) * 6.24 / var(--wp-page-w-pt));
+        height: calc(var(--page-max) * 6.24 / var(--wp-page-w-pt));
+        margin-top: calc(var(--page-max) * 2 / var(--wp-page-w-pt));
+        border-radius: 50%;
+        background: var(--wp-donut-dot, var(--wp-donut-seg-gold));
+      }
+
+      .wp-donut-legend__item--gold {
+        --wp-donut-dot: var(--wp-donut-seg-gold);
+      }
+
+      .wp-donut-legend__item--blue {
+        --wp-donut-dot: var(--wp-donut-seg-blue);
+      }
+
+      .wp-donut-legend__item--slate {
+        --wp-donut-dot: var(--wp-donut-seg-slate);
+      }
+
+      .wp-donut-legend__item--cream {
+        --wp-donut-dot: var(--wp-donut-seg-cream-dot);
+      }
+
+      .wp-donut-legend__pct {
+        font-weight: 400;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 640px) {
+        .wp-donut-panel__grid {
+          grid-template-columns: 1fr;
+        }
+
+        .wp-donut-chart {
+          width: min(100%, 220px);
+        }
       }
 
       /* Stat board — p7 trái (HTML grid, not composite PNG) */
@@ -828,6 +958,13 @@
         font-size: var(--wp-subhead-size);
         font-weight: 400;
         line-height: 1.3;
+      }
+
+      .wp-case-study__note {
+        margin: var(--space-4) 0 0;
+        font-size: var(--wp-note-size);
+        font-weight: 500;
+        line-height: 1.45;
       }
 
       .wp-footnote sup {
@@ -1634,7 +1771,7 @@
                 activity is considerable.”
               </p>
               <cite class="wp-pull-quote__attrib"
-                >Phil Harkness, CEO and Managing Partner, Mutual Trust</cite
+                >PHIL HARKNESS, CEO AND MANAGING PARTNER, MUTUAL TRUST</cite
               >
             </blockquote>
             <blockquote class="wp-pull-quote wp-pull-quote--offset">
@@ -1645,8 +1782,7 @@
                 execute it.”
               </p>
               <cite class="wp-pull-quote__attrib"
-                >Jeff Steiner, Partner, Head of Family Office, Mutual
-                Trust</cite
+                >JEFF STEINER, PARTNER, HEAD OF FAMILY OFFICE, MUTUAL TRUST</cite
               >
             </blockquote>
           </div>
@@ -2063,16 +2199,97 @@
               on Australia is more likely to continue.
             </p>
           </div>
-          <figure class="wp-chart-figure">
-            <img
-              src="assets/why-the-modern-family-office-matters/images/chunk-02/p8-left-chart.png"
-              alt="Reasons wealth transfers are unsuccessful — 60% lack of communication and trust; 25% failure to prepare inheritors; 12% lack of shared family purpose; 3% failures in financial planning, tax and investments. According to global research 97% of family wealth is lost due to non-financial reasons."
-              width="1191"
-              height="1124"
-            />
-          </figure>
+          <section
+            class="wp-donut-panel"
+            aria-labelledby="wp-donut-title"
+          >
+            <div class="wp-donut-panel__grid">
+              <div class="wp-donut-panel__chart">
+                <svg
+                  class="wp-donut-chart"
+                  viewBox="0 0 200 200"
+                  role="img"
+                  aria-label="Reasons wealth transfers are unsuccessful: 60% lack of communication and trust; 25% failure to prepare inheritors; 12% lack of shared family purpose; 3% failures in financial planning, tax planning and investments."
+                >
+                  <path
+                    fill="#dd971a"
+                    d="M 106.151 100.000 L 106.151 7.945 C 156.992 7.945 198.206 49.159 198.206 100.000 C 198.206 150.841 156.992 192.055 106.151 192.055 C 85.815 192.055 68.495 186.427 52.042 174.475 L 106.151 100.000 Z"
+                  />
+                  <path
+                    fill="#b4b9c3"
+                    d="M 106.151 100.000 L 52.042 174.475 C 10.911 144.591 1.794 87.023 31.677 45.891 L 106.151 100.000 Z"
+                  />
+                  <path
+                    fill="#7d8898"
+                    d="M 106.151 100.000 L 31.677 45.891 C 46.020 26.149 64.631 14.292 88.586 9.636 L 106.151 100.000 Z"
+                  />
+                  <path
+                    fill="#f0cf9b"
+                    d="M 106.151 100.000 L 88.586 9.636 C 94.574 8.472 100.050 7.945 106.151 7.945 L 106.151 100.000 Z"
+                  />
+                  <path
+                    fill="#ffffff"
+                    d="M 106.148 157.690 C 137.535 157.690 162.979 132.245 162.979 100.858 C 162.979 69.471 137.535 44.027 106.148 44.027 C 74.760 44.027 49.316 69.471 49.316 100.858 C 49.316 132.245 74.760 157.690 106.148 157.690 Z"
+                  />
+                  <text class="wp-donut-chart__label" x="99.11" y="24.23">
+                    3%
+                  </text>
+                  <text class="wp-donut-chart__label" x="62.67" y="38.77">
+                    12%
+                  </text>
+                  <text class="wp-donut-chart__label" x="31.71" y="107.67">
+                    25%
+                  </text>
+                  <text class="wp-donut-chart__label" x="178.70" y="117.86">
+                    60%
+                  </text>
+                </svg>
+              </div>
+              <div class="wp-donut-panel__legend">
+                <div class="wp-donut-panel__rule" aria-hidden="true"></div>
+                <h3 class="wp-donut-panel__title" id="wp-donut-title">
+                  Reasons wealth transfers<br />are unsuccessful<sup>iv</sup>
+                </h3>
+                <p class="wp-donut-panel__lede">
+                  According to global research 97% of family wealth is lost due
+                  to non-financial reasons.
+                </p>
+                <ul class="wp-donut-legend">
+                  <li class="wp-donut-legend__item wp-donut-legend__item--gold">
+                    <span class="wp-donut-legend__dot" aria-hidden="true"></span>
+                    <span class="wp-donut-legend__text"
+                      >Lack of communication and trust within the family</span
+                    >
+                    <span class="wp-donut-legend__pct">60%</span>
+                  </li>
+                  <li class="wp-donut-legend__item wp-donut-legend__item--blue">
+                    <span class="wp-donut-legend__dot" aria-hidden="true"></span>
+                    <span class="wp-donut-legend__text"
+                      >Failure to prepare inheritors</span
+                    >
+                    <span class="wp-donut-legend__pct">25%</span>
+                  </li>
+                  <li class="wp-donut-legend__item wp-donut-legend__item--slate">
+                    <span class="wp-donut-legend__dot" aria-hidden="true"></span>
+                    <span class="wp-donut-legend__text"
+                      >Lack of shared family purpose</span
+                    >
+                    <span class="wp-donut-legend__pct">12%</span>
+                  </li>
+                  <li class="wp-donut-legend__item wp-donut-legend__item--cream">
+                    <span class="wp-donut-legend__dot" aria-hidden="true"></span>
+                    <span class="wp-donut-legend__text"
+                      >Failures in financial planning, tax planning and
+                      investments</span
+                    >
+                    <span class="wp-donut-legend__pct">3%</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </div>
-        <div class="wp-spread__page wp-spread__page--right">
+        <div class="wp-spread__page wp-spread__page--right wp-spread__page--case-study">
           <figure class="wp-photo-band wp-photo-band--short">
             <img
               src="assets/why-the-modern-family-office-matters/images/chunk-02/p8-xref76.jpeg"
@@ -2140,7 +2357,7 @@
                 their family wealth continues to enrich and give back to the
                 region they are proud to call home.
               </p>
-              <p class="wp-footnote">
+              <p class="wp-case-study__note">
                 * Family name has been changed for privacy reasons.
               </p>
             </div>
