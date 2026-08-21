@@ -188,9 +188,15 @@
         --wp-quote-size: 29.33px;
         --wp-quote-panel-bg: #faefdf;
         --wp-quote-attrib-color: #7d8698;
+        --wp-callout-bg: #fbf1e5;
+        --wp-byline-photo-bg: #f1f1f2;
         --wp-case-study-bg: #faefe0;
         --wp-stat-panel-bg: #f2f3f4;
         --wp-stat-highlight-bg: #fbf1e5;
+        --wp-model-head: #eaeaed;
+        --wp-model-body: #f3f3f4;
+        --wp-model-accent-head: #f7e3c8;
+        --wp-model-accent-body: #fdf6ed;
         --wp-stat-number-size: 49.33px;
         --wp-stat-number-size-lg: 53.33px;
         --wp-stat-unit-size: 17.07px;
@@ -317,7 +323,12 @@
         margin-top: 0;
       }
 
-      .wp-body.wp-flow > :is(h2, h3, section, figure, .wp-stat-board, .wp-donut-panel, .wp-photo-band, .wp-pull-panel):not(:first-child) {
+      .wp-body.wp-flow > :is(
+        h2, h3, section, figure,
+        .wp-stat-board, .wp-donut-panel, .wp-photo-band, .wp-pull-panel,
+        .wp-callout, .wp-callout-stack, .wp-compare-table, .wp-model-grid,
+        .wp-era-grid, .wp-gemstone, .wp-outcome-list, .wp-contributors
+      ):not(:first-child) {
         margin-top: var(--wp-intra-block-gap);
       }
 
@@ -385,8 +396,10 @@
         margin-bottom: 0;
       }
 
-      .wp-body h2 {
-        margin: var(--wp-section-gap) 0 var(--space-4);
+      /* Heading ↔ adjacent block: same gap above and below (--wp-section-head-gap). */
+      .wp-body h2,
+      .wp-subhead {
+        margin: var(--wp-section-head-gap) 0;
         font-family: var(--font-serif);
         font-size: var(--wp-h2-size);
         font-weight: 400;
@@ -394,8 +407,13 @@
         color: var(--color-ink);
       }
 
-      .wp-body h2:first-child {
+      .wp-body h2:first-child,
+      .wp-body .wp-subhead:first-child {
         margin-top: 0;
+      }
+
+      .wp-body :is(p, ul, ol):has(+ :is(h2, h3, .wp-subhead)) {
+        margin-bottom: 0;
       }
 
       .wp-body :where(h2, p, ol, ul) {
@@ -480,19 +498,6 @@
         font-weight: 400;
         line-height: var(--wp-section-opener-lh);
         color: var(--color-ink);
-      }
-
-      .wp-subhead {
-        margin: 0 0 var(--wp-section-head-gap);
-        font-family: var(--font-serif);
-        font-size: var(--wp-subhead-size);
-        font-weight: 400;
-        line-height: var(--wp-h2-lh);
-        color: var(--color-ink);
-      }
-
-      .wp-body h2.wp-subhead:first-child {
-        margin-top: 0;
       }
 
       /* Cover (portrait p0) — 3 zones: header | photo+fade | footer logos */
@@ -852,6 +857,40 @@
         letter-spacing: normal;
         text-transform: none;
         color: var(--wp-quote-attrib-color);
+      }
+
+      /* Byline — p5 phải (photo nền xám PDF, không dùng extract JPEG nền đen) */
+      .wp-byline {
+        margin-top: calc(var(--page-max) * 32 / var(--wp-page-w-pt));
+      }
+
+      .wp-byline__photo-wrap {
+        width: calc(var(--page-max) * 85 / var(--wp-page-w-pt));
+        margin: 0 0 calc(var(--page-max) * 15 / var(--wp-page-w-pt));
+        background: var(--wp-byline-photo-bg);
+        line-height: 0;
+      }
+
+      .wp-byline__photo {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .wp-byline__logo {
+        display: block;
+        width: calc(var(--page-max) * 106 / var(--wp-page-w-pt));
+        margin: 0 0 calc(var(--page-max) * 9 / var(--wp-page-w-pt));
+      }
+
+      .wp-byline__name {
+        margin: 0 0 4px;
+        font-weight: 500;
+      }
+
+      .wp-byline__role {
+        margin: 0;
+        line-height: 1.45;
       }
 
       /* Stat board — p7 trái (HTML grid; cấm composite PNG) */
@@ -1244,6 +1283,415 @@
         color: var(--wp-accent-gold);
       }
 
+      /* ==========================================================================
+         Type D component catalog — p9+ (copy markup from HTML comments below)
+         ========================================================================== */
+
+      /* Callout — in-flow italic quote (p11–13, p20). Not .wp-pull-quote (p4). */
+      .wp-callout {
+        margin: var(--wp-intra-block-gap) 0;
+        padding: calc(var(--page-max) * 18 / var(--wp-page-w-pt))
+          calc(var(--page-max) * 20 / var(--wp-page-w-pt));
+        background: var(--wp-callout-bg);
+      }
+
+      .wp-callout__quote {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-family: var(--font-sans);
+        font-size: var(--wp-body-size);
+        font-weight: 400;
+        font-style: italic;
+        line-height: var(--wp-body-lh);
+        color: var(--wp-accent-gold);
+      }
+
+      .wp-callout__quote p {
+        margin: 0;
+      }
+
+      .wp-callout__attrib {
+        display: block;
+        margin-top: calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        font-family: var(--font-sans);
+        font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        font-weight: 300;
+        font-style: normal;
+        line-height: 1.35;
+        text-transform: none;
+        color: var(--wp-quote-attrib-color);
+      }
+
+      .wp-callout-stack {
+        display: flex;
+        flex-direction: column;
+        gap: var(--wp-intra-block-gap);
+        margin: var(--wp-intra-block-gap) 0;
+      }
+
+      .wp-callout-stack .wp-callout {
+        margin: 0;
+      }
+
+      /* 4 operating-model cards (p9) */
+      .wp-model-grid {
+        margin: var(--wp-intra-block-gap) 0 0;
+      }
+
+      .wp-model-grid__title {
+        margin: 0 0 calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        font-family: var(--font-sans);
+        font-size: calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        font-weight: 600;
+        line-height: 1.3;
+        letter-spacing: 0.02em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .wp-model-grid__rule {
+        width: 100%;
+        height: 1px;
+        margin: 0 0 calc(var(--page-max) * 12 / var(--wp-page-w-pt));
+        background: var(--wp-accent-gold);
+      }
+
+      .wp-model-grid__cols {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+      }
+
+      .wp-model-card {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        background: var(--wp-model-body);
+      }
+
+      .wp-model-card__head {
+        padding: calc(var(--page-max) * 14 / var(--wp-page-w-pt))
+          calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        background: var(--wp-model-head);
+        text-align: center;
+      }
+
+      .wp-model-card__icon {
+        display: block;
+        width: calc(var(--page-max) * 36 / var(--wp-page-w-pt));
+        height: auto;
+        margin: 0 auto calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        color: var(--color-ink);
+      }
+
+      .wp-model-card__name {
+        margin: 0;
+        font-family: var(--font-sans);
+        font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        font-weight: 600;
+        line-height: 1.25;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+
+      .wp-model-card__body {
+        flex: 1;
+        margin: 0;
+        padding: calc(var(--page-max) * 12 / var(--wp-page-w-pt))
+          calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        line-height: 1.4;
+      }
+
+      .wp-model-card--accent .wp-model-card__head {
+        background: var(--wp-model-accent-head);
+      }
+
+      .wp-model-card--accent {
+        background: var(--wp-model-accent-body);
+      }
+
+      .wp-model-card--accent .wp-model-card__icon,
+      .wp-model-card--accent .wp-model-card__name {
+        color: var(--wp-accent-gold);
+      }
+
+      /* Compare table — Model | Strengths | Challenges (p13) */
+      .wp-compare-table {
+        margin: var(--wp-intra-block-gap) 0 0;
+        padding: calc(var(--page-max) * 20 / var(--wp-page-w-pt));
+        background: var(--wp-stat-panel-bg);
+        overflow-x: auto;
+      }
+
+      .wp-compare-table table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .wp-compare-table th,
+      .wp-compare-table td {
+        padding: calc(var(--page-max) * 12 / var(--wp-page-w-pt))
+          calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        vertical-align: top;
+        text-align: left;
+        font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        line-height: 1.4;
+      }
+
+      .wp-compare-table thead th {
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--wp-accent-gold);
+      }
+
+      .wp-compare-table tbody tr {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      }
+
+      .wp-compare-table tbody tr:last-child {
+        border-bottom: 0;
+      }
+
+      .wp-compare-table__model {
+        display: block;
+        margin-top: calc(var(--page-max) * 6 / var(--wp-page-w-pt));
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      .wp-compare-table__icon {
+        display: block;
+        width: calc(var(--page-max) * 32 / var(--wp-page-w-pt));
+        height: auto;
+        color: var(--color-ink);
+      }
+
+      .wp-compare-table__list {
+        margin: 0;
+        padding-left: 1.1em;
+        list-style: disc;
+      }
+
+      .wp-compare-table__list li {
+        margin-bottom: 0.35em;
+      }
+
+      .wp-compare-table__list li::marker {
+        color: var(--color-ink);
+      }
+
+      /* Wealth 1.0 / 2.0 / 3.0 (p14) */
+      .wp-era-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        margin: var(--wp-intra-block-gap) 0 0;
+      }
+
+      .wp-era {
+        min-width: 0;
+        background: var(--wp-model-body);
+      }
+
+      .wp-era__head {
+        padding: calc(var(--page-max) * 12 / var(--wp-page-w-pt));
+        background: var(--wp-model-head);
+        text-align: center;
+      }
+
+      .wp-era__name {
+        margin: 0;
+        font-family: var(--font-sans);
+        font-size: calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .wp-era__years {
+        margin: 4px 0 0;
+        font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+      }
+
+      .wp-era__body {
+        margin: 0;
+        padding: calc(var(--page-max) * 12 / var(--wp-page-w-pt));
+        font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        line-height: 1.4;
+      }
+
+      .wp-era--accent .wp-era__head {
+        background: var(--wp-model-accent-head);
+      }
+
+      .wp-era--accent {
+        background: var(--wp-model-accent-body);
+      }
+
+      /* Gemstone — 5 facets (p16). SVG paths from PDF; do not ship one composite PNG. */
+      .wp-gemstone {
+        margin: var(--wp-intra-block-gap) 0 0;
+      }
+
+      .wp-gemstone__canvas {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      /* Three successful-transfer outcomes (p20) */
+      .wp-outcome-list {
+        margin: var(--wp-intra-block-gap) 0 0;
+        padding: calc(var(--page-max) * 20 / var(--wp-page-w-pt));
+        background: var(--wp-stat-panel-bg);
+      }
+
+      .wp-outcome-list__title {
+        margin: 0 0 calc(var(--page-max) * 12 / var(--wp-page-w-pt));
+        font-family: var(--font-sans);
+        font-size: calc(var(--page-max) * 9 / var(--wp-page-w-pt));
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      .wp-outcome-list ol {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .wp-outcome-list li {
+        margin: 0 0 calc(var(--page-max) * 12 / var(--wp-page-w-pt));
+        padding-bottom: calc(var(--page-max) * 12 / var(--wp-page-w-pt));
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        font-size: calc(var(--page-max) * 9 / var(--wp-page-w-pt));
+        line-height: 1.45;
+      }
+
+      .wp-outcome-list li:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+
+      /* Contributors (p26–27) */
+      .wp-contributors {
+        margin: 0;
+      }
+
+      .wp-contributors__grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--wp-block-gap) calc(var(--page-max) * 24 / var(--wp-page-w-pt));
+      }
+
+      .wp-contributor__photo {
+        display: block;
+        width: calc(var(--page-max) * 85 / var(--wp-page-w-pt));
+        height: auto;
+        margin: 0 0 calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        background: var(--wp-byline-photo-bg);
+      }
+
+      .wp-contributor__name {
+        margin: 0 0 calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        font-family: var(--font-sans);
+        font-size: calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: var(--wp-accent-gold);
+      }
+
+      .wp-contributor p {
+        margin: 0 0 var(--wp-para-gap);
+      }
+
+      /* About + offices (p28–29) */
+      .wp-about {
+        margin: 0;
+      }
+
+      .wp-about__logo {
+        display: block;
+        width: calc(var(--page-max) * 160 / var(--wp-page-w-pt));
+        height: auto;
+        margin: var(--wp-intra-block-gap) 0 0;
+      }
+
+      .wp-spread__page--offices {
+        background: var(--wp-stat-panel-bg);
+        padding-bottom: var(--wp-surface-pad-bottom);
+      }
+
+      .wp-offices {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--wp-intra-block-gap);
+      }
+
+      .wp-office h3 {
+        margin: 0 0 8px;
+        font-family: var(--font-sans);
+        font-size: var(--wp-legal-size);
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .wp-office p {
+        margin: 0;
+        font-size: var(--wp-legal-size);
+        line-height: 1.45;
+      }
+
+      /* Endnotes (p30) + legal (p31) + back (p32) */
+      .wp-endnotes {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: var(--wp-note-size);
+        font-weight: 300;
+        line-height: 1.45;
+      }
+
+      .wp-endnotes li {
+        display: grid;
+        grid-template-columns: 1.5em minmax(0, 1fr);
+        gap: 0.4em;
+        margin: 0 0 0.65em;
+      }
+
+      .wp-endnotes__mark {
+        font-style: italic;
+      }
+
+      .wp-legal {
+        font-size: var(--wp-note-size);
+        font-weight: 300;
+        line-height: 1.5;
+      }
+
+      .wp-back {
+        min-height: var(--wp-page-height);
+        color: var(--color-white);
+        background: var(--color-black);
+      }
+
+      @media (max-width: 768px) {
+        .wp-model-grid__cols,
+        .wp-era-grid,
+        .wp-contributors__grid,
+        .wp-offices {
+          grid-template-columns: 1fr;
+        }
+      }
+
       /* Chunk spacing junctions */
       .wp-section-gap {
         height: var(--space-7);
@@ -1316,10 +1764,157 @@
            <h2 class="wp-section-opener__title wp-title-rule">Introduction</h2>
            <h2 class="wp-section-opener__title">The positive socio-economic<br><span class="wp-title-rule__mark">impact</span> of wealthy families</h2>
       -->
-      <!-- FRONT MATTER (p2): left band+definitions | right methodology -->
+      <!-- FRONT MATTER (p2): band + definitions + methodology in ONE .wp-body.wp-flow — do not split Methodology onto .wp-spread__page--right -->
       <!-- STAT BOARD (p7 trái): .wp-stat-board__midrule (line + spacing); growth icon = inline SVG path from PDF p7 (23.031×27.03pt) -->
 
       <!-- /wp-chunk:1 -->
+
+      <!-- =====================================================================
+           TYPE D COMPONENT CATALOG — copy a block, fill PDF copy/SVG/href.
+           Lookup: Mutual-Trust-Design-Analysis-Framework.md → Nhóm D catalog.
+           New PDF layout (no class yet): add token + CSS + skeleton HERE, then a
+           lookup row in the MD catalog — then build the article from that class.
+           Do not invent one-off markup only on the article HTML.
+           Do not composite PNG for these panels.
+           ===================================================================== -->
+
+      <!-- CALLOUT (p11–13, p20) — italic sans gold; attrib sentence-case. NOT .wp-pull-quote -->
+      <!--
+      <aside class="wp-callout">
+        <blockquote class="wp-callout__quote">
+          <p>“…quote verbatim…”</p>
+        </blockquote>
+        <cite class="wp-callout__attrib">Family Enterprise leader, participant 6</cite>
+      </aside>
+      -->
+
+      <!-- CALLOUT STACK (p10 trái) — catalytic bullets between quotes -->
+      <!--
+      <div class="wp-callout-stack">
+        <aside class="wp-callout">…</aside>
+        <ul class="wp-list"><li>Expansion and growth of family members…</li></ul>
+        <aside class="wp-callout">…</aside>
+      </div>
+      -->
+
+      <!-- MODEL GRID (p9 phải) — 4 cards; last column --accent = MFO -->
+      <!--
+      <section class="wp-model-grid" aria-labelledby="wp-models-title">
+        <h3 class="wp-model-grid__title" id="wp-models-title">Four types of family office operating models</h3>
+        <div class="wp-model-grid__rule" aria-hidden="true"></div>
+        <div class="wp-model-grid__cols">
+          <article class="wp-model-card">
+            <div class="wp-model-card__head">
+              <svg class="wp-model-card__icon" viewBox="0 0 36 36" aria-hidden="true"><!-- PDF path --></svg>
+              <h4 class="wp-model-card__name">Single Family Office (SFO)</h4>
+            </div>
+            <p class="wp-model-card__body">…</p>
+          </article>
+          <article class="wp-model-card">…BFO…</article>
+          <article class="wp-model-card">…VFO…</article>
+          <article class="wp-model-card wp-model-card--accent">…MFO…</article>
+        </div>
+      </section>
+      -->
+
+      <!-- COMPARE TABLE (p13 phải) — bullets ink, not gold -->
+      <!--
+      <section class="wp-compare-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Family office model</th>
+              <th>Strengths</th>
+              <th>Challenges</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <svg class="wp-compare-table__icon" viewBox="0 0 32 32" aria-hidden="true"></svg>
+                <span class="wp-compare-table__model">Business Family Office</span>
+              </th>
+              <td><ul class="wp-compare-table__list"><li>…</li></ul></td>
+              <td><ul class="wp-compare-table__list"><li>…</li></ul></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      -->
+
+      <!-- ERA GRID (p14 phải) — Wealth 1.0 / 2.0 / 3.0; 3.0 uses --accent -->
+      <!--
+      <section class="wp-era-grid">
+        <article class="wp-era">
+          <div class="wp-era__head">
+            <h3 class="wp-era__name">Wealth 1.0</h3>
+            <p class="wp-era__years">–1980s</p>
+          </div>
+          <ul class="wp-era__body wp-list">…</ul>
+        </article>
+        <article class="wp-era">…2.0…</article>
+        <article class="wp-era wp-era--accent">…3.0…</article>
+      </section>
+      -->
+
+      <!-- GEMSTONE (p16 trái) — SVG from PDF drawings; not one composite PNG -->
+      <!--
+      <figure class="wp-gemstone">
+        <svg class="wp-gemstone__canvas" viewBox="0 0 505 644" role="img" aria-label="The Mutual Trust Gemstone — five facets"></svg>
+      </figure>
+      -->
+
+      <!-- OUTCOME LIST (p20) -->
+      <!--
+      <section class="wp-outcome-list">
+        <h3 class="wp-outcome-list__title">A successful wealth transfer can look like many things for a family.</h3>
+        <ol>
+          <li>Family members could be separate…</li>
+          <li>Family members could keep it all together…</li>
+          <li>Family members could maintain a core base of wealth…</li>
+        </ol>
+      </section>
+      -->
+
+      <!-- CONTRIBUTORS (p26–27) — name Medium caps gold; photo: render PDF if extract is black -->
+      <!--
+      <section class="wp-contributors">
+        <h2 class="wp-display-title wp-title-rule">Contributors to this report</h2>
+        <div class="wp-contributors__grid">
+          <article class="wp-contributor">
+            <img class="wp-contributor__photo" src="…" alt="" width="85" height="85" />
+            <h3 class="wp-contributor__name">Phil Harkness | CEO &amp; Managing Partner, Mutual Trust</h3>
+            <p>…bio…</p>
+          </article>
+        </div>
+      </section>
+      -->
+
+      <!-- ABOUT + OFFICES (p28–29) -->
+      <!--
+      <div class="wp-about">
+        <h2 class="wp-display-title wp-title-rule">About University of Adelaide Business School</h2>
+        <p>…</p>
+        <img class="wp-about__logo" src="…" alt="The University of Adelaide Business School" />
+      </div>
+      <div class="wp-spread__page wp-spread__page--offices">
+        <div class="wp-offices">
+          <article class="wp-office">
+            <h3>Melbourne</h3>
+            <p>…<a href="tel:+61…">…</a></p>
+          </article>
+        </div>
+      </div>
+      -->
+
+      <!-- ENDNOTES (p30) + LEGAL (p31) + BACK (p32). Skip blank dark half of p31. -->
+      <!--
+      <ol class="wp-endnotes">
+        <li><span class="wp-endnotes__mark">i</span><span>…</span></li>
+      </ol>
+      <div class="wp-legal"><p>Prepared in Australia by Mutual Trust Pty Ltd…</p></div>
+      <div class="wp-single"><div class="wp-back">…</div></div>
+      -->
 
         <!-- wp-chunk:2 welcome-s1 pending -->
         <!-- wp-chunk:3 section-2-table pending -->

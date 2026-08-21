@@ -121,6 +121,7 @@
         --wp-title-rule-width-wide-pt: 67.1;
         --wp-quote-panel-bg: #faefdf;
         --wp-quote-attrib-color: #7d8698;
+        --wp-byline-photo-bg: #f1f1f2;
         --wp-case-study-bg: #faefe0;
         --wp-stat-panel-bg: #f2f3f4;
         --wp-stat-highlight-bg: #fbf1e5;
@@ -318,16 +319,23 @@
         margin-bottom: 0;
       }
 
-      .wp-body h2 {
-        margin: var(--wp-section-gap) 0 var(--space-4);
+      /* Heading ↔ adjacent block: same gap above and below (--wp-section-head-gap). */
+      .wp-body h2,
+      .wp-subhead {
+        margin: var(--wp-section-head-gap) 0;
         font-family: var(--font-serif);
         font-size: var(--wp-h2-size);
         font-weight: 400;
         line-height: var(--wp-h2-lh);
       }
 
-      .wp-body h2:first-child {
+      .wp-body h2:first-child,
+      .wp-body .wp-subhead:first-child {
         margin-top: 0;
+      }
+
+      .wp-body :is(p, ul, ol):has(+ :is(h2, h3, .wp-subhead)) {
+        margin-bottom: 0;
       }
 
       .wp-body :where(h2, p, ol, ul) {
@@ -405,20 +413,11 @@
       }
 
       .wp-subhead {
-        margin: 0 0 var(--wp-section-head-gap);
-        font-family: var(--font-serif);
-        font-size: var(--wp-subhead-size);
-        font-weight: 400;
-        line-height: var(--wp-h2-lh);
         color: var(--color-ink);
       }
 
       .wp-body > p + .wp-list,
       .wp-body > .wp-list:first-child {
-        margin-top: 0;
-      }
-
-      .wp-body h2.wp-subhead:first-child {
         margin-top: 0;
       }
 
@@ -593,16 +592,23 @@
         margin-top: calc(var(--page-max) * 32 / var(--wp-page-w-pt));
       }
 
+      .wp-byline__photo-wrap {
+        width: calc(var(--page-max) * 85 / var(--wp-page-w-pt));
+        margin: 0 0 calc(var(--page-max) * 15 / var(--wp-page-w-pt));
+        background: var(--wp-byline-photo-bg);
+        line-height: 0;
+      }
+
       .wp-byline__photo {
         display: block;
-        width: calc(var(--page-max) * 87 / var(--wp-page-w-pt));
-        margin-bottom: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        width: 100%;
+        height: auto;
       }
 
       .wp-byline__logo {
         display: block;
         width: calc(var(--page-max) * 106 / var(--wp-page-w-pt));
-        margin-bottom: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        margin: 0 0 calc(var(--page-max) * 9 / var(--wp-page-w-pt));
       }
 
       .wp-byline__name {
@@ -1476,7 +1482,7 @@
       </div>
 
       <div
-        class="wp-spread wp-spread--frontmatter"
+        class="wp-spread wp-spread--frontmatter wp-spread--flow"
         aria-label="Definitions and methodology"
       >
         <div class="wp-spread__page wp-spread__page--left">
@@ -1488,7 +1494,7 @@
               height="699"
             />
           </figure>
-          <div class="wp-spread__inner wp-spread__inner--left wp-body">
+          <div class="wp-spread__inner wp-spread__inner--left wp-body wp-flow">
             <h2>Mutual Trust’s definition of&nbsp;a Family Office</h2>
             <p>
               The functional infrastructure made up of people, systems and
@@ -1522,10 +1528,6 @@
               The term ‘Family Enterprise’ may also encompass the family’s
               operating&nbsp;businesses.
             </p>
-          </div>
-        </div>
-        <div class="wp-spread__page wp-spread__page--right">
-          <div class="wp-spread__inner wp-spread__inner--right wp-body">
             <h2>Methodology</h2>
             <p>
               The research referred to in this report comprises two primary
@@ -1876,12 +1878,21 @@
               the betterment of society.
             </p>
             <div class="wp-byline">
+              <div class="wp-byline__photo-wrap">
+                <img
+                  class="wp-byline__photo"
+                  src="assets/why-the-modern-family-office-matters/images/chunk-02/p5-byline-photo.png"
+                  alt=""
+                  width="340"
+                  height="340"
+                />
+              </div>
               <img
-                class="wp-byline__photo"
-                src="assets/why-the-modern-family-office-matters/images/chunk-02/p5-xref37.jpeg"
-                alt=""
-                width="182"
-                height="167"
+                class="wp-byline__logo"
+                src="assets/why-the-modern-family-office-matters/images/chunk-02/p5-xref41.jpeg"
+                alt="The University of Adelaide Business School"
+                width="222"
+                height="84"
               />
               <p class="wp-byline__name">Dr. Christopher Graves</p>
               <p class="wp-byline__role">
@@ -1893,13 +1904,6 @@
                 (FBERG)<br />
                 The University of Adelaide Business School
               </p>
-              <img
-                class="wp-byline__logo"
-                src="assets/why-the-modern-family-office-matters/images/chunk-02/p5-xref41.jpeg"
-                alt="The University of Adelaide Business School"
-                width="222"
-                height="84"
-              />
             </div>
           </div>
         </div>
