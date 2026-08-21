@@ -1,0 +1,159 @@
+SECTION 2
+How Family Offices  
+help wealthy families
+A modern Family Office is the dedicated team of professionals who supports 
+wealthy families in planning, managing, transferring and perpetuating wealth across 
+generations to achieve what matters most to the family as well as advance the 
+positive contribution they make to society.  
+The services of a Family Office include the key infrastructure required such as: 
+family advisory; family governance and decision-making processes; education 
+of family members; intergenerational wealth transfers; asset protection; 
+philanthropy; financial administration; tax compliance and investment management.  
+A Family Office is not necessarily a legal entity, physical location or organisational 
+structure, although it will often take on many of these traits as a family’s wealth grows. 
+There are four types of Family Office operating models:
+•	 Single Family Office (“SFO”) with a dedicated full-time team 
+looking after one family;
+•	 Business Family Office (“BFO”) that uses professionals from the family  
+business to also look after the family’s personal affairs;
+•	 Virtual Family Office (“VFO”) where the family co-ordinates professionals 
+from different service providers to meet their needs; and
+•	 Multi-Family Office (“MFO”) a third-party company with in-house  
+multi-disciplinary professionals who look after multiple families using  
+dedicated teams.  
+Is similar to an SFO 
+except that it offers a 
+broader range and scale 
+of Family Office services 
+to several unrelated Family 
+Enterprises.  Commercial 
+MFOs are often owned 
+by third parties and 
+families who offer a 
+wide range of tailored 
+Family Office services 
+to Family Enterprises 
+of different sizes.  
+MULTI-FAMILY 
+OFFICE (MFO)
+FOUR TYPES OF FAMILY OFFICE OPERATING MODELS
+Is where the family 
+establishes and operates 
+a legal entity separately 
+from its operating 
+businesses.  The SFO may 
+have a family or non-family 
+CEO and employ staff and 
+utilise outside expertise.  
+The SFO is solely devoted 
+to providing Family Office 
+services to a single family.  
+SINGLE FAMILY  
+OFFICE (SFO)
+Is where the family uses 
+external providers such as 
+advisors from accounting 
+firms, stockbroking firms 
+and/or banking institutions. 
+VIRTUAL FAMILY  
+OFFICE (VFO)
+Is where a family 
+introduces a degree of 
+separation between the 
+family’s business entity and 
+their wealth management.  
+In practice, this approach 
+is embedded within the 
+family’s primary business, 
+where an employee  
+(e.g. their CFO) is entrusted 
+with managing the 
+family’s wealth outside 
+the business.  
+BUSINESS FAMILY 
+OFFICE (BFO)
+18
+Why The Modern Family Office Matters
+19
+How Family Offices help wealthy families
+
+
+--- LINES ---
+x=  39.0 y=  70.2 sz=[12.0] fonts=['ProximaNova-Bold'] flags=[20] c=['#ffffff'] | SECTION 2
+x=  39.0 y=  90.4 sz=[30.0] fonts=['Baskerville'] flags=[4] c=['#ffffff'] | How Family Offices  
+x=  39.0 y= 126.4 sz=[30.0] fonts=['Baskerville'] flags=[4] c=['#ffffff'] | help wealthy families
+x= 646.8 y=  70.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | A modern Family Office is the dedicated team of professionals who supports 
+x= 646.8 y=  85.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | wealthy families in planning, managing, transferring and perpetuating wealth across 
+x= 646.8 y= 100.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | generations to achieve what matters most to the family as well as advance the 
+x= 646.8 y= 115.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | positive contribution they make to society.  
+x= 646.8 y= 135.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | The services of a Family Office include the key infrastructure required such as: 
+x= 646.8 y= 150.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | family advisory; family governance and decision-making processes; education 
+x= 646.8 y= 165.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | of family members; intergenerational wealth transfers; asset protection; 
+x= 646.8 y= 180.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | philanthropy; financial administration; tax compliance and investment management.  
+x= 646.8 y= 201.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | A Family Office is not necessarily a legal entity, physical location or organisational 
+x= 646.8 y= 216.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | structure, although it will often take on many of these traits as a family’s wealth grows. 
+x= 646.8 y= 237.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | There are four types of Family Office operating models:
+x= 663.8 y= 257.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000', '#dd971a'] | •	 Single Family Office (“SFO”) with a dedicated full-time team 
+x= 675.1 y= 272.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | looking after one family;
+x= 663.8 y= 292.1 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000', '#dd971a'] | •	 Business Family Office (“BFO”) that uses professionals from the family  
+x= 675.1 y= 307.1 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | business to also look after the family’s personal affairs;
+x= 663.8 y= 326.4 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000', '#dd971a'] | •	 Virtual Family Office (“VFO”) where the family co-ordinates professionals 
+x= 675.1 y= 341.4 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | from different service providers to meet their needs; and
+x= 663.8 y= 360.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000', '#dd971a'] | •	 Multi-Family Office (“MFO”) a third-party company with in-house  
+x= 675.2 y= 375.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | multi-disciplinary professionals who look after multiple families using  
+x= 675.2 y= 390.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | dedicated teams.  
+x=1043.1 y= 566.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Is similar to an SFO 
+x=1043.1 y= 576.9 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | except that it offers a 
+x=1043.1 y= 587.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | broader range and scale 
+x=1043.1 y= 597.9 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | of Family Office services 
+x=1043.1 y= 608.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | to several unrelated Family 
+x=1043.1 y= 618.9 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Enterprises.  Commercial 
+x=1043.1 y= 629.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | MFOs are often owned 
+x=1043.1 y= 639.9 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | by third parties and 
+x=1043.1 y= 650.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | families who offer a 
+x=1043.1 y= 660.9 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | wide range of tailored 
+x=1043.1 y= 671.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Family Office services 
+x=1043.1 y= 681.9 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | to Family Enterprises 
+x=1043.1 y= 692.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | of different sizes.  
+x=1064.1 y= 527.0 sz=[8.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#dd971a'] | MULTI-FAMILY 
+x=1064.3 y= 537.0 sz=[8.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#dd971a'] | OFFICE (MFO)
+x= 778.1 y= 444.0 sz=[9.0] fonts=['ProximaNova-Medium'] flags=[4] c=['#000000'] | FOUR TYPES OF FAMILY OFFICE OPERATING MODELS
+x= 656.2 y= 566.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Is where the family 
+x= 656.2 y= 576.9 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | establishes and operates 
+x= 656.2 y= 587.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | a legal entity separately 
+x= 656.2 y= 597.9 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | from its operating 
+x= 656.2 y= 608.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | businesses.  The SFO may 
+x= 656.2 y= 618.9 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | have a family or non-family 
+x= 656.2 y= 629.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | CEO and employ staff and 
+x= 656.2 y= 639.9 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | utilise outside expertise.  
+x= 656.2 y= 650.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | The SFO is solely devoted 
+x= 656.2 y= 660.9 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | to providing Family Office 
+x= 656.2 y= 671.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | services to a single family.  
+x= 674.9 y= 527.0 sz=[8.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | SINGLE FAMILY  
+x= 678.4 y= 537.0 sz=[8.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | OFFICE (SFO)
+x= 914.8 y= 566.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Is where the family uses 
+x= 914.8 y= 576.9 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | external providers such as 
+x= 914.8 y= 587.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | advisors from accounting 
+x= 914.8 y= 597.9 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | firms, stockbroking firms 
+x= 914.8 y= 608.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | and/or banking institutions. 
+x= 930.8 y= 527.0 sz=[8.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | VIRTUAL FAMILY  
+x= 936.6 y= 537.0 sz=[8.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | OFFICE (VFO)
+x= 785.2 y= 566.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Is where a family 
+x= 785.2 y= 576.9 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | introduces a degree of 
+x= 785.2 y= 587.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | separation between the 
+x= 785.2 y= 597.9 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | family’s business entity and 
+x= 785.2 y= 608.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | their wealth management.  
+x= 785.2 y= 618.9 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | In practice, this approach 
+x= 785.2 y= 629.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | is embedded within the 
+x= 785.2 y= 639.9 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | family’s primary business, 
+x= 785.2 y= 650.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | where an employee  
+x= 785.2 y= 660.9 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | (e.g. their CFO) is entrusted 
+x= 785.2 y= 671.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | with managing the 
+x= 785.2 y= 681.9 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | family’s wealth outside 
+x= 785.2 y= 692.4 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | the business.  
+x= 798.2 y= 527.0 sz=[8.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | BUSINESS FAMILY 
+x= 807.1 y= 537.0 sz=[8.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | OFFICE (BFO)
+x=  39.7 y= 795.5 sz=[8.0] fonts=['Baskerville'] flags=[4] c=['#ffffff'] | 18
+x= 427.1 y= 795.7 sz=[7.0] fonts=['ProximaNova-Light'] flags=[4] c=['#ffffff'] | Why The Modern Family Office Matters
+x=1142.9 y= 795.5 sz=[8.0] fonts=['Baskerville'] flags=[4] c=['#7d8898'] | 19
+x= 645.1 y= 795.6 sz=[7.0] fonts=['ProximaNova-Light'] flags=[4] c=['#7d8898'] | How Family Offices help wealthy families

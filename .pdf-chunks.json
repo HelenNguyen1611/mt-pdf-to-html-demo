@@ -12,7 +12,7 @@
       "family": "white-paper",
       "totalPages": 33,
       "maxPagesPerChunk": 10,
-          "lastCompletedChunk": 2,
+          "lastCompletedChunk": 3,
           "chunks": [
         {
           "id": 1,
@@ -37,7 +37,9 @@
           "label": "section-2-table",
           "pages": [9, 10, 11, 12, 13],
           "pagesLabel": "p9–p13",
-          "status": "pending"
+          "status": "completed",
+          "completedAt": "2026-08-21",
+          "assets": "images/chunk-03/"
         },
         {
           "id": 4,

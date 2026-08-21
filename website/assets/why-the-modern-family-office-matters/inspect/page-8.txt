@@ -74,3 +74,78 @@ The positive socio-economic impact of wealthy families
 16
 Why The Modern Family Office Matters
 The positive socio-economic impact of wealthy families
+
+
+--- LINES ---
+x= 646.3 y= 321.2 sz=[10.0] fonts=['ProximaNova-Medium'] flags=[4] c=['#000000'] | MUTUAL TRUST CASE STUDY 
+x= 646.3 y= 336.8 sz=[20.0] fonts=['Baskerville'] flags=[4] c=['#000000'] | Impact of the Trentini Family
+x= 646.3 y= 370.8 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Upon their arrival in Australia, the Trentini* family purchased 150 hectares of land in south-western 
+x= 646.3 y= 385.8 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Victoria with the intention of establishing a dairy farm.  What they didn’t foresee was the profound 
+x= 646.3 y= 400.8 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | positive impact the ongoing growth of the farm would have on their local community.  
+x= 646.3 y= 421.5 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Already experienced in dairy farming through their upbringing in Lombardia Italy, it didn’t take long 
+x= 646.3 y= 436.5 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | for the Trentinis to build a successful farm which supplied dairy products to local businesses.  
+x= 646.3 y= 457.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Over time, as the farm grew in size and profitability, so did the Trentini family wealth.  What was 
+x= 646.3 y= 472.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | once a small Family Enterprise had now become a key contributor to Victoria’s milk production.  
+x= 646.3 y= 492.8 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Through the success of this Family Enterprise, today the dairy farm provides more than 200 
+x= 646.3 y= 507.8 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | local full-time jobs, paying generous wages and superannuation contributions to members 
+x= 646.3 y= 522.8 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | of the community.  
+x= 646.3 y= 543.5 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | The Trentinis are passionate about investing their wealth back into the region that first 
+x= 646.3 y= 558.5 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | welcomed them in 1954.  They purchase their grain, equipment and other farm supplies from 
+x= 646.3 y= 573.5 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | local businesses and hire local staff.  In 2004, they bought the tired town pub and invested 
+x= 646.3 y= 588.5 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | a portion of their wealth into renovating and creating a welcoming space to bring the community 
+x= 646.3 y= 603.5 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | together.  Over the following decade, they established a boutique B&B in addition to the pub, 
+x= 646.3 y= 618.5 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | attracting tourists and visitors to the area.  This generated further opportunities for paid work 
+x= 646.3 y= 633.5 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | and created more business for local suppliers.  
+x= 646.3 y= 654.1 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | When fires swept through the region in 2018, the Trentinis used their pub to provide free 
+x= 646.3 y= 669.1 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | accommodation and meals to locals who had lost their homes.  They were also in a position 
+x= 646.3 y= 684.1 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | to donate a considerable sum of money to support local recovery and rehabilitation efforts.  
+x= 646.3 y= 704.8 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | The third generation of the Trentini family remains actively involved in the community by 
+x= 646.3 y= 719.8 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | sponsoring the local football and netball clubs, along with other community initiatives to ensure 
+x= 646.3 y= 734.8 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | their family wealth continues to enrich and give back to the region they are proud to call home.  
+x= 646.3 y= 755.9 sz=[7.0] fonts=['ProximaNova-Regular'] flags=[4] c=['#000000'] | 	* Family name has been changed for privacy reasons.  
+x= 315.2 y= 583.2 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Lack of communication and trust within the family
+x= 502.7 y= 583.2 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | 60%
+x= 315.2 y= 604.5 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Failure to prepare inheritors
+x= 503.3 y= 604.5 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | 25%
+x= 315.2 y= 625.8 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Lack of shared family purpose
+x= 505.3 y= 625.8 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | 12%
+x= 315.2 y= 647.2 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Failures in financial planning, tax planning 
+x= 315.2 y= 657.7 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | and investments
+x= 508.0 y= 647.2 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | 3%
+x= 111.4 y= 527.3 sz=[9.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#ffffff'] | 12%
+x=  75.9 y= 604.1 sz=[9.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#ffffff'] | 25%
+x= 153.8 y= 511.1 sz=[9.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#ffffff'] | 3%
+x= 239.7 y= 615.5 sz=[9.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#ffffff'] | 60%
+x= 299.5 y= 508.3 sz=[10.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | REASONS WEALTH TRANSFERS 
+x= 299.5 y= 522.5 sz=[7.0, 10.0] fonts=['ProximaNova-Light', 'ProximaNova-Semibold'] flags=[5, 20] c=['#000000'] | ARE UNSUCCESSFUL iv
+x= 299.5 y= 540.0 sz=[11.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | According to global research 97% of family 
+x= 299.5 y= 555.0 sz=[11.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | wealth is lost due to non-financial reasons.  
+x=  39.7 y=  70.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Focusing on communication is vitally important.  It builds trust among  
+x=  39.7 y=  85.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | family members, helps make family members’ aspirations clearer, and results 
+x=  39.7 y= 100.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | in better decision making as there is better understanding within the family 
+x=  39.7 y= 115.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | of the facts involved.  Every family (and each family member) has its own set 
+x=  39.7 y= 130.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | of complexities, and transparent discussions can help to address concerns.  
+x=  39.7 y= 150.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | The second most important factor for success is to ensure the younger 
+x=  39.7 y= 165.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | members of the family are equipped with the tools and experience they 
+x=  39.7 y= 180.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | need to lead and manage family wealth.  In doing so, families can focus on 
+x=  39.7 y= 195.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | education and engagement of individual family members in conjunction with 
+x=  39.7 y= 210.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | the family as a collective.  Families who build awareness around family affairs, 
+x=  39.7 y= 225.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | history and legacy often break down the “generational barriers,” building 
+x=  39.7 y= 240.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | trust and confidence that family wealth will be preserved, and future actions 
+x=  39.7 y= 255.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | will align with the family’s Purpose of Wealth.  
+x=  39.7 y= 276.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | The third most important success factor is defining the family’s Purpose 
+x=  39.7 y= 291.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | of Wealth.  Each family member is different and driven in unique ways.   
+x=  39.7 y= 306.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | A successful family can define the ‘how’ of applying their wealth for different 
+x=  39.7 y= 321.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | familial purposes while leveraging the individual strengths of each family 
+x=  39.7 y= 336.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | member.  They value their differences and support personal passions.   
+x=  39.7 y= 351.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | This encourages each family member to live a productive, healthy  
+x=  39.7 y= 366.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | and fulfilled life.  
+x=  39.7 y= 387.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | In Mutual Trust’s experience, families who have addressed these  
+x=  39.7 y= 402.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | non-financial challenges are more likely to thrive and be successful in 
+x=  39.7 y= 417.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | passing their wealth to future generations than those who don’t.  And in turn, 
+x=  39.7 y= 432.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | their positive socio-economic impact on Australia is more likely to continue.  
+x=1142.9 y= 795.5 sz=[8.0] fonts=['Baskerville'] flags=[4] c=['#dd971a'] | 17
+x= 646.3 y= 795.7 sz=[7.0] fonts=['ProximaNova-Light'] flags=[4] c=['#dd971a'] | The positive socio-economic impact of wealthy families 
+x=  39.7 y= 795.5 sz=[8.0] fonts=['Baskerville'] flags=[4] c=['#7f8a9a'] | 16
+x= 427.1 y= 795.7 sz=[7.0] fonts=['ProximaNova-Light'] flags=[4] c=['#7f8a9a'] | Why The Modern Family Office Matters
+x= 646.3 y= 795.7 sz=[7.0] fonts=['ProximaNova-Light'] flags=[4] c=['#dd971a'] | The positive socio-economic impact of wealthy families

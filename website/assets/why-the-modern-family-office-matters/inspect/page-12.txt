@@ -1,0 +1,125 @@
+Preferences of the family
+Preference for control or active involvement is a factor when family members desire ‘hands-on’ 
+involvement in key aspects of the Family Office, particularly when it comes to managing their 
+business entities, investment portfolios and participation in direct private equity investments.  
+In many cases, such preferences will steer families to adopt Single Family Office models.  
+“…the first generation of wealth creators, in my view, find it harder to outsource or 
+delegate to service providers and then the second and third and fourth allow it.  
+Because the first‑generation of wealth creators have made the wealth themselves, 
+they feel they know what to do.” 
+Family Enterprise leader, participant 6
+The desire to learn about managing family wealth
+Some members of the family may have a keen desire to learn essential aspects of managing 
+wealth and educate the subsequent generations to take on the responsibilities of running 
+the Family Office.  Consequently, they may be more likely to adopt a Single Family Office 
+approach and acquire the additional expertise outside the family, using external providers 
+such as Virtual Family Offices or Multi‑Family Offices.  
+The complexities of a family’s affairs
+In direct contrast, one family patriarch, perhaps due to the complexities of his family’s wealth 
+and growing number of family branches and members suggested that using a Multi-Family 
+Office provider has allowed him to learn more from other families that use the same  
+Multi-Family Office.  
+“…Well, it’s a big job managing a family asset base with the people involved.  So, I think 
+the Multi-Family Office is a much better place for comparing notes with other people.” 
+Family Enterprise leader, participant 2
+The desire for freedom to focus on what matters most 
+Some family members want to be free from the administrative burden of managing 
+and coordinating wealth.  Instead, they have a deep desire to channel their energies into what 
+matters most to their family.  Such families are more likely to spend their time on leading and 
+engaging family members and preparing them for wealth transition while outsourcing all key 
+management functions to a Multi-Family Office provider.  
+The desire for an integrated but flexible, 
+whole‑of‑family approach 
+One of the perceived benefits of Multi-Family Office providers is their broad range of Family 
+Office-related services, providing better coordination of advice to meet the specific needs 
+of the family as a whole.  
+“Using an MFO provider gives us a family focus which an accounting firm doesn’t 
+provide you… I’m all about upscaling my family so that they can actually walk in and 
+take control in the future… An accounting firm starts with ‘I’ll do your numbers for you’.  
+Well, that’s great.  When you walk into an MFO, they begin with ‘I’ll look after your 
+family for you’...” 
+Family Enterprise leader, participant 2
+“I don’t want to be rude, but I can get your [tax and accounting] services from anybody.  
+If you look after my family – not me but my family – than you’ll probably have us 
+for a generation or two.  Now that means looking after the individuals, not just the 
+accounting.”
+Family Enterprise leader, participant 1
+It also provides families with the flexibility to choose the level of support they require.  One family 
+leader suggested that Multi-Family Office providers are better placed to assist in succession 
+planning and rising generation development because of the level of independence, objectivity 
+and focus they can bring.  
+“…If I get to the point where I don’t want to spend the time, or I’m not capable of doing 
+what I am doing now, I can transfer either all or parts to the MFO provider just as if I’d 
+passed away.” 
+Family Enterprise leader, participant 18
+“There is less succession planning when you have a Single Family Office because you 
+have to run it like a business.” 
+Family Enterprise leader, participant 7
+25
+24
+Why The Modern Family Office Matters
+How Family Offices help wealthy families
+
+
+--- LINES ---
+x=  38.8 y=  72.4 sz=[20.0] fonts=['Baskerville'] flags=[4] c=['#000000'] | Preferences of the family
+x=  39.9 y= 106.5 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Preference for control or active involvement is a factor when family members desire ‘hands-on’ 
+x=  39.9 y= 121.5 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | involvement in key aspects of the Family Office, particularly when it comes to managing their 
+x=  39.9 y= 136.5 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | business entities, investment portfolios and participation in direct private equity investments.  
+x=  40.0 y= 151.5 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | In many cases, such preferences will steer families to adopt Single Family Office models.  
+x=  58.4 y= 194.8 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | “…the first generation of wealth creators, in my view, find it harder to outsource or 
+x=  62.7 y= 209.8 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | delegate to service providers and then the second and third and fourth allow it.  
+x=  62.4 y= 224.8 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | Because the first‑generation of wealth creators have made the wealth themselves, 
+x=  62.7 y= 239.8 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | they feel they know what to do.” 
+x=  62.6 y= 264.8 sz=[12.0] fonts=['ProximaNova-Regular'] flags=[4] c=['#7d8898'] | Family Enterprise leader, participant 6
+x=  37.3 y= 319.4 sz=[20.0] fonts=['Baskerville'] flags=[4] c=['#000000'] | The desire to learn about managing family wealth
+x=  39.6 y= 353.4 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Some members of the family may have a keen desire to learn essential aspects of managing 
+x=  39.8 y= 368.4 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | wealth and educate the subsequent generations to take on the responsibilities of running 
+x=  39.9 y= 383.4 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | the Family Office.  Consequently, they may be more likely to adopt a Single Family Office 
+x=  39.8 y= 398.4 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | approach and acquire the additional expertise outside the family, using external providers 
+x=  40.0 y= 413.4 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | such as Virtual Family Offices or Multi‑Family Offices.  
+x=  37.3 y= 445.3 sz=[20.0] fonts=['Baskerville'] flags=[4] c=['#000000'] | The complexities of a family’s affairs
+x=  40.0 y= 479.4 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | In direct contrast, one family patriarch, perhaps due to the complexities of his family’s wealth 
+x=  39.8 y= 494.4 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | and growing number of family branches and members suggested that using a Multi-Family 
+x=  39.6 y= 509.4 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Office provider has allowed him to learn more from other families that use the same  
+x=  39.9 y= 524.4 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Multi-Family Office.  
+x=  58.4 y= 567.7 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | “…Well, it’s a big job managing a family asset base with the people involved.  So, I think 
+x=  62.7 y= 582.7 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | the Multi-Family Office is a much better place for comparing notes with other people.” 
+x=  62.6 y= 607.8 sz=[12.0] fonts=['ProximaNova-Regular'] flags=[4] c=['#7d8898'] | Family Enterprise leader, participant 2
+x=  37.3 y= 662.3 sz=[20.0] fonts=['Baskerville'] flags=[4] c=['#000000'] | The desire for freedom to focus on what matters most 
+x=  39.6 y= 696.4 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Some family members want to be free from the administrative burden of managing 
+x=  39.8 y= 711.4 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | and coordinating wealth.  Instead, they have a deep desire to channel their energies into what 
+x=  39.9 y= 726.4 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | matters most to their family.  Such families are more likely to spend their time on leading and 
+x=  39.8 y= 741.4 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | engaging family members and preparing them for wealth transition while outsourcing all key 
+x=  39.9 y= 756.4 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | management functions to a Multi-Family Office provider.  
+x= 643.9 y=  72.4 sz=[20.0] fonts=['Baskerville'] flags=[4] c=['#000000'] | The desire for an integrated but flexible, 
+x= 645.4 y=  96.4 sz=[20.0] fonts=['Baskerville'] flags=[4] c=['#000000'] | whole‑of‑family approach 
+x= 646.3 y= 130.5 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | One of the perceived benefits of Multi-Family Office providers is their broad range of Family 
+x= 646.3 y= 145.5 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Office-related services, providing better coordination of advice to meet the specific needs 
+x= 646.5 y= 160.5 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | of the family as a whole.  
+x= 665.0 y= 203.8 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | “Using an MFO provider gives us a family focus which an accounting firm doesn’t 
+x= 669.4 y= 218.8 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | provide you… I’m all about upscaling my family so that they can actually walk in and 
+x= 669.3 y= 233.8 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | take control in the future… An accounting firm starts with ‘I’ll do your numbers for you’.  
+x= 668.8 y= 248.8 sz=[12.0] fonts=['ProximaNova-Regular', 'ProximaNova-RegularIt'] flags=[4, 6] c=['#dd971a'] | Well, that’s great.  When you walk into an MFO, they begin with ‘I’ll look after your 
+x= 669.3 y= 263.8 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | family for you’...” 
+x= 669.2 y= 288.8 sz=[12.0] fonts=['ProximaNova-Regular'] flags=[4] c=['#7d8898'] | Family Enterprise leader, participant 2
+x= 665.0 y= 354.9 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | “I don’t want to be rude, but I can get your [tax and accounting] services from anybody.  
+x= 669.1 y= 369.9 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | If you look after my family – not me but my family – than you’ll probably have us 
+x= 669.3 y= 384.9 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | for a generation or two.  Now that means looking after the individuals, not just the 
+x= 669.3 y= 399.9 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | accounting.”
+x= 669.2 y= 424.9 sz=[12.0] fonts=['ProximaNova-Regular'] flags=[4] c=['#7d8898'] | Family Enterprise leader, participant 1
+x= 646.6 y= 468.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | It also provides families with the flexibility to choose the level of support they require.  One family 
+x= 646.6 y= 483.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | leader suggested that Multi-Family Office providers are better placed to assist in succession 
+x= 646.5 y= 498.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | planning and rising generation development because of the level of independence, objectivity 
+x= 646.4 y= 513.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | and focus they can bring.  
+x= 665.0 y= 556.6 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | “…If I get to the point where I don’t want to spend the time, or I’m not capable of doing 
+x= 669.1 y= 571.6 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | what I am doing now, I can transfer either all or parts to the MFO provider just as if I’d 
+x= 669.4 y= 586.6 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | passed away.” 
+x= 669.2 y= 611.6 sz=[12.0] fonts=['ProximaNova-Regular'] flags=[4] c=['#7d8898'] | Family Enterprise leader, participant 18
+x= 665.0 y= 677.6 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | “There is less succession planning when you have a Single Family Office because you 
+x= 669.4 y= 692.6 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | have to run it like a business.” 
+x= 669.2 y= 717.7 sz=[12.0] fonts=['ProximaNova-Regular'] flags=[4] c=['#7d8898'] | Family Enterprise leader, participant 7
+x=1142.9 y= 795.5 sz=[8.0] fonts=['Baskerville'] flags=[4] c=['#7f8a9a'] | 25
+x=  39.7 y= 795.5 sz=[8.0] fonts=['Baskerville'] flags=[4] c=['#7f8a9a'] | 24
+x= 427.1 y= 795.7 sz=[7.0] fonts=['ProximaNova-Light'] flags=[4] c=['#7f8a9a'] | Why The Modern Family Office Matters
+x= 646.3 y= 795.7 sz=[7.0] fonts=['ProximaNova-Light'] flags=[4] c=['#7f8a9a'] | How Family Offices help wealthy families

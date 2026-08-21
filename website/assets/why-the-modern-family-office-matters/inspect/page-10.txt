@@ -1,0 +1,101 @@
+Choosing an appropriate Family Office model is not straight 
+forward.  “When you have seen one Family Office, you have seen 
+one Family Office” is a common phrase used by advisors as they 
+consider the specific circumstances of a family to configure the 
+most suitable model.  
+Considerations include:
+•	 Size of wealth;
+•	 Source of wealth;
+•	 Resources and expertise within the family; 
+•	 Preferences of family members; 
+•	 Desire to learn about managing family wealth;
+•	 Complexity of family affairs;
+•	 The desire for freedom to focus on what matters 
+most beside managing family affairs; and
+•	 The desire for an integrated but flexible,  
+whole-of-family approach.  
+As successful families accumulate wealth over time through their entrepreneurial 
+and investment endeavours, a catalytic event often occurs which leads them 
+to transition to a more coordinated approach to managing the family’s wealth.  
+This can be provided by a Family Office.  
+These events can include:
+•	 Substantial growth of family wealth
+“Most people start off with an accountant… but you need broader 
+advice when your wealth multiplies, such as investment advice.”  
+Family Enterprise leader, participant 19
+•	 Expansion and growth of family members or generational change  
+or planning for future generational change
+“Dad was focussed on managing the Family Enterprise for his 
+generation using a family trust and taking yearly advice from 
+different accountants with no real written-down plan for the 
+future…Once our generation took over the responsibilities for 
+leading the Family Enterprise, our thoughts turned towards 
+structuring and managing the wealth for the rising generation 
+and beyond.”
+ Family Enterprise leader, participant 19
+•	 A liquidity event
+“…when we had this liquidity event [selling of the business], we 
+really needed to reorganise and manage our wealth under one 
+umbrella.  We thought about employing an accountant, but we 
+decided the use of an MFO (Multi-Family Office) structure would 
+be better.” 
+Family Enterprise leader, participant 7
+When a catalytic event happens or is on the horizon, wealthy families often 
+seek to understand the options available to them from a Family Office.   
+But what kind of Family Office should they seek?
+20
+Why The Modern Family Office Matters
+How Family Offices help wealthy families
+21
+
+
+--- LINES ---
+x= 646.3 y=  70.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Choosing an appropriate Family Office model is not straight 
+x= 646.4 y=  85.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | forward.  “When you have seen one Family Office, you have seen 
+x= 646.5 y= 100.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | one Family Office” is a common phrase used by advisors as they 
+x= 646.5 y= 115.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | consider the specific circumstances of a family to configure the 
+x= 646.5 y= 130.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | most suitable model.  
+x= 646.3 y= 150.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Considerations include:
+x= 661.8 y= 171.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000', '#dd971a'] | •	 Size of wealth;
+x= 661.8 y= 190.8 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000', '#dd971a'] | •	 Source of wealth;
+x= 661.8 y= 210.1 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000', '#dd971a'] | •	 Resources and expertise within the family; 
+x= 661.8 y= 229.3 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000', '#dd971a'] | •	 Preferences of family members; 
+x= 661.8 y= 248.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000', '#dd971a'] | •	 Desire to learn about managing family wealth;
+x= 661.8 y= 267.8 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000', '#dd971a'] | •	 Complexity of family affairs;
+x= 661.8 y= 287.0 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000', '#dd971a'] | •	 The desire for freedom to focus on what matters 
+x= 674.9 y= 302.0 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | most beside managing family affairs; and
+x= 661.8 y= 321.3 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000', '#dd971a'] | •	 The desire for an integrated but flexible,  
+x= 674.8 y= 336.3 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | whole-of-family approach.  
+x=  39.2 y=  70.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | As successful families accumulate wealth over time through their entrepreneurial 
+x=  40.0 y=  85.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | and investment endeavours, a catalytic event often occurs which leads them 
+x=  40.1 y= 100.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | to transition to a more coordinated approach to managing the family’s wealth.  
+x=  38.6 y= 115.2 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | This can be provided by a Family Office.  
+x=  38.6 y= 137.4 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | These events can include:
+x=  55.4 y= 159.6 sz=[12.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | •	 Substantial growth of family wealth
+x=  86.3 y= 203.0 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | “Most people start off with an accountant… but you need broader 
+x=  91.0 y= 218.0 sz=[12.0] fonts=['ProximaNova-LightIt', 'ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | advice when your wealth multiplies, such as investment advice.”  
+x=  91.2 y= 245.8 sz=[12.0] fonts=['ProximaNova-Regular'] flags=[4] c=['#7d8898'] | Family Enterprise leader, participant 19
+x=  55.4 y= 294.8 sz=[12.0] fonts=['ProximaNova-RegularIt', 'ProximaNova-Semibold'] flags=[6, 20] c=['#000000'] | •	 Expansion and growth of family members or generational change  
+x=  68.3 y= 309.8 sz=[12.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | or planning for future generational change
+x=  86.3 y= 353.2 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | “Dad was focussed on managing the Family Enterprise for his 
+x=  91.0 y= 368.2 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | generation using a family trust and taking yearly advice from 
+x=  91.0 y= 383.2 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | different accountants with no real written-down plan for the 
+x=  91.1 y= 398.2 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | future…Once our generation took over the responsibilities for 
+x=  91.2 y= 413.2 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | leading the Family Enterprise, our thoughts turned towards 
+x=  91.1 y= 428.2 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | structuring and managing the wealth for the rising generation 
+x=  91.0 y= 443.2 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | and beyond.”
+x=  90.7 y= 471.0 sz=[12.0] fonts=['ProximaNova-Regular'] flags=[4] c=['#7d8898'] |  Family Enterprise leader, participant 19
+x=  55.4 y= 520.1 sz=[12.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | •	 A liquidity event
+x=  86.2 y= 563.4 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | “…when we had this liquidity event [selling of the business], we 
+x=  91.2 y= 578.4 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | really needed to reorganise and manage our wealth under one 
+x=  91.0 y= 593.4 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | umbrella.  We thought about employing an accountant, but we 
+x=  91.0 y= 608.4 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | decided the use of an MFO (Multi-Family Office) structure would 
+x=  91.2 y= 623.4 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | be better.” 
+x=  91.1 y= 651.3 sz=[12.0] fonts=['ProximaNova-Regular'] flags=[4] c=['#7d8898'] | Family Enterprise leader, participant 7
+x=  39.9 y= 700.3 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | When a catalytic event happens or is on the horizon, wealthy families often 
+x=  40.1 y= 715.3 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | seek to understand the options available to them from a Family Office.   
+x=  40.2 y= 731.8 sz=[12.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | But what kind of Family Office should they seek?
+x=  39.7 y= 795.5 sz=[8.0] fonts=['Baskerville'] flags=[4] c=['#7f8a9a'] | 20
+x= 427.1 y= 795.7 sz=[7.0] fonts=['ProximaNova-Light'] flags=[4] c=['#7f8a9a'] | Why The Modern Family Office Matters
+x= 646.3 y= 795.7 sz=[7.0] fonts=['ProximaNova-Light'] flags=[4] c=['#ffffff'] | How Family Offices help wealthy families
+x=1142.9 y= 795.5 sz=[8.0] fonts=['Baskerville'] flags=[4] c=['#ffffff'] | 21

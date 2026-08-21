@@ -125,6 +125,11 @@
         --wp-case-study-bg: #faefe0;
         --wp-stat-panel-bg: #f2f3f4;
         --wp-stat-highlight-bg: #fbf1e5;
+        --wp-callout-bg: #fbf1e5;
+        --wp-model-head: #eaeaed;
+        --wp-model-body: #f3f3f4;
+        --wp-model-accent-head: #f7e3c8;
+        --wp-model-accent-body: #fdf6ed;
         --wp-stat-number-size: 49.33px;
         --wp-stat-number-size-lg: 53.33px;
         --wp-stat-unit-size: 17.07px;
@@ -245,7 +250,11 @@
         margin-top: 0;
       }
 
-      .wp-body.wp-flow > :is(h2, h3, section, figure, .wp-stat-board, .wp-donut-panel, .wp-photo-band, .wp-pull-panel):not(:first-child) {
+      .wp-body.wp-flow > :is(
+        h2, h3, section, figure,
+        .wp-stat-board, .wp-donut-panel, .wp-photo-band, .wp-pull-panel,
+        .wp-callout, .wp-callout-stack, .wp-compare-table, .wp-model-grid
+      ):not(:first-child) {
         margin-top: var(--wp-intra-block-gap);
       }
 
@@ -272,6 +281,10 @@
           calc(-1 * var(--wp-page-pad-end));
         width: calc(100% + var(--wp-page-pad-start) + var(--wp-page-pad-end));
         max-width: none;
+      }
+
+      .wp-spread__page > .wp-photo-band:not(:first-child) {
+        margin-top: var(--wp-intra-block-gap);
       }
 
       .wp-spread__page > .wp-spread__inner:not(:first-child) {
@@ -502,6 +515,10 @@
         aspect-ratio: 1243 / 624;
       }
 
+      .wp-photo-band--mid img {
+        aspect-ratio: 1245 / 969;
+      }
+
       .wp-pull-panel {
         background: var(--wp-quote-panel-bg);
         padding: var(--wp-surface-pad-top) var(--wp-page-pad-end)
@@ -560,7 +577,7 @@
 
       .wp-signatures {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
         gap: calc(var(--page-max) * 24 / var(--wp-page-w-pt));
         margin-top: calc(var(--page-max) * 20 / var(--wp-page-w-pt));
       }
@@ -568,6 +585,8 @@
       .wp-signature__photo {
         display: block;
         width: calc(var(--page-max) * 85 / var(--wp-page-w-pt));
+        max-width: 100%;
+        height: auto;
         margin-bottom: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
         border-radius: 0;
       }
@@ -575,6 +594,8 @@
       .wp-signature__script {
         display: block;
         width: calc(var(--page-max) * 71 / var(--wp-page-w-pt));
+        max-width: 100%;
+        height: auto;
         margin-bottom: calc(var(--page-max) * 6 / var(--wp-page-w-pt));
       }
 
@@ -942,6 +963,9 @@
         }
 
         .wp-stat-highlight__copy {
+          flex: 0 0 auto;
+          width: 100%;
+          height: auto;
           text-align: left;
         }
       }
@@ -1124,7 +1148,7 @@
         width: 100%;
         min-height: 0;
         padding-top: var(--wp-surface-pad-top);
-        padding-bottom: calc(var(--page-max) * 100 / var(--wp-page-w-pt));
+        padding-bottom: var(--wp-surface-pad-bottom);
         background-color: var(--color-black);
         background-image: url('assets/MT-Monogram.svg');
         background-repeat: no-repeat;
@@ -1154,7 +1178,7 @@
       }
 
       .wp-purpose__ack {
-        margin-top: var(--wp-ack-gap-before);
+        margin-top: calc(var(--page-max) * 100 / var(--wp-page-w-pt));
         padding-top: 0;
         font-size: var(--wp-legal-size);
         line-height: 1.45;
@@ -1232,6 +1256,20 @@
         padding-left: calc(
           var(--page-max) * var(--wp-list-text-indent-pt) / var(--wp-page-w-pt)
         );
+      }
+
+      .wp-list--strong li {
+        font-weight: 600;
+      }
+
+      .wp-list--strong li::before {
+        color: var(--color-ink);
+        font-weight: 600;
+      }
+
+      .wp-list--strong em {
+        font-weight: 400;
+        font-style: italic;
       }
 
       .wp-band {
@@ -1325,6 +1363,252 @@
         color: var(--wp-accent-gold);
       }
 
+      /* Type D catalog — callout, model-grid, compare-table (chunk 3) */
+      .wp-callout {
+        margin: var(--wp-intra-block-gap) 0;
+        padding: calc(var(--page-max) * 18 / var(--wp-page-w-pt))
+          calc(var(--page-max) * 20 / var(--wp-page-w-pt));
+        background: var(--wp-callout-bg);
+      }
+
+      .wp-callout__quote {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-family: var(--font-sans);
+        font-size: var(--wp-body-size);
+        font-weight: 400;
+        font-style: italic;
+        line-height: var(--wp-body-lh);
+        color: var(--wp-accent-gold);
+      }
+
+      .wp-callout__quote p {
+        margin: 0;
+      }
+
+      .wp-callout__attrib {
+        display: block;
+        margin-top: calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        font-family: var(--font-sans);
+        font-size: var(--wp-body-size);
+        font-weight: 400;
+        font-style: normal;
+        line-height: var(--wp-body-lh);
+        text-transform: none;
+        color: var(--wp-quote-attrib-color);
+      }
+
+      .wp-callout-stack {
+        display: flex;
+        flex-direction: column;
+        gap: var(--wp-intra-block-gap);
+        margin: var(--wp-intra-block-gap) 0;
+      }
+
+      .wp-callout-stack .wp-callout {
+        margin: 0;
+        margin-left: calc(
+          var(--page-max) * var(--wp-list-text-indent-pt) / var(--wp-page-w-pt)
+        );
+      }
+
+      .wp-callout-stack .wp-list {
+        margin: 0;
+      }
+
+      .wp-callout-stack .wp-list li {
+        margin-bottom: 0;
+      }
+
+      .wp-model-grid {
+        --wp-model-gap: calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        --wp-model-stem: calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        margin: var(--wp-intra-block-gap) 0 0;
+      }
+
+      .wp-model-grid__title {
+        margin: 0 0 calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        font-family: var(--font-sans);
+        font-size: calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        font-weight: 600;
+        line-height: 1.3;
+        letter-spacing: 0.02em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .wp-model-grid__rule {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: var(--wp-model-gap);
+        height: var(--wp-model-stem);
+        margin: 0;
+        background: none;
+      }
+
+      .wp-model-grid__rule::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: calc((100% - 3 * var(--wp-model-gap)) / 8);
+        right: calc((100% - 3 * var(--wp-model-gap)) / 8);
+        height: 1px;
+        background: var(--wp-accent-gold);
+      }
+
+      .wp-model-grid__rule span {
+        justify-self: center;
+        width: 1px;
+        height: 100%;
+        background: var(--wp-accent-gold);
+      }
+
+      .wp-model-grid__cols {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: var(--wp-model-gap);
+      }
+
+      .wp-model-card {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        background: var(--wp-model-body);
+      }
+
+      .wp-model-card__head {
+        padding: calc(var(--page-max) * 14 / var(--wp-page-w-pt))
+          calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        background: var(--wp-model-head);
+        text-align: center;
+      }
+
+      .wp-model-card__icon {
+        display: block;
+        width: calc(var(--page-max) * 36 / var(--wp-page-w-pt));
+        height: auto;
+        margin: 0 auto calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        color: var(--color-ink);
+      }
+
+      .wp-model-card__name {
+        margin: 0;
+        font-family: var(--font-sans);
+        font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        font-weight: 600;
+        line-height: 1.25;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+
+      .wp-model-card__body {
+        flex: 1;
+        margin: 0;
+        padding: calc(var(--page-max) * 12 / var(--wp-page-w-pt))
+          calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        line-height: 1.4;
+      }
+
+      .wp-model-card--accent .wp-model-card__head {
+        background: var(--wp-model-accent-head);
+      }
+
+      .wp-model-card--accent {
+        background: var(--wp-model-accent-body);
+      }
+
+      .wp-model-card--accent .wp-model-card__icon,
+      .wp-model-card--accent .wp-model-card__name {
+        color: var(--wp-accent-gold);
+      }
+
+      .wp-compare-table {
+        margin: var(--wp-intra-block-gap) 0 0;
+        padding: calc(var(--page-max) * 20 / var(--wp-page-w-pt));
+        background: var(--wp-stat-panel-bg);
+        overflow-x: auto;
+      }
+
+      .wp-compare-table table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+      }
+
+      .wp-compare-table tr > :nth-child(1) {
+        width: 34%;
+      }
+
+      .wp-compare-table tr > :nth-child(2) {
+        width: 30%;
+      }
+
+      .wp-compare-table tr > :nth-child(3) {
+        width: 36%;
+      }
+
+      .wp-compare-table thead th:first-child,
+      .wp-compare-table__model {
+        white-space: nowrap;
+      }
+
+      .wp-compare-table th,
+      .wp-compare-table td {
+        padding: calc(var(--page-max) * 12 / var(--wp-page-w-pt))
+          calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        vertical-align: top;
+        text-align: left;
+        font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        line-height: 1.4;
+      }
+
+      .wp-compare-table thead th {
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--wp-accent-gold);
+      }
+
+      .wp-compare-table tbody tr {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      }
+
+      .wp-compare-table tbody tr:last-child {
+        border-bottom: 0;
+      }
+
+      .wp-compare-table__model {
+        display: block;
+        margin-top: calc(var(--page-max) * 6 / var(--wp-page-w-pt));
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      .wp-compare-table__icon {
+        display: block;
+        width: calc(var(--page-max) * 32 / var(--wp-page-w-pt));
+        height: auto;
+        color: var(--color-ink);
+      }
+
+      .wp-compare-table__list {
+        margin: 0;
+        padding-left: 1.1em;
+        list-style: disc;
+      }
+
+      .wp-compare-table__list li {
+        margin-bottom: 0.35em;
+      }
+
+      .wp-compare-table__list li::marker {
+        color: var(--color-ink);
+      }
+
       @media (max-width: 768px) {
         :root {
           --gutter: 20px;
@@ -1377,8 +1661,12 @@
           margin-left: 0;
         }
 
-        .wp-signatures {
+        .wp-model-grid__cols {
           grid-template-columns: 1fr;
+        }
+
+        .wp-model-grid__rule {
+          display: none;
         }
       }
     </style>
@@ -2371,7 +2659,834 @@
 
       <!-- /wp-chunk:2 -->
 
-      <!-- wp-chunk:3 section-2-table pending -->
+      <!-- wp-chunk:3 section-2-table ✓ -->
+
+      <div
+        class="wp-spread wp-spread--flow wp-spread--section-2"
+        aria-labelledby="wp-s2-title"
+      >
+        <div
+          class="wp-spread__page wp-spread__page--left wp-spread__page--visual"
+        >
+          <figure class="wp-page-visual">
+            <img
+              src="assets/why-the-modern-family-office-matters/images/chunk-03/p9-xref82.jpeg"
+              alt=""
+              width="1246"
+              height="1759"
+            />
+          </figure>
+          <div class="wp-section-opener wp-section-opener--overlay">
+            <p class="wp-section-opener__kicker">SECTION 2</p>
+            <h2 class="wp-section-opener__title" id="wp-s2-title">
+              How Family Offices<br />
+              <span class="wp-title-rule__mark">help</span> wealthy families
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="wp-spread wp-spread--flow wp-spread--section-2-cont">
+        <div class="wp-spread__page wp-spread__page--right">
+          <div
+            class="wp-spread__inner wp-spread__inner--right wp-body wp-flow"
+          >
+            <p>
+              A modern Family Office is the dedicated team of professionals who
+              supports wealthy families in planning, managing, transferring and
+              perpetuating wealth across generations to achieve what matters most
+              to the family as well as advance the positive contribution they
+              make to society.
+            </p>
+            <p>
+              The services of a Family Office include the key infrastructure
+              required such as: family advisory; family governance and
+              decision-making processes; education of family members;
+              intergenerational wealth transfers; asset protection; philanthropy;
+              financial administration; tax compliance and investment management.
+            </p>
+            <p>
+              A Family Office is not necessarily a legal entity, physical
+              location or organisational structure, although it will often take
+              on many of these traits as a family’s wealth grows.
+            </p>
+            <p>There are four types of Family Office operating models:</p>
+            <ul class="wp-list">
+              <li>
+                Single Family Office (“SFO”) with a dedicated full-time team
+                looking after one family;
+              </li>
+              <li>
+                Business Family Office (“BFO”) that uses professionals from the
+                family business to also look after the family’s personal affairs;
+              </li>
+              <li>
+                Virtual Family Office (“VFO”) where the family co-ordinates
+                professionals from different service providers to meet their
+                needs; and
+              </li>
+              <li>
+                Multi-Family Office (“MFO”) a third-party company with in-house
+                multi-disciplinary professionals who look after multiple families
+                using dedicated teams.
+              </li>
+            </ul>
+            <section class="wp-model-grid" aria-labelledby="wp-models-title">
+              <h3 class="wp-model-grid__title" id="wp-models-title">
+                Four types of family office operating models
+              </h3>
+              <div class="wp-model-grid__rule" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <div class="wp-model-grid__cols">
+                <article class="wp-model-card">
+                  <div class="wp-model-card__head">
+                    <img
+                      class="wp-model-card__icon"
+                      src="assets/why-the-modern-family-office-matters/images/chunk-03/icon-sfo.svg"
+                      alt=""
+                      width="33"
+                      height="31"
+                    />
+                    <h4 class="wp-model-card__name">
+                      Single Family Office (SFO)
+                    </h4>
+                  </div>
+                  <p class="wp-model-card__body">
+                    Is where the family establishes and operates a legal entity
+                    separately from its operating businesses. The SFO may have a
+                    family or non-family CEO and employ staff and utilise outside
+                    expertise. The SFO is solely devoted to providing Family
+                    Office services to a single family.
+                  </p>
+                </article>
+                <article class="wp-model-card">
+                  <div class="wp-model-card__head">
+                    <img
+                      class="wp-model-card__icon"
+                      src="assets/why-the-modern-family-office-matters/images/chunk-03/icon-bfo.svg"
+                      alt=""
+                      width="35"
+                      height="31"
+                    />
+                    <h4 class="wp-model-card__name">
+                      Business Family Office (BFO)
+                    </h4>
+                  </div>
+                  <p class="wp-model-card__body">
+                    Is where a family introduces a degree of separation between
+                    the family’s business entity and their wealth management. In
+                    practice, this approach is embedded within the family’s
+                    primary business, where an employee (e.g. their CFO) is
+                    entrusted with managing the family’s wealth outside the
+                    business.
+                  </p>
+                </article>
+                <article class="wp-model-card">
+                  <div class="wp-model-card__head">
+                    <img
+                      class="wp-model-card__icon"
+                      src="assets/why-the-modern-family-office-matters/images/chunk-03/icon-vfo.svg"
+                      alt=""
+                      width="34"
+                      height="33"
+                    />
+                    <h4 class="wp-model-card__name">
+                      Virtual Family Office (VFO)
+                    </h4>
+                  </div>
+                  <p class="wp-model-card__body">
+                    Is where the family uses external providers such as advisors
+                    from accounting firms, stockbroking firms and/or banking
+                    institutions.
+                  </p>
+                </article>
+                <article class="wp-model-card wp-model-card--accent">
+                  <div class="wp-model-card__head">
+                    <img
+                      class="wp-model-card__icon"
+                      src="assets/why-the-modern-family-office-matters/images/chunk-03/icon-mfo.svg"
+                      alt=""
+                      width="35"
+                      height="34"
+                    />
+                    <h4 class="wp-model-card__name">
+                      Multi-Family Office (MFO)
+                    </h4>
+                  </div>
+                  <p class="wp-model-card__body">
+                    Is similar to an SFO except that it offers a broader range
+                    and scale of Family Office services to several unrelated
+                    Family Enterprises. Commercial MFOs are often owned by third
+                    parties and families who offer a wide range of tailored
+                    Family Office services to Family Enterprises of different
+                    sizes.
+                  </p>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div class="wp-spread wp-spread--flow wp-spread--section-2-events">
+        <div class="wp-spread__page">
+          <div class="wp-spread__inner wp-body wp-flow">
+            <p>
+              As successful families accumulate wealth over time through their
+              entrepreneurial and investment endeavours, a catalytic event often
+              occurs which leads them to transition to a more coordinated
+              approach to managing the family’s wealth. This can be provided by a
+              Family Office.
+            </p>
+            <p>These events can include:</p>
+            <div class="wp-callout-stack">
+              <ul class="wp-list wp-list--strong">
+                <li>Substantial growth of family wealth</li>
+              </ul>
+              <aside class="wp-callout">
+                <blockquote class="wp-callout__quote">
+                  <p>
+                    “Most people start off with an accountant… but you need
+                    broader advice when your wealth multiplies, such as
+                    investment advice.”
+                  </p>
+                </blockquote>
+                <cite class="wp-callout__attrib"
+                  >Family Enterprise leader, participant 19</cite
+                >
+              </aside>
+              <ul class="wp-list wp-list--strong">
+                <li>
+                  Expansion and growth of family members <em>or</em> generational
+                  change or planning for future generational change
+                </li>
+              </ul>
+              <aside class="wp-callout">
+                <blockquote class="wp-callout__quote">
+                  <p>
+                    “Dad was focussed on managing the Family Enterprise for his
+                    generation using a family trust and taking yearly advice from
+                    different accountants with no real written-down plan for the
+                    future…Once our generation took over the responsibilities for
+                    leading the Family Enterprise, our thoughts turned towards
+                    structuring and managing the wealth for the rising generation
+                    and beyond.”
+                  </p>
+                </blockquote>
+                <cite class="wp-callout__attrib"
+                  >Family Enterprise leader, participant 19</cite
+                >
+              </aside>
+              <ul class="wp-list wp-list--strong">
+                <li>A liquidity event</li>
+              </ul>
+              <aside class="wp-callout">
+                <blockquote class="wp-callout__quote">
+                  <p>
+                    “…when we had this liquidity event [selling of the business],
+                    we really needed to reorganise and manage our wealth under
+                    one umbrella. We thought about employing an accountant, but
+                    we decided the use of an MFO (Multi-Family Office) structure
+                    would be better.”
+                  </p>
+                </blockquote>
+                <cite class="wp-callout__attrib"
+                  >Family Enterprise leader, participant 7</cite
+                >
+              </aside>
+            </div>
+            <p>
+              When a catalytic event happens or is on the horizon, wealthy
+              families often seek to understand the options available to them
+              from a Family Office.
+              <strong>But what kind of Family Office should they seek?</strong>
+            </p>
+          </div>
+        </div>
+        <div class="wp-spread__page">
+          <div class="wp-spread__inner wp-body">
+            <p>
+              Choosing an appropriate Family Office model is not straight
+              forward. “When you have seen one Family Office, you have seen one
+              Family Office” is a common phrase used by advisors as they consider
+              the specific circumstances of a family to configure the most
+              suitable model.
+            </p>
+            <p>Considerations include:</p>
+            <ul class="wp-list">
+              <li>Size of wealth;</li>
+              <li>Source of wealth;</li>
+              <li>Resources and expertise within the family;</li>
+              <li>Preferences of family members;</li>
+              <li>Desire to learn about managing family wealth;</li>
+              <li>Complexity of family affairs;</li>
+              <li>
+                The desire for freedom to focus on what matters most beside
+                managing family affairs; and
+              </li>
+              <li>
+                The desire for an integrated but flexible, whole-of-family
+                approach.
+              </li>
+            </ul>
+          </div>
+          <figure class="wp-photo-band wp-photo-band--mid">
+            <img
+              src="assets/why-the-modern-family-office-matters/images/chunk-03/p10-xref96.jpeg"
+              alt=""
+              width="1245"
+              height="969"
+            />
+          </figure>
+        </div>
+      </div>
+
+      <div class="wp-spread wp-spread--flow wp-spread--section-2-cont2">
+        <div class="wp-spread__page">
+          <div class="wp-spread__inner wp-body wp-flow">
+            <h2 class="wp-subhead">Size of wealth</h2>
+            <p>
+              The Family Office options available are influenced by the size of a
+              family’s wealth. The larger the wealth, the greater the ability to
+              leverage the costs of establishing a Single Family Office.
+              Typically, families of significant wealth (minimum investable
+              wealth of $500 million) will adopt a Single Family Office model to
+              serve their needs. Other families will pursue alternative models
+              that are more cost effective.
+            </p>
+            <aside class="wp-callout">
+              <blockquote class="wp-callout__quote">
+                <p>
+                  “With an SFO structure, you need to find suitable accountants,
+                  legal advisors and other advisors which will cost you x. When I
+                  went to using an MFO provider, my cost was x divided by 2. So,
+                  first and foremost, the use of an MFO is a cost-effective way
+                  of doing it.”
+                </p>
+              </blockquote>
+              <cite class="wp-callout__attrib"
+                >Family Enterprise leader, participant 7</cite
+              >
+            </aside>
+            <p>
+              For this reason, many families will choose to use a Multi-Family
+              Office provider or try and coordinate the use of Virtual Family
+              Office providers. However, some can get ‘stuck in the middle’ of a
+              transition to a more appropriate Family Office model because of
+              insufficient wealth to finance the change.
+            </p>
+            <h2 class="wp-subhead">Source of wealth</h2>
+            <p>
+              Of the 27 Family Offices represented in the University of Adelaide
+              research, eight used a Family Office approach classified as a
+              Business Family Office. In the main, this approach was perceived as
+              part of a journey in transitioning from a ‘family in business’
+              mindset towards a ‘Family Enterprise’ mindset. Consequently, using
+              a Business Family Office model was the reflection of the lifecycle
+              of the family’s wealth and from where it had generated most of its
+              wealth, i.e. through a business entity or entities.
+            </p>
+            <aside class="wp-callout">
+              <blockquote class="wp-callout__quote">
+                <p>
+                  “We’re ready to transition from a BFO to an SFO or use an MFO
+                  provider, but we’re not quite big enough wealth-wise to justify
+                  a Family Office. The challenge we face is that the family
+                  members working within the BFO can’t also take on managing the
+                  family side, which I think is critical to our future.”
+                </p>
+              </blockquote>
+              <cite class="wp-callout__attrib"
+                >Family Enterprise leader, participant 25</cite
+              >
+            </aside>
+            <p>
+              Conversely, families of wealth were more likely to utilise a
+              Multi-Family Office service provider when most of the wealth had
+              been created by having professional careers or inheriting a
+              significant sum of money.
+            </p>
+            <aside class="wp-callout">
+              <blockquote class="wp-callout__quote">
+                <p>
+                  “I had a very good career… and I’ve done very well on the stock
+                  market… and so I didn’t have any money until reasonably late in
+                  life. I’m a qualified accountant and have significant
+                  experience in managing businesses. But I have no experience in
+                  how families go about managing and how to pass that on, etc. I
+                  was looking for an organisation that would be there long term
+                  to look after the financial affairs of my family when I’m no
+                  longer around… I didn’t know exactly what I wanted and the
+                  Multi-Family Office provider helped me sort that out. I was
+                  very pleased with the result, actually.”
+                </p>
+              </blockquote>
+              <cite class="wp-callout__attrib"
+                >Family Enterprise leader, participant 18</cite
+              >
+            </aside>
+            <h2 class="wp-subhead">Resources and expertise within the family</h2>
+            <p>
+              Some families have the expertise required to run a Family Office
+              and are more likely to adopt a Single Family Office approach,
+              tapping into additional expertise from external providers such as
+              Virtual Family Offices or Multi-Family Offices.
+            </p>
+            <p>
+              Past involvement in managing business entities and creating wealth
+              may also encourage family members to adopt a Single Family Office
+              model and actively manage the family’s wealth in-house.
+              Alternatively, a family with little interest in being involved, or
+              one whose interest has waned over time, may be more inclined to use
+              a Multi-Family Office provider.
+            </p>
+            <p>
+              Single Family Offices may opt to use Multi-Family Offices to fill
+              gaps in expertise, systems and processes they require to be
+              successful. Often a Single Family Office will transition into a
+              Multi-Family Office where it retains its identity, staff and its
+              own office space, but becomes part of a model which provides more
+              expertise, which it can tap into and effectively broaden its team’s
+              capabilities. This also mitigates key person risk and provides
+              scale efficiencies.
+            </p>
+            <p>
+              Single Family Offices often seek to partner with Multi-Family
+              Offices over the long-term to serve as a backup or successor to
+              their Single Family Offices. This becomes critically important in
+              the event there is a change in family circumstances in the future
+              that warrants a change in their family office model. This
+              partnership mitigates key risks and provides continuity for the
+              family.
+            </p>
+            <h2 class="wp-subhead">Preferences of the family</h2>
+            <p>
+              Preference for control or active involvement is a factor when
+              family members desire ‘hands-on’ involvement in key aspects of the
+              Family Office, particularly when it comes to managing their
+              business entities, investment portfolios and participation in
+              direct private equity investments. In many cases, such preferences
+              will steer families to adopt Single Family Office models.
+            </p>
+            <aside class="wp-callout">
+              <blockquote class="wp-callout__quote">
+                <p>
+                  “…the first generation of wealth creators, in my view, find it
+                  harder to outsource or delegate to service providers and then
+                  the second and third and fourth allow it. Because the
+                  first-generation of wealth creators have made the wealth
+                  themselves, they feel they know what to do.”
+                </p>
+              </blockquote>
+              <cite class="wp-callout__attrib"
+                >Family Enterprise leader, participant 6</cite
+              >
+            </aside>
+            <h2 class="wp-subhead">
+              The desire to learn about managing family wealth
+            </h2>
+            <p>
+              Some members of the family may have a keen desire to learn
+              essential aspects of managing wealth and educate the subsequent
+              generations to take on the responsibilities of running the Family
+              Office. Consequently, they may be more likely to adopt a Single
+              Family Office approach and acquire the additional expertise outside
+              the family, using external providers such as Virtual Family Offices
+              or Multi-Family Offices.
+            </p>
+            <h2 class="wp-subhead">The complexities of a family’s affairs</h2>
+            <p>
+              In direct contrast, one family patriarch, perhaps due to the
+              complexities of his family’s wealth and growing number of family
+              branches and members suggested that using a Multi-Family Office
+              provider has allowed him to learn more from other families that use
+              the same Multi-Family Office.
+            </p>
+            <aside class="wp-callout">
+              <blockquote class="wp-callout__quote">
+                <p>
+                  “…Well, it’s a big job managing a family asset base with the
+                  people involved. So, I think the Multi-Family Office is a much
+                  better place for comparing notes with other people.”
+                </p>
+              </blockquote>
+              <cite class="wp-callout__attrib"
+                >Family Enterprise leader, participant 2</cite
+              >
+            </aside>
+            <h2 class="wp-subhead">
+              The desire for freedom to focus on what matters most
+            </h2>
+            <p>
+              Some family members want to be free from the administrative burden
+              of managing and coordinating wealth. Instead, they have a deep
+              desire to channel their energies into what matters most to their
+              family. Such families are more likely to spend their time on
+              leading and engaging family members and preparing them for wealth
+              transition while outsourcing all key management functions to a
+              Multi-Family Office provider.
+            </p>
+            <h2 class="wp-subhead">
+              The desire for an integrated but flexible, whole-of-family
+              approach
+            </h2>
+            <p>
+              One of the perceived benefits of Multi-Family Office providers is
+              their broad range of Family Office-related services, providing
+              better coordination of advice to meet the specific needs of the
+              family as a whole.
+            </p>
+            <aside class="wp-callout">
+              <blockquote class="wp-callout__quote">
+                <p>
+                  “Using an MFO provider gives us a family focus which an
+                  accounting firm doesn’t provide you… I’m all about upscaling my
+                  family so that they can actually walk in and take control in
+                  the future… An accounting firm starts with ‘I’ll do your
+                  numbers for you’. Well, that’s great. When you walk into an
+                  MFO, they begin with ‘I’ll look after your family for you’...”
+                </p>
+              </blockquote>
+              <cite class="wp-callout__attrib"
+                >Family Enterprise leader, participant 2</cite
+              >
+            </aside>
+            <aside class="wp-callout">
+              <blockquote class="wp-callout__quote">
+                <p>
+                  “I don’t want to be rude, but I can get your [tax and
+                  accounting] services from anybody. If you look after my family
+                  – not me but my family – than you’ll probably have us for a
+                  generation or two. Now that means looking after the
+                  individuals, not just the accounting.”
+                </p>
+              </blockquote>
+              <cite class="wp-callout__attrib"
+                >Family Enterprise leader, participant 1</cite
+              >
+            </aside>
+            <p>
+              It also provides families with the flexibility to choose the level
+              of support they require. One family leader suggested that
+              Multi-Family Office providers are better placed to assist in
+              succession planning and rising generation development because of
+              the level of independence, objectivity and focus they can bring.
+            </p>
+            <aside class="wp-callout">
+              <blockquote class="wp-callout__quote">
+                <p>
+                  “…If I get to the point where I don’t want to spend the time,
+                  or I’m not capable of doing what I am doing now, I can transfer
+                  either all or parts to the MFO provider just as if I’d passed
+                  away.”
+                </p>
+              </blockquote>
+              <cite class="wp-callout__attrib"
+                >Family Enterprise leader, participant 18</cite
+              >
+            </aside>
+            <aside class="wp-callout">
+              <blockquote class="wp-callout__quote">
+                <p>
+                  “There is less succession planning when you have a Single
+                  Family Office because you have to run it like a business.”
+                </p>
+              </blockquote>
+              <cite class="wp-callout__attrib"
+                >Family Enterprise leader, participant 7</cite
+              >
+            </aside>
+            <h2 class="wp-subhead">Multi-Family Office advantage</h2>
+            <p>
+              A key advantage of a Multi-Family Office over other Family Office
+              types is the depth and breadth of services that can be provided to
+              Family Enterprises. While Multi-Family Offices are a common feature
+              in North America, they are less common in Australia where Virtual
+              Family Offices and Single Family Offices dominate the sector.
+            </p>
+            <p>
+              In Australia, it is common for Single Family Offices or a Business
+              Family Office to overlap particular services provided by
+              Multi-Family Offices. This is often the case to supplement in-house
+              expertise and provide additional capability and resourcing.
+            </p>
+            <p>
+              Choosing an appropriate Family Office model means that a structured
+              process and a team of experts are put in place to help create and
+              execute the long-term Family Strategy. It can be implemented with
+              varying levels of participation by the family; but with certainty
+              that it is not dependent on any one family member. This creates
+              significant peace of mind for families, builds trust and helps to
+              improve the long-term outcomes for wealthy families.
+            </p>
+            <aside class="wp-callout">
+              <blockquote class="wp-callout__quote">
+                <p>
+                  “…The thing I like about using a Multi-Family Office provider
+                  is they’ve got the culture about helping you and have the
+                  people who are very experienced in working with families. Also,
+                  you have the option of only using some or all of their
+                  services, depending on your needs and preferences. For
+                  instance, if I decided tomorrow that I didn’t want to spend any
+                  time on finance at all or maybe I have a stroke and am
+                  incapacitated, they can take on these additional
+                  responsibilities in the way we’ve agreed on and documented.”
+                </p>
+              </blockquote>
+              <cite class="wp-callout__attrib"
+                >Family Enterprise leader, participant 18</cite
+              >
+            </aside>
+            <aside class="wp-callout">
+              <blockquote class="wp-callout__quote">
+                <p>
+                  “During the challenges we faced as a family with Dad’s illness,
+                  our Multi-Family Office provided a considerable amount of
+                  practical, pragmatic, and emotional support – particularly for
+                  Mum. It’s difficult to capture just how significant their
+                  impact has been… and that’s the type of service MFOs can
+                  provide. I don’t view them like the accountant or a taxation
+                  specialist. I view them as people with whom I have a really
+                  wonderful working relationship. They actually care very deeply
+                  about us.”
+                </p>
+              </blockquote>
+              <cite class="wp-callout__attrib"
+                >Family Enterprise leader, participant 24</cite
+              >
+            </aside>
+            <aside class="wp-callout">
+              <blockquote class="wp-callout__quote">
+                <p>
+                  “If we’re talking about family advice and strategy execution
+                  you’ll probably find the Multi-Family Office will have higher
+                  expertise in those areas, than say, a Single Family Office,
+                  where if you’ve only got less than five to 10 people, they do
+                  get bogged down day to day with everything… they don’t get the
+                  time to focus on the big picture like ownership, succession,
+                  education because all the other demands of the day get in the
+                  way.”
+                </p>
+              </blockquote>
+              <cite class="wp-callout__attrib"
+                >Expert Family Office advisor 5</cite
+              >
+            </aside>
+            <h2 class="wp-subhead">
+              Strengths and challenges of different Family Office models
+            </h2>
+            <section class="wp-compare-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Family office model</th>
+                    <th>Strengths</th>
+                    <th>Challenges</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <img
+                        class="wp-compare-table__icon"
+                        src="assets/why-the-modern-family-office-matters/images/chunk-03/icon-bfo.svg"
+                        alt=""
+                        width="32"
+                        height="31"
+                      />
+                      <span class="wp-compare-table__model"
+                        >Business Family Office</span
+                      >
+                    </th>
+                    <td>
+                      <ul class="wp-compare-table__list">
+                        <li>Total control by an individual family member</li>
+                        <li>
+                          Inexpensive through use of existing resources available
+                          to the family.
+                        </li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul class="wp-compare-table__list">
+                        <li>
+                          High dependency on employee(s) entrusted with
+                          responsibility for assisting in the management of their
+                          wealth
+                        </li>
+                        <li>
+                          Limited scope of services and expertise as dependent on
+                          employee(s)
+                        </li>
+                        <li>Not suitable for when complexity increases</li>
+                        <li>Risk exposure</li>
+                        <li>
+                          Vulnerable to family conflict, dominant family member,
+                          lack of family commitment.
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <img
+                        class="wp-compare-table__icon"
+                        src="assets/why-the-modern-family-office-matters/images/chunk-03/icon-vfo.svg"
+                        alt=""
+                        width="32"
+                        height="33"
+                      />
+                      <span class="wp-compare-table__model"
+                        >Virtual Family Office</span
+                      >
+                    </th>
+                    <td>
+                      <ul class="wp-compare-table__list">
+                        <li>Access to a comprehensive suite of services</li>
+                        <li>
+                          Particularly suitable for Family Enterprises that no
+                          longer have operating businesses.
+                        </li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul class="wp-compare-table__list">
+                        <li>
+                          Coordination of different advisors to ensure holistic
+                          solutions to managing wealth
+                        </li>
+                        <li>
+                          Vulnerable to being more transactional rather than
+                          relational
+                        </li>
+                        <li>
+                          Vulnerable to family conflict, dominant family member,
+                          lack of family commitment.
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <img
+                        class="wp-compare-table__icon"
+                        src="assets/why-the-modern-family-office-matters/images/chunk-03/icon-sfo.svg"
+                        alt=""
+                        width="32"
+                        height="31"
+                      />
+                      <span class="wp-compare-table__model"
+                        >Single Family Office</span
+                      >
+                    </th>
+                    <td>
+                      <ul class="wp-compare-table__list">
+                        <li>Total control by the family</li>
+                        <li>Privacy and anonymity</li>
+                        <li>
+                          Dedicated to the family’s needs and objectives
+                        </li>
+                        <li>
+                          Able to be customised to meet family’s needs
+                        </li>
+                        <li>Services available on demand.</li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul class="wp-compare-table__list">
+                        <li>
+                          Cost (expensive, requiring min. investible assets of
+                          $500M to be sustainable; below this some services will
+                          need to be outsourced)
+                        </li>
+                        <li>
+                          Limited operational efficiencies as only serving one
+                          family
+                        </li>
+                        <li>
+                          Difficulties in attracting and retaining required
+                          talent
+                        </li>
+                        <li>Limited scope of services</li>
+                        <li>
+                          Vulnerable to family conflict, dominant family member,
+                          lack of family commitment.
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <img
+                        class="wp-compare-table__icon"
+                        src="assets/why-the-modern-family-office-matters/images/chunk-03/icon-mfo-ink.svg"
+                        alt=""
+                        width="32"
+                        height="34"
+                      />
+                      <span class="wp-compare-table__model"
+                        >Multi-Family Office</span
+                      >
+                    </th>
+                    <td>
+                      <ul class="wp-compare-table__list">
+                        <li>Depth and breadth of services</li>
+                        <li>Scalability</li>
+                        <li>
+                          Cost effectiveness compared to a Single Family Office
+                        </li>
+                        <li>
+                          Ability to integrate services to provide holistic
+                          solutions
+                        </li>
+                        <li>
+                          Ability to attract and retain required talent, address
+                          key person risk and provide continuity
+                        </li>
+                        <li>
+                          Third party independence more likely to act in the best
+                          interests of each individual client
+                        </li>
+                        <li>Low dependency on any individual</li>
+                        <li>
+                          Network &amp; co-share opportunities with other Family
+                          Enterprises
+                        </li>
+                        <li>
+                          Provision of data management and IT solutions.
+                        </li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul class="wp-compare-table__list">
+                        <li>
+                          Being able to satisfy the needs and objectives of the
+                          diverse group of Family Enterprises
+                        </li>
+                        <li>
+                          Vulnerable to greater bureaucracy and less flexibility
+                          / nimbleness and being more transactional rather than
+                          relational
+                        </li>
+                        <li>
+                          Potential conflicts of interest – doing what’s best for
+                          the Family Enterprise vs. what best for the commercial
+                          Multi-Family Office
+                        </li>
+                        <li>Potential for group think.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <!-- /wp-chunk:3 -->
+
       <!-- wp-chunk:4 section-3-gem pending -->
       <!-- wp-chunk:5 facets-conclusion pending -->
       <!-- wp-chunk:6 back-matter pending -->
