@@ -1,0 +1,137 @@
+Size of wealth
+The Family Office options available are influenced by the size of a family’s 
+wealth.  The larger the wealth, the greater the ability to leverage the costs 
+of establishing a Single Family Office.  Typically, families of significant wealth 
+(minimum investable wealth of $500 million) will adopt a Single Family Office 
+model to serve their needs.  Other families will pursue alternative models that 
+are more cost effective.  
+“With an SFO structure, you need to find suitable accountants, legal 
+advisors and other advisors which will cost you x.  When I went to 
+using an MFO provider, my cost was x divided by 2.  So, first and 
+foremost, the use of an MFO is a cost-effective way of doing it.”
+Family Enterprise leader, participant 7
+For this reason, many families will choose to use a Multi-Family Office provider 
+or try and coordinate the use of Virtual Family Office providers.  However, 
+some can get ‘stuck in the middle’ of a transition to a more appropriate Family 
+Office model because of insufficient wealth to finance the change.  
+Source of wealth
+Of the 27 Family Offices represented in the University of Adelaide research, 
+eight used a Family Office approach classified as a Business Family Office.   
+In the main, this approach was perceived as part of a journey in transitioning 
+from a ‘family in business’ mindset towards a ‘Family Enterprise’ mindset.  
+Consequently, using a Business Family Office model was the reflection of the 
+lifecycle of the family’s wealth and from where it had generated most of its 
+wealth, i.e. through a business entity or entities.  
+“We’re ready to transition from a BFO to an SFO or use an MFO 
+provider, but we’re not quite big enough wealth-wise to justify a 
+Family Office.  The challenge we face is that the family members 
+working within the BFO can’t also take on managing the family side, 
+which I think is critical to our future.”
+Family Enterprise leader, participant 25
+Conversely, families of wealth were more likely to utilise a Multi-Family Office 
+service provider when most of the wealth had been created by having 
+professional careers or inheriting a significant sum of money.  
+“I had a very good career… and I’ve done very well on the stock 
+market… and so I didn’t have any money until reasonably late in 
+life.  I’m a qualified accountant and have significant experience in 
+managing businesses.  But I have no experience in how families go 
+about managing and how to pass that on, etc.  I was looking for an 
+organisation that would be there long term to look after the financial 
+affairs of my family when I’m no longer around… I didn’t know exactly 
+what I wanted and the Multi‑Family Office provider helped me sort that 
+out.  I was very pleased with the result, actually.”  
+Family Enterprise leader, participant 18
+Resources and expertise within the family
+Some families have the expertise required to run a Family Office and are more 
+likely to adopt a Single Family Office approach, tapping into additional expertise 
+from external providers such as Virtual Family Offices or Multi-Family Offices.  
+Past involvement in managing business entities and creating wealth may also 
+encourage family members to adopt a Single Family Office model and actively 
+manage the family’s wealth in-house.  Alternatively, a family with little interest 
+in being involved, or one whose interest has waned over time, may be more 
+inclined to use a Multi-Family Office provider.  
+Single Family Offices may opt to use Multi-Family Offices to fill gaps in expertise, 
+systems and processes they require to be successful.  Often a Single Family 
+Office will transition into a Multi-Family Office where it retains its identity, staff 
+and its own office space, but becomes part of a model which provides more 
+expertise, which it can tap into and effectively broaden its team’s capabilities.  
+This also mitigates key person risk and provides scale efficiencies.  
+Single Family Offices often seek to partner with Multi-Family Offices over the 
+long-term to serve as a backup or successor to their Single Family Offices.  
+This becomes critically important in the event there is a change in family 
+circumstances in the future that warrants a change in their family office model.  
+This partnership mitigates key risks and provides continuity for the family.  
+23
+22
+Why The Modern Family Office Matters
+How Family Offices help wealthy families
+
+
+--- LINES ---
+x=  39.6 y=  67.9 sz=[20.0] fonts=['Baskerville'] flags=[4] c=['#000000'] | Size of wealth
+x=  38.2 y= 101.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | The Family Office options available are influenced by the size of a family’s 
+x=  39.8 y= 116.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | wealth.  The larger the wealth, the greater the ability to leverage the costs 
+x=  39.8 y= 131.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | of establishing a Single Family Office.  Typically, families of significant wealth 
+x=  39.9 y= 146.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | (minimum investable wealth of $500 million) will adopt a Single Family Office 
+x=  39.9 y= 161.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | model to serve their needs.  Other families will pursue alternative models that 
+x=  39.8 y= 176.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | are more cost effective.  
+x=  58.4 y= 220.3 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | “With an SFO structure, you need to find suitable accountants, legal 
+x=  62.7 y= 235.3 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | advisors and other advisors which will cost you x.  When I went to 
+x=  62.7 y= 250.3 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | using an MFO provider, my cost was x divided by 2.  So, first and 
+x=  62.7 y= 265.3 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | foremost, the use of an MFO is a cost-effective way of doing it.”
+x=  62.6 y= 290.3 sz=[12.0] fonts=['ProximaNova-Regular'] flags=[4] c=['#7d8898'] | Family Enterprise leader, participant 7
+x=  39.9 y= 333.7 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | For this reason, many families will choose to use a Multi-Family Office provider 
+x=  39.9 y= 348.7 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | or try and coordinate the use of Virtual Family Office providers.  However, 
+x=  40.0 y= 363.7 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | some can get ‘stuck in the middle’ of a transition to a more appropriate Family 
+x=  39.7 y= 378.7 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Office model because of insufficient wealth to finance the change.  
+x=  39.6 y= 410.6 sz=[20.0] fonts=['Baskerville'] flags=[4] c=['#000000'] | Source of wealth
+x=  39.6 y= 444.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Of the 27 Family Offices represented in the University of Adelaide research, 
+x=  39.8 y= 459.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | eight used a Family Office approach classified as a Business Family Office.   
+x=  40.0 y= 474.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | In the main, this approach was perceived as part of a journey in transitioning 
+x=  39.8 y= 489.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | from a ‘family in business’ mindset towards a ‘Family Enterprise’ mindset.  
+x=  39.6 y= 504.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Consequently, using a Business Family Office model was the reflection of the 
+x=  40.0 y= 519.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | lifecycle of the family’s wealth and from where it had generated most of its 
+x=  39.8 y= 534.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | wealth, i.e. through a business entity or entities.  
+x=  58.4 y= 577.9 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | “We’re ready to transition from a BFO to an SFO or use an MFO 
+x=  62.8 y= 592.9 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | provider, but we’re not quite big enough wealth-wise to justify a 
+x=  62.4 y= 607.9 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | Family Office.  The challenge we face is that the family members 
+x=  62.5 y= 622.9 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | working within the BFO can’t also take on managing the family side, 
+x=  62.5 y= 637.9 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | which I think is critical to our future.”
+x=  62.6 y= 663.0 sz=[12.0] fonts=['ProximaNova-Regular'] flags=[4] c=['#7d8898'] | Family Enterprise leader, participant 25
+x= 646.1 y= 102.0 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Conversely, families of wealth were more likely to utilise a Multi-Family Office 
+x= 646.5 y= 117.0 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | service provider when most of the wealth had been created by having 
+x= 646.4 y= 132.0 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | professional careers or inheriting a significant sum of money.  
+x= 664.9 y= 175.3 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | “I had a very good career… and I’ve done very well on the stock 
+x= 669.3 y= 190.3 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | market… and so I didn’t have any money until reasonably late in 
+x= 669.3 y= 205.3 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | life.  I’m a qualified accountant and have significant experience in 
+x= 669.3 y= 220.3 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | managing businesses.  But I have no experience in how families go 
+x= 669.2 y= 235.3 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | about managing and how to pass that on, etc.  I was looking for an 
+x= 669.2 y= 250.3 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | organisation that would be there long term to look after the financial 
+x= 669.2 y= 265.3 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | affairs of my family when I’m no longer around… I didn’t know exactly 
+x= 669.0 y= 280.3 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | what I wanted and the Multi‑Family Office provider helped me sort that 
+x= 669.2 y= 295.3 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | out.  I was very pleased with the result, actually.”  
+x= 669.1 y= 320.4 sz=[12.0] fonts=['ProximaNova-Regular'] flags=[4] c=['#7d8898'] | Family Enterprise leader, participant 18
+x= 645.4 y= 374.9 sz=[20.0] fonts=['Baskerville'] flags=[4] c=['#000000'] | Resources and expertise within the family
+x= 646.1 y= 409.0 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Some families have the expertise required to run a Family Office and are more 
+x= 646.5 y= 424.0 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | likely to adopt a Single Family Office approach, tapping into additional expertise 
+x= 646.3 y= 439.0 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | from external providers such as Virtual Family Offices or Multi-Family Offices.  
+x= 646.4 y= 459.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Past involvement in managing business entities and creating wealth may also 
+x= 646.3 y= 474.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | encourage family members to adopt a Single Family Office model and actively 
+x= 646.4 y= 489.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | manage the family’s wealth in-house.  Alternatively, a family with little interest 
+x= 646.4 y= 504.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | in being involved, or one whose interest has waned over time, may be more 
+x= 646.4 y= 519.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | inclined to use a Multi-Family Office provider.  
+x= 646.1 y= 540.3 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Single Family Offices may opt to use Multi-Family Offices to fill gaps in expertise, 
+x= 646.5 y= 555.3 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | systems and processes they require to be successful.  Often a Single Family 
+x= 646.1 y= 570.3 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Office will transition into a Multi-Family Office where it retains its identity, staff 
+x= 646.3 y= 585.3 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | and its own office space, but becomes part of a model which provides more 
+x= 646.3 y= 600.3 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | expertise, which it can tap into and effectively broaden its team’s capabilities.  
+x= 644.7 y= 615.3 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | This also mitigates key person risk and provides scale efficiencies.  
+x= 646.1 y= 636.0 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Single Family Offices often seek to partner with Multi-Family Offices over the 
+x= 646.5 y= 651.0 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | long-term to serve as a backup or successor to their Single Family Offices.  
+x= 644.7 y= 666.0 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | This becomes critically important in the event there is a change in family 
+x= 646.3 y= 681.0 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | circumstances in the future that warrants a change in their family office model.  
+x= 644.7 y= 696.0 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | This partnership mitigates key risks and provides continuity for the family.  
+x=1142.9 y= 795.5 sz=[8.0] fonts=['Baskerville'] flags=[4] c=['#7f8a9a'] | 23
+x=  39.7 y= 795.5 sz=[8.0] fonts=['Baskerville'] flags=[4] c=['#7f8a9a'] | 22
+x= 427.1 y= 795.7 sz=[7.0] fonts=['ProximaNova-Light'] flags=[4] c=['#7f8a9a'] | Why The Modern Family Office Matters
+x= 646.3 y= 795.7 sz=[7.0] fonts=['ProximaNova-Light'] flags=[4] c=['#7d8898'] | How Family Offices help wealthy families

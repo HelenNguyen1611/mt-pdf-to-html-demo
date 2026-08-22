@@ -1,0 +1,235 @@
+FAMILY OFFICE MODEL
+STRENGTHS
+CHALLENGES
+BUSINESS FAMILY 
+OFFICE
+•	 Total control by an individual family member
+•	 Inexpensive through use of existing 
+resources available to the family.
+•	 High dependency on employee(s) entrusted 
+with responsibility for assisting in the 
+management of their wealth 
+•	 Limited scope of services and expertise 
+as dependent on employee(s)
+•	 Not suitable for when complexity increases
+•	 Risk exposure
+•	 Vulnerable to family conflict, dominant family 
+member, lack of family commitment.  
+VIRTUAL FAMILY 
+OFFICE
+•	 Access to a comprehensive suite of services
+•	 Particularly suitable for Family Enterprises 
+that no longer have operating businesses.
+•	 Coordination of different advisors to ensure 
+holistic solutions to managing wealth
+•	 Vulnerable to being more transactional 
+rather than relational
+•	 Vulnerable to family conflict, dominant family 
+member, lack of family commitment.  
+SINGLE FAMILY 
+OFFICE
+•	 Total control by the family
+•	 Privacy and anonymity
+•	 Dedicated to the family’s needs 
+and objectives
+•	 Able to be customised to meet 
+family’s needs
+•	 Services available on demand.
+•	 Cost (expensive, requiring min. investible 
+assets of $500M to be sustainable; 
+below this some services will need to 
+be outsourced)
+•	 Limited operational efficiencies as only 
+serving one family
+•	 Difficulties in attracting and retaining 
+required talent
+•	 Limited scope of services
+•	 Vulnerable to family conflict, dominant family 
+member, lack of family commitment.  
+MULTI-FAMILY 
+OFFICE
+•	 Depth and breadth of services
+•	 Scalability
+•	 Cost effectiveness compared to a Single 
+Family Office
+•	 Ability to integrate services to provide 
+holistic solutions
+•	 Ability to attract and retain required talent, 
+address key person risk and provide 
+continuity
+•	 Third party independence more likely to act 
+in the best interests of each individual client
+•	 Low dependency on any individual
+•	 Network & co-share opportunities with other 
+Family Enterprises
+•	 Provision of data management and 
+IT solutions.
+•	 Being able to satisfy the needs and 
+objectives of the diverse group of Family 
+Enterprises
+•	 Vulnerable to greater bureaucracy and 
+less flexibility / nimbleness and being more 
+transactional rather than relational
+•	 Potential conflicts of interest – doing what’s 
+best for the Family Enterprise vs. what best 
+for the commercial Multi-Family Office
+•	 Potential for group think.  
+Strengths and challenges of different 
+Family Office models
+Multi-Family Office advantage
+A key advantage of a Multi-Family Office over other Family Office types is the depth and breadth 
+of services that can be provided to Family Enterprises.  While Multi-Family Offices are a common 
+feature in North America, they are less common in Australia where Virtual Family Offices and 
+Single Family Offices dominate the sector.  
+In Australia, it is common for Single Family Offices or a Business Family Office to overlap particular 
+services provided by Multi-Family Offices.  This is often the case to supplement in-house 
+expertise and provide additional capability and resourcing.  
+Choosing an appropriate Family Office model means that a structured process and a 
+team of experts are put in place to help create and execute the long-term Family Strategy.  
+It can be implemented with varying levels of participation by the family; but with certainty that it 
+is not dependent on any one family member.  This creates significant peace of mind for families, 
+builds trust and helps to improve the long-term outcomes for wealthy families.  
+“…The thing I like about using a Multi-Family Office provider is they’ve got the culture 
+about helping you and have the people who are very experienced in working 
+with families.  Also, you have the option of only using some or all of their services, 
+depending on your needs and preferences.  For instance, if I decided tomorrow that 
+I didn’t want to spend any time on finance at all or maybe I have a stroke and am 
+incapacitated, they can take on these additional responsibilities in the way we’ve 
+agreed on and documented.”
+Family Enterprise leader, participant 18
+“During the challenges we faced as a family with Dad’s illness, our Multi-Family Office 
+provided a considerable amount of practical, pragmatic, and emotional support – 
+particularly for Mum.  It’s difficult to capture just how significant their impact has been… 
+and that’s the type of service MFOs can provide.  I don’t view them like the accountant 
+or a taxation specialist.  I view them as people with whom I have a really wonderful 
+working relationship.  They actually care very deeply about us.”
+Family Enterprise leader, participant 24
+“If we’re talking about family advice and strategy execution you’ll probably find the Multi-
+Family Office will have higher expertise in those areas, than say, a Single Family Office, 
+where if you’ve only got less than five to 10 people, they do get bogged down day to 
+day with everything… they don’t get the time to focus on the big picture like ownership, 
+succession, education because all the other demands of the day get in the way.” 
+Expert Family Office advisor 5
+27
+26
+Why The Modern Family Office Matters
+How Family Offices help wealthy families
+
+
+--- LINES ---
+x= 646.3 y= 159.0 sz=[8.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | FAMILY OFFICE MODEL
+x= 793.7 y= 159.0 sz=[8.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | STRENGTHS
+x= 980.8 y= 159.0 sz=[8.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | CHALLENGES
+x= 663.3 y= 232.4 sz=[10.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | BUSINESS FAMILY 
+x= 663.3 y= 244.4 sz=[10.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | OFFICE
+x= 793.7 y= 195.8 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Total control by an individual family member
+x= 793.7 y= 208.7 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Inexpensive through use of existing 
+x= 802.2 y= 218.7 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | resources available to the family.
+x= 980.8 y= 195.8 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 High dependency on employee(s) entrusted 
+x= 989.3 y= 205.8 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | with responsibility for assisting in the 
+x= 989.3 y= 215.8 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | management of their wealth 
+x= 980.8 y= 228.7 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Limited scope of services and expertise 
+x= 989.3 y= 238.7 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | as dependent on employee(s)
+x= 980.8 y= 251.5 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Not suitable for when complexity increases
+x= 980.8 y= 264.3 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Risk exposure
+x= 980.8 y= 277.1 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Vulnerable to family conflict, dominant family 
+x= 989.3 y= 287.1 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | member, lack of family commitment.  
+x= 663.3 y= 365.8 sz=[10.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | VIRTUAL FAMILY 
+x= 663.3 y= 377.8 sz=[10.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | OFFICE
+x= 793.7 y= 327.5 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Access to a comprehensive suite of services
+x= 793.7 y= 340.3 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Particularly suitable for Family Enterprises 
+x= 802.2 y= 350.3 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | that no longer have operating businesses.
+x= 980.8 y= 327.5 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Coordination of different advisors to ensure 
+x= 989.3 y= 337.5 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | holistic solutions to managing wealth
+x= 980.8 y= 350.3 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Vulnerable to being more transactional 
+x= 989.3 y= 360.3 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | rather than relational
+x= 980.8 y= 373.2 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Vulnerable to family conflict, dominant family 
+x= 989.3 y= 383.2 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | member, lack of family commitment.  
+x= 663.3 y= 459.5 sz=[10.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | SINGLE FAMILY 
+x= 663.3 y= 471.5 sz=[10.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | OFFICE
+x= 793.7 y= 423.5 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Total control by the family
+x= 793.7 y= 436.3 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Privacy and anonymity
+x= 793.7 y= 449.2 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Dedicated to the family’s needs 
+x= 802.2 y= 459.2 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | and objectives
+x= 793.7 y= 472.0 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Able to be customised to meet 
+x= 802.2 y= 482.0 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | family’s needs
+x= 793.7 y= 494.8 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Services available on demand.
+x= 980.8 y= 423.5 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Cost (expensive, requiring min. investible 
+x= 989.3 y= 433.5 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | assets of $500M to be sustainable; 
+x= 989.3 y= 443.5 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | below this some services will need to 
+x= 989.3 y= 453.5 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | be outsourced)
+x= 980.8 y= 466.3 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Limited operational efficiencies as only 
+x= 989.3 y= 476.3 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | serving one family
+x= 980.8 y= 489.2 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Difficulties in attracting and retaining 
+x= 989.3 y= 499.2 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | required talent
+x= 980.8 y= 512.0 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Limited scope of services
+x= 980.8 y= 524.8 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Vulnerable to family conflict, dominant family 
+x= 989.3 y= 534.8 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | member, lack of family commitment.  
+x= 663.3 y= 614.1 sz=[10.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | MULTI-FAMILY 
+x= 663.3 y= 626.1 sz=[10.0] fonts=['ProximaNova-Semibold'] flags=[20] c=['#000000'] | OFFICE
+x= 793.7 y= 575.2 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Depth and breadth of services
+x= 793.7 y= 588.0 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Scalability
+x= 793.7 y= 600.8 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Cost effectiveness compared to a Single 
+x= 802.2 y= 610.8 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Family Office
+x= 793.7 y= 623.7 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Ability to integrate services to provide 
+x= 802.2 y= 633.7 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | holistic solutions
+x= 793.7 y= 646.5 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Ability to attract and retain required talent, 
+x= 802.2 y= 656.5 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | address key person risk and provide 
+x= 802.2 y= 666.5 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | continuity
+x= 793.7 y= 679.3 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Third party independence more likely to act 
+x= 802.2 y= 689.3 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | in the best interests of each individual client
+x= 793.7 y= 702.2 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Low dependency on any individual
+x= 793.7 y= 715.0 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Network & co-share opportunities with other 
+x= 802.2 y= 725.0 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Family Enterprises
+x= 793.7 y= 737.8 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Provision of data management and 
+x= 802.2 y= 747.8 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | IT solutions.
+x= 980.8 y= 575.1 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Being able to satisfy the needs and 
+x= 989.3 y= 585.1 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | objectives of the diverse group of Family 
+x= 989.3 y= 595.1 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Enterprises
+x= 980.8 y= 608.0 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Vulnerable to greater bureaucracy and 
+x= 989.3 y= 618.0 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | less flexibility / nimbleness and being more 
+x= 989.3 y= 628.0 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | transactional rather than relational
+x= 980.8 y= 640.8 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Potential conflicts of interest – doing what’s 
+x= 989.3 y= 650.8 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | best for the Family Enterprise vs. what best 
+x= 989.3 y= 660.8 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | for the commercial Multi-Family Office
+x= 980.8 y= 673.6 sz=[8.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | •	 Potential for group think.  
+x= 646.1 y=  67.9 sz=[20.0] fonts=['Baskerville'] flags=[4] c=['#000000'] | Strengths and challenges of different 
+x= 645.4 y=  91.9 sz=[20.0] fonts=['Baskerville'] flags=[4] c=['#000000'] | Family Office models
+x=  39.1 y=  67.9 sz=[20.0] fonts=['Baskerville'] flags=[4] c=['#000000'] | Multi-Family Office advantage
+x=  39.3 y= 101.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | A key advantage of a Multi-Family Office over other Family Office types is the depth and breadth 
+x=  39.8 y= 116.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | of services that can be provided to Family Enterprises.  While Multi-Family Offices are a common 
+x=  39.8 y= 131.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | feature in North America, they are less common in Australia where Virtual Family Offices and 
+x=  39.6 y= 146.9 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Single Family Offices dominate the sector.  
+x=  40.0 y= 167.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | In Australia, it is common for Single Family Offices or a Business Family Office to overlap particular 
+x=  40.0 y= 182.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | services provided by Multi-Family Offices.  This is often the case to supplement in-house 
+x=  39.8 y= 197.6 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | expertise and provide additional capability and resourcing.  
+x=  39.6 y= 218.3 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | Choosing an appropriate Family Office model means that a structured process and a 
+x=  39.9 y= 233.3 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | team of experts are put in place to help create and execute the long-term Family Strategy.  
+x=  40.0 y= 248.3 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | It can be implemented with varying levels of participation by the family; but with certainty that it 
+x=  39.9 y= 263.3 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | is not dependent on any one family member.  This creates significant peace of mind for families, 
+x=  39.9 y= 278.3 sz=[12.0] fonts=['ProximaNova-Light'] flags=[4] c=['#000000'] | builds trust and helps to improve the long-term outcomes for wealthy families.  
+x=  58.3 y= 321.6 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | “…The thing I like about using a Multi-Family Office provider is they’ve got the culture 
+x=  62.7 y= 336.6 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | about helping you and have the people who are very experienced in working 
+x=  62.5 y= 351.6 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | with families.  Also, you have the option of only using some or all of their services, 
+x=  62.7 y= 366.6 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | depending on your needs and preferences.  For instance, if I decided tomorrow that 
+x=  62.4 y= 381.6 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | I didn’t want to spend any time on finance at all or maybe I have a stroke and am 
+x=  62.7 y= 396.6 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | incapacitated, they can take on these additional responsibilities in the way we’ve 
+x=  62.7 y= 411.6 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | agreed on and documented.”
+x=  62.6 y= 436.7 sz=[12.0] fonts=['ProximaNova-Regular'] flags=[4] c=['#7d8898'] | Family Enterprise leader, participant 18
+x=  58.4 y= 497.0 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | “During the challenges we faced as a family with Dad’s illness, our Multi-Family Office 
+x=  62.8 y= 512.0 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | provided a considerable amount of practical, pragmatic, and emotional support – 
+x=  62.8 y= 527.0 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | particularly for Mum.  It’s difficult to capture just how significant their impact has been… 
+x=  62.7 y= 542.0 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | and that’s the type of service MFOs can provide.  I don’t view them like the accountant 
+x=  62.7 y= 557.0 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | or a taxation specialist.  I view them as people with whom I have a really wonderful 
+x=  62.5 y= 572.0 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | working relationship.  They actually care very deeply about us.”
+x=  62.6 y= 597.0 sz=[12.0] fonts=['ProximaNova-Regular'] flags=[4] c=['#7d8898'] | Family Enterprise leader, participant 24
+x=  58.4 y= 657.4 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | “If we’re talking about family advice and strategy execution you’ll probably find the Multi-
+x=  62.4 y= 672.4 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | Family Office will have higher expertise in those areas, than say, a Single Family Office, 
+x=  62.5 y= 687.4 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | where if you’ve only got less than five to 10 people, they do get bogged down day to 
+x=  62.7 y= 702.4 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | day with everything… they don’t get the time to focus on the big picture like ownership, 
+x=  62.7 y= 717.4 sz=[12.0] fonts=['ProximaNova-RegularIt'] flags=[6] c=['#dd971a'] | succession, education because all the other demands of the day get in the way.” 
+x=  62.6 y= 742.4 sz=[12.0] fonts=['ProximaNova-Regular'] flags=[4] c=['#7d8898'] | Expert Family Office advisor 5
+x=1142.9 y= 795.5 sz=[8.0] fonts=['Baskerville'] flags=[4] c=['#7f8a9a'] | 27
+x=  39.7 y= 795.5 sz=[8.0] fonts=['Baskerville'] flags=[4] c=['#7f8a9a'] | 26
+x= 427.1 y= 795.7 sz=[7.0] fonts=['ProximaNova-Light'] flags=[4] c=['#7f8a9a'] | Why The Modern Family Office Matters
+x= 646.3 y= 795.7 sz=[7.0] fonts=['ProximaNova-Light'] flags=[4] c=['#7f8a9a'] | How Family Offices help wealthy families

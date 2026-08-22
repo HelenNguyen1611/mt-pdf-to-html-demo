@@ -1,0 +1,130 @@
+PAGE 15  1190.55x841.89pt  mid=595.3
+
+[L] y=  70.2 x=  40.1- 398.0 | 'In Mutual Trust’s experience, the most important thing families should '
+       ProximaNova-Light 12.0 #000000 flags=4; ProximaNova-LightIt 12.0 #000000 flags=6; ProximaNova-Light 12.0 #000000 flags=4
+[L] y=  85.2 x=  40.0- 437.1 | 'communicate about and agree upon is what matters most to individual family '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 100.2 x=  40.1- 232.9 | 'members and the family collectively.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 120.9 x=  38.6- 441.3 | 'This allows for the inclusion of individual aspirations and a shared set of family '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 135.9 x=  40.0- 440.6 | 'goals in a family’s long-term plan.  It also helps bring the family together while '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 150.9 x=  40.0- 458.4 | 'allowing individual needs to be recognised.  It is this positive approach that plays '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 165.9 x=  40.1- 429.7 | 'to both individual and collective strengths, energising them to succeed and '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 180.9 x=  40.0- 451.5 | 'creating a clear set of objectives.  Open communication on this topic, preferably '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 195.9 x=  40.1- 230.1 | 'with all family members, builds trust.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 216.6 x=  40.1- 446.4 | 'Having decided what matters most, families should then determine how to use '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 231.6 x=  40.1- 441.2 | 'their wealth to achieve that multi-faceted purpose.  But how do families tackle '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 246.6 x=  40.1- 110.9 | 'this question?'
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 267.2 x=  39.6- 420.5 | 'Over the next 20 years there will be significant transitions from matriarchs '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 282.2 x=  40.0- 446.2 | 'and\xa0patriarchs overseeing the transfer of their families’ wealth to their offspring '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 297.2 x=  40.0- 446.8 | 'and grandchildren.  Many of those who are giving up control are acutely aware '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 312.2 x=  40.0- 351.3 | 'of\xa0the imperatives to get the wealth transition process right.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 332.9 x=  40.1- 429.3 | 'However, many families of wealth are failing to adopt the right Family Office '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 347.9 x=  40.1- 453.8 | 'model for their needs.  This has a detrimental impact on family engagement and '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 362.9 x=  40.0- 453.7 | 'cohesion, which can prevent family members from thriving and the wealth being '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 377.9 x=  40.1- 189.3 | 'sustained over generations.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 398.6 x=  38.6- 445.8 | 'The research shows that in many instances, families may not want to talk about '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 413.6 x=  40.1- 460.2 | 'wealth and family issues, because it is an uncomfortable topic.  It may raise difficult '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 428.6 x=  40.1- 432.4 | 'unresolved family matters and/or force them to confront their own mortality.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 449.2 x=  40.1- 444.2 | 'However, not doing so can prove divisive.  As one participant in the University '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 464.2 x=  40.0- 176.6 | 'of\xa0Adelaide research said: '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 484.9 x=  63.5- 441.8 | '“Our father wouldn’t even talk about wealth… the word ‘wealth’ was seen '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 499.9 x=  68.3- 435.3 | 'as a dirty word within our family… as a consequence, in my generation, '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 514.9 x=  68.3- 454.4 | 'we\xa0wouldn’t raise the issue....  In recent years, the different branches of the '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 529.9 x=  68.4- 448.6 | 'family have come together to discuss wealth and it was too late as things '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 544.9 x=  68.3- 440.9 | 'were in a real mess… We’ve decided to divide up the wealth and go our '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 559.9 x=  68.4- 208.4 | 'separate ways as a family.”'
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 580.5 x=  68.4- 268.5 | 'Family Enterprise leader, participant 23'
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 606.9 x=  38.6- 413.4 | 'To achieve succession over generations, wealth transition plans must be '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 621.9 x=  40.0- 443.7 | 'discussed, and wealth inheritors equipped to manage stewardship and all that '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 636.9 x=  40.1- 456.6 | 'it\xa0entails.  Equally matriarchs and patriarchs need to know when it is time to hand '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 651.9 x=  40.1- 438.3 | 'the reins over.  Inheriting significant wealth can be overwhelming, particularly '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 666.9 x=  40.1- 448.4 | 'if\xa0recipients are inadequately prepared.  They may fear failure and the potential '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 681.9 x=  40.1- 445.5 | 'to let past, current and future family members down.  For the older generation, '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 696.9 x=  40.1- 434.9 | 'there may be barriers to engagement, such as feelings of loss of\xa0control and '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 711.9 x=  40.0- 400.8 | 'concerns that their inheritors may not be ready to take over the reins.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 732.5 x=  39.2- 388.9 | 'All of these concerns are valid and need to be worked through with '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 747.5 x=  40.1- 389.4 | 'knowledgeable empathetic Family Office advisors in whom all family '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 762.5 x=  40.1- 199.5 | 'members\xa0can place their trust.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y=  70.2 x= 646.7-1131.3 | 'Mutual Trust, based upon more than 100 years of experience and supported by the University '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y=  85.2 x= 646.6-1141.4 | 'of Adelaide’s research have identified five facets that matter most to families of wealth.  This has '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 100.2 x= 646.7-1149.4 | 'been turned into a valuable family framework (“The Mutual Trust Gemstone”) that\xa0can\xa0be applied '
+       ProximaNova-Light 12.0 #000000 flags=4; ProximaNova-Semibold 12.0 #000000 flags=20; ProximaNova-LightIt 12.0 #000000 flags=6; ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 115.2 x= 646.7- 819.5 | 'to each family’s unique situation.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 135.8 x= 645.2-1109.7 | 'The first and most important step is determining a\xa0family’s Purpose of Wealth.  This means '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 150.8 x= 646.7-1138.7 | 'helping\xa0a family to understand what matters most and using its wealth to achieve that purpose.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 165.8 x= 645.2- 955.3 | 'This creates strong and enduring bonds of family cohesion.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 186.5 x= 645.2-1129.5 | 'The facets of The Mutual Trust Gemstone make up a family’s Purpose of Wealth.  Some facets '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 201.5 x= 646.7-1111.7 | 'will be more important to families and individual family members than others, and it is their '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 216.5 x= 646.6-1125.9 | 'combination into a periodically reviewed and updated Family Strategy that is key to success.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 237.2 x= 645.2- 742.7 | 'The five facets are:'
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 257.8 x= 654.6- 664.2 | '1.\t'
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 257.8 x= 675.0- 778.4 | 'Financial Prosperity;'
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 278.5 x= 654.4- 766.2 | '2.\t Entrepreneurship;'
+       ProximaNova-Light 12.0 #000000 flags=4; ProximaNova-Light 12.0 #000000 flags=4; ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 299.2 x= 654.8- 813.3 | '3.\t Family Unity and Harmony;'
+       ProximaNova-Light 12.0 #000000 flags=4; ProximaNova-Light 12.0 #000000 flags=4; ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 319.8 x= 654.1- 892.1 | '4.\t Learning, Engagement and Fulfilment; and'
+       ProximaNova-Light 12.0 #000000 flags=4; ProximaNova-Light 12.0 #000000 flags=4; ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 340.5 x= 654.8- 773.8 | '5.\t Community Impact.'
+       ProximaNova-Light 12.0 #000000 flags=4; ProximaNova-Light 12.0 #000000 flags=4; ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 795.5 x=  39.7-  47.7 | '30'
+       Baskerville 8.0 #7f8a9a flags=4
+[L] y= 795.7 x= 427.1- 544.3 | 'Why The Modern Family Office Matters'
+       ProximaNova-Light 7.0 #7f8a9a flags=4
+[R] y= 795.7 x= 646.3- 797.9 | 'Modern Family Office practices\xa0make a difference '
+       ProximaNova-Light 7.0 #ffffff flags=4
+[R] y= 795.5 x=1142.9-1150.9 | '31'
+       Baskerville 8.0 #ffffff flags=4

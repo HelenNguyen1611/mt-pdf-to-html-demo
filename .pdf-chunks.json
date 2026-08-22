@@ -1,0 +1,68 @@
+{
+  "$schema": "pdf-chunks-v1",
+  "description": "Resumable multi-round PDF→HTML builds. Each document splits into chunks (max ~10 PDF pages). Completed chunks are not rebuilt unless explicitly retried.",
+  "chunkStatus": ["pending", "in_progress", "completed", "failed"],
+  "documents": {
+    "2023_Why_the_Modern_Family_Office_Matters.pdf": {
+      "sourcePath": "white_paper/2023_Why_the_Modern_Family_Office_Matters.pdf",
+      "slug": "why-the-modern-family-office-matters",
+      "output": "website/why-the-modern-family-office-matters.html",
+      "assetDir": "website/assets/why-the-modern-family-office-matters/",
+      "template": "website/template-white-paper.html",
+      "family": "white-paper",
+      "totalPages": 33,
+      "maxPagesPerChunk": 10,
+          "lastCompletedChunk": 3,
+          "chunks": [
+        {
+          "id": 1,
+          "label": "cover-toc",
+          "pages": [0, 1, 2, 3],
+          "pagesLabel": "p0–p3",
+          "status": "completed",
+          "completedAt": "2026-08-20",
+          "assets": "images/chunk-01/"
+        },
+        {
+          "id": 2,
+          "label": "welcome-s1",
+          "pages": [4, 5, 6, 7, 8],
+          "pagesLabel": "p4–p8",
+          "status": "completed",
+          "completedAt": "2026-08-20",
+          "assets": "images/chunk-02/"
+        },
+        {
+          "id": 3,
+          "label": "section-2-table",
+          "pages": [9, 10, 11, 12, 13],
+          "pagesLabel": "p9–p13",
+          "status": "completed",
+          "completedAt": "2026-08-21",
+          "assets": "images/chunk-03/"
+        },
+        {
+          "id": 4,
+          "label": "section-3-gem",
+          "pages": [14, 15, 16, 17, 18, 19],
+          "pagesLabel": "p14–p19",
+          "status": "pending"
+        },
+        {
+          "id": 5,
+          "label": "facets-conclusion",
+          "pages": [20, 21, 22, 23, 24, 25],
+          "pagesLabel": "p20–p25",
+          "status": "pending"
+        },
+        {
+          "id": 6,
+          "label": "back-matter",
+          "pages": [26, 27, 28, 29, 30, 31],
+          "pagesLabel": "p26–p31",
+          "status": "pending"
+        }
+      ]
+    }
+  }
+}

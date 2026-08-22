@@ -1,0 +1,120 @@
+PAGE 18  1190.55x841.89pt  mid=595.3
+
+[R] y= 326.2 x= 646.3- 796.3 | 'MUTUAL TRUST CASE STUDY '
+       ProximaNova-Medium 10.0 #000000 flags=4
+[R] y= 341.8 x= 646.3- 786.6 | 'Entrepreneurship'
+       Baskerville 20.0 #000000 flags=4
+[R] y= 375.8 x= 646.3-1101.6 | 'The success of the Ramsey* winery comes from an enduring family passion for business '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 390.8 x= 646.3-1123.3 | 'growth,\xa0and this is what enabled their youngest son to unlock his own entrepreneurial spirit.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 411.5 x= 646.3-1136.2 | 'For more than three generations, the Ramsey family has owned and operated a thriving winery '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 426.5 x= 646.3-1110.2 | 'and vineyard where they grow their own grapes and produce their own wine for domestic '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 441.5 x= 646.3-1115.7 | 'and\xa0international markets.  The Ramsey’s youngest son, Seth*, spent much of his childhood '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 456.5 x= 646.3-1047.2 | 'in\xa0the\xa0vineyards, picking grapes and helping to bottle the wine each Autumn.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 477.2 x= 646.3-1125.5 | 'Although he cherishes fond memories of this time spent with his family, Seth knew from early '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 492.2 x= 646.3-1133.9 | 'on\xa0that he wasn’t passionate about winemaking.  As a young adult, he sought a career outside '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 507.2 x= 646.3-1148.3 | 'the family unit and decided to undertake a business degree in Scotland, where he spent the next '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 522.2 x= 646.3-1140.2 | 'eight years completing his studies and gaining practical work experience as a product manager '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 537.2 x= 646.3- 741.7 | 'for a global bank.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 557.8 x= 646.3-1153.7 | 'Upon returning to Australia and joining a family meeting, Seth talked openly with his parents about '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 572.8 x= 646.3-1128.3 | 'his newfound passion for distilling whisky.  Whilst the Ramseys would have loved for their son '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 587.8 x= 646.3-1130.3 | 'to\xa0take over the family business, they also felt it was important he had the opportunity to build '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 602.8 x= 646.3- 749.9 | 'his\xa0own enterprise.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 623.5 x= 646.3-1114.9 | 'The Ramsey’s decided to leverage the family bank, using a portion of their wealth to invest '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 638.5 x= 646.3- 950.7 | 'in\xa0the\xa0whisky distillery Seth was working hard to establish.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 659.2 x= 646.3-1116.0 | 'Through his parents’ support and their passion for business growth, Seth unlocked his own '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 674.2 x= 646.3-1125.6 | 'entrepreneurial spirit and was able to build a very successful and profitable business.  Today, '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 689.2 x= 646.3-1127.1 | 'his\xa0whisky\xa0is available for sale at national retailers as well as the family’s vineyard cellar door.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 709.8 x= 646.3-1104.7 | 'Importantly, he is happy and fulfilled in his career and maintains a strong connection with '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 724.8 x= 646.3-1117.7 | 'his\xa0family.  Whilst he will not be taking over the family business, the Ramsey entrepreneurial '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 739.8 x= 646.3- 876.1 | 'legacy\xa0lives on through Seth’s own venture.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 760.9 x= 646.3- 879.9 | '\t* Family and family members’ names have been changed for privacy reasons'
+       ProximaNova-Regular 7.0 #000000 flags=4
+[L] y=  70.2 x=  38.6- 424.9 | 'This is further supported by various participants in the University research.   '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y=  85.2 x=  39.6- 157.3 | 'One such person said: '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 105.9 x=  63.5- 450.6 | '“we [look for SMEs] where we know we can add value with our experience '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 120.9 x=  68.3- 445.2 | 'of running a\xa0business for twenty-five years and successfully exiting… and '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 135.9 x=  68.4- 422.8 | 'just doing certain things… the\xa0other things that we are looking at are '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 150.9 x=  68.5- 450.8 | 'keeping a good business on‑going\xa0because of\xa0the spin-off benefits to the '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 165.9 x=  68.3- 132.9 | 'community.” '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 186.6 x=  68.4- 275.5 | 'Family Enterprise member, participant 14'
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 212.9 x=  40.1- 449.9 | 'For many wealthy families owning and operating businesses creates a sense of '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 227.9 x=  40.1- 454.4 | 'purpose.  Unlike holding passive investments, involvement in the business often '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 242.9 x=  40.1- 367.1 | 'provides a sense of socio-emotional fulfillment.  Another stated:'
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 263.6 x=  63.5- 454.6 | '“we very much like the idea of\xa0operating businesses that employ people as '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 278.6 x=  68.3- 445.5 | 'opposed to passive investments.  We’re building something for ourselves '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 293.6 x=  68.3- 451.7 | 'and for the community as well.  There is an\xa0amount of sentimental pride in '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 308.6 x=  68.5- 452.8 | 'knowing that we’re providing something which gives\xa0others opportunities.” '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 329.2 x=  68.4- 278.9 | 'Family Enterprise member, participant 12 '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 355.6 x=  39.6- 425.8 | 'One family leader highlighted how they have invested in over 20 start-ups, '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 370.6 x=  40.1- 424.0 | 'particularly in\xa0women-led ventures that the family feels passionate about.   '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 385.6 x=  38.6-  90.8 | 'They said:'
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 406.2 x=  63.5- 417.9 | '“... for me, investing in\xa0start-ups is not just about the financial return… '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 421.2 x=  68.1- 417.0 | 'I\xa0like the opportunity\xa0to\xa0mentor some\xa0great individuals.  It’s also just '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 436.2 x=  68.5- 338.4 | 'the\xa0excitement of being involved in\xa0something\xa0new.” '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 456.9 x=  68.4- 264.9 | 'Family Enterprise leader, participant 17'
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 483.2 x=  39.2- 251.1 | 'And a Family Enterprise Leader also said:'
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 503.9 x=  63.5- 447.3 | '“To be honest, I’m having fun when given the opportunity to invest directly '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 518.9 x=  68.5- 442.1 | 'in innovative start-ups.  Am I going to succeed?  Possibly not, but I’m not '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 533.9 x=  68.5- 450.4 | 'betting the farm\xa0on\xa0it.  But,\xa0if\xa0these ideas I’m investing in work, they will be '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 548.9 x=  68.5- 161.6 | 'transformational.” '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 569.6 x=  68.4- 261.2 | 'Family Enterprise leader, participant 7'
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 795.5 x=1142.9-1150.9 | '37'
+       Baskerville 8.0 #dd971a flags=4
+[R] y= 795.7 x= 646.3- 797.9 | 'Modern Family Office practices\xa0make a difference '
+       ProximaNova-Light 7.0 #dd971a flags=4
+[L] y= 795.5 x=  39.7-  47.7 | '36'
+       Baskerville 8.0 #7f8a9a flags=4
+[L] y= 795.7 x= 427.1- 544.3 | 'Why The Modern Family Office Matters'
+       ProximaNova-Light 7.0 #7f8a9a flags=4
