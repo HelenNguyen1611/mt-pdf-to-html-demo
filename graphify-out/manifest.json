@@ -1,0 +1,1970 @@
+{
+  ".pdf-chunks.json": {
+    "mtime": 1787311551.5422568,
+    "seen": 1787353296.311635,
+    "ast_hash": "4d4a2c13c5211c0b7771a4acd4cd1e51",
+    "semantic_hash": "4d4a2c13c5211c0b7771a4acd4cd1e51"
+  },
+  ".pdf-state.json": {
+    "mtime": 1786608661.7593002,
+    "seen": 1787353296.311636,
+    "ast_hash": "b282899ab160df5733ca7f8c8e351eac",
+    "semantic_hash": "b282899ab160df5733ca7f8c8e351eac"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/inspect/links.json": {
+    "mtime": 1786538115.323271,
+    "seen": 1787353296.311637,
+    "ast_hash": "0c66503ed034a9776ad94fe7b32c17ad",
+    "semantic_hash": "0c66503ed034a9776ad94fe7b32c17ad"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/inspect/structure.json": {
+    "mtime": 1786538115.412118,
+    "seen": 1787353296.311638,
+    "ast_hash": "8e756b5ee95ceff7f477c7fb737165ab",
+    "semantic_hash": "8e756b5ee95ceff7f477c7fb737165ab"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/chunk-04-links.json": {
+    "mtime": 1787308683.6578455,
+    "seen": 1787353296.311639,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": "d751713988987e9331980363e24189ce"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/chunk-05-06-links.json": {
+    "mtime": 1787310700.6942728,
+    "seen": 1787353296.31164,
+    "ast_hash": "1b447a2f04175b1d645c79b6b31d1e81",
+    "semantic_hash": "1b447a2f04175b1d645c79b6b31d1e81"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-20-rects.json": {
+    "mtime": 1787310697.5104861,
+    "seen": 1787353296.311641,
+    "ast_hash": "563c1ae9efb459277809cc24b4771677",
+    "semantic_hash": "563c1ae9efb459277809cc24b4771677"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-21-rects.json": {
+    "mtime": 1787310697.9586523,
+    "seen": 1787353296.3116422,
+    "ast_hash": "e99cc5a860cf8044721d3e3193b4a9ad",
+    "semantic_hash": "e99cc5a860cf8044721d3e3193b4a9ad"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-22-rects.json": {
+    "mtime": 1787310698.211811,
+    "seen": 1787353296.311643,
+    "ast_hash": "f49e2ad3ab9171718d216847e46904a1",
+    "semantic_hash": "f49e2ad3ab9171718d216847e46904a1"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-23-rects.json": {
+    "mtime": 1787310698.4792469,
+    "seen": 1787353296.311643,
+    "ast_hash": "c109ffc762b1e115e771ee468a5b0b5d",
+    "semantic_hash": "c109ffc762b1e115e771ee468a5b0b5d"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-24-rects.json": {
+    "mtime": 1787310698.7821803,
+    "seen": 1787353296.3116438,
+    "ast_hash": "ef5a9cd0db83225952e99dc80f6a2e33",
+    "semantic_hash": "ef5a9cd0db83225952e99dc80f6a2e33"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-25-rects.json": {
+    "mtime": 1787310699.1463592,
+    "seen": 1787353296.311645,
+    "ast_hash": "9580540c17cb62191f7d1a02956c3239",
+    "semantic_hash": "9580540c17cb62191f7d1a02956c3239"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-26-rects.json": {
+    "mtime": 1787310699.346432,
+    "seen": 1787353296.311646,
+    "ast_hash": "00ef88df68c27321312bffeb6cfbbe89",
+    "semantic_hash": "00ef88df68c27321312bffeb6cfbbe89"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-27-rects.json": {
+    "mtime": 1787310699.5242777,
+    "seen": 1787353296.311647,
+    "ast_hash": "ca105dafec75431b7cd30b1e9ded2297",
+    "semantic_hash": "ca105dafec75431b7cd30b1e9ded2297"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-28-rects.json": {
+    "mtime": 1787310700.0455225,
+    "seen": 1787353296.311648,
+    "ast_hash": "5168eacd1ad4fb2a5f7b014b30cbafce",
+    "semantic_hash": "5168eacd1ad4fb2a5f7b014b30cbafce"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-29-rects.json": {
+    "mtime": 1787310700.1965294,
+    "seen": 1787353296.311649,
+    "ast_hash": "2f9e37cc4464df1729fbeaa6ea96eea1",
+    "semantic_hash": "2f9e37cc4464df1729fbeaa6ea96eea1"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-30-rects.json": {
+    "mtime": 1787310700.5386596,
+    "seen": 1787353296.311649,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": "d751713988987e9331980363e24189ce"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-31-rects.json": {
+    "mtime": 1787310700.6353738,
+    "seen": 1787353296.31165,
+    "ast_hash": "e82cdf0c1ed676a17f3541c4e8c0ac6c",
+    "semantic_hash": "e82cdf0c1ed676a17f3541c4e8c0ac6c"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-32-rects.json": {
+    "mtime": 1787310700.6941044,
+    "seen": 1787353296.3116522,
+    "ast_hash": "e99cc5a860cf8044721d3e3193b4a9ad",
+    "semantic_hash": "e99cc5a860cf8044721d3e3193b4a9ad"
+  },
+  ".cursor/skills/mutual-trust-pdf-to-html/SKILL.md": {
+    "mtime": 1787309524.3468287,
+    "seen": 1787353296.3116531,
+    "ast_hash": "29ab1ceb4a52d780235ce285f6662a3c",
+    "semantic_hash": "29ab1ceb4a52d780235ce285f6662a3c"
+  },
+  ".cursor/skills/mutual-trust-pdf-to-html/assets/template-market-review.html": {
+    "mtime": 1787310168.224918,
+    "seen": 1787353296.3116539,
+    "ast_hash": "e323c9b8f96b0b798f0232b3c30d172d",
+    "semantic_hash": "e323c9b8f96b0b798f0232b3c30d172d"
+  },
+  ".cursor/skills/mutual-trust-pdf-to-html/assets/template-perspective.html": {
+    "mtime": 1787310168.2310739,
+    "seen": 1787353296.3116539,
+    "ast_hash": "40baa6b9fe7c740fc9c726ce2781fac8",
+    "semantic_hash": "40baa6b9fe7c740fc9c726ce2781fac8"
+  },
+  ".cursor/skills/mutual-trust-pdf-to-html/assets/template-quarterly-outlook.html": {
+    "mtime": 1787310168.227984,
+    "seen": 1787353296.3116548,
+    "ast_hash": "5f312e5b471eb492eaeeb86c51f4945a",
+    "semantic_hash": "5f312e5b471eb492eaeeb86c51f4945a"
+  },
+  ".cursor/skills/mutual-trust-pdf-to-html/assets/template-white-paper.html": {
+    "mtime": 1787311577.400042,
+    "seen": 1787353296.311656,
+    "ast_hash": "a6a8ff78953cdce801fc2c74a5ad13f8",
+    "semantic_hash": "a6a8ff78953cdce801fc2c74a5ad13f8"
+  },
+  ".cursor/skills/mutual-trust-pdf-to-html/references/Mutual-Trust-Design-Analysis-Framework.md": {
+    "mtime": 1787311577.392922,
+    "seen": 1787353296.311657,
+    "ast_hash": "306450cff691bb955a447afc8262a8ee",
+    "semantic_hash": "306450cff691bb955a447afc8262a8ee"
+  },
+  ".cursor/skills/mutual-trust-pdf-to-html/workflow.md": {
+    "mtime": 1787306461.6559956,
+    "seen": 1787353296.311658,
+    "ast_hash": "f9219899b4f4d0f445e03453bdbd3697",
+    "semantic_hash": "f9219899b4f4d0f445e03453bdbd3697"
+  },
+  "CLAUDE.md": {
+    "mtime": 1787225715.6018074,
+    "seen": 1787353296.311658,
+    "ast_hash": "02cbb5794b2efdceef5d812da4b478b5",
+    "semantic_hash": "02cbb5794b2efdceef5d812da4b478b5"
+  },
+  "Mutual-Trust-Design-Analysis-Framework.md": {
+    "mtime": 1787350335.6816816,
+    "seen": 1787353296.311659,
+    "ast_hash": "7499d41cae591d3abda145c2106a4e5c",
+    "semantic_hash": "7499d41cae591d3abda145c2106a4e5c"
+  },
+  "mutual-trust-pdf-to-html-skill/SKILL.md": {
+    "mtime": 1787309528.65032,
+    "seen": 1787353296.31166,
+    "ast_hash": "2c120b79628bcdf05606a25d97b77b6b",
+    "semantic_hash": "2c120b79628bcdf05606a25d97b77b6b"
+  },
+  "mutual-trust-pdf-to-html-skill/assets/template-market-review.html": {
+    "mtime": 1787310168.2101994,
+    "seen": 1787353296.311661,
+    "ast_hash": "e323c9b8f96b0b798f0232b3c30d172d",
+    "semantic_hash": "e323c9b8f96b0b798f0232b3c30d172d"
+  },
+  "mutual-trust-pdf-to-html-skill/assets/template-perspective.html": {
+    "mtime": 1787310168.2170043,
+    "seen": 1787353296.3116622,
+    "ast_hash": "40baa6b9fe7c740fc9c726ce2781fac8",
+    "semantic_hash": "40baa6b9fe7c740fc9c726ce2781fac8"
+  },
+  "mutual-trust-pdf-to-html-skill/assets/template-quarterly-outlook.html": {
+    "mtime": 1787310168.2135265,
+    "seen": 1787353296.3116622,
+    "ast_hash": "5f312e5b471eb492eaeeb86c51f4945a",
+    "semantic_hash": "5f312e5b471eb492eaeeb86c51f4945a"
+  },
+  "mutual-trust-pdf-to-html-skill/assets/template-white-paper.html": {
+    "mtime": 1787311577.402868,
+    "seen": 1787353296.3116632,
+    "ast_hash": "a6a8ff78953cdce801fc2c74a5ad13f8",
+    "semantic_hash": "a6a8ff78953cdce801fc2c74a5ad13f8"
+  },
+  "mutual-trust-pdf-to-html-skill/references/Mutual-Trust-Design-Analysis-Framework.md": {
+    "mtime": 1787311577.3967326,
+    "seen": 1787353296.311664,
+    "ast_hash": "306450cff691bb955a447afc8262a8ee",
+    "semantic_hash": "306450cff691bb955a447afc8262a8ee"
+  },
+  "template-market-review.html": {
+    "mtime": 1786607303.307132,
+    "seen": 1787353296.3116648,
+    "ast_hash": "e323c9b8f96b0b798f0232b3c30d172d",
+    "semantic_hash": "e323c9b8f96b0b798f0232b3c30d172d"
+  },
+  "template-perspective.html": {
+    "mtime": 1786607303.3078372,
+    "seen": 1787353296.3116648,
+    "ast_hash": "40baa6b9fe7c740fc9c726ce2781fac8",
+    "semantic_hash": "40baa6b9fe7c740fc9c726ce2781fac8"
+  },
+  "template-quarterly-outlook.html": {
+    "mtime": 1786607303.308668,
+    "seen": 1787353296.311666,
+    "ast_hash": "d58fd8f42ea262712d9e6c9da44f8db1",
+    "semantic_hash": "d58fd8f42ea262712d9e6c9da44f8db1"
+  },
+  "website/april-2026-monthly-market-review.html": {
+    "mtime": 1786544942.340045,
+    "seen": 1787353296.311667,
+    "ast_hash": "38cc46ad8a94db0ff71be4a90742c5b9",
+    "semantic_hash": "38cc46ad8a94db0ff71be4a90742c5b9"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/inspect/text.txt": {
+    "mtime": 1786538929.847493,
+    "seen": 1787353296.311668,
+    "ast_hash": "f9d0e5ec707de6f49c45a5cac947f4de",
+    "semantic_hash": "f9d0e5ec707de6f49c45a5cac947f4de"
+  },
+  "website/assets/perspective-from-brendan-henderson-double-death-tax-trap/inspect/text.txt": {
+    "mtime": 1786539553.4067187,
+    "seen": 1787353296.3116689,
+    "ast_hash": "eb1aea60dc82774e94e267f2a34cef8f",
+    "semantic_hash": "eb1aea60dc82774e94e267f2a34cef8f"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-0.txt": {
+    "mtime": 1787226648.6383872,
+    "seen": 1787353296.3116689,
+    "ast_hash": "805999228fb35022fe725487d527f85d",
+    "semantic_hash": "805999228fb35022fe725487d527f85d"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-1.txt": {
+    "mtime": 1787226648.6495519,
+    "seen": 1787353296.31167,
+    "ast_hash": "8852397db1b722f12f971154f27b1ed8",
+    "semantic_hash": "8852397db1b722f12f971154f27b1ed8"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-10.txt": {
+    "mtime": 1787297702.1939142,
+    "seen": 1787353296.311671,
+    "ast_hash": "4fd15e3ad2d8613337f3d204921c0bac",
+    "semantic_hash": "4fd15e3ad2d8613337f3d204921c0bac"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-11.txt": {
+    "mtime": 1787297702.2968972,
+    "seen": 1787353296.311672,
+    "ast_hash": "ec01a96daa58bb2b89ffcab2042ff4c8",
+    "semantic_hash": "ec01a96daa58bb2b89ffcab2042ff4c8"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-12.txt": {
+    "mtime": 1787297702.3557703,
+    "seen": 1787353296.3116732,
+    "ast_hash": "b8243df8f147864fe8d0ea5ba14822d4",
+    "semantic_hash": "b8243df8f147864fe8d0ea5ba14822d4"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-13.txt": {
+    "mtime": 1787297702.4230802,
+    "seen": 1787353296.311674,
+    "ast_hash": "1dc731d6a49eb7d2081d08eafcdc9ea5",
+    "semantic_hash": "1dc731d6a49eb7d2081d08eafcdc9ea5"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-14.txt": {
+    "mtime": 1787308682.479781,
+    "seen": 1787353296.311674,
+    "ast_hash": "9b887102ce4482c7d7b63df02ee1d2ab",
+    "semantic_hash": "9b887102ce4482c7d7b63df02ee1d2ab"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-15.txt": {
+    "mtime": 1787308682.789593,
+    "seen": 1787353296.3116748,
+    "ast_hash": "406cf939a3218ddec12102c9aba98bf0",
+    "semantic_hash": "406cf939a3218ddec12102c9aba98bf0"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-16.txt": {
+    "mtime": 1787308682.9712534,
+    "seen": 1787353296.3116758,
+    "ast_hash": "f273782e4645874e60f2a1ca510623d5",
+    "semantic_hash": "f273782e4645874e60f2a1ca510623d5"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-17.txt": {
+    "mtime": 1787308683.1265805,
+    "seen": 1787353296.311677,
+    "ast_hash": "b5e3f584c34ca0d8371173e08df60648",
+    "semantic_hash": "b5e3f584c34ca0d8371173e08df60648"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-18.txt": {
+    "mtime": 1787308683.3827434,
+    "seen": 1787353296.311678,
+    "ast_hash": "4c3f0305c95e43cfec032e06af80ddc4",
+    "semantic_hash": "4c3f0305c95e43cfec032e06af80ddc4"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-19.txt": {
+    "mtime": 1787308683.528282,
+    "seen": 1787353296.311679,
+    "ast_hash": "933a949e3ceee93ec22edc7f90dc087d",
+    "semantic_hash": "933a949e3ceee93ec22edc7f90dc087d"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-2.txt": {
+    "mtime": 1787226648.6749167,
+    "seen": 1787353296.311679,
+    "ast_hash": "4fd7a8c32d140b2ffe7a71706760f5d1",
+    "semantic_hash": "4fd7a8c32d140b2ffe7a71706760f5d1"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-20-detail.txt": {
+    "mtime": 1787310697.5061443,
+    "seen": 1787353296.31168,
+    "ast_hash": "9c455b689cc594f77f82de1fc0d87a5e",
+    "semantic_hash": "9c455b689cc594f77f82de1fc0d87a5e"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-20.txt": {
+    "mtime": 1787307291.7919464,
+    "seen": 1787353296.311681,
+    "ast_hash": "3e8e346b567e7af13d070beebc732900",
+    "semantic_hash": "3e8e346b567e7af13d070beebc732900"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-21-detail.txt": {
+    "mtime": 1787310697.9568782,
+    "seen": 1787353296.311682,
+    "ast_hash": "2ed2c07d95242aaaba5fea69454dc242",
+    "semantic_hash": "2ed2c07d95242aaaba5fea69454dc242"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-21.txt": {
+    "mtime": 1787307291.7985706,
+    "seen": 1787353296.3116832,
+    "ast_hash": "9d81b538a2dbadc0a2ebaf963b0c701b",
+    "semantic_hash": "9d81b538a2dbadc0a2ebaf963b0c701b"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-22-detail.txt": {
+    "mtime": 1787310698.209769,
+    "seen": 1787353296.3116832,
+    "ast_hash": "cb96afa51722071326975b65661a6be6",
+    "semantic_hash": "cb96afa51722071326975b65661a6be6"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-22.txt": {
+    "mtime": 1787307291.8059316,
+    "seen": 1787353296.3116841,
+    "ast_hash": "73c19d884ca5fe3b28806113231cf98c",
+    "semantic_hash": "73c19d884ca5fe3b28806113231cf98c"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-23-detail.txt": {
+    "mtime": 1787310698.476246,
+    "seen": 1787353296.311685,
+    "ast_hash": "42f42f72be0e4c73bc816b362434080e",
+    "semantic_hash": "42f42f72be0e4c73bc816b362434080e"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-23.txt": {
+    "mtime": 1787307291.8158667,
+    "seen": 1787353296.3116858,
+    "ast_hash": "42adf75c172cc1a31803163c9d6b8d01",
+    "semantic_hash": "42adf75c172cc1a31803163c9d6b8d01"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-24-detail.txt": {
+    "mtime": 1787310698.7791317,
+    "seen": 1787353296.311687,
+    "ast_hash": "6f35d49b570a2df99808e40e2b9fcc42",
+    "semantic_hash": "6f35d49b570a2df99808e40e2b9fcc42"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-24.txt": {
+    "mtime": 1787307291.8260388,
+    "seen": 1787353296.311687,
+    "ast_hash": "002f8437f0c5c8681e77b877683058a9",
+    "semantic_hash": "002f8437f0c5c8681e77b877683058a9"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-25-detail.txt": {
+    "mtime": 1787310699.1444411,
+    "seen": 1787353296.311688,
+    "ast_hash": "3bb0f274ca705d58dac822b2d823ba74",
+    "semantic_hash": "3bb0f274ca705d58dac822b2d823ba74"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-25.txt": {
+    "mtime": 1787307291.8325953,
+    "seen": 1787353296.311689,
+    "ast_hash": "4fe0a25d4963cc35b3191b4f585bad2c",
+    "semantic_hash": "4fe0a25d4963cc35b3191b4f585bad2c"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-26-detail.txt": {
+    "mtime": 1787310699.343624,
+    "seen": 1787353296.31169,
+    "ast_hash": "d81577341be13aa2a848fa5bc1debca5",
+    "semantic_hash": "d81577341be13aa2a848fa5bc1debca5"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-26.txt": {
+    "mtime": 1787307291.8408227,
+    "seen": 1787353296.311691,
+    "ast_hash": "fb8c3d630b6063d938a24c07ba85d83e",
+    "semantic_hash": "fb8c3d630b6063d938a24c07ba85d83e"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-27-detail.txt": {
+    "mtime": 1787310699.5215828,
+    "seen": 1787353296.311691,
+    "ast_hash": "67520f37f45624a8a22834b39194f063",
+    "semantic_hash": "67520f37f45624a8a22834b39194f063"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-27.txt": {
+    "mtime": 1787307291.8484435,
+    "seen": 1787353296.311692,
+    "ast_hash": "629064c6ad3f8d744a69ae30e901a3b1",
+    "semantic_hash": "629064c6ad3f8d744a69ae30e901a3b1"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-28-detail.txt": {
+    "mtime": 1787310700.044295,
+    "seen": 1787353296.311693,
+    "ast_hash": "41c9bb5e1cc3798f1568eaf42d26e6a0",
+    "semantic_hash": "41c9bb5e1cc3798f1568eaf42d26e6a0"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-28.txt": {
+    "mtime": 1787307291.8536167,
+    "seen": 1787353296.3116941,
+    "ast_hash": "65e2acb751869c47df044d89946ef502",
+    "semantic_hash": "65e2acb751869c47df044d89946ef502"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-29-detail.txt": {
+    "mtime": 1787310700.1765833,
+    "seen": 1787353296.311695,
+    "ast_hash": "8cec59bd478680c99f91ca3d582908fa",
+    "semantic_hash": "8cec59bd478680c99f91ca3d582908fa"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-29.txt": {
+    "mtime": 1787307291.859733,
+    "seen": 1787353296.311695,
+    "ast_hash": "05ee1fd015d3dda3ffe1d91b70b7cdd8",
+    "semantic_hash": "05ee1fd015d3dda3ffe1d91b70b7cdd8"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-3.txt": {
+    "mtime": 1787226648.6856675,
+    "seen": 1787353296.3116958,
+    "ast_hash": "43143aa92b0011c925c189afb6f8f7b4",
+    "semantic_hash": "43143aa92b0011c925c189afb6f8f7b4"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-30-detail.txt": {
+    "mtime": 1787310700.5376663,
+    "seen": 1787353296.311697,
+    "ast_hash": "c8ceb2bddc5ceb0098c5e6012dfb2258",
+    "semantic_hash": "c8ceb2bddc5ceb0098c5e6012dfb2258"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-30.txt": {
+    "mtime": 1787307291.8625317,
+    "seen": 1787353296.311698,
+    "ast_hash": "2165d3118199dcd28dd9276770d0a377",
+    "semantic_hash": "2165d3118199dcd28dd9276770d0a377"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-31-detail.txt": {
+    "mtime": 1787310700.634575,
+    "seen": 1787353296.311699,
+    "ast_hash": "50021129d2d798071cbd1318cc2e088c",
+    "semantic_hash": "50021129d2d798071cbd1318cc2e088c"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-31.txt": {
+    "mtime": 1787307291.8650696,
+    "seen": 1787353296.311699,
+    "ast_hash": "00cff7f27e35664ec2004b1f272cb7a8",
+    "semantic_hash": "00cff7f27e35664ec2004b1f272cb7a8"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-32-detail.txt": {
+    "mtime": 1787310700.685736,
+    "seen": 1787353296.3116999,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-32.txt": {
+    "mtime": 1787307291.8662152,
+    "seen": 1787353296.311701,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-4.txt": {
+    "mtime": 1787233931.406228,
+    "seen": 1787353296.311702,
+    "ast_hash": "ff4c9605c29d1b758a8439901512cd8e",
+    "semantic_hash": "ff4c9605c29d1b758a8439901512cd8e"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-5.txt": {
+    "mtime": 1787233931.426633,
+    "seen": 1787353296.311703,
+    "ast_hash": "106c79744e72fcaa236787f6930d17aa",
+    "semantic_hash": "106c79744e72fcaa236787f6930d17aa"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-6.txt": {
+    "mtime": 1787233931.5058072,
+    "seen": 1787353296.311703,
+    "ast_hash": "87fca590977cab2cca787ad90975f6b9",
+    "semantic_hash": "87fca590977cab2cca787ad90975f6b9"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-7.txt": {
+    "mtime": 1787233931.6204104,
+    "seen": 1787353296.3117042,
+    "ast_hash": "f3ef178d8a57e725691599fa77ac87bf",
+    "semantic_hash": "f3ef178d8a57e725691599fa77ac87bf"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-8.txt": {
+    "mtime": 1787297701.8981817,
+    "seen": 1787353296.311705,
+    "ast_hash": "fdcf03112d9ccd15032988ed513b58fb",
+    "semantic_hash": "fdcf03112d9ccd15032988ed513b58fb"
+  },
+  "website/assets/why-the-modern-family-office-matters/inspect/page-9.txt": {
+    "mtime": 1787297702.0350964,
+    "seen": 1787353296.311706,
+    "ast_hash": "b2687849d9a0c4f1035d0aef6f748cf0",
+    "semantic_hash": "b2687849d9a0c4f1035d0aef6f748cf0"
+  },
+  "website/june-2026-quarterly-outlook-still-waters-run-deep.html": {
+    "mtime": 1787213135.1030517,
+    "seen": 1787353296.3117068,
+    "ast_hash": "410ca1dfe7408dc42005c95a6c2904bd",
+    "semantic_hash": "410ca1dfe7408dc42005c95a6c2904bd"
+  },
+  "website/march-2026-quarterly-outlook-equities-the-tug-of-war.html": {
+    "mtime": 1786608240.4112842,
+    "seen": 1787353296.311708,
+    "ast_hash": "7c07f7c29d74bbb4276ef67bd1ea2bf1",
+    "semantic_hash": "7c07f7c29d74bbb4276ef67bd1ea2bf1"
+  },
+  "website/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026.html": {
+    "mtime": 1786541905.1344643,
+    "seen": 1787353296.311709,
+    "ast_hash": "52b58c766fd6b1c9288d3faf4c9dbf9f",
+    "semantic_hash": "52b58c766fd6b1c9288d3faf4c9dbf9f"
+  },
+  "website/perspective-from-brendan-henderson-double-death-tax-trap.html": {
+    "mtime": 1786541709.151903,
+    "seen": 1787353296.311709,
+    "ast_hash": "cd124a47ef1cf574b1707ce7555033bf",
+    "semantic_hash": "cd124a47ef1cf574b1707ce7555033bf"
+  },
+  "website/strengtheningfarmsafetynowandforfuture-generations-1.html": {
+    "mtime": 1786608660.6220968,
+    "seen": 1787353296.31171,
+    "ast_hash": "9aa51e172cd44088b4ee2ac20e40341b",
+    "semantic_hash": "9aa51e172cd44088b4ee2ac20e40341b"
+  },
+  "website/template-market-review.html": {
+    "mtime": 1786544944.7970936,
+    "seen": 1787353296.311711,
+    "ast_hash": "e323c9b8f96b0b798f0232b3c30d172d",
+    "semantic_hash": "e323c9b8f96b0b798f0232b3c30d172d"
+  },
+  "website/template-perspective.html": {
+    "mtime": 1786541658.0131774,
+    "seen": 1787353296.311712,
+    "ast_hash": "40baa6b9fe7c740fc9c726ce2781fac8",
+    "semantic_hash": "40baa6b9fe7c740fc9c726ce2781fac8"
+  },
+  "website/template-quarterly-outlook.html": {
+    "mtime": 1787213135.1017416,
+    "seen": 1787353296.311713,
+    "ast_hash": "5f312e5b471eb492eaeeb86c51f4945a",
+    "semantic_hash": "5f312e5b471eb492eaeeb86c51f4945a"
+  },
+  "website/template-white-paper.html": {
+    "mtime": 1787350333.1707888,
+    "seen": 1787353296.311713,
+    "ast_hash": "f3af42fcf4c3dd0f31f9b4aa1ecf8c88",
+    "semantic_hash": "f3af42fcf4c3dd0f31f9b4aa1ecf8c88"
+  },
+  "website/template.html": {
+    "mtime": 1786539731.225581,
+    "seen": 1787353296.311714,
+    "ast_hash": "6730ac417504b132dda04d8edcd700fe",
+    "semantic_hash": "6730ac417504b132dda04d8edcd700fe"
+  },
+  "website/why-the-modern-family-office-matters.html": {
+    "mtime": 1787350328.5659838,
+    "seen": 1787353296.3117151,
+    "ast_hash": "8cc25de560001e60ba60625d9b5aa66b",
+    "semantic_hash": "8cc25de560001e60ba60625d9b5aa66b"
+  },
+  "demo-pdf/April_2026_Monthly_Market_Review.pdf": {
+    "mtime": 1786541026.827008,
+    "seen": 1787353296.311716,
+    "ast_hash": "6beab1400e46e56691bc2340be778424",
+    "semantic_hash": "6beab1400e46e56691bc2340be778424"
+  },
+  "demo-pdf/January2026MonthlyMarketReview.pdf": {
+    "mtime": 1787204911.669436,
+    "seen": 1787353296.311716,
+    "ast_hash": "54a0f35efc24396d649f986c926cfb79",
+    "semantic_hash": "54a0f35efc24396d649f986c926cfb79"
+  },
+  "demo-pdf/July-2026_Perspective-From_Rituals-Over-Rules.pdf": {
+    "mtime": 1786439212.0919845,
+    "seen": 1787353296.311717,
+    "ast_hash": "ff56e4ba2f857d7e184bfa4be01ae1c0",
+    "semantic_hash": "ff56e4ba2f857d7e184bfa4be01ae1c0"
+  },
+  "demo-pdf/June_2026_Quarterly_Market_Review.pdf": {
+    "mtime": 1786439181.1667535,
+    "seen": 1787353296.311718,
+    "ast_hash": "39e36fac8ef0a42f9299dd707411bae7",
+    "semantic_hash": "39e36fac8ef0a42f9299dd707411bae7"
+  },
+  "demo-pdf/March-2026-Quarterly-Outlook-Equities-the-tug-of-war.pdf": {
+    "mtime": 1786532042.9908059,
+    "seen": 1787353296.311719,
+    "ast_hash": "85ccc7daffdfa2c251dd3154b7fba31a",
+    "semantic_hash": "85ccc7daffdfa2c251dd3154b7fba31a"
+  },
+  "demo-pdf/MutualTrustQuarterlyOutlookJune2026.pdf": {
+    "mtime": 1786532063.5612013,
+    "seen": 1787353296.311719,
+    "ast_hash": "ea20adefd086e8da27c256e6f075b4b7",
+    "semantic_hash": "ea20adefd086e8da27c256e6f075b4b7"
+  },
+  "demo-pdf/October2025MonthlyMarketReview.pdf": {
+    "mtime": 1786531989.3966174,
+    "seen": 1787353296.31172,
+    "ast_hash": "898f192dec6f521a0b29c70fb0f4767e",
+    "semantic_hash": "898f192dec6f521a0b29c70fb0f4767e"
+  },
+  "demo-pdf/Strengtheningfarmsafety\u2013nowandforfuture-generations (1).pdf": {
+    "mtime": 1786532030.8721366,
+    "seen": 1787353296.3117208,
+    "ast_hash": "050533ebe18f3bd022c97462d98c4f0d",
+    "semantic_hash": "050533ebe18f3bd022c97462d98c4f0d"
+  },
+  "pdf/Strengtheningfarmsafety\u2013nowandforfuture-generations (1).pdf": {
+    "mtime": 1786532030.8721366,
+    "seen": 1787353296.311722,
+    "ast_hash": "050533ebe18f3bd022c97462d98c4f0d",
+    "semantic_hash": "050533ebe18f3bd022c97462d98c4f0d"
+  },
+  "white_paper/2023_Why_the_Modern_Family_Office_Matters.pdf": {
+    "mtime": 1787212255.603101,
+    "seen": 1787353296.311723,
+    "ast_hash": "e60a4c0ec501352c45d88612bae31cbf",
+    "semantic_hash": "e60a4c0ec501352c45d88612bae31cbf"
+  },
+  "website/assets/MT-Monogram.svg": {
+    "mtime": 1787233448.4515398,
+    "seen": 1787353296.311723,
+    "ast_hash": "c01ced1a8dadff2e1b9baa9ccf0c4216",
+    "semantic_hash": "c01ced1a8dadff2e1b9baa9ccf0c4216"
+  },
+  "website/assets/april-2026-monthly-market-review/images/chart-01-equity-performance.png": {
+    "mtime": 1786542762.9617624,
+    "seen": 1787353296.311724,
+    "ast_hash": "96e5db3a491aa26027ec996067b79de5",
+    "semantic_hash": "96e5db3a491aa26027ec996067b79de5"
+  },
+  "website/assets/april-2026-monthly-market-review/images/chart-02-equity-valuations.png": {
+    "mtime": 1786542762.9729114,
+    "seen": 1787353296.3117251,
+    "ast_hash": "a4245dde4989f4f2f8be4b8d42ed0c97",
+    "semantic_hash": "a4245dde4989f4f2f8be4b8d42ed0c97"
+  },
+  "website/assets/april-2026-monthly-market-review/images/chart-03-inflation.png": {
+    "mtime": 1786542762.9822884,
+    "seen": 1787353296.311726,
+    "ast_hash": "8574efc450fc856fd8b7a03c83a5b24b",
+    "semantic_hash": "8574efc450fc856fd8b7a03c83a5b24b"
+  },
+  "website/assets/april-2026-monthly-market-review/images/chart-04-bond-index.png": {
+    "mtime": 1786542762.993492,
+    "seen": 1787353296.311727,
+    "ast_hash": "d20b301e0d48c9fd83660518573aea8f",
+    "semantic_hash": "d20b301e0d48c9fd83660518573aea8f"
+  },
+  "website/assets/april-2026-monthly-market-review/images/chart-05-pmis.png": {
+    "mtime": 1786542763.0034409,
+    "seen": 1787353296.311727,
+    "ast_hash": "4eecd2de15cf6809856d9b69f90f0d2d",
+    "semantic_hash": "4eecd2de15cf6809856d9b69f90f0d2d"
+  },
+  "website/assets/april-2026-monthly-market-review/images/chart-06-aud-usd.png": {
+    "mtime": 1786542763.0146754,
+    "seen": 1787353296.3117282,
+    "ast_hash": "22ae0caf0206dffcefddaed745caa4ed",
+    "semantic_hash": "22ae0caf0206dffcefddaed745caa4ed"
+  },
+  "website/assets/april-2026-monthly-market-review/images/hero.jpeg": {
+    "mtime": 1786542762.9452693,
+    "seen": 1787353296.311729,
+    "ast_hash": "3f43da21df7b9721eb11bde639257fb2",
+    "semantic_hash": "3f43da21df7b9721eb11bde639257fb2"
+  },
+  "website/assets/fonts/Baskerville-Italic.svg": {
+    "mtime": 1745201163.9065485,
+    "seen": 1787353296.31173,
+    "ast_hash": "4a6e20a1564148da14e22d91f7b851d0",
+    "semantic_hash": "4a6e20a1564148da14e22d91f7b851d0"
+  },
+  "website/assets/fonts/Baskerville.svg": {
+    "mtime": 1745201149.5345943,
+    "seen": 1787353296.31173,
+    "ast_hash": "3b38420bb795b3d9f1c7d82aa1cc7bf8",
+    "semantic_hash": "3b38420bb795b3d9f1c7d82aa1cc7bf8"
+  },
+  "website/assets/fonts/ProximaNova-Black.svg": {
+    "mtime": 1745201164.3424597,
+    "seen": 1787353296.3117309,
+    "ast_hash": "80d56e528b67fc7c6b823d80b407b3af",
+    "semantic_hash": "80d56e528b67fc7c6b823d80b407b3af"
+  },
+  "website/assets/fonts/ProximaNova-Bold.svg": {
+    "mtime": 1745201151.545974,
+    "seen": 1787353296.311732,
+    "ast_hash": "992a3a04c3d25ff4e543fada3da83894",
+    "semantic_hash": "992a3a04c3d25ff4e543fada3da83894"
+  },
+  "website/assets/fonts/ProximaNova-Medium.svg": {
+    "mtime": 1745201150.5370958,
+    "seen": 1787353296.311733,
+    "ast_hash": "adcdd5639eeced35db96a66e42708dc1",
+    "semantic_hash": "adcdd5639eeced35db96a66e42708dc1"
+  },
+  "website/assets/fonts/ProximaNova-Regular.svg": {
+    "mtime": 1745201159.1977081,
+    "seen": 1787353296.311734,
+    "ast_hash": "eefe6259e02ce847a2f7a0b7bb619df3",
+    "semantic_hash": "eefe6259e02ce847a2f7a0b7bb619df3"
+  },
+  "website/assets/fonts/ProximaNova-RegularIt.svg": {
+    "mtime": 1745201165.769369,
+    "seen": 1787353296.311734,
+    "ast_hash": "95af9fdaeb0c22c8f5005accd1a6c0fd",
+    "semantic_hash": "95af9fdaeb0c22c8f5005accd1a6c0fd"
+  },
+  "website/assets/fonts/ProximaNova-Semibold.svg": {
+    "mtime": 1745201154.276467,
+    "seen": 1787353296.3117352,
+    "ast_hash": "eab6e9b963dd95108017400435dbf609",
+    "semantic_hash": "eab6e9b963dd95108017400435dbf609"
+  },
+  "website/assets/june-2026-quarterly-outlook-still-waters-run-deep/images/chart-01-hyperscaler-capex.png": {
+    "mtime": 1786661760.2476573,
+    "seen": 1787353296.311736,
+    "ast_hash": "d0776b01bdd9ea1e6858b7ae998e4e07",
+    "semantic_hash": "d0776b01bdd9ea1e6858b7ae998e4e07"
+  },
+  "website/assets/june-2026-quarterly-outlook-still-waters-run-deep/images/chart-02-cds-spreads.png": {
+    "mtime": 1786661760.279017,
+    "seen": 1787353296.311737,
+    "ast_hash": "0e7ca0a2e547da4383246a97ce7c2ede",
+    "semantic_hash": "0e7ca0a2e547da4383246a97ce7c2ede"
+  },
+  "website/assets/june-2026-quarterly-outlook-still-waters-run-deep/images/chart-03-us-ipo-volume.png": {
+    "mtime": 1786661760.3026817,
+    "seen": 1787353296.311738,
+    "ast_hash": "99950d3a4c0bfa7af7f1cb5ff9c2f0e8",
+    "semantic_hash": "99950d3a4c0bfa7af7f1cb5ff9c2f0e8"
+  },
+  "website/assets/june-2026-quarterly-outlook-still-waters-run-deep/images/chart-04-asset-allocation.png": {
+    "mtime": 1786661760.3145125,
+    "seen": 1787353296.311738,
+    "ast_hash": "87166b978989298643f0c23d78b7c638",
+    "semantic_hash": "87166b978989298643f0c23d78b7c638"
+  },
+  "website/assets/june-2026-quarterly-outlook-still-waters-run-deep/images/hero.jpeg": {
+    "mtime": 1786662083.193555,
+    "seen": 1787353296.311739,
+    "ast_hash": "0a057acb98f80c782c4d7698e9f93331",
+    "semantic_hash": "0a057acb98f80c782c4d7698e9f93331"
+  },
+  "website/assets/march-2026-quarterly-outlook-equities-the-tug-of-war/images/chart-01-sp500-sectors.png": {
+    "mtime": 1786587208.4374099,
+    "seen": 1787353296.31174,
+    "ast_hash": "1d0ea0d04d88a8063a9242116a8688e5",
+    "semantic_hash": "1d0ea0d04d88a8063a9242116a8688e5"
+  },
+  "website/assets/march-2026-quarterly-outlook-equities-the-tug-of-war/images/chart-02-oil-intensity.png": {
+    "mtime": 1786587208.463968,
+    "seen": 1787353296.3117409,
+    "ast_hash": "79342b047e7b0d55a704f10bd6bb61ea",
+    "semantic_hash": "79342b047e7b0d55a704f10bd6bb61ea"
+  },
+  "website/assets/march-2026-quarterly-outlook-equities-the-tug-of-war/images/chart-03-oil-us-impact.png": {
+    "mtime": 1786587208.4842274,
+    "seen": 1787353296.311742,
+    "ast_hash": "1c9a7060484917ec2cded7a458c13402",
+    "semantic_hash": "1c9a7060484917ec2cded7a458c13402"
+  },
+  "website/assets/march-2026-quarterly-outlook-equities-the-tug-of-war/images/chart-04-hyperscaler-capex.png": {
+    "mtime": 1786587208.4984725,
+    "seen": 1787353296.311742,
+    "ast_hash": "c9ebf44b12acf5c15a0e5035c80c298f",
+    "semantic_hash": "c9ebf44b12acf5c15a0e5035c80c298f"
+  },
+  "website/assets/march-2026-quarterly-outlook-equities-the-tug-of-war/images/chart-05-sp500-eps.png": {
+    "mtime": 1786587208.513771,
+    "seen": 1787353296.311743,
+    "ast_hash": "1852748f4feb16e92972b778b07a2e15",
+    "semantic_hash": "1852748f4feb16e92972b778b07a2e15"
+  },
+  "website/assets/march-2026-quarterly-outlook-equities-the-tug-of-war/images/chart-06-asx200-eps.png": {
+    "mtime": 1786587208.5285785,
+    "seen": 1787353296.311744,
+    "ast_hash": "d300790291b1d568bff15f5c0dfe3831",
+    "semantic_hash": "d300790291b1d568bff15f5c0dfe3831"
+  },
+  "website/assets/march-2026-quarterly-outlook-equities-the-tug-of-war/images/chart-07-portfolio-sectors.png": {
+    "mtime": 1786587208.5465844,
+    "seen": 1787353296.311745,
+    "ast_hash": "ab8083fd9e9095bdc04dce1ae3e31488",
+    "semantic_hash": "ab8083fd9e9095bdc04dce1ae3e31488"
+  },
+  "website/assets/march-2026-quarterly-outlook-equities-the-tug-of-war/images/hero.jpeg": {
+    "mtime": 1786587208.3834102,
+    "seen": 1787353296.3117461,
+    "ast_hash": "db95472c5d746236f361ce3ade4789b9",
+    "semantic_hash": "db95472c5d746236f361ce3ade4789b9"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/images/hero.jpeg": {
+    "mtime": 1786538929.8297482,
+    "seen": 1787353296.311747,
+    "ast_hash": "cf9daaf0ecfe8ccd5f6143cfdd727efc",
+    "semantic_hash": "cf9daaf0ecfe8ccd5f6143cfdd727efc"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/images/img-p1-xref153.png": {
+    "mtime": 1786538115.7620654,
+    "seen": 1787353296.311747,
+    "ast_hash": "e8a328f5622f3d00c49c54f11872609b",
+    "semantic_hash": "e8a328f5622f3d00c49c54f11872609b"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/images/img-p3-xref5.png": {
+    "mtime": 1786538115.767718,
+    "seen": 1787353296.311748,
+    "ast_hash": "f6ba7661ab4ec8f796b71d671d30cf15",
+    "semantic_hash": "f6ba7661ab4ec8f796b71d671d30cf15"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/images/logo-from-pdf.png": {
+    "mtime": 1786538181.3636703,
+    "seen": 1787353296.3117492,
+    "ast_hash": "e8a328f5622f3d00c49c54f11872609b",
+    "semantic_hash": "e8a328f5622f3d00c49c54f11872609b"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/images/podcast-thumb.png": {
+    "mtime": 1786538929.8358393,
+    "seen": 1787353296.31175,
+    "ast_hash": "f6ba7661ab4ec8f796b71d671d30cf15",
+    "semantic_hash": "f6ba7661ab4ec8f796b71d671d30cf15"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/inspect/bullet-crop.png": {
+    "mtime": 1786538685.5789266,
+    "seen": 1787353296.311751,
+    "ast_hash": "583d6bfd7f8f8d8c35ff3fdbc4757b43",
+    "semantic_hash": "583d6bfd7f8f8d8c35ff3fdbc4757b43"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/preview/html-desktop-full.png": {
+    "mtime": 1786538978.4265585,
+    "seen": 1787353296.3117518,
+    "ast_hash": "de24a72147189aaf5d2843fd779da475",
+    "semantic_hash": "de24a72147189aaf5d2843fd779da475"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/preview/html-desktop-top.png": {
+    "mtime": 1786539511.3971252,
+    "seen": 1787353296.311753,
+    "ast_hash": "81afc4059e0a6077bcfee84e605f2a11",
+    "semantic_hash": "81afc4059e0a6077bcfee84e605f2a11"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/preview/html-hero-aspect.png": {
+    "mtime": 1786539510.7178817,
+    "seen": 1787353296.311753,
+    "ast_hash": "24c368bf021553768debe16cae5b938b",
+    "semantic_hash": "24c368bf021553768debe16cae5b938b"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/preview/html-hero-qa.png": {
+    "mtime": 1786539029.1187253,
+    "seen": 1787353296.311754,
+    "ast_hash": "22bfdf3f0a2e59fcb43a40752873c658",
+    "semantic_hash": "22bfdf3f0a2e59fcb43a40752873c658"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/preview/html-hero.png": {
+    "mtime": 1786538978.8511934,
+    "seen": 1787353296.311755,
+    "ast_hash": "22bfdf3f0a2e59fcb43a40752873c658",
+    "semantic_hash": "22bfdf3f0a2e59fcb43a40752873c658"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/preview/html-link-fixed.png": {
+    "mtime": 1786538778.5520403,
+    "seen": 1787353296.3117561,
+    "ast_hash": "8944e6147bc4ed7fc5aa8585fe5743a8",
+    "semantic_hash": "8944e6147bc4ed7fc5aa8585fe5743a8"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/preview/html-list-fixed.png": {
+    "mtime": 1786538778.5192716,
+    "seen": 1787353296.311757,
+    "ast_hash": "8b2e3cb69a56d670118a3d1b7bb59d07",
+    "semantic_hash": "8b2e3cb69a56d670118a3d1b7bb59d07"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/preview/html-list.png": {
+    "mtime": 1786538978.8842468,
+    "seen": 1787353296.311758,
+    "ast_hash": "e0b52d88aacaa693c36ad5bc7777ccc7",
+    "semantic_hash": "e0b52d88aacaa693c36ad5bc7777ccc7"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/preview/html-promo-fixed.png": {
+    "mtime": 1786538778.5890815,
+    "seen": 1787353296.311759,
+    "ast_hash": "4b640a9de57a79509b8d34fcd7d865d0",
+    "semantic_hash": "4b640a9de57a79509b8d34fcd7d865d0"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/preview/html-promo.png": {
+    "mtime": 1786538978.9401376,
+    "seen": 1787353296.311759,
+    "ast_hash": "de544963b3d893a582302e79a387eaec",
+    "semantic_hash": "de544963b3d893a582302e79a387eaec"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/preview/page-1.png": {
+    "mtime": 1786538929.412895,
+    "seen": 1787353296.31176,
+    "ast_hash": "3ec31052942c7ba989ac73646ed5d46a",
+    "semantic_hash": "3ec31052942c7ba989ac73646ed5d46a"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/preview/page-2.png": {
+    "mtime": 1786538929.4648685,
+    "seen": 1787353296.311761,
+    "ast_hash": "63b7023ac61e9d8594849ca89081b351",
+    "semantic_hash": "63b7023ac61e9d8594849ca89081b351"
+  },
+  "website/assets/mutual-trust-protecting-intergenerational-wealth-through-times-of-change-july-2026/preview/page-3.png": {
+    "mtime": 1786538929.5090668,
+    "seen": 1787353296.3117619,
+    "ast_hash": "2abfa65b4192501f45d83c1c3a394ab2",
+    "semantic_hash": "2abfa65b4192501f45d83c1c3a394ab2"
+  },
+  "website/assets/perspective-from-brendan-henderson-double-death-tax-trap/images/flowchart-double-death.png": {
+    "mtime": 1786540345.8766909,
+    "seen": 1787353296.311763,
+    "ast_hash": "30840343f559581493830de898975b7f",
+    "semantic_hash": "30840343f559581493830de898975b7f"
+  },
+  "website/assets/perspective-from-brendan-henderson-double-death-tax-trap/images/hero-band.png": {
+    "mtime": 1786540334.266311,
+    "seen": 1787353296.311764,
+    "ast_hash": "f7d52c632b30f0c2a3d64515e13d2def",
+    "semantic_hash": "f7d52c632b30f0c2a3d64515e13d2def"
+  },
+  "website/assets/perspective-from-brendan-henderson-double-death-tax-trap/images/hero.jpeg": {
+    "mtime": 1786540977.601872,
+    "seen": 1787353296.311764,
+    "ast_hash": "9dcf1c2005c3f63616992c1e1dd38984",
+    "semantic_hash": "9dcf1c2005c3f63616992c1e1dd38984"
+  },
+  "website/assets/perspective-from-brendan-henderson-double-death-tax-trap/images/hero.png": {
+    "mtime": 1786540978.2477927,
+    "seen": 1787353296.311765,
+    "ast_hash": "9cb224dae6808d8b2dbff8581d48321b",
+    "semantic_hash": "9cb224dae6808d8b2dbff8581d48321b"
+  },
+  "website/assets/perspective-from-brendan-henderson-double-death-tax-trap/images/logo-embedded.png": {
+    "mtime": 1786540334.1907268,
+    "seen": 1787353296.311766,
+    "ast_hash": "62b547db5bf60de1ae8685e6a543e914",
+    "semantic_hash": "62b547db5bf60de1ae8685e6a543e914"
+  },
+  "website/assets/perspective-from-brendan-henderson-double-death-tax-trap/preview/page-1.png": {
+    "mtime": 1786539553.2174203,
+    "seen": 1787353296.311767,
+    "ast_hash": "987a15406357800ccdf7df86047897ef",
+    "semantic_hash": "987a15406357800ccdf7df86047897ef"
+  },
+  "website/assets/perspective-from-brendan-henderson-double-death-tax-trap/preview/page-2.png": {
+    "mtime": 1786539553.3348453,
+    "seen": 1787353296.311768,
+    "ast_hash": "9820e577248f32e4493e3df05d5e9822",
+    "semantic_hash": "9820e577248f32e4493e3df05d5e9822"
+  },
+  "website/assets/perspective-from-brendan-henderson-double-death-tax-trap/preview/page-3.png": {
+    "mtime": 1786539553.389857,
+    "seen": 1787353296.311769,
+    "ast_hash": "ca2c0eb16fc991a451441c2ac95713db",
+    "semantic_hash": "ca2c0eb16fc991a451441c2ac95713db"
+  },
+  "website/assets/strengtheningfarmsafetynowandforfuture-generations-1/images/hero.jpg": {
+    "mtime": 1786608661.2541966,
+    "seen": 1787353296.311769,
+    "ast_hash": "8d96da8aacb89cd47cc5cd247eb19c75",
+    "semantic_hash": "8d96da8aacb89cd47cc5cd247eb19c75"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-01/cover-footer-strip.png": {
+    "mtime": 1787232303.1117864,
+    "seen": 1787353296.3117702,
+    "ast_hash": "dbaca5212807d7bdc7408702b5c322f6",
+    "semantic_hash": "dbaca5212807d7bdc7408702b5c322f6"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-01/cover-logo-mt.png": {
+    "mtime": 1787232303.091049,
+    "seen": 1787353296.311771,
+    "ast_hash": "687a6097a075cc2723fb22a3d99101d2",
+    "semantic_hash": "687a6097a075cc2723fb22a3d99101d2"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-01/cover-logo-uoa.png": {
+    "mtime": 1787315669.5185459,
+    "seen": 1787353296.3117719,
+    "ast_hash": "afb34fa9a08cfce4f78a47e98ccc8655",
+    "semantic_hash": "afb34fa9a08cfce4f78a47e98ccc8655"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-01/p0-footer-crop.png": {
+    "mtime": 1787232222.4670398,
+    "seen": 1787353296.3117728,
+    "ast_hash": "b90512b4d4fb28be1bb6ab2593ceb80c",
+    "semantic_hash": "b90512b4d4fb28be1bb6ab2593ceb80c"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-01/p0-reference.png": {
+    "mtime": 1787232222.4389544,
+    "seen": 1787353296.311774,
+    "ast_hash": "3804b86972e550f21ff0bf81049911f6",
+    "semantic_hash": "3804b86972e550f21ff0bf81049911f6"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-01/p0-top-crop.png": {
+    "mtime": 1787232222.5152915,
+    "seen": 1787353296.311774,
+    "ast_hash": "56943a5c07f385d25de76072b5332a6c",
+    "semantic_hash": "56943a5c07f385d25de76072b5332a6c"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-01/p0-xref381.jpeg": {
+    "mtime": 1787226648.6888525,
+    "seen": 1787353296.311775,
+    "ast_hash": "4b1bc4cee2eb3b5f26b35caf28f110c9",
+    "semantic_hash": "4b1bc4cee2eb3b5f26b35caf28f110c9"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-01/p2-xref6.jpeg": {
+    "mtime": 1787226648.6898844,
+    "seen": 1787353296.311777,
+    "ast_hash": "ed8b0d61d62813f760d4b77e6fd39b7b",
+    "semantic_hash": "ed8b0d61d62813f760d4b77e6fd39b7b"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-01/p3-xref10.jpeg": {
+    "mtime": 1787226648.690299,
+    "seen": 1787353296.311777,
+    "ast_hash": "5df3458ad1ca7e235f5ee9ba9927adb7",
+    "semantic_hash": "5df3458ad1ca7e235f5ee9ba9927adb7"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p4-left-ref.png": {
+    "mtime": 1787233945.2015784,
+    "seen": 1787353296.311778,
+    "ast_hash": "b366cc4b89b29203bf24b07ed5c019d0",
+    "semantic_hash": "b366cc4b89b29203bf24b07ed5c019d0"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p4-right-ref.png": {
+    "mtime": 1787233945.2259183,
+    "seen": 1787353296.311779,
+    "ast_hash": "d249fd74290ccc5e75f0da79fea660d6",
+    "semantic_hash": "d249fd74290ccc5e75f0da79fea660d6"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p4-xref15.jpeg": {
+    "mtime": 1787233959.9554238,
+    "seen": 1787353296.3117802,
+    "ast_hash": "12c195e546c9037fcc553b275ae0eeef",
+    "semantic_hash": "12c195e546c9037fcc553b275ae0eeef"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p4-xref20.jpeg": {
+    "mtime": 1787233959.9513495,
+    "seen": 1787353296.3117812,
+    "ast_hash": "ac5dec469fbcfe57cd26418c952a4988",
+    "semantic_hash": "ac5dec469fbcfe57cd26418c952a4988"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p4-xref24.jpeg": {
+    "mtime": 1787233959.9541192,
+    "seen": 1787353296.3117812,
+    "ast_hash": "06fa26c79c6505ac96765af9c3f3f534",
+    "semantic_hash": "06fa26c79c6505ac96765af9c3f3f534"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p4-xref26.jpeg": {
+    "mtime": 1787233959.9567802,
+    "seen": 1787353296.311782,
+    "ast_hash": "cdf323e4cd29bd60841460fffa821baf",
+    "semantic_hash": "cdf323e4cd29bd60841460fffa821baf"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p5-byline-photo-from-pdf.png": {
+    "mtime": 1787295459.8001175,
+    "seen": 1787353296.3117828,
+    "ast_hash": "1f90b2ce28b1e8b0e80f7e2d0dad1b33",
+    "semantic_hash": "1f90b2ce28b1e8b0e80f7e2d0dad1b33"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p5-byline-photo-img-only-from-pdf.png": {
+    "mtime": 1787295459.8104477,
+    "seen": 1787353296.311784,
+    "ast_hash": "b3735a89b0d0868c099bc37dfb444d9a",
+    "semantic_hash": "b3735a89b0d0868c099bc37dfb444d9a"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p5-byline-photo.png": {
+    "mtime": 1787295498.8016624,
+    "seen": 1787353296.311785,
+    "ast_hash": "1f90b2ce28b1e8b0e80f7e2d0dad1b33",
+    "semantic_hash": "1f90b2ce28b1e8b0e80f7e2d0dad1b33"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p5-left-ref.png": {
+    "mtime": 1787233945.3250768,
+    "seen": 1787353296.311786,
+    "ast_hash": "e4569dbed0d13e4bdd260685e4d8e890",
+    "semantic_hash": "e4569dbed0d13e4bdd260685e4d8e890"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p5-right-ref.png": {
+    "mtime": 1787233945.3496134,
+    "seen": 1787353296.311787,
+    "ast_hash": "bad6b04a2c59a42d137bdd246d9b74a6",
+    "semantic_hash": "bad6b04a2c59a42d137bdd246d9b74a6"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p5-xref33.jpeg": {
+    "mtime": 1787233960.0157816,
+    "seen": 1787353296.311787,
+    "ast_hash": "df805d4a88dac009beea850383e221c6",
+    "semantic_hash": "df805d4a88dac009beea850383e221c6"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p5-xref37.jpeg": {
+    "mtime": 1787233960.0193088,
+    "seen": 1787353296.311788,
+    "ast_hash": "4ca9fb8ec374be92c99c3dde82e03d16",
+    "semantic_hash": "4ca9fb8ec374be92c99c3dde82e03d16"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p5-xref41.jpeg": {
+    "mtime": 1787233960.0209415,
+    "seen": 1787353296.311789,
+    "ast_hash": "e6cc074a03a206bd7aec2d402e28694d",
+    "semantic_hash": "e6cc074a03a206bd7aec2d402e28694d"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p6-left-ref.png": {
+    "mtime": 1787233945.5411239,
+    "seen": 1787353296.31179,
+    "ast_hash": "108cdd47ee9042541cfe307a5ebe66b1",
+    "semantic_hash": "108cdd47ee9042541cfe307a5ebe66b1"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p6-right-ref.png": {
+    "mtime": 1787233945.569861,
+    "seen": 1787353296.3117912,
+    "ast_hash": "75ded4876d321cf54f6305297b9e3743",
+    "semantic_hash": "75ded4876d321cf54f6305297b9e3743"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p6-xref46.jpeg": {
+    "mtime": 1787233960.122546,
+    "seen": 1787353296.3117912,
+    "ast_hash": "911363655e0a7c25be58d443d71425aa",
+    "semantic_hash": "911363655e0a7c25be58d443d71425aa"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p7-icon-briefcase.png": {
+    "mtime": 1787288577.3115802,
+    "seen": 1787353296.3117921,
+    "ast_hash": "845aacae9ecbe56c4ccb2ab0c1615422",
+    "semantic_hash": "845aacae9ecbe56c4ccb2ab0c1615422"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p7-icon-growth.png": {
+    "mtime": 1787290767.9382615,
+    "seen": 1787353296.3117929,
+    "ast_hash": "e840244b850ea85616aa288f7e1dc7c8",
+    "semantic_hash": "e840244b850ea85616aa288f7e1dc7c8"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p7-icon-growth.svg": {
+    "mtime": 1787291229.6771727,
+    "seen": 1787353296.3117938,
+    "ast_hash": "1390cbd5dd39f544bcd0d73d159fd950",
+    "semantic_hash": "1390cbd5dd39f544bcd0d73d159fd950"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p7-left-ref.png": {
+    "mtime": 1787233945.6157005,
+    "seen": 1787353296.311795,
+    "ast_hash": "870230c855616e2147d920552c2f4203",
+    "semantic_hash": "870230c855616e2147d920552c2f4203"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p7-left-stats.png": {
+    "mtime": 1787233960.310652,
+    "seen": 1787353296.311795,
+    "ast_hash": "4cb1d8f7a29b15db126d16afe1ac4bc8",
+    "semantic_hash": "4cb1d8f7a29b15db126d16afe1ac4bc8"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p7-right-ref.png": {
+    "mtime": 1787233945.6761546,
+    "seen": 1787353296.311796,
+    "ast_hash": "50994d1fad27beffc243d423414d1728",
+    "semantic_hash": "50994d1fad27beffc243d423414d1728"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p7-xref54.jpeg": {
+    "mtime": 1787233960.1831932,
+    "seen": 1787353296.311797,
+    "ast_hash": "f461ba517344056973837b6d48fe1240",
+    "semantic_hash": "f461ba517344056973837b6d48fe1240"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p8-left-chart.png": {
+    "mtime": 1787233960.3503492,
+    "seen": 1787353296.311798,
+    "ast_hash": "d01a8259890dee520adca831529b7585",
+    "semantic_hash": "d01a8259890dee520adca831529b7585"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p8-left-ref.png": {
+    "mtime": 1787233945.728911,
+    "seen": 1787353296.311798,
+    "ast_hash": "a61f331886424345de01e4c1722fe7a8",
+    "semantic_hash": "a61f331886424345de01e4c1722fe7a8"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p8-right-ref.png": {
+    "mtime": 1787233945.7841668,
+    "seen": 1787353296.311799,
+    "ast_hash": "7742da601f73f7d40b70f83b8a91ef74",
+    "semantic_hash": "7742da601f73f7d40b70f83b8a91ef74"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-02/p8-xref76.jpeg": {
+    "mtime": 1787233960.2460058,
+    "seen": 1787353296.3118,
+    "ast_hash": "df2218e5451d373f7001496091107fa1",
+    "semantic_hash": "df2218e5451d373f7001496091107fa1"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-03/icon-bfo.svg": {
+    "mtime": 1787298054.7869306,
+    "seen": 1787353296.3118012,
+    "ast_hash": "96b9e14f36bfc61dcbf8260c5c2c676a",
+    "semantic_hash": "96b9e14f36bfc61dcbf8260c5c2c676a"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-03/icon-mfo-ink.svg": {
+    "mtime": 1787298110.6920683,
+    "seen": 1787353296.3118021,
+    "ast_hash": "ccda94ebc5ff23f3974765ecdaa8b7dc",
+    "semantic_hash": "ccda94ebc5ff23f3974765ecdaa8b7dc"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-03/icon-mfo.svg": {
+    "mtime": 1787298054.787624,
+    "seen": 1787353296.3118029,
+    "ast_hash": "6518fa8dd0443d8d195f942fe5faa8eb",
+    "semantic_hash": "6518fa8dd0443d8d195f942fe5faa8eb"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-03/icon-sfo.svg": {
+    "mtime": 1787298054.7866414,
+    "seen": 1787353296.3118029,
+    "ast_hash": "ee53fd50da9394ae58274c1e07777aa5",
+    "semantic_hash": "ee53fd50da9394ae58274c1e07777aa5"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-03/icon-vfo.svg": {
+    "mtime": 1787298054.787159,
+    "seen": 1787353296.3118038,
+    "ast_hash": "c829ea1e83677654b668665f17c35cd1",
+    "semantic_hash": "c829ea1e83677654b668665f17c35cd1"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-03/p10-xref96.jpeg": {
+    "mtime": 1787298263.496261,
+    "seen": 1787353296.311805,
+    "ast_hash": "09d967dc7403c4d6acfdb9c35c7da46b",
+    "semantic_hash": "09d967dc7403c4d6acfdb9c35c7da46b"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-03/p9-xref82.jpeg": {
+    "mtime": 1787298263.491185,
+    "seen": 1787353296.311806,
+    "ast_hash": "e6640510114648ac38d3716b32a66775",
+    "semantic_hash": "e6640510114648ac38d3716b32a66775"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/gemstone.svg": {
+    "mtime": 1787308900.0803185,
+    "seen": 1787353296.311807,
+    "ast_hash": "4d566e176f3211f3c328e2aed7017966",
+    "semantic_hash": "4d566e176f3211f3c328e2aed7017966"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/icon-era-1.svg": {
+    "mtime": 1787308900.075071,
+    "seen": 1787353296.311807,
+    "ast_hash": "ee758b7435effecc2635dd460d85addb",
+    "semantic_hash": "ee758b7435effecc2635dd460d85addb"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/icon-era-2.svg": {
+    "mtime": 1787308900.0754623,
+    "seen": 1787353296.311808,
+    "ast_hash": "fd261be8eaf53b25e55154b4aac28d6b",
+    "semantic_hash": "fd261be8eaf53b25e55154b4aac28d6b"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/icon-era-3.svg": {
+    "mtime": 1787308900.0762587,
+    "seen": 1787353296.311809,
+    "ast_hash": "0a99a3ae9c5f07cf09ece691eee8f2d6",
+    "semantic_hash": "0a99a3ae9c5f07cf09ece691eee8f2d6"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p14-full-preview.png": {
+    "mtime": 1787308682.6709762,
+    "seen": 1787353296.31181,
+    "ast_hash": "548c2f784677c543bff5e6433213c355",
+    "semantic_hash": "548c2f784677c543bff5e6433213c355"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p14-left-preview.png": {
+    "mtime": 1787308682.7531626,
+    "seen": 1787353296.311811,
+    "ast_hash": "68e0bf711d68a83ab4bbef0eb6ea4bf4",
+    "semantic_hash": "68e0bf711d68a83ab4bbef0eb6ea4bf4"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p14-right-preview.png": {
+    "mtime": 1787308682.7685275,
+    "seen": 1787353296.3118122,
+    "ast_hash": "4c8665849b24d2e17a92550ad9a252d7",
+    "semantic_hash": "4c8665849b24d2e17a92550ad9a252d7"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p14-xref109.jpeg": {
+    "mtime": 1787308682.4849308,
+    "seen": 1787353296.311813,
+    "ast_hash": "5f5ad3e8c4948909a537e84362b62c1c",
+    "semantic_hash": "5f5ad3e8c4948909a537e84362b62c1c"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p15-full-preview.png": {
+    "mtime": 1787308682.8888128,
+    "seen": 1787353296.311813,
+    "ast_hash": "a5c182ab375886f44ac2ab53eaab4008",
+    "semantic_hash": "a5c182ab375886f44ac2ab53eaab4008"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p15-left-preview.png": {
+    "mtime": 1787308682.9208336,
+    "seen": 1787353296.3118138,
+    "ast_hash": "16fe9d6c3f2146b86fae55f2da4be86c",
+    "semantic_hash": "16fe9d6c3f2146b86fae55f2da4be86c"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p15-right-preview.png": {
+    "mtime": 1787308682.9541192,
+    "seen": 1787353296.311815,
+    "ast_hash": "d4f065703f7aa24141dc09b622e68f67",
+    "semantic_hash": "d4f065703f7aa24141dc09b622e68f67"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p15-xref114.jpeg": {
+    "mtime": 1787308682.790371,
+    "seen": 1787353296.311816,
+    "ast_hash": "5e8fe687f69bb19d7773b1a736e7bed1",
+    "semantic_hash": "5e8fe687f69bb19d7773b1a736e7bed1"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p16-full-preview.png": {
+    "mtime": 1787308683.0493145,
+    "seen": 1787353296.311817,
+    "ast_hash": "c4f4778d3c226a671751ef8600840779",
+    "semantic_hash": "c4f4778d3c226a671751ef8600840779"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p16-left-preview.png": {
+    "mtime": 1787308683.0758939,
+    "seen": 1787353296.311817,
+    "ast_hash": "fa0464dfa76a36ae10612f5548ef1e43",
+    "semantic_hash": "fa0464dfa76a36ae10612f5548ef1e43"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p16-right-preview.png": {
+    "mtime": 1787308683.107107,
+    "seen": 1787353296.311818,
+    "ast_hash": "49c6ce9ff1bc025e5e03c9ec4cb7a382",
+    "semantic_hash": "49c6ce9ff1bc025e5e03c9ec4cb7a382"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p16-xref118.jpeg": {
+    "mtime": 1787308682.972168,
+    "seen": 1787353296.311819,
+    "ast_hash": "6afa24f376214429c24be731f10d4bf6",
+    "semantic_hash": "6afa24f376214429c24be731f10d4bf6"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p17-full-preview.png": {
+    "mtime": 1787308683.2807615,
+    "seen": 1787353296.31182,
+    "ast_hash": "51b1ef3a5e9b147c12018ab8e8f8d2e3",
+    "semantic_hash": "51b1ef3a5e9b147c12018ab8e8f8d2e3"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p17-left-preview.png": {
+    "mtime": 1787308683.327312,
+    "seen": 1787353296.311821,
+    "ast_hash": "af39a698d3c1d3b155b6a72fdce54709",
+    "semantic_hash": "af39a698d3c1d3b155b6a72fdce54709"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p17-right-preview.png": {
+    "mtime": 1787308683.3643336,
+    "seen": 1787353296.311821,
+    "ast_hash": "9f8897bbb1e7be2595746b8c9d0ab7b8",
+    "semantic_hash": "9f8897bbb1e7be2595746b8c9d0ab7b8"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p17-xref122.jpeg": {
+    "mtime": 1787308683.12768,
+    "seen": 1787353296.3118222,
+    "ast_hash": "e54782c4dd65741b34ec27232afbb3ce",
+    "semantic_hash": "e54782c4dd65741b34ec27232afbb3ce"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p17-xref124.jpeg": {
+    "mtime": 1787308683.1281004,
+    "seen": 1787353296.3118231,
+    "ast_hash": "b63968d1e91458e3644e0679c97eaa97",
+    "semantic_hash": "b63968d1e91458e3644e0679c97eaa97"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p18-full-preview.png": {
+    "mtime": 1787308683.4519432,
+    "seen": 1787353296.3118238,
+    "ast_hash": "3c9f8936064b0edbd134882986b6b1f8",
+    "semantic_hash": "3c9f8936064b0edbd134882986b6b1f8"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p18-left-preview.png": {
+    "mtime": 1787308683.475797,
+    "seen": 1787353296.3118248,
+    "ast_hash": "4d2677e9243139219c4d1d3c92ccc160",
+    "semantic_hash": "4d2677e9243139219c4d1d3c92ccc160"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p18-right-preview.png": {
+    "mtime": 1787308683.506286,
+    "seen": 1787353296.311826,
+    "ast_hash": "a126329e1a5131fa9e2c6e31bc86e5fb",
+    "semantic_hash": "a126329e1a5131fa9e2c6e31bc86e5fb"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p18-xref128.jpeg": {
+    "mtime": 1787308683.3833568,
+    "seen": 1787353296.311827,
+    "ast_hash": "d56bcb11040f8e11af4ab4850315f047",
+    "semantic_hash": "d56bcb11040f8e11af4ab4850315f047"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p19-full-preview.png": {
+    "mtime": 1787308683.60485,
+    "seen": 1787353296.311827,
+    "ast_hash": "6385915b0d04867e589839782df8fc43",
+    "semantic_hash": "6385915b0d04867e589839782df8fc43"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p19-left-preview.png": {
+    "mtime": 1787308683.6295528,
+    "seen": 1787353296.311828,
+    "ast_hash": "630d146ca9b068f8f77174056b5e6019",
+    "semantic_hash": "630d146ca9b068f8f77174056b5e6019"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p19-qr.png": {
+    "mtime": 1787308863.6704106,
+    "seen": 1787353296.311829,
+    "ast_hash": "7f88e3fd2bd4ac59897f08ce02ac377c",
+    "semantic_hash": "7f88e3fd2bd4ac59897f08ce02ac377c"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p19-right-preview.png": {
+    "mtime": 1787308683.6561742,
+    "seen": 1787353296.31183,
+    "ast_hash": "166ed7a2560a7de2d1c8f83c1329ba40",
+    "semantic_hash": "166ed7a2560a7de2d1c8f83c1329ba40"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-04/p19-xref132.jpeg": {
+    "mtime": 1787308683.52941,
+    "seen": 1787353296.311831,
+    "ast_hash": "d42b6ecc2bb8ae21b518b6aa5d575681",
+    "semantic_hash": "d42b6ecc2bb8ae21b518b6aa5d575681"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/icon-outcome-1.png": {
+    "mtime": 1787311054.809653,
+    "seen": 1787353296.311832,
+    "ast_hash": "fd4ed2c09b7430d0b3ac85f3d95fc92c",
+    "semantic_hash": "fd4ed2c09b7430d0b3ac85f3d95fc92c"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/icon-outcome-1.svg": {
+    "mtime": 1787311113.390576,
+    "seen": 1787353296.311832,
+    "ast_hash": "40d3916d8d9061b14be51ea0b6699d80",
+    "semantic_hash": "40d3916d8d9061b14be51ea0b6699d80"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/icon-outcome-2.png": {
+    "mtime": 1787311054.8160396,
+    "seen": 1787353296.3118331,
+    "ast_hash": "94f3d8662b60701b80a78356818eba54",
+    "semantic_hash": "94f3d8662b60701b80a78356818eba54"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/icon-outcome-2.svg": {
+    "mtime": 1787311113.3946939,
+    "seen": 1787353296.311834,
+    "ast_hash": "6d467115614e95cc1e5e28917a847cac",
+    "semantic_hash": "6d467115614e95cc1e5e28917a847cac"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/icon-outcome-3.png": {
+    "mtime": 1787311054.8208966,
+    "seen": 1787353296.3118348,
+    "ast_hash": "ed85df3a9173c9fdeacda83f1fb267dc",
+    "semantic_hash": "ed85df3a9173c9fdeacda83f1fb267dc"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/icon-outcome-3.svg": {
+    "mtime": 1787311113.3986948,
+    "seen": 1787353296.311836,
+    "ast_hash": "1fd5711b4172d4ce2f8c2f4bb1c8b873",
+    "semantic_hash": "1fd5711b4172d4ce2f8c2f4bb1c8b873"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p20-full-preview.png": {
+    "mtime": 1787310697.340088,
+    "seen": 1787353296.311837,
+    "ast_hash": "5785219c260bc3873456a9702f035f81",
+    "semantic_hash": "5785219c260bc3873456a9702f035f81"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p20-left-preview.png": {
+    "mtime": 1787310697.4558637,
+    "seen": 1787353296.311837,
+    "ast_hash": "072ed57898698641c84159d3893a8df7",
+    "semantic_hash": "072ed57898698641c84159d3893a8df7"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p20-right-preview.png": {
+    "mtime": 1787310697.488406,
+    "seen": 1787353296.311838,
+    "ast_hash": "33e9b6a295d5b69e5073438694e7de94",
+    "semantic_hash": "33e9b6a295d5b69e5073438694e7de94"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p20-xref136.jpeg": {
+    "mtime": 1787310697.4949477,
+    "seen": 1787353296.3118389,
+    "ast_hash": "36e41614330d4b068c3b2c756fce023e",
+    "semantic_hash": "36e41614330d4b068c3b2c756fce023e"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p21-full-preview.png": {
+    "mtime": 1787310697.7175672,
+    "seen": 1787353296.31184,
+    "ast_hash": "919af0e9d068614eac943b58b8ed3e5d",
+    "semantic_hash": "919af0e9d068614eac943b58b8ed3e5d"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p21-left-preview.png": {
+    "mtime": 1787310697.892972,
+    "seen": 1787353296.311841,
+    "ast_hash": "1815350c15b40123ead7881d1f94ddab",
+    "semantic_hash": "1815350c15b40123ead7881d1f94ddab"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p21-right-preview.png": {
+    "mtime": 1787310697.9398258,
+    "seen": 1787353296.311842,
+    "ast_hash": "70081ca01623286bde8f181b0db4df26",
+    "semantic_hash": "70081ca01623286bde8f181b0db4df26"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p21-xref140.jpeg": {
+    "mtime": 1787310697.9408078,
+    "seen": 1787353296.3118432,
+    "ast_hash": "b1f3fe33bd132fbacec2c1b7bdf3bed8",
+    "semantic_hash": "b1f3fe33bd132fbacec2c1b7bdf3bed8"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p22-full-preview.png": {
+    "mtime": 1787310698.0696673,
+    "seen": 1787353296.3118432,
+    "ast_hash": "64cd2317795e08e9a52446985ced9c80",
+    "semantic_hash": "64cd2317795e08e9a52446985ced9c80"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p22-left-preview.png": {
+    "mtime": 1787310698.1564147,
+    "seen": 1787353296.311844,
+    "ast_hash": "1b841f25f9e29c62d991c5f1319f6525",
+    "semantic_hash": "1b841f25f9e29c62d991c5f1319f6525"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p22-right-preview.png": {
+    "mtime": 1787310698.1911092,
+    "seen": 1787353296.311845,
+    "ast_hash": "24455411ce690cff83a4935d688b8cf8",
+    "semantic_hash": "24455411ce690cff83a4935d688b8cf8"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p22-xref144.jpeg": {
+    "mtime": 1787310698.1920307,
+    "seen": 1787353296.3118458,
+    "ast_hash": "1282590354e15c8486f5b14c376c9c43",
+    "semantic_hash": "1282590354e15c8486f5b14c376c9c43"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p23-full-preview.png": {
+    "mtime": 1787310698.3224874,
+    "seen": 1787353296.311847,
+    "ast_hash": "b62bb808783144d819c57778d00c7de2",
+    "semantic_hash": "b62bb808783144d819c57778d00c7de2"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p23-left-preview.png": {
+    "mtime": 1787310698.405411,
+    "seen": 1787353296.311847,
+    "ast_hash": "e29e8a1505c4efce6e5ad5d3db0053f8",
+    "semantic_hash": "e29e8a1505c4efce6e5ad5d3db0053f8"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p23-right-preview.png": {
+    "mtime": 1787310698.449656,
+    "seen": 1787353296.311848,
+    "ast_hash": "bcb4365c6e61798bd0bace024ff46186",
+    "semantic_hash": "bcb4365c6e61798bd0bace024ff46186"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p23-xref148.jpeg": {
+    "mtime": 1787310698.4510622,
+    "seen": 1787353296.3118489,
+    "ast_hash": "1323838521071418fbcfa07ab4bfb183",
+    "semantic_hash": "1323838521071418fbcfa07ab4bfb183"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p24-full-preview.png": {
+    "mtime": 1787310698.5935311,
+    "seen": 1787353296.31185,
+    "ast_hash": "f82ba157514b945efb467c9ac06abeca",
+    "semantic_hash": "f82ba157514b945efb467c9ac06abeca"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p24-left-preview.png": {
+    "mtime": 1787310698.6511579,
+    "seen": 1787353296.311851,
+    "ast_hash": "0dd9463a17442b56a71e6806102afe68",
+    "semantic_hash": "0dd9463a17442b56a71e6806102afe68"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p24-right-preview.png": {
+    "mtime": 1787310698.733965,
+    "seen": 1787353296.311852,
+    "ast_hash": "f8c925ef0aa54bd1c402834a8db000e2",
+    "semantic_hash": "f8c925ef0aa54bd1c402834a8db000e2"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p24-xref152.jpeg": {
+    "mtime": 1787310698.754606,
+    "seen": 1787353296.311852,
+    "ast_hash": "2bee263ad59924fb514af6541d624158",
+    "semantic_hash": "2bee263ad59924fb514af6541d624158"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p25-full-preview.png": {
+    "mtime": 1787310698.9437037,
+    "seen": 1787353296.3118532,
+    "ast_hash": "ea9665ca440760ec7015c3e4dae35b63",
+    "semantic_hash": "ea9665ca440760ec7015c3e4dae35b63"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p25-left-preview.png": {
+    "mtime": 1787310698.9859822,
+    "seen": 1787353296.3118541,
+    "ast_hash": "a195797f61919f64fd89a86ebc89df59",
+    "semantic_hash": "a195797f61919f64fd89a86ebc89df59"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p25-right-preview.png": {
+    "mtime": 1787310699.1168878,
+    "seen": 1787353296.311855,
+    "ast_hash": "e703c37ee0302f864bf2cecf2407bb9e",
+    "semantic_hash": "e703c37ee0302f864bf2cecf2407bb9e"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-05/p25-xref156.jpeg": {
+    "mtime": 1787310699.129128,
+    "seen": 1787353296.311856,
+    "ast_hash": "ca485e1f7983a65d9688471ad7c93357",
+    "semantic_hash": "ca485e1f7983a65d9688471ad7c93357"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/contributor-brad-simmons.png": {
+    "mtime": 1787311054.8778887,
+    "seen": 1787353296.311857,
+    "ast_hash": "44454e3d85ebea862ee7c7e0dbebe21e",
+    "semantic_hash": "44454e3d85ebea862ee7c7e0dbebe21e"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/contributor-chris-graves.png": {
+    "mtime": 1787311054.905381,
+    "seen": 1787353296.311857,
+    "ast_hash": "cab59c6a54fa0868a8ff742b7dbb284d",
+    "semantic_hash": "cab59c6a54fa0868a8ff742b7dbb284d"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/contributor-elizabeth-goldfinch.png": {
+    "mtime": 1787311054.8945441,
+    "seen": 1787353296.311858,
+    "ast_hash": "024ad4282f1f993f1d6b450f4cbb9ba5",
+    "semantic_hash": "024ad4282f1f993f1d6b450f4cbb9ba5"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/contributor-jeff-steiner.png": {
+    "mtime": 1787311054.871612,
+    "seen": 1787353296.311859,
+    "ast_hash": "ad2f3d5e594f9b21d514a8d9255e97cd",
+    "semantic_hash": "ad2f3d5e594f9b21d514a8d9255e97cd"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/contributor-lyndie-van-orsouw.png": {
+    "mtime": 1787311054.8997858,
+    "seen": 1787353296.31186,
+    "ast_hash": "5869e561e093cffbd1fa73d6a43a821b",
+    "semantic_hash": "5869e561e093cffbd1fa73d6a43a821b"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/contributor-phil-harkness.png": {
+    "mtime": 1787311054.8654528,
+    "seen": 1787353296.311861,
+    "ast_hash": "76e3255ff5dda709cd6f45b6ede96dda",
+    "semantic_hash": "76e3255ff5dda709cd6f45b6ede96dda"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/contributor-tracy-conlan.png": {
+    "mtime": 1787311054.883328,
+    "seen": 1787353296.311862,
+    "ast_hash": "7c96fc220bc64386c07b5df2abd7f59c",
+    "semantic_hash": "7c96fc220bc64386c07b5df2abd7f59c"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-01-family-office-consulting.svg": {
+    "mtime": 1787311091.310473,
+    "seen": 1787353296.311862,
+    "ast_hash": "32389c96db01deb86c82d26468b693d8",
+    "semantic_hash": "32389c96db01deb86c82d26468b693d8"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-02-family-consulting-succession.svg": {
+    "mtime": 1787311091.3121269,
+    "seen": 1787353296.311863,
+    "ast_hash": "f87c59e4463da62be4d16bcffe891415",
+    "semantic_hash": "f87c59e4463da62be4d16bcffe891415"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-03-family-business-consulting.svg": {
+    "mtime": 1787311091.3133385,
+    "seen": 1787353296.3118641,
+    "ast_hash": "e46177f23d67a3f03459889fa29cfc7f",
+    "semantic_hash": "e46177f23d67a3f03459889fa29cfc7f"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-04-rising-gen-program.svg": {
+    "mtime": 1787311091.3141463,
+    "seen": 1787353296.311865,
+    "ast_hash": "420fcc42ef462b87f25f1375c55fd2a8",
+    "semantic_hash": "420fcc42ef462b87f25f1375c55fd2a8"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-05-family-council-governance.svg": {
+    "mtime": 1787311091.3152878,
+    "seen": 1787353296.311866,
+    "ast_hash": "c26e878332e1dc7ab90541c4afdcb6ae",
+    "semantic_hash": "c26e878332e1dc7ab90541c4afdcb6ae"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-06-family-dynamics.svg": {
+    "mtime": 1787311091.3160243,
+    "seen": 1787353296.311867,
+    "ast_hash": "f42aad424e7eb7e9a324b743b4e56cd8",
+    "semantic_hash": "f42aad424e7eb7e9a324b743b4e56cd8"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-07-philanthropy.svg": {
+    "mtime": 1787311091.316607,
+    "seen": 1787353296.311868,
+    "ast_hash": "b048a38c45de1b595088be97d09831e1",
+    "semantic_hash": "b048a38c45de1b595088be97d09831e1"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-08-trustee-services.svg": {
+    "mtime": 1787311091.317565,
+    "seen": 1787353296.311869,
+    "ast_hash": "e7649e2821c50a591eec3cbb25b4cd17",
+    "semantic_hash": "e7649e2821c50a591eec3cbb25b4cd17"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-09-indigenous-trustee-services.svg": {
+    "mtime": 1787311091.3182702,
+    "seen": 1787353296.311869,
+    "ast_hash": "033f042e84f99dc4ac335453d3f354b2",
+    "semantic_hash": "033f042e84f99dc4ac335453d3f354b2"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-10-agribusiness.svg": {
+    "mtime": 1787311091.3195333,
+    "seen": 1787353296.3118699,
+    "ast_hash": "9d87ed80951047a21b0bab494c14ab19",
+    "semantic_hash": "9d87ed80951047a21b0bab494c14ab19"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-11-property-services.svg": {
+    "mtime": 1787311091.3207946,
+    "seen": 1787353296.311871,
+    "ast_hash": "ca9540e0073b050138e984c9d51b3d63",
+    "semantic_hash": "ca9540e0073b050138e984c9d51b3d63"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-12-tax-accounting-compliance.svg": {
+    "mtime": 1787311091.3217509,
+    "seen": 1787353296.311872,
+    "ast_hash": "80c04fa2ec7ed85ae59c6681c4230bb2",
+    "semantic_hash": "80c04fa2ec7ed85ae59c6681c4230bb2"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-13-tax-accounting-consulting-super.svg": {
+    "mtime": 1787311091.322411,
+    "seen": 1787353296.311873,
+    "ast_hash": "6c68d27682965e33b83a2fe4d03dbd26",
+    "semantic_hash": "6c68d27682965e33b83a2fe4d03dbd26"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-14-bookkeeping-concierge.svg": {
+    "mtime": 1787311091.323022,
+    "seen": 1787353296.3118742,
+    "ast_hash": "23e19f6d22caf5137fc37cef211b06f5",
+    "semantic_hash": "23e19f6d22caf5137fc37cef211b06f5"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-15-custody-administration.svg": {
+    "mtime": 1787311091.3236415,
+    "seen": 1787353296.311875,
+    "ast_hash": "b892429474d8d8d9b59e0935514ab9d3",
+    "semantic_hash": "b892429474d8d8d9b59e0935514ab9d3"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-16-portfolio-management.svg": {
+    "mtime": 1787311091.3244183,
+    "seen": 1787353296.311875,
+    "ast_hash": "59377e69fa16821601228d2a245b88ce",
+    "semantic_hash": "59377e69fa16821601228d2a245b88ce"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-17-investment-advisory-research.svg": {
+    "mtime": 1787311091.3252397,
+    "seen": 1787353296.311876,
+    "ast_hash": "2c550445a96e6a9aaf8aeab15ddd0a33",
+    "semantic_hash": "2c550445a96e6a9aaf8aeab15ddd0a33"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-18-responsible-investment.svg": {
+    "mtime": 1787311091.3261948,
+    "seen": 1787353296.311877,
+    "ast_hash": "8d73e897d10cccf5856429c7f79ee299",
+    "semantic_hash": "8d73e897d10cccf5856429c7f79ee299"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-19-strategic-hr-consulting.svg": {
+    "mtime": 1787311091.3268564,
+    "seen": 1787353296.311878,
+    "ast_hash": "7d8e1b41e40e182ce94b5a66f783d429",
+    "semantic_hash": "7d8e1b41e40e182ce94b5a66f783d429"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p26-full-preview.png": {
+    "mtime": 1787310699.2341988,
+    "seen": 1787353296.311879,
+    "ast_hash": "943b1f090885f24a38015bdc45a2a8f1",
+    "semantic_hash": "943b1f090885f24a38015bdc45a2a8f1"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p26-left-preview.png": {
+    "mtime": 1787310699.277047,
+    "seen": 1787353296.3118799,
+    "ast_hash": "6cd4246fc6ef2683456a49f2bd6077e4",
+    "semantic_hash": "6cd4246fc6ef2683456a49f2bd6077e4"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p26-right-preview.png": {
+    "mtime": 1787310699.3183415,
+    "seen": 1787353296.3118799,
+    "ast_hash": "38507ad97ab13e35da58115a9d4ece44",
+    "semantic_hash": "38507ad97ab13e35da58115a9d4ece44"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p26-xref162.jpeg": {
+    "mtime": 1787310699.3196428,
+    "seen": 1787353296.311881,
+    "ast_hash": "2a5a3320999660da10200805e1584240",
+    "semantic_hash": "2a5a3320999660da10200805e1584240"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p26-xref166.jpeg": {
+    "mtime": 1787310699.3199387,
+    "seen": 1787353296.311882,
+    "ast_hash": "49ab6756279c91b81d6d86b1bd88325b",
+    "semantic_hash": "49ab6756279c91b81d6d86b1bd88325b"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p26-xref170.jpeg": {
+    "mtime": 1787310699.3202245,
+    "seen": 1787353296.311883,
+    "ast_hash": "1a63846a21bd7963236b55475c1b458c",
+    "semantic_hash": "1a63846a21bd7963236b55475c1b458c"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p26-xref174.jpeg": {
+    "mtime": 1787310699.320492,
+    "seen": 1787353296.311884,
+    "ast_hash": "78bdbce42546b1fb39e671e297b30d97",
+    "semantic_hash": "78bdbce42546b1fb39e671e297b30d97"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p27-full-preview.png": {
+    "mtime": 1787310699.4186873,
+    "seen": 1787353296.311884,
+    "ast_hash": "1d63e08ca36ad6232055c325823e2698",
+    "semantic_hash": "1d63e08ca36ad6232055c325823e2698"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p27-left-preview.png": {
+    "mtime": 1787310699.4589558,
+    "seen": 1787353296.311885,
+    "ast_hash": "bb23c810605cc400b437d0396acc1c2f",
+    "semantic_hash": "bb23c810605cc400b437d0396acc1c2f"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p27-right-preview.png": {
+    "mtime": 1787310699.4985802,
+    "seen": 1787353296.311886,
+    "ast_hash": "be8673501c30abd5fe69ffd3bae65308",
+    "semantic_hash": "be8673501c30abd5fe69ffd3bae65308"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p27-xref181.jpeg": {
+    "mtime": 1787310699.4999819,
+    "seen": 1787353296.311887,
+    "ast_hash": "dd8c95a9b23e0994e96e1ae000546fdf",
+    "semantic_hash": "dd8c95a9b23e0994e96e1ae000546fdf"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p27-xref185.jpeg": {
+    "mtime": 1787310699.5002887,
+    "seen": 1787353296.311888,
+    "ast_hash": "88cc34c63e5454b41ce301a2cb7bbbb7",
+    "semantic_hash": "88cc34c63e5454b41ce301a2cb7bbbb7"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p27-xref189.jpeg": {
+    "mtime": 1787310699.5005486,
+    "seen": 1787353296.311889,
+    "ast_hash": "a52b34eaa5a872acde213d916afa89c8",
+    "semantic_hash": "a52b34eaa5a872acde213d916afa89c8"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p28-full-preview.png": {
+    "mtime": 1787310699.7753477,
+    "seen": 1787353296.31189,
+    "ast_hash": "185931ad8aac5d7cb5539e8cb3b206ea",
+    "semantic_hash": "185931ad8aac5d7cb5539e8cb3b206ea"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p28-left-preview.png": {
+    "mtime": 1787310699.8613803,
+    "seen": 1787353296.31189,
+    "ast_hash": "204dd16aa523f96a395c898766bd56bf",
+    "semantic_hash": "204dd16aa523f96a395c898766bd56bf"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p28-right-preview.png": {
+    "mtime": 1787310700.020628,
+    "seen": 1787353296.3118908,
+    "ast_hash": "3f9d99076660e24009d81b4b18ebe41c",
+    "semantic_hash": "3f9d99076660e24009d81b4b18ebe41c"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p28-xref215.jpeg": {
+    "mtime": 1787310700.0334113,
+    "seen": 1787353296.311892,
+    "ast_hash": "65dc004b64f60d45e9c4d39e42fa155c",
+    "semantic_hash": "65dc004b64f60d45e9c4d39e42fa155c"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p28-xref217.jpeg": {
+    "mtime": 1787310700.0352352,
+    "seen": 1787353296.311893,
+    "ast_hash": "d5c2599b7f5f7e411620d0c5127f84fb",
+    "semantic_hash": "d5c2599b7f5f7e411620d0c5127f84fb"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p28-xref219.jpeg": {
+    "mtime": 1787310700.0354843,
+    "seen": 1787353296.311894,
+    "ast_hash": "dbfc96944324af33e5226f9bad763562",
+    "semantic_hash": "dbfc96944324af33e5226f9bad763562"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p29-full-preview.png": {
+    "mtime": 1787310700.1035073,
+    "seen": 1787353296.3118951,
+    "ast_hash": "64fc77c7f259cc8d1f364cad9d8fd29b",
+    "semantic_hash": "64fc77c7f259cc8d1f364cad9d8fd29b"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p29-left-preview.png": {
+    "mtime": 1787310700.1335032,
+    "seen": 1787353296.3118951,
+    "ast_hash": "34c35976d3c122f464b7292f99f763bd",
+    "semantic_hash": "34c35976d3c122f464b7292f99f763bd"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p29-right-preview.png": {
+    "mtime": 1787310700.1637304,
+    "seen": 1787353296.311896,
+    "ast_hash": "98b5049b28e21f0d8a5d591936509166",
+    "semantic_hash": "98b5049b28e21f0d8a5d591936509166"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p30-full-preview.png": {
+    "mtime": 1787310700.355178,
+    "seen": 1787353296.311897,
+    "ast_hash": "6061fe1b80f95e2f36eeb44d60fb51dd",
+    "semantic_hash": "6061fe1b80f95e2f36eeb44d60fb51dd"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p30-left-preview.png": {
+    "mtime": 1787310700.389237,
+    "seen": 1787353296.311898,
+    "ast_hash": "479561362d5e1b62916f7f9acc37d69c",
+    "semantic_hash": "479561362d5e1b62916f7f9acc37d69c"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p30-right-preview.png": {
+    "mtime": 1787310700.524418,
+    "seen": 1787353296.311899,
+    "ast_hash": "330f6b49c6d5fbe0d573afcafc3880a6",
+    "semantic_hash": "330f6b49c6d5fbe0d573afcafc3880a6"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p30-xref226.jpeg": {
+    "mtime": 1787310700.5317504,
+    "seen": 1787353296.311899,
+    "ast_hash": "311d1712aac189b64fea61be8d654464",
+    "semantic_hash": "311d1712aac189b64fea61be8d654464"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p31-full-preview.png": {
+    "mtime": 1787310700.580991,
+    "seen": 1787353296.3119,
+    "ast_hash": "006d498ec22217471499466a27689616",
+    "semantic_hash": "006d498ec22217471499466a27689616"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p31-left-preview.png": {
+    "mtime": 1787310700.604325,
+    "seen": 1787353296.3119009,
+    "ast_hash": "643e3f59de88884adaa288787e8ec8c8",
+    "semantic_hash": "643e3f59de88884adaa288787e8ec8c8"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p31-right-preview.png": {
+    "mtime": 1787310700.6273465,
+    "seen": 1787353296.311902,
+    "ast_hash": "e209516d6caaaa78e799b5be9a4489c8",
+    "semantic_hash": "e209516d6caaaa78e799b5be9a4489c8"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p32-full-preview.png": {
+    "mtime": 1787310700.6591904,
+    "seen": 1787353296.311903,
+    "ast_hash": "86937f3b5a48444883338818b96d73b3",
+    "semantic_hash": "86937f3b5a48444883338818b96d73b3"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p32-left-preview.png": {
+    "mtime": 1787310700.6724157,
+    "seen": 1787353296.311904,
+    "ast_hash": "3d7b38df4ff2ac28fafb5a323ba17ef1",
+    "semantic_hash": "3d7b38df4ff2ac28fafb5a323ba17ef1"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/p32-right-preview.png": {
+    "mtime": 1787310700.6841173,
+    "seen": 1787353296.311904,
+    "ast_hash": "58370c80e0333b6cfdf5f4533b9a22d0",
+    "semantic_hash": "58370c80e0333b6cfdf5f4533b9a22d0"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/report-cover-insights.jpeg": {
+    "mtime": 1787311091.3392096,
+    "seen": 1787353296.311905,
+    "ast_hash": "dbfc96944324af33e5226f9bad763562",
+    "semantic_hash": "dbfc96944324af33e5226f9bad763562"
+  },
+  "website/assets/why-the-modern-family-office-matters/images/chunk-06/report-cover-role-of-family-offices.jpeg": {
+    "mtime": 1787311091.3387754,
+    "seen": 1787353296.311906,
+    "ast_hash": "d5c2599b7f5f7e411620d0c5127f84fb",
+    "semantic_hash": "d5c2599b7f5f7e411620d0c5127f84fb"
+  }
+}

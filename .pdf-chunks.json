@@ -12,7 +12,7 @@
       "family": "white-paper",
       "totalPages": 33,
       "maxPagesPerChunk": 10,
-          "lastCompletedChunk": 3,
+          "lastCompletedChunk": 6,
           "chunks": [
         {
           "id": 1,
@@ -46,21 +46,27 @@
           "label": "section-3-gem",
           "pages": [14, 15, 16, 17, 18, 19],
           "pagesLabel": "p14–p19",
-          "status": "pending"
+          "status": "completed",
+          "completedAt": "2026-08-21",
+          "assets": "images/chunk-04/"
         },
         {
           "id": 5,
           "label": "facets-conclusion",
           "pages": [20, 21, 22, 23, 24, 25],
           "pagesLabel": "p20–p25",
-          "status": "pending"
+          "status": "completed",
+          "completedAt": "2026-08-21",
+          "assets": "images/chunk-05/"
         },
         {
           "id": 6,
           "label": "back-matter",
-          "pages": [26, 27, 28, 29, 30, 31],
-          "pagesLabel": "p26–p31",
-          "status": "pending"
+          "pages": [26, 27, 28, 29, 30, 31, 32],
+          "pagesLabel": "p26–p32",
+          "status": "completed",
+          "completedAt": "2026-08-21",
+          "assets": "images/chunk-06/"
         }
       ]
     }
