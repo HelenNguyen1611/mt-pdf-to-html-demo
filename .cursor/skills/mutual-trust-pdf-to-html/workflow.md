@@ -87,13 +87,27 @@ Used for white papers and other long reports. State file: `.pdf-chunks.json`.
 
 ## Inspect dumps
 
+Run the CLI **before** writing HTML. Do not re-derive dumps with ad-hoc PyMuPDF in the agent.
+
+```bash
+python -m tools.mt_pdf inspect <pdf> --out website/assets/<slug>
+python -m tools.mt_pdf render  <pdf> --out website/assets/<slug> [--pages 20-25]
+python -m tools.mt_pdf images extract <pdf> --out website/assets/<slug>
+python -m tools.mt_pdf images clip <pdf> --page 20 --rect x0,y0,x1,y1 --name icon-1
+python -m tools.mt_pdf qa website/<slug>.html --inspect website/assets/<slug>/inspect
+```
+
+`inspect` writes measurements only (no PNGs). `render` writes QA previews under `inspect/preview/` — not HTML `src`. Family-specific extra fields: framework **C.6.2**.
+
 Write under `website/assets/<slug>/inspect/`:
 
 - `page-N.txt` — extracted text per PDF page (0-based)
-- `links.json` — link annotations / URIs when present
-- optional crops for bullets, hero, charts
-
-Inspect **before** writing HTML. Family-specific extra fields are in framework **C.6.2**.
+- `page-N-detail.txt` — each line + font / size / italic / color / x / y
+- `page-N-rects.json` — filled drawing rects (fill, width, height)
+- `links.json` — link annotations / URIs
+- `meta.json` — page W×H, landscape, `--page-max` @ 96dpi
+- `manifest.json` — index of the files above
+- `preview/` — optional, from `render` only
 
 ## Quotes and pull quotes
 

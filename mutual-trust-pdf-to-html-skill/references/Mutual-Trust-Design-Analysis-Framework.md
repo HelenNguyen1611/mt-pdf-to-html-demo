@@ -1430,6 +1430,17 @@ HTML chỉ được coi là đạt khi đã trải qua **visual comparison** v�
 
 ### C.6.2 Inspect trước khi build
 
+Chạy `python -m tools.mt_pdf inspect <pdf>` **trước** khi viết HTML/CSS. Artifact (0-based `N`):
+
+- `inspect/page-N.txt` — copy
+- `inspect/page-N-detail.txt` — font, size, italic, color, x/y
+- `inspect/page-N-rects.json` — filled drawings (panel / photo band)
+- `inspect/links.json`, `meta.json`, `manifest.json`
+- Preview PNG: `python -m tools.mt_pdf render` → `inspect/preview/` (không dùng làm `src` HTML)
+- Ảnh/clip: `images extract` / `images clip` (clip mặc định **render**, không `extract_image` nền đen)
+
+Không viết script PyMuPDF ad-hoc nếu CLI đã đủ. Tool chỉ **đo**; AI map sang catalog / HTML.
+
 Trước khi viết HTML/CSS phải xác định:
 
 - asset thật được sử dụng

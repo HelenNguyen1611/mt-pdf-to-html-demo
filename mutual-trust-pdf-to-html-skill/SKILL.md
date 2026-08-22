@@ -87,7 +87,7 @@ Before any HTML/CSS, extract and record (framework **C.6.2**):
 - content column x0/x1, list marker x, heading hierarchy
 - footer / contacts / legal (framework **B.5**)
 
-Write inspect dumps under `website/assets/<slug>/inspect/`. Family-specific inspect extra: **C.6.2**.
+Run `python -m tools.mt_pdf inspect <pdf> --out website/assets/<slug>` (do not write ad-hoc PyMuPDF). Dumps land under `website/assets/<slug>/inspect/` (`page-N.txt`, `page-N-detail.txt`, `page-N-rects.json`, `links.json`, `meta.json`, `manifest.json`). Preview PNGs: `render` (not `inspect`). Clip a named rect: `images clip`. Family-specific extra: **C.6.2**.
 
 ### 4. Copy the family template
 
