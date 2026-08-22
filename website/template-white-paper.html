@@ -295,9 +295,12 @@
       }
 
       .wp-spread + .wp-spread,
-      .wp-single + .wp-spread,
-      .wp-spread + .wp-single {
+      .wp-single + .wp-spread {
         margin-top: 0;
+      }
+
+      .wp-spread + .wp-single {
+        margin-top: var(--wp-block-gap);
       }
 
       .wp-spread__page + .wp-spread__page {
@@ -327,7 +330,8 @@
         h2, h3, section, figure,
         .wp-stat-board, .wp-donut-panel, .wp-photo-band, .wp-pull-panel,
         .wp-callout, .wp-callout-stack, .wp-compare-table, .wp-model-grid,
-        .wp-era-grid, .wp-gemstone, .wp-outcome-list, .wp-contributors
+        .wp-era-grid, .wp-gemstone, .wp-outcome-list, .wp-contributors,
+        .wp-inline-quote, .wp-video-cta, .wp-services, .wp-about, .wp-endnotes
       ):not(:first-child) {
         margin-top: var(--wp-intra-block-gap);
       }
@@ -372,6 +376,10 @@
       .wp-spread__page--case-study {
         background: var(--wp-case-study-bg);
         padding-bottom: var(--wp-surface-pad-bottom);
+      }
+
+      .wp-spread__page--case-study + .wp-spread__page--case-study {
+        margin-top: 0;
       }
 
       .wp-spread__inner--left,
@@ -699,7 +707,7 @@
       }
 
       .wp-purpose .wp-list li::before {
-        content: '\2022';
+        content: '•';
         left: calc(var(--page-max) * 15.3 / var(--wp-page-w-pt));
         top: 0;
         width: auto;
@@ -725,7 +733,7 @@
       }
 
       .wp-list li::before {
-        content: '\2022';
+        content: '•';
         position: absolute;
         left: calc(var(--page-max) * var(--wp-list-bullet-x-pt) / var(--wp-page-w-pt));
         top: 0;
@@ -1244,6 +1252,10 @@
         margin: 0;
       }
 
+      .wp-case-study + .wp-case-study {
+        margin-top: var(--wp-intra-block-gap);
+      }
+
       .wp-case-study__label {
         margin: 0 0 calc(var(--page-max) * 8 / var(--wp-page-w-pt));
         font-size: var(--wp-legal-size);
@@ -1560,12 +1572,38 @@
         color: var(--color-ink);
       }
 
-      /* Wealth 1.0 / 2.0 / 3.0 (p14) */
+      /* Wealth 1.0 / 2.0 / 3.0 (p14) — stub rows + 3 era columns; 3.0 --accent */
       .wp-era-grid {
+        margin: var(--wp-intra-block-gap) 0;
+      }
+
+      .wp-era-grid__title {
+        margin: 0 0 calc(var(--page-max) * 14 / var(--wp-page-w-pt));
+        padding-bottom: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        border-bottom: calc(var(--page-max) * 0.5 / var(--wp-page-w-pt)) solid
+          var(--wp-accent-gold);
+        font-family: var(--font-sans);
+        font-size: calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        font-weight: 600;
+        line-height: 1.35;
+      }
+
+      .wp-era-grid__board {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
-        margin: var(--wp-intra-block-gap) 0 0;
+        grid-template-columns: minmax(4.2em, 0.38fr) 1fr 1fr 1fr;
+        gap: 0;
+      }
+
+      .wp-era-grid__stub {
+        margin: 0;
+        padding: calc(var(--page-max) * 10 / var(--wp-page-w-pt))
+          calc(var(--page-max) * 6 / var(--wp-page-w-pt));
+        font-family: var(--font-sans);
+        font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        line-height: 1.25;
+        text-transform: uppercase;
       }
 
       .wp-era {
@@ -1574,9 +1612,22 @@
       }
 
       .wp-era__head {
-        padding: calc(var(--page-max) * 12 / var(--wp-page-w-pt));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        min-height: calc(var(--page-max) * 84 / var(--wp-page-w-pt));
+        padding: calc(var(--page-max) * 10 / var(--wp-page-w-pt))
+          calc(var(--page-max) * 8 / var(--wp-page-w-pt));
         background: var(--wp-model-head);
         text-align: center;
+      }
+
+      .wp-era__icon {
+        display: block;
+        width: calc(var(--page-max) * 28 / var(--wp-page-w-pt));
+        height: auto;
+        margin-bottom: 2px;
       }
 
       .wp-era__name {
@@ -1591,26 +1642,82 @@
       .wp-era__years {
         margin: 4px 0 0;
         font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        color: #7d8898;
       }
 
       .wp-era__body {
         margin: 0;
-        padding: calc(var(--page-max) * 12 / var(--wp-page-w-pt));
+        padding: calc(var(--page-max) * 10 / var(--wp-page-w-pt))
+          calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        list-style: none;
         font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
         line-height: 1.4;
+        background: var(--wp-model-body);
+      }
+
+      .wp-era__body li {
+        position: relative;
+        margin: 0 0 0.45em;
+        padding-left: 0.9em;
+      }
+
+      .wp-era__body li::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: var(--color-ink);
       }
 
       .wp-era--accent .wp-era__head {
         background: var(--wp-model-accent-head);
       }
 
-      .wp-era--accent {
+      .wp-era--accent,
+      .wp-era__body.wp-era--accent {
         background: var(--wp-model-accent-body);
+      }
+
+      .wp-era--accent .wp-era__name {
+        color: var(--wp-accent-gold);
+      }
+
+      .wp-era-grid__emph {
+        margin: var(--wp-intra-block-gap) 0 0;
+        font-weight: 600;
+      }
+
+      /* Facet gold lede (p16+) + inline body quotes (not .wp-callout) */
+      .wp-facet-lede {
+        margin: 0 0 var(--wp-para-gap);
+        font-size: calc(var(--page-max) * 14 / var(--wp-page-w-pt));
+        line-height: 1.35;
+        color: var(--wp-accent-gold);
+      }
+
+      .wp-inline-quote {
+        margin: var(--wp-para-gap) 0;
+        padding: 0 0 0 calc(var(--page-max) * 24 / var(--wp-page-w-pt));
+        border: 0;
+      }
+
+      .wp-inline-quote p {
+        margin: 0;
+        font-style: italic;
+      }
+
+      .wp-inline-quote__attrib {
+        display: block;
+        margin-top: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        font-style: normal;
       }
 
       /* Gemstone — 5 facets (p16). SVG paths from PDF; do not ship one composite PNG. */
       .wp-gemstone {
         margin: var(--wp-intra-block-gap) 0 0;
+      }
+
+      .wp-gemstone__wrap {
+        position: relative;
       }
 
       .wp-gemstone__canvas {
@@ -1619,19 +1726,39 @@
         height: auto;
       }
 
-      /* Three successful-transfer outcomes (p20) */
+      .wp-video-cta {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--page-max) * 12 / var(--wp-page-w-pt));
+        margin-top: var(--wp-intra-block-gap);
+      }
+
+      .wp-video-cta__qr {
+        width: calc(var(--page-max) * 54 / var(--wp-page-w-pt));
+        height: auto;
+      }
+
+      .wp-video-cta__url {
+        display: block;
+        text-decoration: none;
+        color: var(--wp-quote-attrib-color);
+      }
+
+      /* Three successful-transfer outcomes (p20) — icon + alternating grey rows */
       .wp-outcome-list {
-        margin: var(--wp-intra-block-gap) 0 0;
-        padding: calc(var(--page-max) * 20 / var(--wp-page-w-pt));
-        background: var(--wp-stat-panel-bg);
+        margin: var(--wp-intra-block-gap) 0;
       }
 
       .wp-outcome-list__title {
-        margin: 0 0 calc(var(--page-max) * 12 / var(--wp-page-w-pt));
+        margin: 0 0 calc(var(--page-max) * 16 / var(--wp-page-w-pt));
+        padding-top: calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        border-top: calc(var(--page-max) * 0.5 / var(--wp-page-w-pt)) solid
+          var(--color-ink);
         font-family: var(--font-sans);
-        font-size: calc(var(--page-max) * 9 / var(--wp-page-w-pt));
+        font-size: calc(var(--page-max) * 10 / var(--wp-page-w-pt));
         font-weight: 600;
         letter-spacing: 0.03em;
+        line-height: 1.35;
         text-transform: uppercase;
       }
 
@@ -1642,35 +1769,49 @@
       }
 
       .wp-outcome-list li {
-        margin: 0 0 calc(var(--page-max) * 12 / var(--wp-page-w-pt));
-        padding-bottom: calc(var(--page-max) * 12 / var(--wp-page-w-pt));
-        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-        font-size: calc(var(--page-max) * 9 / var(--wp-page-w-pt));
-        line-height: 1.45;
+        display: grid;
+        grid-template-columns: calc(var(--page-max) * 52 / var(--wp-page-w-pt)) minmax(0, 1fr);
+        gap: calc(var(--page-max) * 14 / var(--wp-page-w-pt));
+        align-items: center;
+        margin: 0;
+        padding: calc(var(--page-max) * 16 / var(--wp-page-w-pt));
+        font-size: var(--wp-body-size);
+        font-weight: 300;
+        line-height: var(--wp-body-lh);
       }
 
-      .wp-outcome-list li:last-child {
-        margin-bottom: 0;
-        padding-bottom: 0;
-        border-bottom: 0;
+      .wp-outcome-list li:nth-child(odd) {
+        background: var(--wp-stat-panel-bg);
       }
 
-      /* Contributors (p26–27) */
+      .wp-outcome-list__icon {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      /* Contributors (p26–27) — photo left of gold Medium caps name; 2 stacked per A4 page */
       .wp-contributors {
         margin: 0;
       }
 
       .wp-contributors__grid {
+        display: flex;
+        flex-direction: column;
+        gap: var(--wp-block-gap);
+      }
+
+      .wp-contributor {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: var(--wp-block-gap) calc(var(--page-max) * 24 / var(--wp-page-w-pt));
+        grid-template-columns: calc(var(--page-max) * 72 / var(--wp-page-w-pt)) minmax(0, 1fr);
+        column-gap: calc(var(--page-max) * 16 / var(--wp-page-w-pt));
+        align-items: start;
       }
 
       .wp-contributor__photo {
         display: block;
-        width: calc(var(--page-max) * 85 / var(--wp-page-w-pt));
+        width: 100%;
         height: auto;
-        margin: 0 0 calc(var(--page-max) * 10 / var(--wp-page-w-pt));
         background: var(--wp-byline-photo-bg);
       }
 
@@ -1680,12 +1821,17 @@
         font-size: calc(var(--page-max) * 10 / var(--wp-page-w-pt));
         font-weight: 500;
         letter-spacing: 0.02em;
+        line-height: 1.35;
         text-transform: uppercase;
         color: var(--wp-accent-gold);
       }
 
-      .wp-contributor p {
+      .wp-contributor__bio p {
         margin: 0 0 var(--wp-para-gap);
+      }
+
+      .wp-contributor__bio p:last-child {
+        margin-bottom: 0;
       }
 
       /* About + offices (p28–29) */
@@ -1693,46 +1839,119 @@
         margin: 0;
       }
 
-      .wp-about__logo {
-        display: block;
-        width: calc(var(--page-max) * 160 / var(--wp-page-w-pt));
-        height: auto;
-        margin: var(--wp-intra-block-gap) 0 0;
+      .wp-about__covers {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: calc(var(--page-max) * 16 / var(--wp-page-w-pt));
+        margin-top: var(--wp-intra-block-gap);
+        padding: calc(var(--page-max) * 16 / var(--wp-page-w-pt));
+        background: var(--wp-case-study-bg);
       }
 
-      .wp-spread__page--offices {
-        background: var(--wp-stat-panel-bg);
-        padding-bottom: var(--wp-surface-pad-bottom);
+      .wp-about__cover {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .wp-about a {
+        color: inherit;
+        font-weight: 500;
+        text-decoration: none;
       }
 
       .wp-offices {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: var(--wp-intra-block-gap);
+        gap: var(--wp-intra-block-gap) calc(var(--page-max) * 24 / var(--wp-page-w-pt));
+        margin-top: var(--wp-block-gap);
       }
 
-      .wp-office h3 {
-        margin: 0 0 8px;
+      .wp-office__city {
+        margin: 0 0 6px;
         font-family: var(--font-sans);
         font-size: var(--wp-legal-size);
         font-weight: 600;
         letter-spacing: 0.04em;
         text-transform: uppercase;
+        color: var(--wp-accent-gold);
       }
 
       .wp-office p {
         margin: 0;
         font-size: var(--wp-legal-size);
+        font-weight: 300;
         line-height: 1.45;
+      }
+
+      .wp-office a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* Services grid (p29 phải) — 19 icon tiles; HTML+SVG, not one PNG */
+      .wp-spread__page--services {
+        background: var(--wp-stat-panel-bg);
+        padding-top: var(--wp-surface-pad-top);
+        padding-bottom: var(--wp-surface-pad-bottom);
+      }
+
+      .wp-services__title {
+        margin: 0 0 var(--wp-block-gap);
+        font-family: var(--font-serif);
+        font-size: var(--wp-h2-size);
+        font-weight: 400;
+        line-height: var(--wp-h2-lh);
+      }
+
+      .wp-services {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .wp-services__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 0 25%;
+        width: 25%;
+        gap: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        margin: 0;
+        padding: calc(var(--page-max) * 14 / var(--wp-page-w-pt))
+          calc(var(--page-max) * 6 / var(--wp-page-w-pt));
+        border-right: 1px solid rgba(0, 0, 0, 0.08);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        text-align: center;
+      }
+
+      .wp-services__item:nth-child(4n),
+      .wp-services__item:last-child {
+        border-right: 0;
+      }
+
+      .wp-services__icon {
+        display: block;
+        flex: 0 0 auto;
+        width: calc(var(--page-max) * 43 / var(--wp-page-w-pt));
+        height: calc(var(--page-max) * 36 / var(--wp-page-w-pt));
+        object-fit: contain;
+        object-position: center;
+      }
+
+      .wp-services__label {
+        font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        line-height: 1.3;
       }
 
       /* Endnotes (p30) + legal (p31) + back (p32) */
       .wp-endnotes {
-        margin: 0;
+        margin: var(--wp-intra-block-gap) 0 0;
         padding: 0;
         list-style: none;
-        font-size: var(--wp-note-size);
-        font-weight: 300;
+        font-family: var(--font-sans);
+        font-size: var(--wp-body-size);
+        font-weight: 400;
         line-height: 1.45;
       }
 
@@ -1740,31 +1959,66 @@
         display: grid;
         grid-template-columns: 1.5em minmax(0, 1fr);
         gap: 0.4em;
-        margin: 0 0 0.65em;
+        margin: 0 0 0.85em;
       }
 
       .wp-endnotes__mark {
-        font-style: italic;
+        font-family: var(--font-sans);
+        font-size: var(--wp-note-size);
+        font-weight: 400;
+        font-style: normal;
+        font-synthesis: none;
       }
 
       .wp-legal {
+        margin-top: calc(var(--page-max) * 220 / var(--wp-page-w-pt));
+        padding-bottom: var(--wp-block-gap);
         font-size: var(--wp-note-size);
         font-weight: 300;
         line-height: 1.5;
       }
 
+      .wp-legal a {
+        color: inherit;
+        font-weight: 500;
+        text-decoration: none;
+      }
+
       .wp-back {
-        min-height: var(--wp-page-height);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: calc(var(--page-max) * 841.89 / var(--wp-page-w-pt));
+        padding-inline: var(--wp-page-pad-start);
         color: var(--color-white);
         background: var(--color-black);
       }
 
+      .wp-back .wp-cover__brands {
+        flex: 0 0 auto;
+        width: max-content;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .wp-back .wp-cover__brand {
+        flex: 0 0 auto;
+        justify-content: center;
+      }
+
       @media (max-width: 768px) {
         .wp-model-grid__cols,
-        .wp-era-grid,
+        .wp-era-grid__board,
         .wp-contributors__grid,
-        .wp-offices {
+        .wp-offices,
+        .wp-about__covers {
           grid-template-columns: 1fr;
+        }
+
+        .wp-services__item {
+          flex-basis: 50%;
+          width: 50%;
         }
 
         .wp-model-grid__rule {
@@ -1923,67 +2177,118 @@
       </section>
       -->
 
-      <!-- ERA GRID (p14 phải) — Wealth 1.0 / 2.0 / 3.0; 3.0 uses --accent -->
+      <!-- ERA GRID (p14 phải) — Wealth 1.0 / 2.0 / 3.0; 3.0 uses --accent; stub rows -->
       <!--
-      <section class="wp-era-grid">
-        <article class="wp-era">
-          <div class="wp-era__head">
-            <h3 class="wp-era__name">Wealth 1.0</h3>
-            <p class="wp-era__years">–1980s</p>
-          </div>
-          <ul class="wp-era__body wp-list">…</ul>
-        </article>
-        <article class="wp-era">…2.0…</article>
-        <article class="wp-era wp-era--accent">…3.0…</article>
+      <section class="wp-era-grid" aria-labelledby="wp-era-title">
+        <h3 class="wp-era-grid__title" id="wp-era-title">‘Wealth 3.0’ represents…</h3>
+        <div class="wp-era-grid__board">
+          <div class="wp-era-grid__corner" aria-hidden="true"></div>
+          <article class="wp-era">
+            <div class="wp-era__head">
+              <img class="wp-era__icon" src="…" alt="" />
+              <h4 class="wp-era__name">Wealth 1.0</h4>
+              <p class="wp-era__years">–1980s</p>
+            </div>
+          </article>
+          <article class="wp-era">…2.0…</article>
+          <article class="wp-era wp-era--accent">…3.0…</article>
+          <p class="wp-era-grid__stub">Family wealth theory</p>
+          <ul class="wp-era__body">…</ul>
+          <ul class="wp-era__body">…</ul>
+          <ul class="wp-era__body wp-era--accent">…</ul>
+          <p class="wp-era-grid__stub">Financial services industry</p>
+          <ul class="wp-era__body">…</ul>
+          <ul class="wp-era__body">…</ul>
+          <ul class="wp-era__body wp-era--accent">…</ul>
+        </div>
       </section>
       -->
 
       <!-- GEMSTONE (p16 trái) — SVG from PDF drawings; not one composite PNG -->
       <!--
       <figure class="wp-gemstone">
-        <svg class="wp-gemstone__canvas" viewBox="0 0 505 644" role="img" aria-label="The Mutual Trust Gemstone — five facets"></svg>
+        <div class="wp-gemstone__wrap">
+          <img class="wp-gemstone__canvas" src="…/gemstone.svg" alt="" />
+        </div>
       </figure>
       -->
 
-      <!-- OUTCOME LIST (p20) -->
+      <!-- INLINE QUOTE (p15+) — ink italic in body; NOT gold .wp-callout -->
+      <!--
+      <blockquote class="wp-inline-quote">
+        <p>“…quote…”</p>
+        <cite class="wp-inline-quote__attrib">Family Enterprise leader, participant 23</cite>
+      </blockquote>
+      -->
+
+      <!-- FACET LEDE — gold 14pt under .wp-subhead -->
+      <!--
+      <h2 class="wp-subhead">1. Financial prosperity</h2>
+      <p class="wp-facet-lede">Growing financial capital sustainably…</p>
+      -->
+
+      <!-- VIDEO / QR CTA (p19) -->
+      <!--
+      <div class="wp-video-cta">
+        <img class="wp-video-cta__qr" src="…/p19-qr.png" alt="" />
+        <p class="wp-video-cta__copy">Scan to view…
+          <a class="wp-video-cta__url" href="https://repository.mutualtrust.com.au/100_Years_Mutual_Trust.mp4">…</a>
+        </p>
+      </div>
+      -->
+
+      <!-- OUTCOME LIST (p20) — icon SVG + alternating grey rows; not a beige panel -->
       <!--
       <section class="wp-outcome-list">
         <h3 class="wp-outcome-list__title">A successful wealth transfer can look like many things for a family.</h3>
         <ol>
-          <li>Family members could be separate…</li>
-          <li>Family members could keep it all together…</li>
-          <li>Family members could maintain a core base of wealth…</li>
+          <li>
+            <img class="wp-outcome-list__icon" src="…/icon-outcome-1.svg" alt="" />
+            <p>Family members could be separate…</p>
+          </li>
         </ol>
       </section>
       -->
 
-      <!-- CONTRIBUTORS (p26–27) — name Medium caps gold; photo: render PDF if extract is black -->
+      <!-- CONTRIBUTORS (p26–27) — name Medium caps gold; photo from PDF render if extract is black -->
       <!--
       <section class="wp-contributors">
         <h2 class="wp-display-title wp-title-rule">Contributors to this report</h2>
         <div class="wp-contributors__grid">
           <article class="wp-contributor">
-            <img class="wp-contributor__photo" src="…" alt="" width="85" height="85" />
-            <h3 class="wp-contributor__name">Phil Harkness | CEO &amp; Managing Partner, Mutual Trust</h3>
-            <p>…bio…</p>
+            <img class="wp-contributor__photo" src="…" alt="" width="72" height="72" />
+            <div>
+              <h3 class="wp-contributor__name">Phil Harkness | CEO &amp; Managing Partner, Mutual Trust</h3>
+              <div class="wp-contributor__bio"><p>…bio…</p></div>
+            </div>
           </article>
         </div>
       </section>
       -->
 
-      <!-- ABOUT + OFFICES (p28–29) -->
+      <!-- ABOUT (p28) + OFFICES (p29 trái) + SERVICES (p29 phải) -->
       <!--
       <div class="wp-about">
         <h2 class="wp-display-title wp-title-rule">About University of Adelaide Business School</h2>
-        <p>…</p>
-        <img class="wp-about__logo" src="…" alt="The University of Adelaide Business School" />
+        <p>… <a href="https://business.adelaide.edu.au/research/fberg">business.adelaide.edu.au/research/fberg</a></p>
+        <div class="wp-about__covers">
+          <img class="wp-about__cover" src="…/report-cover-a.jpeg" alt="" />
+          <img class="wp-about__cover" src="…/report-cover-b.jpeg" alt="" />
+        </div>
       </div>
-      <div class="wp-spread__page wp-spread__page--offices">
-        <div class="wp-offices">
-          <article class="wp-office">
-            <h3>Melbourne</h3>
-            <p>…<a href="tel:+61…">…</a></p>
-          </article>
+      <div class="wp-offices">
+        <article class="wp-office">
+          <h3 class="wp-office__city">Melbourne</h3>
+          <p>…<a href="tel:+61396059500">+61 3 9605 9500</a></p>
+        </article>
+      </div>
+      <div class="wp-spread__page wp-spread__page--services">
+        <h2 class="wp-services__title">Providing all the services required…</h2>
+        <div class="wp-services">
+          <figure class="wp-services__item">
+            <img class="wp-services__icon" src="…/icon-service-01.svg" alt="" />
+            <figcaption class="wp-services__label">Family Office Consulting</figcaption>
+          </figure>
         </div>
       </div>
       -->

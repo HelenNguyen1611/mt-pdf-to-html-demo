@@ -1,0 +1,30 @@
+Prepared in Australia by Mutual Trust Pty Ltd (ACN 004 285 330) (AFSL 234590). It is general information only and has been prepared 
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x0 x=40.5 y=614.4
+without considering any particular persons’ objectives, financial situation or needs. It does not constitute, and should not be relied upon 
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x0 x=40.3 y=624.4
+as personal financial product, investment, accounting, taxation or legal advice. Before making any decision you should read the relevant 
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x0 x=40.1 y=634.4
+disclosure document and obtain personal financial, investment, accounting, taxation and legal advice. For more information about the 
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x0 x=39.9 y=644.4
+financial services Mutual Trust provides, please contact us or visit our website, mutualtrust.com.au for a copy of our Financial Services 
+  fonts=['ProximaNova-Light', 'ProximaNova-Medium'] sizes=[7.0] italic=False color=0x0 x=40.3 y=654.4
+Guide. Liability limited by a scheme approved under Professional Standards Legislation. For participating members (other than for the acts 
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x0 x=40.2 y=664.4
+or omissions of Australian Financial Services Licensees).
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x0 x=39.9 y=674.4
+The information is confidential and may not be reproduced without permission. Mutual Trust Pty Ltd expressly disclaims all liability for any 
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x0 x=39.7 y=696.5
+claims relating to the contents of this information (including any errors or omissions) or in relation to any written or oral communications 
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x0 x=39.9 y=706.5
+transmitted to the recipient in the course of its evaluation. Each recipient should conduct and rely upon its own investigation and analysis 
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x0 x=40.4 y=716.5
+of the information and should seek professional advice before taking any action.
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x0 x=39.9 y=726.5
+The copyright of this material is and will remain the property of Mutual Trust Pty Ltd.
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x0 x=39.7 y=748.5
+Publication version 2.
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x0 x=40.5 y=770.5
+62
+  fonts=['Baskerville'] sizes=[8.0] italic=False color=0x7f8a9a x=39.7 y=795.5
+Why The Modern Family Office Matters
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x7f8a9a x=427.1 y=795.7

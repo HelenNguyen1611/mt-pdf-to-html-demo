@@ -1,0 +1,146 @@
+5.  Community impact
+  fonts=['Baskerville'] sizes=[20.0] italic=False color=0x0 x=39.2 y=67.9
+Giving the family’s time, treasure, talent and ties to make a positive impact 
+  fonts=['ProximaNova-Light'] sizes=[14.0] italic=False color=0xdd971a x=39.6 y=101.8
+on society through creating jobs, supporting philanthropic causes, investing 
+  fonts=['ProximaNova-Light'] sizes=[14.0] italic=False color=0xdd971a x=39.9 y=118.8
+responsibly, serving in the community and paying taxes.  
+  fonts=['ProximaNova-Light'] sizes=[14.0] italic=False color=0xdd971a x=40.0 y=135.8
+The University of Adelaide research highlights the importance that wealthy families place 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=38.6 y=164.3
+on having community impact to realise what matters most to them.  This can be through 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=40.0 y=179.3
+the creation of jobs and opportunities within their businesses or, less directly, through the 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=40.1 y=194.3
+economic impact of the taxes they pay.  The University of Adelaide research reported – 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.8 y=209.3
+wealthy families contributed $3.6 billion – $5 billion in Australian taxes in 2020.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=40.1 y=224.3
+Wealthy families have also enhanced the positive societal impact they can have due 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.9 y=244.9
+to their increasing levels of interest and participation in responsible investments, 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=40.1 y=259.9
+particularly in companies that create shared value.  These are companies that are profitable 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=40.1 y=274.9
+and generate good investment returns while making the world a better place.  This is 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.9 y=289.9
+highlighted in the research, where one person said:
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=40.1 y=304.9
+“…there are more and more families who are looking for impact investments…   
+  fonts=['ProximaNova-LightIt'] sizes=[12.0] italic=True color=0x0 x=63.5 y=325.6
+there’s a pool of capital that’s becoming available there to benefit people who need 
+  fonts=['ProximaNova-LightIt'] sizes=[12.0] italic=True color=0x0 x=68.5 y=340.6
+it – organisations who are doing good work for the environment, for disadvantaged 
+  fonts=['ProximaNova-LightIt'] sizes=[12.0] italic=True color=0x0 x=68.5 y=355.6
+communities… So, I think [the] Family Office is playing a really important part of 
+  fonts=['ProximaNova-LightIt'] sizes=[12.0] italic=True color=0x0 x=68.2 y=370.6
+seeding the investment that is needed for social change.” 
+  fonts=['ProximaNova-LightIt'] sizes=[12.0] italic=True color=0x0 x=68.3 y=385.6
+Family Office advisor, participant 10
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=68.4 y=406.3
+Traditionally, however, community impact for wealthy families has been achieved through 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=38.6 y=432.6
+philanthropy.  Philanthropic activity allows family members to work together with a shared 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=40.1 y=447.6
+purpose to create a lasting positive impact.  It can be a unifying force for family harmony 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=40.1 y=462.6
+as well as an expression of an individual’s specific passions.  Serving the community is 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.9 y=477.6
+also a protective factor against the modern malaise of anxiety and depression, as well 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.9 y=492.6
+as providing a platform to develop the values, perspective, work ethic and skills of the 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.9 y=507.6
+younger generation of family members.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=40.0 y=522.6
+Philanthropy is more than giving money to a worthy cause.  Many wealthy family members 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=40.1 y=543.3
+also give their time and expertise by serving on Boards or committees of philanthropic 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.9 y=558.3
+organisations.  The modern Family Office assists wealthy families not just with giving, but 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.9 y=573.3
+also with their philanthropy strategy, to ensure it aligns closely with the family’s values and 
+  fonts=['ProximaNova-Light', 'ProximaNova-LightIt'] sizes=[12.0] italic=True color=0x0 x=39.9 y=588.3
+purpose, and is executed professionally and with maximum impact.  This involves facilitated 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=40.1 y=603.3
+family strategy sessions, followed by development of a detailed execution plan which the 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=40.0 y=618.3
+Family Office helps to implement.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=40.1 y=633.3
+“[Philanthropy] was an excellent way to educate the kids a bit and give back 
+  fonts=['ProximaNova-LightIt'] sizes=[12.0] italic=True color=0x0 x=63.4 y=653.9
+something to the community.  The Multi-Family Office does all the admin, and 
+  fonts=['ProximaNova-LightIt'] sizes=[12.0] italic=True color=0x0 x=68.3 y=668.9
+we have governance meetings to identify charities or organisations that meet 
+  fonts=['ProximaNova-LightIt'] sizes=[12.0] italic=True color=0x0 x=68.2 y=683.9
+the regulatory framework and the rules [we’ve established]… they’re pretty good.  
+  fonts=['ProximaNova-LightIt'] sizes=[12.0] italic=True color=0x0 x=68.4 y=698.9
+The kids quite enjoy it, and… it’s been a great way to educate them on other aspects 
+  fonts=['ProximaNova-LightIt'] sizes=[12.0] italic=True color=0x0 x=66.7 y=713.9
+such as why you might use trust structures to protect assets.” 
+  fonts=['ProximaNova-LightIt'] sizes=[12.0] italic=True color=0x0 x=68.3 y=728.9
+Family Enterprise leader, participant 13
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=68.4 y=749.6
+MUTUAL TRUST CASE STUDY 
+  fonts=['ProximaNova-Medium'] sizes=[10.0] italic=False color=0x0 x=646.3 y=290.6
+Community impact
+  fonts=['Baskerville'] sizes=[20.0] italic=False color=0x0 x=646.3 y=306.1
+Passionate about supporting young people with intellectual disabilities, the Alroy* family funded 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=340.2
+research to identify where their giving could have the greatest impact.  They then set about 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=355.2
+making these changes through an innovative philanthropic approach.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=370.2
+Tired of observing the barriers their own family member faced in navigating life with an intellectual 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=390.8
+disability, the Alroys made the decision to advocate for change.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=405.8
+The Alroys recognised they were just one piece of the puzzle when it came to making a real 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=426.5
+difference in this space.  Through their family foundation, they decided to partner with a large 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=441.5
+not-for-profit and fund research into how to best support children with intellectual disabilities.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=456.5
+The report highlighted a significant gap in support available during the transition from 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=471.5
+school to work.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=486.5
+Armed with this research, they created a round-table forum.  Bringing together people with 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=507.2
+lived experience, consultants from not-for-profits, government agencies and reputable service 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=522.2
+providers, they worked together to identify the best course of action to take.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=537.2
+It was decided to focus on increasing the ability of employers to offer work to young people with 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=557.8
+intellectual disabilities.  They went out to market for expressions of interest from organisations that 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=572.8
+could help them achieve this goal via grants.  The panel of grant application reviewers included 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=587.8
+the Alroys and again, people with lived experience and industry service providers.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=602.8
+The Alroys invited four shortlisted applicants to undertake invaluable pitch training and then 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=623.5
+attend an event where they could use their new skills to pitch to the philanthropists in attendance. 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=638.5
+The results were significant.  Each of the four grant applicants received more funding than 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=659.1
+originally requested and the scale of change introduced by the Alroys was far greater than the 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=674.1
+act of simply donating money to a cause.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=689.1
+The experience of collaborating with the right people and sharing the opportunity with other 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=709.8
+philanthropists to maximise the impact of their work was a tremendously rewarding experience 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=724.8
+for the Alroys and brought each family member a great sense of fulfilment.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=646.3 y=739.8
+	* Family name has been changed for privacy reasons
+  fonts=['ProximaNova-Regular'] sizes=[7.0] italic=False color=0x0 x=646.3 y=760.9
+49
+  fonts=['Baskerville'] sizes=[8.0] italic=False color=0xdd971a x=1142.9 y=795.5
+Modern Family Office practices make a difference 
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0xdd971a x=646.3 y=795.7
+48
+  fonts=['Baskerville'] sizes=[8.0] italic=False color=0x7f8a9a x=39.7 y=795.5
+Why The Modern Family Office Matters
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x7f8a9a x=427.1 y=795.7

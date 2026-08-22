@@ -1,0 +1,96 @@
+PAGE 17  1190.55x841.89pt  mid=595.3
+
+[L] y= 249.2 x=  39.7- 189.6 | 'MUTUAL TRUST CASE STUDY '
+       ProximaNova-Medium 10.0 #000000 flags=4
+[L] y= 264.8 x=  39.7- 200.5 | 'Financial prosperity'
+       Baskerville 20.0 #000000 flags=4
+[L] y= 298.8 x=  39.7- 452.1 | 'When the Chauvel* family found itself asset rich and cash poor, changes to their '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 313.8 x=  39.7- 435.2 | 'investment\xa0strategy were required to ensure long-term wealth sustainability.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 334.5 x=  39.7- 478.7 | 'Once a thriving entrepreneurial endeavour, the Chauvel family business had matured '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 349.5 x=  39.7- 359.2 | 'and\xa0stagnated in growth over the course of several decades.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 370.2 x=  39.7- 514.7 | 'Profits, along with family relationships, were on a downward spiral.  The lack of\xa0reinvestment '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 385.2 x=  39.7- 508.0 | 'in the\xa0business had led to assets becoming tired and run-down, whilst cash drawings were '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 400.2 x=  39.7- 163.5 | 'reducing\xa0family capital.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 420.8 x=  39.7- 461.9 | 'The Chauvels found themselves facing a challenge which confronts many families '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 435.8 x=  39.7- 406.6 | 'of\xa0multigenerational wealth — it had become asset rich and cash poor.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 456.5 x=  39.7- 506.0 | 'With the arrival of grandchildren over recent years, the family had also become concerned '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 471.5 x=  39.7- 533.7 | 'about the sustainability of their wealth.  How could they accommodate the needs of the present '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 486.5 x=  39.7- 351.5 | 'generation without compromising the\xa0livelihood of the next? '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 507.1 x=  39.7- 510.4 | 'The Chauvels decided it was time to act.  They engaged Mutual Trust to determine the rate '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 522.1 x=  39.7- 513.0 | 'of\xa0growth required over the next 20 years for the third generation to inherit the same as the '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 537.1 x=  39.7- 230.3 | 'second (in real terms, after inflation).  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 557.8 x=  39.7- 542.9 | 'The financial modelling indicated the Chauvels would require a staggering 17% compounding rate '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 572.8 x=  39.7- 548.2 | 'per annum to achieve their objective.  This is an aggressive rate of return and requires the investor '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 587.8 x=  39.7- 540.5 | 'to take on a material level of\xa0risk.  A stagnant portfolio of cash and an underperforming operating '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 602.8 x=  39.7- 313.4 | 'business\xa0was no longer going to cut it for this family.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 623.5 x=  39.7- 536.5 | 'Mutual Trust worked closely with the Chauvels to undertake careful planning and\xa0provide expert '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 638.5 x=  39.7- 544.1 | 'advice.  The family reallocated its long-term passive asset investments towards growth-orientated '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 653.5 x=  39.7- 535.2 | 'weightings and directed its business managers to implement a turnaround plan to drive returns.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 668.5 x=  39.7- 540.7 | 'This included reinvesting underperforming assets and the sale of anything considered non‑core.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 689.1 x=  39.7- 486.1 | 'Today, the Chauvels are set-up for success and are well on their way to achieving their '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 704.1 x=  39.7- 492.2 | 'goal\xa0of\xa0long-term wealth stability and the ability to support the financial wellbeing of the '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 719.1 x=  39.7- 130.5 | 'third\xa0generation.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 739.8 x=  39.7- 496.5 | 'Whilst this is an extreme example of what can happen after years of stagnation, it\xa0serves '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 754.8 x=  39.7- 516.1 | 'as\xa0an\xa0important reminder to ensure family investment strategies align with family objectives.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 775.9 x=  39.7- 206.0 | '\t* Family name has been changed for privacy reasons.  '
+       ProximaNova-Regular 7.0 #000000 flags=4
+[R] y= 495.1 x= 645.4- 810.2 | '2.  Entrepreneurship'
+       Baskerville 20.0 #000000 flags=4
+[R] y= 529.0 x= 644.6-1089.8 | 'The family’s ability to use its wealth to perpetuate an entrepreneurial spirit '
+       ProximaNova-Light 14.0 #dd971a flags=4
+[R] y= 546.0 x= 646.6-1133.3 | 'by\xa0sustaining its\xa0operating business and supporting other entrepreneurs through '
+       ProximaNova-Light 14.0 #dd971a flags=4
+[R] y= 562.9 x= 646.6- 887.0 | 'the provision of\xa0both\xa0capital and talent.  '
+       ProximaNova-Light 14.0 #dd971a flags=4
+[R] y= 591.5 x= 645.2-1119.0 | 'Throughout history, wealthy families have been the engine room for entrepreneurial activity.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 606.5 x= 646.7-1117.2 | 'It\xa0is estimated that over 25% of all large Australian businesses (200+ employees) are family '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 621.5 x= 646.6-1143.3 | 'controlled.v  The original source of family wealth is typically a successful commercial venture\xa0that '
+       ProximaNova-Light 12.0 #000000 flags=4; ProximaNova-Light 7.0 #000000 flags=5; ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 636.5 x= 646.7-1138.0 | 'becomes a crucial part of a family’s history and expertise and a proud source of\xa0family\xa0identity.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 657.1 x= 646.7-1144.1 | 'Many families look to continue this legacy as part of their Purpose of Wealth, contributing to new '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 672.1 x= 646.6-1140.7 | 'venture creation and innovation and making significant investments in the private equity sector.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 692.8 x= 646.7-1143.7 | 'By way of example, Mutual Trust saw a 64% increase from F21 to F22 in early-stage investments, '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 707.8 x= 646.9- 944.5 | 'late expansion investments (growth capital) and buyouts.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 795.5 x=1142.9-1150.9 | '35'
+       Baskerville 8.0 #7f8a9a flags=4
+[R] y= 795.7 x= 646.3- 797.9 | 'Modern Family Office practices\xa0make a difference '
+       ProximaNova-Light 7.0 #7f8a9a flags=4
+[L] y= 795.5 x=  39.7-  47.7 | '34'
+       Baskerville 8.0 #dd971a flags=4
+[L] y= 795.7 x= 427.1- 544.3 | 'Why The Modern Family Office Matters'
+       ProximaNova-Light 7.0 #dd971a flags=4

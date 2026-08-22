@@ -1,0 +1,42 @@
+i	 Note: according to the Productivity Commission report, in 2018, $120 billion 
+  fonts=['ProximaNova-Light'] sizes=[7.0, 12.0] italic=False color=0x0 x=39.7 y=211.0
+was transferred.  Based on an annual growth rate 4.76% in transfers from 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=53.9 y=224.6
+2002 to 2018 (due to annual growth in wealth), from 2023 to 2040 it can 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=53.9 y=239.6
+be anticipated that over $4 trillion will be transferred.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=53.9 y=254.6
+ii	 Williams & Preisser (2010), Preparing Heirs: Five Steps to a Successful 
+  fonts=['ProximaNova-Light', 'ProximaNova-LightIt'] sizes=[7.0, 12.0] italic=True color=0x0 x=39.7 y=276.7
+transition of Family Wealth and Values, Robert D. Reed Publishers, 
+  fonts=['ProximaNova-Light', 'ProximaNova-LightIt'] sizes=[12.0] italic=True color=0x0 x=53.9 y=290.3
+San Francisco, pp. 35–49.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=53.9 y=305.3
+iii	 Williams & Preisser (2010), Preparing Heirs: Five Steps to a Successful 
+  fonts=['ProximaNova-Light', 'ProximaNova-LightIt'] sizes=[7.0, 12.0] italic=True color=0x0 x=39.7 y=327.3
+transition of Family Wealth and Values, Robert D. Reed Publishers, 
+  fonts=['ProximaNova-Light', 'ProximaNova-LightIt'] sizes=[12.0] italic=True color=0x0 x=53.9 y=340.9
+San Francisco, pp. 35–49.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=53.9 y=355.9
+iv	 Williams & Preisser (2010), Preparing Heirs: Five Steps to a Successful 
+  fonts=['ProximaNova-Light', 'ProximaNova-LightIt'] sizes=[7.0, 12.0] italic=True color=0x0 x=39.7 y=378.0
+transition of Family Wealth and Values, Robert D. Reed Publishers, 
+  fonts=['ProximaNova-Light', 'ProximaNova-LightIt'] sizes=[12.0] italic=True color=0x0 x=53.9 y=391.6
+San Francisco, pp. 35–49.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=53.9 y=406.6
+v	 Williams & Preisser (2010), Preparing Heirs: Five Steps to a Successful 
+  fonts=['ProximaNova-Light', 'ProximaNova-LightIt'] sizes=[7.0, 12.0] italic=True color=0x0 x=39.7 y=428.7
+transition of Family Wealth and Values, Robert D. Reed Publishers, 
+  fonts=['ProximaNova-Light', 'ProximaNova-LightIt'] sizes=[12.0] italic=True color=0x0 x=53.9 y=442.3
+San Francisco, pp. 35–49.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=53.9 y=457.3
+References
+  fonts=['Baskerville'] sizes=[30.0] italic=False color=0x0 x=38.8 y=71.8
+60
+  fonts=['Baskerville'] sizes=[8.0] italic=False color=0x7f8a9a x=39.7 y=795.5
+Why The Modern Family Office Matters
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x7f8a9a x=427.1 y=795.7
+References
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0xffffff x=646.3 y=795.7
+61
+  fonts=['Baskerville'] sizes=[8.0] italic=False color=0xffffff x=1142.9 y=795.5

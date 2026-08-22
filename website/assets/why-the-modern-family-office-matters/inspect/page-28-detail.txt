@@ -1,0 +1,52 @@
+About University of Adelaide 
+  fonts=['Baskerville'] sizes=[20.0] italic=False color=0x0 x=39.7 y=67.9
+Business School
+  fonts=['Baskerville'] sizes=[20.0] italic=False color=0x0 x=39.7 y=91.9
+The University of Adelaide has a proud history of delivering world-class courses 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=125.9
+in business as the first institution in Australia to offer business education in 1902.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=140.9
+The University of Adelaide is consistently ranked in the top one percent of the 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=155.9
+world’s universities and is recognised globally as a leading research university.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=170.9
+The Adelaide Business School is an integral part of the University of Adelaide 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=191.6
+providing a world-class hub of excellence in business education and research.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=206.6
+Through its research, teaching and engagement activities, the Adelaide 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=221.6
+Business School assists current and future leaders to create, transform and 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=236.6
+lead sustainable innovative enterprises that contribute to the development 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=251.6
+of a better society.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=266.6
+In recognition of the significance and uniqueness of Family Enterprises around 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=287.3
+the world, the Adelaide Business School established the Family Business 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=302.3
+Education and Research Group (FBERG) in 2011.  Under the leadership of 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=317.3
+Associate Professor Chris Graves, FBERG’s activities have led to the Adelaide 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=332.3
+Business School being recognised as one of the top 25 global business schools 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=347.3
+for family business education and research.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=362.3
+The research referred to in this report comprises two primary research 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=382.9
+reports authored by Associate Professor, Dr. Chris Graves, from the University 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=397.9
+of Adelaide.  Copies of these reports are available on the University of Adelaide’s 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=412.9
+website business.adelaide.edu.au/research/fberg
+  fonts=['ProximaNova-Light', 'ProximaNova-Medium'] sizes=[12.0] italic=False color=0x0 x=39.7 y=427.9
+56
+  fonts=['Baskerville'] sizes=[8.0] italic=False color=0x7f8a9a x=39.7 y=795.5
+Why The Modern Family Office Matters
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x7f8a9a x=427.1 y=795.7
+Contributors to this report
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0xffffff x=646.3 y=795.7
+57
+  fonts=['Baskerville'] sizes=[8.0] italic=False color=0xffffff x=1142.9 y=795.5

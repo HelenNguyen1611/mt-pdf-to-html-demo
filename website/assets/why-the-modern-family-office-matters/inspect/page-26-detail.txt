@@ -1,0 +1,146 @@
+Contributors to this report
+  fonts=['Baskerville'] sizes=[30.0] italic=False color=0x0 x=37.4 y=71.8
+PHIL HARKNESS | CEO & MANAGING PARTNER, MUTUAL TRUST
+  fonts=['ProximaNova-Medium'] sizes=[10.0] italic=False color=0xdd971a x=126.6 y=151.8
+Phil is an experienced Senior Executive with over 30 years’ experience 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=167.5
+working in professional services.  In 2017, he joined Mutual Trust as the 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=182.5
+Chief Executive Officer.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=197.5
+Phil has provided advisory services to clients internationally across a wide 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=218.1
+range of industries including financial services, resources, utilities, 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=233.1
+manufacturers, numerous public sector and government organisations, retail, 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=248.1
+and telecommunications organisations.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=263.1
+Prior to Mutual Trust, Phil spent five years as a Partner with EY (Ernst & Young).  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=283.8
+Phil joined EY in 2012 to lead the Oceania Performance Improvement practice 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=298.8
+within the Advisory Service Line and to start the Strategy Consulting practice.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=313.8
+Phil’s responsibilities were expanded to include the Customer practice across 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=328.8
+Oceania and APAC and a global role as the leader of an important EY strategy 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=343.8
+offering – Purpose Lead Transformation.  Phil was also the Diversity and Inclusion 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=358.8
+Leader for EY Advisory in Oceania.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=373.8
+Phil holds a Bachelor of Agricultural Science from LaTrobe University and 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=394.5
+a Master of Business Administration from the Melbourne Business School  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=409.5
+(Winner of the CRA Prize for top student in corporate strategy).  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=424.5
+JEFF STEINER | PARTNER, HEAD OF FAMILY OFFICE, MUTUAL TRUST
+  fonts=['ProximaNova-Medium'] sizes=[10.0] italic=False color=0xdd971a x=126.6 y=477.0
+Jeff helps high net worth families navigate the complex landscape of 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=492.6
+intergenerational wealth transfer amidst ever-changing economic cycles.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=507.6
+His mission is to maximise success in preserving, growing and transferring 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=522.6
+the family’s legacy in a harmonious and orderly way.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=537.6
+Jeff has spent more than 25 years in family advisory and Family Office 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=558.3
+management.  He is a highly sought after and acknowledged global thought 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=573.3
+leader in this space.  He partners with wealth owners and their families to plan 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=588.3
+and achieve their long-term goals across all aspects of their wealth, including 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=603.3
+their family, businesses, investments and philanthropy.  Jeff has deep expertise 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=618.3
+in managing family dynamics and is passionate about family unity and aligning 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=633.3
+families values with their wealth.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=648.3
+Jeff currently serves as an independent chair and is a member of family Boards 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=669.0
+and not-for­ profit organisations.  He holds a Bachelor of Commerce, is a Certified 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=684.0
+Practicing Accountant, a registered tax agent and a graduate of the Australian 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=699.0
+Institute of Company Directors.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.6 y=714.0
+BRAD SIMMONS | PARTNER, HEAD OF SOUTH AUSTRALIA, MUTUAL TRUST
+  fonts=['ProximaNova-Medium'] sizes=[10.0] italic=False color=0xdd971a x=733.2 y=151.8
+Brad is passionate about helping families meet the challenges of managing 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=167.5
+wealth across generations.  Having worked within both a single Family Office  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=182.5
+and Australia’s largest Multi-Family Office, Brad has a unique perspective 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=197.5
+on family wealth.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=212.5
+Drawing on his expertise in finance, corporate law, family governance and 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=233.1
+succession, Brad helps to integrate the affairs of families across a range of 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=248.1
+disciplines, including family strategy, investment management, tax accounting, 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=263.1
+philanthropy and trustee services.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=278.1
+After six years with Mutual Trust in Melbourne as a Partner in the Family Office 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=298.8
+team, Brad returned home to Adelaide in December 2018 to establish a South 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=313.8
+Australian office for the firm.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=328.8
+Brad holds a Bachelor of Laws, a Master of Applied Finance and Investment 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=349.5
+and a Diploma of Financial Planning.  He has also completed a Family Business 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=364.5
+Directors Course with Family Business Australia and a Leadership Development 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=379.5
+Program with the Melbourne Business School.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=394.5
+TRACY CONLAN | PARTNER, HEAD OF STRATEGY, MUTUAL TRUST
+  fonts=['ProximaNova-Medium'] sizes=[10.0] italic=False color=0xdd971a x=733.2 y=477.0
+Tracy is responsible for developing and assisting the business to implement 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=492.6
+long-term business strategies.  In her role, she expedites implementation in 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=507.6
+the business via strategic advice, new venture investments and other corporate 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=522.6
+development programs, including corporate transformation.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=537.6
+Tracy joined Mutual Trust in 2018 and is an experienced banker, strategy 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=558.3
+consultant and general manager.  She spent her formative years at McKinsey 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=573.3
+where her functional specialty was strategy and her industry focus was financial 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=588.3
+services.  Tracy is an experienced strategy and financial services professional 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=603.3
+with more than 20 years in consulting and industry.  Tracy has broad financial 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=618.3
+services experience ranging from EGM roles in corporate strategy, brand and 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=633.3
+marketing for the CBA, to projects with other large Australian banks, several 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=648.3
+regionals, credit unions, wealth and payments organisations.  She has also 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=663.3
+undertaken consulting projects in Australia, London, Stockholm and Brussels 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=678.3
+while working at McKinsey, EY and Deloitte.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=693.3
+Tracy holds an MBA from London Business School, a Post Graduate Diploma 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=714.0
+in Finance and Administration from the Securities Institute of Australia, and 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=729.0
+a Bachelor of Economics (Hons 1st) from the University of Sydney.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=744.0
+53
+  fonts=['Baskerville'] sizes=[8.0] italic=False color=0x7f8a9a x=1142.9 y=795.5
+52
+  fonts=['Baskerville'] sizes=[8.0] italic=False color=0x7f8a9a x=39.7 y=795.5
+Why The Modern Family Office Matters
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x7f8a9a x=427.1 y=795.7
+Contributors to this report
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x7f8a9a x=646.3 y=795.7

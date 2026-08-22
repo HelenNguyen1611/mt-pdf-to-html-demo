@@ -1,0 +1,132 @@
+LYNDIE VAN ORSOUW | MANAGER, FAMILY OFFICE, MUTUAL TRUST
+  fonts=['ProximaNova-Medium'] sizes=[10.0] italic=False color=0xdd971a x=126.8 y=477.0
+Lyndie has in excess of 20 years’ experience in accounting and 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=492.6
+bookkeeping and specialises in developing finance solutions for Family 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=507.6
+Offices and family businesses.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=522.6
+With a wealth of knowledge around accounting software, financial reporting, 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=543.3
+and business management, Lyndie is able to work closely with advisors across 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=558.3
+multiple disciplines including wealth management, tax accounting and property 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=573.3
+management.  Using platforms such as Xero and Praemium, she expertly tailors 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=588.3
+quality record keeping and invoice management systems.  This ensures that 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=603.3
+clients have robust financial management and valuable real-time reporting.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=618.3
+Lyndie holds a Master of Business Administration (Finance), a Bachelor of 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=639.0
+Accounting, a Bachelor of Arts (Legal Studies), and is currently commencing 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=654.0
+a PhD with The University of Adelaide.  She is a Certified Practicing Accountant 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=669.0
+(CPA), and a Graduate of the Australian Institute of Company Directors, and has 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=684.0
+also completed a management certification with Harvard Business School.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=699.0
+ELIZABETH GOLDFINCH | PARTNER, FAMILY OFFICE, MUTUAL TRUST
+  fonts=['ProximaNova-Medium'] sizes=[10.0] italic=False color=0xdd971a x=126.8 y=151.8
+Elizabeth (Lizzy) has worked with significant families and family businesses, 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=167.5
+both nationally and internationally over the past decade, to decode what matters 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=182.5
+or is most important to them.  She is driven to help families and their emerging 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=197.5
+generations address both the opportunities as well as the challenges of wealth.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=212.5
+Prior to joining Mutual Trust, Lizzy worked in the Private Wealth Management 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=233.1
+team at the Myer Family Company where she managed the investment portfolios 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=248.1
+of successful multi-generational families and not-for-profit organisations.  Prior 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=263.1
+to that, Lizzy was responsible for the delivery of wealth management and family 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=278.1
+continuity services to Queensland-based families who hold substantial property 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=293.1
+and business assets.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=308.1
+Lizzy holds a Bachelor of Commerce & Bachelor of Economics (Dean’s 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=328.8
+Honour Role) from the University of Queensland, a Graduate Diploma in 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=343.8
+Financial Planning from Kaplan and is a Graduate of the Australian Institute 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=358.8
+of Company Directors.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=126.8 y=373.8
+DR CHRIS GRAVES | ASSOCIATE PROFESSOR, UNIVERSITY OF ADELAIDE
+  fonts=['ProximaNova-Medium'] sizes=[10.0] italic=False color=0xdd971a x=733.2 y=151.8
+Associate Professor Chris Graves is a Chartered Accountant, and director of 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=167.5
+the Family Business Education and Research Group [FBERG] at the University 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=182.5
+of Adelaide Business School.  Chris has a Bachelor degree in Accountancy 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=197.5
+from the former South Australian Institute of Technology, a Master degree in 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=212.5
+Economics from the University of New England, and a PhD from the University 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=227.5
+of Adelaide.  Chris has been serving as an external member of the University 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=242.5
+Council’s ‘Audit, Compliance and Risk’ sub-committee since 2014.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=257.5
+Since joining the University of Adelaide in 2007, Chris has spent considerable 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=278.1
+time educating managers and owners of privately-owned firms.  Each year, he 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=293.1
+is actively involved in improving the financial literacy of owners and managers 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=308.1
+through the University’s Executive Education and Masters of Business 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=323.1
+Administration programs.  In 2015, in conjunction with Family Business Australia 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=338.1
+and the Government of South Australia, he introduced the NextGen eChallenge 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=353.1
+educational program to assist in the development of the next generation of 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=368.1
+entrepreneurial leaders in family-controlled enterprises.  In 2015, he developed 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=383.1
+an owner leadership development program (‘Catalyst’) in conjunction with the 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=398.1
+Government of South Australia, industry associations and business owners.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=413.1
+With regard to research, Chris publishes in top international journals such 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=433.8
+as Family Business Review on issues surrounding the management and 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=448.8
+performance of family-controlled SMEs.  In 2006, he graduated with a PhD 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=463.8
+which investigated factors that limit the ability of family-owned SMEs to grow 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=478.8
+internationally, as well as the manner in which those obstacles can be overcome.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=493.8
+His PhD research received an international award from the Family Firm Institute 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=508.8
+(FFI), based in the USA.  In 2013, 2015, and 2017 he undertook the KPMG-Family 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=523.8
+Business Australia ‘National Family Business Survey’ and was an academic 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=538.8
+advisor for KPMG International’s study investigating the role of private equity 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=553.8
+financing in family-controlled enterprises around the world.  He completed 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=568.8
+a four year term on the board of the International Family Enterprise Research 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=583.8
+Academy (ifera.org), the leading global network of family business scholars.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=598.8
+As part of his specialisation in family business, Chris completed a Graduate 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=619.5
+Diploma in Family Therapy and Systemic Practice.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=733.2 y=634.5
+55
+  fonts=['Baskerville'] sizes=[8.0] italic=False color=0x7f8a9a x=1142.9 y=795.5
+54
+  fonts=['Baskerville'] sizes=[8.0] italic=False color=0x7f8a9a x=39.7 y=795.5
+Why The Modern Family Office Matters
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x7f8a9a x=427.1 y=795.7
+Contributors to this report
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x7f8a9a x=646.3 y=795.7

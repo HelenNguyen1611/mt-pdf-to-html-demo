@@ -1,0 +1,150 @@
+PAGE 16  1190.55x841.89pt  mid=595.3
+
+[L] y=  72.4 x=  37.3- 269.1 | 'The Mutual Trust Gemstone'
+       Baskerville 20.0 #000000 flags=4
+[L] y= 106.5 x=  40.1- 441.7 | 'Mutual Trust has identified five facets wealthy families focus on to achieve what '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 121.5 x=  40.1- 448.5 | 'matters most to them.  These facets form the family’s Purpose of Wealth which is '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 136.5 x=  40.1- 441.5 | 'implemented through the Family’s strategic plan, helped by their Family Office.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 379.5 x= 643.5- 828.5 | '1.  Financial prosperity'
+       Baskerville 20.0 #000000 flags=4
+[R] y= 413.4 x= 646.1-1098.6 | 'Growing financial capital sustainably to provide for the needs of the current '
+       ProximaNova-Light 14.0 #dd971a flags=4
+[R] y= 430.4 x= 646.3- 868.7 | 'and\xa0future generations of\xa0the family.  '
+       ProximaNova-Light 14.0 #dd971a flags=4
+[R] y= 458.9 x= 645.1-1106.6 | 'The financial returns from the family’s business and/or investment activities provide family '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 473.9 x= 646.6-1097.2 | 'members with a certain standard of living and the ability to achieve what matters most.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 488.9 x= 646.6-1088.1 | 'For example, this may include assisting the rising generation with\xa0finance to purchase '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 503.9 x= 646.6-1104.9 | 'their first home, providing seed funding to pursue a new business idea, or enabling them '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 518.9 x= 646.6-1107.7 | 'to receive a good education.  The family wealth also provides the ability to support family '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 533.9 x= 646.6-1101.7 | 'members in times of critical need.  This may be to assist with a family member’s physical '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 548.9 x= 646.5-1076.7 | 'or\xa0psychological wellbeing, or coming to the aid of a family member during a crisis.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 569.5 x= 645.1-1117.5 | 'The modern Family Office must provide a competitive finance and investment management '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 584.5 x= 646.5-1116.6 | 'offering and services for wealthy families to sustainably grow their financial capital, manage '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 599.5 x= 646.3-1021.3 | 'expenses and fund the other facets comprising their Purpose of Wealth.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 620.2 x= 670.0-1067.9 | '“We want to retain that main core and make sure that it’s generating enough '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[R] y= 635.2 x= 675.0-1083.4 | 'money and growing for future generations.  That’s the legacy side, and we see '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[R] y= 650.2 x= 674.7-1093.0 | 'ourselves as\xa0guardians of the wealth created by our grandparents.  Even though '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[R] y= 665.2 x= 675.0-1088.0 | 'they’ve passed away, we still live by that philosophy that it’s their money, it’s not '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[R] y= 680.2 x= 674.7-1096.1 | 'ours.  But\xa0at\xa0the same time, through distributions of the wealth, we’ll provide each '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[R] y= 695.2 x= 674.7-1085.6 | 'generation with the\xa0ability to\xa0create their own wealth in a step-by-step process.”'
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[R] y= 715.8 x= 674.9- 875.7 | 'Family Enterprise leader, participant 20'
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 476.6 x= 342.3- 393.5 | 'FINANCIAL '
+       ProximaNova-Medium 9.4 #7d8898 flags=4
+[L] y= 487.8 x= 338.5- 395.0 | 'PROSPERITY'
+       ProximaNova-Medium 9.4 #7d8898 flags=4
+[L] y= 447.3 x= 282.3- 315.4 | 'WHAT '
+       ProximaNova-Semibold 10.3 #ffffff flags=20
+[L] y= 458.5 x= 273.4- 324.4 | 'MATTERS '
+       ProximaNova-Semibold 10.3 #ffffff flags=20
+[L] y= 469.7 x= 282.6- 312.5 | 'MOST'
+       ProximaNova-Semibold 10.3 #ffffff flags=20
+[L] y= 389.3 x= 314.9- 375.1 | 'COMMUNITY '
+       ProximaNova-Medium 9.4 #7d8898 flags=4
+[L] y= 400.5 x= 326.9- 360.6 | 'IMPACT'
+       ProximaNova-Medium 9.4 #7d8898 flags=4
+[L] y= 476.6 x= 195.5- 260.5 | 'FAMILY UNITY '
+       ProximaNova-Medium 9.4 #7d8898 flags=4
+[L] y= 487.8 x= 198.5- 255.0 | '& HARMONY'
+       ProximaNova-Medium 9.4 #7d8898 flags=4
+[L] y= 383.6 x= 224.3- 275.4 | 'LEARNING, '
+       ProximaNova-Medium 9.4 #7d8898 flags=4
+[L] y= 394.9 x= 216.7- 285.9 | 'ENGAGEMENT  '
+       ProximaNova-Medium 9.4 #7d8898 flags=4
+[L] y= 406.1 x= 216.1- 281.2 | '& FULFILMENT'
+       ProximaNova-Medium 9.4 #7d8898 flags=4
+[L] y= 543.7 x= 250.8- 344.3 | 'ENTREPRENEURSHIP'
+       ProximaNova-Medium 9.4 #7d8898 flags=4
+[L] y= 481.0 x=  96.6- 180.7 | 'Strengthening family '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 493.2 x=  58.4- 180.7 | 'relationships, values and trust, '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 505.3 x=  79.0- 180.7 | ' building communication, '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 517.5 x=  81.7- 180.7 | 'problem solving and the '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 529.6 x=  62.5- 180.7 | 'ability to undertake roles and '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 541.8 x=  72.9- 180.7 | 'responsibilities using each '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 553.9 x=  81.6- 180.7 | 'person’s strengths while '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 566.1 x=  80.6- 180.7 | 'valuing their differences. '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 285.1 x= 119.1- 221.6 | 'Enabling individual family '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 297.2 x= 121.2- 221.6 | 'members to pursue their '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 309.4 x= 105.4- 221.6 | 'personal aspirations through '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 321.5 x= 113.2- 221.6 | 'education, the provision of '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 333.7 x=  88.6- 221.6 | 'opportunities, and following their '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 345.8 x=  98.7- 221.6 | 'passions so that they can lead '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 357.9 x= 106.0- 221.6 | 'productive and fulfilled lives. '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 285.0 x= 376.0- 471.7 | 'Giving the family’s time, '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 297.2 x= 376.0- 482.1 | 'treasure, talent and ties to '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 309.3 x= 376.0- 482.5 | 'make a positive impact on '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 321.5 x= 376.0- 496.2 | 'society through creating jobs, '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 333.6 x= 376.0- 477.7 | 'supporting  philanthropic '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 345.8 x= 376.0- 464.7 | 'causes, serving in the '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 357.9 x= 376.0- 497.5 | 'community, and paying taxes.  '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 481.0 x= 416.9- 488.1 | 'Growing financial '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 493.1 x= 416.9- 502.4 | 'capital\xa0sustainably to '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 505.3 x= 416.9- 515.6 | 'provide for the\xa0needs of '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 517.4 x= 416.9- 505.9 | 'the current and\xa0future '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 529.6 x= 416.9- 519.1 | 'generations of the\xa0family. '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 613.5 x= 193.5- 404.2 | 'The family’s ability to use its wealth to perpetuate an '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 625.6 x= 184.1- 413.5 | 'entrepreneurial spirit by sustaining its operating business '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 637.8 x= 182.4- 415.3 | 'and supporting other entrepreneurs through the provision '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 649.9 x= 247.2- 352.8 | 'of both capital and talent.  '
+       ProximaNova-Light 9.3 #213a4f flags=4
+[L] y= 190.8 x= 238.4- 356.8 | 'FAMILY STRATEGY'
+       ProximaNova-Semibold 12.0 #5d5d60 flags=20
+[L] y= 233.3 x= 226.1- 369.1 | 'PURPOSE OF YOUR WEALTH'
+       ProximaNova-Medium 10.0 #5d5d60 flags=4
+[R] y= 795.5 x=1142.9-1150.9 | '33'
+       Baskerville 8.0 #7f8a9a flags=4
+[L] y= 795.5 x=  39.7-  47.7 | '32'
+       Baskerville 8.0 #7f8a9a flags=4
+[L] y= 795.7 x= 427.1- 544.3 | 'Why The Modern Family Office Matters'
+       ProximaNova-Light 7.0 #7f8a9a flags=4
+[R] y= 795.7 x= 646.3- 797.9 | 'Modern Family Office practices\xa0make a difference '
+       ProximaNova-Light 7.0 #7f8a9a flags=4

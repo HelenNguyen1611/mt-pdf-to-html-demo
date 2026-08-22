@@ -1,0 +1,144 @@
+About Mutual Trust
+  fonts=['Baskerville'] sizes=[20.0] italic=False color=0x0 x=39.7 y=67.9
+Mutual Trust provides integrated wealth services to Australia’s most successful 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=101.9
+families, family businesses, trustees, not-for-profits and individuals.  We build 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=116.9
+purposeful, long-term relationships with our clients to help preserve and grow their 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=131.9
+wealth for future generations and their communities.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=146.9
+Building and sustaining significant family wealth and values does not just happen.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=167.6
+It takes careful planning and deep engagement across generations.  We work with 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=182.6
+our clients to establish a clear shared vision for the purpose of their wealth.  With 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=197.6
+this focus and alignment, we help them create and execute a family strategy to 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=212.6
+achieve their Purpose of Wealth for generations to come.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=227.6
+Initially founded in 1921 by W.L. Baillieu and his four brothers as a vehicle to provide 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=248.3
+accounting and trustee services for the Baillieu family, we have grown and evolved 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=263.3
+over the years to meet the needs of a changing world.  In 2017, following the 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=278.3
+union of Mutual Trust and The Myer Family Company Limited, Australia’s largest 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=293.3
+Multi‑Family Office was formed.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=308.3
+Today, Mutual Trust has over 220 employees and four offices nationally and is the 
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=328.9
+trusted partner to many of Australia’s wealthiest families and individuals.  
+  fonts=['ProximaNova-Light'] sizes=[12.0] italic=False color=0x0 x=39.7 y=343.9
+MELBOURNE
+  fonts=['ProximaNova-Medium'] sizes=[10.0] italic=False color=0xdd971a x=39.7 y=386.5
+Level 32, 360 Collins Street, 
+  fonts=['ProximaNova-Light'] sizes=[10.0] italic=False color=0x0 x=39.7 y=400.5
+Melbourne VIC 3000 
+  fonts=['ProximaNova-Light'] sizes=[10.0] italic=False color=0x0 x=39.7 y=414.5
+T	 +61 3 9605 9500 
+  fonts=['ProximaNova-Light'] sizes=[10.0] italic=False color=0x0 x=39.7 y=428.5
+E	 enquiry.mel@mutualtrust.com.au
+  fonts=['ProximaNova-Light'] sizes=[10.0] italic=False color=0x0 x=39.7 y=442.5
+SYDNEY
+  fonts=['ProximaNova-Medium'] sizes=[10.0] italic=False color=0xdd971a x=39.7 y=463.0
+Level 18, 126 Phillip Street, 
+  fonts=['ProximaNova-Light'] sizes=[10.0] italic=False color=0x0 x=39.7 y=477.0
+Sydney NSW 2000 
+  fonts=['ProximaNova-Light'] sizes=[10.0] italic=False color=0x0 x=39.7 y=491.0
+T	 +61 2 9224 7600 
+  fonts=['ProximaNova-Light'] sizes=[10.0] italic=False color=0x0 x=39.7 y=505.0
+E	 enquiry.syd@mutualtrust.com.au
+  fonts=['ProximaNova-Light'] sizes=[10.0] italic=False color=0x0 x=39.7 y=519.0
+PERTH
+  fonts=['ProximaNova-Medium'] sizes=[10.0] italic=False color=0xdd971a x=264.1 y=386.5
+Ground Floor, 22 Stirling Highway, 
+  fonts=['ProximaNova-Light'] sizes=[10.0] italic=False color=0x0 x=264.1 y=400.5
+Nedlands WA 6009 
+  fonts=['ProximaNova-Light'] sizes=[10.0] italic=False color=0x0 x=264.1 y=414.5
+T	 +61 8 9230 7700 
+  fonts=['ProximaNova-Light'] sizes=[10.0] italic=False color=0x0 x=264.1 y=428.5
+E	 enquiry.per@mutualtrust.com.au
+  fonts=['ProximaNova-Light'] sizes=[10.0] italic=False color=0x0 x=264.1 y=442.5
+ADELAIDE
+  fonts=['ProximaNova-Medium'] sizes=[10.0] italic=False color=0xdd971a x=264.1 y=463.0
+Level 2, 28 Franklin Street, 
+  fonts=['ProximaNova-Light'] sizes=[10.0] italic=False color=0x0 x=264.1 y=477.0
+Adelaide SA 5000 
+  fonts=['ProximaNova-Light'] sizes=[10.0] italic=False color=0x0 x=264.1 y=491.0
+T	 +61 8 7082 3900 
+  fonts=['ProximaNova-Light'] sizes=[10.0] italic=False color=0x0 x=264.1 y=505.0
+E	 enquiry.ade@mutualtrust.com.au
+  fonts=['ProximaNova-Light'] sizes=[10.0] italic=False color=0x0 x=264.1 y=519.0
+Providing all the services required to  
+  fonts=['Baskerville'] sizes=[20.0] italic=False color=0x0 x=751.7 y=121.1
+protect and grow wealth, under one roof
+  fonts=['Baskerville'] sizes=[20.0] italic=False color=0x0 x=737.7 y=145.1
+Family Business Consulting
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=910.4 y=247.7
+Rising Gen Program
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=1044.1 y=247.7
+Family Consulting
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=806.7 y=247.7
+& Succession Planning
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=798.0 y=257.7
+Family Office Consulting
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=674.9 y=247.7
+Indigenous Trustee  
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=683.2 y=444.0
+Services
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=701.9 y=454.0
+Philanthropy
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=936.3 y=342.3
+Trustee Services
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=1049.9 y=342.3
+Agribusiness
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=815.1 y=444.0
+Bookkeeping & Concierge 
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=790.8 y=538.3
+Services
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=822.4 y=548.3
+Custody 
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=943.3 y=538.3
+& Administration
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=928.9 y=548.3
+Portfolio 
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=1063.7 y=538.3
+Management
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=1055.3 y=548.3
+Investment Advisory  
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=741.9 y=634.4
+& Research
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=757.9 y=644.4
+Property Services
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=927.6 y=444.0
+Tax & Accounting 
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=1048.8 y=444.0
+Compliance
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=1058.4 y=454.0
+Tax, Accounting, Consulting 
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=668.1 y=540.7
+& Superannuation 
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=685.5 y=550.7
+Responsible Investment
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=856.1 y=636.2
+Strategic Human  
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=989.9 y=635.4
+Resources Consulting
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=980.6 y=645.4
+Family Dynamics
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=808.5 y=342.0
+Family Council & 
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=688.4 y=342.0
+Governance
+  fonts=['ProximaNova-Light'] sizes=[8.0] italic=False color=0x0 x=696.0 y=352.0
+59
+  fonts=['Baskerville'] sizes=[8.0] italic=False color=0x7f8a9a x=1142.9 y=795.5
+58
+  fonts=['Baskerville'] sizes=[8.0] italic=False color=0x7f8a9a x=39.7 y=795.5
+Why The Modern Family Office Matters
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x7f8a9a x=427.1 y=795.7
+Contributors to this report
+  fonts=['ProximaNova-Light'] sizes=[7.0] italic=False color=0x7f8a9a x=646.3 y=795.7

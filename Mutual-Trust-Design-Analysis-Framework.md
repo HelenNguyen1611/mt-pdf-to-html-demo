@@ -200,7 +200,7 @@ _Phần này giữ nguyên giá trị phân tích thực tế từ PDF. Không d
 
 ## B.0 Danh sách tài liệu & phân nhóm
 
-Sau khi đọc toàn bộ 7 PDF, chúng chia thành 3 nhóm rõ rệt theo mục đích và cấu trúc trình bày, không phải 7 thiết kế khác nhau:
+Sau khi đọc toàn bộ các PDF, chúng chia thành 4 nhóm rõ rệt theo mục đích và cấu trúc trình bày, không phải mỗi PDF là 1 thiết kế khác nhau:
 
 **Nhóm A — Market Review** (báo cáo thị trường định kỳ, **nhiều số liệu**: bullet + **heat table** + **lưới chart**)
 
@@ -219,7 +219,11 @@ Sau khi đọc toàn bộ 7 PDF, chúng chia thành 3 nhóm rõ rệt theo mục
 - `Perspective_from_Brendan_Henderson_Double_Death_Tax_Trap.pdf`
 - `Strengtheningfarmsafety–nowandforfuture-generations (1).pdf`
 
-Cả 3 nhóm dùng chung hệ nhận diện (font family + palette brand khớp Style Guide) nhưng khác nhau ở bố cục trang bìa, mật độ nội dung và một số component đặc thù.
+**Nhóm D — White Paper** (báo cáo nghiên cứu dài, nhiều trang, co-brand với tổ chức đối tác — xem B.7 §Nhóm D — White Paper để biết token/component đầy đủ)
+
+- `Why_The_Modern_Family_Office_Matters.pdf` (co-brand Mutual Trust × University of Adelaide) — tham chiếu build `website/why-the-modern-family-office-matters.html`
+
+Cả 4 nhóm dùng chung hệ nhận diện (font family + palette brand khớp Style Guide) nhưng khác nhau ở bố cục trang bìa, mật độ nội dung và một số component đặc thù.
 
 ## B.1 Font usage quan sát trong PDF (đối chiếu Style Guide)
 
@@ -853,14 +857,18 @@ Cùng pattern, khác nhấn mạnh → modifier (`.wp-model-card--accent`, `.wp-
 | Case study beige | `.wp-spread__page--case-study` | `#faefe0` trên **page** |
 | 4 card SFO/BFO/VFO/MFO | `.wp-model-grid` | MFO = `--accent` |
 | Bảng Model / Strengths / Challenges | `.wp-compare-table` | Bullet **ink**, không vàng |
-| Timeline Wealth 1.0–3.0 | `.wp-era-grid` | 3.0 = `--accent` |
-| Gemstone 5 facets | `.wp-gemstone` | SVG PDF, không PNG ghép |
-| 3 kiểu wealth transfer thành công | `.wp-outcome-list` | p20 |
-| Contributors | `.wp-contributors` | Tên Medium caps vàng |
+| Timeline Wealth 1.0–3.0 | `.wp-era-grid` | 3.0 = `--accent`; icons SVG; stub rows Family wealth theory / Financial services |
+| Gemstone 5 facets | `.wp-gemstone` | SVG PDF, không PNG ghép; overlay label + legend mobile |
+| Quote italic **trong body** (không hộp beige) | `.wp-inline-quote` | p15, p16, p18, p19 — ink italic, indent; attrib roman |
+| Facet gold lede 14pt | `.wp-facet-lede` | Dưới `.wp-subhead` facet 1–5 |
+| QR / video CTA | `.wp-video-cta` | p19 case study — `href` URI, không `#` |
+| 3 kiểu wealth transfer thành công | `.wp-outcome-list` | p20 — icon SVG + hàng xám xen kẽ |
+| Lưới 19 dịch vụ | `.wp-services` | p29 phải — HTML+SVG, nền `#f2f3f4`; **không** PNG ghép; hàng cuối 3 ô **căn giữa**; icon slot 43×36pt `object-fit: contain` (title cùng baseline) |
+| Contributors | `.wp-contributors` | Tên Medium caps vàng; ảnh render PDF |
 | About + logo | `.wp-about` | p28–29 trái |
 | Contact offices | `.wp-offices` + `.wp-spread__page--offices` | `tel:` |
-| Footnotes i–xvi | `.wp-endnotes` | p30 |
-| Legal / back cover | `.wp-legal` / `.wp-back` | Bỏ nửa đen trống p31 phải |
+| Footnotes i–v | `.wp-endnotes` | p30 — marker Proxima Light **roman** 7pt (không italic); title sách `em` LightIt |
+| Legal / back cover | `.wp-legal` / `.wp-back` | Bỏ nửa đen trống p31 phải; logo MT + UoA **căn giữa** (`.wp-back .wp-cover__brands` `width: max-content`, crop PNG UoA hết vùng đen trống) |
 | Body liên tục nhiều trang in | `.wp-spread--flow` | Gap `--wp-intra-block-gap` |
 
 **Hai quote — không trộn:**
@@ -902,7 +910,7 @@ Nguyên tắc giống nhóm B QO (`template-quarterly-outlook.html`: `--qo-band-
 | `--wp-title-gap-after` | 32px | 24px | Title + partial rule → body (Purpose, TOC, Welcome, Introduction) |
 | `--wp-section-head-gap` | 24px | 24px | **Heading ↔ khối liền kề** (`.wp-body h2` / `.wp-subhead`): cùng gap **trên và dưới**. Không dùng `--wp-section-gap` (48px) làm margin-top heading. Đoạn ngay trước heading: `margin-bottom: 0` (`:has(+ h2)`) để không cộng `--wp-para-gap` |
 | `--wp-ack-gap-before` | 48px | 32px | Copy chính → legal/ack (Purpose) — **không** `margin-top: auto` |
-| `--wp-block-gap` | 48px (`--wp-page-gap`) | 32px (`--space-5`) | **`margin-top` trên `.wp-spread__page`** — chỉ khi **tách khối thật** (section mới, visual page, TOC, cover↔body). **Không** dùng cho nội dung liên tục bị cắt bởi pagination PDF |
+| `--wp-block-gap` | 48px (`--wp-page-gap`) | 32px (`--space-5`) | **`margin-top` trên `.wp-spread__page`** — chỉ khi **tách khối thật** (section mới, visual page, TOC, cover↔body, **legal→`.wp-back`**). Cũng `padding-bottom` trên `.wp-legal`. **Không** dùng cho nội dung liên tục bị cắt bởi pagination PDF |
 | `--wp-intra-block-gap` | 24px (`--space-4`) | 24px | Text ↔ ảnh/chart/stat **cùng page**; figure trong `.wp-body.wp-flow`; **gap giữa page cùng nội dung** (`.wp-spread--flow`) — **bằng** khoảng cách khối nội bộ thông thường |
 | `--wp-quote-stack-gap` | 48px | 48px | Giữa hai `.wp-pull-quote` |
 
@@ -913,10 +921,11 @@ Nguyên tắc giống nhóm B QO (`template-quarterly-outlook.html`: `--qo-band-
 Ranh giới trang PDF **không** đồng nghĩa ranh giới HTML. Khi cùng một section/article dài trải nhiều trang in:
 
 1. **Ưu tiên:** append copy vào **cùng** `.wp-body` / `.wp-flow` div trước — `<p>`, `<h2>`, `<ul>`, `<figure>` nối tiếp, **không** mở `.wp-spread__page` mới chỉ vì PDF hết trang. Ví dụ chunk 1: **Methodology** nối sau “What is a Family Enterprise?” trong **một** `.wp-body.wp-flow` — **không** `.wp-spread__page--right` riêng (tránh `--wp-block-gap` 48px).
-2. **Không** thêm `--wp-block-gap` (48px) giữa các đoạn liên tục — khi bắt buộc tách wrapper DOM, dùng **`--wp-intra-block-gap`** (cùng gap khối nội bộ thông thường, 24px).
-3. Trong **một** `.wp-body.wp-flow`: chỉ `--wp-para-gap` giữa đoạn; figure/stat/chart cách body bằng `--wp-intra-block-gap`.
-4. **Chỉ tách page block + `--wp-block-gap`** khi có thành phần tách khối rõ: section opener / visual full-bleed, TOC, Purpose, pull-quote panel, cover↔body, section mới (Section 2, 3…).
-5. Khi chunk build bắt buộc tách DOM: bọc chuỗi continuation bằng **`.wp-spread--flow`** — gap giữa page wrapper / spread liền kề = **`--wp-intra-block-gap`**, không `--wp-block-gap`.
+2. **Trang nền màu cùng nội dung** (`.wp-spread__page--case-study`, pull panel, v.v.): **không** tách page HTML theo pagination PDF. Nối continuation vào **cùng** page wrapper (cùng `background`) — tránh khe trắng giữa hai khối beige. Case study khác nhau nhưng liền nhau cùng nền → cùng parent, nhiều `.wp-case-study`. Continuation cùng story → cùng `.wp-case-study` (không lặp label/title).
+3. **Không** thêm `--wp-block-gap` (48px) giữa các đoạn liên tục — khi bắt buộc tách wrapper DOM, dùng **`--wp-intra-block-gap`** (cùng gap khối nội bộ thông thường, 24px).
+4. Trong **một** `.wp-body.wp-flow`: chỉ `--wp-para-gap` giữa đoạn; figure/stat/chart cách body bằng `--wp-intra-block-gap`.
+5. **Chỉ tách page block + `--wp-block-gap`** khi có thành phần tách khối rõ: section opener / visual full-bleed, TOC, Purpose, pull-quote panel, cover↔body, section mới (Section 2, 3…).
+6. Khi chunk build bắt buộc tách DOM: bọc chuỗi continuation bằng **`.wp-spread--flow`** — gap giữa page wrapper / spread liền kề = **`--wp-intra-block-gap`**, không `--wp-block-gap`.
 
 ```html
 <!-- Đúng — body dài liên tục, một div -->
@@ -942,6 +951,7 @@ Ranh giới trang PDF **không** đồng nghĩa ranh giới HTML. Khi cùng mộ
 - **Không** dùng `margin-top` trên `.wp-spread + .wp-spread` — spacing chỉ trên **`.wp-spread__page`** (trừ `.wp-spread--flow`, xem trên):
   - `.wp-spread__page + .wp-spread__page` — mặc định `--wp-block-gap`; **`.wp-spread--flow .wp-spread__page + .wp-spread__page`** và **`.wp-spread--flow + .wp-spread--flow > .wp-spread__page:first-child`** → **`--wp-intra-block-gap`** (bằng gap khối nội bộ);
   - `.wp-single + .wp-spread > .wp-spread__page:first-child` — sau cover;
+  - `.wp-spread + .wp-single` — trước back cover (`.wp-back`): **`--wp-block-gap`** (không `0` — tránh legal dính sát nền đen);
   - `.wp-spread + .wp-spread > .wp-spread__page:first-child` — sang spread mới (**`--wp-block-gap`** nếu section break; **`--wp-intra-block-gap`** nếu spread trước/sau đều `.wp-spread--flow`).
 - Ảnh band / hero + body **cùng page**: `.wp-spread__page > .wp-spread__inner:not(:first-child) { margin-top: var(--wp-intra-block-gap) }`.
 - Ảnh full-bleed trong page có text: negative `margin-inline` + `width` breakout trên `.wp-photo-hero`, `.wp-band`, `.wp-photo-band`.
@@ -1038,8 +1048,8 @@ Ranh giới trang PDF **không** đồng nghĩa ranh giới HTML. Khi cùng mộ
 - **Section opener** (ảnh nền + chữ trắng 30pt): wrapper **`.wp-section-opener`**; kicker **`.wp-section-opener__kicker`** (Proxima caps); title **`.wp-section-opener__title`**.
 - Introduction (1 dòng): `class="wp-section-opener__title wp-title-rule"` → rule 48pt mép trái title.
 - Section title nhiều dòng, rule dưới từ đầu dòng 2 (vd. “impact”): bọc từ trong **`<span class="wp-title-rule__mark">impact</span>`** — rule 48pt cố định, không full-width từ.
-- Bullet list purpose (nền đen): marker `\2022` trắng tại `left: 15.3pt`, text indent `26.6pt`.
-- **Bullet list body (nền trắng, p5/p6+):** marker `\2022` màu **`#dd971a`** (`--wp-list-bullet-color`) — **không** dùng dot tròn đen B.9. Đo PDF: bullet `x +17pt` từ cột content, text indent `28.3pt` (`--wp-list-bullet-x-pt`, `--wp-list-text-indent-pt`). Ordered list: số màu ink, cùng indent.
+- Bullet list purpose (nền đen): marker `•` (U+2022) trắng tại `left: 15.3pt`, text indent `26.6pt`.
+- **Bullet list body (nền trắng, p5/p6+):** marker `•` (U+2022) màu **`#dd971a`** (`--wp-list-bullet-color`) — **không** dùng dot tròn đen B.9. CSS: `content: '•';` — **cấm** `content: '\2022'` (JSON/skill pack nuốt `\`, còn lại chữ `2022`). Đo PDF: bullet `x +17pt` từ cột content, text indent `28.3pt` (`--wp-list-bullet-x-pt`, `--wp-list-text-indent-pt`). Ordered list: số màu ink, cùng indent.
 
 **Partial title rule — markup mẫu:**
 
@@ -1118,17 +1128,23 @@ Panel số liệu / biểu đồ có legend trong White Paper **không** export 
 
 PDF spread phải có case study thường **fill cả nửa trang** màu beige (đo `get_drawings()` — pilot `#faefe0`), **khác** pull-quote panel `#faefdf`.
 
-- Wrapper: **`.wp-spread__page--case-study`** trên page chứa `.wp-case-study` (+ `.wp-photo-band` nếu có).
+- Wrapper: **`.wp-spread__page--case-study`** trên page chứa `.wp-case-study` (+ `.wp-photo-band` nếu có). Continuation cùng nền **không** mở page mới.
 - Nền: `background: var(--wp-case-study-bg)` trên **page wrapper** — không chỉ inner text, **không** nền trắng mặc định.
 - `padding-bottom: var(--wp-surface-pad-bottom)` trên page modifier (breathing room cuối trang tinted).
 - Ảnh band đầu trang: vẫn `.wp-photo-band` breakout full-bleed trong page; nền beige hiện quanh/dưới ảnh như PDF.
 - Markup: `.wp-case-study` + `__label` / `__title` / body `<p>` + `__note` (privacy — 7pt Medium, không `.wp-footnote`).
+- `.wp-case-study + .wp-case-study` → `--wp-intra-block-gap` (hai story trong cùng page).
 
 ```html
-<div class="wp-spread__page wp-spread__page--right wp-spread__page--case-study">
+<div class="wp-spread__page wp-spread__page--case-study">
   <figure class="wp-photo-band wp-photo-band--short">…</figure>
   <div class="wp-spread__inner wp-body">
-    <div class="wp-case-study">…</div>
+    <div class="wp-case-study">…story 1…</div>
+    <div class="wp-case-study">…story 2 (cùng nền, không page mới)…</div>
+  </div>
+  <figure class="wp-photo-band wp-photo-band--short">…</figure>
+  <div class="wp-spread__inner wp-body">
+    <div class="wp-case-study">…story 3 full, gồm continuation PDF page sau…</div>
   </div>
 </div>
 ```
@@ -1144,7 +1160,11 @@ PDF spread phải có case study thường **fill cả nửa trang** màu beige 
 - Gạch chân title bằng `text-decoration` hoặc `::after` riêng từng component — dùng **`.wp-title-rule`** / **`.wp-title-rule__mark`**.
 - **Composite PNG** cho stat board / donut / gemstone / model grid / compare table — dùng class catalog HTML+SVG.
 - Layout PDF mới viết thẳng one-off trên trang bài, không lên template — lần convert sau không base được. Luôn: template CSS + catalog comment + hàng lookup MD **trước** khi dùng trên HTML bài.
-- Cover footer logos **căn giữa** hoặc `flex: 1` chia cột — PDF căn **trái** (`justify-content: flex-start` trên `.wp-cover__brands`).
+- Cover footer logos **căn giữa** hoặc `flex: 1` chia cột — PDF cover căn **trái** (`justify-content: flex-start` trên `.wp-cover__footer .wp-cover__brands`). **Ngoại lệ p32 `.wp-back`:** logo **phải** căn giữa (`width: max-content`) — không copy rule cover.
+- Endnote marker italic / serif — PDF roman Proxima 7pt.
+- Services `display: grid` 4 cột — hàng lẻ dồn trái; dùng flex wrap + `justify-content: center`.
+- Tách `.wp-spread__page--case-study` theo pagination PDF — khe trắng giữa khối beige.
+- `.wp-spread + .wp-single { margin-top: 0 }` — legal dính back cover đen.
 - Growth stat icon PNG + clip wrapper — dùng **inline SVG path** PDF + token overlap/lift.
 
 **QA chunk 1 (p0–p3):** cover 3 vùng + gradient + footer logos; title 2 dòng desktop không clip; mobile cover ≥100vh; purpose monogram góc dưới-phải crop một phần, màu `#000c1d`; title underline 67.1pt; mọi trang text cùng mép trái 51.3pt; mobile gutter 20px; TOC số trang vàng `#dd971a`; không horizontal scroll.
@@ -1181,15 +1201,34 @@ Assets: `website/assets/why-the-modern-family-office-matters/images/chunk-02/`.
 | p15 | `.wp-spread--flow` body |
 | p16 trái | `.wp-gemstone` |
 | p16 phải | `.wp-photo-band` + facet 1 body |
-| p17–18, p22–23 | `.wp-spread__page--case-study` |
-| p19, p21, p24 | Facet heading + `.wp-list` / photo |
-| p20 | `.wp-callout` + `.wp-outcome-list` |
-| p25 | Conclusion `.wp-body` |
+| p17–19 | `.wp-spread__page--case-study` (Chauvel, Ramsey, Brandt) + `.wp-video-cta` p19 |
+| p20 trái | `.wp-photo-band` + `.wp-callout` |
+| p20 phải | `.wp-outcome-list` + `.wp-callout` |
+| p21 trái | `.wp-page-visual` |
+| p21 phải | Facet 4 `.wp-subhead` + `.wp-facet-lede` + `.wp-inline-quote` |
+| p22–23 | `.wp-spread__page--case-study` (Mireault, Edman, O’Brien) |
+| p24 trái | Facet 5 + `.wp-inline-quote` |
+| p24 phải | `.wp-spread__page--case-study` Alroy |
+| p25 | Conclusion `.wp-display-title` + `.wp-list--ordered` + photo |
 | p26–27 | `.wp-contributors` |
-| p28–29 | `.wp-about` + `.wp-offices` |
-| p30 | `.wp-endnotes` |
-| p31 trái | `.wp-legal` — **bỏ** p31 phải đen trống |
-| p32 | `.wp-back` |
+| p28 trái | `.wp-about` + `.wp-about__covers` |
+| p28 phải | `.wp-page-visual` |
+| p29 trái | `.wp-about` + `.wp-offices` (`tel:` / `mailto:`) |
+| p29 phải | `.wp-services` |
+| p30 trái | `.wp-endnotes` |
+| p30 phải | `.wp-page-visual` |
+| p31 trái | `.wp-legal` — **bỏ** p31 phải đen trống; `padding-bottom: var(--wp-block-gap)` |
+| p32 | `.wp-back` — logo **căn giữa trang** (khác cover footer căn trái) |
+
+**QA / Tránh — UI review (endnotes, services, case study, back cover) — bắt buộc:**
+
+Năm lỗi lặp khi convert WP. Ghi vào template CSS **trước** khi đóng chunk 6. Cover footer **không** dùng các rule back-cover.
+
+1. **`.wp-endnotes` marker i–v — roman sans, không italic serif.** PDF: `ProximaNova-Light` 7pt, `italic=False`. Cấm `font-style: italic` trên `.wp-endnotes__mark` (browser synthesize + `font-weight: 300` không có face Light → rơi Baskerville italic). CSS: `font-family: var(--font-sans); font-size: var(--wp-note-size); font-weight: 400; font-style: normal; font-synthesis: none`. Body note `--wp-body-size`. Chỉ title sách trong `<em>` (LightIt).
+2. **`.wp-services` hàng cuối 3 ô căn giữa; icon cùng slot cao.** PDF 19 ô / 4 cột; 3 ô cuối **căn giữa** (trống hai bên). Cấm `grid` 4 cột (dồn trái). CSS: `display: flex; flex-wrap: wrap; justify-content: center`; item `flex: 0 0 25%`. Mobile: `flex-basis: 50%`. **Icon:** không `width` cố + `height: auto` (SVG tỉ lệ khác → title lệch hàng). Slot cố định `width: 43pt` × `height: 36pt` scaled (`object-fit: contain`) — mọi `.wp-services__label` bắt đầu cùng baseline trong hàng. `nth-child(4n)`, `last-child` bỏ `border-right`.
+3. **Case study nền beige — một parent, không tách page.** Cùng `#faefe0` + cùng story (hoặc nhiều story liền nhau) → **một** `.wp-spread__page--case-study`. Continuation O’Brien không mở page mới (khe trắng). Nhiều story (Mireault + Edman) = nhiều `.wp-case-study` trong cùng page. Xem markup case study phía trên.
+4. **Back cover logo căn giữa; cover footer căn trái.** `.wp-cover__footer .wp-cover__brands` = `justify-content: flex-start` + `width: 100%`. `.wp-back`: `display: flex; align-items: center; justify-content: center`; `padding-inline` **đối xứng** (`--wp-page-pad-start` hai bên — không pad-end lệch). `.wp-back .wp-cover__brands`: `flex: 0 0 auto; width: max-content` (không `width: 100%`). Crop PNG UoA hết dải đen trống bên phải (intrinsic rộng làm logo trông lệch trái dù đã center). `width: auto` trên flex item **không** đủ — phải `max-content`.
+5. **Khe legal → back cover.** Cấm `.wp-spread + .wp-single { margin-top: 0 }` (legal dính nền đen). Đúng: `.wp-spread + .wp-single { margin-top: var(--wp-block-gap) }` + `.wp-legal { padding-bottom: var(--wp-block-gap) }`. (`.wp-body p:last-child { margin-bottom: 0 }` nuốt gap đoạn cuối nếu không có padding trên `.wp-legal`.)
 
 **Trang chỉ có ảnh (full-bleed visual):**
 
@@ -1380,7 +1419,7 @@ _Tham chiếu đầy đủ quy trình visual: **C.6**._
 11. List/bullet theo B.9 + C.6.6 — không dùng browser default.
 12. **Nhóm A — heat table + chart grid:** build theo B.6.2 / B.7.2 (`template-market-review.html`); desktop đủ cột + lưới 2×3; mobile table scroll-x + chart stack (B.6.3 / C.6.10). Hero overlay placement: B.7.1.
 12b. **Nhóm B — Quarterly Outlook:** copy `template-quarterly-outlook.html`; hero stacked logo = **½ width kicker**; H1 dưới ảnh; body 10pt; lede Proxima Ochre cùng cỡ body (selector thắng `.qo-body h2`); text|chart **đo bbox** (`.qo-split` / `.qo-float`, không cap 320px); `.qo-quote` roman; `.qo-footer` back cover (B.7 B).
-12c. **Nhóm D — White Paper:** copy `template-white-paper.html`; chọn class từ **Component catalog**. Layout chưa có class → **thêm component vào template + hàng lookup MD trước**, rồi mới build bài (mục *Layout mới → component*). Typography `--text-*`; `.wp-spread--flow`; infographic HTML+SVG; cover footer căn trái; monogram `background-image` `#000c1d`. Quote trong body = `.wp-callout`, không `.wp-pull-quote`.
+12c. **Nhóm D — White Paper:** copy `template-white-paper.html`; chọn class từ **Component catalog**. Layout chưa có class → **thêm component vào template + hàng lookup MD trước**, rồi mới build bài (mục *Layout mới → component*). Typography `--text-*`; `.wp-spread--flow`; infographic HTML+SVG; **cover footer căn trái / back cover logo căn giữa**; monogram `background-image` `#000c1d`. Quote trong body = `.wp-callout`, không `.wp-pull-quote`. Endnotes roman; services flex center hàng cuối; case study beige một parent; legal→back `--wp-block-gap` (QA UI review p29–p32).
 13. **Footer/legal** — bắt đầu từ cấu trúc chuẩn **B.5**; đo PDF rồi override (B.5.4). Không số trang / running footer.
 14. **Không tái tạo pagination của PDF trên web.** Nội dung chuyển thành continuous document flow. Page boundary của PDF chỉ dùng làm checkpoint trong visual QA để phát hiện cumulative spacing/typography drift (C.6.8–C.6.9).
 15. Chạy Visual Comparison Loop (C.6.8) — tối đa 3 vòng correction nếu còn khác biệt đáng kể; **desktop fidelity đạt trước** rồi mới responsive (C.6.10).
@@ -1433,7 +1472,7 @@ Trước khi viết HTML/CSS phải xác định:
 - **Nhóm A — hero overlay:** `content_x`, `title_y`, page W (B.7.1)
 - **Nhóm A — chart grid:** bbox 6 panel, thứ tự đọc, có/không source trong ảnh; chuẩn bị clip riêng từng panel (B.7.2)
 - **Nhóm B — Outlook:** hero logo = ½ kicker; H1 dưới ảnh; lede size/family; **màu heading đo PDF** (June `#D17B19`, không ép `#CB962E` nếu lệch rõ); text|chart bbox %; para-gap dày; back-cover padding A4 quanh logo+tagline (B.7 B)
-- **Nhóm D — White Paper:** spread 1 hàng/trang; **gặp panel chưa có class → thêm vào template + bảng catalog trước khi build bài**; catalog (callout ≠ pull-quote; model-grid / compare-table / gemstone / era-grid); `--wp-content-x-pt`; `.wp-spread--flow`; cover footer căn trái; monogram `#000c1d`
+- **Nhóm D — White Paper:** spread 1 hàng/trang; **gặp panel chưa có class → thêm vào template + bảng catalog trước khi build bài**; catalog (callout ≠ pull-quote; model-grid / compare-table / gemstone / era-grid); `--wp-content-x-pt`; `.wp-spread--flow`; cover footer căn trái; **back cover logo căn giữa**; endnotes roman; services hàng cuối center; case study beige không tách page; legal→`.wp-back` `--wp-block-gap`; monogram `#000c1d`
 
 Không bắt đầu từ browser default hoặc generic web styling.
 
@@ -1605,7 +1644,7 @@ Một conversion chỉ hoàn thành khi:
 - **Nhóm A desktop:** heat table khớp cấu trúc/section/heat colours PDF; chart grid **2×3** với **6 asset tách**; so side-by-side với trang table + trang chart
 - **Mobile/tablet:** hero tỉ lệ hợp lý (B.4 / C.6.10) — không cắt ảnh mất subject, không mất/đè chữ overlay; logo + kicker đọc được
 - **Nhóm A mobile:** table scroll-x cục bộ; chart stack đọc được (C.6.10)
-- **Nhóm D:** stat/donut HTML+SVG (không composite PNG); donut stack mobile; `.wp-spread--flow` gap đúng `--wp-intra-block-gap`
+- **Nhóm D:** stat/donut HTML+SVG (không composite PNG); donut stack mobile; `.wp-spread--flow` gap đúng `--wp-intra-block-gap`; endnotes marker roman sans; services hàng lẻ căn giữa; case study beige một parent; `.wp-back` logo giữa; khe legal→back = `--wp-block-gap`
 - font thực sự load đúng; typography / content width / spacing rhythm gần PDF (desktop)
 - line wrapping không lệch lớn; bullet/list đúng geometry
 - links: đúng màu/gạch chân **và** đúng `href` (không `#`, không placeholder); component đặc thù đúng

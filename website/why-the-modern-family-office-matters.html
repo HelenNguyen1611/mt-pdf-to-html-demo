@@ -58,6 +58,28 @@
         font-display: swap;
       }
 
+      @font-face {
+        font-family: 'Proxima Nova';
+        src:
+          url('assets/fonts/ProximaNova-Semibold.woff2') format('woff2'),
+          url('assets/fonts/ProximaNova-Semibold.woff') format('woff'),
+          url('assets/fonts/ProximaNova-Semibold.ttf') format('truetype');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Proxima Nova';
+        src:
+          url('assets/fonts/ProximaNova-RegularIt.woff2') format('woff2'),
+          url('assets/fonts/ProximaNova-RegularIt.woff') format('woff'),
+          url('assets/fonts/ProximaNova-RegularIt.ttf') format('truetype');
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;
+      }
+
       :root {
         --font-serif: 'Baskerville', Georgia, 'Times New Roman', serif;
         --font-sans: 'Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
@@ -130,6 +152,12 @@
         --wp-model-body: #f3f3f4;
         --wp-model-accent-head: #f7e3c8;
         --wp-model-accent-body: #fdf6ed;
+        --wp-era-years-color: #7d8898;
+        --wp-era-accent-years: #e4a848;
+        --wp-gemstone-caption-color: #213a4f;
+        --wp-facet-lede-size: calc(
+          var(--page-max) * 14 / var(--wp-page-w-pt)
+        );
         --wp-stat-number-size: 49.33px;
         --wp-stat-number-size-lg: 53.33px;
         --wp-stat-unit-size: 17.07px;
@@ -222,9 +250,12 @@
       }
 
       .wp-spread + .wp-spread,
-      .wp-single + .wp-spread,
-      .wp-spread + .wp-single {
+      .wp-single + .wp-spread {
         margin-top: 0;
+      }
+
+      .wp-spread + .wp-single {
+        margin-top: var(--wp-block-gap);
       }
 
       .wp-spread__page + .wp-spread__page {
@@ -253,7 +284,10 @@
       .wp-body.wp-flow > :is(
         h2, h3, section, figure,
         .wp-stat-board, .wp-donut-panel, .wp-photo-band, .wp-pull-panel,
-        .wp-callout, .wp-callout-stack, .wp-compare-table, .wp-model-grid
+        .wp-callout, .wp-callout-stack, .wp-compare-table, .wp-model-grid,
+        .wp-era-grid, .wp-gemstone, .wp-inline-quote, .wp-video-cta,
+        .wp-outcome-list, .wp-contributors, .wp-about, .wp-services,
+        .wp-endnotes, .wp-legal
       ):not(:first-child) {
         margin-top: var(--wp-intra-block-gap);
       }
@@ -299,6 +333,10 @@
       .wp-spread__page--case-study {
         background: var(--wp-case-study-bg);
         padding-bottom: var(--wp-surface-pad-bottom);
+      }
+
+      .wp-spread__page--case-study + .wp-spread__page--case-study {
+        margin-top: 0;
       }
 
       .wp-spread__page--left {
@@ -974,6 +1012,10 @@
         margin: 0;
       }
 
+      .wp-case-study + .wp-case-study {
+        margin-top: var(--wp-intra-block-gap);
+      }
+
       .wp-case-study__label {
         margin: 0 0 calc(var(--page-max) * 8 / var(--wp-page-w-pt));
         font-size: var(--wp-legal-size);
@@ -1194,7 +1236,7 @@
       }
 
       .wp-purpose .wp-list li::before {
-        content: '\2022';
+        content: '•';
         left: calc(var(--page-max) * 15.3 / var(--wp-page-w-pt));
         top: 0;
         width: auto;
@@ -1222,7 +1264,7 @@
 
       /* PDF body bullets: gold • (Proxima 12pt), not black dot — p5/p6 */
       .wp-list li::before {
-        content: '\2022';
+        content: '•';
         position: absolute;
         left: calc(
           var(--page-max) * var(--wp-list-bullet-x-pt) / var(--wp-page-w-pt)
@@ -1669,6 +1711,718 @@
           display: none;
         }
       }
+
+      /* Chunk 4 — era grid, gemstone, facet lede, inline quotes, video CTA */
+      .wp-era-grid {
+        margin: var(--wp-intra-block-gap) 0;
+      }
+
+      .wp-era-grid__title {
+        margin: 0 0 calc(var(--page-max) * 14 / var(--wp-page-w-pt));
+        padding-bottom: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        border-bottom: calc(var(--page-max) * 0.5 / var(--wp-page-w-pt)) solid
+          var(--wp-accent-gold);
+        font-family: var(--font-sans);
+        font-size: calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        font-weight: 600;
+        line-height: 1.35;
+      }
+
+      .wp-era-grid__board {
+        display: grid;
+        grid-template-columns: minmax(4.2em, 0.38fr) 1fr 1fr 1fr;
+        gap: 0;
+      }
+
+      .wp-era-grid__corner {
+        background: var(--color-white);
+      }
+
+      .wp-era-grid__stub {
+        margin: 0;
+        padding: calc(var(--page-max) * 10 / var(--wp-page-w-pt))
+          calc(var(--page-max) * 6 / var(--wp-page-w-pt));
+        background: var(--color-white);
+        font-family: var(--font-sans);
+        font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        line-height: 1.25;
+        text-transform: uppercase;
+      }
+
+      .wp-era {
+        min-width: 0;
+        background: var(--wp-model-body);
+      }
+
+      .wp-era__head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 4px;
+        min-height: calc(var(--page-max) * 84 / var(--wp-page-w-pt));
+        padding: calc(var(--page-max) * 10 / var(--wp-page-w-pt))
+          calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        background: var(--wp-model-head);
+        text-align: center;
+      }
+
+      .wp-era__icon {
+        display: block;
+        width: calc(var(--page-max) * 28 / var(--wp-page-w-pt));
+        height: auto;
+        margin-bottom: 2px;
+      }
+
+      .wp-era__name {
+        margin: 0;
+        font-family: var(--font-sans);
+        font-size: calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .wp-era__years {
+        margin: 0;
+        font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        color: var(--wp-era-years-color);
+      }
+
+      .wp-era__body {
+        margin: 0;
+        padding: calc(var(--page-max) * 10 / var(--wp-page-w-pt))
+          calc(var(--page-max) * 8 / var(--wp-page-w-pt))
+          calc(var(--page-max) * 12 / var(--wp-page-w-pt));
+        list-style: none;
+        font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        font-weight: 400;
+        line-height: 1.4;
+        background: var(--wp-model-body);
+      }
+
+      .wp-era__body li {
+        position: relative;
+        margin: 0 0 0.45em;
+        padding-left: 0.9em;
+      }
+
+      .wp-era__body li::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: var(--color-ink);
+        font-size: inherit;
+      }
+
+      .wp-era--accent .wp-era__head {
+        background: var(--wp-model-accent-head);
+      }
+
+      .wp-era--accent,
+      .wp-era--accent .wp-era__body {
+        background: var(--wp-model-accent-body);
+      }
+
+      .wp-era--accent .wp-era__name {
+        color: var(--wp-accent-gold);
+      }
+
+      .wp-era--accent .wp-era__years {
+        color: var(--wp-era-accent-years);
+      }
+
+      .wp-era-grid__emph {
+        margin: var(--wp-intra-block-gap) 0 0;
+        font-weight: 600;
+      }
+
+      .wp-facet-lede {
+        margin: 0 0 var(--wp-para-gap);
+        font-family: var(--font-sans);
+        font-size: var(--wp-facet-lede-size);
+        font-weight: 400;
+        line-height: 1.35;
+        color: var(--wp-accent-gold);
+      }
+
+      .wp-inline-quote {
+        margin: var(--wp-para-gap) 0;
+        padding: 0 0 0 calc(var(--page-max) * 24 / var(--wp-page-w-pt));
+        border: 0;
+      }
+
+      .wp-inline-quote p {
+        margin: 0;
+        font-family: var(--font-sans);
+        font-size: var(--wp-body-size);
+        font-style: italic;
+        font-weight: 400;
+        line-height: var(--wp-body-lh);
+        color: var(--color-ink);
+      }
+
+      .wp-inline-quote__attrib {
+        display: block;
+        margin-top: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        font-family: var(--font-sans);
+        font-size: var(--wp-body-size);
+        font-style: normal;
+        font-weight: 400;
+        line-height: var(--wp-body-lh);
+        color: var(--color-ink);
+      }
+
+      .wp-gemstone {
+        margin: var(--wp-intra-block-gap) 0 0;
+      }
+
+      .wp-gemstone__wrap {
+        position: relative;
+      }
+
+      .wp-gemstone__canvas {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .wp-gemstone__overlays {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      .wp-gemstone__kicker,
+      .wp-gemstone__purpose,
+      .wp-gemstone__core,
+      .wp-gemstone__label,
+      .wp-gemstone__caption {
+        position: absolute;
+        margin: 0;
+        font-family: var(--font-sans);
+      }
+
+      .wp-gemstone__kicker {
+        top: 2.2%;
+        left: 0;
+        right: 0;
+        font-size: calc(var(--page-max) * 12 / var(--wp-page-w-pt));
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-align: center;
+        text-transform: uppercase;
+        color: #5d5d60;
+      }
+
+      .wp-gemstone__purpose {
+        top: 9.4%;
+        left: 0;
+        right: 0;
+        font-size: calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        text-align: center;
+        text-transform: uppercase;
+        color: #5d5d60;
+      }
+
+      .wp-gemstone__core {
+        top: 46.5%;
+        left: 42.5%;
+        width: 15%;
+        font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        line-height: 1.15;
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--color-white);
+      }
+
+      .wp-gemstone__label {
+        font-size: calc(var(--page-max) * 7.5 / var(--wp-page-w-pt));
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        line-height: 1.15;
+        text-align: center;
+        text-transform: uppercase;
+        color: #7d8898;
+      }
+
+      .wp-gemstone__label--learn {
+        top: 36.5%;
+        left: 33%;
+        width: 14%;
+      }
+
+      .wp-gemstone__label--community {
+        top: 37%;
+        left: 53.5%;
+        width: 12%;
+      }
+
+      .wp-gemstone__label--unity {
+        top: 54%;
+        left: 31%;
+        width: 13%;
+      }
+
+      .wp-gemstone__label--financial {
+        top: 54%;
+        left: 56%;
+        width: 12%;
+      }
+
+      .wp-gemstone__label--venture {
+        top: 66%;
+        left: 38%;
+        width: 24%;
+      }
+
+      .wp-gemstone__caption {
+        font-size: calc(var(--page-max) * 9 / var(--wp-page-w-pt));
+        font-weight: 400;
+        line-height: 1.3;
+        color: var(--wp-gemstone-caption-color);
+      }
+
+      .wp-gemstone__caption--learn {
+        top: 18.5%;
+        left: 12%;
+        width: 22%;
+        text-align: right;
+      }
+
+      .wp-gemstone__caption--community {
+        top: 18.5%;
+        left: 66%;
+        width: 22%;
+        text-align: left;
+      }
+
+      .wp-gemstone__caption--unity {
+        top: 54.5%;
+        left: 4%;
+        width: 24%;
+        text-align: right;
+      }
+
+      .wp-gemstone__caption--financial {
+        top: 54.5%;
+        left: 72%;
+        width: 24%;
+        text-align: left;
+      }
+
+      .wp-gemstone__caption--venture {
+        top: 78.5%;
+        left: 18%;
+        width: 64%;
+        text-align: center;
+      }
+
+      .wp-gemstone__legend {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+      }
+
+      .wp-gemstone__legend h3,
+      .wp-gemstone__legend p {
+        margin: 0 0 0.4em;
+      }
+
+      .wp-gemstone__legend dl {
+        margin: 0;
+      }
+
+      .wp-gemstone__legend dt {
+        margin-top: 0.8em;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      .wp-gemstone__legend dd {
+        margin: 0.2em 0 0;
+      }
+
+      .wp-video-cta {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--page-max) * 12 / var(--wp-page-w-pt));
+        margin-top: var(--wp-intra-block-gap);
+      }
+
+      .wp-video-cta__qr {
+        flex: 0 0 auto;
+        width: calc(var(--page-max) * 54 / var(--wp-page-w-pt));
+        height: auto;
+      }
+
+      .wp-video-cta__copy {
+        margin: 0;
+        font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        line-height: 1.35;
+        text-transform: uppercase;
+        color: var(--wp-quote-attrib-color);
+      }
+
+      .wp-video-cta__url {
+        display: block;
+        margin-top: 4px;
+        font-size: calc(var(--page-max) * 7 / var(--wp-page-w-pt));
+        letter-spacing: 0;
+        text-transform: none;
+        text-decoration: none;
+        color: var(--wp-quote-attrib-color);
+      }
+
+      .wp-video-cta__url:hover,
+      .wp-video-cta__url:focus-visible {
+        text-decoration: underline;
+      }
+
+      /* Chunk 5–6 — outcomes, services, contributors, about, offices, endnotes, legal, back */
+      .wp-outcome-list {
+        margin: var(--wp-intra-block-gap) 0;
+      }
+
+      .wp-outcome-list__title {
+        margin: 0 0 calc(var(--page-max) * 16 / var(--wp-page-w-pt));
+        padding-top: calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        border-top: calc(var(--page-max) * 0.5 / var(--wp-page-w-pt)) solid
+          var(--color-ink);
+        font-family: var(--font-sans);
+        font-size: calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        line-height: 1.35;
+        text-transform: uppercase;
+      }
+
+      .wp-outcome-list ol {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .wp-outcome-list li {
+        display: grid;
+        grid-template-columns: calc(var(--page-max) * 52 / var(--wp-page-w-pt)) minmax(0, 1fr);
+        gap: calc(var(--page-max) * 14 / var(--wp-page-w-pt));
+        align-items: center;
+        margin: 0;
+        padding: calc(var(--page-max) * 16 / var(--wp-page-w-pt))
+          calc(var(--page-max) * 16 / var(--wp-page-w-pt));
+        font-size: var(--wp-body-size);
+        font-weight: 300;
+        line-height: var(--wp-body-lh);
+      }
+
+      .wp-outcome-list li:nth-child(odd) {
+        background: var(--wp-stat-panel-bg);
+      }
+
+      .wp-outcome-list__icon {
+        display: block;
+        width: 100%;
+        height: auto;
+        color: var(--color-ink);
+      }
+
+      .wp-outcome-list li p {
+        margin: 0;
+      }
+
+      .wp-contributors {
+        margin: 0;
+      }
+
+      .wp-contributors__grid {
+        display: flex;
+        flex-direction: column;
+        gap: var(--wp-block-gap);
+      }
+
+      .wp-contributor {
+        display: grid;
+        grid-template-columns: calc(var(--page-max) * 72 / var(--wp-page-w-pt)) minmax(0, 1fr);
+        column-gap: calc(var(--page-max) * 16 / var(--wp-page-w-pt));
+        align-items: start;
+      }
+
+      .wp-contributor__photo {
+        display: block;
+        width: 100%;
+        height: auto;
+        background: var(--wp-byline-photo-bg);
+      }
+
+      .wp-contributor__name {
+        margin: 0 0 calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        font-family: var(--font-sans);
+        font-size: calc(var(--page-max) * 10 / var(--wp-page-w-pt));
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        line-height: 1.35;
+        text-transform: uppercase;
+        color: var(--wp-accent-gold);
+      }
+
+      .wp-contributor__bio p {
+        margin: 0 0 var(--wp-para-gap);
+      }
+
+      .wp-contributor__bio p:last-child {
+        margin-bottom: 0;
+      }
+
+      .wp-about__covers {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: calc(var(--page-max) * 16 / var(--wp-page-w-pt));
+        margin-top: var(--wp-intra-block-gap);
+        padding: calc(var(--page-max) * 16 / var(--wp-page-w-pt));
+        background: var(--wp-case-study-bg);
+      }
+
+      .wp-about__cover {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .wp-about a {
+        color: inherit;
+        font-weight: 500;
+        text-decoration: none;
+      }
+
+      .wp-about a:hover,
+      .wp-about a:focus-visible {
+        text-decoration: underline;
+      }
+
+      .wp-offices {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--wp-intra-block-gap) calc(var(--page-max) * 24 / var(--wp-page-w-pt));
+        margin-top: var(--wp-block-gap);
+      }
+
+      .wp-office__city {
+        margin: 0 0 6px;
+        font-family: var(--font-sans);
+        font-size: var(--wp-legal-size);
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--wp-accent-gold);
+      }
+
+      .wp-office p {
+        margin: 0;
+        font-size: var(--wp-legal-size);
+        font-weight: 300;
+        line-height: 1.45;
+      }
+
+      .wp-office a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .wp-office a:hover,
+      .wp-office a:focus-visible {
+        text-decoration: underline;
+      }
+
+      .wp-spread__page--services {
+        background: var(--wp-stat-panel-bg);
+        padding-top: var(--wp-surface-pad-top);
+        padding-bottom: var(--wp-surface-pad-bottom);
+      }
+
+      .wp-services__title {
+        margin: 0 0 var(--wp-block-gap);
+        font-family: var(--font-serif);
+        font-size: var(--wp-h2-size);
+        font-weight: 400;
+        line-height: var(--wp-h2-lh);
+      }
+
+      .wp-services {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .wp-services__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 0 25%;
+        width: 25%;
+        gap: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        margin: 0;
+        padding: calc(var(--page-max) * 14 / var(--wp-page-w-pt))
+          calc(var(--page-max) * 6 / var(--wp-page-w-pt));
+        border-right: 1px solid rgba(0, 0, 0, 0.08);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        text-align: center;
+      }
+
+      .wp-services__item:nth-child(4n),
+      .wp-services__item:last-child {
+        border-right: 0;
+      }
+
+      .wp-services__icon {
+        display: block;
+        flex: 0 0 auto;
+        width: calc(var(--page-max) * 43 / var(--wp-page-w-pt));
+        height: calc(var(--page-max) * 36 / var(--wp-page-w-pt));
+        object-fit: contain;
+        object-position: center;
+      }
+
+      .wp-services__label {
+        font-family: var(--font-sans);
+        font-size: calc(var(--page-max) * 8 / var(--wp-page-w-pt));
+        font-weight: 400;
+        line-height: 1.3;
+        color: var(--color-ink);
+      }
+
+      .wp-endnotes {
+        margin: var(--wp-intra-block-gap) 0 0;
+        padding: 0;
+        list-style: none;
+        font-family: var(--font-sans);
+        font-size: var(--wp-body-size);
+        font-weight: 400;
+        line-height: 1.45;
+      }
+
+      .wp-endnotes li {
+        display: grid;
+        grid-template-columns: 1.5em minmax(0, 1fr);
+        gap: 0.4em;
+        margin: 0 0 0.85em;
+      }
+
+      .wp-endnotes__mark {
+        font-family: var(--font-sans);
+        font-size: var(--wp-note-size);
+        font-weight: 400;
+        font-style: normal;
+        font-synthesis: none;
+        line-height: 1.45;
+      }
+
+      .wp-endnotes em {
+        font-style: italic;
+      }
+
+      .wp-legal {
+        margin-top: calc(var(--page-max) * 220 / var(--wp-page-w-pt));
+        padding-bottom: var(--wp-block-gap);
+        font-size: var(--wp-note-size);
+        font-weight: 300;
+        line-height: 1.5;
+      }
+
+      .wp-legal p {
+        margin: 0 0 0.9em;
+      }
+
+      .wp-legal a {
+        color: inherit;
+        font-weight: 500;
+        text-decoration: none;
+      }
+
+      .wp-legal a:hover,
+      .wp-legal a:focus-visible {
+        text-decoration: underline;
+      }
+
+      .wp-back {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: calc(var(--page-max) * 841.89 / var(--wp-page-w-pt));
+        padding-inline: var(--wp-page-pad-start);
+        color: var(--color-white);
+        background: var(--color-black);
+      }
+
+      .wp-back .wp-cover__brands {
+        flex: 0 0 auto;
+        width: max-content;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .wp-back .wp-cover__brand {
+        flex: 0 0 auto;
+        justify-content: center;
+      }
+
+      @media (max-width: 768px) {
+        .wp-era-grid__board {
+          grid-template-columns: 1fr;
+        }
+
+        .wp-era-grid__corner {
+          display: none;
+        }
+
+        .wp-gemstone__overlays {
+          display: none;
+        }
+
+        .wp-gemstone__legend {
+          position: static;
+          width: auto;
+          height: auto;
+          overflow: visible;
+          clip: auto;
+          margin-top: var(--wp-intra-block-gap);
+        }
+
+        .wp-video-cta {
+          flex-wrap: wrap;
+        }
+
+        .wp-services__item {
+          flex-basis: 50%;
+          width: 50%;
+        }
+
+        .wp-services__item:nth-child(4n) {
+          border-right: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .wp-services__item:nth-child(2n),
+        .wp-services__item:last-child {
+          border-right: 0;
+        }
+
+        .wp-about__covers,
+        .wp-offices {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
   </head>
   <body class="family-white-paper">
@@ -1711,10 +2465,10 @@
                 <span class="wp-cover__divider" aria-hidden="true"></span>
                 <div class="wp-cover__brand wp-cover__brand--uoa">
                   <img
-                    src="assets/why-the-modern-family-office-matters/images/chunk-01/cover-logo-uoa.png"
-                    alt="The University of Adelaide"
-                    width="690"
-                    height="116"
+                src="assets/why-the-modern-family-office-matters/images/chunk-01/cover-logo-uoa.png"
+                alt="The University of Adelaide"
+                width="332"
+                height="257"
                   />
                 </div>
               </div>
@@ -3487,9 +4241,2384 @@
 
       <!-- /wp-chunk:3 -->
 
-      <!-- wp-chunk:4 section-3-gem pending -->
-      <!-- wp-chunk:5 facets-conclusion pending -->
-      <!-- wp-chunk:6 back-matter pending -->
+      <!-- wp-chunk:4 section-3-gem ✓ -->
+
+      <div class="wp-spread wp-spread--section-3" aria-labelledby="wp-s3-title">
+        <div
+          class="wp-spread__page wp-spread__page--left wp-spread__page--visual"
+        >
+          <figure class="wp-page-visual">
+            <img
+              src="assets/why-the-modern-family-office-matters/images/chunk-04/p14-xref109.jpeg"
+              alt=""
+              width="1246"
+              height="1760"
+            />
+          </figure>
+          <div class="wp-section-opener wp-section-opener--overlay">
+            <p class="wp-section-opener__kicker">SECTION 3</p>
+            <h2 class="wp-section-opener__title" id="wp-s3-title">
+              Modern Family Office<br />
+              <span class="wp-title-rule__mark">practices</span> make a
+              difference
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="wp-spread wp-spread--flow">
+        <div class="wp-spread__page wp-spread__page--right">
+          <div class="wp-spread__inner wp-spread__inner--right wp-body wp-flow">
+            <p>
+              In assessing their options, wealthy families should ensure the
+              model they choose uses modern Family Office practices. The modern
+              Family Office has evolved over time from a largely transactional
+              wealth creation and compliance vehicle pre-1980, to one that
+              included the successful preparation of heirs pre-2020’s, to the
+              modern focus of understanding the purpose of a family’s wealth and
+              managing family dynamics and relationships to better deploy wealth
+              and ensure its continuation.
+            </p>
+            <section class="wp-era-grid" aria-labelledby="wp-era-title">
+              <h3 class="wp-era-grid__title" id="wp-era-title">
+                ‘Wealth 3.0’ represents the dawning of a new age in global
+                family wealth theory
+              </h3>
+              <div class="wp-era-grid__board">
+                <div class="wp-era-grid__corner" aria-hidden="true"></div>
+                <article class="wp-era">
+                  <div class="wp-era__head">
+                    <img
+                      class="wp-era__icon"
+                      src="assets/why-the-modern-family-office-matters/images/chunk-04/icon-era-1.svg"
+                      alt=""
+                      width="28"
+                      height="26"
+                    />
+                    <h4 class="wp-era__name">Wealth 1.0</h4>
+                    <p class="wp-era__years">–1980s</p>
+                  </div>
+                </article>
+                <article class="wp-era">
+                  <div class="wp-era__head">
+                    <img
+                      class="wp-era__icon"
+                      src="assets/why-the-modern-family-office-matters/images/chunk-04/icon-era-2.svg"
+                      alt=""
+                      width="37"
+                      height="26"
+                    />
+                    <h4 class="wp-era__name">Wealth 2.0</h4>
+                    <p class="wp-era__years">1980s–2020s</p>
+                  </div>
+                </article>
+                <article class="wp-era wp-era--accent">
+                  <div class="wp-era__head">
+                    <img
+                      class="wp-era__icon"
+                      src="assets/why-the-modern-family-office-matters/images/chunk-04/icon-era-3.svg"
+                      alt=""
+                      width="34"
+                      height="33"
+                    />
+                    <h4 class="wp-era__name">Wealth 3.0</h4>
+                    <p class="wp-era__years">2020s–</p>
+                  </div>
+                </article>
+                <p class="wp-era-grid__stub">Family wealth theory</p>
+                <ul class="wp-era__body">
+                  <li>Dynasties</li>
+                  <li>Royal Families</li>
+                  <li>Large Family Business Enterprises</li>
+                  <li>
+                    Focused on financial transactions, wealth procurement and
+                    growth with the goal of acquiring increased wealth.
+                  </li>
+                </ul>
+                <ul class="wp-era__body">
+                  <li>
+                    John Ward and Williams &amp; Preisser ‘Wealth transfer
+                    failure’ research
+                  </li>
+                  <li>
+                    Jay Hughes Five Capitals of Wealth discussed
+                    <em>‘Shirtsleeves to shirtsleeves in three generations’</em>
+                  </li>
+                  <li>
+                    Focus shifted to preparing the rising generation for wealth
+                    and the inclusion of more family members in the conversation.
+                  </li>
+                </ul>
+                <ul class="wp-era__body wp-era--accent">
+                  <li>
+                    Dialog shifting to focus on a holistic approach to wealth and
+                    a deeper understanding of the family dynamics that occur
+                    within high net worth families
+                  </li>
+                  <li>
+                    Focus on Purpose of Wealth and open communication between
+                    generations.
+                  </li>
+                </ul>
+                <p class="wp-era-grid__stub">Financial services industry</p>
+                <ul class="wp-era__body">
+                  <li>
+                    Advice provided by large stockbroking firms and
+                    private/investment banks
+                  </li>
+                  <li>
+                    One to one relationship between the advisor and the family
+                    patriarch.
+                  </li>
+                </ul>
+                <ul class="wp-era__body">
+                  <li>
+                    Increased adoption of financial planners and the funds
+                    management industry
+                  </li>
+                  <li>
+                    The one to one model gave way to a new relationship model
+                    between the family and the family office.
+                  </li>
+                </ul>
+                <ul class="wp-era__body wp-era--accent">
+                  <li>
+                    Family Offices characterised by multi-disciplinary approach
+                    to wealth by establishing what matters most to families
+                  </li>
+                  <li>
+                    Collaborative family based relationship model with gender and
+                    generation balance in both client and advisor.
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <p>
+              Pre-2020s family wealth theory identified and emphasised the need
+              to comprehensively prepare heirs to inherit as crucial to a
+              successful intergenerational wealth transfer. This theory promoted
+              good communication and trust as the primary drivers, proposing risk
+              of failure otherwise.
+            </p>
+            <p>
+              Today, in the context of Wealth Theory 3.0 with a greater emphasis
+              on motivation and engagement of family members, the prominent
+              question asked by advisors is:
+            </p>
+            <p class="wp-era-grid__emph">
+              Is there good communication across family members about family
+              wealth and how do they build trust over time so the family can
+              succeed for generations?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="wp-spread wp-spread--flow">
+        <div class="wp-spread__page wp-spread__page--left">
+          <div class="wp-spread__inner wp-spread__inner--left wp-body wp-flow">
+            <p>
+              In Mutual Trust’s experience,
+              <em
+                >the most important thing families should communicate about and
+                agree upon</em
+              >
+              is what matters most to individual family members and the family
+              collectively.
+            </p>
+            <p>
+              This allows for the inclusion of individual aspirations and a
+              shared set of family goals in a family’s long-term plan. It also
+              helps bring the family together while allowing individual needs to
+              be recognised. It is this positive approach that plays to both
+              individual and collective strengths, energising them to succeed and
+              creating a clear set of objectives. Open communication on this
+              topic, preferably with all family members, builds trust.
+            </p>
+            <p>
+              Having decided what matters most, families should then determine
+              how to use their wealth to achieve that multi-faceted purpose. But
+              how do families tackle this question?
+            </p>
+            <p>
+              Over the next 20 years there will be significant transitions from
+              matriarchs and patriarchs overseeing the transfer of their
+              families’ wealth to their offspring and grandchildren. Many of
+              those who are giving up control are acutely aware of the
+              imperatives to get the wealth transition process right.
+            </p>
+            <p>
+              However, many families of wealth are failing to adopt the right
+              Family Office model for their needs. This has a detrimental impact
+              on family engagement and cohesion, which can prevent family members
+              from thriving and the wealth being sustained over generations.
+            </p>
+            <p>
+              The research shows that in many instances, families may not want to
+              talk about wealth and family issues, because it is an uncomfortable
+              topic. It may raise difficult unresolved family matters and/or
+              force them to confront their own mortality.
+            </p>
+            <p>
+              However, not doing so can prove divisive. As one participant in
+              the University of Adelaide research said:
+            </p>
+            <blockquote class="wp-inline-quote">
+              <p>
+                “Our father wouldn’t even talk about wealth… the word ‘wealth’
+                was seen as a dirty word within our family… as a consequence, in
+                my generation, we wouldn’t raise the issue.... In recent years,
+                the different branches of the family have come together to
+                discuss wealth and it was too late as things were in a real
+                mess… We’ve decided to divide up the wealth and go our separate
+                ways as a family.”
+              </p>
+              <cite class="wp-inline-quote__attrib"
+                >Family Enterprise leader, participant 23</cite
+              >
+            </blockquote>
+            <p>
+              To achieve succession over generations, wealth transition plans
+              must be discussed, and wealth inheritors equipped to manage
+              stewardship and all that it entails. Equally matriarchs and
+              patriarchs need to know when it is time to hand the reins over.
+              Inheriting significant wealth can be overwhelming, particularly if
+              recipients are inadequately prepared. They may fear failure and
+              the potential to let past, current and future family members down.
+              For the older generation, there may be barriers to engagement, such
+              as feelings of loss of control and concerns that their inheritors
+              may not be ready to take over the reins.
+            </p>
+            <p>
+              All of these concerns are valid and need to be worked through with
+              knowledgeable empathetic Family Office advisors in whom all family
+              members can place their trust.
+            </p>
+          </div>
+        </div>
+        <div class="wp-spread__page wp-spread__page--right">
+          <div class="wp-spread__inner wp-spread__inner--right wp-body wp-flow">
+            <p>
+              Mutual Trust, based upon more than 100 years of experience and
+              supported by the University of Adelaide’s research have identified
+              five facets that matter most to families of wealth. This has been
+              turned into a valuable family framework
+              (<strong>“The Mutual Trust Gemstone”</strong>) that can be applied
+              to each family’s unique situation.
+            </p>
+            <p>
+              The first and most important step is determining a family’s Purpose
+              of Wealth. This means helping a family to understand what matters
+              most and using its wealth to achieve that purpose. This creates
+              strong and enduring bonds of family cohesion.
+            </p>
+            <p>
+              The facets of The Mutual Trust Gemstone make up a family’s Purpose
+              of Wealth. Some facets will be more important to families and
+              individual family members than others, and it is their combination
+              into a periodically reviewed and updated Family Strategy that is
+              key to success.
+            </p>
+            <p>The five facets are:</p>
+            <ol class="wp-list wp-list--ordered">
+              <li>Financial Prosperity;</li>
+              <li>Entrepreneurship;</li>
+              <li>Family Unity and Harmony;</li>
+              <li>Learning, Engagement and Fulfilment; and</li>
+              <li>Community Impact.</li>
+            </ol>
+          </div>
+          <figure class="wp-photo-band">
+            <img
+              src="assets/why-the-modern-family-office-matters/images/chunk-04/p15-xref114.jpeg"
+              alt=""
+              width="1246"
+              height="953"
+            />
+          </figure>
+        </div>
+      </div>
+
+      <div class="wp-spread wp-spread--flow">
+        <div class="wp-spread__page wp-spread__page--left">
+          <div class="wp-spread__inner wp-spread__inner--left wp-body wp-flow">
+            <h2 class="wp-subhead">The Mutual Trust Gemstone</h2>
+            <p>
+              Mutual Trust has identified five facets wealthy families focus on
+              to achieve what matters most to them. These facets form the
+              family’s Purpose of Wealth which is implemented through the
+              Family’s strategic plan, helped by their Family Office.
+            </p>
+            <figure class="wp-gemstone">
+              <div class="wp-gemstone__wrap">
+                <img
+                  class="wp-gemstone__canvas"
+                  src="assets/why-the-modern-family-office-matters/images/chunk-04/gemstone.svg"
+                  alt=""
+                  width="549"
+                  height="546"
+                />
+                <div class="wp-gemstone__overlays" aria-hidden="true">
+                  <p class="wp-gemstone__kicker">Family strategy</p>
+                  <p class="wp-gemstone__purpose">Purpose of your wealth</p>
+                  <p class="wp-gemstone__core">
+                    What<br />matters<br />most
+                  </p>
+                  <p class="wp-gemstone__label wp-gemstone__label--learn">
+                    Learning, engagement &amp; fulfilment
+                  </p>
+                  <p class="wp-gemstone__label wp-gemstone__label--community">
+                    Community impact
+                  </p>
+                  <p class="wp-gemstone__label wp-gemstone__label--unity">
+                    Family unity &amp; harmony
+                  </p>
+                  <p class="wp-gemstone__label wp-gemstone__label--financial">
+                    Financial prosperity
+                  </p>
+                  <p class="wp-gemstone__label wp-gemstone__label--venture">
+                    Entrepreneurship
+                  </p>
+                  <p
+                    class="wp-gemstone__caption wp-gemstone__caption--learn"
+                  >
+                    Enabling individual family members to pursue their personal
+                    aspirations through education, the provision of
+                    opportunities, and following their passions so that they can
+                    lead productive and fulfilled lives.
+                  </p>
+                  <p
+                    class="wp-gemstone__caption wp-gemstone__caption--community"
+                  >
+                    Giving the family’s time, treasure, talent and ties to make
+                    a positive impact on society through creating jobs,
+                    supporting philanthropic causes, serving in the community,
+                    and paying taxes.
+                  </p>
+                  <p class="wp-gemstone__caption wp-gemstone__caption--unity">
+                    Strengthening family relationships, values and trust,
+                    building communication, problem solving and the ability to
+                    undertake roles and responsibilities using each person’s
+                    strengths while valuing their differences.
+                  </p>
+                  <p
+                    class="wp-gemstone__caption wp-gemstone__caption--financial"
+                  >
+                    Growing financial capital sustainably to provide for the
+                    needs of the current and future generations of the family.
+                  </p>
+                  <p
+                    class="wp-gemstone__caption wp-gemstone__caption--venture"
+                  >
+                    The family’s ability to use its wealth to perpetuate an
+                    entrepreneurial spirit by sustaining its operating business
+                    and supporting other entrepreneurs through the provision of
+                    both capital and talent.
+                  </p>
+                </div>
+              </div>
+              <figcaption class="wp-gemstone__legend">
+                <p>Family strategy — Purpose of your wealth. What matters most.</p>
+                <dl>
+                  <dt>Learning, engagement &amp; fulfilment</dt>
+                  <dd>
+                    Enabling individual family members to pursue their personal
+                    aspirations through education, the provision of
+                    opportunities, and following their passions so that they can
+                    lead productive and fulfilled lives.
+                  </dd>
+                  <dt>Community impact</dt>
+                  <dd>
+                    Giving the family’s time, treasure, talent and ties to make
+                    a positive impact on society through creating jobs,
+                    supporting philanthropic causes, serving in the community,
+                    and paying taxes.
+                  </dd>
+                  <dt>Family unity &amp; harmony</dt>
+                  <dd>
+                    Strengthening family relationships, values and trust,
+                    building communication, problem solving and the ability to
+                    undertake roles and responsibilities using each person’s
+                    strengths while valuing their differences.
+                  </dd>
+                  <dt>Financial prosperity</dt>
+                  <dd>
+                    Growing financial capital sustainably to provide for the
+                    needs of the current and future generations of the family.
+                  </dd>
+                  <dt>Entrepreneurship</dt>
+                  <dd>
+                    The family’s ability to use its wealth to perpetuate an
+                    entrepreneurial spirit by sustaining its operating business
+                    and supporting other entrepreneurs through the provision of
+                    both capital and talent.
+                  </dd>
+                </dl>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="wp-spread__page wp-spread__page--right">
+          <figure class="wp-photo-band">
+            <img
+              src="assets/why-the-modern-family-office-matters/images/chunk-04/p16-xref118.jpeg"
+              alt=""
+              width="1246"
+              height="747"
+            />
+          </figure>
+          <div
+            class="wp-spread__inner wp-spread__inner--right wp-spread__inner--below-band wp-body wp-flow"
+          >
+            <h2 class="wp-subhead">1. Financial prosperity</h2>
+            <p class="wp-facet-lede">
+              Growing financial capital sustainably to provide for the needs of
+              the current and future generations of the family.
+            </p>
+            <p>
+              The financial returns from the family’s business and/or investment
+              activities provide family members with a certain standard of living
+              and the ability to achieve what matters most. For example, this may
+              include assisting the rising generation with finance to purchase
+              their first home, providing seed funding to pursue a new business
+              idea, or enabling them to receive a good education. The family
+              wealth also provides the ability to support family members in times
+              of critical need. This may be to assist with a family member’s
+              physical or psychological wellbeing, or coming to the aid of a
+              family member during a crisis.
+            </p>
+            <p>
+              The modern Family Office must provide a competitive finance and
+              investment management offering and services for wealthy families to
+              sustainably grow their financial capital, manage expenses and fund
+              the other facets comprising their Purpose of Wealth.
+            </p>
+            <blockquote class="wp-inline-quote">
+              <p>
+                “We want to retain that main core and make sure that it’s
+                generating enough money and growing for future generations.
+                That’s the legacy side, and we see ourselves as guardians of the
+                wealth created by our grandparents. Even though they’ve passed
+                away, we still live by that philosophy that it’s their money,
+                it’s not ours. But at the same time, through distributions of
+                the wealth, we’ll provide each generation with the ability to
+                create their own wealth in a step-by-step process.”
+              </p>
+              <cite class="wp-inline-quote__attrib"
+                >Family Enterprise leader, participant 20</cite
+              >
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="wp-spread wp-spread--flow">
+        <div
+          class="wp-spread__page wp-spread__page--left wp-spread__page--case-study"
+        >
+          <figure class="wp-photo-band wp-photo-band--short">
+            <img
+              src="assets/why-the-modern-family-office-matters/images/chunk-04/p17-xref122.jpeg"
+              alt=""
+              width="1243"
+              height="474"
+            />
+          </figure>
+          <div
+            class="wp-spread__inner wp-spread__inner--left wp-spread__inner--below-band wp-body"
+          >
+            <div class="wp-case-study">
+              <p class="wp-case-study__label">Mutual Trust Case Study</p>
+              <h3 class="wp-case-study__title">Financial prosperity</h3>
+              <p>
+                When the Chauvel* family found itself asset rich and cash poor,
+                changes to their investment strategy were required to ensure
+                long-term wealth sustainability.
+              </p>
+              <p>
+                Once a thriving entrepreneurial endeavour, the Chauvel family
+                business had matured and stagnated in growth over the course of
+                several decades.
+              </p>
+              <p>
+                Profits, along with family relationships, were on a downward
+                spiral. The lack of reinvestment in the business had led to
+                assets becoming tired and run-down, whilst cash drawings were
+                reducing family capital.
+              </p>
+              <p>
+                The Chauvels found themselves facing a challenge which confronts
+                many families of multigenerational wealth — it had become asset
+                rich and cash poor.
+              </p>
+              <p>
+                With the arrival of grandchildren over recent years, the family
+                had also become concerned about the sustainability of their
+                wealth. How could they accommodate the needs of the present
+                generation without compromising the livelihood of the next?
+              </p>
+              <p>
+                The Chauvels decided it was time to act. They engaged Mutual
+                Trust to determine the rate of growth required over the next 20
+                years for the third generation to inherit the same as the second
+                (in real terms, after inflation).
+              </p>
+              <p>
+                The financial modelling indicated the Chauvels would require a
+                staggering 17% compounding rate per annum to achieve their
+                objective. This is an aggressive rate of return and requires the
+                investor to take on a material level of risk. A stagnant
+                portfolio of cash and an underperforming operating business was
+                no longer going to cut it for this family.
+              </p>
+              <p>
+                Mutual Trust worked closely with the Chauvels to undertake
+                careful planning and provide expert advice. The family
+                reallocated its long-term passive asset investments towards
+                growth-orientated weightings and directed its business managers
+                to implement a turnaround plan to drive returns. This included
+                reinvesting underperforming assets and the sale of anything
+                considered non-core.
+              </p>
+              <p>
+                Today, the Chauvels are set-up for success and are well on their
+                way to achieving their goal of long-term wealth stability and
+                the ability to support the financial wellbeing of the third
+                generation.
+              </p>
+              <p>
+                Whilst this is an extreme example of what can happen after years
+                of stagnation, it serves as an important reminder to ensure
+                family investment strategies align with family objectives.
+              </p>
+              <p class="wp-case-study__note">
+                * Family name has been changed for privacy reasons.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="wp-spread__page wp-spread__page--right">
+          <figure class="wp-photo-band">
+            <img
+              src="assets/why-the-modern-family-office-matters/images/chunk-04/p17-xref124.jpeg"
+              alt=""
+              width="1245"
+              height="932"
+            />
+          </figure>
+          <div
+            class="wp-spread__inner wp-spread__inner--right wp-spread__inner--below-band wp-body wp-flow"
+          >
+            <h2 class="wp-subhead">2. Entrepreneurship</h2>
+            <p class="wp-facet-lede">
+              The family’s ability to use its wealth to perpetuate an
+              entrepreneurial spirit by sustaining its operating business and
+              supporting other entrepreneurs through the provision of both
+              capital and talent.
+            </p>
+            <p>
+              Throughout history, wealthy families have been the engine room for
+              entrepreneurial activity. It is estimated that over 25% of all
+              large Australian businesses (200+ employees) are family
+              controlled.<sup>v</sup> The original source of family wealth is
+              typically a successful commercial venture that becomes a crucial
+              part of a family’s history and expertise and a proud source of
+              family identity.
+            </p>
+            <p>
+              Many families look to continue this legacy as part of their Purpose
+              of Wealth, contributing to new venture creation and innovation and
+              making significant investments in the private equity sector. By
+              way of example, Mutual Trust saw a 64% increase from F21 to F22 in
+              early-stage investments, late expansion investments (growth
+              capital) and buyouts.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="wp-spread wp-spread--flow">
+        <div class="wp-spread__page wp-spread__page--left">
+          <div class="wp-spread__inner wp-spread__inner--left wp-body wp-flow">
+            <p>
+              This is further supported by various participants in the University
+              research. One such person said:
+            </p>
+            <blockquote class="wp-inline-quote">
+              <p>
+                “we [look for SMEs] where we know we can add value with our
+                experience of running a business for twenty-five years and
+                successfully exiting… and just doing certain things… the other
+                things that we are looking at are keeping a good business
+                on-going because of the spin-off benefits to the community.”
+              </p>
+              <cite class="wp-inline-quote__attrib"
+                >Family Enterprise member, participant 14</cite
+              >
+            </blockquote>
+            <p>
+              For many wealthy families owning and operating businesses creates
+              a sense of purpose. Unlike holding passive investments, involvement
+              in the business often provides a sense of socio-emotional
+              fulfillment. Another stated:
+            </p>
+            <blockquote class="wp-inline-quote">
+              <p>
+                “we very much like the idea of operating businesses that employ
+                people as opposed to passive investments. We’re building
+                something for ourselves and for the community as well. There is
+                an amount of sentimental pride in knowing that we’re providing
+                something which gives others opportunities.”
+              </p>
+              <cite class="wp-inline-quote__attrib"
+                >Family Enterprise member, participant 12</cite
+              >
+            </blockquote>
+            <p>
+              One family leader highlighted how they have invested in over 20
+              start-ups, particularly in women-led ventures that the family feels
+              passionate about. They said:
+            </p>
+            <blockquote class="wp-inline-quote">
+              <p>
+                “... for me, investing in start-ups is not just about the
+                financial return… I like the opportunity to mentor some great
+                individuals. It’s also just the excitement of being involved in
+                something new.”
+              </p>
+              <cite class="wp-inline-quote__attrib"
+                >Family Enterprise leader, participant 17</cite
+              >
+            </blockquote>
+            <p>And a Family Enterprise Leader also said:</p>
+            <blockquote class="wp-inline-quote">
+              <p>
+                “To be honest, I’m having fun when given the opportunity to
+                invest directly in innovative start-ups. Am I going to succeed?
+                Possibly not, but I’m not betting the farm on it. But, if these
+                ideas I’m investing in work, they will be transformational.”
+              </p>
+              <cite class="wp-inline-quote__attrib"
+                >Family Enterprise leader, participant 7</cite
+              >
+            </blockquote>
+          </div>
+        </div>
+        <div
+          class="wp-spread__page wp-spread__page--right wp-spread__page--case-study"
+        >
+          <figure class="wp-photo-band">
+            <img
+              src="assets/why-the-modern-family-office-matters/images/chunk-04/p18-xref128.jpeg"
+              alt=""
+              width="1245"
+              height="634"
+            />
+          </figure>
+          <div
+            class="wp-spread__inner wp-spread__inner--right wp-spread__inner--below-band wp-body"
+          >
+            <div class="wp-case-study">
+              <p class="wp-case-study__label">Mutual Trust Case Study</p>
+              <h3 class="wp-case-study__title">Entrepreneurship</h3>
+              <p>
+                The success of the Ramsey* winery comes from an enduring family
+                passion for business growth, and this is what enabled their
+                youngest son to unlock his own entrepreneurial spirit.
+              </p>
+              <p>
+                For more than three generations, the Ramsey family has owned and
+                operated a thriving winery and vineyard where they grow their
+                own grapes and produce their own wine for domestic and
+                international markets. The Ramsey’s youngest son, Seth*, spent
+                much of his childhood in the vineyards, picking grapes and
+                helping to bottle the wine each Autumn.
+              </p>
+              <p>
+                Although he cherishes fond memories of this time spent with his
+                family, Seth knew from early on that he wasn’t passionate about
+                winemaking. As a young adult, he sought a career outside the
+                family unit and decided to undertake a business degree in
+                Scotland, where he spent the next eight years completing his
+                studies and gaining practical work experience as a product
+                manager for a global bank.
+              </p>
+              <p>
+                Upon returning to Australia and joining a family meeting, Seth
+                talked openly with his parents about his newfound passion for
+                distilling whisky. Whilst the Ramseys would have loved for their
+                son to take over the family business, they also felt it was
+                important he had the opportunity to build his own enterprise.
+              </p>
+              <p>
+                The Ramsey’s decided to leverage the family bank, using a
+                portion of their wealth to invest in the whisky distillery Seth
+                was working hard to establish.
+              </p>
+              <p>
+                Through his parents’ support and their passion for business
+                growth, Seth unlocked his own entrepreneurial spirit and was
+                able to build a very successful and profitable business. Today,
+                his whisky is available for sale at national retailers as well as
+                the family’s vineyard cellar door.
+              </p>
+              <p>
+                Importantly, he is happy and fulfilled in his career and
+                maintains a strong connection with his family. Whilst he will not
+                be taking over the family business, the Ramsey entrepreneurial
+                legacy lives on through Seth’s own venture.
+              </p>
+              <p class="wp-case-study__note">
+                * Family and family members’ names have been changed for privacy
+                reasons
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wp-spread wp-spread--flow">
+        <div class="wp-spread__page wp-spread__page--left">
+          <div class="wp-spread__inner wp-spread__inner--left wp-body wp-flow">
+            <h2 class="wp-subhead">3. Family unity and harmony</h2>
+            <p class="wp-facet-lede">
+              Strengthening family relationships, values and trust, building
+              communication, problem solving and the ability to undertake roles
+              and responsibilities using each person’s strengths while valuing
+              their differences.
+            </p>
+            <p>
+              The research shows that families experience common issues with
+              unity and harmony. These centre around:
+            </p>
+            <ul class="wp-list">
+              <li>Generational differences;</li>
+              <li>The psychological impact of selling a business;</li>
+              <li>Relationship changes;</li>
+              <li>Discussions about separating wealth; and</li>
+              <li>Engaging subsequent generations of family members.</li>
+            </ul>
+            <p>
+              Unlike the previous two facets of Financial Prosperity and
+              Entrepreneurship that are the more traditional domain of Family
+              Offices, the modern Family Office includes helping to achieve
+              family unity and harmony. This does not necessarily mean keeping
+              the family wealth together. As one of the research participants
+              stated:
+            </p>
+            <blockquote class="wp-inline-quote">
+              <p>
+                “…probably one of the greatest myths out there is that keeping it
+                [the wealth] together equals family cohesion and unity. There
+                needs to be a net benefit to do so, which involves assessing
+                financial benefits, for sure. But also, consideration of
+                non-financial benefits such as your family cohesion… I think a
+                by-product of talking about this is family cohesion; even though
+                it might cause a bit of tension, at least you’re all on the same
+                page.”
+              </p>
+              <cite class="wp-inline-quote__attrib"
+                >Family Enterprise leader, participant 24</cite
+              >
+            </blockquote>
+            <p>
+              Family unity and harmony begins with a shared understanding of
+              what is important to family members individually and collectively.
+              It can include such things as perpetuating the family legacy,
+              maintaining the family farm, addressing climate change or ensuring
+              all family members have the same opportunities as the founding
+              members. It is then documented in the Family Strategy, ensuring
+              everyone is on the same page with a purpose-led strategy that
+              encompasses both individual and collective family needs. Creating
+              this strategy is complicated and requires honest, open
+              collaboration and careful guidance.
+            </p>
+            <p>
+              Family unity and harmony is reinforced by exploring the family’s
+              values that underpin how the Family Strategy is executed. And
+              lastly, it is operationalised by putting in place family roles and
+              responsibilities for implementing the strategy, with a governance
+              model on which everyone agrees.
+            </p>
+            <p>
+              The modern Family Office facilitates this process, bringing both
+              expertise and objectivity to assist the family to execute the
+              Family Strategy.
+            </p>
+          </div>
+        </div>
+        <div
+          class="wp-spread__page wp-spread__page--right wp-spread__page--case-study"
+        >
+          <figure class="wp-photo-band wp-photo-band--short">
+            <img
+              src="assets/why-the-modern-family-office-matters/images/chunk-04/p19-xref132.jpeg"
+              alt=""
+              width="1245"
+              height="512"
+            />
+          </figure>
+          <div
+            class="wp-spread__inner wp-spread__inner--right wp-spread__inner--below-band wp-body"
+          >
+            <div class="wp-case-study">
+              <p class="wp-case-study__label">Mutual Trust Case Study</p>
+              <h3 class="wp-case-study__title">Family unity and harmony</h3>
+              <p>
+                Understanding their differences and celebrating shared interests
+                enabled the Brandt* family to build a unified vision for its
+                wealth, with family members working together to benefit the local
+                community.
+              </p>
+              <p>
+                Eight years ago, the Brandt sisters (second generation) were not
+                on speaking terms. All lines of communication were broken.
+              </p>
+              <p>
+                The Brandts decided to engage a Mutual Trust family dynamic
+                expert, who worked with them to understand their differences and
+                identify the unique value their individual strengths contributed
+                to the family unit.
+              </p>
+              <p>
+                By exploring these underlying complexities, the Brandts were
+                able to identify their shared values and develop a unified vision
+                and purpose for their wealth.
+              </p>
+              <p>
+                Through this process the family was delighted to realise that,
+                despite their differences, they shared a passion for education
+                and the arts. Mutual Trust’s Philanthropy team then worked with
+                them to establish a foundation which provides scholarship grants
+                within these sectors to disadvantaged students.
+              </p>
+              <p>
+                Today, the Brandts have learnt new and effective ways to
+                communicate, and the sisters are now on talking terms.
+              </p>
+              <p>
+                The family foundation created a platform to bring the Brandts
+                together whilst respecting their differences. Ultimately, the
+                Brandt family legacy and the philanthropic impact of their wealth
+                became bigger than themselves. The family now recognise and
+                respect each person’s differences, communicates effectively and
+                treasures the unity gained through their common interests.
+              </p>
+              <p class="wp-case-study__note">
+                * Family and family members’ names have been changed for privacy
+                reasons
+              </p>
+              <div class="wp-video-cta">
+                <img
+                  class="wp-video-cta__qr"
+                  src="assets/why-the-modern-family-office-matters/images/chunk-04/p19-qr.png"
+                  alt=""
+                  width="54"
+                  height="54"
+                />
+                <p class="wp-video-cta__copy">
+                  Scan to view Mutual Trust Board video
+                  <a
+                    class="wp-video-cta__url"
+                    href="https://repository.mutualtrust.com.au/100_Years_Mutual_Trust.mp4"
+                    >https://repository.mutualtrust.com.au/100_Years_Mutual_Trust.mp4</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- /wp-chunk:4 -->
+
+      <!-- wp-chunk:5 facets-conclusion ✓ -->
+
+      <div class="wp-spread wp-spread--flow">
+        <div class="wp-spread__page wp-spread__page--left">
+          <figure class="wp-photo-band">
+            <img
+              src="assets/why-the-modern-family-office-matters/images/chunk-05/p20-xref136.jpeg"
+              alt=""
+              width="1245"
+              height="1090"
+            />
+          </figure>
+          <div
+            class="wp-spread__inner wp-spread__inner--left wp-spread__inner--below-band wp-body"
+          >
+            <aside class="wp-callout">
+              <blockquote class="wp-callout__quote">
+                <p>
+                  “We do some things separately, but we do some things together.
+                  The family farm is a real focal point for all of us – it brings
+                  the three generations all together into a central focal point,
+                  and we sort of all take pride in working the family farm
+                  together… We just bought more land there for Dad, and so the
+                  farm has sort of expanded… It’s also where my parents live, so
+                  it’s great for keeping the family together… We all see them as
+                  being great role models and very hard-working entrepreneurial
+                  family leaders.”
+                </p>
+              </blockquote>
+              <cite class="wp-callout__attrib"
+                >Family Enterprise leader, participant 11</cite
+              >
+            </aside>
+          </div>
+        </div>
+        <div class="wp-spread__page wp-spread__page--right">
+          <div class="wp-spread__inner wp-spread__inner--right wp-body wp-flow">
+            <section class="wp-outcome-list" aria-labelledby="wp-outcome-title">
+              <h3 class="wp-outcome-list__title" id="wp-outcome-title">
+                A successful wealth transfer can look like many things for a
+                family.
+              </h3>
+              <ol>
+                <li>
+                  <img
+                    class="wp-outcome-list__icon"
+                    src="assets/why-the-modern-family-office-matters/images/chunk-05/icon-outcome-1.svg"
+                    alt=""
+                    width="38"
+                    height="37"
+                  />
+                  <p>
+                    Family members could be separate to pursue their own interests
+                    while at the same time preserving family values and legacy.
+                  </p>
+                </li>
+                <li>
+                  <img
+                    class="wp-outcome-list__icon"
+                    src="assets/why-the-modern-family-office-matters/images/chunk-05/icon-outcome-2.svg"
+                    alt=""
+                    width="48"
+                    height="38"
+                  />
+                  <p>
+                    Family members could keep it all together and prosper as a
+                    family.
+                  </p>
+                </li>
+                <li>
+                  <img
+                    class="wp-outcome-list__icon"
+                    src="assets/why-the-modern-family-office-matters/images/chunk-05/icon-outcome-3.svg"
+                    alt=""
+                    width="46"
+                    height="39"
+                  />
+                  <p>
+                    Family members could maintain a core base of wealth for the
+                    family as a collective to grow and do things together that
+                    matter most and carve off capital to the individual family
+                    branches to be independent and pursue their own paths. This is
+                    a very successful model that works well. It takes pressure off
+                    the collective and allows the individuals to prosper.
+                  </p>
+                </li>
+              </ol>
+            </section>
+            <aside class="wp-callout">
+              <blockquote class="wp-callout__quote">
+                <p>
+                  “…one of the most challenging but important pieces of work that
+                  we’ve done, which took two years to do as a family, was deciding
+                  on the policies, process and mechanisms around enabling a family
+                  member to exit… the worst thing you want to do is make them stay
+                  in golden handcuffs because that’s worse, that’s the most
+                  disruptive thing we could do… there are many valid reasons why a
+                  family member may need to exit such as poor health or a
+                  traumatic event.”
+                </p>
+              </blockquote>
+              <cite class="wp-callout__attrib"
+                >Family Enterprise member, participant 13</cite
+              >
+            </aside>
+          </div>
+        </div>
+      </div>
+
+      <div class="wp-spread wp-spread--flow">
+        <div
+          class="wp-spread__page wp-spread__page--left wp-spread__page--visual"
+        >
+          <figure class="wp-page-visual">
+            <img
+              src="assets/why-the-modern-family-office-matters/images/chunk-05/p21-xref140.jpeg"
+              alt=""
+              width="1246"
+              height="1759"
+            />
+          </figure>
+        </div>
+        <div class="wp-spread__page wp-spread__page--right">
+          <div class="wp-spread__inner wp-spread__inner--right wp-body wp-flow">
+            <h2 class="wp-subhead">4. Learning, engagement and fulfilment</h2>
+            <p class="wp-facet-lede">
+              Enabling individual family members to pursue their personal
+              aspirations through education, the provision of opportunities, and
+              following their passions so they can lead productive and fulfilled
+              lives.
+            </p>
+            <p>
+              For families to flourish, individual family members must also be
+              set up for success. In recognising the need to engage all family
+              members, particularly the rising generation, families can implement
+              strategies to build knowledge and engagement, thereby preparing
+              heirs to become responsible stewards of wealth. This facet of the
+              Mutual Trust Gemstone involves developing an understanding of
+              individual family members’ aspirations, the degree of engagement
+              that they seek in developing and implementing the Family Strategy,
+              and the skills they need to achieve their aspirations and
+              involvement. As one participant in the research said:
+            </p>
+            <blockquote class="wp-inline-quote">
+              <p>
+                “We’ve established a giving project where we’ll give them five
+                hundred dollars each where they’re required to research a charity,
+                complete a one-page summary they want to give to the charity, and
+                report back to the family to explain why… That’s a process we’ll
+                run from now until they’re eighteen, hoping that that will evolve
+                into them understanding more about our values, what wealth is for,
+                the community needs, and building unity by doing it as a family…
+                So, by the time they are sixteen, we can start getting them
+                involved in more complex decisions regarding the Family
+                Enterprise… The aim is to develop them into well-rounded
+                individuals for the benefit of the present, but more importantly,
+                future generations, personally and for the community.”
+              </p>
+              <cite class="wp-inline-quote__attrib"
+                >Family Enterprise leader, Participant 20</cite
+              >
+            </blockquote>
+            <p>
+              The modern Family Office advisor helps support family members to
+              form and express their goals and desires which then form part of the
+              Family Strategy – something they may not have felt comfortable doing
+              without the help of an independent third party. Often this can
+              involve disclosures that run counter to family expectations and
+              require a carefully thought-out process.
+            </p>
+            <p>
+              An individual’s aspirations are not static, so this facet also
+              requires the support of people through the various stages of life
+              with personalised learning plans, expertise, and engagement among
+              peer networks; which the modern Family Office can provide.
+            </p>
+            <p>
+              Once a family can uncover individual aspirations and enhance the
+              wellbeing of every family member on their journey to personal
+              fulfillment, they will add significant value to the family as a
+              whole. It should also facilitate learning together in a way that
+              nourishes the family’s and each family member’s creative energies.
+              Many wealthy families ask the modern Family Office to organise
+              regular family retreats and study tours expressly for this purpose.
+            </p>
+            <p>
+              A considered program of learning, engagement and fulfilment
+              strategies will assist individuals and the family collectively to
+              learn new skills and continue on a journey of personal growth.
+              Successful implementation of this facet will aid family members to
+              effectively perform their responsibilities in helping to achieve the
+              family’s continued success.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="wp-spread wp-spread--flow">
+        <div class="wp-spread__page wp-spread__page--case-study">
+          <figure class="wp-photo-band wp-photo-band--short">
+            <img
+              src="assets/why-the-modern-family-office-matters/images/chunk-05/p22-xref144.jpeg"
+              alt=""
+              width="1263"
+              height="622"
+            />
+          </figure>
+          <div
+            class="wp-spread__inner wp-spread__inner--left wp-spread__inner--below-band wp-body"
+          >
+            <div class="wp-case-study">
+              <p class="wp-case-study__label">Mutual Trust Case Study</p>
+              <h3 class="wp-case-study__title">
+                Learning, engagement and fulfilment
+              </h3>
+              <p>
+                Embracing the interests of their youngest family members enabled
+                the Mireault* family to identify a clear purpose for their wealth.
+              </p>
+              <p>
+                The members of the Mireault family have a diverse array of skills
+                – from property expertise through to software engineering. With
+                two children in early adulthood, the parents faced the dilemma of
+                whether to provide career opportunities through their Family
+                Office or encourage them to explore their individual interests.
+              </p>
+              <p>
+                Accommodating the first child within the Family Office was
+                relatively easy. With prior experience and interest in the real
+                estate industry, she was able to take on the responsibility of the
+                family’s property portfolio. The family formalised her role in
+                line with market rates to agree clear responsibilities and provide
+                transparency.
+              </p>
+              <p>
+                There was less of a natural fit in the Family Office for the
+                second child. He was passionate about developing his own
+                technology company – an interest which didn’t align with the
+                goals of the broader family.
+              </p>
+              <p>
+                Nonetheless, the parents felt it was important to provide their
+                children with equal opportunities and engaged Mutual Trust to
+                establish a Mireault family ‘bank’. This included a funding
+                structure with clear terms that catered for successful and
+                unsuccessful outcomes.
+              </p>
+              <p>
+                Through this, they were able to lend their son the money required
+                to build his new venture, on terms which would have been
+                unavailable through a commercial bank.
+              </p>
+              <p>
+                As his business grew and became profitable, the son was able to
+                repay the loan with a commercial rate of interest and go on to
+                successfully build his own business legacy.
+              </p>
+              <p>
+                For the Mireault family, the purpose of their wealth was to give
+                their children the support they needed to turn their passions into
+                careers. In doing so, the children are happy and engaged, and
+                family dynamics remain strong.
+              </p>
+              <p class="wp-case-study__note">
+                * Family name has been changed for privacy reasons
+              </p>
+            </div>
+            <div class="wp-case-study">
+              <p class="wp-case-study__label">Mutual Trust Case Study</p>
+              <h3 class="wp-case-study__title">
+                Learning, engagement and fulfilment
+              </h3>
+              <p>
+                Unexpectedly widowed in her early 60s, Lara Edman* found herself
+                responsible for her family’s wealth, without the financial
+                literacy or experience to manage it with confidence.
+              </p>
+              <p>
+                Throughout their forty-year union, Lara’s husband had always taken
+                care of their finances. As a prominent and experienced banking
+                executive, it had seemed sensible that he would have this
+                responsibility. Both Lara and her husband had assumed there was
+                plenty of time to worry about succession planning and estate
+                management.
+              </p>
+              <p>
+                Facing the shock of losing her life partner, along with suddenly
+                becoming responsible for a significant amount of wealth, Lara was
+                overwhelmed and fraught with worry.
+              </p>
+              <p>
+                To add complication to the matter, Lara’s husband had been
+                partway through a large and complex property investment deal,
+                which required immediate action on her behalf.
+              </p>
+              <p>
+                In reaching out to Mutual Trust, Lara knew that her advisors would
+                help her to finalise the property investment deal and develop her
+                family’s wealth management plan. What she wasn’t prepared for
+                however, were the opportunities she would be given to learn core
+                wealth management concepts and undergo financial literacy
+                training.
+              </p>
+              <p>
+                Lara has now been a Mutual Trust client for seven years. She
+                regularly attends wealth management events and seminars, and her
+                knowledge and experience continue to flourish.
+              </p>
+              <p>
+                Becoming financially literate not only helped Lara to find her
+                feet during one of the most challenging times in her life, but
+                also empowered her to protect and grow her family’s wealth with
+                confidence and purpose.
+              </p>
+              <p>
+                Lara is now focussed on ensuring that her two adult daughters
+                don’t eventually find themselves in the same situation. Lara has
+                recently started inviting them to her meetings with Mutual Trust
+                advisors and seeking the support of the Rising Gen program so that
+                when the time is right, her daughters will be ready to embrace the
+                responsibility of managing the Edman family wealth.
+              </p>
+              <p class="wp-case-study__note">
+                * First and Family name has been changed for privacy reasons
+              </p>
+            </div>
+          </div>
+          <figure class="wp-photo-band wp-photo-band--short">
+            <img
+              src="assets/why-the-modern-family-office-matters/images/chunk-05/p23-xref148.jpeg"
+              alt=""
+              width="1243"
+              height="586"
+            />
+          </figure>
+          <div
+            class="wp-spread__inner wp-spread__inner--below-band wp-body"
+          >
+            <div class="wp-case-study">
+              <p class="wp-case-study__label">Mutual Trust Case Study</p>
+              <h3 class="wp-case-study__title">
+                Learning, engagement and fulfilment
+              </h3>
+              <p>
+                John and Tillie O’Brien* immigrated to Australia in the 1960’s
+                and started a small engineering business in the outer suburbs of
+                Melbourne. Over the next fifty years, they grew the business
+                substantially and today they employ more than 400 people
+                nationally. John serves as the Executive Chairman and is very
+                much involved in the day-to-day affairs of the business. Two of
+                their four children also work in the business.
+              </p>
+              <p>
+                Tillie spent many years as the Human Resources Manager until
+                turning her attention to philanthropy. One of the family’s closest
+                friends, Joan, passed away from Parkinson’s disease — this
+                impacted the family deeply. As a consequence, Tillie established a
+                Foundation to focus on helping people suffering from serious
+                diseases.
+              </p>
+              <p>
+                John and Tillie (now in their early eighties) and their four
+                children (in their fifties) have been discussing what the next
+                stage is for the family and how they might transition the family
+                business and Foundation in the future. John and Tillie have six
+                grandchildren aged between 6 to 15 and they want to spend more
+                time connecting with them, as they have realised through the death
+                of Joan that life is not eternal. They are also concerned about
+                how their children will manage the business together beyond their
+                lifetimes. Tillie has noticed that her children’s generation is
+                very different to her own. She also worries that they have only
+                ever enjoyed the trimmings of their family wealth and may not
+                really understand how their family started out and what it took to
+                get to the privileged position they are in today.
+              </p>
+              <p>
+                John and Tillie sought help from their Multi-Family Office to
+                organise a family retreat where they could all come together and
+                discuss their top-of-mind issues and start important
+                conversations. After consulting with all family members (including
+                partners) on what mattered most and how to maximise engagement for
+                everyone, the Multi-Family Office designed a program for the
+                retreat. This was a complex exercise, noting the family consisted
+                of three generations across four family branches, with some
+                working in the business and some, especially the partners and
+                grandchildren, having limited knowledge of family affairs.
+              </p>
+              <p>
+                The retreat was planned to ensure the first session had all family
+                members in attendance. John and Tillie discussed their family
+                history and Irish origins, sharing their family tree to give a
+                sense of where they came from. They also explained why they
+                immigrated to Australia with limited financial capital and worked
+                tirelessly to start their business. They shared stories of their
+                struggles to build the business and the challenges they faced in
+                earning enough money to pay the rent, along with the hard work and
+                persistence that was required to achieve what they have today. It
+                was really important for John and Tillie to share these stories to
+                help their family understand where they came from and build
+                awareness of their key values. They hoped some of these values
+                might flow through, and be fostered by, the family.
+              </p>
+              <p>
+                John and two of his children who worked in the business then
+                presented a summary of the business operations and discussed how
+                it not only creates value for customers, but also supports the
+                wider community by employing 400 people who depend on them for
+                their livelihoods, in addition to paying taxes to support the
+                economy.
+              </p>
+              <p>
+                Tillie shared her story about how Joan’s demise and tautology
+                caused by Parkinson’s disease had severely impacted her and
+                explained how the O’Brien family was in a position where they
+                could make a positive contribution to helping others suffering
+                from Parkinson’s and other related diseases. She explained how she
+                gifted a large sum of money to a family Foundation so she could
+                grant money to charities that help people like Joan.
+              </p>
+              <p>
+                During a later session, the family separated into groups. The
+                children attended a session to share their expectations regarding
+                the business and explore ways to respect John and Tillie’s legacy,
+                whilst making the business work for them as a collective (across
+                four branches). This included discussion around whether to operate
+                the business as is, expand, or even consider selling. The
+                Multi-Family Office advisors facilitated the session, providing
+                objectivity and a safe place for everyone (including partners) to
+                voice their views. Their goal was to start sketching out what the
+                future plan might look like.
+              </p>
+              <p>
+                Simultaneously, John and Tillie introduced their grandchildren to
+                their Multi-Family Office advisory team and John explained the
+                role of the family office and why it’s so important to the
+                O’Brien family. John explained that the purpose of a Multi-Family
+                Office is to help to grow and protect their family assets so they
+                can be handed from one generation to the next in better shape than
+                they received them. The grandchildren discovered that, through
+                this team of professional advisors, they could seek assistance
+                with building an investment portfolio, buying a house, giving to
+                or volunteering at charities and, importantly, call on them to
+                help navigate uncomfortable issues with family members.
+              </p>
+              <p>
+                The final session of the retreat involved all the O’Briens coming
+                back together and sharing their experiences of the retreat. Each
+                family member was given the opportunity to raise what they enjoyed
+                most and least; what they learnt about each other and their
+                individual interests and aspirations; and how to best engage
+                everyone.
+              </p>
+              <p>
+                Unanimously the family agreed that they were all looking forward
+                to the next retreat to build on what they had started.
+              </p>
+              <p class="wp-case-study__note">
+                * First and Family names have been changed for privacy reasons
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wp-spread wp-spread--flow">
+        <div class="wp-spread__page wp-spread__page--left">
+          <div class="wp-spread__inner wp-spread__inner--left wp-body wp-flow">
+            <h2 class="wp-subhead">5. Community impact</h2>
+            <p class="wp-facet-lede">
+              Giving the family’s time, treasure, talent and ties to make a
+              positive impact on society through creating jobs, supporting
+              philanthropic causes, investing responsibly, serving in the
+              community and paying taxes.
+            </p>
+            <p>
+              The University of Adelaide research highlights the importance that
+              wealthy families place on having community impact to realise what
+              matters most to them. This can be through the creation of jobs and
+              opportunities within their businesses or, less directly, through the
+              economic impact of the taxes they pay. The University of Adelaide
+              research reported – wealthy families contributed $3.6 billion – $5
+              billion in Australian taxes in 2020.
+            </p>
+            <p>
+              Wealthy families have also enhanced the positive societal impact
+              they can have due to their increasing levels of interest and
+              participation in responsible investments, particularly in companies
+              that create shared value. These are companies that are profitable
+              and generate good investment returns while making the world a better
+              place. This is highlighted in the research, where one person said:
+            </p>
+            <blockquote class="wp-inline-quote">
+              <p>
+                “…there are more and more families who are looking for impact
+                investments… there’s a pool of capital that’s becoming available
+                there to benefit people who need it – organisations who are doing
+                good work for the environment, for disadvantaged communities… So,
+                I think [the] Family Office is playing a really important part of
+                seeding the investment that is needed for social change.”
+              </p>
+              <cite class="wp-inline-quote__attrib"
+                >Family Office advisor, participant 10</cite
+              >
+            </blockquote>
+            <p>
+              Traditionally, however, community impact for wealthy families has
+              been achieved through philanthropy. Philanthropic activity allows
+              family members to work together with a shared purpose to create a
+              lasting positive impact. It can be a unifying force for family
+              harmony as well as an expression of an individual’s specific
+              passions. Serving the community is also a protective factor against
+              the modern malaise of anxiety and depression, as well as providing a
+              platform to develop the values, perspective, work ethic and skills
+              of the younger generation of family members.
+            </p>
+            <p>
+              Philanthropy is more than giving money to a worthy cause. Many
+              wealthy family members also give their time and expertise by serving
+              on Boards or committees of philanthropic organisations. The modern
+              Family Office assists wealthy families not just with giving, but
+              also with their philanthropy strategy, to ensure it aligns closely
+              with the family’s values and purpose, and is executed professionally
+              and with maximum impact. This involves facilitated family strategy
+              sessions, followed by development of a detailed execution plan which
+              the Family Office helps to implement.
+            </p>
+            <blockquote class="wp-inline-quote">
+              <p>
+                “[Philanthropy] was an excellent way to educate the kids a bit and
+                give back something to the community. The Multi-Family Office does
+                all the admin, and we have governance meetings to identify
+                charities or organisations that meet the regulatory framework and
+                the rules [we’ve established]… they’re pretty good. The kids quite
+                enjoy it, and… it’s been a great way to educate them on other
+                aspects such as why you might use trust structures to protect
+                assets.”
+              </p>
+              <cite class="wp-inline-quote__attrib"
+                >Family Enterprise leader, participant 13</cite
+              >
+            </blockquote>
+          </div>
+        </div>
+        <div
+          class="wp-spread__page wp-spread__page--right wp-spread__page--case-study"
+        >
+          <figure class="wp-photo-band wp-photo-band--short">
+            <img
+              src="assets/why-the-modern-family-office-matters/images/chunk-05/p24-xref152.jpeg"
+              alt=""
+              width="1243"
+              height="559"
+            />
+          </figure>
+          <div
+            class="wp-spread__inner wp-spread__inner--right wp-spread__inner--below-band wp-body"
+          >
+            <div class="wp-case-study">
+              <p class="wp-case-study__label">Mutual Trust Case Study</p>
+              <h3 class="wp-case-study__title">Community impact</h3>
+              <p>
+                Passionate about supporting young people with intellectual
+                disabilities, the Alroy* family funded research to identify where
+                their giving could have the greatest impact. They then set about
+                making these changes through an innovative philanthropic approach.
+              </p>
+              <p>
+                Tired of observing the barriers their own family member faced in
+                navigating life with an intellectual disability, the Alroys made
+                the decision to advocate for change.
+              </p>
+              <p>
+                The Alroys recognised they were just one piece of the puzzle when
+                it came to making a real difference in this space. Through their
+                family foundation, they decided to partner with a large
+                not-for-profit and fund research into how to best support children
+                with intellectual disabilities. The report highlighted a
+                significant gap in support available during the transition from
+                school to work.
+              </p>
+              <p>
+                Armed with this research, they created a round-table forum.
+                Bringing together people with lived experience, consultants from
+                not-for-profits, government agencies and reputable service
+                providers, they worked together to identify the best course of
+                action to take.
+              </p>
+              <p>
+                It was decided to focus on increasing the ability of employers to
+                offer work to young people with intellectual disabilities. They
+                went out to market for expressions of interest from organisations
+                that could help them achieve this goal via grants. The panel of
+                grant application reviewers included the Alroys and again, people
+                with lived experience and industry service providers.
+              </p>
+              <p>
+                The Alroys invited four shortlisted applicants to undertake
+                invaluable pitch training and then attend an event where they
+                could use their new skills to pitch to the philanthropists in
+                attendance.
+              </p>
+              <p>
+                The results were significant. Each of the four grant applicants
+                received more funding than originally requested and the scale of
+                change introduced by the Alroys was far greater than the act of
+                simply donating money to a cause.
+              </p>
+              <p>
+                The experience of collaborating with the right people and sharing
+                the opportunity with other philanthropists to maximise the impact
+                of their work was a tremendously rewarding experience for the
+                Alroys and brought each family member a great sense of fulfilment.
+              </p>
+              <p class="wp-case-study__note">
+                * Family name has been changed for privacy reasons
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wp-spread wp-spread--flow">
+        <div class="wp-spread__page wp-spread__page--left">
+          <div class="wp-spread__inner wp-spread__inner--left wp-body wp-flow">
+            <h2 class="wp-display-title wp-title-rule">Conclusion</h2>
+            <p>
+              Wealthy families have a significant positive socio-economic impact
+              on Australia, but lasting impact depends on those families
+              prospering for generations. This is not guaranteed, however, and
+              more intergenerational wealth transfers would succeed if families
+              adopted a Family Office model that suits their needs.
+            </p>
+            <p>
+              The selection of an appropriate Family Office model can greatly
+              assist a wealthy family to perpetuate the positive contribution they
+              make to society. Choosing an appropriate Family Office model is not
+              straight forward. It depends on factors including: the size and
+              source of wealth; complexity of family affairs; existing family
+              expertise or preferences; and the degree to which family members
+              want to be involved in the management of their wealth. Wealthy
+              families who are seeking intergenerational success should take these
+              factors into consideration when choosing a Family Office.
+            </p>
+            <p>
+              A key advantage of a Multi-Family Office over other Family Office
+              types is the depth and breadth of services that can be provided to
+              Family Enterprises. In addition, Multi-Family Offices can work
+              together with other Family Office models, in that they may provide
+              services to, for example, a Single Family Office or a Business
+              Family Office to supplement in-house expertise.
+            </p>
+            <p>
+              To further improve success over generations, wealthy families need a
+              modern Family Office that not only manages and grows the family’s
+              financial capital over the long-term, but also focuses on other
+              equally important multi-faceted family matters that ensure
+              intergenerational success. This includes helping families to
+              understand what matters most to them and how to use their wealth to
+              achieve that purpose. However, this is not enough. Other factors for
+              intergenerational success include supporting entrepreneurship,
+              promoting family harmony and unity, facilitating the learning,
+              education and fulfilment of each family member, and having a
+              positive impact on the community.
+            </p>
+            <p class="wp-facet-lede">
+              To provoke self-assessment, there are five questions for wealthy
+              families to answer:
+            </p>
+            <ol class="wp-list wp-list--ordered">
+              <li>
+                Do you know what matters most to your family as a whole and to
+                your individual family members?
+              </li>
+              <li>
+                Do you have a way to develop a Family Strategy that is
+                collaborative and involves the best multi-faceted expertise?
+              </li>
+              <li>
+                Do you have an agreed, well-structured Family Strategy for
+                achieving what matters most that will be successfully implemented
+                during and beyond your lifetime?
+              </li>
+              <li>
+                Do you have a way for the family to implement and evolve the
+                Family Strategy in line with changing circumstances and family
+                capacity?
+              </li>
+              <li>
+                Do you know the best Family Office model now and over time for
+                your family?
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="wp-spread__page wp-spread__page--right">
+          <div class="wp-spread__inner wp-spread__inner--right wp-body wp-flow">
+            <p>
+              Despite the early-stage evolution of the Family Office sector in
+              Australia, wealthy families can identify the success factors present
+              in the modern Family Office and adopt these practices within varying
+              Family Office models that suit them. This will ensure a more
+              positive family experience and greater likelihood of successful
+              intergenerational wealth transfer. Successful wealthy families can
+              also challenge themselves and their advisors to develop these
+              practices further to ensure that the positive socio-economic impact
+              of their wealth in Australia continues to have a lasting impact.
+            </p>
+          </div>
+          <figure class="wp-photo-band">
+            <img
+              src="assets/why-the-modern-family-office-matters/images/chunk-05/p25-xref156.jpeg"
+              alt=""
+              width="1245"
+              height="1103"
+            />
+          </figure>
+        </div>
+      </div>
+
+      <!-- /wp-chunk:5 -->
+
+      <!-- wp-chunk:6 back-matter ✓ -->
+
+      <div class="wp-spread wp-spread--flow">
+        <div class="wp-spread__page wp-spread__page--left">
+          <div class="wp-spread__inner wp-spread__inner--left wp-body">
+            <section class="wp-contributors" aria-labelledby="wp-contrib-title">
+              <h2 class="wp-display-title wp-title-rule" id="wp-contrib-title">
+                Contributors to this report
+              </h2>
+              <div class="wp-contributors__grid">
+                <article class="wp-contributor">
+                  <img
+                    class="wp-contributor__photo"
+                    src="assets/why-the-modern-family-office-matters/images/chunk-06/contributor-phil-harkness.png"
+                    alt=""
+                    width="216"
+                    height="216"
+                  />
+                  <div>
+                    <h3 class="wp-contributor__name">
+                      Phil Harkness | CEO &amp; Managing Partner, Mutual Trust
+                    </h3>
+                    <div class="wp-contributor__bio">
+                      <p>
+                        Phil is an experienced Senior Executive with over 30
+                        years’ experience working in professional services. In
+                        2017, he joined Mutual Trust as the Chief Executive
+                        Officer.
+                      </p>
+                      <p>
+                        Phil has provided advisory services to clients
+                        internationally across a wide range of industries
+                        including financial services, resources, utilities,
+                        manufacturers, numerous public sector and government
+                        organisations, retail, and telecommunications
+                        organisations.
+                      </p>
+                      <p>
+                        Prior to Mutual Trust, Phil spent five years as a Partner
+                        with EY (Ernst &amp; Young). Phil joined EY in 2012 to
+                        lead the Oceania Performance Improvement practice within
+                        the Advisory Service Line and to start the Strategy
+                        Consulting practice. Phil’s responsibilities were expanded
+                        to include the Customer practice across Oceania and APAC
+                        and a global role as the leader of an important EY
+                        strategy offering – Purpose Lead Transformation. Phil was
+                        also the Diversity and Inclusion Leader for EY Advisory in
+                        Oceania.
+                      </p>
+                      <p>
+                        Phil holds a Bachelor of Agricultural Science from LaTrobe
+                        University and a Master of Business Administration from
+                        the Melbourne Business School (Winner of the CRA Prize for
+                        top student in corporate strategy).
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article class="wp-contributor">
+                  <img
+                    class="wp-contributor__photo"
+                    src="assets/why-the-modern-family-office-matters/images/chunk-06/contributor-jeff-steiner.png"
+                    alt=""
+                    width="218"
+                    height="223"
+                  />
+                  <div>
+                    <h3 class="wp-contributor__name">
+                      Jeff Steiner | Partner, Head of Family Office, Mutual Trust
+                    </h3>
+                    <div class="wp-contributor__bio">
+                      <p>
+                        Jeff helps high net worth families navigate the complex
+                        landscape of intergenerational wealth transfer amidst
+                        ever-changing economic cycles. His mission is to maximise
+                        success in preserving, growing and transferring the
+                        family’s legacy in a harmonious and orderly way.
+                      </p>
+                      <p>
+                        Jeff has spent more than 25 years in family advisory and
+                        Family Office management. He is a highly sought after and
+                        acknowledged global thought leader in this space. He
+                        partners with wealth owners and their families to plan and
+                        achieve their long-term goals across all aspects of their
+                        wealth, including their family, businesses, investments
+                        and philanthropy. Jeff has deep expertise in managing
+                        family dynamics and is passionate about family unity and
+                        aligning families values with their wealth.
+                      </p>
+                      <p>
+                        Jeff currently serves as an independent chair and is a
+                        member of family Boards and not-for-profit organisations.
+                        He holds a Bachelor of Commerce, is a Certified Practicing
+                        Accountant, a registered tax agent and a graduate of the
+                        Australian Institute of Company Directors.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="wp-spread__page wp-spread__page--right">
+          <div class="wp-spread__inner wp-spread__inner--right wp-body">
+            <section class="wp-contributors">
+              <div class="wp-contributors__grid">
+                <article class="wp-contributor">
+                  <img
+                    class="wp-contributor__photo"
+                    src="assets/why-the-modern-family-office-matters/images/chunk-06/contributor-brad-simmons.png"
+                    alt=""
+                    width="212"
+                    height="215"
+                  />
+                  <div>
+                    <h3 class="wp-contributor__name">
+                      Brad Simmons | Partner, Head of South Australia, Mutual
+                      Trust
+                    </h3>
+                    <div class="wp-contributor__bio">
+                      <p>
+                        Brad is passionate about helping families meet the
+                        challenges of managing wealth across generations. Having
+                        worked within both a single Family Office and Australia’s
+                        largest Multi-Family Office, Brad has a unique perspective
+                        on family wealth.
+                      </p>
+                      <p>
+                        Drawing on his expertise in finance, corporate law, family
+                        governance and succession, Brad helps to integrate the
+                        affairs of families across a range of disciplines,
+                        including family strategy, investment management, tax
+                        accounting, philanthropy and trustee services.
+                      </p>
+                      <p>
+                        After six years with Mutual Trust in Melbourne as a
+                        Partner in the Family Office team, Brad returned home to
+                        Adelaide in December 2018 to establish a South Australian
+                        office for the firm.
+                      </p>
+                      <p>
+                        Brad holds a Bachelor of Laws, a Master of Applied Finance
+                        and Investment and a Diploma of Financial Planning. He has
+                        also completed a Family Business Directors Course with
+                        Family Business Australia and a Leadership Development
+                        Program with the Melbourne Business School.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article class="wp-contributor">
+                  <img
+                    class="wp-contributor__photo"
+                    src="assets/why-the-modern-family-office-matters/images/chunk-06/contributor-tracy-conlan.png"
+                    alt=""
+                    width="216"
+                    height="196"
+                  />
+                  <div>
+                    <h3 class="wp-contributor__name">
+                      Tracy Conlan | Partner, Head of Strategy, Mutual Trust
+                    </h3>
+                    <div class="wp-contributor__bio">
+                      <p>
+                        Tracy is responsible for developing and assisting the
+                        business to implement long-term business strategies. In
+                        her role, she expedites implementation in the business via
+                        strategic advice, new venture investments and other
+                        corporate development programs, including corporate
+                        transformation.
+                      </p>
+                      <p>
+                        Tracy joined Mutual Trust in 2018 and is an experienced
+                        banker, strategy consultant and general manager. She spent
+                        her formative years at McKinsey where her functional
+                        specialty was strategy and her industry focus was
+                        financial services. Tracy is an experienced strategy and
+                        financial services professional with more than 20 years in
+                        consulting and industry. Tracy has broad financial
+                        services experience ranging from EGM roles in corporate
+                        strategy, brand and marketing for the CBA, to projects
+                        with other large Australian banks, several regionals,
+                        credit unions, wealth and payments organisations. She has
+                        also undertaken consulting projects in Australia, London,
+                        Stockholm and Brussels while working at McKinsey, EY and
+                        Deloitte.
+                      </p>
+                      <p>
+                        Tracy holds an MBA from London Business School, a Post
+                        Graduate Diploma in Finance and Administration from the
+                        Securities Institute of Australia, and a Bachelor of
+                        Economics (Hons 1st) from the University of Sydney.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div class="wp-spread wp-spread--flow">
+        <div class="wp-spread__page wp-spread__page--left">
+          <div class="wp-spread__inner wp-spread__inner--left wp-body">
+            <section class="wp-contributors">
+              <div class="wp-contributors__grid">
+                <article class="wp-contributor">
+                  <img
+                    class="wp-contributor__photo"
+                    src="assets/why-the-modern-family-office-matters/images/chunk-06/contributor-elizabeth-goldfinch.png"
+                    alt=""
+                    width="217"
+                    height="207"
+                  />
+                  <div>
+                    <h3 class="wp-contributor__name">
+                      Elizabeth Goldfinch | Partner, Family Office, Mutual Trust
+                    </h3>
+                    <div class="wp-contributor__bio">
+                      <p>
+                        Elizabeth (Lizzy) has worked with significant families and
+                        family businesses, both nationally and internationally
+                        over the past decade, to decode what matters or is most
+                        important to them. She is driven to help families and
+                        their emerging generations address both the opportunities
+                        as well as the challenges of wealth.
+                      </p>
+                      <p>
+                        Prior to joining Mutual Trust, Lizzy worked in the Private
+                        Wealth Management team at the Myer Family Company where
+                        she managed the investment portfolios of successful
+                        multi-generational families and not-for-profit
+                        organisations. Prior to that, Lizzy was responsible for
+                        the delivery of wealth management and family continuity
+                        services to Queensland-based families who hold substantial
+                        property and business assets.
+                      </p>
+                      <p>
+                        Lizzy holds a Bachelor of Commerce &amp; Bachelor of
+                        Economics (Dean’s Honour Role) from the University of
+                        Queensland, a Graduate Diploma in Financial Planning from
+                        Kaplan and is a Graduate of the Australian Institute of
+                        Company Directors.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article class="wp-contributor">
+                  <img
+                    class="wp-contributor__photo"
+                    src="assets/why-the-modern-family-office-matters/images/chunk-06/contributor-lyndie-van-orsouw.png"
+                    alt=""
+                    width="218"
+                    height="203"
+                  />
+                  <div>
+                    <h3 class="wp-contributor__name">
+                      Lyndie van Orsouw | Manager, Family Office, Mutual Trust
+                    </h3>
+                    <div class="wp-contributor__bio">
+                      <p>
+                        Lyndie has in excess of 20 years’ experience in accounting
+                        and bookkeeping and specialises in developing finance
+                        solutions for Family Offices and family businesses.
+                      </p>
+                      <p>
+                        With a wealth of knowledge around accounting software,
+                        financial reporting, and business management, Lyndie is
+                        able to work closely with advisors across multiple
+                        disciplines including wealth management, tax accounting
+                        and property management. Using platforms such as Xero and
+                        Praemium, she expertly tailors quality record keeping and
+                        invoice management systems. This ensures that clients have
+                        robust financial management and valuable real-time
+                        reporting.
+                      </p>
+                      <p>
+                        Lyndie holds a Master of Business Administration
+                        (Finance), a Bachelor of Accounting, a Bachelor of Arts
+                        (Legal Studies), and is currently commencing a PhD with
+                        The University of Adelaide. She is a Certified Practicing
+                        Accountant (CPA), and a Graduate of the Australian
+                        Institute of Company Directors, and has also completed a
+                        management certification with Harvard Business School.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="wp-spread__page wp-spread__page--right">
+          <div class="wp-spread__inner wp-spread__inner--right wp-body">
+            <section class="wp-contributors">
+              <div class="wp-contributors__grid">
+                <article class="wp-contributor">
+                  <img
+                    class="wp-contributor__photo"
+                    src="assets/why-the-modern-family-office-matters/images/chunk-06/contributor-chris-graves.png"
+                    alt=""
+                    width="209"
+                    height="222"
+                  />
+                  <div>
+                    <h3 class="wp-contributor__name">
+                      Dr Chris Graves | Associate Professor, University of
+                      Adelaide
+                    </h3>
+                    <div class="wp-contributor__bio">
+                      <p>
+                        Associate Professor Chris Graves is a Chartered
+                        Accountant, and director of the Family Business Education
+                        and Research Group [FBERG] at the University of Adelaide
+                        Business School. Chris has a Bachelor degree in
+                        Accountancy from the former South Australian Institute of
+                        Technology, a Master degree in Economics from the
+                        University of New England, and a PhD from the University
+                        of Adelaide. Chris has been serving as an external member
+                        of the University Council’s ‘Audit, Compliance and Risk’
+                        sub-committee since 2014.
+                      </p>
+                      <p>
+                        Since joining the University of Adelaide in 2007, Chris
+                        has spent considerable time educating managers and owners
+                        of privately-owned firms. Each year, he is actively
+                        involved in improving the financial literacy of owners and
+                        managers through the University’s Executive Education and
+                        Masters of Business Administration programs. In 2015, in
+                        conjunction with Family Business Australia and the
+                        Government of South Australia, he introduced the NextGen
+                        eChallenge educational program to assist in the
+                        development of the next generation of entrepreneurial
+                        leaders in family-controlled enterprises. In 2015, he
+                        developed an owner leadership development program
+                        (‘Catalyst’) in conjunction with the Government of South
+                        Australia, industry associations and business owners.
+                      </p>
+                      <p>
+                        With regard to research, Chris publishes in top
+                        international journals such as Family Business Review on
+                        issues surrounding the management and performance of
+                        family-controlled SMEs. In 2006, he graduated with a PhD
+                        which investigated factors that limit the ability of
+                        family-owned SMEs to grow internationally, as well as the
+                        manner in which those obstacles can be overcome. His PhD
+                        research received an international award from the Family
+                        Firm Institute (FFI), based in the USA. In 2013, 2015, and
+                        2017 he undertook the KPMG-Family Business Australia
+                        ‘National Family Business Survey’ and was an academic
+                        advisor for KPMG International’s study investigating the
+                        role of private equity financing in family-controlled
+                        enterprises around the world. He completed a four year
+                        term on the board of the International Family Enterprise
+                        Research Academy (ifera.org), the leading global network
+                        of family business scholars.
+                      </p>
+                      <p>
+                        As part of his specialisation in family business, Chris
+                        completed a Graduate Diploma in Family Therapy and
+                        Systemic Practice.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div class="wp-spread wp-spread--flow">
+        <div class="wp-spread__page wp-spread__page--left">
+          <div class="wp-spread__inner wp-spread__inner--left wp-body wp-flow">
+            <div class="wp-about">
+              <h2 class="wp-display-title wp-title-rule">
+                About University of Adelaide Business School
+              </h2>
+              <p>
+                The University of Adelaide has a proud history of delivering
+                world-class courses in business as the first institution in
+                Australia to offer business education in 1902. The University of
+                Adelaide is consistently ranked in the top one percent of the
+                world’s universities and is recognised globally as a leading
+                research university.
+              </p>
+              <p>
+                The Adelaide Business School is an integral part of the University
+                of Adelaide providing a world-class hub of excellence in business
+                education and research. Through its research, teaching and
+                engagement activities, the Adelaide Business School assists
+                current and future leaders to create, transform and lead
+                sustainable innovative enterprises that contribute to the
+                development of a better society.
+              </p>
+              <p>
+                In recognition of the significance and uniqueness of Family
+                Enterprises around the world, the Adelaide Business School
+                established the Family Business Education and Research Group
+                (FBERG) in 2011. Under the leadership of Associate Professor Chris
+                Graves, FBERG’s activities have led to the Adelaide Business
+                School being recognised as one of the top 25 global business
+                schools for family business education and research.
+              </p>
+              <p>
+                The research referred to in this report comprises two primary
+                research reports authored by Associate Professor, Dr. Chris Graves,
+                from the University of Adelaide. Copies of these reports are
+                available on the University of Adelaide’s website
+                <a href="https://business.adelaide.edu.au/research/fberg"
+                  >business.adelaide.edu.au/research/fberg</a
+                >
+              </p>
+              <div class="wp-about__covers">
+                <img
+                  class="wp-about__cover"
+                  src="assets/why-the-modern-family-office-matters/images/chunk-06/report-cover-role-of-family-offices.jpeg"
+                  alt="The Role of Family Offices — The University of Adelaide"
+                  width="341"
+                  height="475"
+                />
+                <img
+                  class="wp-about__cover"
+                  src="assets/why-the-modern-family-office-matters/images/chunk-06/report-cover-insights.jpeg"
+                  alt="Insights from Family Enterprise Leaders — The University of Adelaide"
+                  width="341"
+                  height="475"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="wp-spread__page wp-spread__page--right wp-spread__page--visual"
+        >
+          <figure class="wp-page-visual">
+            <img
+              src="assets/why-the-modern-family-office-matters/images/chunk-06/p28-xref215.jpeg"
+              alt=""
+              width="1717"
+              height="1759"
+            />
+          </figure>
+        </div>
+      </div>
+
+      <div class="wp-spread wp-spread--flow">
+        <div class="wp-spread__page wp-spread__page--left">
+          <div class="wp-spread__inner wp-spread__inner--left wp-body wp-flow">
+            <div class="wp-about">
+              <h2 class="wp-display-title wp-title-rule">About Mutual Trust</h2>
+              <p>
+                Mutual Trust provides integrated wealth services to Australia’s
+                most successful families, family businesses, trustees,
+                not-for-profits and individuals. We build purposeful, long-term
+                relationships with our clients to help preserve and grow their
+                wealth for future generations and their communities.
+              </p>
+              <p>
+                Building and sustaining significant family wealth and values does
+                not just happen. It takes careful planning and deep engagement
+                across generations. We work with our clients to establish a clear
+                shared vision for the purpose of their wealth. With this focus and
+                alignment, we help them create and execute a family strategy to
+                achieve their Purpose of Wealth for generations to come.
+              </p>
+              <p>
+                Initially founded in 1921 by W.L. Baillieu and his four brothers
+                as a vehicle to provide accounting and trustee services for the
+                Baillieu family, we have grown and evolved over the years to meet
+                the needs of a changing world. In 2017, following the union of
+                Mutual Trust and The Myer Family Company Limited, Australia’s
+                largest Multi-Family Office was formed.
+              </p>
+              <p>
+                Today, Mutual Trust has over 220 employees and four offices
+                nationally and is the trusted partner to many of Australia’s
+                wealthiest families and individuals.
+              </p>
+            </div>
+            <div class="wp-offices">
+              <article class="wp-office">
+                <h3 class="wp-office__city">Melbourne</h3>
+                <p>
+                  Level 32, 360 Collins Street,<br />
+                  Melbourne VIC 3000<br />
+                  T
+                  <a href="tel:+61396059500">+61 3 9605 9500</a><br />
+                  E
+                  <a href="mailto:enquiry.mel@mutualtrust.com.au"
+                    >enquiry.mel@mutualtrust.com.au</a
+                  >
+                </p>
+              </article>
+              <article class="wp-office">
+                <h3 class="wp-office__city">Perth</h3>
+                <p>
+                  Ground Floor, 22 Stirling Highway,<br />
+                  Nedlands WA 6009<br />
+                  T
+                  <a href="tel:+61892307700">+61 8 9230 7700</a><br />
+                  E
+                  <a href="mailto:enquiry.per@mutualtrust.com.au"
+                    >enquiry.per@mutualtrust.com.au</a
+                  >
+                </p>
+              </article>
+              <article class="wp-office">
+                <h3 class="wp-office__city">Sydney</h3>
+                <p>
+                  Level 18, 126 Phillip Street,<br />
+                  Sydney NSW 2000<br />
+                  T
+                  <a href="tel:+61292247600">+61 2 9224 7600</a><br />
+                  E
+                  <a href="mailto:enquiry.syd@mutualtrust.com.au"
+                    >enquiry.syd@mutualtrust.com.au</a
+                  >
+                </p>
+              </article>
+              <article class="wp-office">
+                <h3 class="wp-office__city">Adelaide</h3>
+                <p>
+                  Level 2, 28 Franklin Street,<br />
+                  Adelaide SA 5000<br />
+                  T
+                  <a href="tel:+61870823900">+61 8 7082 3900</a><br />
+                  E
+                  <a href="mailto:enquiry.ade@mutualtrust.com.au"
+                    >enquiry.ade@mutualtrust.com.au</a
+                  >
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div
+          class="wp-spread__page wp-spread__page--right wp-spread__page--services"
+        >
+          <div class="wp-spread__inner wp-spread__inner--right">
+            <h2 class="wp-services__title">
+              Providing all the services required to protect and grow wealth,
+              under one roof
+            </h2>
+            <div class="wp-services">
+              <figure class="wp-services__item">
+                <img class="wp-services__icon" src="assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-01-family-office-consulting.svg" alt="" />
+                <figcaption class="wp-services__label">Family Office Consulting</figcaption>
+              </figure>
+              <figure class="wp-services__item">
+                <img class="wp-services__icon" src="assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-02-family-consulting-succession.svg" alt="" />
+                <figcaption class="wp-services__label">Family Consulting &amp; Succession Planning</figcaption>
+              </figure>
+              <figure class="wp-services__item">
+                <img class="wp-services__icon" src="assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-03-family-business-consulting.svg" alt="" />
+                <figcaption class="wp-services__label">Family Business Consulting</figcaption>
+              </figure>
+              <figure class="wp-services__item">
+                <img class="wp-services__icon" src="assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-04-rising-gen-program.svg" alt="" />
+                <figcaption class="wp-services__label">Rising Gen Program</figcaption>
+              </figure>
+              <figure class="wp-services__item">
+                <img class="wp-services__icon" src="assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-05-family-council-governance.svg" alt="" />
+                <figcaption class="wp-services__label">Family Council &amp; Governance</figcaption>
+              </figure>
+              <figure class="wp-services__item">
+                <img class="wp-services__icon" src="assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-06-family-dynamics.svg" alt="" />
+                <figcaption class="wp-services__label">Family Dynamics</figcaption>
+              </figure>
+              <figure class="wp-services__item">
+                <img class="wp-services__icon" src="assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-07-philanthropy.svg" alt="" />
+                <figcaption class="wp-services__label">Philanthropy</figcaption>
+              </figure>
+              <figure class="wp-services__item">
+                <img class="wp-services__icon" src="assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-08-trustee-services.svg" alt="" />
+                <figcaption class="wp-services__label">Trustee Services</figcaption>
+              </figure>
+              <figure class="wp-services__item">
+                <img class="wp-services__icon" src="assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-09-indigenous-trustee-services.svg" alt="" />
+                <figcaption class="wp-services__label">Indigenous Trustee Services</figcaption>
+              </figure>
+              <figure class="wp-services__item">
+                <img class="wp-services__icon" src="assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-10-agribusiness.svg" alt="" />
+                <figcaption class="wp-services__label">Agribusiness</figcaption>
+              </figure>
+              <figure class="wp-services__item">
+                <img class="wp-services__icon" src="assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-11-property-services.svg" alt="" />
+                <figcaption class="wp-services__label">Property Services</figcaption>
+              </figure>
+              <figure class="wp-services__item">
+                <img class="wp-services__icon" src="assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-12-tax-accounting-compliance.svg" alt="" />
+                <figcaption class="wp-services__label">Tax &amp; Accounting Compliance</figcaption>
+              </figure>
+              <figure class="wp-services__item">
+                <img class="wp-services__icon" src="assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-13-tax-accounting-consulting-super.svg" alt="" />
+                <figcaption class="wp-services__label">Tax, Accounting, Consulting &amp; Superannuation</figcaption>
+              </figure>
+              <figure class="wp-services__item">
+                <img class="wp-services__icon" src="assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-14-bookkeeping-concierge.svg" alt="" />
+                <figcaption class="wp-services__label">Bookkeeping &amp; Concierge Services</figcaption>
+              </figure>
+              <figure class="wp-services__item">
+                <img class="wp-services__icon" src="assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-15-custody-administration.svg" alt="" />
+                <figcaption class="wp-services__label">Custody &amp; Administration</figcaption>
+              </figure>
+              <figure class="wp-services__item">
+                <img class="wp-services__icon" src="assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-16-portfolio-management.svg" alt="" />
+                <figcaption class="wp-services__label">Portfolio Management</figcaption>
+              </figure>
+              <figure class="wp-services__item">
+                <img class="wp-services__icon" src="assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-17-investment-advisory-research.svg" alt="" />
+                <figcaption class="wp-services__label">Investment Advisory &amp; Research</figcaption>
+              </figure>
+              <figure class="wp-services__item">
+                <img class="wp-services__icon" src="assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-18-responsible-investment.svg" alt="" />
+                <figcaption class="wp-services__label">Responsible Investment</figcaption>
+              </figure>
+              <figure class="wp-services__item">
+                <img class="wp-services__icon" src="assets/why-the-modern-family-office-matters/images/chunk-06/icon-service-19-strategic-hr-consulting.svg" alt="" />
+                <figcaption class="wp-services__label">Strategic Human Resources Consulting</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wp-spread wp-spread--flow">
+        <div class="wp-spread__page wp-spread__page--left">
+          <div class="wp-spread__inner wp-spread__inner--left wp-body wp-flow">
+            <h2 class="wp-display-title wp-title-rule">References</h2>
+            <ol class="wp-endnotes">
+              <li>
+                <span class="wp-endnotes__mark">i</span>
+                <span
+                  >Note: according to the Productivity Commission report, in 2018,
+                  $120 billion was transferred. Based on an annual growth rate
+                  4.76% in transfers from 2002 to 2018 (due to annual growth in
+                  wealth), from 2023 to 2040 it can be anticipated that over $4
+                  trillion will be transferred.</span
+                >
+              </li>
+              <li>
+                <span class="wp-endnotes__mark">ii</span>
+                <span
+                  >Williams &amp; Preisser (2010),
+                  <em
+                    >Preparing Heirs: Five Steps to a Successful transition of
+                    Family Wealth and Values</em
+                  >, Robert D. Reed Publishers, San Francisco, pp. 35–49.</span
+                >
+              </li>
+              <li>
+                <span class="wp-endnotes__mark">iii</span>
+                <span
+                  >Williams &amp; Preisser (2010),
+                  <em
+                    >Preparing Heirs: Five Steps to a Successful transition of
+                    Family Wealth and Values</em
+                  >, Robert D. Reed Publishers, San Francisco, pp. 35–49.</span
+                >
+              </li>
+              <li>
+                <span class="wp-endnotes__mark">iv</span>
+                <span
+                  >Williams &amp; Preisser (2010),
+                  <em
+                    >Preparing Heirs: Five Steps to a Successful transition of
+                    Family Wealth and Values</em
+                  >, Robert D. Reed Publishers, San Francisco, pp. 35–49.</span
+                >
+              </li>
+              <li>
+                <span class="wp-endnotes__mark">v</span>
+                <span
+                  >Williams &amp; Preisser (2010),
+                  <em
+                    >Preparing Heirs: Five Steps to a Successful transition of
+                    Family Wealth and Values</em
+                  >, Robert D. Reed Publishers, San Francisco, pp. 35–49.</span
+                >
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div
+          class="wp-spread__page wp-spread__page--right wp-spread__page--visual"
+        >
+          <figure class="wp-page-visual">
+            <img
+              src="assets/why-the-modern-family-office-matters/images/chunk-06/p30-xref226.jpeg"
+              alt=""
+              width="1245"
+              height="1759"
+            />
+          </figure>
+        </div>
+      </div>
+
+      <div class="wp-spread wp-spread--flow">
+        <div class="wp-spread__page wp-spread__page--left">
+          <div class="wp-spread__inner wp-spread__inner--left wp-body">
+            <div class="wp-legal">
+              <p>
+                Prepared in Australia by Mutual Trust Pty Ltd (ACN 004 285 330)
+                (AFSL 234590). It is general information only and has been
+                prepared without considering any particular persons’ objectives,
+                financial situation or needs. It does not constitute, and should
+                not be relied upon as personal financial product, investment,
+                accounting, taxation or legal advice. Before making any decision
+                you should read the relevant disclosure document and obtain
+                personal financial, investment, accounting, taxation and legal
+                advice. For more information about the financial services Mutual
+                Trust provides, please contact us or visit our website,
+                <a href="http://www.mutualtrust.com.au">mutualtrust.com.au</a>
+                for a copy of our Financial Services Guide. Liability limited by a
+                scheme approved under Professional Standards Legislation. For
+                participating members (other than for the acts or omissions of
+                Australian Financial Services Licensees).
+              </p>
+              <p>
+                The information is confidential and may not be reproduced without
+                permission. Mutual Trust Pty Ltd expressly disclaims all liability
+                for any claims relating to the contents of this information
+                (including any errors or omissions) or in relation to any written
+                or oral communications transmitted to the recipient in the course
+                of its evaluation. Each recipient should conduct and rely upon
+                its own investigation and analysis of the information and should
+                seek professional advice before taking any action.
+              </p>
+              <p>
+                The copyright of this material is and will remain the property of
+                Mutual Trust Pty Ltd.
+              </p>
+              <p>Publication version 2.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wp-single">
+        <div class="wp-back">
+          <div class="wp-cover__brands">
+            <div class="wp-cover__brand wp-cover__brand--mt">
+              <img
+                src="assets/why-the-modern-family-office-matters/images/chunk-01/cover-logo-mt.png"
+                alt="Mutual Trust"
+                width="340"
+                height="116"
+              />
+            </div>
+            <span class="wp-cover__divider" aria-hidden="true"></span>
+            <div class="wp-cover__brand wp-cover__brand--uoa">
+              <img
+                src="assets/why-the-modern-family-office-matters/images/chunk-01/cover-logo-uoa.png"
+                alt="The University of Adelaide"
+                width="332"
+                height="257"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- /wp-chunk:6 -->
     </main>
   </body>
 </html>

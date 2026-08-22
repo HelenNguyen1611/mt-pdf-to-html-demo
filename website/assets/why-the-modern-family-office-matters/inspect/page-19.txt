@@ -1,0 +1,138 @@
+PAGE 19  1190.55x841.89pt  mid=595.3
+
+[L] y=  67.9 x=  39.0- 278.9 | '3.  Family unity and harmony'
+       Baskerville 20.0 #000000 flags=4
+[L] y= 101.8 x=  39.6- 401.8 | 'Strengthening family relationships, values and trust, building '
+       ProximaNova-Light 14.0 #dd971a flags=4
+[L] y= 118.8 x=  39.9- 405.9 | 'communication, problem solving and the ability to undertake '
+       ProximaNova-Light 14.0 #dd971a flags=4
+[L] y= 135.8 x=  40.0- 410.3 | 'roles\xa0and\xa0responsibilities using each\xa0person’s strengths while '
+       ProximaNova-Light 14.0 #dd971a flags=4
+[L] y= 152.8 x=  39.7- 193.3 | 'valuing\xa0their differences.  '
+       ProximaNova-Light 14.0 #dd971a flags=4
+[L] y= 181.3 x=  38.6- 409.4 | 'The research shows that families experience common issues with unity  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 196.3 x=  39.9- 225.7 | 'and\xa0harmony.  These centre around:'
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 216.9 x=  55.1- 197.2 | '•\t Generational differences;'
+       ProximaNova-Light 12.0 #dd971a flags=4; ProximaNova-Light 12.0 #000000 flags=4; ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 236.2 x=  55.1- 307.8 | '•\t The psychological impact of selling a business;'
+       ProximaNova-Light 12.0 #dd971a flags=4; ProximaNova-Light 12.0 #000000 flags=4; ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 255.4 x=  55.1- 180.8 | '•\t Relationship changes;'
+       ProximaNova-Light 12.0 #dd971a flags=4; ProximaNova-Light 12.0 #000000 flags=4; ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 274.7 x=  55.1- 281.7 | '•\t Discussions about separating wealth; and'
+       ProximaNova-Light 12.0 #dd971a flags=4; ProximaNova-Light 12.0 #000000 flags=4; ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 293.9 x=  55.1- 352.0 | '•\t Engaging subsequent generations of family members.  '
+       ProximaNova-Light 12.0 #dd971a flags=4; ProximaNova-Light 12.0 #000000 flags=4; ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 317.4 x=  39.9- 452.0 | 'Unlike the previous two facets of Financial Prosperity and Entrepreneurship that '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 332.4 x=  39.9- 474.4 | 'are\xa0the more traditional domain of Family Offices, the modern Family Office\xa0includes '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 347.4 x=  40.1- 440.2 | 'helping to achieve family unity and harmony.  This does not necessarily mean '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 362.4 x=  40.1- 444.8 | 'keeping the family wealth together.  As one of the research\xa0participants stated:'
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 383.1 x=  63.5- 459.9 | '“…probably one of the greatest myths out there is that keeping it [the wealth] '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 398.1 x=  68.5- 459.0 | 'together equals family cohesion and unity.  There needs to be a net\xa0benefit '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 413.1 x=  68.5- 436.2 | 'to do so, which involves assessing financial benefits, for sure.  But also, '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 428.1 x=  68.2- 461.2 | 'consideration of non-financial benefits such as your family cohesion… I\xa0think '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 443.1 x=  68.3- 446.6 | 'a\xa0by-product of talking about this is family cohesion; even though it\xa0might '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 458.1 x=  68.2- 378.6 | 'cause a bit of tension, at least you’re all on the same page.” '
+       ProximaNova-LightIt 12.0 #000000 flags=6
+[L] y= 478.8 x=  68.4- 267.9 | 'Family Enterprise leader, participant 24'
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 505.1 x=  40.1- 403.3 | 'Family unity and harmony begins with a shared understanding of what '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 520.1 x=  40.1- 448.6 | 'is\xa0important\xa0to family members individually and collectively.  It can include such '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 535.1 x=  40.1- 453.2 | 'things as\xa0perpetuating the family legacy, maintaining the family farm, addressing '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 550.1 x=  40.0- 466.6 | 'climate\xa0change or ensuring all\xa0family members have the same opportunities as\xa0the '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 565.1 x=  40.1- 476.7 | 'founding members.  It is then\xa0documented in the Family Strategy, ensuring everyone '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 580.1 x=  40.1- 468.6 | 'is on the same page with a purpose-led strategy that encompasses both individual '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 595.1 x=  39.9- 446.4 | 'and collective family needs.  Creating this strategy is complicated and requires '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 610.1 x=  40.1- 298.1 | 'honest, open collaboration and careful guidance.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 630.8 x=  40.1- 427.2 | 'Family unity and harmony is reinforced by exploring the family’s values that '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 645.8 x=  40.1- 442.8 | 'underpin\xa0how the Family Strategy is executed.  And lastly, it is operationalised '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 660.8 x=  40.1- 411.2 | 'by\xa0putting in place family roles and responsibilities for implementing the '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 675.8 x=  40.1- 366.8 | 'strategy,\xa0with a\xa0governance model on which everyone agrees.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 696.4 x=  38.6- 416.9 | 'The modern Family Office facilitates this process, bringing both expertise '
+       ProximaNova-Light 12.0 #000000 flags=4
+[L] y= 711.4 x=  39.9- 380.6 | 'and\xa0objectivity to assist the family to execute the Family Strategy.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 267.2 x= 646.3- 796.3 | 'MUTUAL TRUST CASE STUDY '
+       ProximaNova-Medium 10.0 #000000 flags=4
+[R] y= 282.8 x= 646.3- 861.4 | 'Family unity and harmony'
+       Baskerville 20.0 #000000 flags=4
+[R] y= 316.8 x= 646.3-1046.5 | 'Understanding their differences and celebrating shared interests enabled the '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 331.8 x= 646.3-1066.3 | 'Brandt* family to build a unified vision for its wealth, with family members working '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 346.8 x= 646.3- 857.0 | 'together to benefit the local community.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 367.5 x= 646.3-1045.1 | 'Eight years ago, the Brandt sisters (second generation) were not on speaking '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 382.5 x= 646.3- 894.9 | 'terms.  All lines of communication were broken.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 403.2 x= 646.3-1033.0 | 'The Brandts decided to engage a Mutual Trust family dynamic expert, who '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 418.2 x= 646.3-1055.6 | 'worked with them to understand their differences and identify the unique value '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 433.2 x= 646.3- 931.0 | 'their individual strengths contributed to the family unit.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 453.8 x= 646.3-1045.3 | 'By exploring these underlying complexities, the Brandts were able to identify '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 468.8 x= 646.3-1048.9 | 'their shared values and develop a unified vision and purpose for their wealth.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 489.5 x= 646.3-1028.1 | 'Through this process the family was delighted to realise that, despite their '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 504.5 x= 646.3-1041.0 | 'differences, they shared a passion for education and the arts.  Mutual Trust’s '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 519.5 x= 646.3-1025.3 | 'Philanthropy team then worked with them to establish a foundation which '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 534.5 x= 646.3-1043.2 | 'provides scholarship grants within these sectors to disadvantaged students.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 555.1 x= 646.3-1059.8 | 'Today, the Brandts have learnt new and effective ways to communicate, and the '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 570.1 x= 646.3- 818.0 | 'sisters are now on talking terms.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 590.8 x= 646.3-1041.7 | 'The family foundation created a platform to bring the Brandts together whilst '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 605.8 x= 646.3-1021.6 | 'respecting their differences.  Ultimately, the Brandt family legacy and the '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 620.8 x= 646.3-1060.4 | 'philanthropic impact of their wealth became bigger than themselves.  The family '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 635.8 x= 646.3-1061.6 | 'now recognise and respect each person’s differences, communicates\xa0effectively '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 650.8 x= 646.3- 976.0 | 'and treasures the unity gained through their common interests.  '
+       ProximaNova-Light 12.0 #000000 flags=4
+[R] y= 671.9 x= 646.3- 879.9 | '\t* Family and family members’ names have been changed for privacy reasons'
+       ProximaNova-Regular 7.0 #000000 flags=4
+[R] y= 723.7 x= 716.0- 822.4 | 'SCAN TO VIEW MUTUAL '
+       ProximaNova-Regular 8.0 #7d8898 flags=4
+[R] y= 734.7 x= 716.0- 809.2 | 'TRUST BOARD VIDEO'
+       ProximaNova-Regular 8.0 #7d8898 flags=4
+[R] y= 748.9 x= 716.0- 930.2 | 'https://repository.mutualtrust.com.au/100_Years_Mutual_Trust.mp4'
+       ProximaNova-Regular 7.0 #7d8898 flags=4
+[R] y= 795.5 x=1142.9-1150.9 | '39'
+       Baskerville 8.0 #dd971a flags=4
+[R] y= 795.7 x= 646.3- 797.9 | 'Modern Family Office practices\xa0make a difference '
+       ProximaNova-Light 7.0 #dd971a flags=4
+[L] y= 795.5 x=  39.7-  47.7 | '38'
+       Baskerville 8.0 #7f8a9a flags=4
+[L] y= 795.7 x= 427.1- 544.3 | 'Why The Modern Family Office Matters'
+       ProximaNova-Light 7.0 #7f8a9a flags=4
